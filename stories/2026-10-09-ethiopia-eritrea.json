@@ -1,0 +1,1261 @@
+{
+ "id": "2026-10-09-ethiopia-eritrea",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "rate": 6.6,
+   "text": "Africa's second most populous country says it's being invaded. And the Red Sea sits right in the middle."
+  },
+  {
+   "id": "f1",
+   "text": "Ethiopia told the UN Security Council it faces an all-out invasion by Eritrea. Its foreign minister says Eritrean troops pushed up to 60 kilometers into the north. Witnesses told Reuters they saw Eritrean soldiers in Adigrat, 25 kilometers from the border. Eritrea calls it a pretext for war."
+  },
+  {
+   "id": "f2",
+   "text": "It lands on top of a civil war. Since September 23, the army has fought an alliance of seven armed groups, including the TPLF. This week it captured Tigray's capital, Mekelle. Addis Ababa says Eritrea, Egypt and Sudan back the rebels. All three deny it."
+  },
+  {
+   "id": "f3",
+   "text": "Underneath it all: the sea. Ethiopia lost its coast when Eritrea became independent in 1993. Now Prime Minister Abiy Ahmed insists his country of 130 million must reach the Red Sea."
+  },
+  {
+   "id": "cta",
+   "text": "Follow for the next update."
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE INVASION CLAIM",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE WAR INSIDE",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE SEA",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 15,
+     "lat": 22,
+     "R": 360
+    },
+    {
+     "at": 3.6,
+     "lon": 40,
+     "lat": 12,
+     "R": 470
+    }
+   ],
+   "chip": {
+    "text": "BREAKING · OCT 9, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "ETH",
+     "color": "accent",
+     "at": "hook:populous"
+    },
+    {
+     "iso": "ERI",
+     "color": "danger",
+     "at": "hook:invaded."
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      39.6,
+      8.6
+     ],
+     "color": "accent",
+     "at": "hook:populous",
+     "label": "ETHIOPIA",
+     "sub": "130M PEOPLE",
+     "dx": -80,
+     "dy": 120
+    },
+    {
+     "loc": [
+      38.9,
+      15.4
+     ],
+     "color": "danger",
+     "at": "hook:invaded.",
+     "label": "ERITREA",
+     "dx": 70,
+     "dy": -90,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:invaded.",
+    "lines": [
+     [
+      "“ALL-OUT",
+      "text",
+      120
+     ],
+     [
+      "INVASION”",
+      "danger",
+      150
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:Red",
+    "icon": "ship",
+    "iconColor": "info",
+    "color": "info",
+    "kicker": "RIGHT IN THE MIDDLE",
+    "title": "THE RED SEA",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    39.5,
+    13
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 40,
+     "lat": 12,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1:Ethiopia +1.0",
+     "lon": 39.0,
+     "lat": 12.6,
+     "dist": 30,
+     "pitch": 46,
+     "yaw": -8,
+     "oy": 170
+    },
+    {
+     "at": "f1:Its -0.1",
+     "lon": 39.2,
+     "lat": 13.2,
+     "dist": 28,
+     "pitch": 48,
+     "yaw": -6,
+     "oy": 170
+    },
+    {
+     "at": "f1:pushed +0.4",
+     "lon": 39.2,
+     "lat": 13.9,
+     "dist": 14,
+     "pitch": 36,
+     "yaw": -4,
+     "oy": 120
+    },
+    {
+     "at": "f1:Witnesses +0.3",
+     "lon": 39.4,
+     "lat": 14.0,
+     "dist": 17,
+     "pitch": 50,
+     "yaw": -12,
+     "oy": 160
+    },
+    {
+     "at": "f1:Eritrea#1 -0.1",
+     "lon": 39.1,
+     "lat": 14.4,
+     "dist": 24,
+     "pitch": 48,
+     "yaw": -2,
+     "oy": 170
+    },
+    {
+     "at": "f2 +0.4",
+     "lon": 38.8,
+     "lat": 12.2,
+     "dist": 40,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 190
+    },
+    {
+     "at": "f2:This -0.1",
+     "lon": 39.0,
+     "lat": 12.6,
+     "dist": 36,
+     "pitch": 46,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "f2:Mekelle. +0.4",
+     "lon": 39.4,
+     "lat": 13.2,
+     "dist": 22,
+     "pitch": 50,
+     "yaw": 8,
+     "oy": 170
+    },
+    {
+     "at": "f2:Addis -0.1",
+     "lon": 37.6,
+     "lat": 17.0,
+     "dist": 26,
+     "pitch": 50,
+     "yaw": 6,
+     "oy": 170
+    },
+    {
+     "at": "f2:Sudan +0.3",
+     "lon": 35.5,
+     "lat": 19.0,
+     "dist": 92,
+     "pitch": 32,
+     "yaw": 0,
+     "oy": 80
+    },
+    {
+     "at": "f2:deny",
+     "lon": 35.6,
+     "lat": 18.8,
+     "dist": 94,
+     "pitch": 33,
+     "yaw": 2,
+     "oy": 80
+    },
+    {
+     "at": "f3 +0.6",
+     "lon": 41.0,
+     "lat": 13.0,
+     "dist": 30,
+     "pitch": 50,
+     "yaw": -14,
+     "oy": 170
+    },
+    {
+     "at": "f3:Now -0.1",
+     "lon": 41.0,
+     "lat": 12.8,
+     "dist": 31,
+     "pitch": 51,
+     "yaw": -10,
+     "oy": 170
+    },
+    {
+     "at": "f3:Red +0.2",
+     "lon": 40.6,
+     "lat": 11.4,
+     "dist": 42,
+     "pitch": 46,
+     "yaw": -4,
+     "oy": 200
+    },
+    {
+     "at": "cta",
+     "lon": 40.8,
+     "lat": 11.8,
+     "dist": 50,
+     "pitch": 50,
+     "yaw": 8,
+     "oy": 200
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "ETH",
+     "color": "accent",
+     "alpha": 0.55,
+     "fill": 0.12,
+     "at": "f1 +0.2"
+    },
+    {
+     "kind": "extrude",
+     "iso": "ERI",
+     "color": "danger",
+     "height": 0.28,
+     "at": "f1:Eritrea. -0.2",
+     "flatten": [
+      {
+       "at": "f3 -0.4",
+       "to": 0.35
+      }
+     ]
+    },
+    {
+     "kind": "tag",
+     "loc": "Asmara",
+     "on": "ERI",
+     "text": "ERITREA",
+     "color": "danger",
+     "at": "f1:Eritrea. ",
+     "until": "f1:Witnesses",
+     "dy": -75
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      39.4,
+      11.0
+     ],
+     "text": "ETHIOPIA",
+     "color": "accent",
+     "at": "f1 +0.3",
+     "until": "f1:Witnesses",
+     "dy": 90
+    },
+    {
+     "kind": "callout",
+     "loc": "Addis Ababa",
+     "place": "UN SECURITY COUNCIL",
+     "icon": "flag",
+     "screen": [
+      120,
+      330
+     ],
+     "color": "accent",
+     "at": "f1:UN -0.2",
+     "until": "f1:Its +0.4"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      380,
+      420,
+      640
+     ],
+     "kicker": "ETHIOPIA'S LETTER TO THE UN:",
+     "text": "“A BLATANT ACT OF AGGRESSION”",
+     "color": "accent",
+     "at": "f1:Security +0.3",
+     "until": "f1:Its +0.6"
+    },
+    {
+     "kind": "zone",
+     "clip": "ETH",
+     "color": "ally",
+     "poly": [
+      [
+       36.526,
+       14.764
+      ],
+      [
+       36.566,
+       14.793
+      ],
+      [
+       36.748,
+       14.832
+      ],
+      [
+       36.947,
+       14.805
+      ],
+      [
+       36.995,
+       14.764
+      ],
+      [
+       37.06,
+       14.777
+      ],
+      [
+       37.121,
+       14.921
+      ],
+      [
+       37.184,
+       14.95
+      ],
+      [
+       37.294,
+       14.957
+      ],
+      [
+       37.39,
+       14.858
+      ],
+      [
+       37.398,
+       14.802
+      ],
+      [
+       37.453,
+       14.761
+      ],
+      [
+       37.475,
+       14.7
+      ],
+      [
+       37.516,
+       14.681
+      ],
+      [
+       37.525,
+       14.629
+      ],
+      [
+       37.554,
+       14.605
+      ],
+      [
+       37.891,
+       15.38
+      ],
+      [
+       38.007,
+       15.224
+      ],
+      [
+       38.115,
+       15.181
+      ],
+      [
+       38.229,
+       15.18
+      ],
+      [
+       38.313,
+       15.019
+      ],
+      [
+       38.427,
+       14.917
+      ],
+      [
+       38.866,
+       14.994
+      ],
+      [
+       38.98,
+       15.067
+      ],
+      [
+       39.01,
+       15.151
+      ],
+      [
+       39.127,
+       15.102
+      ],
+      [
+       39.208,
+       14.94
+      ],
+      [
+       39.233,
+       14.94
+      ],
+      [
+       39.269,
+       14.986
+      ],
+      [
+       39.449,
+       15.005
+      ],
+      [
+       39.515,
+       15.068
+      ],
+      [
+       39.651,
+       14.997
+      ],
+      [
+       39.797,
+       14.995
+      ],
+      [
+       39.892,
+       14.927
+      ],
+      [
+       39.98,
+       14.959
+      ],
+      [
+       40.105,
+       14.966
+      ],
+      [
+       40.277,
+       14.905
+      ],
+      [
+       40.48,
+       14.744
+      ],
+      [
+       40.772,
+       14.648
+      ],
+      [
+       40.833,
+       14.606
+      ],
+      [
+       41.044,
+       14.372
+      ],
+      [
+       41.192,
+       14.116
+      ],
+      [
+       41.712,
+       13.748
+      ],
+      [
+       41.785,
+       13.665
+      ],
+      [
+       41.947,
+       13.376
+      ],
+      [
+       42.185,
+       13.233
+      ],
+      [
+       42.379,
+       12.966
+      ],
+      [
+       42.379,
+       11.925
+      ],
+      [
+       42.185,
+       12.192
+      ],
+      [
+       41.947,
+       12.335
+      ],
+      [
+       41.785,
+       12.624
+      ],
+      [
+       41.712,
+       12.707
+      ],
+      [
+       41.192,
+       13.075
+      ],
+      [
+       41.044,
+       13.331
+      ],
+      [
+       40.833,
+       13.565
+      ],
+      [
+       40.772,
+       13.607
+      ],
+      [
+       40.48,
+       13.703
+      ],
+      [
+       40.277,
+       13.864
+      ],
+      [
+       40.105,
+       13.925
+      ],
+      [
+       39.98,
+       13.918
+      ],
+      [
+       39.892,
+       13.886
+      ],
+      [
+       39.797,
+       13.954
+      ],
+      [
+       39.651,
+       13.956
+      ],
+      [
+       39.515,
+       14.027
+      ],
+      [
+       39.449,
+       13.964
+      ],
+      [
+       39.269,
+       13.945
+      ],
+      [
+       39.233,
+       13.899
+      ],
+      [
+       39.208,
+       13.899
+      ],
+      [
+       39.127,
+       14.061
+      ],
+      [
+       39.01,
+       14.11
+      ],
+      [
+       38.98,
+       14.026
+      ],
+      [
+       38.866,
+       13.953
+      ],
+      [
+       38.427,
+       13.876
+      ],
+      [
+       38.313,
+       13.978
+      ],
+      [
+       38.229,
+       14.139
+      ],
+      [
+       38.115,
+       14.14
+      ],
+      [
+       38.007,
+       14.183
+      ],
+      [
+       37.891,
+       14.339
+      ],
+      [
+       37.554,
+       13.564
+      ],
+      [
+       37.525,
+       13.588
+      ],
+      [
+       37.516,
+       13.64
+      ],
+      [
+       37.475,
+       13.659
+      ],
+      [
+       37.453,
+       13.72
+      ],
+      [
+       37.398,
+       13.761
+      ],
+      [
+       37.39,
+       13.817
+      ],
+      [
+       37.294,
+       13.916
+      ],
+      [
+       37.184,
+       13.909
+      ],
+      [
+       37.121,
+       13.88
+      ],
+      [
+       37.06,
+       13.736
+      ],
+      [
+       36.995,
+       13.723
+      ],
+      [
+       36.947,
+       13.764
+      ],
+      [
+       36.748,
+       13.791
+      ],
+      [
+       36.566,
+       13.752
+      ],
+      [
+       36.526,
+       13.723
+      ]
+     ],
+     "at": "f1:pushed -0.2",
+     "until": "f2 +0.6",
+     "outline": false,
+     "fill": 0.9,
+     "pulse": false
+    },
+    {
+     "kind": "arc",
+     "from": [
+      38.0,
+      15.7
+     ],
+     "to": [
+      38.0,
+      13.75
+     ],
+     "color": "danger",
+     "height": 0.45,
+     "width": 6,
+     "at": "f1:pushed",
+     "until": "f1:Eritrea#1 +0.4"
+    },
+    {
+     "kind": "arc",
+     "from": [
+      39.3,
+      15.5
+     ],
+     "to": [
+      39.35,
+      13.85
+     ],
+     "color": "danger",
+     "height": 0.45,
+     "width": 6,
+     "at": "f1:pushed +0.2",
+     "until": "f1:Eritrea#1 +0.4"
+    },
+    {
+     "kind": "arc",
+     "from": [
+      41.4,
+      14.6
+     ],
+     "to": [
+      40.75,
+      13.25
+     ],
+     "color": "danger",
+     "height": 0.45,
+     "width": 6,
+     "at": "f1:pushed +0.4",
+     "until": "f1:Eritrea#1 +0.4"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      38.6,
+      13.9
+     ],
+     "text": "UP TO 60 KM",
+     "sub": "CLAIM BY ETHIOPIA'S GOVERNMENT",
+     "color": "ally",
+     "at": "f1:60",
+     "until": "f1:Witnesses -0.1",
+     "dx": -40,
+     "dy": 170
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      39.46,
+      14.28
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Adigrat, -0.3",
+     "until": "f2 +0.4",
+     "label": {
+      "text": "ADIGRAT",
+      "sub": "WITNESSES · 25 KM FROM BORDER",
+      "dx": 150,
+      "dy": 110,
+      "until": "f1:Eritrea#1"
+     }
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      380,
+      420,
+      640
+     ],
+     "kicker": "ERITREA'S GOVERNMENT:",
+     "text": "CALLS IT A PRETEXT FOR WAR",
+     "color": "danger",
+     "at": "f1:Eritrea#1",
+     "until": "f2 +0.2"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      39.1,
+      13.85
+     ],
+     "color": "danger",
+     "at": "f2:Since",
+     "until": "f2:This",
+     "label": {
+      "text": "TIGRAY",
+      "dy": -70,
+      "dx": 40
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      38.0,
+      11.6
+     ],
+     "color": "danger",
+     "at": "f2:Since +0.4",
+     "until": "f2:This",
+     "label": {
+      "text": "AMHARA",
+      "dy": 90,
+      "dx": -40
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      40.9,
+      11.9
+     ],
+     "color": "danger",
+     "at": "f2:Since +0.8",
+     "until": "f2:This",
+     "label": {
+      "text": "AFAR",
+      "dy": 90,
+      "dx": 60
+     }
+    },
+    {
+     "kind": "card",
+     "screen": [
+      60,
+      290,
+      580
+     ],
+     "title": "REBEL ALLIANCE",
+     "badge": "7 GROUPS",
+     "color": "danger",
+     "at": "f2:alliance -0.3",
+     "until": "f2:This +0.2",
+     "rows": [
+      {
+       "icon": "flame",
+       "text": "FIGHTING SINCE SEP 23",
+       "at": "f2:alliance"
+      },
+      {
+       "icon": "people",
+       "text": "INCLUDES THE TPLF",
+       "at": "f2:TPLF"
+      }
+     ]
+    },
+    {
+     "kind": "marker",
+     "loc": "Mekele",
+     "style": "dot",
+     "color": "accent",
+     "at": "f2:captured -0.1",
+     "until": "f2:Addis",
+     "label": {
+      "text": "MEKELLE",
+      "sub": "CAPTURED BY FEDERAL FORCES · OCT 5",
+      "dx": 90,
+      "dy": -90
+     }
+    },
+    {
+     "kind": "tag",
+     "loc": "Addis Ababa",
+     "text": "ADDIS ABABA",
+     "color": "accent",
+     "at": "f2:Addis",
+     "until": "f3 -0.2",
+     "dy": -70
+    },
+    {
+     "kind": "arc",
+     "from": "Asmara",
+     "to": "Addis Ababa",
+     "color": "ally",
+     "height": 0.35,
+     "at": "f2:Eritrea,",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "arc",
+     "from": "Cairo",
+     "to": "Addis Ababa",
+     "color": "ally",
+     "height": 0.3,
+     "at": "f2:Egypt",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "arc",
+     "from": "Khartoum",
+     "to": "Addis Ababa",
+     "color": "ally",
+     "height": 0.35,
+     "at": "f2:Sudan",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": "Asmara",
+     "text": "ERITREA",
+     "sub": "ACCUSED",
+     "color": "ally",
+     "size": 26,
+     "dx": 90,
+     "dy": -60,
+     "at": "f2:Eritrea,",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": "Cairo",
+     "text": "EGYPT",
+     "sub": "ACCUSED",
+     "color": "ally",
+     "size": 26,
+     "dy": -60,
+     "at": "f2:Egypt",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": "Khartoum",
+     "text": "SUDAN",
+     "sub": "ACCUSED",
+     "color": "ally",
+     "size": 26,
+     "dx": -80,
+     "dy": -60,
+     "at": "f2:Sudan",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "ALL DENY IT",
+     "icon": "x",
+     "color": "info",
+     "screen": [
+      540,
+      400
+     ],
+     "at": "f2:All",
+     "until": "f3 -0.1"
+    },
+    {
+     "kind": "route",
+     "style": "solid",
+     "color": "info",
+     "width": 6,
+     "path": [
+      [
+       38.6,
+       18.0
+      ],
+      [
+       39.0,
+       16.9
+      ],
+      [
+       39.5,
+       15.75
+      ],
+      [
+       40.1,
+       15.05
+      ],
+      [
+       41.0,
+       14.15
+      ],
+      [
+       41.8,
+       13.55
+      ],
+      [
+       42.7,
+       13.05
+      ],
+      [
+       43.12,
+       12.72
+      ]
+     ],
+     "at": "f3:the -0.2",
+     "until": "cta",
+     "dur": 1.6,
+     "label": {
+      "text": "THE COAST ETHIOPIA LOST",
+      "loc": [
+       40.6,
+       14.6
+      ],
+      "dx": 210,
+      "dy": -170,
+      "at": "f3:coast",
+      "until": "f3:Now"
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "1993",
+     "color": "info",
+     "screen": [
+      540,
+      420
+     ],
+     "at": "f3:1993.",
+     "until": "f3:Now +0.4",
+     "note": "ERITREA INDEPENDENT · ETHIOPIA LANDLOCKED"
+    },
+    {
+     "kind": "marker",
+     "loc": "Assab",
+     "style": "dot",
+     "color": "info",
+     "at": "f3:coast +0.3",
+     "until": "cta",
+     "label": {
+      "text": "ASSAB",
+      "sub": "ERITREAN PORT",
+      "dx": 80,
+      "dy": -70,
+      "until": "f3:Now"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": "Massawa",
+     "style": "dot",
+     "color": "info",
+     "at": "f3:coast +0.5",
+     "until": "cta",
+     "label": {
+      "text": "MASSAWA",
+      "sub": "ERITREAN PORT",
+      "dx": -130,
+      "dy": -70,
+      "until": "f3:Now"
+     }
+    },
+    {
+     "kind": "extrude",
+     "iso": "ETH",
+     "color": "accent",
+     "height": 0.45,
+     "at": "f3:Now",
+     "until": "cta +0.5"
+    },
+    {
+     "kind": "route",
+     "style": "dash",
+     "color": "oil",
+     "on": "ETH",
+     "path": [
+      [
+       38.7,
+       9.03
+      ],
+      [
+       40.4,
+       9.3
+      ],
+      [
+       41.87,
+       9.6
+      ],
+      [
+       42.6,
+       10.6
+      ],
+      [
+       43.14,
+       11.59
+      ]
+     ],
+     "at": "f3:Abiy",
+     "until": "cta",
+     "label": {
+      "text": "TODAY'S LIFELINE",
+      "sub": "TRADE RUNS VIA DJIBOUTI",
+      "dx": 120,
+      "dy": 140,
+      "at": "f3:Abiy +0.3",
+      "until": "cta"
+     }
+    },
+    {
+     "kind": "card",
+     "screen": [
+      60,
+      290,
+      560
+     ],
+     "title": "ETHIOPIA",
+     "badge": "LANDLOCKED",
+     "color": "accent",
+     "at": "f3:Prime -0.1",
+     "until": "cta +0.2",
+     "rows": [
+      {
+       "icon": "people",
+       "text": "130 MILLION PEOPLE",
+       "at": "f3:130"
+      },
+      {
+       "icon": "ship",
+       "text": "WANTS RED SEA ACCESS",
+       "at": "f3:reach"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 41,
+     "lat": 12,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 39,
+     "lat": 13,
+     "R": 430
+    },
+    {
+     "at": "end",
+     "lon": 34,
+     "lat": 15,
+     "R": 430
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "ETH",
+     "color": "accent",
+     "alpha": 0.8
+    },
+    {
+     "iso": "ERI",
+     "color": "danger"
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      39.46,
+      14.28
+     ],
+     "color": "danger"
+    },
+    {
+     "loc": "Mekele",
+     "color": "accent"
+    },
+    {
+     "loc": "Assab",
+     "color": "info"
+    }
+   ],
+   "lines": [
+    [
+     "A CIVIL WAR.",
+     "text"
+    ],
+    [
+     "A BORDER WAR?",
+     "danger"
+    ]
+   ],
+   "sources": [
+    "REPORTING: REUTERS, AL JAZEERA, BLOOMBERG",
+    "OCT 7–9, 2026"
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Ethiopia Says Eritrea Invaded. The Red Sea Is Why It Matters #shorts",
+  "description": "Ethiopia told the UN Security Council it faces an \"all-out invasion\" by Eritrea, on top of a civil war that has raged since September 23. Eritrea calls it a pretext for war. Underneath it all: Ethiopia's push for access to the Red Sea.\n\nSources:\nReuters: Ethiopia says it must defend itself against Eritrea's 'all-out invasion' (Oct 9, 2026)\nAl Jazeera/Reuters: Witnesses spot Eritrean troops inside northern Ethiopia (Oct 7, 2026)\nBloomberg: Ethiopia vows to defend itself against Eritrean incursion (Oct 9, 2026)\n\n#geopolitics #Ethiopia #Eritrea #RedSea #HornOfAfrica",
+  "tags": [
+   "geopolitics",
+   "Ethiopia",
+   "Eritrea",
+   "Red Sea",
+   "Horn of Africa",
+   "Tigray",
+   "TPLF",
+   "Abiy Ahmed",
+   "Africa news",
+   "world news"
+  ],
+  "cover": "hook:invaded. +0.5"
+ },
+ "rate": 6.2
+}

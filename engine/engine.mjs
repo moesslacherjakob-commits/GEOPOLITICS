@@ -489,16 +489,16 @@ function mapScene(sc, t) {
   const fade = o => win(t, o.at, o.until, o.fin ?? .4, o.fout ?? .4);
   // pass 1: tints + zones + extrusions (sorted by depth)
   for (const o of sc.L) if (o.kind === 'tint') { const a = fade(o); if (a > 0) { const p = countryPath(cam, o.iso), c = col(o.color); ctx.save(); ctx.globalAlpha = a * (o.alpha ?? .55); ctx.fillStyle = rgba(c, o.fill ?? .3); ctx.fill(p); if (o.glow) shadow(c, o.glow); ctx.strokeStyle = c; ctx.lineWidth = 2.5; ctx.stroke(p); ctx.restore(); } }
-  const ex = sc.L.filter(o => o.kind === 'extrude' && H[o.iso] > .002).map(o => ({ o, z: cam.p(...country(o.iso).center)[2] })).sort((a, b) => b.z - a.z);
-  for (const { o } of ex) extrude(cam, o.iso, H[o.iso], col(o.color), 1, o.glow ?? 12);
   for (const o of sc.L) if (o.kind === 'zone') {
     const a = fade(o); if (a <= 0) continue; const c = col(o.color || 'danger');
     const z = new Path2D(); o.poly.forEach((p, i) => { const q = cam.p(p[0], p[1]); i ? z.lineTo(q[0], q[1]) : z.moveTo(q[0], q[1]); }); z.closePath();
-    ctx.save(); if (o.clip) ctx.clip(countryPath(cam, o.clip)); ctx.globalAlpha = a * (o.pulse === false ? .8 : .75 + .25 * Math.sin(t * 4.5)); ctx.fillStyle = rgba(c, .7); ctx.fill(z);
+    ctx.save(); if (o.clip) ctx.clip(countryPath(cam, o.clip)); ctx.globalAlpha = a * (o.pulse === false ? .8 : .75 + .25 * Math.sin(t * 4.5)); ctx.fillStyle = rgba(c, o.fill ?? .7); ctx.fill(z);
     if (o.hatch !== false) { ctx.clip(z); ctx.strokeStyle = 'rgba(255,255,255,.12)'; ctx.lineWidth = 2; ctx.beginPath(); for (let k = -1400; k < 1400; k += 16) { ctx.moveTo(540 + k, 0); ctx.lineTo(540 + k + 900, 1900); } ctx.stroke(); }
     ctx.restore();
     if (o.outline !== false && o.clip) { ctx.save(); ctx.globalAlpha = a; shadow(c, 20); ctx.strokeStyle = rgba(c, .95); ctx.lineWidth = 2.5; ctx.stroke(countryPath(cam, o.clip)); ctx.restore(); }
   }
+  const ex = sc.L.filter(o => o.kind === 'extrude' && H[o.iso] > .002).map(o => ({ o, z: cam.p(...country(o.iso).center)[2] })).sort((a, b) => b.z - a.z);
+  for (const { o } of ex) extrude(cam, o.iso, H[o.iso], col(o.color), 1, o.glow ?? 12);
   // pass 2: routes, barriers, movers, arcs, markers, columns
   for (const o of sc.L) {
     const a = fade(o); if (a <= 0) continue; const c = col(o.color);
