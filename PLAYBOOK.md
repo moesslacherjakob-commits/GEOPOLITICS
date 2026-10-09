@@ -47,7 +47,7 @@ URL: `https://raw.githubusercontent.com/moesslacherjakob-commits/GEOPOLITICS/med
 
 ## 8. Schedule on YouTube via Metricool
 `createScheduledPost` with `blogId` from `config.json`, `providers: [{"network":"youtube"}]`, `text` = `description` from `out/<id>/upload.json` (already contains the AI disclaimer from `config.json` — never remove it), `media: [<URL>]`, `youtubeData: {title, type: "short", privacy: "public", tags, category: "NEWS_POLITICS", madeForKids: false, isAiGeneratedContent: false}`, `autoPublish` from `config.json`, `publicationDate` = today at `config.postTime` (Europe/Vienna) or +20 min if that time has passed.
-With `autoPublish: false` Jakob gets a push in the Metricool app and publishes with one tap — that is the approval step.
+`autoPublish: true` (current setting): Metricool publishes automatically at the slot — there is no human approval, so the research and QA steps above are the only safety net. Your report reaches Jakob before the slot, so he can still pull a video in Metricool if he spots a problem.
 
 ## 9. Wrap up
 - Append one line to `log.md`: date · topic · title · sources · Metricool planner URL.

@@ -2,7 +2,7 @@
   "channel": "@GEOPOLITICS4YOU",
   "metricoolBlogId": "7136260",
   "youtubeChannelId": "UCoSpQyY2P2yW1hemAjuOrcA",
-  "autoPublish": false,
+  "autoPublish": true,
   "postTime": "07:30",
   "timezone": "Europe/Vienna",
   "language": "en",
