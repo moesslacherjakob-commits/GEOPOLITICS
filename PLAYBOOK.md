@@ -46,7 +46,7 @@ cd /tmp/media && git init -q -b media && git add . && git commit -qm "<id>" && g
 URL: `https://raw.githubusercontent.com/moesslacherjakob-commits/GEOPOLITICS/media/<id>.mp4` (repo must be public).
 
 ## 8. Schedule on YouTube via Metricool
-`createScheduledPost` with `blogId` from `config.json`, `providers: [{"network":"youtube"}]`, `text` = description, `media: [<URL>]`, `youtubeData: {title, type: "short", privacy: "public", tags, category: "NEWS_POLITICS", madeForKids: false, isAiGeneratedContent: false}`, `autoPublish` from `config.json`, `publicationDate` = today at `config.postTime` (Europe/Vienna) or +20 min if that time has passed.
+`createScheduledPost` with `blogId` from `config.json`, `providers: [{"network":"youtube"}]`, `text` = `description` from `out/<id>/upload.json` (already contains the AI disclaimer from `config.json` — never remove it), `media: [<URL>]`, `youtubeData: {title, type: "short", privacy: "public", tags, category: "NEWS_POLITICS", madeForKids: false, isAiGeneratedContent: false}`, `autoPublish` from `config.json`, `publicationDate` = today at `config.postTime` (Europe/Vienna) or +20 min if that time has passed.
 With `autoPublish: false` Jakob gets a push in the Metricool app and publishes with one tap — that is the approval step.
 
 ## 9. Wrap up

@@ -32,6 +32,11 @@ python3 - "$STORY" "$OUT" <<'PY'
 import json, sys
 s = json.load(open(sys.argv[1])); out = sys.argv[2]; ev = json.load(open(out + '/events.json'))
 u = dict(s.get('upload', {})); u['coverMs'] = int(ev['cover'] * 1000); u['duration'] = ev['duration']; u['id'] = s['id']
+disc = json.load(open('config.json')).get('disclaimer')
+if disc and disc not in u.get('description', ''):
+    parts = u.get('description', '').rstrip().split('\n\n')
+    tail = [parts.pop()] if parts and parts[-1].lstrip().startswith('#') else []
+    u['description'] = '\n\n'.join(parts + [disc] + tail)
 json.dump(u, open(out + '/upload.json', 'w'), indent=1, ensure_ascii=False)
 PY
 rm -f "$OUT"/seg_*.mp4 "$OUT"/pl*.log* "$OUT"/caps.txt "$OUT"/clean.txt
