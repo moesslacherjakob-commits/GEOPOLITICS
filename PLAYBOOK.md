@@ -41,9 +41,9 @@ Verify: duration ≈ 60 s, size < 30 MB, extract 3 frames with ffmpeg and look a
 Metricool needs a public URL. Push the file to the orphan `media` branch (overwritten daily, keeps the repo small):
 ```
 cd out/<id> && rm -rf /tmp/media && mkdir /tmp/media && cp short.mp4 /tmp/media/<id>.mp4 && cp cover.png /tmp/media/<id>.png
-cd /tmp/media && git init -q -b media && git add . && git commit -qm "<id>" && git push -f https://github.com/moesslacherjakob-commits/geopolitics media:media
+cd /tmp/media && git init -q -b media && git add . && git commit -qm "<id>" && git push -f https://github.com/moesslacherjakob-commits/GEOPOLITICS media:media
 ```
-URL: `https://raw.githubusercontent.com/moesslacherjakob-commits/geopolitics/media/<id>.mp4` (repo must be public).
+URL: `https://raw.githubusercontent.com/moesslacherjakob-commits/GEOPOLITICS/media/<id>.mp4` (repo must be public).
 
 ## 8. Schedule on YouTube via Metricool
 `createScheduledPost` with `blogId` from `config.json`, `providers: [{"network":"youtube"}]`, `text` = description, `media: [<URL>]`, `youtubeData: {title, type: "short", privacy: "public", tags, category: "NEWS_POLITICS", madeForKids: false, isAiGeneratedContent: false}`, `autoPublish` from `config.json`, `publicationDate` = today at `config.postTime` (Europe/Vienna) or +20 min if that time has passed.
