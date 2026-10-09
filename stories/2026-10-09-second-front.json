@@ -1,0 +1,1060 @@
+{
+ "id": "2026-10-09-second-front",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "rate": 6.7,
+   "text": "The Iran war just opened a second front. And your heating bill is the target."
+  },
+  {
+   "id": "f1",
+   "text": "In July, Saudi Arabia asked Trump for permission to restart its war on Yemen. According to Axios, he said yes. Now Pakistan, Turkey and Syria are backing Riyadh, and the US is reportedly providing intelligence and refueling Saudi jets."
+  },
+  {
+   "id": "f2",
+   "text": "Yemen's Houthis hit back with a Red Sea blockade of Saudi Arabia. That's exactly where Saudi oil escaped after Iran closed Hormuz. Now both exits are choked: Hormuz carries about 20 percent of the world's traded oil, Bab al-Mandab about 8. The IEA calls it the biggest oil supply crisis in history."
+  },
+  {
+   "id": "f3",
+   "text": "The result? Crude is back above 100 dollars. Shipping an oil tanker to East Asia now costs 1.3 million dollars a day, up from 60,000. And heating oil in Maine is up 80 percent."
+  },
+  {
+   "id": "cta",
+   "text": "Follow for the next update."
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE GREEN LIGHT",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE CHOKE POINTS",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "WHO PAYS",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "oil"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 18,
+     "lat": 30,
+     "R": 360
+    },
+    {
+     "at": 3.4,
+     "lon": 47,
+     "lat": 21.5,
+     "R": 470
+    }
+   ],
+   "chip": {
+    "text": "BREAKING · OCT 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "IRN",
+     "color": "danger",
+     "at": "hook:Iran"
+    },
+    {
+     "iso": "YEM",
+     "color": "danger",
+     "at": "hook:second"
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      53.5,
+      32.5
+     ],
+     "color": "danger",
+     "at": "hook:Iran",
+     "label": "FRONT 1 · IRAN",
+     "sub": "SINCE FEB 28",
+     "dx": 60,
+     "dy": -90
+    },
+    {
+     "loc": [
+      46.5,
+      15.6
+     ],
+     "color": "danger",
+     "at": "hook:second",
+     "label": "FRONT 2 · YEMEN",
+     "sub": "NEW",
+     "dx": -40,
+     "dy": 110,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:second",
+    "lines": [
+     [
+      "A SECOND",
+      "text",
+      120
+     ],
+     [
+      "FRONT",
+      "danger",
+      150
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:heating",
+    "icon": "flame",
+    "kicker": "YOUR HEATING BILL",
+    "title": "IN THE CROSSHAIRS"
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    46,
+    22
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 47,
+     "lat": 21.5,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1:Saudi +0.9",
+     "lon": 46,
+     "lat": 20.8,
+     "dist": 40,
+     "pitch": 46,
+     "yaw": -10,
+     "oy": 170
+    },
+    {
+     "at": "f1:Axios,",
+     "lon": 45.6,
+     "lat": 20.4,
+     "dist": 38,
+     "pitch": 50,
+     "yaw": -6,
+     "oy": 170
+    },
+    {
+     "at": "f1:Now -0.05",
+     "lon": 45.6,
+     "lat": 20.4,
+     "dist": 37,
+     "pitch": 50,
+     "yaw": -5,
+     "oy": 170
+    },
+    {
+     "at": "f1:Syria +0.5",
+     "lon": 52,
+     "lat": 27.5,
+     "dist": 80,
+     "pitch": 38,
+     "yaw": 0,
+     "oy": 130
+    },
+    {
+     "at": "f1:US -0.2",
+     "lon": 52.5,
+     "lat": 27.2,
+     "dist": 82,
+     "pitch": 40,
+     "yaw": 2,
+     "oy": 130
+    },
+    {
+     "at": "f1:refueling +0.3",
+     "lon": 45,
+     "lat": 18.6,
+     "dist": 40,
+     "pitch": 52,
+     "yaw": 8,
+     "oy": 200
+    },
+    {
+     "at": "f2 -0.2",
+     "lon": 44.6,
+     "lat": 18,
+     "dist": 38,
+     "pitch": 53,
+     "yaw": 6,
+     "oy": 200
+    },
+    {
+     "at": "f2 +0.9",
+     "lon": 41.2,
+     "lat": 17.4,
+     "dist": 23,
+     "pitch": 47,
+     "yaw": -6,
+     "oy": 130
+    },
+    {
+     "at": "f2:That's -0.1",
+     "lon": 41.3,
+     "lat": 17.2,
+     "dist": 22,
+     "pitch": 49,
+     "yaw": -10,
+     "oy": 130
+    },
+    {
+     "at": "f2:That's +1.5",
+     "lon": 46.5,
+     "lat": 21,
+     "dist": 46,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 190
+    },
+    {
+     "at": "f2:both -0.2",
+     "lon": 46.8,
+     "lat": 20.8,
+     "dist": 47,
+     "pitch": 48,
+     "yaw": 2,
+     "oy": 190
+    },
+    {
+     "at": "f2:both +1.0",
+     "lon": 49.8,
+     "lat": 19.2,
+     "dist": 44,
+     "pitch": 52,
+     "yaw": 12,
+     "oy": 180
+    },
+    {
+     "at": "f2:IEA -0.1",
+     "lon": 49.9,
+     "lat": 19.3,
+     "dist": 43,
+     "pitch": 53,
+     "yaw": 16,
+     "oy": 180
+    },
+    {
+     "at": "f3 +1",
+     "lon": 50.5,
+     "lat": 19.8,
+     "dist": 46,
+     "pitch": 58,
+     "yaw": 24,
+     "oy": 250
+    },
+    {
+     "at": "cta",
+     "lon": 52,
+     "lat": 20,
+     "dist": 56,
+     "pitch": 60,
+     "yaw": 34,
+     "oy": 250
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "IRN",
+     "color": "danger",
+     "alpha": 0.45,
+     "at": "hook$ +0.6",
+     "until": "f3 +2"
+    },
+    {
+     "kind": "extrude",
+     "iso": "SAU",
+     "color": "accent",
+     "height": 0.9,
+     "at": "f1:Saudi",
+     "flatten": [
+      {
+       "at": "f2 -0.6",
+       "to": 0.3
+      }
+     ]
+    },
+    {
+     "kind": "zone",
+     "clip": "YEM",
+     "color": "danger",
+     "at": "f1:Yemen. -0.5",
+     "poly": [
+      [
+       41.0,
+       19.5
+      ],
+      [
+       46.6,
+       19.5
+      ],
+      [
+       46.2,
+       17.0
+      ],
+      [
+       45.15,
+       15.9
+      ],
+      [
+       45.2,
+       15.2
+      ],
+      [
+       45.7,
+       14.35
+      ],
+      [
+       44.9,
+       13.75
+      ],
+      [
+       44.15,
+       13.55
+      ],
+      [
+       43.55,
+       13.85
+      ],
+      [
+       43.2,
+       14.15
+      ],
+      [
+       42.9,
+       14.35
+      ],
+      [
+       41.0,
+       14.35
+      ]
+     ]
+    },
+    {
+     "kind": "tint",
+     "iso": "YEM",
+     "color": "danger",
+     "alpha": 0.7,
+     "fill": 0.1,
+     "at": "f1:Yemen. -0.5"
+    },
+    {
+     "kind": "tag",
+     "loc": "Riyadh",
+     "on": "SAU",
+     "text": "SAUDI ARABIA",
+     "color": "accent",
+     "at": "f1:Saudi",
+     "until": "f1:Now +0.3",
+     "dx": 90,
+     "dy": -55
+    },
+    {
+     "kind": "tag",
+     "loc": "Sanaa",
+     "text": "YEMEN",
+     "sub": "RED = HOUTHI-HELD (APPROX.)",
+     "color": "danger",
+     "at": "f1:Yemen. -0.2",
+     "until": "f1:Now +0.3",
+     "dx": 230,
+     "dy": 70,
+     "size": 28
+    },
+    {
+     "kind": "callout",
+     "loc": "Riyadh",
+     "on": "SAU",
+     "place": "WASHINGTON",
+     "icon": "flag",
+     "screen": [
+      120,
+      330
+     ],
+     "color": "accent",
+     "at": "f1:Trump -0.1",
+     "until": "f1:Now +0.2",
+     "reply": {
+      "at": "f1:yes. -0.05",
+      "color": "ok"
+     }
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      400,
+      410,
+      600
+     ],
+     "kicker": "MBS ASKS:",
+     "text": "“RESTART THE WAR ON YEMEN?”",
+     "color": "accent",
+     "at": "f1:Trump +0.3",
+     "until": "f1:yes."
+    },
+    {
+     "kind": "stamp",
+     "text": "GREEN LIGHT",
+     "icon": "check",
+     "color": "ok",
+     "screen": [
+      690,
+      430
+     ],
+     "at": "f1:yes.",
+     "until": "f1:Now +0.2",
+     "note": "JULY 2026 · SOURCE: AXIOS"
+    },
+    {
+     "kind": "extrude",
+     "iso": "PAK",
+     "color": "ally",
+     "height": 0.45,
+     "at": "f1:Pakistan,",
+     "until": "f1:intelligence +0.5"
+    },
+    {
+     "kind": "extrude",
+     "iso": "TUR",
+     "color": "ally",
+     "height": 0.45,
+     "at": "f1:Turkey",
+     "until": "f1:intelligence +0.5"
+    },
+    {
+     "kind": "extrude",
+     "iso": "SYR",
+     "color": "ally",
+     "height": 0.45,
+     "at": "f1:Syria",
+     "until": "f1:intelligence +0.5"
+    },
+    {
+     "kind": "arc",
+     "from": "Islamabad",
+     "to": "Riyadh",
+     "color": "ally",
+     "height": 0.35,
+     "at": "f1:Pakistan,",
+     "until": "f1:intelligence"
+    },
+    {
+     "kind": "arc",
+     "from": "Ankara",
+     "to": "Riyadh",
+     "color": "ally",
+     "height": 0.35,
+     "at": "f1:Turkey",
+     "until": "f1:intelligence"
+    },
+    {
+     "kind": "arc",
+     "from": "Damascus",
+     "to": "Riyadh",
+     "color": "ally",
+     "height": 0.35,
+     "at": "f1:Syria",
+     "until": "f1:intelligence"
+    },
+    {
+     "kind": "tag",
+     "loc": "Islamabad",
+     "on": "PAK",
+     "text": "PAKISTAN",
+     "sub": "TROOPS IN SAUDI",
+     "color": "ally",
+     "size": 26,
+     "dy": -80,
+     "at": "f1:Pakistan,",
+     "until": "f1:US"
+    },
+    {
+     "kind": "tag",
+     "loc": "Ankara",
+     "on": "TUR",
+     "text": "TURKEY",
+     "sub": "MILITARY SUPPORT",
+     "color": "ally",
+     "size": 26,
+     "dx": -30,
+     "at": "f1:Turkey",
+     "until": "f1:US"
+    },
+    {
+     "kind": "tag",
+     "loc": "Damascus",
+     "on": "SYR",
+     "text": "SYRIA",
+     "sub": "CONSIDERING AID",
+     "color": "ally",
+     "size": 26,
+     "dx": -110,
+     "dy": 70,
+     "at": "f1:Syria",
+     "until": "f1:US"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      470,
+      290,
+      550
+     ],
+     "title": "MECCA PACT · AUG",
+     "color": "ally",
+     "rows": [
+      {
+       "icon": "shield",
+       "text": "SAUDI · TURKEY · PAKISTAN"
+      }
+     ],
+     "at": "f1:Riyadh, -0.1",
+     "until": "f1:US +0.05"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      60,
+      290,
+      560
+     ],
+     "title": "US SUPPORT",
+     "badge": "REPORTED",
+     "color": "info",
+     "at": "f1:US +0.05",
+     "until": "f2 -0.1",
+     "rows": [
+      {
+       "icon": "eye",
+       "text": "INTELLIGENCE",
+       "at": "f1:intelligence"
+      },
+      {
+       "icon": "jet",
+       "text": "AIR REFUELING",
+       "at": "f1:refueling"
+      }
+     ]
+    },
+    {
+     "kind": "arc",
+     "from": [
+      42.73,
+      18.3
+     ],
+     "to": "Sanaa",
+     "color": "danger",
+     "height": 0.5,
+     "width": 4,
+     "dur": 1.1,
+     "headColor": "#ffd2c8",
+     "at": "f1:refueling",
+     "until": "f2 +0.4"
+    },
+    {
+     "kind": "arc",
+     "from": "Riyadh",
+     "to": [
+      43.76,
+      16.94
+     ],
+     "color": "danger",
+     "height": 0.5,
+     "width": 4,
+     "dur": 1.1,
+     "headColor": "#ffd2c8",
+     "at": "f1:refueling +0.25",
+     "until": "f2 +0.4"
+    },
+    {
+     "kind": "arc",
+     "from": [
+      42.57,
+      16.89
+     ],
+     "to": [
+      42.95,
+      14.8
+     ],
+     "color": "danger",
+     "height": 0.5,
+     "width": 4,
+     "dur": 1.1,
+     "headColor": "#ffd2c8",
+     "at": "f1:refueling +0.45",
+     "until": "f2 +0.4"
+    },
+    {
+     "kind": "tag",
+     "loc": "Sanaa",
+     "text": "HOUTHIS (ANSARALLAH)",
+     "color": "danger",
+     "at": "f2 +0.2",
+     "until": "f2:That's +0.4",
+     "dx": 40,
+     "dy": 120
+    },
+    {
+     "kind": "movers",
+     "path": [
+      [
+       38.0,
+       24.0
+      ],
+      [
+       38.45,
+       22.6
+      ],
+      [
+       39.15,
+       20.9
+      ],
+      [
+       40.05,
+       19.2
+      ],
+      [
+       41.05,
+       17.4
+      ],
+      [
+       41.95,
+       15.7
+      ],
+      [
+       42.65,
+       14.2
+      ],
+      [
+       43.33,
+       12.62
+      ],
+      [
+       44.5,
+       12.15
+      ],
+      [
+       46.5,
+       12.3
+      ],
+      [
+       49.5,
+       12.6
+      ]
+     ],
+     "color": "oil",
+     "count": 3,
+     "stopAt": 0.52,
+     "blockAt": "f2:blockade",
+     "at": "f2 +0.3",
+     "until": "f2:both +1"
+    },
+    {
+     "kind": "barrier",
+     "path": [
+      [
+       39.2,
+       16.6
+      ],
+      [
+       40.6,
+       16.4
+      ],
+      [
+       42.2,
+       15.9
+      ]
+     ],
+     "text": "BLOCKADE",
+     "sub": "ON SAUDI SHIPPING · JULY 2026",
+     "stampLoc": [
+      40.7,
+      16.35
+     ],
+     "at": "f2:blockade",
+     "until": "f3",
+     "stampUntil": "f2:both +0.1"
+    },
+    {
+     "kind": "route",
+     "style": "flow",
+     "on": "SAU",
+     "color": "oil",
+     "path": [
+      [
+       49.68,
+       25.94
+      ],
+      [
+       47.6,
+       25.55
+      ],
+      [
+       45.3,
+       25.05
+      ],
+      [
+       42.6,
+       24.55
+      ],
+      [
+       40.2,
+       24.2
+      ],
+      [
+       38.06,
+       24.09
+      ]
+     ],
+     "at": "f2:Saudi#1 -0.1",
+     "until": "f2:IEA +0.2",
+     "label": {
+      "text": "EAST–WEST PIPELINE",
+      "sub": "SAUDI OIL REROUTED TO THE RED SEA",
+      "loc": [
+       44.0,
+       24.8
+      ],
+      "dx": -60,
+      "dy": -150,
+      "at": "f2:Saudi#1 +0.3",
+      "until": "f2:both +0.1"
+     }
+    },
+    {
+     "kind": "movers",
+     "path": [
+      [
+       38.0,
+       24.0
+      ],
+      [
+       38.45,
+       22.6
+      ],
+      [
+       39.15,
+       20.9
+      ],
+      [
+       40.05,
+       19.2
+      ],
+      [
+       41.05,
+       17.4
+      ],
+      [
+       41.95,
+       15.7
+      ],
+      [
+       42.65,
+       14.2
+      ],
+      [
+       43.33,
+       12.62
+      ]
+     ],
+     "color": "oil",
+     "count": 1,
+     "offset": 0.02,
+     "speed": 0.16,
+     "stopAt": 0.6,
+     "at": "f2:Saudi#1 +1.2",
+     "until": "f2:both"
+    },
+    {
+     "kind": "marker",
+     "loc": "Strait of Hormuz",
+     "style": "x",
+     "color": "danger",
+     "at": "f2:Iran",
+     "until": "f3 +1.5",
+     "label": {
+      "text": "HORMUZ · CLOSED BY IRAN",
+      "dx": 20,
+      "dy": 90,
+      "until": "f2:both +0.1"
+     }
+    },
+    {
+     "kind": "movers",
+     "path": [
+      [
+       50.15,
+       26.75
+      ],
+      [
+       51.8,
+       26.5
+      ],
+      [
+       53.6,
+       26.3
+      ],
+      [
+       55.2,
+       26.25
+      ],
+      [
+       56.45,
+       26.55
+      ],
+      [
+       57.4,
+       25.6
+      ],
+      [
+       58.6,
+       24.3
+      ],
+      [
+       60.5,
+       23.3
+      ]
+     ],
+     "color": "danger",
+     "count": 2,
+     "offset": 0.31,
+     "spacing": 0.14,
+     "speed": 0,
+     "at": "f2:Iran",
+     "until": "f3 +1.5"
+    },
+    {
+     "kind": "column",
+     "loc": "Strait of Hormuz",
+     "value": 20,
+     "display": "≈{v}%",
+     "label": "STRAIT OF HORMUZ",
+     "color": "oil",
+     "dur": 1.3,
+     "at": "f2:Hormuz#1 -0.1",
+     "until": "f2:IEA +0.25"
+    },
+    {
+     "kind": "column",
+     "loc": "Bab al-Mandab",
+     "value": 8,
+     "display": "≈{v}%",
+     "label": "BAB AL-MANDAB",
+     "color": "danger",
+     "dur": 1.1,
+     "at": "f2:Bab -0.1",
+     "until": "f2:IEA +0.25"
+    },
+    {
+     "kind": "note",
+     "text": "SHARE OF THE WORLD'S TRADED OIL",
+     "sub": "PRE-WAR, PER GEOPOLITICAL ECONOMY REPORT",
+     "y": 1150,
+     "at": "f2:Bab +0.6",
+     "until": "f2:IEA +0.25"
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "from": "f2:IEA -0.1",
+   "to": "f3 -0.25",
+   "at": "f2:IEA",
+   "color": "oil",
+   "lines": [
+    [
+     "BIGGEST OIL",
+     "text"
+    ],
+    [
+     "SUPPLY CRISIS",
+     "oil"
+    ],
+    [
+     "IN HISTORY",
+     "text"
+    ]
+   ],
+   "by": "INTERNATIONAL ENERGY AGENCY (IEA)"
+  },
+  {
+   "type": "counter",
+   "from": "f3 -0.2",
+   "to": "f3:Shipping -0.3",
+   "label": "CRUDE OIL · PER BARREL",
+   "icon": "barrel",
+   "color": "oil",
+   "value": 100,
+   "prefix": "$",
+   "doneSuffix": "+",
+   "at": "f3:Crude",
+   "doneAt": "f3:100",
+   "note": "BACK ABOVE · NEAR ITS WAR PEAK"
+  },
+  {
+   "type": "bars",
+   "from": "f3:Shipping -0.1",
+   "to": "f3:heating -0.3",
+   "label": "SUPERTANKER HIRE · PER DAY",
+   "sublabel": "SAUDI ARABIA → EAST ASIA",
+   "format": "money",
+   "color": "oil",
+   "bars": [
+    {
+     "label": "BEFORE",
+     "sub": "≈ PRE-WAR",
+     "value": 60000,
+     "color": "neutral",
+     "at": "f3:Shipping +0.2",
+     "dur": 0.6
+    },
+    {
+     "label": "NOW",
+     "sub": "RECORD HIGH",
+     "value": 1300000,
+     "color": "oil",
+     "at": "f3:1.3 -0.25",
+     "dur": 1.3
+    }
+   ],
+   "badge": {
+    "text": "×21",
+    "at": "f3:up"
+   }
+  },
+  {
+   "type": "gauge",
+   "from": "f3:heating -0.1",
+   "to": "cta +0.2",
+   "label": "HEATING OIL · MAINE, USA",
+   "value": 80,
+   "prefix": "+",
+   "suffix": "%",
+   "icon": "flame",
+   "at": "f3:Maine -0.15",
+   "doneAt": "f3:80 +0.05",
+   "note": "VS. LAST YEAR · NOW $5.96 / GALLON",
+   "source": "SOURCE: BLOOMBERG"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 56,
+     "lat": 18,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 48,
+     "lat": 21,
+     "R": 430
+    },
+    {
+     "at": "end",
+     "lon": 40,
+     "lat": 24,
+     "R": 430
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "IRN",
+     "color": "danger",
+     "alpha": 0.8
+    },
+    {
+     "iso": "YEM",
+     "color": "danger"
+    },
+    {
+     "iso": "SAU",
+     "color": "accent",
+     "alpha": 0.8
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Strait of Hormuz",
+     "color": "danger"
+    },
+    {
+     "loc": "Bab al-Mandab",
+     "color": "danger"
+    },
+    {
+     "loc": [
+      44.2,
+      15.6
+     ],
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "TWO FRONTS.",
+     "text"
+    ],
+    [
+     "ONE OIL SHOCK.",
+     "oil"
+    ]
+   ],
+   "sources": [
+    "FIGURES AS REPORTED BY AXIOS, REUTERS, IEA, BLOOMBERG",
+    "VIA GEOPOLITICAL ECONOMY REPORT · OCT 8, 2026"
+   ]
+  }
+ ],
+ "upload": {
+  "title": "The Iran War Just Opened a Second Front #shorts",
+  "description": "Saudi Arabia restarted its war on Yemen with a US green light. The Houthis answered with a Red Sea blockade, and two of the world's oil choke points are now under pressure at once.\n\nSources: Axios, Reuters, IEA, Bloomberg (via Geopolitical Economy Report, Oct 8, 2026).",
+  "tags": [
+   "geopolitics",
+   "Iran",
+   "Yemen",
+   "Saudi Arabia",
+   "Houthis",
+   "Red Sea",
+   "Strait of Hormuz",
+   "oil prices",
+   "Middle East",
+   "news"
+  ],
+  "cover": "hook:second +0.4"
+ }
+}
