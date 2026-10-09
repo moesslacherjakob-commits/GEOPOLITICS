@@ -6,9 +6,14 @@ cd "$(dirname "$0")"
 STORY=$(realpath "$1"); PARTS=${2:-$(nproc)}
 ID=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['id'])" "$STORY")
 OUT=out/$ID; mkdir -p "$OUT"; rm -f "$OUT"/seg_*.mp4
+VOICE_WAV=""; unset VOICE_TIMING
+if python3 -c "import json,sys;sys.exit(0 if json.load(open('config.json')).get('voice',{}).get('enabled') else 1)"; then
+  if python3 tools/tts_elevenlabs.py "$STORY" "$OUT"; then export VOICE_TIMING="$(realpath "$OUT/voice_timing.json")"; VOICE_WAV="$OUT/voice.wav"
+  else echo "WARNING: voice generation failed — rendering captions-only"; fi
+fi
 node engine/engine.mjs "$STORY" check
 node engine/engine.mjs "$STORY" events "$OUT/events.json"
-python3 engine/audio.py "$OUT/events.json" "$OUT/sound.wav"
+python3 engine/audio.py "$OUT/events.json" "$OUT/sound.wav" $VOICE_WAV
 NF=$(python3 -c "import json;print(json.load(open('$OUT/events.json'))['frames'])")
 STEP=$(( (NF + PARTS - 1) / PARTS ))
 echo "rendering $NF frames in $PARTS parts"
@@ -19,9 +24,12 @@ for ((p=0; p<PARTS; p++)); do
 done
 for pid in "${pids[@]}"; do wait $pid; done
 for v in caps clean; do ls "$OUT"/seg_${v}_*.mp4 | sort | sed "s|^$OUT/|file '|; s|$|'|" > "$OUT/$v.txt"; done
+DURS=$(python3 -c "import json;print(json.load(open('$OUT/events.json'))['duration'])")
+VB=$(python3 -c "print(min(3500, int(28*8192/$DURS - 170)))")k   # keep the file < ~28 MB
+echo "video bitrate $VB for ${DURS}s"
 enc() { # $1 list, $2 output, $3 passlog
-  ffmpeg -y -loglevel error -f concat -safe 0 -i "$OUT/$1" -vf hqdn3d=1.5:1.5:6:6 -c:v libx264 -preset medium -b:v 3500k -maxrate 6000k -bufsize 7000k -profile:v high -pix_fmt yuv420p -pass 1 -passlogfile "$OUT/$3" -an -f mp4 /dev/null
-  ffmpeg -y -loglevel error -f concat -safe 0 -i "$OUT/$1" -i "$OUT/sound.wav" -map 0:v -map 1:a -vf hqdn3d=1.5:1.5:6:6 -c:v libx264 -preset medium -b:v 3500k -maxrate 6000k -bufsize 7000k -profile:v high -pix_fmt yuv420p -pass 2 -passlogfile "$OUT/$3" -c:a aac -b:a 160k -shortest -movflags +faststart "$OUT/$2"
+  ffmpeg -y -loglevel error -f concat -safe 0 -i "$OUT/$1" -vf hqdn3d=1.5:1.5:6:6 -c:v libx264 -preset medium -b:v $VB -maxrate 6000k -bufsize 7000k -profile:v high -pix_fmt yuv420p -pass 1 -passlogfile "$OUT/$3" -an -f mp4 /dev/null
+  ffmpeg -y -loglevel error -f concat -safe 0 -i "$OUT/$1" -i "$OUT/sound.wav" -map 0:v -map 1:a -vf hqdn3d=1.5:1.5:6:6 -c:v libx264 -preset medium -b:v $VB -maxrate 6000k -bufsize 7000k -profile:v high -pix_fmt yuv420p -pass 2 -passlogfile "$OUT/$3" -c:a aac -b:a 160k -shortest -movflags +faststart "$OUT/$2"
 }
 enc caps.txt short.mp4 plcaps & e1=$!
 enc clean.txt short_clean.mp4 plclean & e2=$!
@@ -32,7 +40,7 @@ node engine/engine.mjs "$STORY" thumb "$OUT/thumb.jpg"
 python3 - "$STORY" "$OUT" <<'PY'
 import json, sys
 s = json.load(open(sys.argv[1])); out = sys.argv[2]; ev = json.load(open(out + '/events.json'))
-u = dict(s.get('upload', {})); u['coverMs'] = int(ev['cover'] * 1000); u['duration'] = ev['duration']; u['id'] = s['id']; u['thumbnailFile'] = 'thumb.jpg'
+u = dict(s.get('upload', {})); u['coverMs'] = int(ev['cover'] * 1000); u['duration'] = ev['duration']; u['id'] = s['id']; u['thumbnailFile'] = 'thumb.jpg'; import os; u['voice'] = os.path.exists(out + '/voice.wav') and bool(os.environ.get('VOICE_TIMING'))
 disc = json.load(open('config.json')).get('disclaimer')
 if disc and disc not in u.get('description', ''):
     parts = u.get('description', '').rstrip().split('\n\n')

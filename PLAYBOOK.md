@@ -21,8 +21,10 @@ You are producing today's 60-second geopolitics Short end to end. Work unattende
 
 ## 3. Script (English, ≤ 150 words)
 `hook` (≤ 20 words: the twist, no throat-clearing) → `f1`, `f2`, `f3` (one fact block each, ~35–45 words) → `cta`: "Follow for the next update."
+- The video is narrated: write for the ear — short sentences, numbers as people say them, no parentheses or slashes. Pacing is calm (~125 wpm), so a 145-word script runs ~73 s; videos are 70–78 s.
+- Abbreviations the voice must spell (US, UN, IEA …) go in `config.json → voice.say`; add new ones there if needed.
 - Plain, neutral, attributed. No opinions, no loaded labels, no invented quotes, numbers exactly as sourced. Paraphrase — never copy article sentences.
-- Check: `node engine/engine.mjs stories/<id>.json check` → speech must end before ~58 s.
+- Check: `node engine/engine.mjs stories/<id>.json check` → no WARNING (speech must end before ~75 s).
 
 ## 4. Storyboard
 Write `stories/<YYYY-MM-DD>-<slug>.json` following `STORY_FORMAT.md` (copy the closest example and adapt).
@@ -34,9 +36,10 @@ Write `stories/<YYYY-MM-DD>-<slug>.json` following `STORY_FORMAT.md` (copy the c
 ## 5. QA loop (max 3 rounds)
 `node engine/engine.mjs stories/<id>.json stills /tmp/qa <~12 times across the video>` then `python3 tools/sheet.py /tmp/qa/sheet.png /tmp/qa/still_*.png` and **look at the sheet**. Fix: overlapping labels, text in caption zone (y 1240–1400) or under the right-hand buttons, things too small to read, empty frames, wrong countries highlighted. Zoom the camera in when a detail is too small.
 
-## 6. Render (≈ 20–25 min)
+## 6. Voice + render (≈ 35–45 min)
+`make.sh` first generates the voiceover (ElevenLabs, `tools/tts_elevenlabs.py`) and re-times captions and animations to the real voice; QA stills from step 5 use estimated timing, so expect small shifts. If the voice fails (e.g. ElevenLabs unreachable or out of credits) it renders captions-only and prints a WARNING — say so in the report.
 `nohup ./make.sh stories/<id>.json 2 > /tmp/make.log 2>&1 &` and poll `tail /tmp/make.log` (tool calls time out after 10 min — never run it in the foreground). Output in `out/<id>/`: `short.mp4` (captions, < 30 MB), `short_clean.mp4`, `cover.png`, `thumb.jpg` (designed thumbnail), `upload.json`.
-Verify: duration ≈ 60 s, size < 30 MB, extract 3 frames with ffmpeg and look at them.
+Verify: duration 70–78 s, size < 30 MB, `upload.json → voice` is true (or explain why not), extract 3 frames with ffmpeg and look at them.
 
 ## 7. Publish the video file
 Metricool needs a public URL. Push the file to the orphan `media` branch (overwritten daily, keeps the repo small):

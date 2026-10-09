@@ -7,15 +7,15 @@ Two full examples: `stories/2026-10-09-second-front.json` (Gulf / oil) and `stor
 | key | meaning |
 |---|---|
 | `id` | `YYYY-MM-DD-slug` — also the output folder and video file name |
-| `script` | list of segments `{id, text, rate?}` — spoken/caption text. Timing is computed automatically (≈155 wpm). `rate` speeds a segment up (default 6.2 units/s; hooks ~6.6). |
-| `rate`, `gap`, `start` | global pacing overrides (defaults 5.9 / 0.45 s / 0.3 s) |
+| `script` | list of segments `{id, text}` — narrated and captioned text. Timing comes from the voiceover (or is estimated at ~125 wpm without one). |
+| `rate`, `gap`, `start` | pacing overrides — normally leave them out; defaults come from `config.json → pace` (calm ~125 wpm). With a voiceover the real voice timing replaces the estimate. |
 | `sections` | progress-bar chapters `{n, name, seg, color, to?}` — usually one per fact segment |
 | `scenes` | ordered list of scenes (below) |
 | `theme` | optional colour overrides |
 | `upload` | `{title, description, tags[], cover}` → `out/<id>/upload.json` |
 | `thumbnail` | `{at, kicker, kickerColor, lines: [[text, color]]}` → `out/<id>/thumb.jpg` (designed 9:16 thumbnail; text kept inside the central 3:2 band YouTube shows everywhere) |
 
-Keep the script **≤ 150 words** so speech ends before 58 s. `node engine/engine.mjs <story> check` prints timing and warns if too long.
+Keep the script **≤ 150 words** so speech ends before ~75 s (videos run 70–78 s). `node engine/engine.mjs <story> check` prints timing and warns if too long.
 
 ## Anchors (`at`, `until`, `from`, `to`)
 Every time value can be a number (seconds) or an anchor string:

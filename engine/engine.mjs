@@ -81,22 +81,32 @@ function syl(tok) {
   for (const p of w.split(/\s+/)) { if (!p) continue; const m = p.match(/[aeiouy]+/g); let c = m ? m.length : 1; if (p.endsWith('e') && c > 1 && !p.endsWith('le')) c--; n += Math.max(1, c); }
   return Math.max(1, n);
 }
+const CFG = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'config.json'), 'utf8')); } catch { return {}; } })();
+const PACE = CFG.pace || {};
+const MAXD = story.maxDuration || PACE.maxDuration || 78;
+// optional real voice timing (from tools/tts_elevenlabs.py): {segments:[{id,a,b,words:[{text,t0,t1}]}]}
+const VOICE = process.env.VOICE_TIMING && fs.existsSync(process.env.VOICE_TIMING) ? JSON.parse(fs.readFileSync(process.env.VOICE_TIMING, 'utf8')) : null;
 const SEGS = story.script.map(s => ({ ...s }));
 const WORDS = [];
 {
-  let cursor = story.start ?? 0.3; const RATE = story.rate || 5.9;
+  let cursor = story.start ?? PACE.start ?? 0.4; const RATE = story.rate || PACE.rate || 4.9;
   SEGS.forEach((s, si) => {
     const toks = s.text.trim().split(/\s+/);
     const items = toks.map((tk, i) => ({ tk, w: syl(tk) + .45, pause: i === toks.length - 1 ? 0 : /[.?!:]$/.test(tk) ? 1.7 : /[,;—]$/.test(tk) ? .8 : 0 }));
     const tot = items.reduce((a, b) => a + b.w + b.pause, 0);
-    s.a = s.a ?? cursor; s.b = s.b ?? s.a + tot / (s.rate || RATE);
+    const vs = VOICE && VOICE.segments.find(v => v.id === s.id);
+    if (vs) { s.a = vs.a; s.b = vs.b; } else { s.a = s.a ?? cursor; s.b = s.b ?? s.a + tot / (s.rate || (si === 0 && PACE.hookRate) || RATE); }
     const k = (s.b - s.a) / tot; let t = s.a; s.words = [];
-    items.forEach((it, i) => { const wd = { seg: s.id, i, text: it.tk, t0: +t.toFixed(3), t1: +(t + it.w * k).toFixed(3) }; t += (it.w + it.pause) * k; WORDS.push(wd); s.words.push(wd); });
-    cursor = s.b + (s.gap ?? story.gap ?? .45);
+    items.forEach((it, i) => {
+      let t0 = t, t1 = t + it.w * k;
+      if (vs && vs.words.length === toks.length) { t0 = vs.words[i].t0; t1 = vs.words[i].t1; }
+      const wd = { seg: s.id, i, text: it.tk, t0: +t0.toFixed(3), t1: +t1.toFixed(3) }; t += (it.w + it.pause) * k; WORDS.push(wd); s.words.push(wd);
+    });
+    cursor = s.b + (s.gap ?? story.gap ?? PACE.gap ?? .6);
   });
 }
 const SPEECH_END = SEGS[SEGS.length - 1].b;
-const DUR = Math.min(story.maxDuration || 60, story.duration || Math.ceil((SPEECH_END + (story.tail ?? 2.4)) * 10) / 10);
+const DUR = Math.min(MAXD, story.duration || Math.ceil((SPEECH_END + (story.tail ?? PACE.tail ?? 2.6)) * 10) / 10);
 const NF = Math.round(DUR * FPS);
 
 // anchors: number | "seg" | "seg$" | "seg:word" | "seg:word#2" | "end" ; optional " +0.5"
@@ -744,7 +754,8 @@ if (CMD === 'check') {
   console.log(`duration ${DUR}s (${NF} frames), speech ends ${SPEECH_END.toFixed(2)}s, ${WORDS.length} words, ${(WORDS.length / (SPEECH_END - SEGS[0].a) * 60).toFixed(0)} wpm`);
   for (const s of SEGS) console.log(`  ${s.id.padEnd(8)} ${s.a.toFixed(2)} → ${s.b.toFixed(2)}  ${s.words.map(w => w.text + '@' + w.t0.toFixed(1)).join(' ')}`);
   for (const sc of SCENES) console.log(`  scene ${sc.type.padEnd(7)} ${sc.from.toFixed(2)} → ${sc.to.toFixed(2)}`);
-  if (DUR >= (story.maxDuration || 60) && SPEECH_END + 1.5 > DUR) console.log('WARNING: script too long for the max duration — shorten it');
+  if (DUR >= MAXD && SPEECH_END + 1.5 > DUR) console.log('WARNING: script too long for the max duration — shorten it');
+  console.log(VOICE ? 'timing: real voice' : 'timing: estimated (no voice)');
 } else if (CMD === 'events') {
   const hd = SCENES.find(s => s.headline); const cover = A(story.upload?.cover ?? (hd ? hd.headline.t + .4 : 2));
   fs.writeFileSync(ARGS[0], JSON.stringify({ id: story.id, duration: DUR, frames: NF, fps: FPS, cover, events: EVENTS.sort((a, b) => a.t - b.t), sections: SECTIONS.map(s => ({ a: s.a, b: s.b })), words: WORDS }, null, 1));

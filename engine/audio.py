@@ -1,11 +1,11 @@
 """Sound design: tension bed (chord per section, pulse, bass) + SFX on the engine's cue list.
-Usage: python3 engine/audio.py <events.json> <out.wav>"""
+Usage: python3 engine/audio.py <events.json> <out.wav> [voice.wav]"""
 import json, sys, numpy as np
 from scipy.signal import butter, sosfilt, fftconvolve
 from scipy.io import wavfile
 
 SR = 48000
-spec = json.load(open(sys.argv[1])); OUT = sys.argv[2]
+spec = json.load(open(sys.argv[1])); OUT = sys.argv[2]; VOICE = sys.argv[3] if len(sys.argv) > 3 else None
 DUR = spec['duration']; N = int(SR * DUR); ev = spec['events']; secs = spec.get('sections') or []
 seed = abs(hash(json.dumps(ev[:5]))) % (2 ** 31); rng = np.random.default_rng(seed)
 t_all = np.arange(N) / SR
@@ -108,8 +108,20 @@ for e in ev:
     if e['type'] in ('impact', 'stamp'):
         i = int(e['t'] * SR); n = max(0, min(int(0.8 * SR), N - i))
         if n: duck[i:i + n] = np.minimum(duck[i:i + n], 1 - 0.45 * np.exp(-np.arange(n) / SR / 0.25))
-mix = music * duck * 0.8 + sfx * 0.9
+if VOICE:
+    vsr, v = wavfile.read(VOICE); v = v.astype(np.float32) / 32768.0
+    if v.ndim > 1: v = v.mean(1)
+    if vsr != SR: v = np.interp(np.arange(int(len(v) * SR / vsr)) / SR, np.arange(len(v)) / vsr, v)
+    vv = np.zeros(N, np.float32); vv[:min(N, len(v))] = v[:N]
+    env = lp(np.abs(vv), 6, 2); env = np.clip(env / (np.percentile(env[env > 1e-4], 90) if (env > 1e-4).any() else 1), 0, 1)
+    music *= 1 - 0.68 * env; sfx *= 1 - 0.35 * env
+    mix = music * duck * 0.8 + sfx * 0.75
+    mix /= max(np.sqrt((mix ** 2).mean()), 1e-6) / 10 ** (-24 / 20)            # bed around -24 dBFS RMS
+    vrms = np.sqrt((vv[np.abs(vv) > 0.01] ** 2).mean()) if (np.abs(vv) > 0.01).any() else 1
+    mix = mix + np.stack([vv, vv]) * (10 ** (-15 / 20) / vrms)                  # voice around -15 dBFS RMS
+else:
+    mix = music * duck * 0.8 + sfx * 0.9
 mix *= np.minimum(1, t_all / 0.3) * np.minimum(1, (DUR - t_all) / 0.6)
 mix = np.tanh(mix * 1.2) / np.tanh(1.2); mix /= np.max(np.abs(mix)) / 0.89
 wavfile.write(OUT, SR, (mix.T * 32767).astype(np.int16))
-print('audio ok', OUT, f'{DUR:.1f}s')
+print('audio ok', OUT, f'{DUR:.1f}s', 'with voice' if VOICE else 'no voice')

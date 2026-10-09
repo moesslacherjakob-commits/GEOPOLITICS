@@ -7,5 +7,30 @@
   "timezone": "Europe/Vienna",
   "language": "en",
   "disclaimer": "ℹ️ About this video: The information was carefully researched from the sources listed above. The script, visuals and edit were created with the help of AI. AI can make mistakes, so please check the linked sources for important details. All content is provided to the best of our knowledge and belief, without guarantee of accuracy or completeness and without liability.",
-  "thumbnail": true
+  "thumbnail": true,
+  "pace": {
+    "rate": 4.9,
+    "hookRate": 5.4,
+    "gap": 0.6,
+    "tail": 2.6,
+    "maxDuration": 78
+  },
+  "voice": {
+    "enabled": true,
+    "provider": "elevenlabs",
+    "voiceId": "onwK4e9ZLuTAKqWW03F9",
+    "model": "eleven_multilingual_v2",
+    "speed": 0.95,
+    "stability": 0.5,
+    "similarity": 0.75,
+    "say": {
+      "US": "U.S.",
+      "UN": "U.N.",
+      "IEA": "I.E.A.",
+      "TPLF": "T.P.L.F.",
+      "EU": "E.U.",
+      "NATO": "NATO",
+      "MBS": "M.B.S."
+    }
+  }
 }

@@ -4,7 +4,6 @@
  "script": [
   {
    "id": "hook",
-   "rate": 6.6,
    "text": "Africa's second most populous country says it's being invaded. And the Red Sea sits right in the middle."
   },
   {
@@ -1257,7 +1256,6 @@
   ],
   "cover": "hook:invaded. +0.5"
  },
- "rate": 6.2,
  "thumbnail": {
   "at": "f1:60 +0.8",
   "kicker": "HORN OF AFRICA",
