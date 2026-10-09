@@ -28,10 +28,11 @@ enc clean.txt short_clean.mp4 plclean & e2=$!
 wait $e1; wait $e2
 COVER=$(python3 -c "import json;print(json.load(open('$OUT/events.json'))['cover'])")
 ffmpeg -y -loglevel error -ss "$COVER" -i "$OUT/short.mp4" -frames:v 1 "$OUT/cover.png"
+node engine/engine.mjs "$STORY" thumb "$OUT/thumb.jpg"
 python3 - "$STORY" "$OUT" <<'PY'
 import json, sys
 s = json.load(open(sys.argv[1])); out = sys.argv[2]; ev = json.load(open(out + '/events.json'))
-u = dict(s.get('upload', {})); u['coverMs'] = int(ev['cover'] * 1000); u['duration'] = ev['duration']; u['id'] = s['id']
+u = dict(s.get('upload', {})); u['coverMs'] = int(ev['cover'] * 1000); u['duration'] = ev['duration']; u['id'] = s['id']; u['thumbnailFile'] = 'thumb.jpg'
 disc = json.load(open('config.json')).get('disclaimer')
 if disc and disc not in u.get('description', ''):
     parts = u.get('description', '').rstrip().split('\n\n')

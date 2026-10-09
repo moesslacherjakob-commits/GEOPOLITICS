@@ -1056,5 +1056,24 @@
    "news"
   ],
   "cover": "hook:second +0.4"
+ },
+ "thumbnail": {
+  "at": "f2:both +1.6",
+  "kicker": "IRAN WAR",
+  "kickerColor": "danger",
+  "lines": [
+   [
+    "A SECOND",
+    "text"
+   ],
+   [
+    "FRONT",
+    "danger"
+   ],
+   [
+    "OPENS",
+    "text"
+   ]
+  ]
  }
 }

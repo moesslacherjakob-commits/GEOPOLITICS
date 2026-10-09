@@ -29,24 +29,25 @@ Write `stories/<YYYY-MM-DD>-<slug>.json` following `STORY_FORMAT.md` (copy the c
 - Globe hook → 3D map (camera moves per fact) → optional data overlay (quote/counter/bars/gauge/facts) when the story has hard numbers → end globe with two punchlines.
 - Vary the look day to day (different scene mixes, colours, overlays) — YouTube demonetises repetitive template content.
 - Every on-screen number/claim needs a source line or label.
+- Add a `thumbnail` block: `at` (a strong map moment, not the hook), `kicker` (2–3 words, e.g. region or conflict), `lines` (2–3 punchy lines, ≤ 3 words each, one line in an accent colour). Check it with `node engine/engine.mjs stories/<id>.json thumb /tmp/qa/thumb.jpg` and look at it.
 
 ## 5. QA loop (max 3 rounds)
 `node engine/engine.mjs stories/<id>.json stills /tmp/qa <~12 times across the video>` then `python3 tools/sheet.py /tmp/qa/sheet.png /tmp/qa/still_*.png` and **look at the sheet**. Fix: overlapping labels, text in caption zone (y 1240–1400) or under the right-hand buttons, things too small to read, empty frames, wrong countries highlighted. Zoom the camera in when a detail is too small.
 
 ## 6. Render (≈ 20–25 min)
-`nohup ./make.sh stories/<id>.json 2 > /tmp/make.log 2>&1 &` and poll `tail /tmp/make.log` (tool calls time out after 10 min — never run it in the foreground). Output in `out/<id>/`: `short.mp4` (captions, < 30 MB), `short_clean.mp4`, `cover.png`, `upload.json`.
+`nohup ./make.sh stories/<id>.json 2 > /tmp/make.log 2>&1 &` and poll `tail /tmp/make.log` (tool calls time out after 10 min — never run it in the foreground). Output in `out/<id>/`: `short.mp4` (captions, < 30 MB), `short_clean.mp4`, `cover.png`, `thumb.jpg` (designed thumbnail), `upload.json`.
 Verify: duration ≈ 60 s, size < 30 MB, extract 3 frames with ffmpeg and look at them.
 
 ## 7. Publish the video file
 Metricool needs a public URL. Push the file to the orphan `media` branch (overwritten daily, keeps the repo small):
 ```
-cd out/<id> && rm -rf /tmp/media && mkdir /tmp/media && cp short.mp4 /tmp/media/<id>.mp4 && cp cover.png /tmp/media/<id>.png
+cd out/<id> && rm -rf /tmp/media && mkdir /tmp/media && cp short.mp4 /tmp/media/<id>.mp4 && cp cover.png /tmp/media/<id>.png && cp thumb.jpg /tmp/media/<id>-thumb.jpg
 cd /tmp/media && git init -q -b media && git add . && git commit -qm "<id>" && git push -f https://github.com/moesslacherjakob-commits/GEOPOLITICS media:media
 ```
-URL: `https://raw.githubusercontent.com/moesslacherjakob-commits/GEOPOLITICS/media/<id>.mp4` (repo must be public).
+URLs: `https://raw.githubusercontent.com/moesslacherjakob-commits/GEOPOLITICS/media/<id>.mp4` and `.../media/<id>-thumb.jpg` (repo must be public).
 
 ## 8. Schedule on YouTube via Metricool
-`createScheduledPost` with `blogId` from `config.json`, `providers: [{"network":"youtube"}]`, `text` = `description` from `out/<id>/upload.json` (already contains the AI disclaimer from `config.json` — never remove it), `media: [<URL>]`, `youtubeData: {title, type: "short", privacy: "public", tags, category: "NEWS_POLITICS", madeForKids: false, isAiGeneratedContent: false}`, `autoPublish` from `config.json`, `publicationDate` = today at `config.postTime` (Europe/Vienna) or +20 min if that time has passed.
+`createScheduledPost` with `blogId` from `config.json`, `providers: [{"network":"youtube"}]`, `text` = `description` from `out/<id>/upload.json` (already contains the AI disclaimer from `config.json` — never remove it), `media: [<URL>]`, `youtubeData: {title, type: "short", privacy: "public", tags, category: "NEWS_POLITICS", madeForKids: false, isAiGeneratedContent: false}`, and — if `config.thumbnail` is true — `videoThumbnailUrl: <thumb URL>`. If Metricool rejects the post with `VIDEO_THUMBNAIL_NOT_APPLICABLE` (channel not yet eligible for custom Shorts thumbnails), schedule it again **without** `videoThumbnailUrl` and mention it in the report. Never let the thumbnail block the upload. `autoPublish` from `config.json`, `publicationDate` = today at `config.postTime` (Europe/Vienna) or +20 min if that time has passed.
 `autoPublish: true` (current setting): Metricool publishes automatically at the slot — there is no human approval, so the research and QA steps above are the only safety net. Your report reaches Jakob before the slot, so he can still pull a video in Metricool if he spots a problem.
 
 ## 9. Wrap up

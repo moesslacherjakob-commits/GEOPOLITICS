@@ -687,18 +687,56 @@ function finishFrame() {
   ctx.save(); ctx.globalAlpha = .55; ctx.translate(Math.random() * 256, Math.random() * 256); ctx.fillStyle = grainPat; ctx.fillRect(-256, -256, W + 512, H + 512); ctx.restore();
 }
 function shakeAt(t) { let s = 0; for (const e of EVENTS) if (e.type === 'impact' || e.type === 'stamp') { const d = t - e.t; if (d >= 0 && d < .35) s = Math.max(s, (1 - d / .35) * 9 * e.g); } return s; }
+let THUMB = false;
 function renderFrame(t) {
   ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.fillStyle = THEME.ink; ctx.fillRect(0, 0, W, H);
-  const sh = shakeAt(t); if (sh > 0) ctx.translate((Math.random() - .5) * sh, (Math.random() - .5) * sh);
+  const sh = THUMB ? 0 : shakeAt(t); if (sh > 0) ctx.translate((Math.random() - .5) * sh, (Math.random() - .5) * sh);
   for (const sc of SCENES) {
     if (sc.type === 'globe') { if (t >= sc.from - .3 && t < sc.to + .4) globeScene(sc, t); }
     else if (sc.type === 'map') { const a = E.inOut(P(t, sc.from - .2, .5)) * (1 - P(t, sc.to - .2, .5)); if (a > 0) { ctx.save(); ctx.globalAlpha = a; mapScene(sc, t); ctx.restore(); } }
     else if (sc.type === 'end') { const a = E.out(P(t, sc.from - .35, .7)); if (a > 0) { ctx.save(); ctx.globalAlpha = a; globeScene(sc, t); ctx.restore(); } }
     else overlayScene(sc, t);
   }
-  for (const ft of FLASHES) { const d = t - ft; if (d > -.05 && d < .25) { ctx.save(); ctx.globalAlpha = (1 - Math.abs(d - .05) / .2) * .18; ctx.fillStyle = '#fff'; ctx.fillRect(-20, -20, W + 40, H + 40); ctx.restore(); } }
-  ctx.setTransform(1, 0, 0, 1, 0, 0); sectionHeader(t); finishFrame();
-  const fo = Math.max(1 - P(t, 0, .35), P(t, DUR - .45, .45)); if (fo > 0) { ctx.globalAlpha = fo; ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H); ctx.globalAlpha = 1; }
+  for (const ft of THUMB ? [] : FLASHES) { const d = t - ft; if (d > -.05 && d < .25) { ctx.save(); ctx.globalAlpha = (1 - Math.abs(d - .05) / .2) * .18; ctx.fillStyle = '#fff'; ctx.fillRect(-20, -20, W + 40, H + 40); ctx.restore(); } }
+  ctx.setTransform(1, 0, 0, 1, 0, 0); if (!THUMB) sectionHeader(t); finishFrame();
+  const fo = THUMB ? 0 : Math.max(1 - P(t, 0, .35), P(t, DUR - .45, .45)); if (fo > 0) { ctx.globalAlpha = fo; ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H); ctx.globalAlpha = 1; }
+}
+
+
+// ---------------------------------------------------------------- thumbnail (9:16, key content inside the central 3:2 band)
+function renderThumb(out) {
+  THUMB = true;
+  const th = story.thumbnail || {}, hd = SCENES.find(s => s.headline), mp = SCENES.find(s => s.type === 'map');
+  const t = A(th.at ?? (mp ? mp.from + 4 : 3));
+  renderFrame(t);
+  const tmp = createCanvas(W, H); tmp.getContext('2d').drawImage(cv, 0, 0);
+  ctx.save(); ctx.filter = 'blur(2px) saturate(1.25)'; ctx.drawImage(tmp, 0, 0); ctx.filter = 'none'; ctx.restore();
+  const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, 'rgba(2,5,10,.8)'); g.addColorStop(.28, 'rgba(2,5,10,.2)'); g.addColorStop(.5, 'rgba(2,5,10,.42)'); g.addColorStop(.72, 'rgba(2,5,10,.2)'); g.addColorStop(1, 'rgba(2,5,10,.85)');
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  const lines = th.lines || (hd ? hd.headline.lines : [[story.upload?.title || '', 'text']]);
+  // fit everything into the central band (y 560..1360): kicker 70 + gap 26, lines, gap 34, brand 54
+  let sizes = lines.map(([str, c, size]) => parseInt(fitFont(str, 'Anton', size ? size * 1.5 : 220, 980)));
+  const lh = sz => sz * .9, gap = 6, KH = th.kicker ? 96 : 0, BH = 88, maxLines = 730 - KH - BH;
+  let tot = sizes.reduce((a, b) => a + lh(b), 0) + gap * (lines.length - 1);
+  if (tot > maxLines) { const k = maxLines / tot; sizes = sizes.map(z => Math.floor(z * k)); tot = sizes.reduce((a, b) => a + lh(b), 0) + gap * (lines.length - 1); }
+  const block = KH + tot + BH; let y = 960 - block / 2;
+  if (th.kicker) {
+    const kc = col(th.kickerColor || 'danger'), f = '40px IXBold', w = tw(th.kicker, f, 4) + 70;
+    rr(540 - w / 2, y, w, 70, 35); ctx.fillStyle = kc; shadow('rgba(0,0,0,.6)', 20); ctx.fill(); noShadow();
+    text(th.kicker, 540, y + 36, f, '#ffffff', 'center', 4, 'middle'); y += KH;
+  }
+  lines.forEach(([str, c], i) => {
+    const sz = sizes[i], f = `${sz}px Anton`; y += lh(sz); ctx.save(); ctx.font = f; ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic'; ctx.lineJoin = 'round';
+    const base = y - sz * .1; ctx.lineWidth = sz * .1; ctx.strokeStyle = 'rgba(2,4,9,.95)'; ctx.strokeText(str, 540, base);
+    shadow('rgba(0,0,0,.7)', 40); ctx.fillStyle = col(c); ctx.fillText(str, 540, base); ctx.restore(); y += gap;
+  });
+  const by = y + 28; ctx.save();
+  const brand = story.brand || '@GEOPOLITICS4YOU', bf = '30px IXBold', bw = tw(brand, bf, 5) + 64;
+  rr(540 - bw / 2, by, bw, 54, 27); ctx.fillStyle = 'rgba(6,11,20,.88)'; ctx.fill(); ctx.strokeStyle = rgba(THEME.accent, .9); ctx.lineWidth = 2; ctx.stroke();
+  ctx.fillStyle = THEME.accent; ctx.beginPath(); ctx.arc(540 - bw / 2 + 28, by + 27, 8, 0, 7); ctx.fill();
+  text(brand, 540 + 10, by + 28, bf, THEME.text, 'center', 5, 'middle'); ctx.restore();
+  fs.writeFileSync(out, cv.toBuffer('image/jpeg', 88));
+  THUMB = false;
 }
 
 // ================================================================ CLI
@@ -711,6 +749,8 @@ if (CMD === 'check') {
   const hd = SCENES.find(s => s.headline); const cover = A(story.upload?.cover ?? (hd ? hd.headline.t + .4 : 2));
   fs.writeFileSync(ARGS[0], JSON.stringify({ id: story.id, duration: DUR, frames: NF, fps: FPS, cover, events: EVENTS.sort((a, b) => a.t - b.t), sections: SECTIONS.map(s => ({ a: s.a, b: s.b })), words: WORDS }, null, 1));
   console.log('events', EVENTS.length);
+} else if (CMD === 'thumb') {
+  renderThumb(ARGS[0]); console.log('thumb ok', ARGS[0]);
 } else if (CMD === 'stills') {
   const out = ARGS[0]; fs.mkdirSync(out, { recursive: true });
   for (const t of ARGS[1].split(',').map(Number)) { renderFrame(t); captions(t); fs.writeFileSync(path.join(out, `still_${t.toFixed(2)}.png`), cv.toBuffer('image/png')); }

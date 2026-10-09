@@ -13,6 +13,7 @@ Two full examples: `stories/2026-10-09-second-front.json` (Gulf / oil) and `stor
 | `scenes` | ordered list of scenes (below) |
 | `theme` | optional colour overrides |
 | `upload` | `{title, description, tags[], cover}` → `out/<id>/upload.json` |
+| `thumbnail` | `{at, kicker, kickerColor, lines: [[text, color]]}` → `out/<id>/thumb.jpg` (designed 9:16 thumbnail; text kept inside the central 3:2 band YouTube shows everywhere) |
 
 Keep the script **≤ 150 words** so speech ends before 58 s. `node engine/engine.mjs <story> check` prints timing and warns if too long.
 

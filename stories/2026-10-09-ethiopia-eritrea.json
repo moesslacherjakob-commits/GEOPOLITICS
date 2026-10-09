@@ -1257,5 +1257,20 @@
   ],
   "cover": "hook:invaded. +0.5"
  },
- "rate": 6.2
+ "rate": 6.2,
+ "thumbnail": {
+  "at": "f1:60 +0.8",
+  "kicker": "HORN OF AFRICA",
+  "kickerColor": "danger",
+  "lines": [
+   [
+    "“ALL-OUT",
+    "text"
+   ],
+   [
+    "INVASION”",
+    "danger"
+   ]
+  ]
+ }
 }
