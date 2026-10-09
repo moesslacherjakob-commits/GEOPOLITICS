@@ -1,0 +1,9 @@
+{
+  "name": "geo-shorts",
+  "private": true,
+  "description": "Renderer for the @GEOPOLITICS4YOU Shorts (see README.md). `npm install` is only needed where /opt/npm-tools is missing; setup.sh handles it.",
+  "dependencies": {
+    "@napi-rs/canvas": "0.1.100",
+    "d3-geo": "3.1.1"
+  }
+}

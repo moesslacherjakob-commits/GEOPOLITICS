@@ -10,13 +10,14 @@ import path from 'path';
 import { spawn } from 'child_process';
 import { fileURLToPath } from 'url';
 
-const NM = process.env.NODE_TOOLS || '/opt/npm-tools/node_modules/';
+const HERE = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(HERE, '..');
+// node packages: $NODE_TOOLS, else the repo's own node_modules (setup.sh), else the preinstalled /opt/npm-tools
+const NM = process.env.NODE_TOOLS || [path.join(ROOT, 'node_modules/'), '/opt/npm-tools/node_modules/']
+  .find(d => fs.existsSync(path.join(d, '@napi-rs/canvas'))) || '/opt/npm-tools/node_modules/';
 const require = createRequire(NM);
 const { createCanvas, GlobalFonts, Path2D } = require('@napi-rs/canvas');
 const d3 = await import(path.join(NM, 'd3-geo/src/index.js'));
-
-const HERE = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(HERE, '..');
 const [, , STORY_PATH, CMD, ...ARGS] = process.argv;
 if (!STORY_PATH || !CMD) { console.error('usage: engine.mjs <story.json> <check|events|stills|render> ...'); process.exit(1); }
 const story = JSON.parse(fs.readFileSync(STORY_PATH, 'utf8'));
@@ -24,7 +25,7 @@ const story = JSON.parse(fs.readFileSync(STORY_PATH, 'utf8'));
 // ---------------------------------------------------------------- fonts
 const FONT = (f, n) => { if (fs.existsSync(f)) GlobalFonts.registerFromPath(f, n); };
 FONT(path.join(ROOT, 'assets/fonts/Anton-Regular.ttf'), 'Anton');
-const INTER = '/usr/share/fonts/opentype/inter/';
+const INTER = fs.existsSync(path.join(ROOT, 'assets/fonts/Inter-ExtraBold.otf')) ? path.join(ROOT, 'assets/fonts/') : '/usr/share/fonts/opentype/inter/';
 FONT(INTER + 'InterDisplay-Black.otf', 'IBlack'); FONT(INTER + 'Inter-ExtraBold.otf', 'IXBold'); FONT(INTER + 'Inter-SemiBold.otf', 'ISemi');
 
 // ---------------------------------------------------------------- utils

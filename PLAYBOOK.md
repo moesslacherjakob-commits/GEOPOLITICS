@@ -2,10 +2,11 @@
 
 You are producing today's 60-second geopolitics Short end to end. Work unattended: make reasonable calls yourself, note them in the final report. Settings live in `config.json`.
 
-## 0. Setup (2 min)
-1. Attach and clone the repo: `add_repo` → `moesslacherjakob-commits/geopolitics` (access `push`), then `git clone --depth 1 https://github.com/moesslacherjakob-commits/geopolitics /home/claude/geopolitics` (10-min timeout). Work in that folder.
-2. Read `config.json`, `STORY_FORMAT.md`, and `log.md` (what was covered on previous days).
-3. Sanity check: `node engine/engine.mjs stories/2026-10-09-ethiopia-eritrea.json check` must print a timing table.
+## 0. Setup (2–5 min)
+1. Repo: when this runs as a routine on claude.ai/code the repo is already cloned in the working directory — use it (`git rev-parse --show-toplevel`). Otherwise attach it with `add_repo` → `moesslacherjakob-commits/geopolitics` (access `push`) and `git clone --depth 1 https://github.com/moesslacherjakob-commits/geopolitics` (10-min timeout). Work on `main`. If `git config user.email` is empty, set `git config user.name "GEOPOLITICS4YOU bot"` and `git config user.email "bot@geopolitics4you.invalid"`.
+2. `./setup.sh` — installs ffmpeg, numpy/scipy/pillow and the node packages if the machine lacks them and must end with `setup: all good`. Fix install problems yourself (apt, pip and npm are reachable).
+3. Read `config.json`, `STORY_FORMAT.md`, and `log.md` (what was covered on previous days).
+4. Voice: the ElevenLabs key comes from the cloud environment's network secret for `api.elevenlabs.io` (it is attached by the proxy; you never see it). Never ask for, print or store a key. The key is restricted to Text-to-Speech, so `/v1/user/*` endpoints return 401 — that is expected and not an error.
 
 ## 1. Pick the story (10 min)
 "Most-watched" is approximated by **most-covered in the last 24 h** across major outlets.
@@ -56,4 +57,4 @@ URLs: `https://raw.githubusercontent.com/moesslacherjakob-commits/GEOPOLITICS/me
 ## 9. Wrap up
 - Append one line to `log.md`: date · topic · title · sources · Metricool planner URL.
 - Commit `stories/<id>.json` + `log.md` to `main` and push.
-- Final message (and SendUserMessage): topic, why it won, title, the 3 facts, sources, anything flagged as uncertain, link to the Metricool post.
+- Final message (also via SendUserMessage if that tool exists), in German: topic, why it won, title, the 3 facts, sources, anything flagged as uncertain, whether voice and thumbnail made it, link to the Metricool post.
