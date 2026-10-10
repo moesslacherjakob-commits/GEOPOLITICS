@@ -1,7 +1,9 @@
-# Story format (`stories/<id>.json`)
+# Story format (`stories/<id>.json`, `desks/<desk>/stories/<id>.json`)
 
-One file = one Short. The engine renders it with `./make.sh stories/<id>.json`.
-Two full examples: `stories/2026-10-09-second-front.json` (Gulf / oil) and `stories/2026-10-09-ethiopia-eritrea.json` (Horn of Africa).
+One file = one Short. The engine renders it with `./make.sh stories/<id>.json` (@GEOPOLITICS4YOU) or `./make.sh desks/<desk>/stories/<id>.json` (other channels).
+Two full examples: `stories/2026-10-09-second-front.json` (Gulf / oil) and `stories/2026-10-09-ethiopia-eritrea.json` (Horn of Africa). Climate example with `track` + `field`: `desks/climate/stories/2026-10-10-isaias-late-hurricane.json`.
+
+**Channel config:** a story inside `desks/<desk>/stories/` automatically uses `desks/<desk>/config.json` (channel handle on the thumbnail, accent colour via `theme`, voice, disclaimer, pronunciations); everything else uses the root `config.json`. `$GEO_CONFIG` overrides both.
 
 ## Top level
 | key | meaning |
@@ -24,7 +26,7 @@ Every time value can be a number (seconds) or an anchor string:
 - `"f2:Hormuz#1"` second occurrence · any anchor `+ 0.5` / `- 0.2` offset (space before the sign)
 
 ## Colours
-`text, mute, accent (gold), danger (red), ally (orange), oil (amber), info (cyan), ok (green), neutral (grey), violet` or any `#hex`.
+`text, mute, accent (gold — each desk config overrides it with the channel colour), danger (red), ally (orange), oil (amber), info (cyan), ok (green), neutral (grey), violet, heat (orange), cold (blue), storm (pale cyan)` or any `#hex`.
 
 ## Locations
 `[lon, lat]`, an ISO-3 country code (uses its centre), or a place name from `data/places.json` (capitals, big cities, straits, seas, hotspots: e.g. `"Strait of Hormuz"`, `"Bab al-Mandab"`, `"Gaza"`, `"Donbas"`, `"Taiwan Strait"`, `"Mekele"`). Unknown names throw an error — fall back to coordinates.
@@ -57,8 +59,10 @@ end only: `lines: [[text, color]]` (2 short punchlines), `sources: [..]` (small 
 | `bubble` | `screen [x,y,w], kicker, text, color` — quote/claim bubble |
 | `card` | `screen [x,y,w], title, badge?, color, rows [{icon, text, at}]` — fact card |
 | `note` | `text, sub?, y` — small centred caption line |
+| `track` | `points [{loc, cat?, label?, dx?, dy?, big?, until?}], steps? [{at, to, dur?}], dur?, forecast?, now?, cone?, coneStart?, coneGrow?, name?, sub?, nameDx?, nameDy?, nameUntil?, eyeSize?, color?` — storm path. `cat` colours the dot (`TD TS 1 2 3 4 5 EX`, Saffir-Simpson colours). Points from index `forecast` on are dashed/hollow (with an optional widening `cone`). A spinning hurricane symbol + `name` tag sits on point `now`. Without `steps` the line draws once over `dur`; with `steps` it advances to point `to` at each anchor — use this to follow the narration. Point `until` hides its label. |
+| `field` | `blobs [{loc, r (degrees), v (0–1)}], palette heat\|fire\|rain\|cold\|drought\|[#hex..], clip? (iso, [isos] or "land"), alpha?, grow?, blend?, pulse?, legend? {title, low, high, screen [x,y], w}` — soft heat-map area (heatwave, rain totals, fire zone, warm ocean). Always label it "illustrative" or "approximate" unless it is drawn from real gridded data. |
 
-Icons: `check x eye jet plane drop flame flag shield money ship factory people chip barrel bolt nuke wheat`.
+Icons: `check x eye jet plane drop flame flag shield money ship factory people chip barrel bolt nuke wheat storm thermo rain`.
 
 ### Data overlays (full-screen, over a dimmed backdrop)
 - `quote` — `at, lines [[text, color]], by` (only real, sourced quotes)

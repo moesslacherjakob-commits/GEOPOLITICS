@@ -11,7 +11,15 @@ from scipy.io import wavfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 story = json.load(open(sys.argv[1])); OUT = sys.argv[2]; os.makedirs(OUT, exist_ok=True)
-cfg = json.load(open(os.path.join(ROOT, 'config.json'))); vc = cfg['voice']; pace = cfg.get('pace', {})
+def config_path(story_path):
+    """$GEO_CONFIG, else desks/<desk>/config.json for a story in desks/<desk>/stories/, else the root config.json."""
+    if os.environ.get('GEO_CONFIG'): return os.environ['GEO_CONFIG']
+    sp = os.path.abspath(story_path); stories = os.path.dirname(sp)
+    if os.path.basename(stories) == 'stories' and os.path.basename(os.path.dirname(os.path.dirname(stories))) == 'desks':
+        c = os.path.join(os.path.dirname(stories), 'config.json')
+        if os.path.exists(c): return c
+    return os.path.join(ROOT, 'config.json')
+cfg = json.load(open(config_path(sys.argv[1]))); vc = cfg['voice']; pace = cfg.get('pace', {})
 SAY = vc.get('say', {}); SR = 48000
 
 def say_token(tok):

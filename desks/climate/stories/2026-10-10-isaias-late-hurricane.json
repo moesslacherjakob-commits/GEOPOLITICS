@@ -1,0 +1,657 @@
+{
+ "id": "2026-10-10-isaias-late-hurricane",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "The Atlantic waited until October for its first hurricane. Then it slammed into Florida."
+  },
+  {
+   "id": "f1",
+   "text": "Isaias became a hurricane over the Gulf of Mexico on October 7th. NOAA data cited by CBS News show that is the latest first hurricane of an Atlantic season in 121 years. Usually, the first one forms in early to mid August."
+  },
+  {
+   "id": "f2",
+   "text": "After briefly reaching Category 3, Isaias came ashore near Destin, Florida, on Friday night as a Category 2. ABC News reports more than a foot of rain in parts of Alabama and Florida, and at least 800,000 homes and businesses without power."
+  },
+  {
+   "id": "f3",
+   "text": "Why so late? Meteorologists point largely to a strong El Niño that developed over the summer. It tends to tear Atlantic storms apart with strong winds high above the ocean. Meanwhile, CBS notes, the Pacific has been unusually active."
+  },
+  {
+   "id": "cta",
+   "text": "Follow for the next update."
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE RECORD",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE LANDFALL",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE REASON",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -60,
+     "lat": 18,
+     "R": 360
+    },
+    {
+     "at": 3.4,
+     "lon": -89,
+     "lat": 26,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "HURRICANE ISAIAS · OCT 2026",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "USA",
+     "color": "accent",
+     "at": "hook:Florida.",
+     "alpha": 0.45
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -86.5,
+      30.4
+     ],
+     "color": "danger",
+     "at": "hook:slammed",
+     "label": "FLORIDA",
+     "sub": "LANDFALL OCT 9",
+     "dx": 40,
+     "dy": -110,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:waited",
+    "lines": [
+     [
+      "FIRST HURRICANE",
+      "text",
+      104
+     ],
+     [
+      "IN OCTOBER",
+      "accent",
+      140
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -89,
+    26
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -89,
+     "lat": 26,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": -93.4,
+     "lat": 22.5,
+     "dist": 18,
+     "pitch": 48,
+     "yaw": -6,
+     "oy": 150
+    },
+    {
+     "at": "f1:NOAA",
+     "lon": -92.8,
+     "lat": 23.2,
+     "dist": 16,
+     "pitch": 52,
+     "yaw": 4,
+     "oy": 160
+    },
+    {
+     "at": "f1:latest",
+     "lon": -91,
+     "lat": 24.6,
+     "dist": 34,
+     "pitch": 50,
+     "yaw": 8,
+     "oy": 170
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": -88.6,
+     "lat": 26.6,
+     "dist": 32,
+     "pitch": 50,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "f2:ashore",
+     "lon": -86.8,
+     "lat": 29.4,
+     "dist": 24,
+     "pitch": 52,
+     "yaw": 4,
+     "oy": 160
+    },
+    {
+     "at": "f2:rain",
+     "lon": -86.2,
+     "lat": 30.4,
+     "dist": 22,
+     "pitch": 54,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": -96,
+     "lat": 15,
+     "dist": 125,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 40
+    },
+    {
+     "at": "cta",
+     "lon": -93,
+     "lat": 17,
+     "dist": 140,
+     "pitch": 38,
+     "yaw": 6,
+     "oy": 90
+    }
+   ],
+   "layers": [
+    {
+     "kind": "track",
+     "at": "f1 -0.2",
+     "until": "f3 +0.6",
+     "color": "storm",
+     "name": "ISAIAS",
+     "sub": "LANDFALL NEAR DESTIN, FL · CAT 2",
+     "forecast": 5,
+     "now": 4,
+     "cone": false,
+     "points": [
+      {
+       "loc": [
+        -94.6,
+        21.6
+       ],
+       "cat": "TS",
+       "label": "FORMS · OCT 7",
+       "dx": 18,
+       "dy": 30,
+       "until": "f2 +1"
+      },
+      {
+       "loc": [
+        -92.6,
+        23.3
+       ],
+       "cat": 1,
+       "label": "HURRICANE · OCT 7",
+       "dx": 20,
+       "dy": 8,
+       "big": true,
+       "until": "f2:ashore"
+      },
+      {
+       "loc": [
+        -89.8,
+        25.3
+       ],
+       "cat": 2
+      },
+      {
+       "loc": [
+        -87.3,
+        26.9
+       ],
+       "cat": 3,
+       "label": "CAT 3 · OCT 9",
+       "dx": 22,
+       "dy": 8,
+       "big": true
+      },
+      {
+       "loc": [
+        -86.5,
+        30.4
+       ],
+       "cat": 2
+      },
+      {
+       "loc": [
+        -86.7,
+        31.5
+       ],
+       "cat": "EX"
+      },
+      {
+       "loc": [
+        -86.6,
+        33.6
+       ],
+       "cat": "EX"
+      },
+      {
+       "loc": [
+        -85.9,
+        35.4
+       ],
+       "cat": "EX",
+       "label": "FORECAST",
+       "dx": 18,
+       "dy": 8
+      }
+     ],
+     "steps": [
+      {
+       "at": "f1:Isaias",
+       "to": 1,
+       "dur": 1.8
+      },
+      {
+       "at": "f2:briefly",
+       "to": 3,
+       "dur": 2.0
+      },
+      {
+       "at": "f2:ashore",
+       "to": 4,
+       "dur": 1.2
+      },
+      {
+       "at": "f2:rain",
+       "to": 7,
+       "dur": 2.6
+      }
+     ],
+     "nameUntil": "f3 +0.2",
+     "nameDx": -60,
+     "nameDy": -100
+    },
+    {
+     "kind": "note",
+     "text": "TRACK APPROXIMATE · SOURCES: CBS NEWS, ABC NEWS, EARTHSKY",
+     "y": 1170,
+     "at": "f1 +1",
+     "until": "f1:Usually"
+    },
+    {
+     "kind": "stamp",
+     "text": "LATEST SINCE 1905",
+     "icon": "storm",
+     "color": "accent",
+     "screen": [
+      540,
+      420
+     ],
+     "at": "f1:121 -0.2",
+     "until": "f1:Usually -0.2",
+     "note": "FIRST ATLANTIC HURRICANE OF A SEASON · NOAA DATA VIA CBS"
+    },
+    {
+     "kind": "field",
+     "palette": "rain",
+     "at": "f2:rain -0.2",
+     "until": "f3 +0.4",
+     "clip": "land",
+     "grow": 1.6,
+     "blobs": [
+      {
+       "loc": [
+        -86.2,
+        31.0
+       ],
+       "r": 2.6,
+       "v": 0.95
+      },
+      {
+       "loc": [
+        -85.6,
+        30.7
+       ],
+       "r": 2.34,
+       "v": 0.9
+      },
+      {
+       "loc": [
+        -87.0,
+        31.5
+       ],
+       "r": 2.34,
+       "v": 0.75
+      },
+      {
+       "loc": [
+        -85.0,
+        31.4
+       ],
+       "r": 2.6,
+       "v": 0.6
+      },
+      {
+       "loc": [
+        -84.2,
+        31.9
+       ],
+       "r": 2.86,
+       "v": 0.45
+      },
+      {
+       "loc": [
+        -87.8,
+        31.1
+       ],
+       "r": 2.08,
+       "v": 0.45
+      }
+     ],
+     "legend": {
+      "title": "RAIN TOTALS · ILLUSTRATIVE",
+      "low": "LESS",
+      "high": "1 FT+",
+      "screen": [
+       90,
+       1090
+      ]
+     }
+    },
+    {
+     "kind": "field",
+     "palette": "heat",
+     "at": "f3:El -0.3",
+     "until": "cta +0.6",
+     "grow": 2.0,
+     "alpha": 0.8,
+     "blobs": [
+      {
+       "loc": [
+        -165,
+        0
+       ],
+       "r": 11,
+       "v": 0.35
+      },
+      {
+       "loc": [
+        -155,
+        0
+       ],
+       "r": 11,
+       "v": 0.45
+      },
+      {
+       "loc": [
+        -145,
+        -0.5
+       ],
+       "r": 11,
+       "v": 0.55
+      },
+      {
+       "loc": [
+        -135,
+        -1
+       ],
+       "r": 11,
+       "v": 0.62
+      },
+      {
+       "loc": [
+        -125,
+        -1
+       ],
+       "r": 11,
+       "v": 0.7
+      },
+      {
+       "loc": [
+        -115,
+        -1.5
+       ],
+       "r": 11,
+       "v": 0.78
+      },
+      {
+       "loc": [
+        -105,
+        -2
+       ],
+       "r": 11,
+       "v": 0.85
+      },
+      {
+       "loc": [
+        -95,
+        -2.5
+       ],
+       "r": 11,
+       "v": 0.9
+      },
+      {
+       "loc": [
+        -87,
+        -3
+       ],
+       "r": 11,
+       "v": 0.85
+      }
+     ]
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -120,
+      -1
+     ],
+     "text": "STRONG EL NIÑO",
+     "sub": "WARM EQUATORIAL PACIFIC",
+     "color": "heat",
+     "at": "f3:El",
+     "until": "cta +0.6",
+     "dx": 0,
+     "dy": -100,
+     "size": 30
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -70,
+      24
+     ],
+     "text": "QUIET ATLANTIC",
+     "sub": "WIND SHEAR TEARS STORMS APART",
+     "color": "storm",
+     "at": "f3:tear",
+     "until": "cta +0.6",
+     "dx": -150,
+     "dy": -120,
+     "size": 28
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -110,
+      15
+     ],
+     "text": "ACTIVE PACIFIC",
+     "color": "accent",
+     "at": "f3:Pacific",
+     "until": "cta +0.6",
+     "dx": -40,
+     "dy": -110,
+     "size": 28
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f1:Usually -0.2",
+   "to": "f2 -0.15",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "MID-AUGUST",
+     "text": "WHEN THE FIRST ATLANTIC HURRICANE USUALLY FORMS",
+     "color": "info",
+     "at": "f1:Usually"
+    },
+    {
+     "icon": "storm",
+     "big": "OCTOBER 7",
+     "text": "ISAIAS, 2026 · LATEST FIRST HURRICANE SINCE 1905",
+     "color": "accent",
+     "at": "f1:mid"
+    }
+   ],
+   "source": "SOURCES: CBS NEWS (NOAA DATA), EARTHSKY"
+  },
+  {
+   "type": "counter",
+   "from": "f2:at -0.2",
+   "to": "f3 -0.1",
+   "label": "HOMES & BUSINESSES WITHOUT POWER",
+   "sublabel": "FLORIDA · ALABAMA · GEORGIA · SAT MORNING",
+   "icon": "bolt",
+   "color": "accent",
+   "value": 800000,
+   "start": 0,
+   "prefix": "",
+   "doneSuffix": "+",
+   "decimals": 0,
+   "at": "f2:800,000 -0.4",
+   "doneAt": "f2:800,000 +0.6",
+   "note": "AFTER ISAIAS MADE LANDFALL",
+   "source": "SOURCE: ABC NEWS, CITING OUTAGE DATA"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -100,
+     "lat": 15,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -88,
+     "lat": 24,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": -84,
+     "lat": 26,
+     "R": 470
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "USA",
+     "color": "accent",
+     "alpha": 0.5
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -86.5,
+      30.4
+     ],
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "THE ATLANTIC SLEPT",
+     "text"
+    ],
+    [
+     "UNTIL OCTOBER.",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AS REPORTED BY CBS NEWS, ABC NEWS, EARTHSKY · NOAA DATA",
+    "OCT 7–10, 2026 · TRACK AND RAIN MAP APPROXIMATE"
+   ]
+  }
+ ],
+ "upload": {
+  "title": "The Atlantic's First Hurricane Came in October #shorts",
+  "description": "Isaias became the first Atlantic hurricane of 2026 on October 7, the latest start to a season in 121 years according to NOAA data cited by CBS News. It came ashore near Destin, Florida, as a Category 2. ABC News reports more than a foot of rain in places and at least 800,000 customers without power. Meteorologists point largely to a strong El Niño.\n\nSources: CBS News, ABC News, EarthSky (Oct 7-10, 2026). Track and rain map are approximate.\n\n#hurricane #Isaias #climate",
+  "tags": [
+   "climate",
+   "weather",
+   "hurricane",
+   "Hurricane Isaias",
+   "Florida",
+   "Gulf of Mexico",
+   "El Nino",
+   "Atlantic hurricane season",
+   "extreme weather",
+   "news"
+  ],
+  "cover": "hook:waited +0.4"
+ },
+ "thumbnail": {
+  "at": "f2:near",
+  "kicker": "HURRICANE ISAIAS",
+  "kickerColor": "accent",
+  "lines": [
+   [
+    "LATEST",
+    "text"
+   ],
+   [
+    "SINCE 1905",
+    "accent"
+   ]
+  ]
+ }
+}

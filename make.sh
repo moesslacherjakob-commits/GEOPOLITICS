@@ -1,13 +1,20 @@
 #!/usr/bin/env bash
 # One command: story.json -> out/<id>/{short.mp4 (captions), short_clean.mp4, cover.png, upload.json}
-# Usage: ./make.sh stories/<file>.json [parts]
+# Usage: ./make.sh stories/<file>.json [parts]            (@GEOPOLITICS4YOU, root config.json)
+#        ./make.sh desks/<desk>/stories/<file>.json [parts] (other channels, desks/<desk>/config.json)
 set -euo pipefail
 cd "$(dirname "$0")"
 STORY=$(realpath "$1"); PARTS=${2:-$(nproc)}
+# channel config: $GEO_CONFIG, else desks/<desk>/config.json for a story in desks/<desk>/stories/, else config.json
+if [ -z "${GEO_CONFIG:-}" ]; then
+  GEO_CONFIG=config.json
+  case "$STORY" in */desks/*/stories/*.json) D=$(dirname "$(dirname "$STORY")"); [ -f "$D/config.json" ] && GEO_CONFIG="$D/config.json";; esac
+fi
+export GEO_CONFIG=$(realpath "$GEO_CONFIG"); echo "config: $GEO_CONFIG"
 ID=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['id'])" "$STORY")
 OUT=out/$ID; mkdir -p "$OUT"; rm -f "$OUT"/seg_*.mp4
 VOICE_WAV=""; unset VOICE_TIMING
-if python3 -c "import json,sys;sys.exit(0 if json.load(open('config.json')).get('voice',{}).get('enabled') else 1)"; then
+if python3 -c "import json,os,sys;sys.exit(0 if json.load(open(os.environ['GEO_CONFIG'])).get('voice',{}).get('enabled') else 1)"; then
   if python3 tools/tts_elevenlabs.py "$STORY" "$OUT"; then export VOICE_TIMING="$(realpath "$OUT/voice_timing.json")"; VOICE_WAV="$OUT/voice.wav"
   else echo "WARNING: voice generation failed — rendering captions-only"; fi
 fi
@@ -41,7 +48,9 @@ python3 - "$STORY" "$OUT" <<'PY'
 import json, sys
 s = json.load(open(sys.argv[1])); out = sys.argv[2]; ev = json.load(open(out + '/events.json'))
 u = dict(s.get('upload', {})); u['coverMs'] = int(ev['cover'] * 1000); u['duration'] = ev['duration']; u['id'] = s['id']; u['thumbnailFile'] = 'thumb.jpg'; import os; u['voice'] = os.path.exists(out + '/voice.wav') and bool(os.environ.get('VOICE_TIMING'))
-disc = json.load(open('config.json')).get('disclaimer')
+cfg = json.load(open(os.environ['GEO_CONFIG'])); disc = cfg.get('disclaimer')
+u.update({'channel': cfg.get('channel'), 'blogId': cfg.get('metricoolBlogId'), 'youtubeCategory': cfg.get('youtubeCategory', 'NEWS_POLITICS'),
+          'mediaBranch': cfg.get('mediaBranch', 'media'), 'autoPublish': cfg.get('autoPublish', True), 'postTime': cfg.get('postTime')})
 if disc and disc not in u.get('description', ''):
     parts = u.get('description', '').rstrip().split('\n\n')
     tail = [parts.pop()] if parts and parts[-1].lstrip().startswith('#') else []

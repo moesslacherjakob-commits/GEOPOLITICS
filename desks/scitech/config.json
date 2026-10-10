@@ -1,0 +1,52 @@
+{
+  "desk": "scitech",
+  "channel": "@SCITECH4YOU",
+  "metricoolBlogId": "7344936",
+  "youtubeChannelId": "UC0dIo6C2suck5-Yck_1UQFQ",
+  "autoPublish": true,
+  "postTime": "17:00",
+  "days": "daily",
+  "timezone": "Europe/Vienna",
+  "language": "en",
+  "youtubeCategory": "SCIENCE_TECHNOLOGY",
+  "mediaBranch": "media-scitech",
+  "log": "desks/scitech/log.md",
+  "disclaimer": "ℹ️ About this video: The information was carefully researched from the sources listed above. The script, visuals and edit were created with the help of AI. AI can make mistakes, so please check the linked sources for important details. All content is provided to the best of our knowledge and belief, without guarantee of accuracy or completeness and without liability. Nothing here is medical advice.",
+  "thumbnail": true,
+  "theme": {
+    "accent": "#5CC8FF"
+  },
+  "pace": {
+    "rate": 4.9,
+    "hookRate": 5.4,
+    "gap": 0.6,
+    "tail": 2.6,
+    "maxDuration": 78
+  },
+  "voice": {
+    "enabled": true,
+    "provider": "elevenlabs",
+    "voiceId": "onwK4e9ZLuTAKqWW03F9",
+    "model": "eleven_multilingual_v2",
+    "speed": 0.95,
+    "stability": 0.5,
+    "similarity": 0.75,
+    "say": {
+      "US": "U.S.",
+      "UN": "U.N.",
+      "IEA": "I.E.A.",
+      "TPLF": "T.P.L.F.",
+      "EU": "E.U.",
+      "NATO": "NATO",
+      "MBS": "M.B.S.",
+      "AI": "A.I.",
+      "ESA": "E.S.A.",
+      "NASA": "NASA",
+      "UK": "U.K.",
+      "GPU": "G.P.U.",
+      "GPUs": "G.P.U.s",
+      "DNA": "D.N.A.",
+      "WHO": "W.H.O."
+    }
+  }
+}

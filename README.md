@@ -12,3 +12,5 @@ Runtime: Node 22 with `@napi-rs/canvas` + `d3-geo`, Python 3 with numpy/scipy/pi
 Voice: ElevenLabs (`tools/tts_elevenlabs.py`), key supplied by the cloud environment's network secret for `api.elevenlabs.io`.
 Fonts: Anton and Inter (both SIL OFL, in `assets/fonts`).
 Daily run: a routine on claude.ai/code (environment **Default**, repo GEOPOLITICS, connector Metricool) follows `PLAYBOOK.md`.
+
+**Sister channels** (@CLIMATE4YOU, @ECONOMY4YOU, @SCITECH4YOU) share the same engine and live in `desks/` — see `desks/README.md` and `desks/PLAYBOOK.md`. A story inside `desks/<desk>/stories/` automatically renders with that desk's `config.json`.

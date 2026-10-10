@@ -45,11 +45,18 @@ const hex = h => { if (h.length === 4) h = '#' + h[1] + h[1] + h[2] + h[2] + h[3
 const rgba = (h, a = 1) => { const [r, g, b] = hex(h); return `rgba(${r},${g},${b},${a})`; };
 const mix = (h1, h2, t) => { const a = hex(h1), b = hex(h2); const c = a.map((v, i) => Math.round(lerp(v, b[i], t))); return '#' + c.map(v => v.toString(16).padStart(2, '0')).join(''); };
 
+// channel config: $GEO_CONFIG, else desks/<desk>/config.json for a story in desks/<desk>/stories/, else the root config.json (@GEOPOLITICS4YOU)
+const CFG_PATH = process.env.GEO_CONFIG || (() => {
+  const m = path.resolve(STORY_PATH).match(/^(.*[\/\\]desks[\/\\][^\/\\]+)[\/\\]stories[\/\\][^\/\\]+$/);
+  return m && fs.existsSync(path.join(m[1], 'config.json')) ? path.join(m[1], 'config.json') : path.join(ROOT, 'config.json');
+})();
+const CFG = (() => { try { return JSON.parse(fs.readFileSync(CFG_PATH, 'utf8')); } catch { return {}; } })();
 const THEME = Object.assign({
   ink: '#04080f', ocean1: '#05162e', ocean2: '#0b2d58', land: '#222f41', border: '#465d7c',
   text: '#F3F6FA', mute: '#93A4BA', accent: '#F6B73C', danger: '#FF4438', ally: '#E8A33A', oil: '#FFB020',
   info: '#5CC8FF', ok: '#2FE39A', neutral: '#7b8ba3', violet: '#A78BFA',
-}, story.theme || {});
+  heat: '#FF7A1A', cold: '#4FB3FF', storm: '#9BE7FF',
+}, CFG.theme || {}, story.theme || {});
 const col = c => !c ? THEME.text : c.startsWith('#') ? c : (THEME[c] || THEME.text);
 
 // ---------------------------------------------------------------- script timing
@@ -82,7 +89,6 @@ function syl(tok) {
   for (const p of w.split(/\s+/)) { if (!p) continue; const m = p.match(/[aeiouy]+/g); let c = m ? m.length : 1; if (p.endsWith('e') && c > 1 && !p.endsWith('le')) c--; n += Math.max(1, c); }
   return Math.max(1, n);
 }
-const CFG = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'config.json'), 'utf8')); } catch { return {}; } })();
 const PACE = CFG.pace || {};
 const MAXD = story.maxDuration || PACE.maxDuration || 78;
 // optional real voice timing (from tools/tts_elevenlabs.py): {segments:[{id,a,b,words:[{text,t0,t1}]}]}
@@ -256,6 +262,9 @@ function icon(kind, x, y, s, c, lw = 4) {
     case 'bolt': ctx.moveTo(.08, -.46); ctx.lineTo(-.26, .06); ctx.lineTo(-.02, .06); ctx.lineTo(-.1, .46); ctx.lineTo(.26, -.08); ctx.lineTo(.02, -.08); ctx.closePath(); ctx.fill(); break;
     case 'nuke': ctx.arc(0, 0, .44, 0, 7); ctx.stroke(); for (let k = 0; k < 3; k++) { const a0 = k * 2.094 - 1.57 - .5; ctx.moveTo(0, 0); ctx.arc(0, 0, .36, a0, a0 + 1); ctx.closePath(); } ctx.fill(); break;
     case 'wheat': ctx.moveTo(0, .46); ctx.lineTo(0, -.4); ctx.stroke(); for (let k = 0; k < 4; k++) { const yy = -.3 + k * .18; ctx.beginPath(); ctx.ellipse(-.1, yy, .09, .05, -.6, 0, 7); ctx.ellipse(.1, yy, .09, .05, .6, 0, 7); ctx.fill(); } break;
+    case 'storm': stormShape(1); break;
+    case 'thermo': ctx.roundRect(-.09, -.44, .18, .62, .09); ctx.stroke(); ctx.beginPath(); ctx.arc(0, .27, .17, 0, 7); ctx.fill(); ctx.fillRect(-.035, -.2, .07, .45); break;
+    case 'rain': ctx.arc(-.14, -.12, .16, Math.PI * .9, Math.PI * 1.9); ctx.arc(.08, -.2, .2, Math.PI * 1.05, Math.PI * 1.95); ctx.arc(.24, -.06, .14, Math.PI * 1.5, Math.PI * .5); ctx.lineTo(-.14, .04); ctx.closePath(); ctx.fill(); for (let k = -1; k <= 1; k++) { ctx.beginPath(); ctx.moveTo(k * .16, .16); ctx.lineTo(k * .16 - .06, .38); ctx.stroke(); } break;
     default: ctx.arc(0, 0, .3, 0, 7); ctx.fill();
   }
   ctx.restore();
@@ -414,6 +423,13 @@ for (const sc of SCENES) {
       for (const k of ['from', 'to', 'loc']) if (o[k] !== undefined && k !== 'from' && k !== 'to') o[k + 'LL'] = loc(o[k]);
       if (o.kind === 'arc') { o.a = loc(l.from); o.b = loc(l.to); ev(o.at, 'blip', .6); }
       if (o.path) o.pts = l.path.map(loc);
+      if (o.kind === 'track') {
+        o.P = (l.points || []).map(p => ({ ...p, ll: loc(p.loc), u: p.until !== undefined ? A(p.until) : undefined }));
+        o.S = (l.steps || []).map(s => ({ ...s, t: A(s.at) })).sort((a, b) => a.t - b.t);
+        if (l.nameUntil !== undefined) o.nameU = A(l.nameUntil);
+        (o.S.length ? o.S.map(s => s.t) : [o.at]).forEach(tt => ev(tt, 'flow', .6));
+      }
+      if (o.kind === 'field') { o.B = (l.blobs || []).map(b => ({ ...b, ll: loc(b.loc) })); ev(o.at, 'rise', .5); }
       if (o.kind === 'extrude') { ev(o.at, 'rise', .6); o.flat = (l.flatten || []).map(f => ({ t: A(f.at), to: f.to })); }
       if (o.kind === 'stamp' || o.kind === 'barrier') ev(o.at, 'stamp', 1);
       if (o.kind === 'column') ev(o.at, 'rise', .8);
@@ -486,6 +502,103 @@ function globeScene(sc, t) {
     const sa = E.out(P(t, sc.from + 1.6, .6)); ctx.save(); ctx.globalAlpha = sa; (sc.sources || []).forEach((s, i) => text(s, 540, 1170 + i * 30, fitFont(s, 'ISemi', 20, 940, 1.5), THEME.mute, 'center', 1.5)); ctx.restore();
   }
 }
+// ---------------------------------------------------------------- climate layers: field (heat/rain/fire areas) + track (storm paths)
+const PALETTES = {
+  heat: ['#FFE08A', '#FFB020', '#FF7A1A', '#FF4438', '#C2187A'],
+  fire: ['#FFE08A', '#FF9F1C', '#FF5A1F', '#E0201B'],
+  rain: ['#9BE7FF', '#4FB3FF', '#2E6BFF', '#5B3BE8', '#A23BEA'],
+  cold: ['#E6F7FF', '#9BE7FF', '#4FB3FF', '#2E6BFF'],
+  drought: ['#F2D59B', '#E0A458', '#C0692F', '#8C3B1F'],
+};
+const palette = p => Array.isArray(p) ? p.map(col) : (PALETTES[p] || PALETTES.heat);
+function palAt(pal, v) { v = clamp(v); const x = v * (pal.length - 1), i = Math.min(pal.length - 2, Math.floor(x)); return mix(pal[i], pal[i + 1], x - i); }
+const CAT_COL = { TD: '#7FDBFF', TS: '#2FE39A', 1: '#FFE066', 2: '#FFB020', 3: '#FF7A1A', 4: '#FF4438', 5: '#D63AF9', EX: '#93A4BA', L: '#93A4BA' };
+const catCol = c => CAT_COL[c] || CAT_COL[String(c).toUpperCase()] || '#FFE066';
+function landPath(cam, clip) {
+  const p = new Path2D(), list = clip === 'land' ? WORLD.filter(c => visible(cam, c)) : [].concat(clip).map(country);
+  for (const c of list) for (const r of c.rings) ringPath(cam, r, 0, p);
+  return p;
+}
+function fieldLayer(cam, o, t, a) {
+  const pal = palette(o.palette || 'heat'), g = E.out(P(t, o.at, o.grow ?? 1.4));
+  ctx.save(); if (o.clip) ctx.clip(landPath(cam, o.clip));
+  ctx.globalCompositeOperation = o.blend || 'screen';
+  for (const b of o.B) {
+    const [lon, lat] = b.ll, q = cam.p(lon, lat); if (q[2] <= 2) continue;
+    const r = b.r ?? 3, qx = cam.p(lon + r / CL, lat), qy = cam.p(lon, lat + r);
+    const rx = Math.hypot(qx[0] - q[0], qx[1] - q[1]) * g, ry = Math.hypot(qy[0] - q[0], qy[1] - q[1]) * g; if (rx < 1 || ry < 1) continue;
+    const c = palAt(pal, b.v ?? .8), sh = o.pulse === false ? 1 : .9 + .1 * Math.sin(t * 2.2 + lon * .7);
+    ctx.save(); ctx.globalAlpha = a * (o.alpha ?? .9) * sh; ctx.translate(q[0], q[1]); ctx.scale(1, ry / rx);
+    const gr = ctx.createRadialGradient(0, 0, 0, 0, 0, rx); gr.addColorStop(0, rgba(c, .95)); gr.addColorStop(.5, rgba(c, .5)); gr.addColorStop(1, rgba(c, 0));
+    ctx.fillStyle = gr; ctx.beginPath(); ctx.arc(0, 0, rx, 0, 7); ctx.fill(); ctx.restore();
+  }
+  ctx.restore();
+}
+function fieldLegend(o, a) {
+  const L = o.legend, pal = palette(o.palette || 'heat'), [x, y] = L.screen || [90, 1070], w = L.w ?? 420;
+  ctx.save(); ctx.globalAlpha = a; rr(x - 24, y - 56, w + 48, 124, 14); ctx.fillStyle = 'rgba(6,11,20,.88)'; ctx.fill(); ctx.strokeStyle = 'rgba(255,255,255,.14)'; ctx.lineWidth = 1.5; ctx.stroke();
+  text(L.title || '', x, y - 20, fitFont(L.title || '', 'IXBold', 22, w, 3), THEME.mute, 'left', 3);
+  const gr = ctx.createLinearGradient(x, 0, x + w, 0); pal.forEach((c, i) => gr.addColorStop(i / (pal.length - 1), c));
+  rr(x, y, w, 18, 9); ctx.fillStyle = gr; ctx.fill();
+  text(L.low || '', x, y + 50, '24px IXBold', THEME.text, 'left', 1); text(L.high || '', x + w, y + 50, '24px IXBold', THEME.text, 'right', 1); ctx.restore();
+}
+function stormShape(s, eye = '#03070e') { // classic hurricane symbol: solid core, dark eye, two sweeping arms (draws at the current origin)
+  const R = s * .2;
+  for (let k = 0; k < 2; k++) {
+    ctx.save(); ctx.rotate(k * Math.PI); ctx.beginPath(); ctx.moveTo(R, 0); ctx.arc(0, 0, R, 0, -Math.PI * .5, true);
+    ctx.bezierCurveTo(-R * .2, -R * 2.0, R * 1.6, -R * 2.6, R * 2.4, -R * 2.0); ctx.bezierCurveTo(R * 1.4, -R * 1.9, R * 1.1, -R * .9, R, 0);
+    ctx.closePath(); ctx.fill(); ctx.restore();
+  }
+  ctx.beginPath(); ctx.arc(0, 0, R * 1.18, 0, 7); ctx.fill();
+  ctx.fillStyle = eye; ctx.beginPath(); ctx.arc(0, 0, R * .5, 0, 7); ctx.fill();
+}
+function cyclone(x, y, s, c, rot, a = 1) {
+  ctx.save(); ctx.globalAlpha = a; ctx.translate(x, y); ctx.rotate(rot); shadow(c, 22); ctx.fillStyle = c; stormShape(s); noShadow(); ctx.restore();
+}
+function trackLayer(cam, o, t, a, c) {
+  const pts = o.P, n = pts.length; if (n < 2) return;
+  const ll = pts.map(p => [p.ll[0], p.ll[1], 0]), fc = Math.min(o.forecast ?? n - 1, n - 1), now = Math.min(o.now ?? fc, n - 1);
+  const cum = [0]; for (let i = 1; i < n; i++) cum.push(cum[i - 1] + Math.hypot((ll[i][0] - ll[i - 1][0]) * CL, ll[i][1] - ll[i - 1][1]));
+  const tot = cum[n - 1] || 1, split = cum[fc] / tot;
+  // progress: one sweep over `dur`, or step keyframes [{at, to: pointIndex, dur}] that advance the line point by point with the narration
+  let pr = E.inOut(P(t, o.at, o.dur ?? 2.4)), eyeT = o.at + (o.dur ?? 2.4) * (cum[now] / tot);
+  if (o.S && o.S.length) {
+    let prev = 0; pr = 0;
+    for (const s of o.S) { const f = cum[Math.min(s.to, n - 1)] / tot; if (t < s.t) break; pr = lerp(prev, f, E.inOut(P(t, s.t, s.dur ?? 1.6))); prev = f; }
+    const se = o.S.find(s => s.to >= now); eyeT = se ? se.t + (se.dur ?? 1.6) * .85 : 1e9;
+  }
+  const fpr = split >= 1 ? 0 : clamp((pr - split) / (1 - split));
+  // forecast cone: widens along the forecast part
+  if (o.cone !== false && fc < n - 1 && fpr > 0) {
+    const f = ll.slice(fc), L = [], R = [];
+    f.forEach((p, i) => {
+      const a0 = f[Math.max(0, i - 1)], b0 = f[Math.min(f.length - 1, i + 1)], dx = (b0[0] - a0[0]) * CL, dy = b0[1] - a0[1], len = Math.hypot(dx, dy) || 1;
+      const w = (o.coneStart ?? .4) + (o.coneGrow ?? .9) * i, nx = -dy / len * w, ny = dx / len * w;
+      L.push([p[0] + nx / CL, p[1] + ny]); R.push([p[0] - nx / CL, p[1] - ny]);
+    });
+    const poly = [...L, ...R.reverse()], cp = new Path2D(); poly.forEach((p, i) => { const q = cam.p(p[0], p[1]); i ? cp.lineTo(q[0], q[1]) : cp.moveTo(q[0], q[1]); }); cp.closePath();
+    ctx.save(); ctx.globalAlpha = a * fpr * .9; ctx.fillStyle = 'rgba(255,255,255,.10)'; ctx.fill(cp); ctx.setLineDash([10, 10]); ctx.strokeStyle = 'rgba(255,255,255,.45)'; ctx.lineWidth = 2; ctx.stroke(cp); ctx.restore();
+  }
+  ctx.save(); ctx.globalAlpha = a;
+  polyline3(cam, ll.slice(0, fc + 1), split > 0 ? clamp(pr / split) : 1, c, o.width ?? 6, { glow: 16 });
+  if (fpr > 0) polyline3(cam, ll.slice(fc), fpr, c, (o.width ?? 6) - 1, { dash: [14, 12], dashOff: -t * 30, glow: 10 });
+  ctx.restore();
+  pts.forEach((p, i) => {
+    const f = cum[i] / tot; if (pr < f - 1e-6 || i === now) return;
+    const q = cam.p(p.ll[0], p.ll[1]), cc = p.cat !== undefined ? catCol(p.cat) : c, da = a * clamp((pr - f + .015) / .015), r = p.big ? 13 : 10, la = da * (p.u !== undefined ? 1 - P(t, p.u - .3, .3) : 1);
+    ctx.save(); ctx.globalAlpha = da; ctx.beginPath(); ctx.arc(q[0], q[1], r, 0, 7);
+    if (i > fc) { ctx.fillStyle = 'rgba(3,7,14,.85)'; ctx.fill(); ctx.strokeStyle = cc; ctx.lineWidth = 3.5; ctx.stroke(); } else { shadow(cc, 12); ctx.fillStyle = cc; ctx.fill(); noShadow(); ctx.strokeStyle = 'rgba(3,7,14,.9)'; ctx.lineWidth = 2; ctx.stroke(); }
+    ctx.restore();
+    if (p.label && la > 0) { ctx.save(); ctx.globalAlpha = la; ctx.font = '22px IXBold'; ctx.letterSpacing = '1.5px'; ctx.textAlign = p.dx < 0 ? 'right' : 'left'; ctx.lineJoin = 'round'; ctx.lineWidth = 6; ctx.strokeStyle = 'rgba(3,7,14,.9)'; ctx.strokeText(p.label, q[0] + (p.dx ?? 20), q[1] + (p.dy ?? 8)); ctx.fillStyle = THEME.text; ctx.fillText(p.label, q[0] + (p.dx ?? 20), q[1] + (p.dy ?? 8)); ctx.letterSpacing = '0px'; ctx.restore(); }
+  });
+  const fn = cum[now] / tot; if (pr >= fn - 1e-6 && o.eye !== false) {
+    const p = pts[now], q = cam.p(p.ll[0], p.ll[1]), cc = p.cat !== undefined ? catCol(p.cat) : c, ea = a * clamp((pr - fn + .015) / .015);
+    const s = clamp(cam.scale(p.ll[0], p.ll[1]) * 1.9, 70, 130) * (o.eyeSize ?? 1), dir = p.ll[1] >= 0 ? -1 : 1;
+    pulse(q[0], q[1], t, eyeT, cc, s * .3, s * 1.2, 1.6, ea * .8);
+    cyclone(q[0], q[1], s, cc, dir * t * 2.6, ea);
+    if (o.name) tag(q[0], q[1] - s * .35, o.name, cc, ea * E.out(P(t, eyeT, .5)) * (o.nameUntil !== undefined ? 1 - P(t, o.nameU - .3, .3) : 1), { dx: o.nameDx ?? 0, dy: o.nameDy ?? -90, sub: o.sub, size: o.nameSize ?? 30 });
+  }
+}
 function heightOf(o, t) {
   let h = (o.height ?? .6) * E.out(P(t, o.at - .15, o.rise ?? 1.1)) * (1 - E.inOut(P(t, o.until - .8, .8)));
   let m = 1; for (const f of o.flat) m = lerp(m, f.to, E.inOut(P(t, f.t, 1.2))); return h * m;
@@ -508,6 +621,7 @@ function mapScene(sc, t) {
     ctx.restore();
     if (o.outline !== false && o.clip) { ctx.save(); ctx.globalAlpha = a; shadow(c, 20); ctx.strokeStyle = rgba(c, .95); ctx.lineWidth = 2.5; ctx.stroke(countryPath(cam, o.clip)); ctx.restore(); }
   }
+  for (const o of sc.L) if (o.kind === 'field') { const a = fade(o); if (a > 0) fieldLayer(cam, o, t, a); }
   const ex = sc.L.filter(o => o.kind === 'extrude' && H[o.iso] > .002).map(o => ({ o, z: cam.p(...country(o.iso).center)[2] })).sort((a, b) => b.z - a.z);
   for (const { o } of ex) extrude(cam, o.iso, H[o.iso], col(o.color), 1, o.glow ?? 12);
   // pass 2: routes, barriers, movers, arcs, markers, columns
@@ -550,6 +664,8 @@ function mapScene(sc, t) {
       else { pulse(q[0], q[1], t, o.at, c, 8, 80, 1.4, .9); glowDot(q[0], q[1], 8, c); }
       ctx.restore();
       if (o.label) tag(q[0], q[1], o.label.text, c, a * win(t, o.at + .1, o.label.u ?? o.until, .3, .3), { dx: o.label.dx ?? 0, dy: o.label.dy ?? -80, sub: o.label.sub, size: o.label.size ?? 24 });
+    } else if (o.kind === 'track') {
+      trackLayer(cam, o, t, a, col(o.color || 'storm'));
     } else if (o.kind === 'column') {
       const g = E.out(P(t, o.at - .1, o.dur ?? 1.2)), v = (o.value ?? 10) * g, dec = o.decimals ?? 0;
       const h = (o.value ?? 10) * (o.scale ?? .42) * g, val = (o.display || '{v}').replace('{v}', v.toFixed(dec));
@@ -559,6 +675,7 @@ function mapScene(sc, t) {
   // pass 3: tags + screen-space overlays
   for (const o of sc.L) {
     const a = fade(o); if (a <= 0) continue; const c = col(o.color);
+    if (o.kind === 'field' && o.legend) fieldLegend(o, a);
     if (o.kind === 'tag') { const q = cam.p(o.locLL[0], o.locLL[1], zOf(o)); tag(q[0], q[1], o.text, c, a, { dx: o.dx ?? 0, dy: o.dy ?? -70, sub: o.sub, size: o.size ?? 30 }); }
     else if (o.kind === 'callout') {
       const pr = cam.p(o.locLL[0], o.locLL[1], zOf(o)), [sx, sy] = o.screen || [120, 330], c1 = [lerp(pr[0], sx, .3), Math.min(pr[1], sy) - 160];
@@ -742,7 +859,7 @@ function renderThumb(out) {
     shadow('rgba(0,0,0,.7)', 40); ctx.fillStyle = col(c); ctx.fillText(str, 540, base); ctx.restore(); y += gap;
   });
   const by = y + 28; ctx.save();
-  const brand = story.brand || '@GEOPOLITICS4YOU', bf = '30px IXBold', bw = tw(brand, bf, 5) + 64;
+  const brand = story.brand || CFG.channel || '@GEOPOLITICS4YOU', bf = '30px IXBold', bw = tw(brand, bf, 5) + 64;
   rr(540 - bw / 2, by, bw, 54, 27); ctx.fillStyle = 'rgba(6,11,20,.88)'; ctx.fill(); ctx.strokeStyle = rgba(THEME.accent, .9); ctx.lineWidth = 2; ctx.stroke();
   ctx.fillStyle = THEME.accent; ctx.beginPath(); ctx.arc(540 - bw / 2 + 28, by + 27, 8, 0, 7); ctx.fill();
   text(brand, 540 + 10, by + 28, bf, THEME.text, 'center', 5, 'middle'); ctx.restore();
