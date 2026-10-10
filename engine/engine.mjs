@@ -253,7 +253,7 @@ function icon(kind, x, y, s, c, lw = 4) {
     case 'flame': ctx.moveTo(0, .44); ctx.bezierCurveTo(-.36, .44, -.4, .1, -.22, -.12); ctx.bezierCurveTo(-.18, .04, -.08, .06, -.06, -.02); ctx.bezierCurveTo(-.1, -.2, 0, -.34, .08, -.46); ctx.bezierCurveTo(.12, -.24, .38, -.1, .36, .16); ctx.bezierCurveTo(.34, .36, .18, .44, 0, .44); ctx.fill(); break;
     case 'flag': ctx.moveTo(-.3, .45); ctx.lineTo(-.3, -.42); ctx.stroke(); ctx.beginPath(); ctx.moveTo(-.3, -.42); ctx.lineTo(.36, -.3); ctx.lineTo(-.3, -.06); ctx.fill(); break;
     case 'shield': ctx.moveTo(0, -.44); ctx.lineTo(.36, -.3); ctx.lineTo(.32, .1); ctx.quadraticCurveTo(.2, .36, 0, .46); ctx.quadraticCurveTo(-.2, .36, -.32, .1); ctx.lineTo(-.36, -.3); ctx.closePath(); ctx.stroke(); break;
-    case 'money': ctx.arc(0, 0, .4, 0, 7); ctx.stroke(); ctx.font = 'bold .55px Anton'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('$', 0, .03); break;
+    case 'money': ctx.arc(0, 0, .4, 0, 7); ctx.stroke(); ctx.save(); ctx.scale(1 / s, 1 / s); ctx.font = `${Math.max(8, Math.round(s * .58))}px Anton`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('$', 0, s * .04); ctx.restore(); break;
     case 'ship': ctx.moveTo(-.46, -.02); ctx.lineTo(.46, -.02); ctx.lineTo(.32, .26); ctx.lineTo(-.36, .26); ctx.closePath(); ctx.fill(); ctx.fillRect(-.2, -.3, .3, .24); break;
     case 'factory': ctx.moveTo(-.45, .4); ctx.lineTo(-.45, -.1); ctx.lineTo(-.15, .08); ctx.lineTo(-.15, -.1); ctx.lineTo(.15, .08); ctx.lineTo(.15, -.42); ctx.lineTo(.3, -.42); ctx.lineTo(.3, .08); ctx.lineTo(.45, .08); ctx.lineTo(.45, .4); ctx.closePath(); ctx.fill(); break;
     case 'people': ctx.arc(-.18, -.18, .13, 0, 7); ctx.arc(.2, -.18, .13, 0, 7); ctx.fill(); ctx.beginPath(); ctx.arc(-.18, .3, .25, Math.PI, 0); ctx.arc(.2, .3, .25, Math.PI, 0); ctx.fill(); break;
@@ -449,6 +449,15 @@ for (const sc of SCENES) {
   else if (sc.type === 'bars') { sc.bars.forEach((b, i) => b.t = A(b.at ?? (sc.from + .3 + i * .4))); sc.bars.forEach(b => ev(b.t, 'rise', .7)); if (sc.badge) { sc.badge.t = A(sc.badge.at); ev(sc.badge.t, 'blip', .7); } ev(sc.from - .3, 'whoosh', .7); }
   else if (sc.type === 'gauge') { sc.t = A(sc.at ?? sc.from); sc.done = A(sc.doneAt ?? (sc.t + 1.4)); ev(sc.t, 'ticks', .7); ev(sc.done, 'stamp', .9); ev(sc.from - .3, 'whoosh', .7); }
   else if (sc.type === 'facts') { sc.items.forEach((it, i) => it.t = A(it.at ?? (sc.from + .3 + i * .6))); sc.items.forEach(it => ev(it.t, 'blip', .7)); ev(sc.from - .3, 'whoosh', .7); }
+  else if (sc.type === 'chart') {
+    sc.t = A(sc.at ?? (sc.from + .3)); sc.series = sc.series || [{ values: sc.values || [], color: sc.color }];
+    (sc.events || []).forEach(e => { e.t = A(e.at ?? sc.t); ev(e.t, 'blip', .6); }); if (sc.band) sc.band.t = A(sc.band.at ?? sc.t);
+    ev(sc.from - .3, 'whoosh', .7); ev(sc.t, 'flow', .6); ev(sc.t + (sc.dur ?? 2.2), 'stamp', .6);
+  }
+  else if (sc.type === 'ticker') { sc.rows.forEach((r, i) => r.t = A(r.at ?? (sc.from + .3 + i * .35))); sc.rows.forEach(r => ev(r.t, 'blip', .6)); ev(sc.from - .3, 'whoosh', .7); }
+  else if (sc.type === 'chain' || sc.type === 'flow') { sc.steps.forEach((s, i) => s.t = A(s.at ?? (sc.from + .3 + i * .8))); sc.steps.forEach(s => ev(s.t, 'blip', .7)); ev(sc.from - .3, 'whoosh', .7); }
+  else if (sc.type === 'timeline') { sc.items.forEach((it, i) => it.t = A(it.at ?? (sc.from + .3 + i * .6))); sc.items.forEach(it => ev(it.t, 'blip', .6)); ev(sc.from - .3, 'whoosh', .7); }
+  else if (sc.type === 'scale') { sc.items.forEach((it, i) => it.t = A(it.at ?? (sc.from + .3 + i * .7))); sc.items.forEach(it => ev(it.t, 'rise', .7)); ev(sc.from - .3, 'whoosh', .7); }
 }
 const SECTIONS = (story.sections || []).map((s, i, arr) => ({ ...s, a: A(s.from ?? s.seg), b: A(s.to ?? (arr[i + 1] ? (arr[i + 1].from ?? arr[i + 1].seg) : SEGS[SEGS.length - 1].id + '$')) }));
 SECTIONS.forEach(s => ev(s.a - .45, 'whoosh', .9));
@@ -781,8 +790,122 @@ function overlayScene(sc, t) {
       ctx.restore();
     });
     if (sc.source) text(sc.source, 540, 1150, '20px ISemi', THEME.mute, 'center', 3);
-  }
+  } else if (sc.type === 'chart') chartScene(sc, t, a, c);
+  else if (sc.type === 'ticker') tickerScene(sc, t, a);
+  else if (sc.type === 'chain' || sc.type === 'flow') chainScene(sc, t, a, c);
+  else if (sc.type === 'timeline') timelineScene(sc, t, a, c);
+  else if (sc.type === 'scale') scaleScene(sc, t, a, c);
   ctx.restore();
+}
+
+// ---------------------------------------------------------------- explainer overlays: chart, ticker, chain/flow, timeline, scale
+const signCol = (v, sc) => v >= 0 ? col((sc && sc.upColor) || 'ok') : col((sc && sc.downColor) || 'danger');
+function fmtChange(v, o = {}) { const d = o.decimals ?? 1, s = Math.abs(v).toFixed(d); return (v > 0 ? '+' : v < 0 ? '−' : '') + (o.prefix ?? '') + s + (o.suffix ?? '%'); }
+function chartScene(sc, t, a, c) {
+  const X0 = 150, X1 = 930, Y0 = 470, Y1 = 1010, ser = sc.series, n = Math.max(...ser.map(s => s.values.length));
+  const all = ser.flatMap(s => s.values); let lo = sc.yMin ?? Math.min(...all), hi = sc.yMax ?? Math.max(...all); const pad = (hi - lo || 1) * .12; if (sc.yMin === undefined) lo -= pad; if (sc.yMax === undefined) hi += pad;
+  const xOf = i => X0 + (X1 - X0) * (n > 1 ? i / (n - 1) : .5), yOf = v => Y1 - (Y1 - Y0) * (v - lo) / (hi - lo || 1);
+  const fmt = { prefix: sc.prefix, suffix: sc.suffix, decimals: sc.decimals, format: sc.format };
+  // grid + y labels
+  ctx.save(); ctx.strokeStyle = 'rgba(255,255,255,.08)'; ctx.lineWidth = 1.5;
+  for (let k = 0; k <= 4; k++) { const v = lo + (hi - lo) * k / 4, y = yOf(v); ctx.beginPath(); ctx.moveTo(X0, y); ctx.lineTo(X1, y); ctx.stroke(); text(fmtNum(v, { ...fmt, decimals: sc.axisDecimals ?? fmt.decimals }), X0 - 14, y + 7, '20px ISemi', THEME.mute, 'right', 1); }
+  ctx.restore();
+  const xl = sc.xLabels || []; const step = Math.max(1, Math.ceil(xl.length / 6));
+  xl.forEach((s, i) => { if (s && (i % step === 0 || i === xl.length - 1)) text(s, xOf(i), Y1 + 42, '22px IXBold', THEME.mute, 'center', 2); });
+  if (sc.band) { const b = sc.band, ba = E.out(P(t, b.t, .5)); if (ba > 0) { const bx0 = xOf(b.from), bx1 = xOf(b.to), bc = col(b.color || 'danger'); ctx.save(); ctx.globalAlpha = a * ba; ctx.fillStyle = rgba(bc, .12); ctx.fillRect(bx0, Y0, bx1 - bx0, Y1 - Y0); if (b.text) text(b.text, (bx0 + bx1) / 2, Y0 + 30, fitFont(b.text, 'IXBold', 22, Math.max(120, bx1 - bx0 - 10), 2), bc, 'center', 2); ctx.restore(); } }
+  const p = E.inOut(P(t, sc.t, sc.dur ?? 2.2));
+  ser.forEach((s, si) => {
+    const sc2 = col(s.color || sc.color || 'accent'), m = s.values.length, upto = p * (m - 1), pts = [];
+    for (let i = 0; i < m; i++) { if (i <= upto) pts.push([xOf(i), yOf(s.values[i])]); else { const k = upto - (i - 1); if (k > 0) pts.push([lerp(xOf(i - 1), xOf(i), k), lerp(yOf(s.values[i - 1]), yOf(s.values[i]), k)]); break; } }
+    if (pts.length < 1) return;
+    if (si === 0 && sc.area !== false && pts.length > 1) { const g = ctx.createLinearGradient(0, Y0, 0, Y1); g.addColorStop(0, rgba(sc2, .32)); g.addColorStop(1, rgba(sc2, 0)); ctx.beginPath(); ctx.moveTo(pts[0][0], Y1); pts.forEach(q => ctx.lineTo(q[0], q[1])); ctx.lineTo(pts[pts.length - 1][0], Y1); ctx.closePath(); ctx.fillStyle = g; ctx.fill(); }
+    ctx.save(); ctx.lineJoin = 'round'; ctx.lineCap = 'round'; shadow(sc2, 18); ctx.strokeStyle = sc2; ctx.lineWidth = s.width ?? 7; ctx.beginPath(); pts.forEach((q, i) => i ? ctx.lineTo(q[0], q[1]) : ctx.moveTo(q[0], q[1])); ctx.stroke(); ctx.restore();
+    const hd = pts[pts.length - 1]; glowDot(hd[0], hd[1], 9, sc2, a);
+    if (s.label) { const li = Math.min(m - 1, Math.floor(upto)); text(s.label, X0 + 6, Y0 - 22 - si * 34, '24px IXBold', sc2, 'left', 2); }
+  });
+  (sc.events || []).forEach(e => {
+    const ea = E.out(P(t, e.t, .45)); if (ea <= 0) return; const x = xOf(e.i), ec = col(e.color || 'text');
+    ctx.save(); ctx.globalAlpha = a * ea; ctx.setLineDash([10, 10]); ctx.strokeStyle = rgba(ec, .7); ctx.lineWidth = 2.5; ctx.beginPath(); ctx.moveTo(x, Y0 + 40); ctx.lineTo(x, Y1); ctx.stroke(); ctx.setLineDash([]);
+    const f = '24px IXBold', w = tw(e.text, f, 2) + 36, bx = clamp(x - w / 2, 40, 1000 - w), by = (e.y ?? Y0 + 46) + (1 - ea) * 20;
+    rr(bx, by, w, 48, 12); ctx.fillStyle = 'rgba(6,11,20,.92)'; ctx.fill(); ctx.strokeStyle = ec; ctx.lineWidth = 2; ctx.stroke(); text(e.text, bx + w / 2, by + 32, f, THEME.text, 'center', 2);
+    if (e.sub) text(e.sub, bx + w / 2, by + 74, fitFont(e.sub, 'ISemi', 20, 420, 1.5), ec, 'center', 1.5); ctx.restore();
+  });
+  if (p >= 1 && sc.endLabel !== false) {
+    const s = ser[0], v = s.values[s.values.length - 1], q = [xOf(s.values.length - 1), yOf(v)], ep = E.outBack(P(t, sc.t + (sc.dur ?? 2.2), .4));
+    const str = sc.endText || fmtNum(v, fmt), f = fitFont(str, 'Anton', 64, 360), w = tw(str, f) + 40, bx = clamp(q[0] - w - 24, 40, 940 - w), by = clamp(q[1] - 96, Y0 - 40, Y1 - 90);
+    ctx.save(); ctx.globalAlpha = a * clamp(ep); ctx.translate(bx + w / 2, by + 40); ctx.scale(ep, ep); rr(-w / 2, -40, w, 80, 14); ctx.fillStyle = 'rgba(6,11,20,.92)'; ctx.fill(); ctx.strokeStyle = col(s.color || sc.color || 'accent'); ctx.lineWidth = 3; ctx.stroke(); text(str, 0, 24, f, THEME.text, 'center'); ctx.restore();
+    if (sc.change !== undefined) { const cs = fmtChange(sc.change, sc.changeFormat || {}), cc = signCol(sc.change, sc), cw = tw(cs, '34px IXBold', 1) + 40; ctx.save(); ctx.globalAlpha = a * clamp(ep); const cx0 = bx - cw - 16 >= 40 ? bx - cw - 16 : clamp(bx + w / 2 - cw / 2, 40, 940 - cw), cy0 = bx - cw - 16 >= 40 ? by + 13 : by + 92; rr(cx0, cy0, cw, 54, 27); ctx.fillStyle = rgba(cc, .18); ctx.fill(); ctx.strokeStyle = cc; ctx.lineWidth = 2; ctx.stroke(); text(cs, cx0 + cw / 2, cy0 + 39, '34px IXBold', cc, 'center', 1); ctx.restore(); }
+  }
+  if (sc.note) text(sc.note, 540, 1112, fitFont(sc.note, 'IXBold', 24, 940, 3), THEME.mute, 'center', 3);
+  if (sc.source) text(sc.source, 540, 1150, fitFont(sc.source, 'ISemi', 20, 960, 3), THEME.mute, 'center', 3);
+}
+function tickerScene(sc, t, a) {
+  const rows = sc.rows, n = rows.length, big = n <= 3, rh = big ? 150 : n > 5 ? 100 : 118, gap = big ? 24 : 14, y0 = big ? 500 : 450 + Math.max(0, (5 - n) * (rh + gap) / 2) * .6;
+  const mx = Math.max(...rows.map(r => Math.abs(r.change ?? 0)), .01);
+  rows.forEach((r, i) => {
+    const p = E.out(P(t, r.t, .45)); if (p <= 0) return; const y = y0 + i * (rh + gap), ch = r.change ?? 0, cc = r.color ? col(r.color) : signCol(ch, sc), g = E.inOut(P(t, r.t + .15, .9));
+    ctx.save(); ctx.globalAlpha = a * p; ctx.translate((1 - p) * 80, 0); card(90, y, 860, rh, cc, a * p);
+    if (r.icon) icon(r.icon, 150, y + rh / 2, 50, cc, 5);
+    const nx = r.icon ? 200 : 130; text(r.name, nx, y + (r.sub ? rh / 2 + (big ? 8 : 4) : rh / 2 + 16), fitFont(r.name, 'Anton', big ? 60 : 46, 380), THEME.text, 'left', 1);
+    if (r.sub) text(r.sub, nx + 2, y + rh / 2 + (big ? 44 : 36), fitFont(r.sub, 'ISemi', big ? 24 : 20, 360, 1.5), THEME.mute, 'left', 1.5);
+    if (r.value) text(r.value, 650, y + rh / 2 + 12, fitFont(r.value, 'IXBold', 34, 220, 1), THEME.text, 'right', 1);
+    const pw = big ? 250 : 230, ph = big ? 76 : 60, px = big ? 680 : 700, py = y + rh / 2 - ph / 2; rr(px, py, pw, ph, ph / 2); ctx.fillStyle = rgba(cc, .18); ctx.fill(); ctx.strokeStyle = cc; ctx.lineWidth = 2; ctx.stroke();
+    ctx.fillStyle = cc; ctx.beginPath(); { const my = py + ph / 2; if (ch >= 0) { ctx.moveTo(px + 30, my + 10); ctx.lineTo(px + 44, my - 12); ctx.lineTo(px + 58, my + 10); } else { ctx.moveTo(px + 30, my - 10); ctx.lineTo(px + 44, my + 12); ctx.lineTo(px + 58, my - 10); } } ctx.closePath(); ctx.fill();
+    const str = r.display && g >= 1 ? r.display : fmtChange(ch * g, sc.format || {}); text(str, px + pw / 2 + 20, py + ph / 2 + 12, fitFont(str, 'IXBold', big ? 42 : 34, pw - 80, 1), cc, 'center', 1);
+    ctx.globalAlpha = a * p * .9; rr(110, y + rh - 10, 820 * Math.abs(ch) / mx * g, 5, 2.5); ctx.fillStyle = cc; ctx.fill();
+    ctx.restore();
+  });
+  if (sc.note) text(sc.note, 540, 1112, fitFont(sc.note, 'IXBold', 24, 940, 3), THEME.mute, 'center', 3);
+  if (sc.source) text(sc.source, 540, 1150, fitFont(sc.source, 'ISemi', 20, 960, 3), THEME.mute, 'center', 3);
+}
+function chainScene(sc, t, a, c) {
+  const st = sc.steps, n = st.length, nh = n > 4 ? 104 : n > 3 ? 118 : 130, gap = n > 4 ? 44 : n > 3 ? 56 : 70, tot = n * nh + (n - 1) * gap, y0 = 440 + Math.max(0, (680 - tot) / 2);
+  st.forEach((s, i) => {
+    const y = y0 + i * (nh + gap), p = E.out(P(t, s.t, .45)), sc2 = col(s.color || sc.color || 'accent');
+    if (i > 0) { const lp = E.inOut(P(t, s.t - .35, .4)); if (lp > 0) { const ya = y - gap + 6, yb = ya + (gap - 12) * lp; ctx.save(); ctx.globalAlpha = a; ctx.strokeStyle = rgba(sc2, .9); ctx.lineWidth = 6; ctx.lineCap = 'round'; shadow(sc2, 12); ctx.beginPath(); ctx.moveTo(540, ya); ctx.lineTo(540, yb); ctx.stroke(); if (lp > .95) { ctx.fillStyle = sc2; ctx.beginPath(); ctx.moveTo(522, yb - 14); ctx.lineTo(558, yb - 14); ctx.lineTo(540, yb + 4); ctx.closePath(); ctx.fill(); } ctx.restore(); } }
+    if (p <= 0) return;
+    ctx.save(); ctx.globalAlpha = a * p; ctx.translate(0, (1 - p) * 40); card(120, y, 840, nh, sc2, a * p, lerp(.96, 1, p));
+    ctx.beginPath(); ctx.arc(205, y + nh / 2, 46, 0, 7); ctx.fillStyle = rgba(sc2, .16); ctx.fill(); icon(s.icon || 'dot', 205, y + nh / 2, 56, sc2, 5);
+    const tx = 275, mw = s.dir ? 540 : 640; text(s.title, tx, y + (s.sub ? nh / 2 + 4 : nh / 2 + 18), fitFont(s.title, 'Anton', 52, mw, 1), THEME.text, 'left', 1);
+    if (s.sub) text(s.sub, tx + 2, y + nh / 2 + 40, fitFont(s.sub, 'ISemi', 22, mw, 1.5), THEME.mute, 'left', 1.5);
+    if (s.dir) { const up = s.dir === 'up', dc = s.dirColor ? col(s.dirColor) : (up ? col('ok') : col('danger')), bx = 870, by = y + nh / 2; ctx.fillStyle = dc; shadow(dc, 16); ctx.beginPath(); if (up) { ctx.moveTo(bx - 30, by + 20); ctx.lineTo(bx, by - 26); ctx.lineTo(bx + 30, by + 20); } else { ctx.moveTo(bx - 30, by - 20); ctx.lineTo(bx, by + 26); ctx.lineTo(bx + 30, by - 20); } ctx.closePath(); ctx.fill(); noShadow(); }
+    ctx.restore();
+  });
+  if (sc.source) text(sc.source, 540, 1185, fitFont(sc.source, 'ISemi', 20, 960, 3), THEME.mute, 'center', 3);
+}
+function timelineScene(sc, t, a, c) {
+  const it = sc.items, n = it.length, yA = 460, yB = 1090, sp = (yB - yA) / Math.max(1, n), lx = 220, lp = E.inOut(P(t, it[0].t - .3, (it[n - 1].t - it[0].t) + .8));
+  ctx.save(); ctx.globalAlpha = a; ctx.strokeStyle = 'rgba(255,255,255,.18)'; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(lx, yA); ctx.lineTo(lx, yA + (yB - yA - sp / 2) * lp); ctx.stroke(); ctx.restore();
+  it.forEach((m, i) => {
+    const p = E.out(P(t, m.t, .45)); if (p <= 0) return; const y = yA + sp * (i + .35), mc = col(m.color || sc.color || 'accent');
+    ctx.save(); ctx.globalAlpha = a * p;
+    if (m.big) pulse(lx, y, t, m.t, mc, 14, 60, 1.4, .8);
+    glowDot(lx, y, m.big ? 14 : 10, mc, a * p);
+    const x = lx + 56 + (1 - p) * 30; text(m.date || '', x, y + 12, fitFont(m.date || '', 'Anton', m.big ? 60 : 50, 680), mc, 'left', 1);
+    if (m.title) text(m.title, x, y + 52, fitFont(m.title, 'IXBold', 30, 700, 1), THEME.text, 'left', 1);
+    if (m.sub) text(m.sub, x, y + 84, fitFont(m.sub, 'ISemi', 22, 700, 1.5), THEME.mute, 'left', 1.5);
+    ctx.restore();
+  });
+  if (sc.source) text(sc.source, 540, 1150, fitFont(sc.source, 'ISemi', 20, 960, 3), THEME.mute, 'center', 3);
+}
+function scaleScene(sc, t, a, c) {
+  const it = sc.items, vmax = Math.max(...it.map(m => m.value)), Rmax = sc.maxRadius ?? 210, base = 960, gap = 50;
+  let rs = it.map(m => Math.max(3, Rmax * Math.sqrt(m.value / vmax))); const tot = rs.reduce((s, r) => s + 2 * r, 0) + gap * (it.length - 1); if (tot > 880) rs = rs.map(r => r * 880 / tot);
+  let x = 540 - (rs.reduce((s, r) => s + 2 * r, 0) + gap * (it.length - 1)) / 2;
+  it.forEach((m, i) => {
+    const r = rs[i], cx = x + r; x += 2 * r + gap; const g = E.outBack(P(t, m.t, .7)), mc = col(m.color || sc.color || 'accent'); if (g <= 0) return;
+    const rr0 = r * Math.max(0, g); ctx.save(); ctx.globalAlpha = a * clamp(g);
+    const gr = ctx.createRadialGradient(cx - rr0 * .3, base - rr0 * 1.3, rr0 * .1, cx, base - rr0, rr0); gr.addColorStop(0, rgba(mix(mc, '#ffffff', .35), .95)); gr.addColorStop(1, rgba(mc, .75));
+    shadow(mc, 24); ctx.fillStyle = gr; ctx.beginPath(); ctx.arc(cx, base - rr0, Math.max(2, rr0), 0, 7); ctx.fill(); noShadow();
+    if (m.icon && rr0 > 40) icon(m.icon, cx, base - rr0, Math.min(90, rr0 * .9), 'rgba(3,7,14,.75)', 6);
+    const la = clamp(P(t, m.t + .3, .4)); ctx.globalAlpha = a * la;
+    text(m.display || fmtNum(m.value, sc), cx, base + 62, fitFont(m.display || fmtNum(m.value, sc), 'Anton', 54, Math.max(170, 2 * r + gap - 10)), mc, 'center', 1);
+    text(m.name || '', cx, base + 100, fitFont(m.name || '', 'IXBold', 24, Math.max(170, 2 * r + gap - 10), 2), THEME.text, 'center', 2);
+    ctx.restore();
+  });
+  ctx.save(); ctx.globalAlpha = a * .5; ctx.strokeStyle = 'rgba(255,255,255,.3)'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(90, base); ctx.lineTo(990, base); ctx.stroke(); ctx.restore();
+  if (sc.note) text(sc.note, 540, 1112 + 40, fitFont(sc.note, 'IXBold', 22, 940, 3), THEME.mute, 'center', 3);
+  if (sc.source) text(sc.source, 540, 1190, fitFont(sc.source, 'ISemi', 20, 960, 3), THEME.mute, 'center', 3);
 }
 
 // ---------------------------------------------------------------- chrome

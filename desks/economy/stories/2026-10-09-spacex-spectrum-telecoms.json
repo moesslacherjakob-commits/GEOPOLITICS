@@ -1,0 +1,346 @@
+{
+ "id": "2026-10-09-spacex-spectrum-telecoms",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "SpaceX just bought a slice of America's airwaves. The next day, the country's three phone giants sold off hard."
+  },
+  {
+   "id": "f1",
+   "text": "On Thursday, SpaceX, the rocket and Starlink company, agreed to buy nationwide low-band spectrum from the investment firm Grain Management. The Wall Street Journal puts the price at about 8 billion dollars. The deal still needs approval from the FCC."
+  },
+  {
+   "id": "f2",
+   "text": "On Friday, T-Mobile closed down 13.3 percent, AT&T 9.8 and Verizon 8.8, Axios reports. Cell tower owners like Crown Castle jumped instead, as investors bet on SpaceX as a future tenant of their towers."
+  },
+  {
+   "id": "f3",
+   "text": "Why the panic? Low-band signals reach indoors, where satellite signals struggle. SpaceX plans a phone service for late 2027, with small base stations next to Starlink dishes. Its president has said she expects to win quite a few carrier customers. AT&T's CEO calls the plan not viable."
+  },
+  {
+   "id": "cta",
+   "text": "Follow for the next update."
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE DEAL",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE SELL-OFF",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE THREAT",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -40,
+     "lat": 25,
+     "R": 360
+    },
+    {
+     "at": 3.6,
+     "lon": -97,
+     "lat": 38,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "MARKETS · OCT 9, 2026",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "USA",
+     "color": "accent",
+     "at": "hook:America's",
+     "alpha": 0.5
+    }
+   ],
+   "headline": {
+    "at": "hook:bought",
+    "lines": [
+     [
+      "SPACEX VS.",
+      "text",
+      120
+     ],
+     [
+      "PHONE GIANTS",
+      "accent",
+      130
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.1",
+   "center": [
+    -97,
+    38
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -97,
+     "lat": 38,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": -97,
+     "lat": 37,
+     "dist": 62,
+     "pitch": 46,
+     "yaw": -4,
+     "oy": 170
+    },
+    {
+     "at": "f1:FCC.",
+     "lon": -90,
+     "lat": 37.5,
+     "dist": 66,
+     "pitch": 48,
+     "yaw": 6,
+     "oy": 170
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "USA",
+     "color": "accent",
+     "alpha": 0.35,
+     "at": "f1 +0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": "Kansas City",
+     "text": "LOW-BAND SPECTRUM",
+     "sub": "NATIONWIDE · 800 MHZ",
+     "color": "accent",
+     "at": "f1:low-band",
+     "dx": -40,
+     "dy": -110,
+     "size": 32
+    },
+    {
+     "kind": "callout",
+     "loc": "Washington, D.C.",
+     "place": "FCC · APPROVAL NEEDED",
+     "icon": "flag",
+     "screen": [
+      430,
+      360
+     ],
+     "color": "accent",
+     "at": "f1:approval -0.3"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "from": "f1:price -0.3",
+   "to": "f1:still -0.1",
+   "label": "PRICE FOR THE AIRWAVES",
+   "sublabel": "SPACEX ← GRAIN MANAGEMENT",
+   "icon": "money",
+   "color": "accent",
+   "value": 8000000000,
+   "start": 0,
+   "format": "money",
+   "prefix": "$",
+   "doneSuffix": "",
+   "decimals": 0,
+   "at": "f1:8 -0.4",
+   "doneAt": "f1:8 +0.6",
+   "note": "ABOUT, ACCORDING TO THE WALL STREET JOURNAL",
+   "source": "SPACEX DID NOT DISCLOSE TERMS"
+  },
+  {
+   "type": "ticker",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "FRIDAY'S CLOSE",
+   "sublabel": "OCT 9, 2026 · DAY AFTER THE DEAL",
+   "rows": [
+    {
+     "name": "T-MOBILE",
+     "sub": "TMUS · NASDAQ",
+     "change": -13.3,
+     "at": "f2:T-Mobile"
+    },
+    {
+     "name": "AT&T",
+     "sub": "T · NYSE",
+     "change": -9.8,
+     "at": "f2:AT&T"
+    },
+    {
+     "name": "VERIZON",
+     "sub": "VZ · NYSE",
+     "change": -8.8,
+     "at": "f2:Verizon"
+    }
+   ],
+   "note": "TOWER OWNERS LIKE CROWN CASTLE ROSE MORE THAN 10% INTRADAY",
+   "source": "SOURCES: AXIOS (CLOSE) · THESTREET, WIRELESS ESTIMATOR (TOWERS)"
+  },
+  {
+   "type": "chain",
+   "from": "f3 -0.1",
+   "to": "f3:AT&T's -0.3",
+   "label": "WHY CARRIERS ARE NERVOUS",
+   "color": "info",
+   "steps": [
+    {
+     "icon": "bolt",
+     "title": "LOW-BAND AIRWAVES",
+     "sub": "SIGNALS REACH INDOORS",
+     "at": "f3:Low-band"
+    },
+    {
+     "icon": "people",
+     "title": "PHONE SERVICE · LATE 2027",
+     "sub": "SPACEX PLAN, PER AXIOS",
+     "at": "f3:2027,"
+    },
+    {
+     "icon": "chip",
+     "title": "SMALL BASE STATIONS",
+     "sub": "NEXT TO STARLINK DISHES",
+     "at": "f3:small"
+    },
+    {
+     "icon": "money",
+     "title": "CARRIER CUSTOMERS",
+     "sub": "SPACEX EXPECTS TO WIN \"QUITE A FEW\"",
+     "dir": "down",
+     "at": "f3:expects"
+    }
+   ],
+   "source": "SOURCE: AXIOS · SHOTWELL QUOTE FROM AUGUST 2026"
+  },
+  {
+   "type": "quote",
+   "from": "f3:AT&T's -0.3",
+   "to": "cta -0.1",
+   "at": "f3:AT&T's",
+   "color": "danger",
+   "lines": [
+    [
+     "\"NOT A VIABLE",
+     "text"
+    ],
+    [
+     "STRATEGY\"",
+     "danger"
+    ]
+   ],
+   "by": "AT&T CEO JOHN STANKEY ON SPACEX'S PLAN, VIA AXIOS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -60,
+     "lat": 30,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -97,
+     "lat": 38,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": -92,
+     "lat": 38,
+     "R": 470
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "USA",
+     "color": "accent",
+     "alpha": 0.5
+    }
+   ],
+   "lines": [
+    [
+     "ONE DEAL.",
+     "text"
+    ],
+    [
+     "THREE GIANTS DOWN.",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AS REPORTED BY AXIOS, THE WALL STREET JOURNAL, THESTREET, WIRELESS ESTIMATOR",
+    "OCT 8–9, 2026 · NOT FINANCIAL ADVICE"
+   ]
+  }
+ ],
+ "upload": {
+  "title": "SpaceX Bought Airwaves. Phone Giants Sold Off #shorts",
+  "description": "SpaceX agreed to buy nationwide low-band spectrum from Grain Management, for about $8 billion according to The Wall Street Journal. The next day T-Mobile closed down 13.3%, AT&T 9.8% and Verizon 8.8%, Axios reports, while cell tower owners rose. SpaceX plans a phone service for late 2027; AT&T's CEO calls the approach not viable.\n\nSources: Axios, The Wall Street Journal (via Wireless Estimator), TheStreet (Oct 8-9, 2026).\n\n#stocks #SpaceX #markets",
+  "tags": [
+   "markets",
+   "stocks",
+   "economy",
+   "SpaceX",
+   "Starlink",
+   "T-Mobile",
+   "AT&T",
+   "Verizon",
+   "telecom stocks",
+   "news"
+  ],
+  "cover": "hook:bought +0.4"
+ },
+ "thumbnail": {
+  "at": "f1 +0.8",
+  "kicker": "SPACEX · TELECOMS",
+  "kickerColor": "accent",
+  "lines": [
+   [
+    "SPACEX HITS",
+    "text"
+   ],
+   [
+    "PHONE GIANTS",
+    "accent"
+   ]
+  ]
+ }
+}

@@ -46,7 +46,13 @@
       "IMF": "I.M.F.",
       "OPEC": "OPEC",
       "UK": "U.K.",
-      "BoJ": "Bank of Japan"
+      "BoJ": "Bank of Japan",
+      "AT&T": "A.T. and T.",
+      "AT&T's": "A.T. and T's",
+      "FCC": "F.C.C.",
+      "CEO": "C.E.O.",
+      "SEC": "S.E.C.",
+      "IPO": "I.P.O."
     }
   }
 }

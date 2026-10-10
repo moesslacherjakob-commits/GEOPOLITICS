@@ -1,7 +1,7 @@
 # Story format (`stories/<id>.json`, `desks/<desk>/stories/<id>.json`)
 
 One file = one Short. The engine renders it with `./make.sh stories/<id>.json` (@GEOPOLITICS4YOU) or `./make.sh desks/<desk>/stories/<id>.json` (other channels).
-Two full examples: `stories/2026-10-09-second-front.json` (Gulf / oil) and `stories/2026-10-09-ethiopia-eritrea.json` (Horn of Africa). Climate example with `track` + `field`: `desks/climate/stories/2026-10-10-isaias-late-hurricane.json`.
+Two full examples: `stories/2026-10-09-second-front.json` (Gulf / oil) and `stories/2026-10-09-ethiopia-eritrea.json` (Horn of Africa). Climate example with `track` + `field`: `desks/climate/stories/2026-10-10-isaias-late-hurricane.json`. Markets example with `ticker`, `counter`, `chain`, `quote`: `desks/economy/stories/2026-10-09-spacex-spectrum-telecoms.json`.
 
 **Channel config:** a story inside `desks/<desk>/stories/` automatically uses `desks/<desk>/config.json` (channel handle on the thumbnail, accent colour via `theme`, voice, disclaimer, pronunciations); everything else uses the root `config.json`. `$GEO_CONFIG` overrides both.
 
@@ -70,6 +70,11 @@ Icons: `check x eye jet plane drop flame flag shield money ship factory people c
 - `bars` — `label, sublabel, format money?, bars [{label, sub, value, display?, color, at, dur}], badge {text, at}, source`
 - `gauge` — `label, value, max?, prefix, suffix, icon, at, doneAt, note, source`
 - `facts` — `items [{icon, big, text, color, at}], source` (up to 3 stacked fact cards)
+- `chart` — line chart: `label, sublabel, color, series [{values [..], color?, label?, width?}]` (or just `values`), `xLabels [..]` (same length, "" to skip), `prefix, suffix, decimals, axisDecimals, format money?, yMin?, yMax?`, `at, dur` (draw time), `events [{i, text, sub?, color, at, y?}]` (dashed marker at index i), `band {from, to, color, text, at}` (shaded range), `change` + `changeFormat {decimals, suffix, prefix}` (pill next to the end value), `endText?`, `endLabel false?`, `area false?`, `upColor/downColor`, `note, source`. **Only real data points** — never invent or smooth values.
+- `ticker` — market board: `label, sublabel, rows [{name, sub?, value?, change (number, %), display?, color?, icon?, at}]` (≤ 3 rows render large, up to 6), `format {decimals, suffix}`, `upColor/downColor`, `note, source`. Green/red and the arrow follow the sign of `change`.
+- `chain` / `flow` — cause → effect or how-it-works diagram: `label, color, steps [{icon, title, sub?, color?, dir? up|down, dirColor?, at}]` (2–5 steps, arrows draw between them), `source`.
+- `timeline` — vertical timeline: `label, color, items [{date, title, sub?, color?, big?, at}]` (≤ 5 items), `source`.
+- `scale` — size comparison: `label, sublabel, color, items [{name, value, display, color?, icon?, at}]` (2–4 circles, area ∝ value), `maxRadius?, prefix/suffix/decimals` (for values without `display`), `note, source`.
 
 ## Screen layout (1080×1920, YouTube Shorts safe zones)
 - 0–150: platform UI · 168–245: section header · 250–1150: stage · 1270–1360: captions · 1500+: platform UI (title, buttons). Right edge x > 960 is covered by buttons from y ≈ 900.

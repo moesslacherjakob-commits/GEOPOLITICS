@@ -1,0 +1,305 @@
+{
+ "id": "2026-10-06-nobel-icecube-neutrinos",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "The man behind a detector buried in Antarctic ice just won the Nobel Prize in physics. It catches ghost particles from deep space."
+  },
+  {
+   "id": "f1",
+   "text": "On Tuesday, the Royal Swedish Academy of Sciences gave the prize to Francis Halzen, an 82 year old Belgian-born physicist at the University of Wisconsin. He wins about 1.2 million dollars for his work on high-energy neutrinos from space."
+  },
+  {
+   "id": "f2",
+   "text": "Neutrinos are tiny, almost massless particles. Trillions pass through your body every second, the Associated Press notes. To catch a few, IceCube watches a cubic kilometer of ice at the South Pole with more than 5,000 light sensors, waiting for rare flashes."
+  },
+  {
+   "id": "f3",
+   "text": "Those flashes show where the particles come from, opening what the Nobel committee calls a new kind of astronomy. Halzen has worked on the idea since the 1980s. Still, he called the prize a great surprise."
+  },
+  {
+   "id": "cta",
+   "text": "Follow for the next update."
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE PRIZE",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE DETECTOR",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "THE PAYOFF",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": 20,
+     "lat": -10,
+     "R": 360
+    },
+    {
+     "at": 4.5,
+     "lon": 0,
+     "lat": -62,
+     "R": 520
+    }
+   ],
+   "chip": {
+    "text": "NOBEL PRIZE · PHYSICS 2026",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      0,
+      -89.9
+     ],
+     "color": "accent",
+     "at": "hook:Antarctic",
+     "label": "SOUTH POLE",
+     "sub": "ICECUBE OBSERVATORY",
+     "dx": 40,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:detector",
+    "lines": [
+     [
+      "NOBEL PRIZE",
+      "text",
+      120
+     ],
+     [
+      "FROM THE ICE",
+      "accent",
+      130
+     ]
+    ]
+   }
+  },
+  {
+   "type": "facts",
+   "from": "f1 -0.1",
+   "to": "f2 -0.15",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "people",
+     "big": "FRANCIS HALZEN",
+     "text": "82 · BELGIAN-BORN · UNIVERSITY OF WISCONSIN–MADISON",
+     "color": "accent",
+     "at": "f1:Francis"
+    },
+    {
+     "icon": "money",
+     "big": "$1.2 MILLION",
+     "text": "12 MILLION SWEDISH KRONOR",
+     "color": "ok",
+     "at": "f1:1.2"
+    },
+    {
+     "icon": "eye",
+     "big": "NEUTRINO ASTRONOMY",
+     "text": "HIGH-ENERGY NEUTRINOS FROM SPACE · ICECUBE",
+     "color": "info",
+     "at": "f1:high-energy"
+    }
+   ],
+   "source": "SOURCES: ASSOCIATED PRESS, ITV · ANNOUNCED OCT 6, 2026"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "HOW ICECUBE CATCHES A NEUTRINO",
+   "color": "violet",
+   "steps": [
+    {
+     "icon": "eye",
+     "title": "NEUTRINO FROM SPACE",
+     "sub": "TRILLIONS PASS THROUGH YOU EVERY SECOND",
+     "color": "violet",
+     "at": "f2:Trillions"
+    },
+    {
+     "icon": "drop",
+     "title": "A CUBIC KILOMETER OF ICE",
+     "sub": "UNDER THE SOUTH POLE",
+     "color": "info",
+     "at": "f2:cubic"
+    },
+    {
+     "icon": "chip",
+     "title": "5,160 LIGHT SENSORS",
+     "sub": "BURIED 1.5 TO 2.5 KM DEEP",
+     "color": "ok",
+     "at": "f2:5,000"
+    },
+    {
+     "icon": "bolt",
+     "title": "A RARE FLASH",
+     "sub": "LIGHT FROM A NEUTRINO COLLISION",
+     "color": "accent",
+     "at": "f2:flashes. -0.4"
+    }
+   ],
+   "source": "SOURCES: ASSOCIATED PRESS · ICECUBE COLLABORATION"
+  },
+  {
+   "type": "quote",
+   "from": "f3 -0.1",
+   "to": "f3:Halzen -0.25",
+   "at": "f3:new -0.4",
+   "color": "accent",
+   "lines": [
+    [
+     "\"A NEW KIND",
+     "text"
+    ],
+    [
+     "OF ASTRONOMY\"",
+     "accent"
+    ]
+   ],
+   "by": "NOBEL PHYSICS COMMITTEE CHAIR MARK PEARCE, VIA AP"
+  },
+  {
+   "type": "timeline",
+   "from": "f3:Halzen -0.2",
+   "to": "cta -0.1",
+   "label": "FROM IDEA TO NOBEL",
+   "color": "info",
+   "items": [
+    {
+     "date": "1980s",
+     "title": "HALZEN STARTS ON SOUTH POLE NEUTRINOS",
+     "color": "info",
+     "at": "f3:Halzen"
+    },
+    {
+     "date": "2010",
+     "title": "ICECUBE COMPLETED",
+     "sub": "86 STRINGS OF SENSORS IN THE ICE",
+     "color": "violet",
+     "at": "f3:worked"
+    },
+    {
+     "date": "2013",
+     "title": "FIRST HIGH-ENERGY COSMIC NEUTRINOS",
+     "color": "violet",
+     "at": "f3:idea"
+    },
+    {
+     "date": "OCT 6, 2026",
+     "title": "NOBEL PRIZE IN PHYSICS",
+     "sub": "\"A NEW KIND OF ASTRONOMY\" · NOBEL COMMITTEE",
+     "color": "accent",
+     "big": true,
+     "at": "f3:1980s. +0.4"
+    }
+   ],
+   "source": "SOURCES: ASSOCIATED PRESS, ITV · ICECUBE COLLABORATION (2010, 2013)"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 30,
+     "lat": -30,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 0,
+     "lat": -62,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": -20,
+     "lat": -60,
+     "R": 470
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      0,
+      -89.9
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "GHOST PARTICLES,",
+     "text"
+    ],
+    [
+     "CAUGHT IN ICE.",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AS REPORTED BY THE ASSOCIATED PRESS AND ITV · ICECUBE COLLABORATION",
+    "NOBEL PRIZE IN PHYSICS · ANNOUNCED OCT 6, 2026"
+   ]
+  }
+ ],
+ "upload": {
+  "title": "A Detector in Antarctic Ice Just Won a Nobel #shorts",
+  "description": "Francis Halzen, an 82-year-old Belgian-born physicist at the University of Wisconsin–Madison, won the 2026 Nobel Prize in physics for his work on IceCube and high-energy neutrinos from space. IceCube watches a cubic kilometer of ice at the South Pole for rare flashes of light.\n\nSources: Associated Press, ITV (Oct 6, 2026); IceCube Collaboration for detector facts.\n\n#science #Nobel #physics",
+  "tags": [
+   "science",
+   "physics",
+   "Nobel Prize",
+   "neutrinos",
+   "IceCube",
+   "Antarctica",
+   "astronomy",
+   "space",
+   "news"
+  ],
+  "cover": "hook:detector +0.4"
+ },
+ "thumbnail": {
+  "at": 0.6,
+  "kicker": "NOBEL PRIZE · PHYSICS",
+  "kickerColor": "accent",
+  "lines": [
+   [
+    "GHOST PARTICLES",
+    "text"
+   ],
+   [
+    "IN THE ICE",
+    "accent"
+   ]
+  ]
+ }
+}
