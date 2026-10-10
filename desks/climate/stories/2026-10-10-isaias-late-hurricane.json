@@ -12,7 +12,7 @@
   },
   {
    "id": "f2",
-   "text": "After briefly reaching Category 3, Isaias came ashore near Destin, Florida, on Friday night as a Category 2. ABC News reports more than a foot of rain in parts of Alabama and Florida, and at least 800,000 homes and businesses without power."
+   "text": "After briefly reaching Category 3, Isaias came ashore near Destin, Florida, on Friday night as a Category 2. Forecasters warned of up to 15 inches of rain across Alabama and Florida. ABC News reports at least 800,000 homes and businesses without power."
   },
   {
    "id": "f3",
@@ -390,7 +390,7 @@
      "legend": {
       "title": "RAIN TOTALS · ILLUSTRATIVE",
       "low": "LESS",
-      "high": "1 FT+",
+      "high": "UP TO 15 IN",
       "screen": [
        90,
        1090
@@ -624,7 +624,7 @@
  ],
  "upload": {
   "title": "The Atlantic's First Hurricane Came in October #shorts",
-  "description": "Isaias became the first Atlantic hurricane of 2026 on October 7, the latest start to a season in 121 years according to NOAA data cited by CBS News. It came ashore near Destin, Florida, as a Category 2. ABC News reports more than a foot of rain in places and at least 800,000 customers without power. Meteorologists point largely to a strong El Niño.\n\nSources: CBS News, ABC News, EarthSky (Oct 7-10, 2026). Track and rain map are approximate.\n\n#hurricane #Isaias #climate",
+  "description": "Isaias became the first Atlantic hurricane of 2026 on October 7, the latest start to a season in 121 years according to NOAA data cited by CBS News. It came ashore near Destin, Florida, as a Category 2. Forecasters warned of up to 15 inches of rain, and ABC News reports at least 800,000 customers without power. Meteorologists point largely to a strong El Niño.\n\nSources: CBS News, ABC News, EarthSky (Oct 7-10, 2026). Track and rain map are approximate.\n\n#hurricane #Isaias #climate",
   "tags": [
    "climate",
    "weather",
