@@ -1,8 +1,16 @@
-Desk `economy` (@ECONOMY4YOU) is NOT LIVE YET — its engine scenes and DESK.md are still being built.
+Daily production run for the YouTube channel @ECONOMY4YOU — desk `economy` (owner: Jakob Mösslacher, Vienna — write your report to him in German; the videos themselves are in English).
 
-Do not research, write, render, push or schedule anything. Do not create or edit any file.
+1. Get today's date and time with `TZ=Europe/Vienna date`. If today is Saturday or Sunday, produce nothing and finish with the one-line German report "ECONOMY4YOU: Wochenende, kein Sendetag." The repository moesslacherjakob-commits/GEOPOLITICS is already cloned for you (find it with `git rev-parse --show-toplevel`; if it is missing, clone https://github.com/moesslacherjakob-commits/GEOPOLITICS). Work in that folder on the main branch. Run `./setup.sh` — it must end with "setup: all good"; fix install problems yourself. Then read desks/PLAYBOOK.md, desks/economy/DESK.md, desks/economy/config.json, STORY_FORMAT.md and desks/economy/log.md.
 
-Only do this: run `TZ=Europe/Vienna date`, then finish with this one-line German report to Jakob as your final message (also via SendUserMessage if that tool exists):
-"@ECONOMY4YOU ist noch nicht live – heute wurde nichts produziert."
+2. Follow desks/PLAYBOOK.md step by step with desk = economy to produce today's Short:
+   - pick the biggest market move of the last 24 hours that can be explained as cause and effect, as DESK.md describes (supported by at least 2 independent major outlets, not a repeat of the last two entries in desks/economy/log.md unless there is a major new development);
+   - research it, write the narration script (≤150 words, written for the ear, neutral, every claim attributed, exact numbers with timestamps, no investment advice, no predictions) and the story JSON in desks/economy/stories/ including the thumbnail block; draw a chart only with real data points as DESK.md requires;
+   - run the QA stills loop and actually look at the contact sheet and the thumbnail; fix overlaps and unreadable details;
+   - run make.sh in the background and poll the log (never in the foreground — tool calls time out after 10 minutes). It generates the ElevenLabs voiceover first (the key comes from this environment's network secret — never ask for or print it); if the voice fails it renders captions-only and you must say so in the report;
+   - verify the MP4 (70–78 s, <30 MB, voice present, look at 3 extracted frames);
+   - push video + thumbnail to the media-economy branch (never to media), schedule it in Metricool exactly as the playbook says (YouTube only; blogId, postTime, youtubeCategory, autoPublish and thumbnail settings from desks/economy/config.json; if the thumbnail is rejected with VIDEO_THUMBNAIL_NOT_APPLICABLE, schedule again without it);
+   - append the episode to desks/economy/log.md, commit only files in desks/economy/, `git pull --rebase origin main`, then push to main (not to a claude/ branch).
 
-(This file is replaced with the real daily-run prompt when the desk goes live.)
+3. You run unattended: make reasonable decisions yourself and note them in the report. Never publish to any network other than YouTube and never to another channel's Metricool brand. Never change autoPublish. Never edit files outside desks/economy/ (the root files belong to the live @GEOPOLITICS4YOU routine). If you can't confirm a story with two independent sources, take the next candidate. If something breaks that you can't fix (render error, Metricool error, repo access), do not schedule anything — report what happened instead.
+
+4. Finish with a short German report to Jakob as your final message (also via SendUserMessage if that tool exists): channel, topic and why it won, video title, the three key facts, sources, anything flagged as uncertain, whether voice and thumbnail made it, and the Metricool planner link.

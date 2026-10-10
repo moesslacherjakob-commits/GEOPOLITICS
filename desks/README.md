@@ -4,9 +4,9 @@ One repo, one engine, one folder per channel. @GEOPOLITICS4YOU still runs from t
 
 | desk | channel | Metricool blogId | post (Vienna) | days | media branch | status |
 |---|---|---|---|---|---|---|
-| `climate` | @CLIMATE4YOU | 7344931 | 20:30 | daily | `media-climate` | ready — engine layers `track` + `field`, `DESK.md`, `ROUTINE_PROMPT.md` |
-| `economy` | @ECONOMY4YOU | 7344911 | 14:45 | weekdays | `media-economy` | config only — needs `chart`, `ticker`, `chain` scenes, a tested market-data source and `DESK.md` |
-| `scitech` | @SCITECH4YOU | 7344936 | 17:00 | daily | `media-scitech` | config only — needs `flow`, `timeline`, `scale` scenes and `DESK.md` |
+| `climate` | @CLIMATE4YOU | 7344931 | 20:30 | daily | `media-climate` | live — map layers `track` + `field`, `DESK.md`, `ROUTINE_PROMPT.md` (routine daily 18:30) |
+| `economy` | @ECONOMY4YOU | 7344911 | 14:45 | weekdays | `media-economy` | live — overlays `ticker`, `chart`, `chain`, `DESK.md`, `ROUTINE_PROMPT.md` (routine Mon–Fri 12:45) |
+| `scitech` | @SCITECH4YOU | 7344936 | 17:00 | daily | `media-scitech` | live — overlays `flow`, `timeline`, `scale`, `DESK.md`, `ROUTINE_PROMPT.md` (routine daily 14:55) |
 
 All desks publish automatically (`autoPublish: true`, Jakob's decision 2026-10-10).
 
@@ -17,4 +17,4 @@ All desks publish automatically (`autoPublish: true`, Jakob's decision 2026-10-1
 - `stories/`, `log.md`
 
 ## Routine
-Create one routine per desk on claude.ai/code/routines: environment **Default** (it holds the ElevenLabs network secret), repo GEOPOLITICS, connector Metricool only, prompt = the desk's `ROUTINE_PROMPT.md`, schedule two hours before the post time (climate: daily 18:30 Vienna). Stagger desks so no two runs push at the same time.
+All three routines exist (created 2026-10-10). Their prompt only points to the desk's `ROUTINE_PROMPT.md`, so the daily run is changed in the repo, not in the routine. To add a desk: create one routine per desk on claude.ai/code/routines: environment **Default** (it holds the ElevenLabs network secret), repo GEOPOLITICS, connector Metricool only, prompt = the desk's `ROUTINE_PROMPT.md`, schedule two hours before the post time (climate: daily 18:30 Vienna). Stagger desks so no two runs push at the same time.
