@@ -1,0 +1,440 @@
+{
+ "id": "2026-10-10-beyond-hormuz",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Iran's navy now says it will chase ships far beyond the Strait of Hormuz."
+  },
+  {
+   "id": "f1",
+   "text": "On Friday, Iran's Revolutionary Guard said it hit a gas tanker, the Sunshine. Its navy says the ship tried an unauthorized route south of the strait. The Guard claims a fire disabled the engine room. Shipping sources name a different vessel, so details are unclear."
+  },
+  {
+   "id": "f2",
+   "text": "Then came a warning. The Guard says any ship on such routes will be pursued and punished anywhere in the region. Earlier this week, two vessels were hit within a day, one off Qatar and one in the Gulf of Oman. Nobody claimed those attacks."
+  },
+  {
+   "id": "f3",
+   "text": "Reuters, citing three maritime security sources, counts at least twelve attacks or harassment cases around Hormuz in one week. That is the highest weekly total since the war began on February 28. Euronews says the strait has been effectively closed since."
+  },
+  {
+   "id": "cta",
+   "text": "Follow for the next update."
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE STRIKE",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE WARNING",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE TALLY",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "oil"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 30,
+     "lat": 22,
+     "R": 360
+    },
+    {
+     "at": 3.2,
+     "lon": 56,
+     "lat": 26,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "BREAKING · OCT 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "IRN",
+     "color": "danger",
+     "at": "hook:Iran's"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Strait of Hormuz",
+     "color": "danger",
+     "at": "hook:Hormuz.",
+     "label": "HORMUZ",
+     "sub": "CLOSED SINCE FEB",
+     "dx": -30,
+     "dy": 120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:beyond",
+    "lines": [
+     [
+      "BEYOND",
+      "text",
+      120
+     ],
+     [
+      "HORMUZ",
+      "danger",
+      150
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    55,
+    25.5
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 56,
+     "lat": 26,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.5",
+     "lon": 56.6,
+     "lat": 25.9,
+     "dist": 22,
+     "pitch": 48,
+     "yaw": -8,
+     "oy": 170
+    },
+    {
+     "at": "f1:Sunshine. +0.3",
+     "lon": 56.8,
+     "lat": 25.5,
+     "dist": 18,
+     "pitch": 52,
+     "yaw": -4,
+     "oy": 170
+    },
+    {
+     "at": "f1:Shipping",
+     "lon": 56.4,
+     "lat": 25.8,
+     "dist": 30,
+     "pitch": 50,
+     "yaw": 6,
+     "oy": 170
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": 55,
+     "lat": 25.5,
+     "dist": 60,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 150
+    },
+    {
+     "at": "f2:Earlier +0.3",
+     "lon": 53.8,
+     "lat": 25.4,
+     "dist": 62,
+     "pitch": 50,
+     "yaw": 8,
+     "oy": 170
+    },
+    {
+     "at": "f2:Nobody",
+     "lon": 53.8,
+     "lat": 25.4,
+     "dist": 60,
+     "pitch": 52,
+     "yaw": 10,
+     "oy": 170
+    },
+    {
+     "at": "f3 +0.5",
+     "lon": 55.5,
+     "lat": 25.6,
+     "dist": 70,
+     "pitch": 50,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "cta",
+     "lon": 55,
+     "lat": 25,
+     "dist": 92,
+     "pitch": 58,
+     "yaw": 20,
+     "oy": 240
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "IRN",
+     "color": "danger",
+     "alpha": 0.4,
+     "at": "hook$ +0.4",
+     "until": "f3 +2"
+    },
+    {
+     "kind": "marker",
+     "loc": "Strait of Hormuz",
+     "style": "x",
+     "color": "danger",
+     "at": "f1 +0.2",
+     "until": "f3 +2",
+     "label": {
+      "text": "STRAIT OF HORMUZ",
+      "dx": -30,
+      "dy": -70,
+      "until": "f1:Sunshine."
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      56.7,
+      25.6
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Sunshine.",
+     "until": "f2:Then",
+     "label": {
+      "text": "NV SUNSHINE",
+      "sub": "IRGC CLAIM · POSITION APPROX.",
+      "dx": 60,
+      "dy": 80,
+      "until": "f2:Then"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      56.4,
+      25.15
+     ],
+     "style": "pulse",
+     "color": "oil",
+     "at": "f2:Gulf",
+     "until": "f3 +1",
+     "label": {
+      "text": "GULF OF OMAN",
+      "sub": "UNCLAIMED · OCT 8",
+      "dx": 70,
+      "dy": 70,
+      "until": "f2:Nobody +1"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      51.9,
+      26.0
+     ],
+     "style": "pulse",
+     "color": "oil",
+     "at": "f2:Qatar",
+     "until": "f3 +1",
+     "label": {
+      "text": "OFF QATAR",
+      "sub": "UNCLAIMED · OCT 8",
+      "dx": -60,
+      "dy": -90,
+      "until": "f2:Nobody +1"
+     }
+    },
+    {
+     "kind": "tag",
+     "loc": "Tehran",
+     "on": "IRN",
+     "text": "IRGC NAVY",
+     "sub": "\"PURSUED ANYWHERE\"",
+     "color": "danger",
+     "at": "f2:pursued",
+     "until": "f2:Earlier",
+     "dx": -40,
+     "dy": -60,
+     "size": 28
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "from": "f2:pursued -0.3",
+   "to": "f2:Earlier -0.2",
+   "at": "f2:pursued",
+   "color": "danger",
+   "lines": [
+    [
+     "PURSUED AND",
+     "text"
+    ],
+    [
+     "PUNISHED",
+     "danger"
+    ],
+    [
+     "ANYWHERE IN THE REGION",
+     "text"
+    ]
+   ],
+   "by": "IRAN'S REVOLUTIONARY GUARD NAVY"
+  },
+  {
+   "type": "counter",
+   "from": "f3 -0.1",
+   "to": "cta -0.2",
+   "label": "ATTACKS & HARASSMENT CASES",
+   "sublabel": "AROUND HORMUZ · SEP 28 – OCT 5",
+   "icon": "ship",
+   "color": "danger",
+   "value": 12,
+   "start": 0,
+   "prefix": "",
+   "doneSuffix": "+",
+   "decimals": 0,
+   "at": "f3:twelve -0.3",
+   "doneAt": "f3:twelve +0.4",
+   "note": "HIGHEST WEEKLY TOTAL SINCE THE WAR BEGAN",
+   "source": "SOURCE: REUTERS, 3 MARITIME SECURITY SOURCES"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 70,
+     "lat": 20,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 58,
+     "lat": 24,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": 52,
+     "lat": 24,
+     "R": 470
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "IRN",
+     "color": "danger",
+     "alpha": 0.8
+    },
+    {
+     "iso": "QAT",
+     "color": "oil"
+    },
+    {
+     "iso": "ARE",
+     "color": "oil"
+    },
+    {
+     "iso": "OMN",
+     "color": "oil"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Strait of Hormuz",
+     "color": "danger"
+    },
+    {
+     "loc": [
+      56.4,
+      25.15
+     ],
+     "color": "oil"
+    },
+    {
+     "loc": [
+      51.9,
+      26.0
+     ],
+     "color": "oil"
+    }
+   ],
+   "lines": [
+    [
+     "THE THREAT NOW",
+     "text"
+    ],
+    [
+     "REACHES BEYOND HORMUZ.",
+     "danger"
+    ]
+   ],
+   "sources": [
+    "AS REPORTED BY REUTERS, EURONEWS, UKMTO, IRGC STATEMENTS",
+    "OCT 8–9, 2026 · VESSEL DETAILS UNCONFIRMED"
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Iran Says Its Reach Now Goes Beyond Hormuz #shorts",
+  "description": "Iran's Revolutionary Guard says it struck a gas tanker on an \"unauthorized\" route south of Hormuz and warns that ships will be pursued anywhere in the region. Reuters counts at least 12 attacks or harassment cases around the strait in one week. Details of the vessels are unconfirmed.\n\nSources: Reuters, Euronews, UKMTO, IRGC statements via Tehran Times and The New Arab (Oct 8-9, 2026).",
+  "tags": [
+   "geopolitics",
+   "Iran",
+   "Strait of Hormuz",
+   "IRGC",
+   "tanker attack",
+   "oil",
+   "Persian Gulf",
+   "Gulf of Oman",
+   "Middle East",
+   "news"
+  ],
+  "cover": "hook:beyond +0.4"
+ },
+ "thumbnail": {
+  "at": "f2:Earlier +1.2",
+  "kicker": "IRAN · HORMUZ",
+  "kickerColor": "danger",
+  "lines": [
+   [
+    "BEYOND",
+    "text"
+   ],
+   [
+    "HORMUZ",
+    "danger"
+   ]
+  ]
+ }
+}
