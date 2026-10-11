@@ -5,7 +5,7 @@ You are producing today's 60-second geopolitics Short end to end. Work unattende
 ## 0. Setup (2–5 min)
 1. Repo: when this runs as a routine on claude.ai/code the repo is already cloned in the working directory — use it (`git rev-parse --show-toplevel`). Otherwise attach it with `add_repo` → `moesslacherjakob-commits/geopolitics` (access `push`) and `git clone --depth 1 https://github.com/moesslacherjakob-commits/geopolitics` (10-min timeout). Work on `main`. If `git config user.email` is empty, set `git config user.name "GEOPOLITICS4YOU bot"` and `git config user.email "bot@geopolitics4you.invalid"`.
 2. `./setup.sh` — installs ffmpeg, numpy/scipy/pillow and the node packages if the machine lacks them and must end with `setup: all good`. Fix install problems yourself (apt, pip and npm are reachable).
-3. Read `config.json`, `STORY_FORMAT.md`, and `log.md` (what was covered on previous days).
+3. Read `config.json`, `STORY_FORMAT.md`, `ENGAGEMENT.md` (hook, CTA, title, thumbnail = first frame), and `log.md` (what was covered on previous days).
 4. Voice: the ElevenLabs key comes from the cloud environment's network secret for `api.elevenlabs.io` (it is attached by the proxy; you never see it). Never ask for, print or store a key. The key is restricted to Text-to-Speech, so `/v1/user/*` endpoints return 401 — that is expected and not an error.
 
 ## 1. Pick the story (10 min)
@@ -21,18 +21,20 @@ You are producing today's 60-second geopolitics Short end to end. Work unattende
 - Background knowledge (history, geography) is fine if stable and uncontroversial.
 
 ## 3. Script (English, ≤ 150 words)
-`hook` (≤ 20 words: the twist, no throat-clearing) → `f1`, `f2`, `f3` (one fact block each, ~35–45 words) → `cta`: "Follow for the next update."
+`hook` (≤ 14 words: stakes + an open question, see `ENGAGEMENT.md`) → `f1`, `f2`, `f3` (one fact block each, ~35–45 words, answer the hook's question in f2/f3) → `cta`: a neutral yes/no question about what happens next ("…? Yes or no?").
+- **Follow `ENGAGEMENT.md`** for hook, CTA, title and thumbnail — it is the reason people stop swiping.
 - The video is narrated: write for the ear — short sentences, numbers as people say them, no parentheses or slashes. Pacing is calm (~125 wpm), so a 145-word script runs ~73 s; videos are 70–78 s.
 - Abbreviations the voice must spell (US, UN, IEA …) go in `config.json → voice.say`; add new ones there if needed.
 - Plain, neutral, attributed. No opinions, no loaded labels, no invented quotes, numbers exactly as sourced. Paraphrase — never copy article sentences.
 - Check: `node engine/engine.mjs stories/<id>.json check` → no WARNING (speech must end before ~75 s).
 
 ## 4. Storyboard
-Write `stories/<YYYY-MM-DD>-<slug>.json` following `STORY_FORMAT.md` (copy the closest example and adapt).
+Write `stories/<YYYY-MM-DD>-<slug>.json` following `STORY_FORMAT.md` (copy the closest example and adapt — but write hook, CTA and thumbnail fresh per `ENGAGEMENT.md`; older stories use the old style).
 - Globe hook → 3D map (camera moves per fact) → optional data overlay (quote/counter/bars/gauge/facts) when the story has hard numbers → end globe with two punchlines.
 - Vary the look day to day (different scene mixes, colours, overlays) — YouTube demonetises repetitive template content.
 - Every on-screen number/claim needs a source line or label.
-- Add a `thumbnail` block: `at` (a strong map moment, not the hook), `kicker` (2–3 words, e.g. region or conflict), `lines` (2–3 punchy lines, ≤ 3 words each, one line in an accent colour). Check it with `node engine/engine.mjs stories/<id>.json thumb /tmp/qa/thumb.jpg` and look at it.
+- Globe `headline`: anchor it on the 3rd–5th hook word so it lands within ~2.5 s.
+- Add a `thumbnail` block per `ENGAGEMENT.md` §6: `at` (strong map moment), `focus` (the sharp motif), `number` (if the story has one) + `source`, `lines` (1–2 lines, ≤ 3 words, adding to the title — never repeating it). **It is also the first second of the video** (opener). Check: `node engine/engine.mjs stories/<id>.json thumb /tmp/qa/thumb.jpg`, look at it at small size, and include `0,0.5,1.2,2.5` in the QA stills.
 
 ## 5. QA loop (max 3 rounds)
 `node engine/engine.mjs stories/<id>.json stills /tmp/qa <~12 times across the video>` then `python3 tools/sheet.py /tmp/qa/sheet.png /tmp/qa/still_*.png` and **look at the sheet**. Fix: overlapping labels, text in caption zone (y 1240–1400) or under the right-hand buttons, things too small to read, empty frames, wrong countries highlighted. Zoom the camera in when a detail is too small.

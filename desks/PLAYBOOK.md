@@ -12,7 +12,7 @@ Everything desk-specific lives in `desks/<desk>/`:
 ## 0. Setup (2–5 min)
 1. Repo: when this runs as a routine the repo is already cloned in the working directory (`git rev-parse --show-toplevel`). Work on `main`. If `git config user.email` is empty, set `git config user.name "4YOU bot"` and `git config user.email "bot@geopolitics4you.invalid"`.
 2. `./setup.sh` — must end with `setup: all good`. Fix install problems yourself (apt, pip and npm are reachable).
-3. Read `desks/<desk>/config.json`, `desks/<desk>/DESK.md`, `STORY_FORMAT.md` and `desks/<desk>/log.md`.
+3. Read `desks/<desk>/config.json`, `desks/<desk>/DESK.md`, `STORY_FORMAT.md`, `ENGAGEMENT.md` (hook, CTA, title, thumbnail = first frame) and `desks/<desk>/log.md`.
 4. Check `days` in the config: `weekdays` means Monday–Friday (Europe/Vienna). On other days produce nothing and report "kein Sendetag".
 5. Voice: the ElevenLabs key comes from the cloud environment's network secret for `api.elevenlabs.io` (attached by the proxy; you never see it). Never ask for, print or store a key. `/v1/user/*` returns 401 by design.
 
@@ -30,17 +30,19 @@ Follow `DESK.md`: its sources, its scoring and its rules. Always:
 - Mark unverified items as claims. Background knowledge (how El Niño works, what a central bank does) is fine when it is stable and uncontroversial.
 
 ## 3. Script (English, ≤ 150 words)
-`hook` (≤ 20 words, the twist) → `f1`, `f2`, `f3` (one fact block each, ~35–45 words) → `cta`: "Follow for the next update."
+`hook` (≤ 14 words: stakes + an open question, see `ENGAGEMENT.md` in the repo root) → `f1`, `f2`, `f3` (one fact block each, ~35–45 words, answer the hook's question in f2/f3) → `cta`: a neutral yes/no question about what happens next ("…? Yes or no?").
+- **Follow `ENGAGEMENT.md`** for hook, CTA, title and thumbnail — it is the reason people stop swiping. Desk rules still apply (no forecasts, no investment or medical advice — the CTA asks about outcomes, never about what the viewer should buy, take or do).
 - Written for the ear: short sentences, numbers as people say them, no parentheses or slashes. Calm pace (~125 wpm): ~145 words ≈ 73 s; videos run 70–78 s.
 - Abbreviations the voice must spell go into `desks/<desk>/config.json → voice.say`.
 - Plain, neutral, attributed. No opinions, no invented quotes, numbers exactly as sourced. Paraphrase — never copy article sentences.
 - `node engine/engine.mjs desks/<desk>/stories/<id>.json check` → no WARNING.
 
 ## 4. Storyboard
-Write `desks/<desk>/stories/<YYYY-MM-DD>-<slug>.json` following `STORY_FORMAT.md` and the visual grammar in `DESK.md` (copy the desk's latest story and adapt it).
+Write `desks/<desk>/stories/<YYYY-MM-DD>-<slug>.json` following `STORY_FORMAT.md` and the visual grammar in `DESK.md` (copy the desk's latest story and adapt it — but write hook, CTA and thumbnail fresh per `ENGAGEMENT.md`; older stories use the old style).
 - Vary the look day to day (scene mix, camera, overlays) — YouTube demonetises repetitive template content.
 - Every on-screen number/claim needs a source line or label; approximate geometry (tracks, areas) is labelled "approximate"/"illustrative".
-- `thumbnail` block: `at` (a strong map/chart moment, not the hook), `kicker` (2–3 words), `lines` (2–3 punchy lines, ≤ 3 words each, one in `accent`). Check with `node engine/engine.mjs desks/<desk>/stories/<id>.json thumb /tmp/qa/thumb.jpg` and look at it.
+- Globe `headline` (if the hook uses one): anchor it on the 3rd–5th hook word so it lands within ~2.5 s.
+- `thumbnail` block per `ENGAGEMENT.md` §6: `at` (strong map/chart moment), `focus` (the sharp motif — storm track, heat field, launch site; for a chart/ticker motif add `"overlays": true` and `focus: {x, y}`), `number` (if the story has one) + `source`, `lines` (1–2 lines, ≤ 3 words, adding to the title — never repeating it). **It is also the first second of the video** (opener). Check with `node engine/engine.mjs desks/<desk>/stories/<id>.json thumb /tmp/qa/thumb.jpg`, look at it at small size, and include `0,0.5,1.2,2.5` in the QA stills.
 
 ## 5. QA loop (max 3 rounds)
 `node engine/engine.mjs desks/<desk>/stories/<id>.json stills /tmp/qa <~12 times>` then `python3 tools/sheet.py /tmp/qa/sheet.png /tmp/qa/still_*.png` and **look at the sheet**. Fix overlapping labels, text in the caption zone (y 1240–1400) or under the right-hand buttons (x > 960 from y ≈ 900), details too small to read, empty frames, wrong places.

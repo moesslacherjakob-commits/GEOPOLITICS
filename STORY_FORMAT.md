@@ -15,7 +15,7 @@ Two full examples: `stories/2026-10-09-second-front.json` (Gulf / oil) and `stor
 | `scenes` | ordered list of scenes (below) |
 | `theme` | optional colour overrides |
 | `upload` | `{title, description, tags[], cover}` → `out/<id>/upload.json` |
-| `thumbnail` | `{at, kicker, kickerColor, lines: [[text, color]]}` → `out/<id>/thumb.jpg` (designed 9:16 thumbnail; text kept inside the central 3:2 band YouTube shows everywhere) |
+| `thumbnail` | `{at, focus?, zoom?, number?, numberColor?, lines: [[text, color]], source?, kicker?, kickerColor?, overlays?, opener?, openerDur?}` → `out/<id>/thumb.jpg` **and the first ~1 s of the video** (opener, then zooms into the hook). Background = the frame at `at`, sharp, without info boxes/overlays (unless `overlays: true`); `focus` (location or `{x,y}` screen point) is zoomed in (`zoom`, default 1.2) and placed above the text. Everything important stays inside the central 3:2 band (y 600–1320). Rules: `ENGAGEMENT.md` §6 |
 
 Keep the script **≤ 150 words** so speech ends before ~75 s (videos run 70–78 s). `node engine/engine.mjs <story> check` prints timing and warns if too long.
 
