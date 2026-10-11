@@ -9,6 +9,9 @@ Story selection and facts come from newspapers, wire services and TV broadcaster
 
 Search queries with today's date, e.g. "science news <Month D, YYYY>", "study Nature <date>", "NASA <date>", "launch <date>", "AI <date> Reuters", "tech antitrust <date>".
 
+## Source rule (relaxed on 2026-10-11 by Jakob)
+The "≥ 2 independent outlets" rule is met by **2 independent sources, which may be trade/specialist media or primary sources** (journal paper or press release, NASA/ESA/agency page, company or regulator statement) — not only the big newspapers. Company or press-release claims stay labelled as claims. If article pages cannot be fetched (network policy; Reuters/AP/BBC/Guardian/NYT block crawlers), facts from search-result text of ≥ 2 independent sources are acceptable if they agree on every number used; say in the report that only snippets were available.
+
 ## How to pick
 The most-covered science or technology story of the last 24 h. Score on: number of major outlets covering it · genuinely new (a result, launch, decision, record) · global significance · can it be explained visually (mechanism, scale, timeline, map) in about a minute.
 Typical winners: a major study in a top journal · space missions (launches, landings, discoveries) · Nobel and other major prizes · AI and chip breakthroughs or regulation · big-tech antitrust rulings and deals · medical breakthroughs (approved, not hyped) · energy technology (batteries, fusion milestones) · major cyber incidents.

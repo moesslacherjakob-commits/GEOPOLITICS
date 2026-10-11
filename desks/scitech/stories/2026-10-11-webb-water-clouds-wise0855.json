@@ -1,0 +1,288 @@
+{
+ "id": "2026-10-11-webb-water-clouds-wise0855",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Water clouds, on a frozen world seven light-years away. Do they change?"
+  },
+  {
+   "id": "f1",
+   "text": "Astronomers pointed the James Webb Space Telescope at WISE 0855, a brown dwarf roughly seven light-years from Earth. That is an object bigger than a planet but too small to be a star. Reports call it the coldest of its kind known, about minus eight degrees Celsius."
+  },
+  {
+   "id": "f2",
+   "text": "Webb recorded its light every fifteen minutes for eleven hours. The team, led by Brittany Miles of the University of Arizona, reports high clouds of water that grow thinner and thicker as the object spins. Heat from inside also seems to push gases upward."
+  },
+  {
+   "id": "f3",
+   "text": "Miles says it is the first confirmation of changing water clouds on a nearby world. One caveat: this is a preprint, not yet peer-reviewed. News reports say a journal has accepted it."
+  },
+  {
+   "id": "cta",
+   "text": "Will Webb find changing clouds on an Earth-sized planet next? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE TARGET",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE FINDING",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "THE CAVEAT",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": -60,
+     "lat": 20,
+     "R": 360
+    },
+    {
+     "at": 4.5,
+     "lon": -110.9,
+     "lat": 32.2,
+     "R": 520
+    }
+   ],
+   "chip": {
+    "text": "JAMES WEBB SPACE TELESCOPE",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      -110.95,
+      32.25
+     ],
+     "color": "accent",
+     "at": "hook:frozen",
+     "label": "UNIV. OF ARIZONA",
+     "sub": "STEWARD OBSERVATORY · LEAD TEAM",
+     "dx": -30,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:clouds,",
+    "lines": [
+     [
+      "WATER CLOUDS",
+      "text",
+      120
+     ],
+     [
+      "7 LIGHT-YEARS AWAY",
+      "accent",
+      100
+     ]
+    ]
+   }
+  },
+  {
+   "type": "facts",
+   "from": "f1 -0.1",
+   "to": "f2 -0.15",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "eye",
+     "big": "WISE 0855",
+     "text": "BROWN DWARF · ROUGHLY 7 LIGHT-YEARS FROM EARTH",
+     "color": "accent",
+     "at": "f1:Astronomers"
+    },
+    {
+     "icon": "chip",
+     "big": "JWST NIRSPEC",
+     "text": "WEBB SPACE TELESCOPE · NEAR-INFRARED SPECTRA",
+     "color": "violet",
+     "at": "f1:James"
+    },
+    {
+     "icon": "thermo",
+     "big": "ABOUT −8 °C",
+     "text": "COLDEST OF ITS KIND KNOWN · PER NEWS REPORTS",
+     "color": "info",
+     "at": "f1:coldest"
+    }
+   ],
+   "source": "SOURCES: PHYS.ORG, SCI.NEWS · ARXIV PREPRINT (MILES ET AL.)"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "HOW WEBB SPOTTED CHANGING CLOUDS",
+   "color": "violet",
+   "steps": [
+    {
+     "icon": "eye",
+     "title": "WEBB WATCHES",
+     "sub": "ONE SPECTRUM EVERY 15 MINUTES",
+     "color": "violet",
+     "at": "f2:Webb"
+    },
+    {
+     "icon": "chip",
+     "title": "11 HOURS OF DATA",
+     "sub": "THE OBJECT SPINS AROUND",
+     "color": "info",
+     "at": "f2:eleven"
+    },
+    {
+     "icon": "drop",
+     "title": "WATER CLOUDS THICKEN",
+     "sub": "THEN THIN OUT AGAIN",
+     "color": "ok",
+     "at": "f2:reports"
+    }
+   ],
+   "source": "SOURCES: ARXIV PREPRINT (MILES ET AL.) · PHYS.ORG · SCI.NEWS"
+  },
+  {
+   "type": "quote",
+   "from": "f3 -0.1",
+   "to": "f3:One -0.2",
+   "at": "f3:first -0.4",
+   "color": "accent",
+   "lines": [
+    [
+     "\"FIRST TIME\" CHANGING",
+     "text"
+    ],
+    [
+     "WATER CLOUDS CONFIRMED",
+     "accent"
+    ]
+   ],
+   "by": "BRITTANY MILES, UNIV. OF ARIZONA, VIA NEWS REPORTS"
+  },
+  {
+   "type": "facts",
+   "from": "f3:One -0.2",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "flag",
+     "big": "PREPRINT",
+     "text": "NOT YET PEER-REVIEWED",
+     "color": "danger",
+     "at": "f3:One"
+    },
+    {
+     "icon": "check",
+     "big": "ACCEPTED, REPORTS SAY",
+     "text": "THE ASTROPHYSICAL JOURNAL · NOT INDEPENDENTLY CHECKED",
+     "color": "info",
+     "at": "f3:News"
+    }
+   ],
+   "source": "SOURCES: ARXIV 2609.20664 · PHYS.ORG · SCI.NEWS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -60,
+     "lat": 20,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -110.9,
+     "lat": 32.2,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": -125,
+     "lat": 30,
+     "R": 470
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -110.95,
+      32.25
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "WEATHER ON A WORLD",
+     "text"
+    ],
+    [
+     "SEVEN LIGHT-YEARS AWAY.",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AS REPORTED BY PHYS.ORG AND SCI.NEWS · ARXIV PREPRINT 2609.20664",
+    "PREPRINT · NOT YET PEER-REVIEWED"
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Webb Sees Water Clouds Changing on a Frozen World #shorts",
+  "description": "The James Webb Space Telescope recorded changing water clouds on WISE 0855, a very cold brown dwarf roughly seven light-years away. A team led by Brittany Miles of the University of Arizona reports clouds that thicken and thin as the object rotates. The work is a preprint, not yet peer-reviewed; news reports say it has been accepted by The Astrophysical Journal.\n\nSources: Phys.org, Sci.News (Oct 2026); arXiv preprint 2609.20664 (Miles et al.).\n\n#science #space #JWST",
+  "tags": [
+   "science",
+   "space",
+   "James Webb",
+   "JWST",
+   "brown dwarf",
+   "WISE 0855",
+   "astronomy",
+   "exoplanets",
+   "news"
+  ],
+  "cover": "hook:clouds, +0.4"
+ },
+ "thumbnail": {
+  "at": "f2:spins. +0.3",
+  "overlays": true,
+  "focus": {
+   "x": 540,
+   "y": 900
+  },
+  "lines": [
+   [
+    "7 LIGHT-YEARS AWAY",
+    "text"
+   ],
+   [
+    "WEATHER REPORT",
+    "accent"
+   ]
+  ],
+  "source": "WISE 0855 · PER ARXIV PREPRINT · PHYS.ORG"
+ }
+}
