@@ -1,0 +1,583 @@
+{
+ "id": "2026-10-11-isaias-aftermath",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A foot of rain and four deaths. What did Isaias leave behind?"
+  },
+  {
+   "id": "f1",
+   "text": "Isaias came ashore near Destin, Florida, on Friday night as a Category 2 hurricane. Within hours it weakened to a post-tropical cyclone, but the damage was done. Fox Weather reports at least four deaths in Florida and Alabama."
+  },
+  {
+   "id": "f2",
+   "text": "Falling trees killed two people in Alabama and one in Florida, local authorities said. Another man died from generator fumes in his garage. Reports say nearly 396,000 customers across the Florida Panhandle and southern Alabama were still without power early Sunday."
+  },
+  {
+   "id": "f3",
+   "text": "Rain was the other blow. Gauges recorded almost thirteen inches in Bellwood, Alabama, and more than twelve in parts of Florida. A flash flood emergency covered Destin and Fort Walton Beach. The storm has since moved north toward the Appalachians."
+  },
+  {
+   "id": "cta",
+   "text": "Will the death toll rise in the coming days? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE LANDFALL",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE TOLL",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE FLOODS",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -60,
+     "lat": 18,
+     "R": 360
+    },
+    {
+     "at": 3.4,
+     "lon": -89,
+     "lat": 26,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "HURRICANE ISAIAS \u00b7 AFTERMATH",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "USA",
+     "color": "accent",
+     "at": "hook:rain",
+     "alpha": 0.45
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -86.5,
+      30.4
+     ],
+     "color": "danger",
+     "at": "hook:deaths.",
+     "label": "DESTIN, FL",
+     "sub": "LANDFALL OCT 9",
+     "dx": 40,
+     "dy": -110,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:rain",
+    "lines": [
+     [
+      "A FOOT OF RAIN",
+      "text",
+      104
+     ],
+     [
+      "4 DEAD",
+      "danger",
+      150
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -89,
+    26
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -89,
+     "lat": 26,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": -88,
+     "lat": 28.5,
+     "dist": 24,
+     "pitch": 48,
+     "yaw": -6,
+     "oy": 150
+    },
+    {
+     "at": "f1:Destin,",
+     "lon": -86.6,
+     "lat": 29.8,
+     "dist": 18,
+     "pitch": 52,
+     "yaw": 4,
+     "oy": 160
+    },
+    {
+     "at": "f1:Within",
+     "lon": -86.6,
+     "lat": 31.2,
+     "dist": 22,
+     "pitch": 52,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": -86.6,
+     "lat": 31.8,
+     "dist": 24,
+     "pitch": 50,
+     "yaw": -4,
+     "oy": 170
+    },
+    {
+     "at": "f2:generator",
+     "lon": -87.2,
+     "lat": 30.8,
+     "dist": 14,
+     "pitch": 54,
+     "yaw": 4,
+     "oy": 170
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": -86.2,
+     "lat": 31.0,
+     "dist": 20,
+     "pitch": 52,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "f3:Destin",
+     "lon": -86.5,
+     "lat": 30.4,
+     "dist": 13,
+     "pitch": 54,
+     "yaw": 4,
+     "oy": 170
+    },
+    {
+     "at": "f3:moved",
+     "lon": -86.5,
+     "lat": 34,
+     "dist": 40,
+     "pitch": 48,
+     "yaw": 0,
+     "oy": 160
+    },
+    {
+     "at": "cta",
+     "lon": -86.5,
+     "lat": 33,
+     "dist": 46,
+     "pitch": 44,
+     "yaw": 4,
+     "oy": 120
+    }
+   ],
+   "layers": [
+    {
+     "kind": "track",
+     "at": "hook$",
+     "until": "cta +0.6",
+     "color": "storm",
+     "name": "ISAIAS",
+     "sub": "LANDFALL NEAR DESTIN, FL \u00b7 CAT 2",
+     "forecast": 5,
+     "now": 4,
+     "cone": false,
+     "points": [
+      {
+       "loc": [
+        -94.6,
+        21.6
+       ],
+       "cat": "TS",
+       "label": "FORMS \u00b7 OCT 7",
+       "dx": 18,
+       "dy": 30,
+       "until": "f1 +0.5"
+      },
+      {
+       "loc": [
+        -92.6,
+        23.3
+       ],
+       "cat": 1,
+       "label": "HURRICANE \u00b7 OCT 7",
+       "dx": 20,
+       "dy": 8,
+       "big": true,
+       "until": "f1 +0.5"
+      },
+      {
+       "loc": [
+        -89.8,
+        25.3
+       ],
+       "cat": 2
+      },
+      {
+       "loc": [
+        -87.3,
+        26.9
+       ],
+       "cat": 3,
+       "label": "CAT 3 \u00b7 OCT 9",
+       "dx": 22,
+       "dy": 8,
+       "big": true,
+       "until": "f1 +0.5"
+      },
+      {
+       "loc": [
+        -86.5,
+        30.4
+       ],
+       "cat": 2,
+       "label": "LANDFALL \u00b7 CAT 2",
+       "dx": 22,
+       "dy": -30
+      },
+      {
+       "loc": [
+        -86.7,
+        31.5
+       ],
+       "cat": "EX",
+       "label": "POST-TROPICAL",
+       "dx": 22,
+       "dy": 8
+      },
+      {
+       "loc": [
+        -86.6,
+        33.6
+       ],
+       "cat": "EX"
+      },
+      {
+       "loc": [
+        -85.9,
+        35.4
+       ],
+       "cat": "EX",
+       "label": "MOVING NORTH \u00b7 APPROX.",
+       "dx": 18,
+       "dy": 8
+      }
+     ],
+     "steps": [
+      {
+       "at": "hook +0.3",
+       "to": 3,
+       "dur": 2.2
+      },
+      {
+       "at": "f1:ashore",
+       "to": 4,
+       "dur": 1.2
+      },
+      {
+       "at": "f1:Within",
+       "to": 5,
+       "dur": 1.6
+      },
+      {
+       "at": "f3:moved",
+       "to": 7,
+       "dur": 2.4
+      }
+     ],
+     "nameUntil": "f1:Within",
+     "nameDx": -60,
+     "nameDy": -100
+    },
+    {
+     "kind": "note",
+     "text": "TRACK APPROXIMATE \u00b7 SOURCES: FOX WEATHER, WEATHER.COM, CBS NEWS",
+     "y": 1170,
+     "at": "f1 +1",
+     "until": "f1:Within"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -86.8,
+      33.5
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f2:Falling",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "BIRMINGHAM, AL",
+      "sub": "TREE ON HOME",
+      "dx": 30,
+      "dy": -60,
+      "until": "f3 -0.2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -87.2,
+      30.6
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f2:Florida,",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "ESCAMBIA CO., FL",
+      "sub": "TREE \u00b7 GENERATOR FUMES",
+      "dx": -230,
+      "dy": 10,
+      "until": "f3 -0.2"
+     }
+    },
+    {
+     "kind": "field",
+     "palette": "rain",
+     "at": "f3 -0.1",
+     "until": "cta +0.6",
+     "clip": "land",
+     "grow": 1.6,
+     "blobs": [
+      {
+       "loc": [
+        -86.2,
+        31.0
+       ],
+       "r": 2.6,
+       "v": 0.95
+      },
+      {
+       "loc": [
+        -85.6,
+        30.7
+       ],
+       "r": 2.34,
+       "v": 0.9
+      },
+      {
+       "loc": [
+        -87.0,
+        31.5
+       ],
+       "r": 2.34,
+       "v": 0.75
+      },
+      {
+       "loc": [
+        -85.0,
+        31.4
+       ],
+       "r": 2.6,
+       "v": 0.6
+      },
+      {
+       "loc": [
+        -84.2,
+        31.9
+       ],
+       "r": 2.86,
+       "v": 0.45
+      },
+      {
+       "loc": [
+        -87.8,
+        31.1
+       ],
+       "r": 2.08,
+       "v": 0.45
+      }
+     ],
+     "legend": {
+      "title": "RAIN TOTALS \u00b7 ILLUSTRATIVE",
+      "low": "LESS",
+      "high": "OVER 12 IN",
+      "screen": [
+       90,
+       1090
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f3:Gauges",
+   "to": "f3:A +0.0",
+   "color": "info",
+   "items": [
+    {
+     "icon": "rain",
+     "big": "12.97 IN",
+     "text": "BELLWOOD, ALABAMA",
+     "color": "info",
+     "at": "f3:Gauges"
+    },
+    {
+     "icon": "rain",
+     "big": "12.47 IN",
+     "text": "CANEY CREEK, FLORIDA",
+     "color": "info",
+     "at": "f3:Gauges +1.4"
+    },
+    {
+     "icon": "rain",
+     "big": "12.43 IN",
+     "text": "DEFUNIAK SPRINGS, FLORIDA",
+     "color": "info",
+     "at": "f3:Gauges +2.6"
+    }
+   ],
+   "source": "SOURCES: REPORTED GAUGE TOTALS VIA WEATHER.COM / FOX WEATHER"
+  },
+  {
+   "type": "counter",
+   "from": "f2:Reports -0.2",
+   "to": "f3 -0.1",
+   "label": "CUSTOMERS WITHOUT POWER",
+   "sublabel": "FLORIDA PANHANDLE \u00b7 SOUTHERN ALABAMA \u00b7 EARLY SUNDAY",
+   "icon": "bolt",
+   "color": "accent",
+   "value": 396000,
+   "start": 0,
+   "prefix": "",
+   "doneSuffix": "+",
+   "decimals": 0,
+   "at": "f2:Reports +0.3",
+   "doneAt": "f2:Reports +2.6",
+   "note": "PEAK ABOVE 835,000 EARLY SATURDAY \u00b7 AS REPORTED",
+   "source": "SOURCE: NEWS REPORTS CITING OUTAGE DATA"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -100,
+     "lat": 15,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -88,
+     "lat": 24,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": -84,
+     "lat": 26,
+     "R": 470
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "USA",
+     "color": "accent",
+     "alpha": 0.5
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -86.5,
+      30.4
+     ],
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "FOUR DEAD.",
+     "text"
+    ],
+    [
+     "A FOOT OF RAIN.",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AS REPORTED BY FOX WEATHER, WEATHER.COM, CBS NEWS",
+    "OCT 9\u201311, 2026 \u00b7 TRACK AND RAIN MAP APPROXIMATE"
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Isaias Left 4 Dead and a Foot of Rain #shorts",
+  "description": "Isaias came ashore near Destin, Florida, as a Category 2 hurricane on Friday night, then weakened to a post-tropical cyclone. Fox Weather reports at least four deaths in Florida and Alabama, and news reports say nearly 396,000 customers were still without power early Sunday. Gauges recorded almost 13 inches of rain in parts of Alabama and Florida.\n\nSources: Fox Weather, Weather.com, CBS News (Oct 9-11, 2026; based on search-result excerpts). Track and rain map are approximate.\n\n#hurricane #Isaias #climate",
+  "tags": [
+   "climate",
+   "weather",
+   "hurricane",
+   "Hurricane Isaias",
+   "Florida",
+   "Alabama",
+   "flooding",
+   "power outage",
+   "extreme weather",
+   "news"
+  ],
+  "cover": "hook:rain +0.4"
+ },
+ "thumbnail": {
+  "at": "f2:Falling +0.5",
+  "number": "4 DEAD",
+  "numberColor": "danger",
+  "source": "PER FOX WEATHER \u00b7 OCT 11",
+  "focus": [
+   -86.8,
+   31.6
+  ],
+  "lines": [
+   [
+    "12 INCHES",
+    "text"
+   ],
+   [
+    "OF RAIN",
+    "accent"
+   ]
+  ],
+  "zoom": 1.1
+ }
+}
