@@ -1,0 +1,499 @@
+{
+ "id": "2026-10-12-hurricane-simon-mexico",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A Category 4 hurricane is sliding past Mexico's resorts. Will it make landfall?"
+  },
+  {
+   "id": "f1",
+   "text": "Hurricane Simon grew to Category 4 off Mexico's Pacific coast, news outlets report. Mexico's weather service said it was moving parallel to the shore, less than fifty kilometers from Jalisco, rather than making direct landfall for now."
+  },
+  {
+   "id": "f2",
+   "text": "Jalisco put Puerto Vallarta and twenty-one other municipalities under its highest alert. Authorities closed ports, including Manzanillo, and Puerto Vallarta's airport. Mexico's Security Ministry counted five hundred seventy-nine people evacuated or sheltered across three states, an early figure."
+  },
+  {
+   "id": "f3",
+   "text": "So why the doubt? CNN reports the storm's path shifted and is hard to predict. The National Hurricane Center said it is unclear whether Simon will come ashore, which could let it keep its strength. Forecasters warn of life-threatening flooding and mudslides."
+  },
+  {
+   "id": "cta",
+   "text": "Will Simon make landfall on Mexico's coast this week? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE STORM",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE PREPARATIONS",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE DOUBT",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -120,
+     "lat": 15,
+     "R": 360
+    },
+    {
+     "at": 3.4,
+     "lon": -106,
+     "lat": 19,
+     "R": 600
+    }
+   ],
+   "chip": {
+    "text": "HURRICANE SIMON · CATEGORY 4",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "MEX",
+     "color": "accent",
+     "at": "hook:hurricane",
+     "alpha": 0.45
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -105.23,
+      20.65
+     ],
+     "color": "danger",
+     "at": "hook:Mexico's",
+     "label": "PUERTO VALLARTA",
+     "sub": "AIRPORT CLOSED",
+     "dx": -300,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:hurricane",
+    "lines": [
+     [
+      "CATEGORY 4",
+      "danger",
+      130
+     ],
+     [
+      "LANDFALL?",
+      "text",
+      150
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -105.5,
+    20
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -106,
+     "lat": 19,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": -106,
+     "lat": 17.5,
+     "dist": 26,
+     "pitch": 48,
+     "yaw": -6,
+     "oy": 150
+    },
+    {
+     "at": "f1:moving",
+     "lon": -105.8,
+     "lat": 19.5,
+     "dist": 18,
+     "pitch": 52,
+     "yaw": 4,
+     "oy": 160
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": -105.4,
+     "lat": 20.3,
+     "dist": 16,
+     "pitch": 52,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "f2:Authorities",
+     "lon": -104.8,
+     "lat": 19.6,
+     "dist": 13,
+     "pitch": 54,
+     "yaw": -4,
+     "oy": 170
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": -106,
+     "lat": 20.4,
+     "dist": 22,
+     "pitch": 50,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "f3:Hurricane",
+     "lon": -106.4,
+     "lat": 21.4,
+     "dist": 18,
+     "pitch": 52,
+     "yaw": 4,
+     "oy": 170
+    },
+    {
+     "at": "cta",
+     "lon": -105.5,
+     "lat": 20.5,
+     "dist": 40,
+     "pitch": 44,
+     "yaw": 4,
+     "oy": 120
+    }
+   ],
+   "layers": [
+    {
+     "kind": "track",
+     "at": "hook$",
+     "until": "cta +0.6",
+     "color": "storm",
+     "name": "SIMON",
+     "sub": "CAT 4 · SKIRTING THE COAST",
+     "forecast": 4,
+     "now": 3,
+     "cone": false,
+     "points": [
+      {
+       "loc": [
+        -104.2,
+        15.6
+       ],
+       "cat": 2,
+       "label": "CAT 2 · OCT 9",
+       "dx": 18,
+       "dy": 30,
+       "until": "f1 +0.5"
+      },
+      {
+       "loc": [
+        -105.3,
+        17.2
+       ],
+       "cat": 3,
+       "until": "f1 +0.5"
+      },
+      {
+       "loc": [
+        -106.0,
+        18.6
+       ],
+       "cat": 4,
+       "label": "CAT 4 · OCT 11",
+       "dx": 22,
+       "dy": 8,
+       "big": true,
+       "until": "f2"
+      },
+      {
+       "loc": [
+        -106.5,
+        19.9
+       ],
+       "cat": 4,
+       "big": true
+      },
+      {
+       "loc": [
+        -106.6,
+        21.4
+       ],
+       "cat": 3,
+       "label": "ISLAS MARÍAS? · APPROX.",
+       "dx": 22,
+       "dy": 8
+      },
+      {
+       "loc": [
+        -105.6,
+        22.4
+       ],
+       "cat": 2
+      }
+     ],
+     "steps": [
+      {
+       "at": "hook +0.3",
+       "to": 3,
+       "dur": 2.4
+      },
+      {
+       "at": "f3:Hurricane",
+       "to": 5,
+       "dur": 2.6
+      }
+     ],
+     "nameUntil": "f2 +0.5",
+     "nameDx": -60,
+     "nameDy": -100
+    },
+    {
+     "kind": "note",
+     "text": "TRACK APPROXIMATE · SOURCES: CNN, CBS NEWS, NBC NEWS",
+     "y": 1170,
+     "at": "f1 +1",
+     "until": "f2"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -105.23,
+      20.65
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f2",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "PUERTO VALLARTA",
+      "sub": "AIRPORT CLOSED",
+      "dx": -290,
+      "dy": -40,
+      "until": "f3 -0.2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -104.32,
+      19.05
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f2:Authorities",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "MANZANILLO",
+      "sub": "PORT CLOSED",
+      "dx": 40,
+      "dy": 30,
+      "until": "f3 -0.2"
+     }
+    },
+    {
+     "kind": "field",
+     "palette": "rain",
+     "at": "f3:Forecasters",
+     "until": "cta +0.6",
+     "clip": "land",
+     "grow": 1.6,
+     "blobs": [
+      {
+       "loc": [
+        -105.0,
+        20.2
+       ],
+       "r": 2.4,
+       "v": 0.9
+      },
+      {
+       "loc": [
+        -104.2,
+        19.4
+       ],
+       "r": 2.2,
+       "v": 0.7
+      },
+      {
+       "loc": [
+        -104.8,
+        21.2
+       ],
+       "r": 2.0,
+       "v": 0.6
+      }
+     ],
+     "legend": {
+      "title": "HEAVY RAIN RISK · ILLUSTRATIVE",
+      "low": "LESS",
+      "high": "MORE",
+      "screen": [
+       90,
+       1090
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f1:service",
+   "to": "f2 -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "CATEGORY 4",
+     "text": "HURRICANE SIMON · AS REPORTED",
+     "color": "danger",
+     "at": "f1:service"
+    },
+    {
+     "icon": "flag",
+     "big": "<50 KM",
+     "text": "FROM JALISCO COAST",
+     "color": "accent",
+     "at": "f1:less"
+    }
+   ],
+   "source": "SOURCES: CNN, CBS NEWS, MEXICO'S WEATHER SERVICE VIA BLUEWIN"
+  },
+  {
+   "type": "counter",
+   "from": "f2:Mexico's",
+   "to": "f3 -0.1",
+   "label": "EVACUATED OR SHELTERED",
+   "sublabel": "JALISCO · COLIMA · NAYARIT · EARLY COUNT",
+   "icon": "people",
+   "color": "accent",
+   "value": 579,
+   "start": 0,
+   "doneSuffix": "",
+   "decimals": 0,
+   "at": "f2:Mexico's +0.3",
+   "doneAt": "f2:Mexico's +2.2",
+   "note": "321 JALISCO · 143 COLIMA · 115 NAYARIT",
+   "source": "SOURCE: MEXICO SECURITY MINISTRY, AS REPORTED"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -125,
+     "lat": 15,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -108,
+     "lat": 20,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": -104,
+     "lat": 21,
+     "R": 470
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "MEX",
+     "color": "accent",
+     "alpha": 0.5
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -105.23,
+      20.65
+     ],
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "CATEGORY 4.",
+     "text"
+    ],
+    [
+     "LANDFALL OR NOT?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AS REPORTED BY CNN, CBS NEWS, NBC NEWS, PBS (SEARCH EXCERPTS)",
+    "OCT 9–12, 2026 · TRACK AND RAIN MAP APPROXIMATE"
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Hurricane Simon: Cat 4 Skirts Mexico's Coast #shorts",
+  "description": "Hurricane Simon reached Category 4 strength off Mexico's Pacific coast and was moving parallel to the shore near Jalisco, according to news reports. Jalisco raised its highest alert for Puerto Vallarta and 21 other municipalities, ports and the Puerto Vallarta airport closed, and the National Hurricane Center said it is unclear whether Simon will make landfall.\n\nSources: CNN, CBS News, NBC News, PBS, Bluewin (Oct 9-12, 2026; based on search-result excerpts). Track and rain map are approximate.\n\n#hurricane #HurricaneSimon #climate",
+  "tags": [
+   "climate",
+   "weather",
+   "hurricane",
+   "Hurricane Simon",
+   "Mexico",
+   "Puerto Vallarta",
+   "Jalisco",
+   "extreme weather",
+   "news"
+  ],
+  "cover": "hook:hurricane +0.4"
+ },
+ "thumbnail": {
+  "at": "f1 +3",
+  "number": "CAT 4",
+  "numberColor": "danger",
+  "source": "PER NEWS REPORTS · OCT 11",
+  "focus": [
+   -105.8,
+   19.6
+  ],
+  "lines": [
+   [
+    "LANDFALL",
+    "text"
+   ],
+   [
+    "OR NOT?",
+    "accent"
+   ]
+  ],
+  "zoom": 1.1
+ }
+}
