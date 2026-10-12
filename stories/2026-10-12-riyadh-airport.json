@@ -1,0 +1,459 @@
+{
+ "id": "2026-10-12-riyadh-airport",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A missile hit Riyadh's airport. Twelve are dead. Will Saudi Arabia hit back?"
+  },
+  {
+   "id": "f1",
+   "text": "On Saturday, Saudi authorities said a Houthi missile struck King Khalid International Airport in Riyadh. At least twelve people were killed and more than three hundred wounded, they say. The dead include Saudis, Bangladeshis and one American."
+  },
+  {
+   "id": "f2",
+   "text": "On Sunday, the terminal was hit again. Saudi aviation authorities say a Pakistani resident died and eleven were injured. The Houthis claim the attacks. They say it answers a Saudi air campaign, with more than one hundred twenty strikes in a day. That figure is their claim."
+  },
+  {
+   "id": "f3",
+   "text": "The Saudi-led coalition calls it a war crime. Riyadh vows a firm response. The U.N. envoy calls it a grave escalation. The airport has been closed since Saturday. Reports say the attack also complicates efforts to end the U.S.-Iran war."
+  },
+  {
+   "id": "cta",
+   "text": "Will Saudi Arabia and the Houthis agree to a truce this month? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE STRIKE",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "STRIKE AGAIN",
+   "seg": "f2",
+   "color": "ally"
+  },
+  {
+   "n": "03",
+   "name": "THE RESPONSE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "upload": {
+  "title": "Houthi Missile Hits Riyadh Airport: What Comes Next? #shorts",
+  "description": "Saudi authorities say a Houthi missile killed at least 12 and wounded more than 300 at Riyadh's King Khalid International Airport on October 10. The airport was hit again the next day. Saudi Arabia vows a firm response; the UN envoy calls it a grave escalation.\n\nSources:\nAl Jazeera: Saudi Arabia says 12 killed, 300 wounded in Houthi attack on Riyadh airport (Oct 10, 2026)\nCNN: Major Houthi attack on Saudi airport kills at least 12, hundreds wounded (Oct 10, 2026)\nCBS News: Passenger terminal in Riyadh airport hit again, a day after deadly strike (Oct 2026)\nAl Jazeera: World condemns deadly Houthi attack on Saudi Arabia's Riyadh airport (Oct 11, 2026)\nThe Washington Post: 12 killed in Saudi Arabia airport attack (Oct 10, 2026)\n\n#geopolitics #Saudi #Houthis #Yemen",
+  "tags": [
+   "geopolitics",
+   "Saudi Arabia",
+   "Houthis",
+   "Yemen",
+   "Riyadh",
+   "airport attack",
+   "Iran war",
+   "Middle East",
+   "world news"
+  ],
+  "cover": "f1:twelve +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:killed",
+  "focus": "Riyadh",
+  "zoom": 1.3,
+  "number": "12",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "RIYADH AIRPORT",
+    "text"
+   ],
+   [
+    "HIT TWICE",
+    "accent"
+   ]
+  ],
+  "source": "OCT 10 · PER SAUDI AUTHORITIES"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 30,
+     "lat": 25,
+     "R": 360
+    },
+    {
+     "at": 3.2,
+     "lon": 46,
+     "lat": 22,
+     "R": 520
+    }
+   ],
+   "chip": {
+    "text": "SAUDI ARABIA · OCT 12, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "SAU",
+     "color": "accent",
+     "at": "hook:Riyadh's"
+    },
+    {
+     "iso": "YEM",
+     "color": "danger",
+     "at": "hook:dead."
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Riyadh",
+     "color": "danger",
+     "at": "hook:Riyadh's",
+     "label": "RIYADH",
+     "dx": -90,
+     "dy": -80,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:Riyadh's",
+    "lines": [
+     [
+      "AIRPORT",
+      "text",
+      120
+     ],
+     [
+      "UNDER FIRE",
+      "danger",
+      120
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:dead.",
+    "icon": "jet",
+    "iconColor": "danger",
+    "color": "danger",
+    "kicker": "KING KHALID INTL.",
+    "title": "12 KILLED",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    45,
+    19
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 46,
+     "lat": 22,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 46.5,
+     "lat": 24.3,
+     "dist": 18,
+     "pitch": 50,
+     "yaw": -8,
+     "oy": 200
+    },
+    {
+     "at": "f1:Saudis,",
+     "lon": 46.5,
+     "lat": 24,
+     "dist": 17,
+     "pitch": 52,
+     "yaw": -4,
+     "oy": 200
+    },
+    {
+     "at": "f2 -0.1",
+     "lon": 45.2,
+     "lat": 20.5,
+     "dist": 38,
+     "pitch": 50,
+     "yaw": 6,
+     "oy": 190
+    },
+    {
+     "at": "f2:Houthis",
+     "lon": 45,
+     "lat": 19,
+     "dist": 36,
+     "pitch": 52,
+     "yaw": 8,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 46.5,
+     "lat": 22,
+     "dist": 30,
+     "pitch": 48,
+     "yaw": -4,
+     "oy": 200
+    },
+    {
+     "at": "cta",
+     "lon": 46,
+     "lat": 21,
+     "dist": 50,
+     "pitch": 45,
+     "yaw": 0,
+     "oy": 210
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "SAU",
+     "color": "accent",
+     "alpha": 0.3,
+     "at": "hook$ +0.3"
+    },
+    {
+     "kind": "tint",
+     "iso": "YEM",
+     "color": "danger",
+     "alpha": 0.45,
+     "at": "f1:Houthi"
+    },
+    {
+     "kind": "tag",
+     "loc": "Riyadh",
+     "text": "RIYADH",
+     "sub": "KING KHALID AIRPORT",
+     "color": "danger",
+     "at": "f1 +0.3",
+     "until": "f2 -0.1",
+     "dx": 130,
+     "dy": -90
+    },
+    {
+     "kind": "marker",
+     "loc": "Riyadh",
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Saturday,"
+    },
+    {
+     "kind": "tag",
+     "loc": "Sanaa",
+     "text": "HOUTHI-HELD SANAA",
+     "color": "danger",
+     "at": "f2 -0.1",
+     "until": "f3",
+     "dx": 120,
+     "dy": 110,
+     "size": 26
+    },
+    {
+     "kind": "arc",
+     "from": "Sanaa",
+     "to": "Riyadh",
+     "color": "danger",
+     "height": 0.5,
+     "width": 4,
+     "dur": 1.2,
+     "headColor": "#ffd2c8",
+     "at": "f1:Houthi",
+     "until": "f1$"
+    },
+    {
+     "kind": "arc",
+     "from": "Sanaa",
+     "to": "Riyadh",
+     "color": "danger",
+     "height": 0.5,
+     "width": 4,
+     "dur": 1.2,
+     "headColor": "#ffd2c8",
+     "at": "f2:Sunday,",
+     "until": "f2:Houthis"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      60,
+      290,
+      560
+     ],
+     "title": "RIYADH AIRPORT · OCT 10",
+     "badge": "PER SAUDI AUTHORITIES",
+     "color": "danger",
+     "at": "f1:least",
+     "until": "f2 -0.1",
+     "rows": [
+      {
+       "icon": "people",
+       "text": "12+ KILLED",
+       "at": "f1:twelve"
+      },
+      {
+       "icon": "drop",
+       "text": "300+ WOUNDED",
+       "at": "f1:three"
+      },
+      {
+       "icon": "flag",
+       "text": "INCL. 1 AMERICAN",
+       "at": "f1:American."
+      }
+     ]
+    },
+    {
+     "kind": "card",
+     "screen": [
+      60,
+      290,
+      560
+     ],
+     "title": "OCT 11 · SECOND HIT",
+     "badge": "PER SAUDI AUTHORITIES",
+     "color": "ally",
+     "at": "f2:Saudi",
+     "until": "f2:The",
+     "rows": [
+      {
+       "icon": "people",
+       "text": "1 DEAD · 11 INJURED",
+       "at": "f2:Pakistani"
+      }
+     ]
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      380,
+      430,
+      640
+     ],
+     "kicker": "HOUTHIS CLAIM:",
+     "text": "≈120 SAUDI STRIKES IN A DAY",
+     "color": "danger",
+     "at": "f2:more",
+     "until": "f3 -0.1"
+    },
+    {
+     "kind": "stamp",
+     "text": "UNVERIFIED",
+     "icon": "eye",
+     "color": "accent",
+     "screen": [
+      600,
+      700
+     ],
+     "at": "f2:That",
+     "until": "f3 -0.1",
+     "note": "HOUTHI FIGURE"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      380,
+      300,
+      640
+     ],
+     "kicker": "SAUDI-LED COALITION:",
+     "text": "COALITION: “WAR CRIME”",
+     "color": "accent",
+     "at": "f3 +0.1",
+     "until": "f3:The#1"
+    },
+    {
+     "kind": "stamp",
+     "text": "AIRPORT CLOSED",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      540,
+      450
+     ],
+     "at": "f3:airport",
+     "until": "cta",
+     "note": "SINCE OCT 10"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 46,
+     "lat": 21,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 46,
+     "lat": 21,
+     "R": 500
+    },
+    {
+     "at": "end",
+     "lon": 45,
+     "lat": 19,
+     "R": 500
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "SAU",
+     "color": "accent",
+     "alpha": 0.7
+    },
+    {
+     "iso": "YEM",
+     "color": "danger",
+     "alpha": 0.7
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Riyadh",
+     "color": "danger"
+    },
+    {
+     "loc": "Sanaa",
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "AIRPORT HIT TWICE.",
+     "text"
+    ],
+    [
+     "WILL RIYADH HIT BACK?",
+     "danger"
+    ]
+   ],
+   "sources": [
+    "REPORTING: AL JAZEERA, CNN, CBS NEWS, WASHINGTON POST",
+    "OCT 10–11, 2026"
+   ]
+  }
+ ]
+}
