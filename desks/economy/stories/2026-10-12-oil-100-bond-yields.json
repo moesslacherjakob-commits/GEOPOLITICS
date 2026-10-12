@@ -1,0 +1,93 @@
+{
+ "id": "2026-10-12-oil-100-bond-yields",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Oil is above 100 dollars. U.S. borrowing costs are near a 24-year high. Linked?"},
+  {"id": "f1", "text": "Brent crude traded around 104 dollars on Monday, Bloomberg reports, after Houthi strikes on Saudi Arabia over the weekend. Market Index says attacks on shipping and Saudi targets keep Brent anchored above 100 dollars."},
+  {"id": "f2", "text": "Why does that reach bonds? Costlier oil can push up inflation, and lenders then ask for more. CNBC and Bloomberg report the ten-year Treasury yield rose above 5 percent last week, the highest since 2002."},
+  {"id": "f3", "text": "Now two tests arrive. JPMorgan reports earnings on Tuesday. On Wednesday, September inflation data is due. Forecasts point to 3.6 percent, up from 3.4, according to market previews. The S and P 500 still closed Friday near its record. A hot reading could revive talk of Fed rate hikes, CNBC notes."},
+  {"id": "cta", "text": "Will this week's inflation data push yields higher? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE OIL", "seg": "f1", "color": "oil"},
+  {"n": "02", "name": "THE BONDS", "seg": "f2", "color": "danger"},
+  {"n": "03", "name": "THE TESTS", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.25", "exit": "zoom",
+   "view": [
+    {"at": 0, "lon": 10, "lat": 20, "R": 360},
+    {"at": 3.2, "lon": 45, "lat": 24, "R": 560}
+   ],
+   "chip": {"text": "MARKETS · OCT 12, 2026", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "SAU", "color": "oil", "at": "hook:above", "alpha": 0.5}],
+   "headline": {"at": "hook:above", "lines": [["OIL $100+", "text", 130], ["BONDS 24-YR HIGH", "accent", 100]]}
+  },
+  {
+   "type": "map", "from": "hook$ +0.25", "to": "f2 -0.1", "center": [45, 24],
+   "camera": [
+    {"at": "hook$ +0.25", "lon": 45, "lat": 24, "dist": 43, "pitch": 0, "yaw": 0, "oy": 0},
+    {"at": "f1 +0.4", "lon": 44, "lat": 22, "dist": 55, "pitch": 46, "yaw": -4, "oy": 170},
+    {"at": "f1:Saudi", "lon": 44, "lat": 21, "dist": 52, "pitch": 48, "yaw": 5, "oy": 170}
+   ],
+   "layers": [
+    {"kind": "tint", "iso": "SAU", "color": "oil", "alpha": 0.3, "at": "f1 +0.2"},
+    {"kind": "arc", "from": "Sanaa", "to": "Riyadh", "color": "danger", "at": "f1:Houthi", "dur": 1.2},
+    {"kind": "tag", "loc": "Riyadh", "text": "HOUTHI STRIKES", "sub": "WEEKEND · PER BLOOMBERG", "color": "danger", "at": "f1:Houthi", "dx": -60, "dy": -120, "size": 30}
+   ]
+  },
+  {
+   "type": "counter", "from": "f1:Brent -0.3", "to": "f2 -0.1",
+   "label": "BRENT CRUDE", "sublabel": "MONDAY, OCT 12 · INTRADAY",
+   "icon": "barrel", "color": "oil", "value": 104, "start": 100,
+   "prefix": "$", "doneSuffix": "", "decimals": 0,
+   "at": "f1:104 -0.4", "doneAt": "f1:104 +0.6",
+   "note": "ABOUT $104 A BARREL · LEVELS VARY BY TIME OF DAY",
+   "source": "SOURCES: BLOOMBERG · MARKET INDEX"
+  },
+  {
+   "type": "chain", "from": "f2 -0.1", "to": "f3 -0.1",
+   "label": "FROM OIL TO BONDS", "color": "danger",
+   "steps": [
+    {"icon": "barrel", "title": "OIL ABOVE $100", "sub": "MIDEAST ATTACKS", "dir": "up", "at": "f2:Why"},
+    {"icon": "thermo", "title": "INFLATION RISK", "sub": "COSTS CAN RISE", "dir": "up", "at": "f2:inflation,"},
+    {"icon": "money", "title": "10-YEAR YIELD", "sub": "ABOVE 5% · HIGHEST SINCE 2002", "dir": "up", "at": "f2:ten-year"}
+   ],
+   "source": "SOURCES: CNBC · BLOOMBERG · MECHANISM IS GENERAL BACKGROUND"
+  },
+  {
+   "type": "facts", "from": "f3 -0.1", "to": "cta -0.1",
+   "items": [
+    {"icon": "money", "big": "TUE", "text": "JPMORGAN REPORTS EARNINGS", "color": "info", "at": "f3:JPMorgan"},
+    {"icon": "thermo", "big": "WED", "text": "SEPT. INFLATION: 3.6% FORECAST VS 3.4%", "color": "danger", "at": "f3:Wednesday,"},
+    {"icon": "check", "big": "FRI", "text": "S&P 500 CLOSED NEAR ITS RECORD", "color": "accent", "at": "f3:S"}
+   ],
+   "source": "SOURCES: CNBC · CMC MARKETS · WASHINGTON POST"
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": 0, "lat": 30, "R": 800},
+    {"at": "cta +1", "lon": 45, "lat": 24, "R": 470},
+    {"at": "end", "lon": 50, "lat": 24, "R": 470}
+   ],
+   "highlights": [{"iso": "SAU", "color": "oil", "alpha": 0.5}],
+   "lines": [["OIL OVER $100.", "text"], ["YIELDS AT 24-YEAR HIGHS.", "accent"]],
+   "sources": ["AS REPORTED BY BLOOMBERG, CNBC, CMC MARKETS, WASHINGTON POST", "OCT 9–12, 2026 · NOT FINANCIAL ADVICE"]
+  }
+ ],
+ "upload": {
+  "title": "Oil Above $100, Bond Yields at 24-Year Highs #shorts",
+  "description": "Brent crude traded around $104 on Monday after weekend Houthi strikes on Saudi Arabia, Bloomberg reports. CNBC and Bloomberg say the 10-year Treasury yield rose above 5%, the highest since 2002. Ahead: JPMorgan earnings on Tuesday and September inflation data on Wednesday.\n\nSources: Bloomberg, CNBC, CMC Markets, Market Index, The Washington Post (Oct 9-12, 2026).\n\n#stocks #markets #oil #bonds",
+  "tags": ["markets", "stocks", "economy", "oil", "Brent", "Treasury yields", "inflation", "bonds", "news"],
+  "cover": "hook:above +0.4"
+ },
+ "thumbnail": {
+  "at": "f1 +1.0",
+  "number": "$100+",
+  "numberColor": "oil",
+  "lines": [["YIELDS AT", "text"], ["24-YEAR HIGH", "accent"]],
+  "source": "BRENT · PER BLOOMBERG, OCT 12"
+ }
+}
