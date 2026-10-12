@@ -1,0 +1,287 @@
+{
+ "id": "2026-10-12-tsmc-globalfoundries-interposers",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Most advanced AI chips are finished in Taiwan. Could a New York factory share that job?"
+  },
+  {
+   "id": "f1",
+   "text": "On October eighth, GlobalFoundries announced a five-year deal worth about two billion dollars. At its plant in Malta, New York, it will make silicon interposers for TSMC. An interposer is a thin silicon layer that wires processor and memory chips together."
+  },
+  {
+   "id": "f2",
+   "text": "The packaging method is TSMC's CoWoS, used for AI chips. GlobalFoundries calls Malta the first U.S.-based source of these interposers. Volume production is planned for the first half of 2028. The companies have not disclosed volumes or customers."
+  },
+  {
+   "id": "f3",
+   "text": "Why it matters: industry analysts say packaging, not chipmaking, limits AI chip supply, and one analysis says TSMC holds over ninety percent of this market. This deal covers one part of the process, and 2028 is still years away."
+  },
+  {
+   "id": "cta",
+   "text": "Will U.S. chip packaging catch up with Taiwan? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE DEAL",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE TIMELINE",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "WHY IT MATTERS",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "TSMC Taps a New York Plant to Make AI Chip Parts #shorts",
+  "description": "GlobalFoundries says it has signed a five-year deal worth about $2 billion to make silicon interposers for TSMC's CoWoS advanced packaging at its Malta, New York plant. The company calls it the first U.S.-based source of these parts; volume production is planned for the first half of 2028. The deal terms are company announcements; volumes and customers were not disclosed.\n\nSources: GlobalFoundries announcement (Oct 8, 2026) as reported by DCD, The Register, Bloomberg, Digitimes.\n\n#tech #AI #semiconductors",
+  "tags": [
+   "technology",
+   "news",
+   "TSMC",
+   "GlobalFoundries",
+   "AI chips",
+   "semiconductors",
+   "CoWoS",
+   "advanced packaging"
+  ],
+  "cover": "hook:York, +0.4"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [
+   -73.77,
+   42.97
+  ],
+  "number": "$2B",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "CHIPS FINISHED",
+    "text"
+   ],
+   [
+    "IN NEW YORK?",
+    "accent"
+   ]
+  ],
+  "source": "OCT 8 · PER GLOBALFOUNDRIES · DCD"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": 121,
+     "lat": 24,
+     "R": 380
+    },
+    {
+     "at": 4.8,
+     "lon": -74,
+     "lat": 42,
+     "R": 520
+    }
+   ],
+   "chip": {
+    "text": "AI CHIPS · OCT 8, 2026",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "TWN",
+     "color": "danger",
+     "at": "hook:Taiwan.",
+     "alpha": 0.6
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -73.77,
+      42.97
+     ],
+     "color": "accent",
+     "at": "hook:York",
+     "label": "MALTA, NEW YORK",
+     "sub": "GLOBALFOUNDRIES PLANT",
+     "dx": -30,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:finished",
+    "lines": [
+     [
+      "AI CHIPS",
+      "text",
+      120
+     ],
+     [
+      "FINISHED IN TAIWAN",
+      "accent",
+      90
+     ]
+    ]
+   }
+  },
+  {
+   "type": "flow",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "WHERE AN INTERPOSER SITS",
+   "color": "accent",
+   "steps": [
+    {
+     "icon": "chip",
+     "title": "PROCESSOR + MEMORY",
+     "sub": "SEPARATE CHIPS",
+     "color": "accent",
+     "at": "f1:GlobalFoundries"
+    },
+    {
+     "icon": "factory",
+     "title": "SILICON INTERPOSER",
+     "sub": "WIRING LAYER · MADE AT MALTA, NY",
+     "color": "info",
+     "at": "f1:silicon"
+    },
+    {
+     "icon": "bolt",
+     "title": "ONE AI CHIP PACKAGE",
+     "sub": "TSMC'S COWOS METHOD",
+     "color": "ok",
+     "at": "f1:wires"
+    }
+   ],
+   "source": "SOURCES: GLOBALFOUNDRIES ANNOUNCEMENT · DCD · THE REGISTER · BLOOMBERG"
+  },
+  {
+   "type": "timeline",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "WHAT THE COMPANIES SAY",
+   "color": "violet",
+   "items": [
+    {
+     "date": "OCT 8, 2026",
+     "title": "FIVE-YEAR DEAL ANNOUNCED",
+     "sub": "ABOUT $2 BILLION · PER GLOBALFOUNDRIES",
+     "color": "accent",
+     "at": "f2:The"
+    },
+    {
+     "date": "CLAIM",
+     "title": "FIRST U.S.-BASED SOURCE",
+     "sub": "OF THESE INTERPOSERS · GF'S WORDING",
+     "color": "info",
+     "at": "f2:GlobalFoundries"
+    },
+    {
+     "date": "H1 2028",
+     "title": "VOLUME PRODUCTION PLANNED",
+     "sub": "VOLUMES AND CUSTOMERS NOT DISCLOSED",
+     "color": "violet",
+     "big": true,
+     "at": "f2:Volume"
+    }
+   ],
+   "source": "SOURCES: GLOBALFOUNDRIES ANNOUNCEMENT · DCD · THE REGISTER · BLOOMBERG"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "chip",
+     "big": "PACKAGING",
+     "text": "THE LIMIT ON AI CHIP SUPPLY · PER INDUSTRY ANALYSTS",
+     "color": "info",
+     "at": "f3:Why"
+    },
+    {
+     "icon": "flag",
+     "big": "OVER 90%",
+     "text": "TSMC SHARE OF COWOS · ONE ANALYSIS",
+     "color": "danger",
+     "at": "f3:one"
+    },
+    {
+     "icon": "check",
+     "big": "ONE STEP",
+     "text": "DEAL COVERS ONE PART · 2028 IS YEARS AWAY",
+     "color": "accent",
+     "at": "f3:This"
+    }
+   ],
+   "source": "SOURCES: DCD · THE REGISTER · DIGITIMES · INDUSTRY ANALYSES"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 121,
+     "lat": 24,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -74,
+     "lat": 42,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": -90,
+     "lat": 40,
+     "R": 470
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -73.77,
+      42.97
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "CAN AMERICA PACKAGE",
+     "text"
+    ],
+    [
+     "ITS OWN AI CHIPS?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AS REPORTED BY DCD, THE REGISTER, BLOOMBERG · GLOBALFOUNDRIES ANNOUNCEMENT",
+    "COMPANY CLAIMS · NO VOLUMES DISCLOSED"
+   ]
+  }
+ ]
+}
