@@ -1,0 +1,97 @@
+{
+ "id": "2026-10-13-kospi-memory-chip-rout",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "One country's stock market lost five percent in a day. A Chinese chip plan may be why."},
+  {"id": "f1", "text": "South Korea's Kospi index closed down 5.5 percent on Tuesday at 6,035, after falling more than 7 percent during the session, according to KED Global. SK Hynix fell about 10 percent. Samsung Electronics lost 7.4 percent, SBS reports."},
+  {"id": "f2", "text": "Why? Chinese memory maker CXMT says it plans a new memory chip by year-end. Memory chips store data in phones and servers. Investors fear cheaper rivals. The claim is not independently verified. Samsung and SK Hynix make up about half the Kospi, an eToro analyst says, so their fall drags the whole index."},
+  {"id": "f3", "text": "SBS reports foreign investors sold about 4.5 trillion won of Korean shares that day. It had already dropped 3.65 percent on Monday, to 6,384."},
+  {"id": "cta", "text": "Will China's chip plan hold up under scrutiny? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE SELL-OFF", "seg": "f1", "color": "danger"},
+  {"n": "02", "name": "THE CAUSE", "seg": "f2", "color": "info"},
+  {"n": "03", "name": "THE SPREAD", "seg": "f3", "to": "cta -0.2", "color": "oil"}
+ ],
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.25", "exit": "zoom",
+   "view": [
+    {"at": 0, "lon": 110, "lat": 30, "R": 360},
+    {"at": 3.2, "lon": 127.5, "lat": 36.5, "R": 640}
+   ],
+   "chip": {"text": "MARKETS · OCT 13, 2026", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "KOR", "color": "danger", "at": "hook:lost", "alpha": 0.5}],
+   "headline": {"at": "hook:lost", "lines": [["KOSPI -5.5%", "danger", 130], ["CHIP RISK", "accent", 110]]}
+  },
+  {
+   "type": "map", "from": "hook$ +0.25", "to": "f2 -0.1", "center": [127.5, 36.5],
+   "camera": [
+    {"at": "hook$ +0.25", "lon": 127.5, "lat": 36.5, "dist": 43, "pitch": 0, "yaw": 0, "oy": 0},
+    {"at": "f1 +0.4", "lon": 127.5, "lat": 36, "dist": 28, "pitch": 46, "yaw": -4, "oy": 170},
+    {"at": "f1:SK", "lon": 127.5, "lat": 36.5, "dist": 26, "pitch": 48, "yaw": 5, "oy": 170}
+   ],
+   "layers": [
+    {"kind": "tint", "iso": "KOR", "color": "danger", "alpha": 0.3, "at": "f1 +0.2"},
+    {"kind": "tag", "loc": "Seoul", "text": "KOSPI 6,035", "sub": "CLOSE · -5.5% · PER KED GLOBAL", "color": "danger", "at": "f1:South", "dx": 40, "dy": -160, "size": 30}
+   ]
+  },
+  {
+   "type": "ticker", "from": "f1:SK -0.2", "to": "f2 -0.1",
+   "label": "SOUTH KOREA · TUESDAY, OCT 13", "sublabel": "CLOSING MOVES",
+   "rows": [
+    {"name": "KOSPI", "sub": "CLOSE 6,035", "change": -5.5, "at": "f1:SK -0.1"},
+    {"name": "SK HYNIX", "sub": "ABOUT -10%", "change": -10, "at": "f1:SK +0.4"},
+    {"name": "SAMSUNG", "sub": "CLOSE", "change": -7.4, "at": "f1:Samsung"}
+   ],
+   "format": {"decimals": 1, "suffix": "%"},
+   "note": "KOSPI FELL OVER 7% INTRADAY",
+   "source": "SOURCES: KED GLOBAL · SBS"
+  },
+  {
+   "type": "chain", "from": "f2 -0.1", "to": "f3 -0.1",
+   "label": "WHY CHIP STOCKS FELL", "color": "info",
+   "steps": [
+    {"icon": "chip", "title": "CXMT CHIP PLAN", "sub": "CHINA · UNVERIFIED CLAIM", "dir": "up", "at": "f2:Chinese"},
+    {"icon": "money", "title": "RIVALS FEARED", "sub": "CHEAPER MEMORY?", "dir": "up", "at": "f2:Investors"},
+    {"icon": "chip", "title": "SAMSUNG, HYNIX", "sub": "~HALF OF KOSPI WEIGHT", "dir": "down", "at": "f2:Samsung"},
+    {"icon": "money", "title": "KOSPI DROPS", "sub": "-5.5% AT THE CLOSE", "dir": "down", "at": "f2:eToro"}
+   ],
+   "source": "SOURCES: INDMONEY · SEOUL ECONOMIC DAILY · ETORO ANALYST"
+  },
+  {
+   "type": "counter", "from": "f3 -0.1", "to": "cta -0.1",
+   "label": "FOREIGN INVESTORS SOLD", "sublabel": "KOREAN SHARES · TUESDAY, OCT 13",
+   "icon": "money", "color": "danger", "value": 4.5, "start": 0,
+   "prefix": "", "suffix": " TRN WON", "doneSuffix": "", "decimals": 1,
+   "at": "f3:SBS", "doneAt": "f3:4.5 +0.8",
+   "note": "ABOUT 4.5 TRILLION WON · KOSPI -3.65% ON MONDAY",
+   "source": "SOURCES: SBS · INDMONEY"
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": 100, "lat": 30, "R": 800},
+    {"at": "cta +1", "lon": 127.5, "lat": 36.5, "R": 520},
+    {"at": "end", "lon": 130, "lat": 36.5, "R": 520}
+   ],
+   "highlights": [{"iso": "KOR", "color": "danger", "alpha": 0.5}],
+   "lines": [["KOSPI DOWN 5.5%.", "text"], ["CHINA'S CHIP CLAIM UNPROVEN.", "accent"]],
+   "sources": ["AS REPORTED BY KED GLOBAL, SBS, INDMONEY, SEOUL ECONOMIC DAILY, BLOOMBERG", "OCT 12–13, 2026 · NOT FINANCIAL ADVICE"]
+  }
+ ],
+ "upload": {
+  "title": "Samsung, SK Hynix Sink as Korea's Kospi Drops 5.5% #shorts",
+  "description": "South Korea's Kospi closed down 5.5% at 6,035 on Tuesday after falling over 7% intraday, KED Global reports. SBS says SK Hynix fell about 10% and Samsung Electronics 7.4%. Reports link the sell-off to Chinese memory maker CXMT's plan for a new chip, a claim not independently verified.\n\nSources: KED Global, SBS, INDmoney, Seoul Economic Daily, Bloomberg (Oct 12-13, 2026).\n\n#stocks #markets #Samsung #SKHynix #chips",
+  "tags": ["markets", "stocks", "economy", "Kospi", "Samsung", "SK Hynix", "CXMT", "memory chips", "news"],
+  "cover": "hook:lost +0.4"
+ },
+ "thumbnail": {
+  "at": "f1 +1.0",
+  "focus": "Seoul",
+  "number": "-5.5%",
+  "numberColor": "danger",
+  "lines": [["CHIP RIVAL", "text"], ["FROM CHINA?", "accent"]],
+  "source": "KOSPI CLOSE · PER KED GLOBAL, OCT 13"
+ }
+}
