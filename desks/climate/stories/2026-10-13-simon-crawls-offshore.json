@@ -1,0 +1,482 @@
+{
+ "id": "2026-10-13-simon-crawls-offshore",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A hurricane has crawled along Mexico's coast for days. Is the worst still ahead?"
+  },
+  {
+   "id": "f1",
+   "text": "Hurricane Simon is creeping northwest at about three miles per hour, its eye offshore, the hurricane center said. Outer bands still hit towns near Puerto Vallarta, where the airport reopened to commercial flights Tuesday, its operator said."
+  },
+  {
+   "id": "f2",
+   "text": "Mexican officials reported five deaths from storms this week. Four were in Baja California, from the remnants of storm Rachel. One was in Guerrero, where a wall collapsed. Forecasters expect five to ten inches of rain along the coast, and up to fifteen in Sinaloa by Thursday."
+  },
+  {
+   "id": "f3",
+   "text": "Is the worst over? The hurricane center says some weakening is likely, and Reuters reports forecasters still warn of life-threatening flooding and mudslides. But Simon should stay a hurricane through midweek, and could strengthen again by Wednesday."
+  },
+  {
+   "id": "cta",
+   "text": "Will Simon come ashore in Mexico this week? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE CRAWL",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE TOLL",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE OUTLOOK",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -120,
+     "lat": 15,
+     "R": 360
+    },
+    {
+     "at": 3.4,
+     "lon": -106,
+     "lat": 19,
+     "R": 600
+    }
+   ],
+   "chip": {
+    "text": "HURRICANE SIMON · STILL OFFSHORE",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "MEX",
+     "color": "accent",
+     "at": "hook:hurricane",
+     "alpha": 0.45
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -105.23,
+      20.65
+     ],
+     "color": "accent",
+     "at": "hook:Mexico's",
+     "label": "PUERTO VALLARTA",
+     "sub": "OUTER BANDS",
+     "dx": -300,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:hurricane",
+    "lines": [
+     [
+      "STILL OFFSHORE",
+      "danger",
+      120
+     ],
+     [
+      "WORST AHEAD?",
+      "text",
+      130
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -105.5,
+    20
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -106.8,
+     "lat": 19,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": -106.8,
+     "lat": 17.5,
+     "dist": 26,
+     "pitch": 48,
+     "yaw": -6,
+     "oy": 150
+    },
+    {
+     "at": "f1:creeping",
+     "lon": -106.6,
+     "lat": 19.5,
+     "dist": 18,
+     "pitch": 52,
+     "yaw": 4,
+     "oy": 160
+    },
+    {
+     "at": "f1:Outer",
+     "lon": -106.2,
+     "lat": 20.3,
+     "dist": 16,
+     "pitch": 52,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "f2:Four",
+     "lon": -105.6,
+     "lat": 19.6,
+     "dist": 13,
+     "pitch": 54,
+     "yaw": -4,
+     "oy": 170
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": -106.8,
+     "lat": 20.4,
+     "dist": 22,
+     "pitch": 50,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "f3:strengthen",
+     "lon": -107.2,
+     "lat": 21.4,
+     "dist": 18,
+     "pitch": 52,
+     "yaw": 4,
+     "oy": 170
+    },
+    {
+     "at": "cta",
+     "lon": -106.3,
+     "lat": 20.5,
+     "dist": 40,
+     "pitch": 44,
+     "yaw": 4,
+     "oy": 120
+    }
+   ],
+   "layers": [
+    {
+     "kind": "track",
+     "at": "hook$",
+     "until": "cta +0.6",
+     "color": "storm",
+     "name": "SIMON",
+     "sub": "CREEPING · EYE OFFSHORE",
+     "forecast": 9,
+     "now": 4,
+     "cone": false,
+     "points": [
+      {
+       "loc": [
+        -104.2,
+        15.6
+       ],
+       "cat": 2,
+       "label": "CAT 2 · OCT 9",
+       "dx": 18,
+       "dy": 30,
+       "until": "f1"
+      },
+      {
+       "loc": [
+        -105.3,
+        17.2
+       ],
+       "cat": 3,
+       "until": "f1"
+      },
+      {
+       "loc": [
+        -106.0,
+        18.6
+       ],
+       "cat": 4,
+       "label": "CAT 4 · OCT 10-11",
+       "dx": 22,
+       "dy": 8,
+       "big": true,
+       "until": "f1"
+      },
+      {
+       "loc": [
+        -106.8,
+        19.8
+       ],
+       "cat": 3
+      },
+      {
+       "loc": [
+        -107.5,
+        20.6
+       ],
+       "cat": 2,
+       "label": "~100 MI W OF CABO CORRIENTES",
+       "dx": 22,
+       "dy": 8,
+       "big": true
+      }
+     ],
+     "steps": [
+      {
+       "at": "hook +0.3",
+       "to": 4,
+       "dur": 2.8
+      }
+     ],
+     "nameUntil": "f2",
+     "nameDx": -60,
+     "nameDy": -100
+    },
+    {
+     "kind": "note",
+     "text": "TRACK APPROXIMATE · SOURCES: CBS NEWS, CBC, AP, REUTERS",
+     "y": 1170,
+     "at": "f1 +1",
+     "until": "f2"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -105.23,
+      20.65
+     ],
+     "style": "dot",
+     "color": "ok",
+     "at": "f1:airport",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "PUERTO VALLARTA",
+      "sub": "AIRPORT REOPENED TUE",
+      "dx": -330,
+      "dy": 90,
+      "until": "f2 -0.2"
+     }
+    },
+    {
+     "kind": "field",
+     "palette": "rain",
+     "at": "f2:Forecasters",
+     "until": "cta +0.6",
+     "clip": "land",
+     "grow": 1.6,
+     "blobs": [
+      {
+       "loc": [
+        -105.2,
+        20.2
+       ],
+       "r": 2.2,
+       "v": 0.6
+      },
+      {
+       "loc": [
+        -104.2,
+        19.2
+       ],
+       "r": 2.0,
+       "v": 0.5
+      },
+      {
+       "loc": [
+        -107.3,
+        25.0
+       ],
+       "r": 2.6,
+       "v": 0.9
+      }
+     ],
+     "legend": {
+      "title": "RAIN FORECAST · ILLUSTRATIVE",
+      "low": "LESS",
+      "high": "MORE",
+      "screen": [
+       90,
+       1090
+      ]
+     }
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -107.3,
+      25.0
+     ],
+     "text": "SINALOA",
+     "sub": "UP TO 15 IN BY THU",
+     "color": "info",
+     "dx": -60,
+     "dy": -60,
+     "at": "f2:Sinaloa",
+     "until": "cta"
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f1:creeping",
+   "to": "f1:Outer -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "3 MPH",
+     "text": "MOVING NORTHWEST · EYE OFFSHORE",
+     "color": "danger",
+     "at": "f1:creeping"
+    },
+    {
+     "icon": "flag",
+     "big": "STILL A HURRICANE",
+     "text": "PER HURRICANE CENTER",
+     "color": "accent",
+     "at": "f1:eye"
+    }
+   ],
+   "source": "SOURCES: U.S. NATIONAL HURRICANE CENTER VIA CBS NEWS, AP"
+  },
+  {
+   "type": "counter",
+   "from": "f2:Mexican",
+   "to": "f3 -0.1",
+   "label": "DEATHS REPORTED IN MEXICO",
+   "sublabel": "SIMON + REMNANTS OF RACHEL · OFFICIAL COUNT",
+   "icon": "people",
+   "color": "accent",
+   "value": 5,
+   "start": 0,
+   "doneSuffix": "",
+   "decimals": 0,
+   "at": "f2:Mexican +0.3",
+   "doneAt": "f2:Mexican +1.6",
+   "note": "4 BAJA CALIFORNIA (RACHEL) · 1 GUERRERO (WALL COLLAPSE)",
+   "source": "SOURCE: MEXICAN CIVIL PROTECTION OFFICIALS VIA CBS NEWS, CBC"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -125,
+     "lat": 15,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -108,
+     "lat": 20,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": -104,
+     "lat": 21,
+     "R": 470
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "MEX",
+     "color": "accent",
+     "alpha": 0.5
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -105.23,
+      20.65
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "STILL A HURRICANE.",
+     "text"
+    ],
+    [
+     "WILL IT COME ASHORE?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "CBS NEWS, CBC, AP, REUTERS, OPEN JAW (SEARCH EXCERPTS)",
+    "OCT 12–13, 2026 · TRACK AND RAIN MAP APPROXIMATE"
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Hurricane Simon Is Still Crawling Off Mexico #shorts",
+  "description": "Hurricane Simon was creeping northwest at about 3 mph with its eye offshore, the U.S. National Hurricane Center said, and could stay a hurricane through midweek and strengthen again by Wednesday. Mexican officials reported five storm deaths this week, four in Baja California linked to the remnants of Rachel and one in Guerrero, and Puerto Vallarta airport reopened to commercial flights.\n\nSources: CBS News, CBC, AP, Reuters, Open Jaw (Oct 12-13, 2026; based on search-result excerpts, reports differ on Simon's exact category). Track and rain map are approximate.\n\n#climate #weather #HurricaneSimon",
+  "tags": [
+   "climate",
+   "weather",
+   "hurricane",
+   "Hurricane Simon",
+   "Mexico",
+   "Puerto Vallarta",
+   "extreme weather",
+   "news"
+  ],
+  "cover": "hook:crawled +0.4"
+ },
+ "thumbnail": {
+  "at": "f1 +3",
+  "number": "3 MPH",
+  "numberColor": "danger",
+  "source": "PER U.S. HURRICANE CENTER · OCT 13",
+  "focus": [
+   -106.5,
+   19.6
+  ],
+  "lines": [
+   [
+    "STILL OFFSHORE",
+    "text"
+   ],
+   [
+    "WORST AHEAD?",
+    "accent"
+   ]
+  ],
+  "zoom": 1.1
+ }
+}
