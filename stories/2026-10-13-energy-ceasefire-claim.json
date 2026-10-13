@@ -1,0 +1,446 @@
+{
+ "id": "2026-10-13-energy-ceasefire-claim",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Trump announced an energy truce. Then a power plant burned. Did Russia agree?"
+  },
+  {
+   "id": "f1",
+   "text": "On Sunday, Trump posted that Russia and Ukraine agreed to an immediate energy ceasefire. His post gave no details. It ended: Do not break it. Zelenskyy said he first heard about it from the media."
+  },
+  {
+   "id": "f2",
+   "text": "Hours later, Ukraine says Russia hit a power plant in Kharkiv, and gas sites of the state company Naftogaz. Zelenskyy says Russia carried out more than two hundred strikes on Ukraine's power system this week. Those are Ukrainian claims."
+  },
+  {
+   "id": "f3",
+   "text": "Kyiv says it will pause if Moscow does. The Kremlin would not say whether it agreed. Spokesman Dmitry Peskov said only, contacts are ongoing. The Associated Press notes Trump announced a similar deal before. It did not hold."
+  },
+  {
+   "id": "cta",
+   "text": "Will both sides stop hitting energy sites before winter? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE ANNOUNCEMENT",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "THE STRIKES",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "MOSCOW'S SILENCE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "upload": {
+  "title": "Trump Declared an Energy Truce. Russia Hit a Power Plant #shorts",
+  "description": "Trump announced on October 11 that Russia and Ukraine agreed to an immediate energy ceasefire. Ukraine says Russia struck a Kharkiv power plant and gas facilities hours later. The Kremlin has not confirmed any agreement; spokesman Dmitry Peskov said only that contacts are ongoing.\n\nSources:\nPBS NewsHour / AP: Zelenskyy says Russia strikes energy facilities despite Trump claim of an energy ceasefire (Oct 12, 2026)\nAxios: Trump says Russia and Ukraine agreed to immediate energy ceasefire (Oct 11, 2026)\nNBC News: Trump claims 'energy ceasefire,' but Ukraine says Russia keeps striking its energy facilities (Oct 2026)\nThe Moscow Times: Zelensky accuses Russia of breaking energy ceasefire as Kremlin says talks ongoing (Oct 12, 2026)\nEuromaidan Press: Hours after Trump declared an energy ceasefire, Russia hit Kharkiv power plant (Oct 11, 2026)\n\n#geopolitics #Ukraine #Russia #Ceasefire",
+  "tags": [
+   "geopolitics",
+   "Ukraine",
+   "Russia",
+   "energy ceasefire",
+   "Trump",
+   "Zelensky",
+   "Kharkiv",
+   "Peskov",
+   "world news",
+   "war in Ukraine"
+  ],
+  "cover": "f2:Hours +0.5"
+ },
+ "thumbnail": {
+  "at": "f2:Kharkiv",
+  "focus": "Kharkiv",
+  "zoom": 1.4,
+  "number": "200+",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "TRUCE ANNOUNCED",
+    "text"
+   ],
+   [
+    "MOSCOW SILENT",
+    "accent"
+   ]
+  ],
+  "source": "STRIKES ON GRID THIS WEEK \u00b7 PER ZELENSKYY"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 10,
+     "lat": 35,
+     "R": 360
+    },
+    {
+     "at": 3.4,
+     "lon": 31,
+     "lat": 49,
+     "R": 480
+    }
+   ],
+   "chip": {
+    "text": "UKRAINE \u00b7 OCT 13, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "UKR",
+     "color": "info",
+     "at": "hook:energy"
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "at": "hook:Russia"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Kharkiv",
+     "color": "danger",
+     "at": "hook:power",
+     "label": "KHARKIV",
+     "dx": 90,
+     "dy": -70,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:energy",
+    "lines": [
+     [
+      "ENERGY TRUCE",
+      "text",
+      110
+     ],
+     [
+      "OR NOT?",
+      "danger",
+      120
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:burned.",
+    "icon": "bolt",
+    "iconColor": "danger",
+    "color": "danger",
+    "kicker": "KHARKIV",
+    "title": "PLANT HIT",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    33,
+    49.5
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 31,
+     "lat": 49,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 31,
+     "lat": 49.5,
+     "dist": 46,
+     "pitch": 44,
+     "yaw": -5,
+     "oy": 180
+    },
+    {
+     "at": "f1:Zelenskyy",
+     "lon": 31,
+     "lat": 50,
+     "dist": 30,
+     "pitch": 48,
+     "yaw": 3,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 35.5,
+     "lat": 49.8,
+     "dist": 22,
+     "pitch": 52,
+     "yaw": -6,
+     "oy": 190
+    },
+    {
+     "at": "f2:Zelenskyy",
+     "lon": 32,
+     "lat": 49,
+     "dist": 40,
+     "pitch": 48,
+     "yaw": 5,
+     "oy": 180
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": 34,
+     "lat": 52,
+     "dist": 62,
+     "pitch": 42,
+     "yaw": 6,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 33,
+     "lat": 50,
+     "dist": 56,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.55,
+     "fill": 0.12,
+     "at": "f1"
+    },
+    {
+     "kind": "tint",
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.35,
+     "fill": 0.06,
+     "at": "f2"
+    },
+    {
+     "kind": "callout",
+     "loc": "Kiev",
+     "place": "WASHINGTON",
+     "icon": "flag",
+     "screen": [
+      120,
+      330
+     ],
+     "color": "info",
+     "at": "f1:Trump",
+     "until": "f2 -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "ENERGY CEASEFIRE",
+     "icon": "bolt",
+     "color": "accent",
+     "screen": [
+      540,
+      1010
+     ],
+     "at": "f1:immediate",
+     "until": "f1:Zelenskyy",
+     "note": "CLAIMED BY TRUMP \u00b7 OCT 11"
+    },
+    {
+     "kind": "stamp",
+     "text": "NOT CONFIRMED",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      540,
+      1010
+     ],
+     "at": "f1:Zelenskyy",
+     "until": "f2 -0.1",
+     "note": "ZELENSKYY LEARNED FROM MEDIA"
+    },
+    {
+     "kind": "marker",
+     "loc": "Kharkiv",
+     "style": "pulse",
+     "color": "danger",
+     "at": "f2:Kharkiv,",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "KHARKIV",
+      "sub": "POWER PLANT",
+      "dx": 100,
+      "dy": -70
+     }
+    },
+    {
+     "kind": "tag",
+     "loc": "Kharkiv",
+     "text": "NAFTOGAZ",
+     "sub": "GAS SITES",
+     "color": "ally",
+     "at": "f2:Naftogaz.",
+     "until": "f3 -0.2",
+     "dx": 110,
+     "dy": 90
+    },
+    {
+     "kind": "arc",
+     "from": [
+      37.6,
+      55.7
+     ],
+     "to": [
+      36.2,
+      49.99
+     ],
+     "color": "danger",
+     "height": 0.5,
+     "width": 6,
+     "at": "f2:Hours",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      60,
+      290,
+      560
+     ],
+     "title": "THIS WEEK",
+     "badge": "PER ZELENSKYY",
+     "color": "danger",
+     "at": "f2:Zelenskyy",
+     "until": "f3 -0.2",
+     "rows": [
+      {
+       "icon": "bolt",
+       "text": "200+ STRIKES ON GRID",
+       "at": "f2:Zelenskyy"
+      },
+      {
+       "icon": "flag",
+       "text": "UKRAINIAN CLAIM",
+       "at": "f2:Those"
+      }
+     ]
+    },
+    {
+     "kind": "tag",
+     "loc": "Moscow",
+     "text": "MOSCOW",
+     "color": "danger",
+     "at": "f3",
+     "until": "cta",
+     "dy": -70
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      380,
+      420,
+      640
+     ],
+     "kicker": "KREMLIN (PESKOV):",
+     "text": "\"CONTACTS ARE ONGOING\"",
+     "color": "danger",
+     "at": "f3:Spokesman",
+     "until": "f3:The"
+    },
+    {
+     "kind": "stamp",
+     "text": "HELD BEFORE?",
+     "icon": "x",
+     "color": "accent",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f3:Associated",
+     "until": "cta",
+     "note": "EARLIER TRUMP ENERGY DEAL \u00b7 DID NOT HOLD \u00b7 PER AP"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 31,
+     "lat": 49,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 31,
+     "lat": 49,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": 36,
+     "lat": 50,
+     "R": 470
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.8
+    },
+    {
+     "iso": "RUS",
+     "color": "danger"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Kiev",
+     "color": "info"
+    },
+    {
+     "loc": "Moscow",
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "A TRUCE ANNOUNCED.",
+     "text"
+    ],
+    [
+     "NOT CONFIRMED.",
+     "danger"
+    ]
+   ],
+   "sources": [
+    "REPORTING: AP/PBS, AXIOS, NBC NEWS, MOSCOW TIMES",
+    "OCT 11\u201312, 2026"
+   ]
+  }
+ ]
+}
