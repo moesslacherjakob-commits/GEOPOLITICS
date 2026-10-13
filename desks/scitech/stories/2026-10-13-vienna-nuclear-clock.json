@@ -1,0 +1,290 @@
+{
+ "id": "2026-10-13-vienna-nuclear-clock",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A clock inside an atom's nucleus just ran for a full day. Why care?"
+  },
+  {
+   "id": "f1",
+   "text": "In a study published in Nature on October seventh, physicists in Vienna reported a working nuclear clock. A laser excites the nucleus of thorium two twenty nine, held in a calcium fluoride crystal about a millimetre across. Nuclei are far less disturbed by stray fields."
+  },
+  {
+   "id": "f2",
+   "text": "The team from TU Wien and Germany's national metrology institute P.T.B. says a feedback loop corrects the laser on its own. The clock ran unattended for more than twenty four hours. Its stability approached one part in a quadrillion over a day."
+  },
+  {
+   "id": "f3",
+   "text": "The catch: it does not beat today's best optical clocks. The researchers present it as a feasibility milestone. A team in China reported a second nuclear clock. The long-term hope is to test whether nature's constants change."
+  },
+  {
+   "id": "cta",
+   "text": "Will nuclear clocks one day redefine the second? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE FINDING",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "HOW IT WORKS",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "THE CATCH",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Vienna Lab Runs a Nuclear Clock for 24 Hours #shorts",
+  "description": "Physicists at TU Wien and Germany's PTB report a thorium-229 nuclear clock that corrected its own laser and ran unattended for more than 24 hours, according to a study published in Nature on October 7, 2026. It does not beat the best optical clocks; the authors present it as a feasibility milestone. A second nuclear clock from a team in China was also reported (from secondary coverage).\n\nSources: Nature (Oct 7, 2026); TU Wien / PTB press release via EurekAlert; Interesting Engineering; ScienceDaily.\n\n#science #physics #nuclearclock",
+  "tags": [
+   "science",
+   "news",
+   "nuclear clock",
+   "thorium-229",
+   "TU Wien",
+   "PTB",
+   "Nature",
+   "physics",
+   "timekeeping"
+  ],
+  "cover": "hook:nucleus, +0.4"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [
+   16.37,
+   48.21
+  ],
+  "number": "24 H",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "A CLOCK IN",
+    "text"
+   ],
+   [
+    "AN ATOM?",
+    "accent"
+   ]
+  ],
+  "source": "NATURE · OCT 7 · TU WIEN / PTB"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": 10,
+     "lat": 40,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": 16.4,
+     "lat": 48.2,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "PHYSICS · NATURE STUDY",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      16.37,
+      48.21
+     ],
+     "color": "accent",
+     "at": "hook:nucleus",
+     "label": "VIENNA",
+     "sub": "TU WIEN LAB",
+     "dx": -30,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:inside",
+    "lines": [
+     [
+      "A NUCLEAR",
+      "text",
+      120
+     ],
+     [
+      "CLOCK RAN 24 H",
+      "accent",
+      90
+     ]
+    ]
+   }
+  },
+  {
+   "type": "flow",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "HOW A NUCLEAR CLOCK TICKS",
+   "color": "accent",
+   "steps": [
+    {
+     "icon": "bolt",
+     "title": "LASER",
+     "sub": "TUNED TO THE NUCLEUS",
+     "color": "accent",
+     "at": "f1:physicists"
+    },
+    {
+     "icon": "nuke",
+     "title": "THORIUM-229 NUCLEUS",
+     "sub": "IN A CALCIUM FLUORIDE CRYSTAL",
+     "color": "info",
+     "at": "f1:laser"
+    },
+    {
+     "icon": "eye",
+     "title": "ABSORPTION = TICK",
+     "sub": "SIGNAL KEEPS THE LASER ON TARGET",
+     "color": "ok",
+     "at": "f1:thorium"
+    }
+   ],
+   "source": "NATURE · TU WIEN / PTB · INTERESTING ENGINEERING"
+  },
+  {
+   "type": "counter",
+   "from": "f2 -0.1",
+   "to": "f2:Its -0.1",
+   "label": "RAN UNATTENDED",
+   "sublabel": "TU WIEN + PTB · NATURE",
+   "icon": "bolt",
+   "color": "accent",
+   "value": 24,
+   "start": 0,
+   "prefix": "",
+   "suffix": "+ H",
+   "doneSuffix": "+ HOURS",
+   "decimals": 0,
+   "at": "f2:says",
+   "doneAt": "f2:ran +1.2",
+   "note": "MORE THAN 24 HOURS · PER THE AUTHORS",
+   "source": "NATURE · TU WIEN / PTB · INTERESTING ENGINEERING"
+  },
+  {
+   "type": "facts",
+   "from": "f2:Its -0.1",
+   "to": "f3 -0.1",
+   "color": "violet",
+   "items": [
+    {
+     "icon": "check",
+     "big": "SELF-CORRECTING",
+     "text": "FEEDBACK LOOP FIXES LASER DRIFT · PER TU WIEN",
+     "color": "violet",
+     "at": "f2:Its"
+    },
+    {
+     "icon": "thermo",
+     "big": "10⁻¹⁵",
+     "text": "STABILITY OVER A DAY · ONE PART IN A QUADRILLION",
+     "color": "accent",
+     "at": "f2:one"
+    }
+   ],
+   "source": "NATURE · TU WIEN / PTB · INTERESTING ENGINEERING"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "x",
+     "big": "NOT A RECORD",
+     "text": "DOES NOT BEAT THE BEST OPTICAL CLOCKS",
+     "color": "danger",
+     "at": "f3:catch"
+    },
+    {
+     "icon": "flag",
+     "big": "CHINA TOO",
+     "text": "SECOND NUCLEAR CLOCK REPORTED · SECONDARY SOURCES",
+     "color": "info",
+     "at": "f3:A"
+    },
+    {
+     "icon": "eye",
+     "big": "LONG-TERM GOAL",
+     "text": "TEST WHETHER NATURE'S CONSTANTS CHANGE",
+     "color": "accent",
+     "at": "f3:The"
+    }
+   ],
+   "source": "SOURCES: NATURE · TU WIEN / PTB · INTERESTING ENGINEERING"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 16,
+     "lat": 48,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 16.4,
+     "lat": 48.2,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": 30,
+     "lat": 45,
+     "R": 470
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      16.37,
+      48.21
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "WILL THE SECOND",
+     "text"
+    ],
+    [
+     "BE REDEFINED?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "NATURE · TU WIEN / PTB · INTERESTING ENGINEERING",
+    "PROTOTYPE · NOT A RECORD"
+   ]
+  }
+ ]
+}
