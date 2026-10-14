@@ -32,5 +32,12 @@
       "NATO": "NATO",
       "MBS": "M.B.S."
     }
+  },
+  "tiktok": {
+    "enabled": true,
+    "blogId": "7136260",
+    "privacyOption": "PUBLIC_TO_EVERYONE",
+    "isAigc": true,
+    "note": "One TikTok account for all four channels (geopolitics, economy, scitech, climate). It is connected in Metricool to the brand with this blogId; until it is, PLAYBOOK step 8b skips TikTok. A desk config may override single fields."
   }
 }

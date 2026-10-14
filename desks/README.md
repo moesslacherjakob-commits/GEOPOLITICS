@@ -10,6 +10,8 @@ One repo, one engine, one folder per channel. @GEOPOLITICS4YOU still runs from t
 
 All desks publish automatically (`autoPublish: true`, Jakob's decision 2026-10-10).
 
+**TikTok:** every desk also posts its video at the same time to the one shared 4YOU TikTok account (settings in the root `config.json → tiktok`, copied into `upload.json` by `make.sh`; steps in `desks/PLAYBOOK.md` §8b). Until TikTok is connected in Metricool to brand `tiktok.blogId` (currently 7136260, @GEOPOLITICS4YOU), the step skips itself.
+
 ## Per desk
 - `config.json` — channel, Metricool brand, post time, days, YouTube category, media branch, disclaimer (base text + desk line), `theme.accent`, pace, voice + `voice.say`
 - `DESK.md` — sources, story selection, desk rules, visual grammar, upload conventions

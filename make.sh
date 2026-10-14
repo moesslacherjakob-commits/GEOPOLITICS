@@ -55,6 +55,12 @@ if disc and disc not in u.get('description', ''):
     parts = u.get('description', '').rstrip().split('\n\n')
     tail = [parts.pop()] if parts and parts[-1].lstrip().startswith('#') else []
     u['description'] = '\n\n'.join(parts + [disc] + tail)
+try:  # shared TikTok account (root config.json -> tiktok); never let this break the YouTube metadata
+    sys.path.insert(0, 'tools'); from tiktok_meta import tiktok_meta
+    t = tiktok_meta(u, cfg, json.load(open('config.json')))
+    if t: u['tiktok'] = t
+except Exception as e:
+    print('WARNING: TikTok metadata failed:', e)
 json.dump(u, open(out + '/upload.json', 'w'), indent=1, ensure_ascii=False)
 PY
 rm -f "$OUT"/seg_*.mp4 "$OUT"/pl*.log* "$OUT"/caps.txt "$OUT"/clean.txt
