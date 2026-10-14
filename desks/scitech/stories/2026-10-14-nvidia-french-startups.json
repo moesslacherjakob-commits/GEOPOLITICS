@@ -1,0 +1,288 @@
+{
+ "id": "2026-10-14-nvidia-french-startups",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Nvidia just bought into four French AI firms. Why would a chip giant do that?"
+  },
+  {
+   "id": "f1",
+   "text": "On October thirteenth, in Paris, Nvidia chief Jensen Huang announced minority stakes in Doctolib, Genesis A.I., Pigment and Entalpic, according to French newspaper Les Echos. Neither Nvidia nor the startups have disclosed stake sizes or valuations. Two of the firms had not confirmed it publicly."
+  },
+  {
+   "id": "f2",
+   "text": "The four span health bookings, robot software, business planning and A.I. for materials discovery. Doctolib's chief executive says the money will fund hiring and its own A.I. models, which would run on Nvidia chips. Nvidia has not commented."
+  },
+  {
+   "id": "f3",
+   "text": "Here is the answer. Nvidia says it has committed nearly ten billion dollars across Europe's tech sector. Investing in customers can grow demand for its chips. Critics call that circular; Nvidia has not said that is the aim."
+  },
+  {
+   "id": "cta",
+   "text": "Will Europe build its own A.I. champions on Nvidia chips? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE STAKES",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE FOUR",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "WHY IT MATTERS",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Nvidia Takes Stakes in Four French AI Firms #shorts",
+  "description": "Nvidia CEO Jensen Huang announced minority stakes in four French companies, Doctolib, Genesis AI, Pigment and Entalpic, at a reception in Paris on October 13, 2026, according to Les Echos and other reports. Stake sizes and valuations were not disclosed; not all startups had confirmed publicly. Nvidia says it has committed nearly $10 billion to Europe's tech sector overall. The idea that such investments are \"circular\" is a criticism by observers, not a finding.\n\nSources: Les Echos via Yahoo Finance; Trending Topics; EU-Startups; Nvidia statements as reported.\n\n#tech #AI #Nvidia",
+  "tags": [
+   "technology",
+   "news",
+   "Nvidia",
+   "France",
+   "AI",
+   "Doctolib",
+   "Genesis AI",
+   "Pigment",
+   "Entalpic",
+   "Jensen Huang"
+  ],
+  "cover": "hook:four, +0.4"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [
+   2.35,
+   48.86
+  ],
+  "number": "4",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "NVIDIA BUYS",
+    "text"
+   ],
+   [
+    "INTO FRANCE",
+    "accent"
+   ]
+  ],
+  "source": "OCT 13 · PER LES ECHOS · STAKES UNDISCLOSED"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": -122,
+     "lat": 37.4,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": 2.35,
+     "lat": 48.9,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "AI · OCT 13, 2026",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "FRA",
+     "color": "info",
+     "at": "hook:four",
+     "alpha": 0.5
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      2.35,
+      48.86
+     ],
+     "color": "accent",
+     "at": "hook:four",
+     "label": "PARIS",
+     "sub": "HUANG ANNOUNCES STAKES",
+     "dx": -30,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:French",
+    "lines": [
+     [
+      "NVIDIA BACKS",
+      "text",
+      120
+     ],
+     [
+      "4 FRENCH AI FIRMS",
+      "accent",
+      90
+     ]
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "WHAT WAS ANNOUNCED",
+   "color": "accent",
+   "items": [
+    {
+     "date": "OCT 13, 2026",
+     "title": "HUANG ANNOUNCES IN PARIS",
+     "sub": "RECEPTION WITH FRENCH ECONOMY MINISTER",
+     "color": "accent",
+     "at": "f1:Paris"
+    },
+    {
+     "date": "STAKES",
+     "title": "MINORITY STAKES IN 4 FIRMS",
+     "sub": "DOCTOLIB · GENESIS AI · PIGMENT · ENTALPIC",
+     "color": "info",
+     "big": true,
+     "at": "f1:minority"
+    },
+    {
+     "date": "TERMS",
+     "title": "AMOUNTS NOT DISCLOSED",
+     "sub": "NO STAKE SIZES OR VALUATIONS",
+     "color": "danger",
+     "at": "f1:Neither"
+    }
+   ],
+   "source": "SOURCES: LES ECHOS VIA YAHOO FINANCE · TRENDING TOPICS · EU-STARTUPS"
+  },
+  {
+   "type": "facts",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "color": "violet",
+   "items": [
+    {
+     "icon": "people",
+     "big": "DOCTOLIB",
+     "text": "HEALTH BOOKINGS · WILL BUILD OWN AI MODELS ON NVIDIA CHIPS",
+     "color": "violet",
+     "at": "f2:The"
+    },
+    {
+     "icon": "chip",
+     "big": "GENESIS AI + ENTALPIC",
+     "text": "ROBOT SOFTWARE · AI FOR MATERIALS DISCOVERY",
+     "color": "accent",
+     "at": "f2:robot"
+    },
+    {
+     "icon": "money",
+     "big": "PIGMENT",
+     "text": "BUSINESS PLANNING SOFTWARE · STAKE NOT CONFIRMED BY FIRM",
+     "color": "info",
+     "at": "f2:business"
+    }
+   ],
+   "source": "SOURCES: LES ECHOS VIA YAHOO FINANCE · TRENDING TOPICS · EU-STARTUPS"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "money",
+     "big": "≈ $10 BILLION",
+     "text": "NVIDIA'S STATED EUROPE COMMITMENT · PER NVIDIA",
+     "color": "accent",
+     "at": "f3:Nvidia"
+    },
+    {
+     "icon": "chip",
+     "big": "MORE DEMAND",
+     "text": "INVESTEES CAN BUY MORE NVIDIA CHIPS · ANALYSIS",
+     "color": "info",
+     "at": "f3:Investing"
+    },
+    {
+     "icon": "eye",
+     "big": "“CIRCULAR”",
+     "text": "CRITICS' TERM · NVIDIA HAS NOT SAID THIS IS THE AIM",
+     "color": "danger",
+     "at": "f3:Critics"
+    }
+   ],
+   "source": "SOURCES: LES ECHOS VIA YAHOO FINANCE · TRENDING TOPICS · EU-STARTUPS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -122,
+     "lat": 37.4,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 2.35,
+     "lat": 48.9,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": 10,
+     "lat": 48,
+     "R": 470
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      2.35,
+      48.86
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "WILL EUROPE'S AI",
+     "text"
+    ],
+    [
+     "RUN ON NVIDIA?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "LES ECHOS VIA YAHOO FINANCE · TRENDING TOPICS · EU-STARTUPS",
+    "STAKE SIZES UNDISCLOSED · COMPANY STATEMENTS"
+   ]
+  }
+ ]
+}
