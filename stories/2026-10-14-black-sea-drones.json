@@ -1,0 +1,440 @@
+{
+ "id": "2026-10-14-black-sea-drones",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Drones sank a ship in NATO waters. Eleven sailors are missing. Who sent them?"
+  },
+  {
+   "id": "f1",
+   "text": "Overnight, drones hit two cargo ships about thirty kilometers off Bulgaria's coast. One, the Dignity, sank. Reuters reports five crew rescued and eleven missing. The other ship, the Chelsea 3, was damaged. All fifteen of its crew survived."
+  },
+  {
+   "id": "f2",
+   "text": "Bulgaria's prime minister, Rumen Radev, called it absolutely unacceptable. He has no clear evidence of who did it, he said, but the result favors Russia. Ukraine blames Russia outright. Russia's ambassador said she had no information, and did not rule out a provocation."
+  },
+  {
+   "id": "f3",
+   "text": "A week earlier, drones sank another ship in Bulgarian waters. Ten sailors were lost. Radev has asked NATO and the EU for help. NATO chief Mark Rutte says the alliance will adjust its defenses. EU leaders discuss it this week."
+  },
+  {
+   "id": "cta",
+   "text": "Will NATO step up patrols in the Black Sea? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE ATTACK",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "WHO SENT THEM?",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "NATO'S MOVE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Drones Sank a Ship Off Bulgaria. 11 Sailors Missing #shorts",
+  "description": "Overnight on October 13, drones struck two cargo ships off Bulgaria's Black Sea coast. One, the Guinea-Bissau-flagged Dignity, sank; Reuters reports eleven crew missing. Bulgarian Prime Minister Rumen Radev said there is no clear evidence of who is responsible but that the result favors Russia; Ukraine blames Russia. Bulgaria has asked NATO and the EU for help. Reports differ on the sunken ship's name and the exact number of missing.\n\nSources:\nReuters via Lufkin Daily News: Eleven sailors missing after drone sinks ship off Bulgaria (Oct 13, 2026)\nAl Jazeera: Drone attack sinks ship off Bulgaria's Black Sea coast, PM says (Oct 13, 2026)\nThe Moscow Times: Bulgaria summons Russian ambassador after drone attack sinks ship, leaving 11 missing (Oct 13, 2026)\nStars and Stripes: Bulgaria seeks NATO help after new drone strikes in Black Sea (Oct 13, 2026)\nKyiv Independent: 'Absolutely unacceptable' - 11 crew members lost at sea after commercial ships hit by drones near Bulgaria's Black Sea coast (Oct 13, 2026)\n\n#geopolitics #Bulgaria #BlackSea #NATO\n\nℹ️ About this video: The information was carefully researched from the sources listed above. The script, visuals and edit were created with the help of AI. AI can make mistakes, so please check the linked sources for important details. All content is provided to the best of our knowledge and belief, without guarantee of accuracy or completeness and without liability.",
+  "tags": [
+   "geopolitics",
+   "Black Sea",
+   "Bulgaria",
+   "drone attack",
+   "NATO",
+   "Russia",
+   "Ukraine",
+   "Radev",
+   "Rutte",
+   "world news",
+   "shipping"
+  ],
+  "cover": "f1:Dignity, +0.3"
+ },
+ "thumbnail": {
+  "at": "f1:Dignity,",
+  "focus": [
+   28.6,
+   43.65
+  ],
+  "zoom": 1.5,
+  "number": "11",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "SHIP SUNK",
+    "text"
+   ],
+   [
+    "WHO DID IT?",
+    "accent"
+   ]
+  ],
+  "source": "SAILORS MISSING · PER REUTERS"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 20,
+     "lat": 40,
+     "R": 360
+    },
+    {
+     "at": 3.4,
+     "lon": 30,
+     "lat": 44,
+     "R": 520
+    }
+   ],
+   "chip": {
+    "text": "BLACK SEA · OCT 14, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "BGR",
+     "color": "info",
+     "at": "hook:NATO"
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "at": "hook:Who"
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      28.6,
+      43.65
+     ],
+     "color": "danger",
+     "at": "hook:ship",
+     "label": "OFF BULGARIA",
+     "dx": -120,
+     "dy": -70,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:sank",
+    "lines": [
+     [
+      "SHIP SUNK",
+      "text",
+      110
+     ],
+     [
+      "WHO SENT THEM?",
+      "danger",
+      100
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:Eleven",
+    "icon": "ship",
+    "iconColor": "danger",
+    "color": "danger",
+    "kicker": "11 MISSING",
+    "title": "PER REUTERS",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    28,
+    44
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 30,
+     "lat": 44,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 28.5,
+     "lat": 43.8,
+     "dist": 13,
+     "pitch": 48,
+     "yaw": -5,
+     "oy": 190
+    },
+    {
+     "at": "f1:Chelsea",
+     "lon": 28.8,
+     "lat": 43.9,
+     "dist": 11,
+     "pitch": 52,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 28,
+     "lat": 44.5,
+     "dist": 40,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 190
+    },
+    {
+     "at": "f2:Ukraine",
+     "lon": 32,
+     "lat": 46,
+     "dist": 55,
+     "pitch": 44,
+     "yaw": 5,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 27,
+     "lat": 43.5,
+     "dist": 40,
+     "pitch": 46,
+     "yaw": -4,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 29,
+     "lat": 44,
+     "dist": 62,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "BGR",
+     "color": "info",
+     "alpha": 0.55,
+     "fill": 0.12,
+     "at": "f1"
+    },
+    {
+     "kind": "tint",
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.3,
+     "fill": 0.05,
+     "at": "f2:Russia"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      28.6,
+      43.65
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f1:One,",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "DIGNITY SUNK",
+      "sub": "11 MISSING · REUTERS",
+      "dx": -250,
+      "dy": -90
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      29.2,
+      44.1
+     ],
+     "style": "pulse",
+     "color": "ally",
+     "at": "f1:Chelsea",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "CHELSEA 3",
+      "sub": "ALL 15 SAFE",
+      "dx": 120,
+      "dy": -20
+     }
+    },
+    {
+     "kind": "tag",
+     "loc": "Sofia",
+     "text": "SOFIA",
+     "sub": "AMBASSADOR SUMMONED",
+     "color": "info",
+     "at": "f2:ambassador",
+     "until": "f3 -0.2",
+     "dx": -60,
+     "dy": -80
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      360,
+      400,
+      660
+     ],
+     "kicker": "PM RADEV:",
+     "text": "\"ABSOLUTELY UNACCEPTABLE\"",
+     "color": "accent",
+     "at": "f2:called",
+     "until": "f2:He"
+    },
+    {
+     "kind": "stamp",
+     "text": "NO CLEAR PROOF",
+     "icon": "eye",
+     "color": "accent",
+     "screen": [
+      540,
+      1010
+     ],
+     "at": "f2:He",
+     "until": "f2:Ukraine",
+     "note": "RADEV: RESULT FAVORS RUSSIA"
+    },
+    {
+     "kind": "stamp",
+     "text": "UKRAINE BLAMES RUSSIA",
+     "icon": "flag",
+     "color": "danger",
+     "screen": [
+      540,
+      1010
+     ],
+     "at": "f2:Ukraine",
+     "until": "f3 -0.2",
+     "note": "RUSSIA'S ENVOY: NO INFORMATION"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      27.9,
+      43.2
+     ],
+     "text": "OCT 6",
+     "sub": "10 SAILORS LOST",
+     "color": "ally",
+     "at": "f3:A",
+     "until": "cta",
+     "dx": -110,
+     "dy": 70
+    },
+    {
+     "kind": "callout",
+     "loc": "Sofia",
+     "place": "BRUSSELS · NATO",
+     "icon": "shield",
+     "screen": [
+      140,
+      330
+     ],
+     "color": "info",
+     "at": "f3:Radev",
+     "until": "cta"
+    },
+    {
+     "kind": "stamp",
+     "text": "NATO TO ADJUST",
+     "icon": "shield",
+     "color": "info",
+     "screen": [
+      540,
+      1010
+     ],
+     "at": "f3:NATO",
+     "until": "cta",
+     "note": "PER RUTTE · EU SUMMIT THIS WEEK"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 29,
+     "lat": 44,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 29,
+     "lat": 44,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": 31,
+     "lat": 44,
+     "R": 520
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "BGR",
+     "color": "info",
+     "alpha": 0.8
+    },
+    {
+     "iso": "RUS",
+     "color": "danger"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Sofia",
+     "color": "info"
+    },
+    {
+     "loc": [
+      28.6,
+      43.65
+     ],
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "A SHIP SUNK.",
+     "text"
+    ],
+    [
+     "WHO IS BEHIND IT?",
+     "danger"
+    ]
+   ],
+   "sources": [
+    "REPORTING: REUTERS, AL JAZEERA, MOSCOW TIMES, STARS AND STRIPES",
+    "OCT 13, 2026"
+   ]
+  }
+ ]
+}
