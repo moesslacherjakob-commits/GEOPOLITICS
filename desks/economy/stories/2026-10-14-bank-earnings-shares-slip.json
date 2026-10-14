@@ -1,0 +1,93 @@
+{
+ "id": "2026-10-14-bank-earnings-shares-slip",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Four giant U.S. banks just reported earnings. Most of their shares slipped. Why?"},
+  {"id": "f1", "text": "JPMorgan missed Wall Street's forecasts on Tuesday, CNBC reports. Its bond trading revenue fell 4 percent, the first drop in more than two years. Its shares ended the day down 0.9 percent."},
+  {"id": "f2", "text": "Goldman Sachs earned 17.01 dollars a share, against 13.09 expected. Citigroup earned 2.85 against 2.65 expected, on revenue of 23.8 billion dollars. Yet Citigroup shares fell, and Wells Fargo lost 3 percent after its revenue missed."},
+  {"id": "f3", "text": "Reports point to cautious outlooks. Citigroup told analysts to expect trading revenue to fall about 20 percent next quarter. Shares move on expectations, not just results. The S and P 500 closed almost flat."},
+  {"id": "cta", "text": "Will bank trading profits keep growing next quarter? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE MISS", "seg": "f1", "color": "danger"},
+  {"n": "02", "name": "THE BEATS", "seg": "f2", "color": "accent"},
+  {"n": "03", "name": "THE CATCH", "seg": "f3", "to": "cta -0.2", "color": "oil"}
+ ],
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.25", "exit": "zoom",
+   "view": [
+    {"at": 0, "lon": -40, "lat": 35, "R": 360},
+    {"at": 3.2, "lon": -74, "lat": 40.7, "R": 700}
+   ],
+   "chip": {"text": "MARKETS · OCT 13, 2026", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "USA", "color": "accent", "at": "hook:earnings.", "alpha": 0.35}],
+   "headline": {"at": "hook:banks", "lines": [["BANK EARNINGS", "accent", 115], ["SHARES SLIP?", "danger", 125]]}
+  },
+  {
+   "type": "map", "from": "hook$ +0.25", "to": "f1:Its -0.1", "center": [-74, 40.7],
+   "camera": [
+    {"at": "hook$ +0.25", "lon": -74, "lat": 40.7, "dist": 43, "pitch": 0, "yaw": 0, "oy": 0},
+    {"at": "f1 +0.4", "lon": -74, "lat": 40.7, "dist": 18, "pitch": 48, "yaw": -6, "oy": 170},
+    {"at": "f1:bond", "lon": -73.9, "lat": 40.75, "dist": 16, "pitch": 50, "yaw": 4, "oy": 170}
+   ],
+   "layers": [
+    {"kind": "tag", "loc": "New York", "text": "BANK EARNINGS", "sub": "Q3 · TUESDAY, OCT 13 · PER CNBC", "color": "accent", "at": "f1", "dx": 40, "dy": -170, "size": 30}
+   ]
+  },
+  {
+   "type": "counter", "from": "f1:Its -0.1", "to": "f2 -0.1",
+   "label": "JPMORGAN BOND TRADING REVENUE", "sublabel": "THIRD QUARTER",
+   "icon": "money", "color": "danger", "value": -4, "start": 0,
+   "prefix": "", "suffix": "%", "doneSuffix": "", "decimals": 0,
+   "at": "f1:bond", "doneAt": "f1:4 +0.8",
+   "note": "FIRST DROP IN MORE THAN 2 YEARS · SHARES -0.9%",
+   "source": "SOURCES: CNBC · FORBES · MITRADE"
+  },
+  {
+   "type": "facts", "from": "f2 -0.1", "to": "f3 -0.1",
+   "items": [
+    {"icon": "check", "big": "$17.01", "text": "GOLDMAN EPS · $13.09 EXPECTED", "color": "ok", "at": "f2:Goldman"},
+    {"icon": "check", "big": "$2.85", "text": "CITIGROUP EPS · $2.65 EXPECTED", "color": "ok", "at": "f2:Citigroup"},
+    {"icon": "x", "big": "-3%", "text": "WELLS FARGO SHARES · REVENUE MISSED", "color": "danger", "at": "f2:Wells"}
+   ],
+   "source": "SOURCES: CNBC · MITRADE · CITIGROUP 8-K · EPS = EARNINGS PER SHARE"
+  },
+  {
+   "type": "chain", "from": "f3 -0.1", "to": "cta -0.1",
+   "label": "WHY BEATS CAN STILL SINK SHARES", "color": "oil",
+   "steps": [
+    {"icon": "check", "title": "RESULTS BEAT", "sub": "GOLDMAN, CITI EPS", "dir": "up", "at": "f3:Reports"},
+    {"icon": "money", "title": "OUTLOOK CAUTIOUS", "sub": "CITI: MARKETS REVENUE ~-20%", "dir": "down", "at": "f3:Citigroup"},
+    {"icon": "eye", "title": "EXPECTATIONS RESET", "sub": "SHARES PRICE THE FUTURE", "dir": "down", "at": "f3:Shares"},
+    {"icon": "chip", "title": "S&P 500 FLAT", "sub": "CLOSE NEAR 7,805", "at": "f3:The"}
+   ],
+   "source": "SOURCES: MITRADE · FORBES · CITIGROUP · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": -30, "lat": 35, "R": 800},
+    {"at": "cta +1", "lon": -74, "lat": 40.7, "R": 560},
+    {"at": "end", "lon": -78, "lat": 40, "R": 560}
+   ],
+   "highlights": [{"iso": "USA", "color": "accent", "alpha": 0.4}],
+   "lines": [["EARNINGS BEAT. SHARES SLIPPED.", "text"], ["EXPECTATIONS MATTER.", "accent"]],
+   "sources": ["AS REPORTED BY CNBC, FORBES, MITRADE, CITIGROUP FILING", "OCT 13, 2026 · NOT FINANCIAL ADVICE"]
+  }
+ ],
+ "upload": {
+  "title": "Banks Beat Forecasts, Yet Shares Slip After JPMorgan Miss #shorts",
+  "description": "Big U.S. banks reported third-quarter results on Tuesday. CNBC reports JPMorgan missed forecasts, with bond trading revenue down 4% and shares down 0.9%. Goldman Sachs earned $17.01 per share versus $13.09 expected, and Citigroup $2.85 versus $2.65, yet Citigroup shares fell and Wells Fargo lost 3%.\n\nSources: CNBC, Forbes, Mitrade, Citigroup filing (Oct 13, 2026).\n\n#stocks #markets #JPMorgan #Goldman #banks",
+  "tags": ["markets", "stocks", "economy", "banks", "JPMorgan", "Goldman Sachs", "Citigroup", "Wells Fargo", "earnings", "news"],
+  "cover": "hook:earnings. +0.4"
+ },
+ "thumbnail": {
+  "at": "hook:Their",
+  "focus": "New York",
+  "number": "$17.01",
+  "numberColor": "ok",
+  "lines": [["BEAT. YET", "text"], ["SHARES FELL?", "accent"]],
+  "source": "GOLDMAN EPS VS $13.09 EXPECTED · OCT 13"
+ }
+}
