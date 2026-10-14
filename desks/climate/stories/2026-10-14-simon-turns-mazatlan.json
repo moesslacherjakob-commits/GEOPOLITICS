@@ -1,0 +1,521 @@
+{
+ "id": "2026-10-14-simon-turns-mazatlan",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A hurricane that stalled for days is turning toward a resort city. Is Mazatlán next?"
+  },
+  {
+   "id": "f1",
+   "text": "Simon is strengthening again, nearly a major hurricane, the U.S. hurricane center said. On Tuesday morning it was about two hundred ten miles south-southwest of Mazatlán, and should approach Mexico's west-central coast Wednesday into Thursday."
+  },
+  {
+   "id": "f2",
+   "text": "Mexico's weather service issued a hurricane warning from Jalisco to Nayarit, including the Islas Marías. A hurricane watch covers the coast up to Sinaloa, which includes Mazatlán. Waves of up to five meters have damaged its seafront, local media report."
+  },
+  {
+   "id": "f3",
+   "text": "The Associated Press says the death toll from Simon and the remnants of storm Rachel has risen to six. A Mexican civil protection official said Simon could hit Mazatlán as a category one hurricane. Earlier forecasts have shifted."
+  },
+  {
+   "id": "cta",
+   "text": "Will Simon make landfall in Sinaloa? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE TURN",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE WARNINGS",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE TOLL",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -120,
+     "lat": 15,
+     "R": 360
+    },
+    {
+     "at": 3.4,
+     "lon": -107,
+     "lat": 21.5,
+     "R": 600
+    }
+   ],
+   "chip": {
+    "text": "HURRICANE SIMON · TURNING",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "MEX",
+     "color": "accent",
+     "at": "hook:stalled",
+     "alpha": 0.45
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -106.42,
+      23.22
+     ],
+     "color": "danger",
+     "at": "hook:turning",
+     "label": "MAZATLÁN",
+     "sub": "NEXT?",
+     "dx": -290,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:stalled",
+    "lines": [
+     [
+      "MAZATLÁN",
+      "danger",
+      130
+     ],
+     [
+      "IN THE PATH?",
+      "text",
+      120
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -106.3,
+    21.6
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -107,
+     "lat": 21,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": -107,
+     "lat": 19.5,
+     "dist": 28,
+     "pitch": 48,
+     "yaw": 6,
+     "oy": 150
+    },
+    {
+     "at": "f1:two",
+     "lon": -107.2,
+     "lat": 20.8,
+     "dist": 20,
+     "pitch": 52,
+     "yaw": -4,
+     "oy": 160
+    },
+    {
+     "at": "f1:Wednesday",
+     "lon": -106.8,
+     "lat": 22.2,
+     "dist": 19,
+     "pitch": 52,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": -105.9,
+     "lat": 21.4,
+     "dist": 17,
+     "pitch": 54,
+     "yaw": -5,
+     "oy": 170
+    },
+    {
+     "at": "f2:hurricane#1 +0.2",
+     "lon": -105.7,
+     "lat": 22.4,
+     "dist": 15,
+     "pitch": 52,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "f2:Waves",
+     "lon": -106.4,
+     "lat": 23.2,
+     "dist": 11,
+     "pitch": 54,
+     "yaw": 4,
+     "oy": 170
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": -106.9,
+     "lat": 22.2,
+     "dist": 22,
+     "pitch": 50,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "cta",
+     "lon": -106.4,
+     "lat": 22.4,
+     "dist": 38,
+     "pitch": 44,
+     "yaw": 4,
+     "oy": 120
+    }
+   ],
+   "layers": [
+    {
+     "kind": "track",
+     "at": "hook$",
+     "until": "cta +0.6",
+     "color": "storm",
+     "name": "SIMON",
+     "sub": "STRENGTHENING AGAIN",
+     "forecast": 5,
+     "now": 4,
+     "cone": false,
+     "points": [
+      {
+       "loc": [
+        -104.2,
+        15.6
+       ],
+       "cat": 2,
+       "label": "CAT 2 · OCT 9",
+       "dx": 18,
+       "dy": 30,
+       "until": "f1"
+      },
+      {
+       "loc": [
+        -105.3,
+        17.2
+       ],
+       "cat": 3,
+       "until": "f1"
+      },
+      {
+       "loc": [
+        -106.0,
+        18.6
+       ],
+       "cat": 4,
+       "label": "CAT 4 · OCT 10-11",
+       "dx": 22,
+       "dy": 8,
+       "big": true,
+       "until": "f1"
+      },
+      {
+       "loc": [
+        -107.0,
+        19.8
+       ],
+       "cat": 3,
+       "until": "f1"
+      },
+      {
+       "loc": [
+        -107.6,
+        20.4
+       ],
+       "cat": 3,
+       "label": "~210 MI SSW OF MAZATLÁN",
+       "dx": 22,
+       "dy": 8,
+       "big": true,
+       "until": "f2"
+      },
+      {
+       "loc": [
+        -107.1,
+        21.8
+       ]
+      },
+      {
+       "loc": [
+        -106.4,
+        23.2
+       ],
+       "cat": 1,
+       "label": "POSSIBLE LANDFALL",
+       "dx": -250,
+       "dy": -40,
+       "until": "f3"
+      }
+     ],
+     "steps": [
+      {
+       "at": "hook +0.3",
+       "to": 4,
+       "dur": 2.8
+      }
+     ],
+     "nameUntil": "f2",
+     "nameDx": -60,
+     "nameDy": -100
+    },
+    {
+     "kind": "note",
+     "text": "TRACK APPROXIMATE · AP, U.S. HURRICANE CENTER",
+     "y": 1170,
+     "at": "f1 +1",
+     "until": "f2"
+    },
+    {
+     "kind": "route",
+     "path": [
+      [
+       -105.12,
+       19.55
+      ],
+      [
+       -105.25,
+       20.65
+      ],
+      [
+       -105.3,
+       21.55
+      ],
+      [
+       -105.55,
+       22.0
+      ]
+     ],
+     "style": "solid",
+     "color": "danger",
+     "width": 6,
+     "at": "f2:warning",
+     "until": "cta",
+     "label": {
+      "text": "HURRICANE WARNING",
+      "sub": "JALISCO TO NAYARIT",
+      "loc": [
+       -105.25,
+       20.65
+      ],
+      "dx": -340,
+      "dy": 60,
+      "at": "f2:warning",
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "route",
+     "path": [
+      [
+       -105.55,
+       22.0
+      ],
+      [
+       -106.0,
+       22.6
+      ],
+      [
+       -106.45,
+       23.2
+      ],
+      [
+       -106.8,
+       23.8
+      ]
+     ],
+     "style": "dash",
+     "color": "accent",
+     "width": 6,
+     "at": "f2:watch",
+     "until": "cta",
+     "label": {
+      "text": "HURRICANE WATCH",
+      "sub": "TO SINALOA",
+      "loc": [
+       -106.0,
+       22.6
+      ],
+      "dx": -320,
+      "dy": -30,
+      "at": "f2:watch",
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -106.45,
+      23.2
+     ],
+     "text": "MAZATLÁN",
+     "sub": "WAVES UP TO 5 M",
+     "color": "danger",
+     "dx": -40,
+     "dy": -90,
+     "at": "f2:Waves",
+     "until": "cta"
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f1:two",
+   "to": "f1$ -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "~210 MI",
+     "text": "SOUTH-SOUTHWEST OF MAZATLÁN · TUE MORNING",
+     "color": "danger",
+     "at": "f1:two"
+    },
+    {
+     "icon": "flag",
+     "big": "WED–THU",
+     "text": "EXPECTED TO APPROACH THE COAST",
+     "color": "accent",
+     "at": "f1:Wednesday"
+    }
+   ],
+   "source": "SOURCE: U.S. NATIONAL HURRICANE CENTER VIA AP"
+  },
+  {
+   "type": "counter",
+   "from": "f3:The",
+   "to": "cta -0.1",
+   "label": "DEATHS REPORTED IN MEXICO",
+   "sublabel": "SIMON + REMNANTS OF RACHEL · AS OF TUESDAY",
+   "icon": "people",
+   "color": "accent",
+   "value": 6,
+   "start": 0,
+   "doneSuffix": "",
+   "decimals": 0,
+   "at": "f3:risen",
+   "doneAt": "f3:six",
+   "note": "FLOODING AND LANDSLIDES ALONG THE PACIFIC COAST",
+   "source": "SOURCE: AP"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -125,
+     "lat": 15,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -108,
+     "lat": 21.5,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": -105,
+     "lat": 22,
+     "R": 470
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "MEX",
+     "color": "accent",
+     "alpha": 0.5
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -106.42,
+      23.22
+     ],
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "HURRICANE WATCH ON.",
+     "text"
+    ],
+    [
+     "LANDFALL IN SINALOA?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AP, U.S. HURRICANE CENTER, MEXICO WEATHER SERVICE (SEARCH EXCERPTS)",
+    "OCT 13–14, 2026 · TRACK AND WARNING AREAS APPROXIMATE"
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Hurricane Simon Turns Toward Mazatlán #shorts",
+  "description": "Hurricane Simon was strengthening again about 210 miles south-southwest of Mazatlán on Tuesday morning, the U.S. National Hurricane Center said, with a hurricane warning from Jalisco to Nayarit and a watch up to Sinaloa from Mexico's weather service. The AP reports the death toll from Simon and the remnants of storm Rachel has risen to six.\n\nSources: AP, U.S. National Hurricane Center, Mexico's National Meteorological Service, local media (Oct 13-14, 2026; based on search-result excerpts, reports differ on Simon's exact category and landfall point). Track and warning areas are approximate.\n\n#climate #weather #HurricaneSimon",
+  "tags": [
+   "climate",
+   "weather",
+   "hurricane",
+   "Hurricane Simon",
+   "Mexico",
+   "Mazatlán",
+   "extreme weather",
+   "news"
+  ],
+  "cover": "hook:turning +0.4"
+ },
+ "thumbnail": {
+  "at": "f2 +3",
+  "number": "6 DEAD",
+  "numberColor": "danger",
+  "source": "PER AP · OCT 14",
+  "focus": [
+   -106.42,
+   23.22
+  ],
+  "lines": [
+   [
+    "MAZATLÁN NEXT?",
+    "accent"
+   ]
+  ],
+  "zoom": 1.1
+ }
+}
