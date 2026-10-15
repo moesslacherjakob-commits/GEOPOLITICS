@@ -1,0 +1,80 @@
+{
+ "id": "2026-10-15-istanbul-record-rain",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Istanbul just saw its heaviest rainfall since records began. How bad did it get?"},
+  {"id": "f1", "text": "Istanbul's governor, Davut Gül, said Wednesday's rain was the highest since records began in 1942. Schools were closed, and the governor later said they would stay shut until Monday. Motorcycles were banned from the roads that evening."},
+  {"id": "f2", "text": "Turkey's disaster agency, AFAD, had logged one thousand two hundred seventy-seven flooding incidents, fifteen landslides, and forty-seven stranded people by Wednesday night. About eight thousand personnel were deployed, Daily Sabah reported."},
+  {"id": "f3", "text": "Euronews and Al Jazeera report at least two deaths, including a fourteen-year-old boy electrocuted in the Balat district. In Sultangazi, a school's retaining wall collapsed with students inside. No injuries were reported there. Counts differ between outlets, so the toll may change."},
+  {"id": "cta", "text": "Will Istanbul face another flood this autumn? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE RECORD", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "THE RESPONSE", "seg": "f2", "color": "info"},
+  {"n": "03", "name": "THE TOLL", "seg": "f3", "to": "cta -0.2", "color": "danger"}
+ ],
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.25", "exit": "zoom",
+   "view": [{"at": 0, "lon": 5, "lat": 35, "R": 360}, {"at": 3.4, "lon": 29, "lat": 41, "R": 700}],
+   "chip": {"text": "ISTANBUL FLOODS", "at": 0.25, "color": "accent"},
+   "headline": {"at": "hook:heaviest", "lines": [["HEAVIEST RAIN", "danger", 120], ["ON RECORD?", "text", 120]]},
+   "highlights": [{"iso": "TUR", "color": "info", "at": "hook:heaviest", "alpha": 0.4}],
+   "markers": [{"loc": [28.98, 41.01], "color": "danger", "at": "hook:rainfall", "label": "ISTANBUL", "sub": "FLOODED", "dx": -280, "dy": -120, "big": true}]
+  },
+  {
+   "type": "map", "from": "hook$ +0.25", "to": "cta -0.1", "center": [28.98, 41.05],
+   "camera": [
+    {"at": "hook$ +0.25", "lon": 29, "lat": 41, "dist": 43, "pitch": 0, "yaw": 0, "oy": 0},
+    {"at": "f1 +0.4", "lon": 28.9, "lat": 41.0, "dist": 18, "pitch": 48, "yaw": 5, "oy": 170},
+    {"at": "f2 +0.3", "lon": 28.95, "lat": 41.05, "dist": 15, "pitch": 54, "yaw": -8, "oy": 170},
+    {"at": "f3 +0.3", "lon": 28.92, "lat": 41.06, "dist": 12, "pitch": 55, "yaw": 6, "oy": 180},
+    {"at": "cta -0.1", "lon": 28.98, "lat": 41.03, "dist": 20, "pitch": 45, "yaw": 0, "oy": 160}
+   ],
+   "layers": [
+    {"kind": "field", "at": "hook$", "palette": "rain", "alpha": 1, "grow": 1.2, "pulse": true,
+     "blobs": [{"loc": [28.9, 41.05], "r": 1.1, "v": 1}, {"loc": [28.4, 41.2], "r": 1.4, "v": 0.8}, {"loc": [29.6, 41.0], "r": 1.2, "v": 0.7}]},
+    {"kind": "note", "text": "RAIN AREA ILLUSTRATIVE · ISTANBUL GOVERNOR, AFAD", "y": 1170, "at": "f1 +1", "until": "f2"},
+    {"kind": "tag", "loc": [28.98, 41.01], "text": "ISTANBUL", "sub": "RECORD SINCE 1942", "color": "accent", "dx": -250, "dy": -120, "at": "f1:highest", "until": "f2"},
+    {"kind": "marker", "loc": [28.95, 41.03], "style": "pulse", "color": "danger", "at": "f3:Balat", "label": {"text": "BALAT", "sub": "BOY ELECTROCUTED", "dx": -280, "dy": 40, "until": "cta"}},
+    {"kind": "marker", "loc": [28.87, 41.1], "style": "x", "color": "danger", "at": "f3:Sultangazi", "label": {"text": "SULTANGAZI", "sub": "SCHOOL WALL COLLAPSED", "dx": -300, "dy": -60, "until": "cta"}}
+   ]
+  },
+  {
+   "type": "facts", "from": "f1:Schools", "to": "f1$ -0.1", "color": "accent",
+   "items": [
+    {"icon": "rain", "big": "SINCE 1942", "text": "HIGHEST RAINFALL ON RECORD · PER GOVERNOR", "color": "accent", "at": "f1:highest"},
+    {"icon": "flag", "big": "UNTIL MONDAY", "text": "SCHOOLS CLOSED ACROSS ISTANBUL", "color": "info", "at": "f1:Schools"}
+   ],
+   "source": "SOURCE: ISTANBUL GOVERNOR VIA AP, AL JAZEERA"
+  },
+  {
+   "type": "facts", "from": "f2:one", "to": "f2$ -0.1", "color": "info",
+   "items": [
+    {"icon": "drop", "big": "1,277", "text": "FLOODING INCIDENTS LOGGED BY AFAD", "color": "info", "at": "f2:one"},
+    {"icon": "storm", "big": "15", "text": "LANDSLIDES", "color": "accent", "at": "f2:fifteen"},
+    {"icon": "people", "big": "47", "text": "PEOPLE STRANDED · BY WED NIGHT", "color": "danger", "at": "f2:forty-seven"}
+   ],
+   "source": "SOURCE: AFAD VIA AL JAZEERA"
+  },
+  {
+   "type": "counter", "from": "f3:Euronews", "to": "f3:fourteen-year-old", "label": "DEATHS REPORTED IN ISTANBUL", "sublabel": "AT LEAST · AS OF THURSDAY", "icon": "people", "color": "danger",
+   "value": 2, "start": 0, "decimals": 0, "at": "f3:report", "doneAt": "f3:two", "note": "FIGURES MAY RISE · OUTLETS REPORT DIFFERENT COUNTS", "source": "SOURCE: EURONEWS, AL JAZEERA"
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "lines": [["RECORD RAIN.", "text"], ["ANOTHER FLOOD THIS AUTUMN?", "accent"]],
+   "sources": ["AP, EURONEWS, AL JAZEERA, ISTANBUL GOVERNOR, AFAD (SEARCH EXCERPTS)", "OCT 14–15, 2026 · RAIN AREA ILLUSTRATIVE"],
+   "view": [{"at": "cta -0.6", "lon": 5, "lat": 35, "R": 800}, {"at": "cta +1", "lon": 28, "lat": 41, "R": 600}, {"at": "end", "lon": 29, "lat": 41, "R": 600}],
+   "markers": [{"loc": [28.98, 41.01], "color": "danger"}],
+   "highlights": [{"iso": "TUR", "color": "info", "alpha": 0.5}]
+  }
+ ],
+ "upload": {
+  "title": "Istanbul's Heaviest Rain Since 1942 Floods the City #shorts",
+  "description": "Istanbul's governor said Wednesday's rainfall was the highest since records began in 1942. AFAD logged 1,277 flooding incidents and 15 landslides by Wednesday night, and Euronews and Al Jazeera report at least two deaths.\n\nSources: AP, Euronews, Al Jazeera, Istanbul Governor's Office, AFAD (Oct 14-15, 2026; based on search-result excerpts, death counts differ between outlets). Rain area is illustrative.\n\n#climate #weather #istanbul #floods",
+  "tags": ["climate", "weather", "extreme weather", "news", "Istanbul", "Turkey", "floods", "heavy rain"],
+  "cover": "f1 +2"
+ },
+ "thumbnail": {"at": "f1 +2", "number": "SINCE 1942", "numberColor": "danger", "source": "PER ISTANBUL GOVERNOR · OCT 14", "focus": [28.98, 41.01], "lines": [["RAIN RECORD", "accent"]], "zoom": 1.1}
+}
