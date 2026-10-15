@@ -1,0 +1,443 @@
+{
+ "id": "2026-10-15-kyiv-grid-strike",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Six hundred thousand people lost power overnight. Was the energy truce ever real?"
+  },
+  {
+   "id": "f1",
+   "text": "Ukraine says Russia fired 39 ballistic missiles and over 120 drones at energy sites in Kyiv and Kharkiv. The prime minister says all three of Kyiv's heat and power plants were hit. City officials report at least three dead."
+  },
+  {
+   "id": "f2",
+   "text": "Zelenskyy calls it ostentatious disrespect toward the United States. Trump announced the truce on October 11. Ukraine says it has stopped hitting Russian refineries since. The Kremlin never confirmed a deal. It says only that contacts continue."
+  },
+  {
+   "id": "f3",
+   "text": "Zelenskyy says Kyiv got no early warning from partners. CNN reports Washington warned it could suspend intelligence sharing if Ukraine keeps striking Russian energy sites. Zelenskyy is asking for more Patriot interceptors."
+  },
+  {
+   "id": "cta",
+   "text": "Will both sides stop hitting energy sites this winter? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE STRIKE",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "THE TRUCE",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE WARNING",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "upload": {
+  "title": "600,000 Without Power: Was the Energy Truce Real? #shorts",
+  "description": "Ukraine says Russia fired 39 ballistic missiles and more than 120 drones at energy sites in Kyiv, the Kyiv region and Kharkiv overnight on October 13-14, leaving about 600,000 people without power. Zelenskyy calls it \"ostentatious disrespect\" toward the US after Trump announced an energy ceasefire on October 11. The Kremlin has not confirmed any truce; casualty figures differ between outlets and are Ukrainian claims.\n\nSources:\nAl Jazeera: 'Massive' Russian attack on Ukraine kills at least 9, damages power sites (Oct 14, 2026)\nCNN: Russia batters Ukraine's energy facilities hours after Zelensky appeals for early warnings from partners (Oct 14, 2026)\nPBS NewsHour / AP: Zelenskyy says Russia keeps striking Ukraine's energy sites despite Trump ceasefire push (Oct 14, 2026)\nThe Kyiv Independent: 'Ostentatious disrespect' - Zelensky says Russia defied Trump's energy ceasefire (Oct 14, 2026)\n\n#geopolitics #Ukraine #Russia #Ceasefire",
+  "tags": [
+   "geopolitics",
+   "Ukraine",
+   "Russia",
+   "Kyiv",
+   "energy ceasefire",
+   "power outage",
+   "Zelensky",
+   "Trump",
+   "world news",
+   "war in Ukraine"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:Kyiv",
+  "focus": "Kiev",
+  "zoom": 1.4,
+  "number": "600K",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "NO POWER",
+    "text"
+   ],
+   [
+    "TRUCE OVER?",
+    "accent"
+   ]
+  ],
+  "source": "WITHOUT ELECTRICITY · PER ZELENSKYY"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 10,
+     "lat": 35,
+     "R": 360
+    },
+    {
+     "at": 3.4,
+     "lon": 31,
+     "lat": 49,
+     "R": 480
+    }
+   ],
+   "chip": {
+    "text": "UKRAINE · OCT 14, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "UKR",
+     "color": "info",
+     "at": "hook:energy"
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "at": "hook:truce"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Kiev",
+     "color": "danger",
+     "at": "hook:Six",
+     "label": "KYIV",
+     "sub": "600,000 NO POWER",
+     "dx": 90,
+     "dy": -70,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:lost",
+    "lines": [
+     [
+      "BLACKOUT",
+      "text",
+      120
+     ],
+     [
+      "TRUCE?",
+      "danger",
+      130
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:truce",
+    "icon": "bolt",
+    "iconColor": "danger",
+    "color": "danger",
+    "kicker": "KYIV",
+    "title": "GRID HIT",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    32,
+    50
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 31,
+     "lat": 49,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 31,
+     "lat": 49.5,
+     "dist": 46,
+     "pitch": 44,
+     "yaw": -5,
+     "oy": 180
+    },
+    {
+     "at": "f1:prime",
+     "lon": 31,
+     "lat": 50,
+     "dist": 30,
+     "pitch": 48,
+     "yaw": 3,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 35.5,
+     "lat": 49.8,
+     "dist": 22,
+     "pitch": 52,
+     "yaw": -6,
+     "oy": 190
+    },
+    {
+     "at": "f2:Ukraine",
+     "lon": 32,
+     "lat": 49,
+     "dist": 40,
+     "pitch": 48,
+     "yaw": 5,
+     "oy": 180
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": 34,
+     "lat": 52,
+     "dist": 62,
+     "pitch": 42,
+     "yaw": 6,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 33,
+     "lat": 50,
+     "dist": 56,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.55,
+     "fill": 0.12,
+     "at": "f1"
+    },
+    {
+     "kind": "tint",
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.35,
+     "fill": 0.06,
+     "at": "f2"
+    },
+    {
+     "kind": "marker",
+     "loc": "Kiev",
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Kyiv",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "KYIV",
+      "sub": "3 OF 3 HEAT PLANTS",
+      "dx": 100,
+      "dy": -70
+     }
+    },
+    {
+     "kind": "tag",
+     "loc": "Kharkiv",
+     "text": "KHARKIV",
+     "sub": "ALSO HIT",
+     "color": "ally",
+     "at": "f1:Kharkiv",
+     "until": "f2 -0.2",
+     "dx": 110,
+     "dy": 90
+    },
+    {
+     "kind": "arc",
+     "from": [
+      37.6,
+      55.7
+     ],
+     "to": [
+      30.5,
+      50.45
+     ],
+     "color": "danger",
+     "height": 0.5,
+     "width": 6,
+     "at": "f1:Ukraine",
+     "until": "f2 -0.2"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      60,
+      290,
+      560
+     ],
+     "title": "OVERNIGHT",
+     "badge": "PER ZELENSKYY",
+     "color": "danger",
+     "at": "f1:39",
+     "until": "f2 -0.2",
+     "rows": [
+      {
+       "icon": "nuke",
+       "text": "39 BALLISTIC MISSILES",
+       "at": "f1:39"
+      },
+      {
+       "icon": "plane",
+       "text": "120+ DRONES",
+       "at": "f1:over"
+      },
+      {
+       "icon": "bolt",
+       "text": "600,000 NO POWER",
+       "at": "f1:prime"
+      }
+     ]
+    },
+    {
+     "kind": "callout",
+     "loc": "Kiev",
+     "place": "WASHINGTON",
+     "icon": "flag",
+     "screen": [
+      120,
+      330
+     ],
+     "color": "info",
+     "at": "f2:Trump",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "ENERGY TRUCE",
+     "icon": "bolt",
+     "color": "accent",
+     "screen": [
+      540,
+      1010
+     ],
+     "at": "f2:Trump",
+     "until": "f2:Ukraine",
+     "note": "ANNOUNCED BY TRUMP · OCT 11"
+    },
+    {
+     "kind": "stamp",
+     "text": "NOT CONFIRMED",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      540,
+      1010
+     ],
+     "at": "f2:The",
+     "until": "f3 -0.1",
+     "note": "KREMLIN: \"CONTACTS CONTINUE\""
+    },
+    {
+     "kind": "stamp",
+     "text": "NO WARNING",
+     "icon": "eye",
+     "color": "danger",
+     "screen": [
+      540,
+      1010
+     ],
+     "at": "f3:Zelenskyy",
+     "until": "f3:CNN",
+     "note": "PER ZELENSKYY"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      380,
+      420,
+      640
+     ],
+     "kicker": "CNN REPORTS:",
+     "text": "U.S. COULD PAUSE INTEL SHARING",
+     "color": "accent",
+     "at": "f3:CNN",
+     "until": "cta -0.2"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 31,
+     "lat": 49,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 31,
+     "lat": 49,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": 36,
+     "lat": 50,
+     "R": 470
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.8
+    },
+    {
+     "iso": "RUS",
+     "color": "danger"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Kiev",
+     "color": "info"
+    },
+    {
+     "loc": "Moscow",
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "TRUCE ANNOUNCED.",
+     "text"
+    ],
+    [
+     "GRID STILL HIT.",
+     "danger"
+    ]
+   ],
+   "sources": [
+    "REPORTING: AL JAZEERA, CNN, AP/PBS, KYIV INDEPENDENT",
+    "OCT 14, 2026"
+   ]
+  }
+ ]
+}
