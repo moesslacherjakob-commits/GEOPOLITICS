@@ -1,0 +1,288 @@
+{
+ "id": "2026-10-15-asml-supply-demand",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "One Dutch firm builds the machines behind every A.I. chip. Can it keep up?"
+  },
+  {
+   "id": "f1",
+   "text": "On October fourteenth, ASML reported third-quarter sales of eleven point seven billion euros and net income of five billion euros. For the fourth quarter, it guides to between fourteen point two and fifteen point two billion euros in sales."
+  },
+  {
+   "id": "f2",
+   "text": "ASML makes the lithography machines that print circuits onto chips, including the extreme ultraviolet type that only it sells. Chief executive Christophe Fouquet says planned supply for twenty twenty-seven and twenty twenty-eight will not fully meet customer demand."
+  },
+  {
+   "id": "f3",
+   "text": "Here is the answer. ASML says it is weighing more capacity, and that some customers have expressed interest in ordering for twenty twenty-nine and twenty thirty. One report cautions that this may be reservations, not firm orders."
+  },
+  {
+   "id": "cta",
+   "text": "Will chip machine supply catch up with A.I. demand by twenty twenty-eight? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE RESULTS",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "HOW IT WORKS",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "THE SHORTAGE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "ASML Warns AI Chip Demand Will Outrun Its Machines #shorts",
+  "description": "ASML, the Dutch maker of chip-printing lithography machines, reported third-quarter 2026 net sales of 11.7 billion euros and net income of 5.0 billion euros on October 14. CEO Christophe Fouquet says planned supply for 2027 and 2028 will not fully meet customer demand; the company says some customers have expressed interest in ordering for 2029 and 2030, which one report says may reflect reservations rather than firm orders.\n\nSources: ASML Q3 2026 results release (SEC 6-K); CNBC; InvestingLive; Investing.com. Figures are company-reported.\n\n#tech #ASML #AIchips",
+  "tags": [
+   "technology",
+   "news",
+   "ASML",
+   "semiconductors",
+   "AI chips",
+   "EUV",
+   "lithography",
+   "Netherlands",
+   "Christophe Fouquet"
+  ],
+  "cover": "hook:keep, +0.4"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [
+   5.4,
+   51.42
+  ],
+  "number": "2028",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "SUPPLY SHORT?",
+    "text"
+   ],
+   [
+    "AI CHIP TOOLS",
+    "accent"
+   ]
+  ],
+  "source": "OCT 14 · PER ASML · COMPANY CLAIM"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": 120,
+     "lat": 24,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": 5.4,
+     "lat": 51.4,
+     "R": 600
+    }
+   ],
+   "chip": {
+    "text": "CHIPS · OCT 14, 2026",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "NLD",
+     "color": "info",
+     "at": "hook:Dutch",
+     "alpha": 0.55
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      5.4,
+      51.42
+     ],
+     "color": "accent",
+     "at": "hook:Dutch",
+     "label": "VELDHOVEN",
+     "sub": "ASML HEADQUARTERS",
+     "dx": -30,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:machines",
+    "lines": [
+     [
+      "THE CHIP-MACHINE",
+      "text",
+      110
+     ],
+     [
+      "MAKER IS SHORT",
+      "accent",
+      100
+     ]
+    ]
+   }
+  },
+  {
+   "type": "facts",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "money",
+     "big": "€11.7 BILLION",
+     "text": "Q3 NET SALES · PER ASML",
+     "color": "accent",
+     "at": "f1:third-quarter"
+    },
+    {
+     "icon": "bolt",
+     "big": "€5.0 BILLION",
+     "text": "Q3 NET INCOME · PER ASML",
+     "color": "ok",
+     "at": "f1:net"
+    },
+    {
+     "icon": "chip",
+     "big": "€14.2–15.2 BN",
+     "text": "Q4 SALES GUIDANCE · COMPANY OUTLOOK",
+     "color": "info",
+     "at": "f1:fourth"
+    }
+   ],
+   "source": "SOURCES: ASML RESULTS RELEASE · CNBC · INVESTINGLIVE · INVESTING.COM"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "FROM DESIGN TO AI CHIP",
+   "color": "violet",
+   "steps": [
+    {
+     "icon": "chip",
+     "title": "CHIP DESIGN",
+     "sub": "BY NVIDIA, GOOGLE & OTHERS",
+     "color": "violet",
+     "at": "f2:ASML"
+    },
+    {
+     "icon": "factory",
+     "title": "ASML MACHINE",
+     "sub": "PRINTS THE CIRCUITS · EUV: ONLY ASML",
+     "color": "accent",
+     "at": "f2:extreme"
+    },
+    {
+     "icon": "bolt",
+     "title": "FINISHED AI CHIP",
+     "sub": "MADE AT CHIP FACTORIES",
+     "color": "info",
+     "at": "f2:Chief"
+    }
+   ],
+   "source": "SOURCES: ASML RELEASE · CNBC · INVESTINGLIVE"
+  },
+  {
+   "type": "timeline",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "ASML'S OWN OUTLOOK",
+   "color": "info",
+   "items": [
+    {
+     "date": "2027",
+     "title": "SUPPLY NOT FULLY MEETING DEMAND",
+     "sub": "PER ASML CEO FOUQUET",
+     "color": "danger",
+     "at": "f3:Here"
+    },
+    {
+     "date": "2028",
+     "title": "SAME SHORTFALL · MORE CAPACITY BEING WEIGHED",
+     "sub": "PER ASML",
+     "color": "danger",
+     "big": true,
+     "at": "f3:weighing"
+    },
+    {
+     "date": "2029–30",
+     "title": "CUSTOMERS SHOW ORDER INTEREST",
+     "sub": "MAY BE RESERVATIONS, NOT FIRM ORDERS",
+     "color": "accent",
+     "at": "f3:ordering"
+    }
+   ],
+   "source": "SOURCES: ASML RESULTS RELEASE · CNBC · INVESTINGLIVE · INVESTING.COM"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 120,
+     "lat": 24,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 5.4,
+     "lat": 51.4,
+     "R": 500
+    },
+    {
+     "at": "end",
+     "lon": 10,
+     "lat": 48,
+     "R": 500
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      5.4,
+      51.42
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "CHIP MACHINES VS",
+     "text"
+    ],
+    [
+     "AI DEMAND BY 2028?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "ASML RESULTS RELEASE · CNBC · INVESTINGLIVE · INVESTING.COM",
+    "COMPANY-REPORTED FIGURES · OUTLOOK IS ASML'S OWN"
+   ]
+  }
+ ]
+}
