@@ -1,0 +1,96 @@
+{
+ "id": "2026-10-15-hot-inflation-stocks-drop",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "One inflation number just hit U.S. stocks hard. Could interest rates go up?"},
+  {"id": "f1", "text": "September consumer prices rose 3.7 percent from a year earlier, CNBC reports. Economists polled by Dow Jones expected 3.6. August was 3.4. Gasoline prices rose 9.1 percent, according to Mitrade."},
+  {"id": "f2", "text": "Hotter inflation raises the odds that the Federal Reserve lifts rates again. CME FedWatch put an October hike near 39 percent, up from about 22 before the data. The ten year Treasury yield briefly topped 5.3 percent."},
+  {"id": "f3", "text": "On Wednesday the S and P 500 closed down 1.11 percent at 7,718.94, Xinhua reports. It was the first drop of 1 percent in over 50 trading days. The Nasdaq lost 1.88 percent. The Dow slipped 0.09."},
+  {"id": "cta", "text": "Will the Fed raise interest rates in October? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE NUMBER", "seg": "f1", "color": "danger"},
+  {"n": "02", "name": "THE CAUSE", "seg": "f2", "color": "oil"},
+  {"n": "03", "name": "THE SELL-OFF", "seg": "f3", "to": "cta -0.2", "color": "accent"}
+ ],
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.25", "exit": "zoom",
+   "view": [
+    {"at": 0, "lon": -40, "lat": 35, "R": 360},
+    {"at": 3.2, "lon": -77, "lat": 38.9, "R": 700}
+   ],
+   "chip": {"text": "MARKETS · OCT 15, 2026", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "USA", "color": "danger", "at": "hook:inflation", "alpha": 0.35}],
+   "headline": {"at": "hook:inflation", "lines": [["HOT INFLATION", "danger", 120], ["STOCKS DROP?", "accent", 125]]}
+  },
+  {
+   "type": "map", "from": "hook$ +0.25", "to": "f1:September +0.2", "center": [-77, 38.9],
+   "camera": [
+    {"at": "hook$ +0.25", "lon": -77, "lat": 38.9, "dist": 43, "pitch": 0, "yaw": 0, "oy": 0},
+    {"at": "f1 +0.3", "lon": -77, "lat": 38.9, "dist": 20, "pitch": 48, "yaw": -6, "oy": 170}
+   ],
+   "layers": [
+    {"kind": "tag", "loc": [-77, 38.9], "text": "U.S. CPI · SEPTEMBER", "sub": "REPORTED WEDNESDAY · PER CNBC", "color": "danger", "at": "f1", "dx": 40, "dy": -170, "size": 30}
+   ]
+  },
+  {
+   "type": "bars", "from": "f1:September +0.2", "to": "f2 -0.1",
+   "label": "U.S. CONSUMER PRICES, YEAR ON YEAR", "sublabel": "SEPTEMBER VS FORECAST",
+   "bars": [
+    {"label": "AUGUST", "sub": "PREVIOUS", "value": 3.4, "display": "3.4%", "color": "neutral", "at": "f1:August", "dur": 0.8},
+    {"label": "FORECAST", "sub": "POLL", "value": 3.6, "display": "3.6%", "color": "info", "at": "f1:Economists", "dur": 0.8},
+    {"label": "ACTUAL", "sub": "SEPTEMBER", "value": 3.7, "display": "3.7%", "color": "danger", "at": "f1:September", "dur": 0.8}
+   ],
+   "badge": {"text": "GASOLINE +9.1%", "at": "f1:Gasoline"},
+   "source": "SOURCES: CNBC · MITRADE"
+  },
+  {
+   "type": "chain", "from": "f2 -0.1", "to": "f3 -0.1",
+   "label": "WHY INFLATION MOVES STOCKS", "color": "oil",
+   "steps": [
+    {"icon": "money", "title": "PRICES RISE FASTER", "sub": "CPI 3.7% VS 3.6% EXPECTED", "dir": "up", "at": "f2:Hotter"},
+    {"icon": "eye", "title": "FED HIKE ODDS UP", "sub": "~39% FOR OCT · WAS ~22%", "dir": "up", "at": "f2:CME"},
+    {"icon": "chip", "title": "YIELDS JUMP", "sub": "10-YEAR ABOVE 5.3%", "dir": "up", "at": "f2:ten"}
+   ],
+   "source": "SOURCES: CME FEDWATCH VIA SEEKING ALPHA · SCHWAB · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "ticker", "from": "f3 -0.1", "to": "cta -0.1",
+   "label": "WALL STREET CLOSE", "sublabel": "WEDNESDAY, OCT 14, 2026",
+   "rows": [
+    {"name": "S&P 500", "sub": "CLOSE 7,718.94", "change": -1.11, "at": "f3:S"},
+    {"name": "NASDAQ", "sub": "COMPOSITE", "change": -1.88, "at": "f3:Nasdaq"},
+    {"name": "DOW", "sub": "CLOSE 51,621.48", "change": -0.09, "at": "f3:Dow"}
+   ],
+   "format": {"decimals": 2, "suffix": "%"},
+   "note": "S&P 500: FIRST DROP OF 1%+ IN OVER 50 TRADING DAYS",
+   "source": "SOURCE: XINHUA · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": -30, "lat": 35, "R": 800},
+    {"at": "cta +1", "lon": -77, "lat": 38.9, "R": 560},
+    {"at": "end", "lon": -80, "lat": 38, "R": 560}
+   ],
+   "highlights": [{"iso": "USA", "color": "danger", "alpha": 0.4}],
+   "lines": [["PRICES RAN HOT.", "text"], ["WILL THE FED ACT?", "accent"]],
+   "sources": ["AS REPORTED BY CNBC, XINHUA, MITRADE, SEEKING ALPHA", "OCT 14, 2026 · NOT FINANCIAL ADVICE"]
+  }
+ ],
+ "upload": {
+  "title": "Hot Inflation Report Drags S&P 500 Down 1.1% #shorts",
+  "description": "U.S. consumer prices rose 3.7% in September from a year earlier, above the 3.6% economists polled by Dow Jones expected, CNBC reports. The S&P 500 closed down 1.11% at 7,718.94 on Wednesday, its first 1% drop in over 50 trading days, Xinhua reports; the Nasdaq fell 1.88%. CME FedWatch put the odds of an October Fed rate hike near 39%.\n\nSources: CNBC, Xinhua, Mitrade, Seeking Alpha, Schwab (Oct 14, 2026).\n\n#stocks #markets #inflation #CPI #Fed",
+  "tags": ["markets", "stocks", "economy", "inflation", "CPI", "Federal Reserve", "S&P 500", "Nasdaq", "interest rates", "news"],
+  "cover": "hook:inflation +0.4"
+ },
+ "thumbnail": {
+  "at": "hook:stocks",
+  "focus": [-77, 38.9],
+  "number": "3.7%",
+  "numberColor": "danger",
+  "lines": [["PRICES RAN HOT.", "text"], ["RATE HIKE NEXT?", "accent"]],
+  "source": "U.S. CPI SEPT VS 3.6% EXPECTED · PER CNBC"
+ }
+}
