@@ -1,0 +1,93 @@
+{
+ "id": "2026-10-16-asia-ai-selloff",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Asian markets just had a brutal day. Why did AI stocks fall so hard?"},
+  {"id": "f1", "text": "On Thursday, South Korea's Kospi fell 7.6 percent, the Associated Press reports. Japan's Nikkei dropped 4.9 percent to 64,426, Reuters says, its third biggest point fall ever. Chip tester Advantest sank nearly 15 percent."},
+  {"id": "f2", "text": "The A.P. says many AI companies borrow cash for data centers and chips. Bond yields worldwide are at their highest in years, so borrowing costs more. Barron's reports yields on CoreWeave's bonds neared 15 percent."},
+  {"id": "f3", "text": "Wall Street steadied on Thursday. The Dow closed up about 556 points at 52,178, Benzinga reports. The S and P 500 gained 0.33 percent. The Nasdaq ended nearly flat, after trading more than one percent lower. Asian stocks bounced on Friday, the A.P. reports."},
+  {"id": "cta", "text": "Will AI stocks win back their losses next week? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE CRASH", "seg": "f1", "color": "danger"},
+  {"n": "02", "name": "THE CAUSE", "seg": "f2", "color": "oil"},
+  {"n": "03", "name": "THE REBOUND", "seg": "f3", "to": "cta -0.2", "color": "accent"}
+ ],
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.25", "exit": "zoom",
+   "view": [
+    {"at": 0, "lon": 90, "lat": 30, "R": 360},
+    {"at": 3.2, "lon": 133, "lat": 36, "R": 640}
+   ],
+   "chip": {"text": "MARKETS · OCT 16, 2026", "at": 0.25, "color": "accent"},
+   "highlights": [
+    {"iso": "JPN", "color": "danger", "at": "hook:brutal", "alpha": 0.35},
+    {"iso": "KOR", "color": "danger", "at": "hook:brutal", "alpha": 0.35}
+   ],
+   "headline": {"at": "hook:brutal", "lines": [["ASIA'S AI", "danger", 120], ["SELL-OFF", "accent", 125]]}
+  },
+  {
+   "type": "map", "from": "hook$ +0.25", "to": "f2 -0.1", "center": [133, 36],
+   "camera": [
+    {"at": "hook$ +0.25", "lon": 133, "lat": 36, "dist": 43, "pitch": 0, "yaw": 0, "oy": 0},
+    {"at": "f1 +0.3", "lon": 133, "lat": 36, "dist": 38, "pitch": 45, "yaw": -6, "oy": 170}
+   ],
+   "layers": [
+    {"kind": "tint", "iso": "KOR", "color": "danger", "alpha": 0.35, "at": "f1"},
+    {"kind": "tint", "iso": "JPN", "color": "danger", "alpha": 0.3, "at": "f1:Japan's"},
+    {"kind": "tag", "loc": "Seoul", "text": "KOSPI  -7.6%", "sub": "THURSDAY · PER AP", "color": "danger", "at": "f1:Kospi", "dx": -150, "dy": -170, "size": 30},
+    {"kind": "tag", "loc": "Tokyo", "text": "NIKKEI  -4.9%", "sub": "CLOSE 64,426 · PER REUTERS", "color": "danger", "at": "f1:Nikkei", "dx": 20, "dy": 150, "size": 30}
+   ]
+  },
+  {
+   "type": "chain", "from": "f2 -0.1", "to": "f3 -0.1",
+   "label": "WHY AI STOCKS FELL",
+   "color": "oil",
+   "steps": [
+    {"icon": "chip", "title": "AI BUILT ON DEBT", "sub": "DATA CENTERS · CHIPS", "dir": "up", "at": "f2:cash"},
+    {"icon": "money", "title": "YIELDS AT MULTI-YEAR HIGHS", "sub": "BORROWING COSTS MORE", "dir": "up", "at": "f2:Bond"},
+    {"icon": "factory", "title": "COREWEAVE BONDS ~15%", "sub": "PER BARRON'S", "dir": "up", "at": "f2:Barron's"}
+   ],
+   "source": "SOURCES: AP · BARRON'S VIA MEDIA REPORTS · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "ticker", "from": "f3 -0.1", "to": "cta -0.1",
+   "label": "WALL STREET CLOSE",
+   "sublabel": "THURSDAY, OCT 15, 2026",
+   "rows": [
+    {"name": "DOW", "sub": "CLOSE 52,177.69", "change": 1.1, "at": "f3:Dow"},
+    {"name": "S&P 500", "sub": "CLOSE 7,744.06", "change": 0.33, "at": "f3:S"},
+    {"name": "NASDAQ", "sub": "COMPOSITE · NEARLY FLAT", "change": 0.08, "at": "f3:Nasdaq"}
+   ],
+   "format": {"decimals": 2, "suffix": "%"},
+   "note": "NASDAQ HAD BEEN DOWN MORE THAN 1% DURING THE DAY",
+   "source": "SOURCES: BENZINGA · CNBC · YAHOO FINANCE · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": 90, "lat": 30, "R": 800},
+    {"at": "cta +1", "lon": 133, "lat": 36, "R": 560},
+    {"at": "end", "lon": 135, "lat": 36, "R": 560}
+   ],
+   "highlights": [{"iso": "JPN", "color": "danger", "alpha": 0.4}, {"iso": "KOR", "color": "danger", "alpha": 0.4}],
+   "lines": [["ASIA SOLD HARD.", "text"], ["WILL AI RECOVER?", "accent"]],
+   "sources": ["AS REPORTED BY AP, REUTERS, BENZINGA, BARRON'S", "OCT 15, 2026 · NOT FINANCIAL ADVICE"]
+  }
+ ],
+ "upload": {
+  "title": "Kospi Plunges 7.6% in Asia's AI Stock Sell-Off #shorts",
+  "description": "South Korea's Kospi fell 7.6% on Thursday and Japan's Nikkei 4.9% to 64,426, the Associated Press and Reuters report, as AI-linked shares were hit. The A.P. points to heavy borrowing for data centers and chips and bond yields at multi-year highs. Wall Street steadied: the Dow closed up about 556 points, Benzinga reports.\n\nSources: AP, Reuters (via The Japan Times), Benzinga, CNBC, Yahoo Finance, Barron's (via media reports) (Oct 15, 2026).\n\n#stocks #markets #AI #Nikkei #Kospi",
+  "tags": ["markets", "stocks", "economy", "news", "AI stocks", "Kospi", "Nikkei", "Advantest", "CoreWeave", "bond yields", "Wall Street"],
+  "cover": "hook:brutal +0.4"
+ },
+ "thumbnail": {
+  "at": "f1:Korea's +0.2",
+  "focus": "Seoul",
+  "number": "-7.6%",
+  "numberColor": "danger",
+  "lines": [["AI STOCKS", "text"], ["DEBT WORRIES", "accent"]],
+  "source": "KOSPI THURSDAY · PER AP"
+ }
+}
