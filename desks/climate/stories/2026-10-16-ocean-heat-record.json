@@ -1,0 +1,80 @@
+{
+ "id": "2026-10-16-ocean-heat-record",
+ "lang": "en",
+ "gap": 0.9,
+ "script": [
+  {"id": "hook", "text": "The oceans just broke their all-time heat record. Why does that matter?"},
+  {"id": "f1", "text": "Copernicus says September's average sea surface temperature, was twenty-one point oh five degrees Celsius. That is the highest for any September on record. The old mark, from twenty twenty-three, was twenty point nine two. NOAA reports a record anomaly for any month."},
+  {"id": "f2", "text": "Copernicus ranks September the second warmest on record, one point six three degrees above pre-industrial levels. Zero point one one degrees cooler than September twenty twenty-three. A second month in a row above one point five."},
+  {"id": "f3", "text": "Copernicus says El Niño is still strengthening in the Pacific, and could become one of the strongest on record. It expects the warm run to last into twenty twenty-seven. NOAA says this year is on track for the five warmest."},
+  {"id": "cta", "text": "Will twenty twenty-seven set a new temperature record? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE RECORD", "seg": "f1", "color": "danger"},
+  {"n": "02", "name": "THE AIR", "seg": "f2", "color": "accent"},
+  {"n": "03", "name": "THE REASON", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.25", "exit": "zoom",
+   "view": [{"at": 0, "lon": -150, "lat": 5, "R": 330}, {"at": 3.4, "lon": -140, "lat": 0, "R": 520}],
+   "chip": {"text": "OCEAN HEAT RECORD", "at": 0.25, "color": "accent"},
+   "headline": {"at": "hook:broke", "lines": [["HOTTEST OCEANS", "danger", 120], ["EVER RECORDED", "text", 120]]}
+  },
+  {
+   "type": "map", "from": "hook$ +0.25", "to": "cta -0.1", "center": [-140, 0],
+   "camera": [
+    {"at": "hook$ +0.25", "lon": -140, "lat": 0, "dist": 43, "pitch": 0, "yaw": 0, "oy": 0},
+    {"at": "f1 +0.4", "lon": -120, "lat": 0, "dist": 130, "pitch": 30, "yaw": 0, "oy": 150},
+    {"at": "f2 +0.3", "lon": 20, "lat": 10, "dist": 150, "pitch": 25, "yaw": 0, "oy": 150},
+    {"at": "f3 +0.3", "lon": -140, "lat": 0, "dist": 100, "pitch": 40, "yaw": 5, "oy": 170},
+    {"at": "cta -0.1", "lon": -100, "lat": 0, "dist": 150, "pitch": 30, "yaw": 0, "oy": 150}
+   ],
+   "layers": [
+    {"kind": "field", "at": "hook$", "palette": "heat", "alpha": 0.9, "grow": 1.2, "pulse": true,
+     "blobs": [{"loc": [-140, 0], "r": 22, "v": 1}, {"loc": [-30, 15], "r": 16, "v": 0.7}, {"loc": [80, -5], "r": 14, "v": 0.6}, {"loc": [150, 10], "r": 14, "v": 0.6}]},
+    {"kind": "note", "text": "WARM AREAS ILLUSTRATIVE · NOT GRIDDED DATA", "y": 1170, "at": "f1 +1", "until": "f3"},
+    {"kind": "tag", "loc": [-140, 0], "text": "EQUATORIAL PACIFIC", "sub": "EL NIÑO STRENGTHENING", "color": "accent", "dx": -200, "dy": -140, "at": "f3:El", "until": "cta"}
+   ]
+  },
+  {
+   "type": "bars", "from": "f1:The", "to": "f1$ -0.1", "label": "SEPTEMBER OCEAN SURFACE TEMPERATURE", "sublabel": "60°S–60°N · COPERNICUS", "color": "danger",
+   "bars": [
+    {"label": "2023", "sub": "PREVIOUS RECORD", "value": 20.92, "display": "20.92°C", "color": "accent", "at": "f1:old", "dur": 1.0},
+    {"label": "2026", "sub": "NEW RECORD", "value": 21.05, "display": "21.05°C", "color": "danger", "at": "f1:twenty-one", "dur": 1.0}
+   ],
+   "source": "SOURCE: COPERNICUS C3S (ERA5)"
+  },
+  {
+   "type": "facts", "from": "f2:Copernicus", "to": "f2$ -0.1", "color": "accent",
+   "items": [
+    {"icon": "thermo", "big": "2ND WARMEST", "text": "SEPTEMBER ON RECORD · PER COPERNICUS", "color": "accent", "at": "f2:Copernicus"},
+    {"icon": "thermo", "big": "+1.63°C", "text": "ABOVE PRE-INDUSTRIAL LEVELS", "color": "danger", "at": "f2:one"},
+    {"icon": "flag", "big": "2 MONTHS", "text": "IN A ROW ABOVE 1.5°C", "color": "info", "at": "f2:second#1"}
+   ],
+   "source": "SOURCE: COPERNICUS C3S"
+  },
+  {
+   "type": "facts", "from": "f3:Copernicus", "to": "f3$ -0.1", "color": "info",
+   "items": [
+    {"icon": "storm", "big": "EL NIÑO", "text": "STILL STRENGTHENING · COULD BE AMONG STRONGEST", "color": "info", "at": "f3:Copernicus"},
+    {"icon": "thermo", "big": "INTO 2027", "text": "WARM RUN EXPECTED TO LAST · PER COPERNICUS", "color": "accent", "at": "f3:expects"},
+    {"icon": "flag", "big": "TOP 5", "text": "2026 ON TRACK FOR FIVE WARMEST YEARS · NOAA", "color": "danger", "at": "f3:NOAA"}
+   ],
+   "source": "SOURCE: COPERNICUS C3S, NOAA"
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "lines": [["RECORD-HOT OCEANS.", "text"], ["A RECORD 2027?", "accent"]],
+   "sources": ["COPERNICUS C3S, NOAA, YALE CLIMATE CONNECTIONS (SEARCH EXCERPTS)", "SEPTEMBER 2026 DATA · WARM AREAS ILLUSTRATIVE"],
+   "view": [{"at": "cta -0.6", "lon": -140, "lat": 0, "R": 800}, {"at": "cta +1", "lon": -140, "lat": 0, "R": 600}, {"at": "end", "lon": -130, "lat": 0, "R": 600}]
+  }
+ ],
+ "upload": {
+  "title": "Oceans Hit a Record Heat High in September #shorts",
+  "description": "Copernicus says September's global sea surface temperature was 21.05°C, the highest for any September on record, and NOAA reports a record ocean anomaly for any month. Air temperatures ranked second warmest for September, and El Niño is still strengthening.\n\nSources: Copernicus Climate Change Service, NOAA, Yale Climate Connections (September 2026 data; based on search-result excerpts). Warm areas on the map are illustrative.\n\n#climate #weather #oceans #elnino",
+  "tags": ["climate", "weather", "extreme weather", "news", "ocean temperature", "Copernicus", "NOAA", "El Niño", "global warming"],
+  "cover": "f1 +2"
+ },
+ "thumbnail": {"at": "f1 +2", "number": "21.05°C", "numberColor": "danger", "source": "SEPT OCEAN AVERAGE · COPERNICUS", "focus": [-140, 0], "lines": [["HOTTEST EVER", "accent"]], "zoom": 1.1}
+}
