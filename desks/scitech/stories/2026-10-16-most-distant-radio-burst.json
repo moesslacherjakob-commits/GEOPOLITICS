@@ -1,0 +1,265 @@
+{
+ "id": "2026-10-16-most-distant-radio-burst",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A flash older than Earth crossed the universe. What made it?"
+  },
+  {
+   "id": "f1",
+   "text": "In a study in Science, astronomers report the most distant fast radio burst ever located. These are flashes of radio waves lasting a few thousandths of a second. South Africa's MeerKAT telescope caught this one in March twenty twenty four."
+  },
+  {
+   "id": "f2",
+   "text": "NASA's Webb telescope then found its home: a small, faint galaxy. The burst's light set off about three billion years after the Big Bang, so it travelled more than ten billion years. The team says that more than doubles the old distance record."
+  },
+  {
+   "id": "f3",
+   "text": "The host galaxy is small, low in heavy elements, and forming stars fast, the researchers say. They argue that favours a young magnetar, a super magnetic neutron star. That is their interpretation, and the Webb data sit at the limit of detection."
+  },
+  {
+   "id": "cta",
+   "text": "Will astronomers find a radio burst from even earlier? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE FINDING",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "HOW IT WORKS",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "THE CATCH",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Radio Flash From 10 Billion Years Ago Breaks Record #shorts",
+  "description": "Astronomers led by Manisha Caleb of the University of Sydney report the most distant fast radio burst with a known host galaxy, according to a study in Science. South Africa's MeerKAT telescope detected it in March 2024; NASA's Webb telescope then identified a small, faint host galaxy whose light left about 3 billion years after the Big Bang. The authors suggest a young magnetar as the source; the Webb data are at the limit of detection.\n\nSources: Science paper and University of Sydney release (Oct 13, 2026); Space.com; Universe Today; arXiv 2508.01648.\n\n#science #astronomy #radioburst",
+  "tags": [
+   "science",
+   "news",
+   "fast radio burst",
+   "MeerKAT",
+   "James Webb",
+   "University of Sydney",
+   "astronomy",
+   "magnetar"
+  ],
+  "cover": "hook:flash, +0.4"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [
+   21.4,
+   -30.7
+  ],
+  "number": "10B+ YEARS",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "RADIO FLASH",
+    "text"
+   ],
+   [
+    "RECORD",
+    "accent"
+   ]
+  ],
+  "source": "SCIENCE \u00b7 OCT 13 \u00b7 U. SYDNEY / MEERKAT / WEBB"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": 0,
+     "lat": 10,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": 21.4,
+     "lat": -30.7,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "ASTRONOMY \u00b7 SCIENCE STUDY",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      21.4,
+      -30.7
+     ],
+     "color": "accent",
+     "at": "hook:crossed",
+     "label": "MEERKAT",
+     "sub": "SOUTH AFRICA",
+     "dx": -30,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:older",
+    "lines": [
+     [
+      "RADIO FLASH",
+      "text",
+      110
+     ],
+     [
+      "10+ BILLION YEARS OLD",
+      "accent",
+      76
+     ]
+    ]
+   }
+  },
+  {
+   "type": "flow",
+   "from": "f1 -0.1",
+   "to": "f2:The -0.1",
+   "label": "HOW IT WAS PINNED DOWN",
+   "color": "accent",
+   "steps": [
+    {
+     "icon": "bolt",
+     "title": "FAST RADIO BURST",
+     "sub": "FLASH LASTING MILLISECONDS",
+     "color": "info",
+     "at": "f1:astronomers"
+    },
+    {
+     "icon": "eye",
+     "title": "MEERKAT CATCHES IT",
+     "sub": "MARCH 2024 \u00b7 SOUTH AFRICA",
+     "color": "accent",
+     "at": "f1:South"
+    },
+    {
+     "icon": "flag",
+     "title": "WEBB FINDS HOST",
+     "sub": "SMALL, FAINT GALAXY",
+     "color": "ok",
+     "at": "f2:Webb"
+    }
+   ],
+   "source": "SCIENCE \u00b7 U. SYDNEY \u00b7 SPACE.COM \u00b7 UNIVERSE TODAY"
+  },
+  {
+   "type": "counter",
+   "from": "f2:The -0.1",
+   "to": "f3 -0.1",
+   "label": "LIGHT TRAVEL TIME",
+   "sublabel": "SCIENCE STUDY",
+   "icon": "bolt",
+   "color": "accent",
+   "value": 10,
+   "start": 0,
+   "suffix": "+ B YRS",
+   "doneSuffix": "+ BILLION YEARS",
+   "decimals": 0,
+   "at": "f2:travelled",
+   "doneAt": "f2:travelled +1.5",
+   "note": "ABOUT 3 BILLION YEARS AFTER THE BIG BANG \u00b7 PER THE TEAM",
+   "source": "SCIENCE \u00b7 U. SYDNEY \u00b7 SPACE.COM \u00b7 UNIVERSE TODAY"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "flame",
+     "big": "SMALL GALAXY",
+     "text": "LOW IN HEAVY ELEMENTS \u00b7 FORMING STARS FAST",
+     "color": "info",
+     "at": "f3:host"
+    },
+    {
+     "icon": "bolt",
+     "big": "MAGNETAR?",
+     "text": "AUTHORS' PREFERRED SOURCE \u00b7 AN INTERPRETATION",
+     "color": "accent",
+     "at": "f3:favours"
+    },
+    {
+     "icon": "x",
+     "big": "AT THE LIMIT",
+     "text": "FAINT WEBB DATA \u00b7 MODEL ESTIMATES",
+     "color": "danger",
+     "at": "f3:That"
+    }
+   ],
+   "source": "SOURCES: SCIENCE \u00b7 U. SYDNEY \u00b7 SPACE.COM \u00b7 UNIVERSE TODAY"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 10,
+     "lat": -20,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 21.4,
+     "lat": -30.7,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": 35,
+     "lat": -25,
+     "R": 470
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      21.4,
+      -30.7
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "EVEN EARLIER",
+     "text"
+    ],
+    [
+     "NEXT?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "SCIENCE \u00b7 U. SYDNEY \u00b7 SPACE.COM \u00b7 UNIVERSE TODAY",
+    "RECORD FOR A MEASURED HOST DISTANCE"
+   ]
+  }
+ ]
+}
