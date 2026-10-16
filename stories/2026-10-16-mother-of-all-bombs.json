@@ -1,0 +1,399 @@
+{
+ "id": "2026-10-16-mother-of-all-bombs",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "The US is reportedly weighing its biggest non-nuclear bomb for Iran. Why now?"
+  },
+  {
+   "id": "f1",
+   "text": "CNN reports the US military has drafted new strike options for Iran. Sources say they include the so-called mother of all bombs, aimed at energy infrastructure and nuclear sites. They would apply only if Trump orders combat to resume."
+  },
+  {
+   "id": "f2",
+   "text": "Several sources doubt it could reach the deepest targets, like Pickaxe Mountain. One called it a weapon for huge area clearance, but not much else. Trump told Newsmax the bomb is not nuclear, and he would not use nuclear weapons."
+  },
+  {
+   "id": "f3",
+   "text": "Trump has said publicly he will take no new action before the midterms. CNN says advisers privately don't know if that is final. Times of Israel reports Iran's parliament speaker says Tehran must prepare for war, even while negotiating."
+  },
+  {
+   "id": "cta",
+   "text": "Will the US strike Iran again before the midterms? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE PLANS",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE DOUBTS",
+   "seg": "f2",
+   "color": "oil"
+  },
+  {
+   "n": "03",
+   "name": "THE CLOCK",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "upload": {
+  "title": "Mother of All Bombs for Iran? US Plans Reported #shorts",
+  "description": "CNN reports that the US military has drafted new strike options for Iran that include the GBU-43/B, the so-called \"mother of all bombs\", against energy infrastructure and nuclear sites such as Pickaxe Mountain. According to CNN's sources they would apply only if President Trump orders combat to resume, and several sources doubt the bomb could penetrate deeply buried facilities. Trump told Newsmax the bomb \"is not nuclear\". These are anonymous-source reports; the Pentagon has not published any plan.\n\nSources:\nCNN: US considering using 'Mother of All Bombs' against Iran, sources say (Oct 15, 2026)\nJerusalem Post: 'Mother of all bombs': US potential Iran strike plans include largest non-nuclear weapon (Oct 2026)\nMilitary.com: 'Mother of All Bombs': Iran Energy Sites Could Be Targeted (Oct 2026)\nKurdistan24: US Weighs 'Mother of All Bombs' in Potential New Strikes Against Iran (Oct 2026)\nTimes of Israel liveblog, Oct 15, 2026\n\n#geopolitics #Iran #USA #MOAB",
+  "tags": [
+   "geopolitics",
+   "Iran",
+   "mother of all bombs",
+   "MOAB",
+   "Trump",
+   "Pickaxe Mountain",
+   "US strike plans",
+   "midterms",
+   "world news",
+   "Iran war"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:Iran.",
+  "focus": "Isfahan",
+  "zoom": 1.3,
+  "number": "MOAB",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "BIGGEST BOMB",
+    "text"
+   ],
+   [
+    "FOR IRAN?",
+    "accent"
+   ]
+  ],
+  "source": "US PLANS REPORTED BY CNN"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 20,
+     "lat": 30,
+     "R": 360
+    },
+    {
+     "at": 3.2,
+     "lon": 54,
+     "lat": 32,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "IRAN · OCT 15, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "IRN",
+     "color": "danger",
+     "at": "hook:Iran."
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Isfahan",
+     "color": "danger",
+     "at": "hook:biggest",
+     "label": "IRAN",
+     "sub": "NEW STRIKE PLANS · PER CNN",
+     "dx": -40,
+     "dy": 110,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:weighing",
+    "lines": [
+     [
+      "BIGGEST",
+      "text",
+      120
+     ],
+     [
+      "BOMB?",
+      "danger",
+      150
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    53,
+    31
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 54,
+     "lat": 32,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 52,
+     "lat": 32.5,
+     "dist": 50,
+     "pitch": 46,
+     "yaw": -6,
+     "oy": 180
+    },
+    {
+     "at": "f1:infrastructure",
+     "lon": 50.5,
+     "lat": 29.5,
+     "dist": 38,
+     "pitch": 50,
+     "yaw": -4,
+     "oy": 180
+    },
+    {
+     "at": "f1:nuclear",
+     "lon": 51.7,
+     "lat": 33.5,
+     "dist": 26,
+     "pitch": 50,
+     "yaw": 5,
+     "oy": 180
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": 51.8,
+     "lat": 33.6,
+     "dist": 16,
+     "pitch": 52,
+     "yaw": 8,
+     "oy": 190
+    },
+    {
+     "at": "f2:Trump",
+     "lon": 52,
+     "lat": 32,
+     "dist": 55,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 180
+    },
+    {
+     "at": "f3 +0.4",
+     "lon": 53,
+     "lat": 31,
+     "dist": 70,
+     "pitch": 44,
+     "yaw": -4,
+     "oy": 180
+    },
+    {
+     "at": "cta",
+     "lon": 53,
+     "lat": 30,
+     "dist": 85,
+     "pitch": 52,
+     "yaw": 10,
+     "oy": 220
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "IRN",
+     "color": "danger",
+     "alpha": 0.4,
+     "fill": 0.08,
+     "at": "hook$ +0.3",
+     "until": "cta"
+    },
+    {
+     "kind": "marker",
+     "loc": "Kharg Island",
+     "style": "pulse",
+     "color": "oil",
+     "at": "f1:energy",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "ENERGY SITES",
+      "sub": "KHARG ISLAND · EXAMPLE",
+      "dx": -60,
+      "dy": 80,
+      "until": "f2 -0.2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      51.8,
+      33.65
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:nuclear",
+     "until": "f2:Trump",
+     "label": {
+      "text": "PICKAXE MOUNTAIN",
+      "sub": "NUCLEAR SITE · APPROX.",
+      "dx": 70,
+      "dy": -80,
+      "until": "f2:Trump"
+     }
+    },
+    {
+     "kind": "card",
+     "screen": [
+      60,
+      290,
+      560
+     ],
+     "title": "REPORTED OPTIONS",
+     "badge": "PER CNN",
+     "color": "danger",
+     "at": "f1:Sources",
+     "until": "f2 -0.2",
+     "rows": [
+      {
+       "icon": "nuke",
+       "text": "\"MOTHER OF ALL BOMBS\"",
+       "at": "f1:so-called"
+      },
+      {
+       "icon": "barrel",
+       "text": "ENERGY SITES",
+       "at": "f1:infrastructure"
+      },
+      {
+       "icon": "shield",
+       "text": "NUCLEAR SITES",
+       "at": "f1:nuclear"
+      }
+     ]
+    },
+    {
+     "kind": "stamp",
+     "text": "NOT NUCLEAR",
+     "icon": "x",
+     "color": "accent",
+     "screen": [
+      540,
+      1000
+     ],
+     "note": "TRUMP TO NEWSMAX",
+     "at": "f2:Trump",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "MIDTERMS",
+     "icon": "flag",
+     "color": "info",
+     "screen": [
+      540,
+      1000
+     ],
+     "note": "NO NEW ACTION BEFORE · PER TRUMP",
+     "at": "f3:midterms.",
+     "until": "cta -0.3"
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "from": "f2:One -0.2",
+   "to": "f2:Trump -0.3",
+   "at": "f2:One",
+   "color": "oil",
+   "lines": [
+    [
+     "GREAT FOR HUGE",
+     "text"
+    ],
+    [
+     "AREA CLEARANCE,",
+     "oil"
+    ],
+    [
+     "BUT NOT MUCH ELSE",
+     "text"
+    ]
+   ],
+   "by": "ONE SOURCE TO CNN"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 70,
+     "lat": 25,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 54,
+     "lat": 31,
+     "R": 480
+    },
+    {
+     "at": "end",
+     "lon": 53,
+     "lat": 31,
+     "R": 480
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "IRN",
+     "color": "danger",
+     "alpha": 0.8
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Isfahan",
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "STRIKE PLANS EXIST.",
+     "text"
+    ],
+    [
+     "WILL THEY BE USED?",
+     "danger"
+    ]
+   ],
+   "sources": [
+    "AS REPORTED BY CNN, JERUSALEM POST, MILITARY.COM, KURDISTAN24, TIMES OF ISRAEL",
+    "OCT 15, 2026 · ANONYMOUS SOURCES · NOT CONFIRMED BY THE PENTAGON"
+   ]
+  }
+ ]
+}
