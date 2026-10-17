@@ -1,0 +1,105 @@
+{
+ "id": "2026-10-17-meta-muse-spark-open",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "A giant AI model now runs on two desktop Macs. Why does that matter?"},
+  {"id": "f1", "text": "Meta released Muse Spark Open on October fifteenth. It is an open-weight model, so anyone can download its trained settings. Meta says it has eight hundred sixteen billion parameters, with forty-two billion active at a time."},
+  {"id": "f2", "text": "Apple and Meta say it runs locally across two Mac Studio computers with M5 Ultra chips, using Apple's MLX software. Reports put the memory need at one terabyte. So no cloud server is required, but that is far beyond a normal laptop. Apple also published new benchmarks for its chips, CNBC reports."},
+  {"id": "f3", "text": "Meta calls it the most capable U.S. open-weight model to date. That is Meta's own claim, not independently verified. According to CNBC, the license allows only limited commercial use."},
+  {"id": "cta", "text": "Will most people run AI on their own devices soon? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE MODEL", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "HOW IT RUNS", "seg": "f2", "color": "violet"},
+  {"n": "03", "name": "THE CATCH", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "upload": {
+  "title": "Meta's Giant AI Model Now Runs on Two Macs #shorts",
+  "description": "Meta released Muse Spark Open on October 15, 2026, an open-weight AI model it says has 816 billion parameters, 42 billion of them active at a time. Apple and Meta say it runs locally on two Mac Studio computers with M5 Ultra chips using Apple's MLX software; reports put the memory need at about one terabyte. Meta calls it the most capable U.S. open-weight model to date, which is Meta's own claim and not independently verified.\n\nSources: CNBC; TechCrunch; Axios; Engadget; Meta and Apple announcements (Oct 15, 2026).\n\n#tech #ai #meta",
+  "tags": ["technology", "news", "Meta", "Muse Spark Open", "open-weight AI", "Apple", "Mac Studio", "MLX"],
+  "cover": "hook:Macs, +0.4"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [-122.15, 37.48],
+  "number": "816B",
+  "numberColor": "accent",
+  "lines": [["ON A DESK", "text"], ["NO CLOUD", "accent"]],
+  "source": "PER META · OCT 15 · PARAMETERS"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {"at": 0, "lon": -60, "lat": 30, "R": 380},
+    {"at": 4.5, "lon": -122.15, "lat": 37.48, "R": 560}
+   ],
+   "chip": {"text": "TECH · OPEN-WEIGHT AI", "at": 0.25, "color": "accent"},
+   "markers": [
+    {"loc": [-122.15, 37.48], "color": "accent", "at": "hook:giant", "label": "META", "sub": "CALIFORNIA", "dx": -30, "dy": -120, "big": true}
+   ],
+   "headline": {
+    "at": "hook:model",
+    "lines": [["GIANT AI MODEL", "text", 110], ["ON TWO MACS", "accent", 84]]
+   }
+  },
+  {
+   "type": "counter",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "MUSE SPARK OPEN",
+   "sublabel": "OPEN-WEIGHT MODEL · PER META",
+   "icon": "chip",
+   "color": "accent",
+   "value": 816,
+   "start": 0,
+   "suffix": " B",
+   "doneSuffix": " BILLION PARAMETERS",
+   "decimals": 0,
+   "at": "f1:eight",
+   "doneAt": "f1:eight +2",
+   "note": "42 BILLION ACTIVE AT A TIME · PER META",
+   "source": "META · CNBC · TECHCRUNCH"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "HOW IT RUNS LOCALLY",
+   "color": "accent",
+   "steps": [
+    {"icon": "chip", "title": "816B MODEL", "sub": "OPEN WEIGHTS · DOWNLOAD", "color": "info", "at": "f2:Apple"},
+    {"icon": "factory", "title": "2 MAC STUDIOS", "sub": "M5 ULTRA · MLX SOFTWARE", "color": "accent", "at": "f2:Mac"},
+    {"icon": "check", "title": "NO CLOUD NEEDED", "sub": "~1 TB MEMORY · PER REPORTS", "color": "ok", "at": "f2:So"}
+   ],
+   "source": "APPLE · META · CNBC · ENGADGET"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {"icon": "flag", "big": "'MOST CAPABLE'", "text": "U.S. OPEN-WEIGHT MODEL · META'S OWN CLAIM", "color": "accent", "at": "f3:Meta"},
+    {"icon": "x", "big": "NOT VERIFIED", "text": "NO INDEPENDENT BENCHMARK YET", "color": "danger", "at": "f3:That"},
+    {"icon": "shield", "big": "LIMITED LICENSE", "text": "LIMITED COMMERCIAL USE · PER CNBC", "color": "info", "at": "f3:According"}
+   ],
+   "source": "SOURCES: META · CNBC · TECHCRUNCH · AXIOS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": -100, "lat": 30, "R": 800},
+    {"at": "cta +1", "lon": -122.15, "lat": 37.48, "R": 470},
+    {"at": "end", "lon": -110, "lat": 35, "R": 470}
+   ],
+   "markers": [{"loc": [-122.15, 37.48], "color": "accent"}],
+   "lines": [["AI ON YOUR DESK", "text"], ["SOON?", "accent"]],
+   "sources": ["META · CNBC · TECHCRUNCH · AXIOS", "CLAIMS ARE META'S AND APPLE'S"]
+  }
+ ]
+}
