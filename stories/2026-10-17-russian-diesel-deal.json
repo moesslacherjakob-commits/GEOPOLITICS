@@ -1,0 +1,86 @@
+{
+ "id": "2026-10-17-russian-diesel-deal",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Trump eased sanctions on Russian diesel. Will it lower your fuel bill?"},
+  {"id": "f1", "text": "After a call with Putin, Trump said Russia will send over 300,000 tons of diesel now, 500,000 in November, and one million after. Treasury issued a license allowing the trade until April 2027. A US official says the goal is lower gas prices at home."},
+  {"id": "f2", "text": "Axios, citing a US official, reports Trump acted after Kyiv ignored requests to stop hitting Russian refineries. Zelenskyy says Kyiv would stop if Russia stops hitting Ukrainian power plants. He calls the deal not fair and not honest. Twelve senators, six of them Republicans, want it rescinded."},
+  {"id": "f3", "text": "One analysis, citing US data, says 300,000 tons is less than one day of American transport fuel use. A sanctions law deadline falls on October 18. Business Standard reports Trump waived those sanctions."},
+  {"id": "cta", "text": "Will fuel prices fall by winter? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE DEAL", "seg": "f1", "color": "oil"},
+  {"n": "02", "name": "THE BACKLASH", "seg": "f2", "color": "danger"},
+  {"n": "03", "name": "THE DEADLINE", "seg": "f3", "to": "cta -0.2", "color": "accent"}
+ ],
+ "upload": {
+  "title": "Trump Eased Russian Diesel Sanctions. Who Gains? #shorts",
+  "description": "After a call with Vladimir Putin, Donald Trump said Russia would supply more than 300,000 tons of diesel immediately, 500,000 tons in November and 1 million tons afterwards. The US Treasury issued a general license for Russian diesel valid until April 7, 2027. Axios, citing a US official, reports the deal followed Ukraine's refusal to stop refinery strikes; Zelenskyy calls it \"not fair and not honest\". Twelve senators, six of them Republicans, have asked Trump to rescind it. Business Standard reports Trump waived sanctions under the Graham sanctions law ahead of the October 18 deadline; this is reported by a single outlet so far. Volume figures come from Trump's announcement.\n\nSources:\nAxios: U.S. official: Trump cut deal with Putin after Zelensky ignored his requests (Oct 10, 2026)\nCBS News: Bipartisan group of senators urge Trump to rescind Russian diesel deal (Oct 13, 2026)\nCBC: 12 U.S. senators, including 6 Republicans, tell Trump to drop diesel deal with Russia (Oct 2026)\nNPR: Bipartisan group of senators call on Trump to rescind Russian diesel deal (Oct 13, 2026)\nBusiness Standard: Trump waives Russia energy tariffs and sanctions under Graham law (Oct 17, 2026)\n\n#geopolitics #Russia #Sanctions #Diesel",
+  "tags": ["geopolitics", "Russia", "sanctions", "diesel", "Trump", "Putin", "Ukraine", "oil", "world news", "fuel prices"],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:Russia",
+  "focus": "Moscow",
+  "zoom": 1.3,
+  "number": "300,000",
+  "numberColor": "oil",
+  "lines": [["TONS OF DIESEL", "text"], ["WHO PAYS?", "accent"]],
+  "source": "PER TRUMP · RUSSIA DEAL"
+ },
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.25", "exit": "zoom",
+   "view": [{"at": 0, "lon": -20, "lat": 40, "R": 360}, {"at": 3.4, "lon": 38, "lat": 55, "R": 480}],
+   "chip": {"text": "RUSSIA · OCT 17, 2026", "at": 0.25},
+   "highlights": [
+    {"iso": "RUS", "color": "oil", "at": "hook:Russian"},
+    {"iso": "USA", "color": "info", "at": "hook:Trump"}
+   ],
+   "markers": [{"loc": "Moscow", "color": "oil", "at": "hook:eased", "label": "MOSCOW", "sub": "DIESEL EXPORTS", "dx": 90, "dy": -70, "big": true}],
+   "headline": {"at": "hook:sanctions", "lines": [["DIESEL", "oil", 130], ["DEAL?", "text", 130]]},
+   "card": {"at": "hook:fuel", "icon": "barrel", "iconColor": "oil", "color": "oil", "kicker": "RUSSIA", "title": "SANCTIONS EASED", "reticle": false}
+  },
+  {
+   "type": "map", "from": "hook$ +0.25", "to": "cta -0.1",
+   "center": [40, 52],
+   "camera": [
+    {"at": "hook$ +0.25", "lon": 38, "lat": 55, "dist": 43, "pitch": 0, "yaw": 0},
+    {"at": "f1 +0.4", "lon": 40, "lat": 54, "dist": 70, "pitch": 44, "yaw": -5, "oy": 180},
+    {"at": "f2 +0.1", "lon": 33, "lat": 50, "dist": 55, "pitch": 48, "yaw": 4, "oy": 190},
+    {"at": "f3 +0.2", "lon": 45, "lat": 56, "dist": 95, "pitch": 42, "yaw": -3, "oy": 190},
+    {"at": "cta", "lon": 40, "lat": 54, "dist": 85, "pitch": 46, "yaw": 0, "oy": 190}
+   ],
+   "layers": [
+    {"kind": "tint", "iso": "RUS", "color": "oil", "alpha": 0.55, "fill": 0.12, "at": "f1"},
+    {"kind": "marker", "loc": "Moscow", "style": "pulse", "color": "oil", "at": "f1:Putin", "until": "f2 -0.2", "label": {"text": "PUTIN CALL", "sub": "DIESEL DEAL", "dx": 100, "dy": -70}},
+    {"kind": "callout", "loc": "Moscow", "place": "WASHINGTON", "icon": "flag", "screen": [120, 330], "color": "info", "at": "f1:Treasury", "until": "f2 -0.2"},
+    {"kind": "tint", "iso": "UKR", "color": "info", "alpha": 0.55, "fill": 0.12, "at": "f2"},
+    {"kind": "tag", "loc": "Kiev", "text": "KYIV", "sub": "REFINERY STRIKES", "color": "info", "at": "f2:Kyiv", "until": "f3 -0.2", "dx": -110, "dy": 90},
+    {"kind": "stamp", "text": "RESCIND IT", "icon": "x", "color": "danger", "screen": [540, 1120], "at": "f2:Twelve", "until": "f3 -0.1", "note": "12 SENATORS · 6 REPUBLICANS"},
+    {"kind": "bubble", "screen": [380, 420, 640], "kicker": "ZELENSKYY:", "text": "NOT FAIR AND NOT HONEST", "color": "danger", "at": "f2:He", "until": "f2:Twelve -0.2"},
+    {"kind": "stamp", "text": "OCT 18", "icon": "flag", "color": "accent", "screen": [540, 1120], "at": "f3:A", "until": "f3:Business -0.1", "note": "SANCTIONS LAW DEADLINE"},
+    {"kind": "stamp", "text": "WAIVER REPORTED", "icon": "check", "color": "oil", "screen": [540, 1120], "at": "f3:Business", "until": "cta -0.2", "note": "SINGLE OUTLET · BUSINESS STANDARD"}
+   ]
+  },
+  {
+   "type": "bars", "from": "f1:Russia +0.1", "to": "f1:Treasury -0.2",
+   "label": "RUSSIAN DIESEL PLEDGED TO WORLD MARKETS",
+   "sublabel": "TONS · PER TRUMP",
+   "bars": [
+    {"label": "NOW", "value": 300, "display": "300K+", "color": "oil", "at": "f1:300,000", "dur": 0.8},
+    {"label": "NOVEMBER", "value": 500, "display": "500K", "color": "accent", "at": "f1:500,000", "dur": 0.8},
+    {"label": "AFTER", "value": 1000, "display": "1M", "color": "danger", "at": "f1:million", "dur": 0.8}
+   ],
+   "source": "SOURCE: TRUMP ANNOUNCEMENT, VIA AXIOS"
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "view": [{"at": "cta -0.4", "lon": 38, "lat": 55, "R": 900}, {"at": "cta +1", "lon": 38, "lat": 55, "R": 470}, {"at": "end", "lon": 30, "lat": 52, "R": 470}],
+   "highlights": [{"iso": "RUS", "color": "oil", "alpha": 0.8}, {"iso": "UKR", "color": "info"}],
+   "markers": [{"loc": "Moscow", "color": "oil"}, {"loc": "Kiev", "color": "info"}],
+   "lines": [["DIESEL DEAL.", "text"], ["WILL PRICES FALL?", "oil"]],
+   "sources": ["REPORTING: AXIOS, CBS, CBC, NPR, BUSINESS STANDARD", "OCT 17, 2026"]
+  }
+ ]
+}
