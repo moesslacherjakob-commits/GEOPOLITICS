@@ -1,0 +1,352 @@
+{
+ "id": "2026-10-17-norte-fire-california",
+ "lang": "en",
+ "gap": 0.9,
+ "script": [
+  {
+   "id": "hook",
+   "text": "Sixteen thousand Californians were ordered out in hours. What fed this fire?"
+  },
+  {
+   "id": "f1",
+   "text": "The Norte Fire started Friday morning in San Clemente, Orange County, officials say. It crossed into San Juan Capistrano. The fire authority reports about five hundred seventy acres burned, and at least six homes damaged or destroyed."
+  },
+  {
+   "id": "f2",
+   "text": "Santa Ana winds are hot, dry gusts blowing from inland toward the coast. Fox Weather calls this the first such wind event of the season. The fire authority says evacuation orders cover about forty-six hundred homes and sixteen thousand people."
+  },
+  {
+   "id": "f3",
+   "text": "Two firefighters were hospitalized and are stable, officials say. As of Saturday morning, the fire was five percent contained. The cause is under investigation. Other fires broke out around Los Angeles during the same wind event. Officials say the figures are preliminary and may change."
+  },
+  {
+   "id": "cta",
+   "text": "Will crews fully contain the Norte Fire by Wednesday? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE FIRE",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE WIND",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE TOLL",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -110,
+     "lat": 30,
+     "R": 330
+    },
+    {
+     "at": 3.4,
+     "lon": -117.6,
+     "lat": 33.5,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "CALIFORNIA WILDFIRE",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:ordered",
+    "lines": [
+     [
+      "16,000 ORDERED OUT",
+      "danger",
+      110
+     ],
+     [
+      "NORTE FIRE",
+      "text",
+      120
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -117.65,
+    33.47
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -117.6,
+     "lat": 33.5,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": -117.63,
+     "lat": 33.47,
+     "dist": 24,
+     "pitch": 40,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": -117.9,
+     "lat": 33.7,
+     "dist": 20,
+     "pitch": 30,
+     "yaw": 10,
+     "oy": 170
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": -118.2,
+     "lat": 33.9,
+     "dist": 45,
+     "pitch": 35,
+     "yaw": -5,
+     "oy": 170
+    },
+    {
+     "at": "cta -0.1",
+     "lon": -117.65,
+     "lat": 33.47,
+     "dist": 20,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "field",
+     "at": "f1:Norte",
+     "palette": "fire",
+     "alpha": 0.9,
+     "grow": 1.0,
+     "pulse": true,
+     "clip": "land",
+     "blobs": [
+      {
+       "loc": [
+        -117.62,
+        33.45
+       ],
+       "r": 0.5,
+       "v": 1
+      },
+      {
+       "loc": [
+        -117.65,
+        33.49
+       ],
+       "r": 0.4,
+       "v": 0.8
+      }
+     ]
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -117.61,
+      33.43
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:San",
+     "label": {
+      "text": "SAN CLEMENTE",
+      "sub": "FIRE STARTED FRIDAY",
+      "dx": -230,
+      "dy": 60
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -117.66,
+      33.5
+     ],
+     "style": "x",
+     "color": "accent",
+     "at": "f1:San#1",
+     "label": {
+      "text": "SAN JUAN CAPISTRANO",
+      "sub": "HOMES BURNED",
+      "dx": 120,
+      "dy": -80
+     }
+    },
+    {
+     "kind": "note",
+     "text": "LOCATIONS APPROXIMATE · NOT A FIRE PERIMETER",
+     "y": 1170,
+     "at": "f1 +1",
+     "until": "f3"
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f1:The",
+   "to": "f1$ -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "flame",
+     "big": "~570 ACRES",
+     "text": "BURNED · PER ORANGE COUNTY FIRE AUTHORITY",
+     "color": "danger",
+     "at": "f1:fire#1"
+    },
+    {
+     "icon": "flag",
+     "big": "6+ HOMES",
+     "text": "DAMAGED OR DESTROYED · PRELIMINARY",
+     "color": "accent",
+     "at": "f1:least"
+    }
+   ],
+   "source": "SOURCE: ORANGE COUNTY FIRE AUTHORITY (VIA CBS, NPR)"
+  },
+  {
+   "type": "counter",
+   "from": "f2:The#1",
+   "to": "f2$ -0.1",
+   "label": "PEOPLE UNDER EVACUATION ORDERS",
+   "sublabel": "SAN CLEMENTE + SAN JUAN CAPISTRANO",
+   "icon": "people",
+   "value": 16000,
+   "start": 0,
+   "at": "f2:evacuation",
+   "doneAt": "f2$ -1.5",
+   "note": "ABOUT 4,600 HOMES",
+   "source": "SOURCE: ORANGE COUNTY FIRE AUTHORITY"
+  },
+  {
+   "type": "facts",
+   "from": "f3:Two",
+   "to": "f3$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "shield",
+     "big": "2 FIREFIGHTERS",
+     "text": "HOSPITALIZED · STABLE",
+     "color": "info",
+     "at": "f3:Two"
+    },
+    {
+     "icon": "flame",
+     "big": "5% CONTAINED",
+     "text": "AS OF SATURDAY MORNING",
+     "color": "accent",
+     "at": "f3:five"
+    },
+    {
+     "icon": "eye",
+     "big": "CAUSE",
+     "text": "UNDER INVESTIGATION",
+     "color": "danger",
+     "at": "f3:cause"
+    }
+   ],
+   "source": "SOURCE: ORANGE COUNTY FIRE AUTHORITY"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "16,000 ORDERED TO LEAVE.",
+     "text"
+    ],
+    [
+     "FULL CONTAINMENT BY WEDNESDAY?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "ORANGE COUNTY FIRE AUTHORITY VIA CBS LOS ANGELES, NPR, KTLA, FOX WEATHER, CNN (SEARCH EXCERPTS)",
+    "FIGURES PRELIMINARY · LOCATIONS APPROXIMATE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -117.6,
+     "lat": 33.5,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -117.6,
+     "lat": 33.5,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": -117.6,
+     "lat": 33.5,
+     "R": 600
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "California's Norte Fire Burns Homes in Santa Ana Winds #shorts",
+  "description": "The Norte Fire started Friday in San Clemente, California, and spread into San Juan Capistrano. The Orange County Fire Authority says evacuation orders cover about 16,000 people and at least six homes were damaged or destroyed; the fire was 5% contained Saturday morning.\n\nSources: Orange County Fire Authority via CBS Los Angeles, NPR, KTLA, Fox Weather, CNN (figures preliminary; based on search-result excerpts). Locations on the map are approximate.\n\n#climate #weather #wildfire #california",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "wildfire",
+   "California",
+   "Norte Fire",
+   "Santa Ana winds"
+  ],
+  "cover": "f1 +2"
+ },
+ "thumbnail": {
+  "at": "f1 +2",
+  "number": "16,000",
+  "numberColor": "danger",
+  "source": "EVACUATION ORDERS · ORANGE COUNTY FIRE AUTHORITY",
+  "focus": [
+   -117.64,
+   33.47
+  ],
+  "lines": [
+   [
+    "PEOPLE FLEEING",
+    "accent"
+   ]
+  ],
+  "zoom": 1.1
+ }
+}
