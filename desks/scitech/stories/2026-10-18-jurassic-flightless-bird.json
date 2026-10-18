@@ -1,0 +1,271 @@
+{
+ "id": "2026-10-18-jurassic-flightless-bird",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "This early bird could not fly. So what was it built for?"
+  },
+  {
+   "id": "f1",
+   "text": "In a study published in Nature, Chinese researchers describe Yuezhuornis. It lived about one hundred fifty million years ago, in what is now Fujian, China. The fossil was found in twenty twenty four. Its body mass is estimated at about eight hundred twenty grams."
+  },
+  {
+   "id": "f2",
+   "text": "Its forelimbs were very short, which the authors call strong evidence of a life on the ground. Its limb proportions match living ground birds, such as pheasants. But it kept dinosaur traits: serrated teeth, and a flexible second toe with a sickle-shaped claw."
+  },
+  {
+   "id": "f3",
+   "text": "Lead author Wang Min says this challenges the idea that early birds evolved mainly for flight. The caveat: it is one incomplete specimen. Its lifestyle and exact place on the family tree need more fossils."
+  },
+  {
+   "id": "cta",
+   "text": "Will more flightless Jurassic birds turn up? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE FIND",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE BODY",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "THE CATCH",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Jurassic Bird Fossil Had Wings Too Short to Fly #shorts",
+  "description": "Researchers led by Wang Min of the Chinese Academy of Sciences describe Yuezhuornis yangyuanensis in a study published in Nature on October 14, 2026. The bird lived roughly 150 million years ago in Fujian, China; its short forelimbs and ground-bird limb proportions point to a life on the ground, per the authors. It is known from a single incomplete specimen.\n\nSources: Nature paper (s41586-026-10972-z); South China Morning Post; Sci.News; CGTN; The Star.\n\n#science #paleontology #birds",
+  "tags": [
+   "science",
+   "news",
+   "Jurassic",
+   "bird evolution",
+   "fossil",
+   "Nature",
+   "China",
+   "paleontology"
+  ],
+  "cover": "hook:fly, +0.4"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [
+   118.9,
+   27.4
+  ],
+  "number": "150M YEARS",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "BIRD THAT",
+    "text"
+   ],
+   [
+    "COULD NOT FLY",
+    "accent"
+   ]
+  ],
+  "source": "NATURE · OCT 14 · CHINESE ACADEMY OF SCIENCES"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": 100,
+     "lat": 25,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": 118.9,
+     "lat": 27.4,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "PALEONTOLOGY · NATURE STUDY",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      118.9,
+      27.4
+     ],
+     "color": "accent",
+     "at": "hook:early",
+     "label": "FUJIAN",
+     "sub": "FOSSIL SITE",
+     "dx": -30,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:could",
+    "lines": [
+     [
+      "NO FLIGHT",
+      "text",
+      110
+     ],
+     [
+      "JURASSIC BIRD",
+      "accent",
+      76
+     ]
+    ]
+   }
+  },
+  {
+   "type": "flow",
+   "from": "f1 -0.1",
+   "to": "f2:Its -0.1",
+   "label": "WHAT THE FOSSIL SHOWS",
+   "color": "accent",
+   "steps": [
+    {
+     "icon": "flag",
+     "title": "FUJIAN, CHINA",
+     "sub": "FOUND 2024 · ~150M YEARS OLD",
+     "color": "accent",
+     "at": "f1:Chinese"
+    },
+    {
+     "icon": "people",
+     "title": "~820 G BODY MASS",
+     "sub": "ESTIMATE · PER CGTN",
+     "color": "info",
+     "at": "f1:Its"
+    }
+   ],
+   "source": "NATURE · CAS-IVPP · SCMP · SCI.NEWS · CGTN"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "BUILT FOR THE GROUND",
+   "color": "violet",
+   "steps": [
+    {
+     "icon": "x",
+     "title": "VERY SHORT FOREARMS",
+     "sub": "AUTHORS: EVIDENCE OF GROUND LIFE",
+     "color": "info",
+     "at": "f2:forelimbs"
+    },
+    {
+     "icon": "people",
+     "title": "PHEASANT-LIKE LIMBS",
+     "sub": "MATCH LIVING GROUND BIRDS",
+     "color": "accent",
+     "at": "f2:Its +0.0"
+    },
+    {
+     "icon": "flame",
+     "title": "DINOSAUR TRAITS KEPT",
+     "sub": "SERRATED TEETH · SICKLE CLAW",
+     "color": "danger",
+     "at": "f2:But"
+    }
+   ],
+   "source": "NATURE · CAS-IVPP · SCMP · SCI.NEWS · CGTN"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "x",
+     "big": "TINY FOREARMS",
+     "text": "AUTHORS: STRONG EVIDENCE OF A GROUND LIFE",
+     "color": "info",
+     "at": "f3:Lead"
+    },
+    {
+     "icon": "flame",
+     "big": "DINO TRAITS",
+     "text": "SERRATED TEETH · SICKLE-CLAW SECOND TOE",
+     "color": "accent",
+     "at": "f3:says"
+    },
+    {
+     "icon": "eye",
+     "big": "ONE SPECIMEN",
+     "text": "INCOMPLETE · MORE FOSSILS NEEDED",
+     "color": "danger",
+     "at": "f3:caveat"
+    }
+   ],
+   "source": "SOURCES: NATURE · SCMP · SCI.NEWS · CGTN"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 90,
+     "lat": 20,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 118.9,
+     "lat": 27.4,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": 128.9,
+     "lat": 22.4,
+     "R": 470
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      118.9,
+      27.4
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "MORE GROUND",
+     "text"
+    ],
+    [
+     "BIRDS OUT THERE?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "NATURE · CAS-IVPP · SCMP · SCI.NEWS · CGTN",
+    "SINGLE INCOMPLETE SPECIMEN"
+   ]
+  }
+ ]
+}
