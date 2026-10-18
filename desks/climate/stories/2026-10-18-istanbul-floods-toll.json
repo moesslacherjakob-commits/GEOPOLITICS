@@ -1,0 +1,415 @@
+{
+ "id": "2026-10-18-istanbul-floods-toll",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Five dead, thousands rescued. How much rain did Istanbul actually get?"
+  },
+  {
+   "id": "f1",
+   "text": "Istanbul's governor says three thousand fifty people were rescued, and no one is still waiting for rescue. Daily Sabah reports that a missing person's body was found in the Golden Horn on Sunday. That brings the toll to five."
+  },
+  {
+   "id": "f2",
+   "text": "Turkey's interior minister said rainfall reached two hundred seventy-two kilograms per square meter in parts of the city. That equals two hundred seventy-two liters on every square meter. Officials call it the worst in more than eighty years."
+  },
+  {
+   "id": "f3",
+   "text": "Officials say several people are still missing, and counts differ between outlets. Turkey's weather service has issued orange alerts for Istanbul and four nearby provinces. Türkiye Today reports a second round of rain, and debris from the first floods is not fully cleared."
+  },
+  {
+   "id": "cta",
+   "text": "Will Istanbul avoid another deadly flood this autumn? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE RECORD",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE RESPONSE",
+   "seg": "f2",
+   "color": "info"
+  },
+  {
+   "n": "03",
+   "name": "THE TOLL",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "danger"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 5,
+     "lat": 35,
+     "R": 360
+    },
+    {
+     "at": 3.4,
+     "lon": 29,
+     "lat": 41,
+     "R": 700
+    }
+   ],
+   "chip": {
+    "text": "ISTANBUL FLOODS",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:thousands",
+    "lines": [
+     [
+      "5 DEAD",
+      "danger",
+      130
+     ],
+     [
+      "3,050 RESCUED",
+      "text",
+      100
+     ]
+    ]
+   },
+   "highlights": [
+    {
+     "iso": "TUR",
+     "color": "info",
+     "at": "hook:Five",
+     "alpha": 0.4
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      28.98,
+      41.01
+     ],
+     "color": "danger",
+     "at": "hook:rescued",
+     "label": "ISTANBUL",
+     "sub": "",
+     "dx": -280,
+     "dy": -120,
+     "big": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    28.98,
+    41.05
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 29,
+     "lat": 41,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 28.95,
+     "lat": 41.05,
+     "dist": 22,
+     "pitch": 40,
+     "yaw": -6,
+     "oy": 170
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": 29.0,
+     "lat": 41.1,
+     "dist": 14,
+     "pitch": 52,
+     "yaw": 8,
+     "oy": 170
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": 28.9,
+     "lat": 41.05,
+     "dist": 30,
+     "pitch": 35,
+     "yaw": -4,
+     "oy": 180
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 28.98,
+     "lat": 41.03,
+     "dist": 20,
+     "pitch": 45,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "field",
+     "at": "hook$",
+     "palette": "rain",
+     "alpha": 1,
+     "grow": 1.2,
+     "pulse": true,
+     "blobs": [
+      {
+       "loc": [
+        28.9,
+        41.05
+       ],
+       "r": 1.1,
+       "v": 1
+      },
+      {
+       "loc": [
+        28.4,
+        41.2
+       ],
+       "r": 1.4,
+       "v": 0.8
+      },
+      {
+       "loc": [
+        29.6,
+        41.0
+       ],
+       "r": 1.2,
+       "v": 0.7
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "RAIN AREA ILLUSTRATIVE · OFFICIALS, DAILY SABAH",
+     "y": 1170,
+     "at": "f1 +1",
+     "until": "f2"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      28.98,
+      41.01
+     ],
+     "text": "ISTANBUL",
+     "sub": "3,050 RESCUED",
+     "color": "accent",
+     "dx": -250,
+     "dy": -120,
+     "at": "f1:Istanbul's",
+     "until": "f2"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      28.97,
+      41.04
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f1:Golden",
+     "label": {
+      "text": "GOLDEN HORN",
+      "sub": "BODY FOUND SUNDAY",
+      "dx": -280,
+      "dy": 40,
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      29.0,
+      40.95
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f3:orange",
+     "label": {
+      "text": "ORANGE ALERT",
+      "sub": "ISTANBUL + 4 PROVINCES",
+      "dx": -300,
+      "dy": -60,
+      "until": "cta"
+     }
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f1:Istanbul's",
+   "to": "f1$ -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "people",
+     "big": "3,050",
+     "text": "RESCUED · PER GOVERNOR GÜL",
+     "color": "info",
+     "at": "f1:three"
+    },
+    {
+     "icon": "flag",
+     "big": "5 DEAD",
+     "text": "BODY FOUND IN GOLDEN HORN SUNDAY",
+     "color": "danger",
+     "at": "f1:five"
+    }
+   ],
+   "source": "SOURCE: GOVERNOR DAVUT GÜL, DAILY SABAH, XINHUA"
+  },
+  {
+   "type": "gauge",
+   "from": "f2:Turkey's",
+   "to": "f2$ -0.1",
+   "label": "RAINFALL IN PARTS OF ISTANBUL",
+   "value": 272,
+   "max": 300,
+   "suffix": " kg/m²",
+   "icon": "rain",
+   "color": "info",
+   "at": "f2:rainfall",
+   "doneAt": "f2:liters",
+   "note": "= 272 LITERS PER SQUARE METER",
+   "source": "SOURCE: TURKISH INTERIOR MINISTER, VIA DAILY SABAH"
+  },
+  {
+   "type": "facts",
+   "from": "f3:Officials",
+   "to": "f3$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "eye",
+     "big": "SEVERAL MISSING",
+     "text": "COUNTS DIFFER BETWEEN OUTLETS",
+     "color": "danger",
+     "at": "f3:several"
+    },
+    {
+     "icon": "storm",
+     "big": "ORANGE ALERT",
+     "text": "ISTANBUL + 4 PROVINCES · MGM",
+     "color": "accent",
+     "at": "f3:orange"
+    },
+    {
+     "icon": "drop",
+     "big": "2ND ROUND",
+     "text": "OF RAIN · PER TÜRKIYE TODAY",
+     "color": "info",
+     "at": "f3:second"
+    }
+   ],
+   "source": "SOURCE: TURKISH OFFICIALS, MGM, TÜRKIYE TODAY"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "5 DEAD. 3,050 RESCUED.",
+     "text"
+    ],
+    [
+     "ANOTHER DEADLY FLOOD THIS AUTUMN?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "DAILY SABAH, BLOOMBERG, XINHUA, TÜRKIYE TODAY, GOVERNOR GÜL (SEARCH EXCERPTS)",
+    "OCT 18, 2026 · RAIN AREA ILLUSTRATIVE · FIGURES MAY CHANGE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 5,
+     "lat": 35,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 28,
+     "lat": 41,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": 29,
+     "lat": 41,
+     "R": 600
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      28.98,
+      41.01
+     ],
+     "color": "danger"
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "TUR",
+     "color": "info",
+     "alpha": 0.5
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Istanbul Floods: Five Dead After 272 mm of Rain #shorts",
+  "description": "Istanbul's flood death toll has risen to five after a missing person's body was found in the Golden Horn on Sunday, Daily Sabah reports. Governor Davut Gül says 3,050 people were rescued; Turkey's interior minister put peak rainfall at 272 kg per square meter in parts of the city.\n\nSources: Daily Sabah, Bloomberg, Xinhua, Türkiye Today, Africanews (figures may change; based on search-result excerpts). The rain area on the map is illustrative.\n\n#climate #weather #floods #istanbul",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "floods",
+   "Istanbul",
+   "Turkey",
+   "heavy rain"
+  ],
+  "cover": "f1 +2"
+ },
+ "thumbnail": {
+  "at": "f1 +2",
+  "number": "5 DEAD",
+  "numberColor": "danger",
+  "source": "ISTANBUL FLOODS · DAILY SABAH · OCT 18",
+  "focus": [
+   28.98,
+   41.01
+  ],
+  "lines": [
+   [
+    "272 LITERS PER M²",
+    "accent"
+   ]
+  ],
+  "zoom": 1.1
+ },
+ "gap": 0.9
+}
