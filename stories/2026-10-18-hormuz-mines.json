@@ -1,0 +1,75 @@
+{
+ "id": "2026-10-18-hormuz-mines",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Two supertankers may have hit mines near Hormuz. Who really controls the strait?"},
+  {"id": "f1", "text": "Iran's Revolutionary Guards say a supertanker carrying over two million barrels of crude hit a naval mine and caught fire on Saturday. They say it used a route Tehran had not approved. Iran named no ship, and the claim is unverified."},
+  {"id": "f2", "text": "The US military disagrees. CENTCOM commander Brad Cooper says the strait is controlled by the US and its regional partners, and is open. CENTCOM says Iranian forces hit another ship, the GFS Pride, with a projectile. Iran says it was a mine."},
+  {"id": "f3", "text": "Maritime security reports count at least five incidents around Hormuz in 48 hours. Cooper also says the US blockade has cost Iran about twenty five billion dollars in oil revenue. That figure is not independently verified."},
+  {"id": "cta", "text": "Will Hormuz be fully open by November? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "IRAN'S CLAIM", "seg": "f1", "color": "danger"},
+  {"n": "02", "name": "US REPLY", "seg": "f2", "color": "info"},
+  {"n": "03", "name": "THE COUNT", "seg": "f3", "to": "cta -0.2", "color": "accent"}
+ ],
+ "upload": {
+  "title": "Tankers Hit Near Hormuz: Mines or Missiles? #shorts",
+  "description": "Iran's Revolutionary Guards (IRGC) said on October 17 that a supertanker carrying more than 2 million barrels of crude oil hit a naval mine in the Strait of Hormuz and caught fire; they said it was on a route not approved by Tehran. The IRGC named no vessel, and the claim could not be independently verified. US Central Command (CENTCOM) rejects Iran's claim of control: commander Adm. Brad Cooper said the strait is controlled by the United States and its regional partners and remains open. CENTCOM says Iranian forces struck the Singapore-flagged GFS Pride with a projectile; the IRGC says it hit a mine. Maritime security reports count at least five incidents involving commercial ships around Hormuz within 48 hours. Cooper also said the US naval blockade has cost Iran an estimated $25 billion in oil revenue; this figure could not be independently verified.\n\nSources:\nAl Jazeera: US and Iran both claim control of Strait of Hormuz amid attacks on vessels (Oct 17, 2026)\nAl Jazeera live blog: IRGC says supertanker hits mine in Hormuz, catches fire (Oct 17, 2026)\nEuronews: Super tanker ablaze after striking mine in Strait of Hormuz, IRGC says (Oct 17, 2026)\nGulf News: US military disputes Iran's Hormuz claims (Oct 2026)\nTimes of Israel live blog (Oct 17, 2026)\n\n#geopolitics #Iran #Hormuz #Oil",
+  "tags": ["geopolitics", "Iran", "Hormuz", "Strait of Hormuz", "oil tanker", "CENTCOM", "IRGC", "blockade", "world news", "oil prices"],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:Iran's",
+  "focus": "Strait of Hormuz",
+  "zoom": 1.4,
+  "number": "2M",
+  "numberColor": "danger",
+  "lines": [["BARRELS ABLAZE", "text"], ["MINE OR MISSILE?", "accent"]],
+  "source": "PER IRAN'S IRGC · UNVERIFIED"
+ },
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.25", "exit": "zoom",
+   "view": [{"at": 0, "lon": 30, "lat": 20, "R": 360}, {"at": 3.4, "lon": 56, "lat": 26, "R": 480}],
+   "chip": {"text": "HORMUZ · OCT 17, 2026", "at": 0.25},
+   "highlights": [
+    {"iso": "IRN", "color": "danger", "at": "hook:supertankers"},
+    {"iso": "OMN", "color": "info", "at": "hook:Hormuz."}
+   ],
+   "markers": [{"loc": "Strait of Hormuz", "color": "danger", "at": "hook:mines", "label": "HORMUZ", "sub": "TANKER ABLAZE", "dx": -90, "dy": -70, "big": true}],
+   "headline": {"at": "hook:hit", "lines": [["MINES", "danger", 130], ["OR MISSILES?", "text", 110]]},
+   "card": {"at": "hook:Who", "icon": "ship", "iconColor": "danger", "color": "danger", "kicker": "STRAIT OF HORMUZ", "title": "WHO CONTROLS IT?", "reticle": false}
+  },
+  {
+   "type": "map", "from": "hook$ +0.25", "to": "cta -0.1",
+   "center": [56, 26],
+   "camera": [
+    {"at": "hook$ +0.25", "lon": 56, "lat": 26, "dist": 43, "pitch": 0, "yaw": 0},
+    {"at": "f1 +0.4", "lon": 56.3, "lat": 26.4, "dist": 22, "pitch": 48, "yaw": -8, "oy": 190},
+    {"at": "f2 +0.1", "lon": 55, "lat": 26.5, "dist": 40, "pitch": 46, "yaw": 6, "oy": 190},
+    {"at": "f3 +0.2", "lon": 52, "lat": 26, "dist": 70, "pitch": 42, "yaw": -3, "oy": 190},
+    {"at": "cta", "lon": 54, "lat": 26, "dist": 62, "pitch": 46, "yaw": 0, "oy": 190}
+   ],
+   "layers": [
+    {"kind": "tint", "iso": "IRN", "color": "danger", "alpha": 0.5, "fill": 0.1, "at": "f1"},
+    {"kind": "marker", "loc": "Strait of Hormuz", "style": "pulse", "color": "danger", "at": "f1:Revolutionary", "until": "f2 -0.2", "label": {"text": "SUPERTANKER", "sub": "2M+ BARRELS · PER IRGC", "dx": -110, "dy": -80}},
+    {"kind": "stamp", "text": "UNVERIFIED", "icon": "eye", "color": "oil", "screen": [540, 1120], "at": "f1:Iran", "until": "f2 -0.1", "note": "NO SHIP NAMED"},
+    {"kind": "callout", "loc": "Strait of Hormuz", "place": "CENTCOM", "icon": "shield", "screen": [130, 330], "color": "info", "at": "f2:CENTCOM", "until": "f3 -0.2"},
+    {"kind": "tint", "iso": "USA", "color": "info", "alpha": 0.4, "fill": 0.08, "at": "f2"},
+    {"kind": "bubble", "screen": [380, 420, 640], "kicker": "CENTCOM CHIEF COOPER:", "text": "OPEN FOR BUSINESS", "color": "info", "at": "f2:Cooper", "until": "f2:CENTCOM -0.2"},
+    {"kind": "marker", "loc": "Strait of Hormuz", "style": "x", "color": "info", "at": "f2:GFS", "until": "f3 -0.2", "label": {"text": "GFS PRIDE", "sub": "MINE OR PROJECTILE?", "dx": 110, "dy": 80}},
+    {"kind": "stamp", "text": "5 INCIDENTS", "icon": "ship", "color": "danger", "screen": [540, 1120], "at": "f3:Maritime", "until": "f3:Cooper -0.1", "note": "IN 48 HOURS · MARITIME REPORTS"},
+    {"kind": "stamp", "text": "$25 BILLION", "icon": "money", "color": "oil", "screen": [540, 1120], "at": "f3:Cooper", "until": "cta -0.2", "note": "PER CENTCOM · UNVERIFIED"}
+   ]
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "view": [{"at": "cta -0.4", "lon": 56, "lat": 26, "R": 900}, {"at": "cta +1", "lon": 56, "lat": 26, "R": 520}, {"at": "end", "lon": 52, "lat": 27, "R": 520}],
+   "highlights": [{"iso": "IRN", "color": "danger", "alpha": 0.7}, {"iso": "OMN", "color": "info"}, {"iso": "ARE", "color": "info"}],
+   "markers": [{"loc": "Strait of Hormuz", "color": "danger"}],
+   "lines": [["WHO CONTROLS HORMUZ?", "text"], ["OPEN BY NOVEMBER?", "accent"]],
+   "sources": ["REPORTING: AL JAZEERA, EURONEWS, GULF NEWS, TIMES OF ISRAEL", "OCT 17, 2026"]
+  }
+ ]
+}
