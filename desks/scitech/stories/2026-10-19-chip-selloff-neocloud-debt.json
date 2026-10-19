@@ -1,0 +1,270 @@
+{
+ "id": "2026-10-19-chip-selloff-neocloud-debt",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Chip stocks fell eight days straight. Is the A.I. boom running out of cash?"
+  },
+  {
+   "id": "f1",
+   "text": "On Friday, a key index of chip stocks fell for an eighth straight session, and the Nasdaq sank more than two percent, CNN reports. Investors worry about A.I. debt, especially at neoclouds, which rent out computing power."
+  },
+  {
+   "id": "f2",
+   "text": "On October fourteenth, Gartner forecast that over eighty percent of neocloud providers may cease independent operations by twenty thirty. It says over three and a half trillion dollars of A.I. spending could be exposed to impairment. A forecast, not a fact."
+  },
+  {
+   "id": "f3",
+   "text": "Bloomberg reported that some bonds of CoreWeave, a large neocloud, now yield over sixteen percent, a level that signals distress. Its chief executive argues contracted orders cover its debt. Gartner expects big cloud companies to fare better."
+  },
+  {
+   "id": "cta",
+   "text": "Will most neoclouds survive the decade? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE SELLOFF",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE WARNING",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "THE DEBT",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Chip Stocks Fall 8 Days Straight on AI Debt Fears #shorts",
+  "description": "A key index of chip stocks fell for an eighth straight session on October 16 and the Nasdaq sank more than 2 percent, as investors questioned AI-related debt, CNN reports. Gartner forecast on October 14 that over 80 percent of neocloud providers may cease independent operations by 2030 and that more than $3.5 trillion of AI infrastructure spending could be exposed to impairment. Bloomberg reported that some CoreWeave bonds yield above 16 percent. Forecasts and company statements are claims, not facts.\n\nSources: CNN; Gartner press release (Oct 14); Bloomberg via BNN; Stocktwits. Only search snippets were available for some pages.\n\n#tech #AI #chips",
+  "tags": [
+   "technology",
+   "news",
+   "AI",
+   "semiconductors",
+   "CoreWeave",
+   "Gartner",
+   "neocloud",
+   "Nasdaq"
+  ],
+  "cover": "hook:straight, +0.4"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [
+   -74.0,
+   40.71
+  ],
+  "number": "8 DAYS",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "AI DEBT",
+    "text"
+   ],
+   [
+    "FEARS?",
+    "accent"
+   ]
+  ],
+  "source": "OCT 16 · CHIP INDEX LOSING STREAK · PER CNN"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": -20,
+     "lat": 30,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": -74,
+     "lat": 40.7,
+     "R": 600
+    }
+   ],
+   "chip": {
+    "text": "A.I. CHIPS · OCT 16, 2026",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "USA",
+     "color": "danger",
+     "at": "hook:Chip",
+     "alpha": 0.45
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -74.0,
+      40.71
+     ],
+     "color": "danger",
+     "at": "hook:Chip",
+     "label": "NEW YORK",
+     "sub": "NASDAQ",
+     "dx": -30,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:eight",
+    "lines": [
+     [
+      "CHIP STOCKS",
+      "text",
+      110
+     ],
+     [
+      "EIGHT DOWN DAYS",
+      "danger",
+      100
+     ]
+    ]
+   }
+  },
+  {
+   "type": "facts",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "chip",
+     "big": "8 SESSIONS",
+     "text": "CHIP INDEX LOSING STREAK · PER CNN",
+     "color": "danger",
+     "at": "f1:eighth"
+    },
+    {
+     "icon": "bolt",
+     "big": "NASDAQ −2%+",
+     "text": "FRIDAY, OCT 16 · PER CNN",
+     "color": "danger",
+     "at": "f1:Nasdaq"
+    },
+    {
+     "icon": "money",
+     "big": "A.I. DEBT",
+     "text": "INVESTORS' QUESTION · NEOCLOUDS RENT OUT COMPUTING",
+     "color": "accent",
+     "at": "f1:neoclouds,"
+    }
+   ],
+   "source": "SOURCES: CNN · STOCKTWITS"
+  },
+  {
+   "type": "gauge",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "NEOCLOUDS THAT MAY CEASE INDEPENDENT OPERATION BY 2030",
+   "value": 80,
+   "max": 100,
+   "prefix": "OVER ",
+   "suffix": "%",
+   "icon": "factory",
+   "at": "f2:over",
+   "doneAt": "f2:thirty.",
+   "note": "GARTNER FORECAST (OCT 14) · $3.5T+ A.I. SPENDING COULD BE EXPOSED TO IMPAIRMENT",
+   "source": "SOURCE: GARTNER PRESS RELEASE · A FORECAST, NOT A FACT"
+  },
+  {
+   "type": "flow",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "HOW A NEOCLOUD WORKS",
+   "color": "info",
+   "steps": [
+    {
+     "icon": "money",
+     "title": "BORROWS MONEY",
+     "sub": "BONDS & LOANS",
+     "color": "danger",
+     "at": "f3:Bloomberg"
+    },
+    {
+     "icon": "chip",
+     "title": "BUYS A.I. CHIPS",
+     "sub": "RENTS THEM TO CLIENTS",
+     "color": "accent",
+     "at": "f3:large"
+    },
+    {
+     "icon": "bolt",
+     "title": "SOME BONDS 16%+",
+     "sub": "BLOOMBERG · DISTRESS SIGNAL",
+     "color": "danger",
+     "at": "f3:yield"
+    }
+   ],
+   "source": "SOURCES: BLOOMBERG VIA BNN · GARTNER · COREWEAVE CEO CLAIM"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -20,
+     "lat": 30,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -74,
+     "lat": 40.7,
+     "R": 500
+    },
+    {
+     "at": "end",
+     "lon": -70,
+     "lat": 40,
+     "R": 500
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -74.0,
+      40.71
+     ],
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "WILL NEOCLOUDS",
+     "text"
+    ],
+    [
+     "SURVIVE THE DECADE?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "CNN · GARTNER · BLOOMBERG VIA BNN · STOCKTWITS",
+    "FORECASTS AND COMPANY STATEMENTS ARE CLAIMS"
+   ]
+  }
+ ]
+}
