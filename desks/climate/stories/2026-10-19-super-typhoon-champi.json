@@ -1,0 +1,106 @@
+{
+ "id": "2026-10-19-super-typhoon-champi",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "A Category 5 super typhoon just passed Guam. Where is Champi going next?"},
+  {"id": "f1", "text": "The Joint Typhoon Warning Center says Champi became a Category 5 about six hours after passing ten miles south of Guam on Sunday. The Red Cross reports power and water outages, and more than one thousand people used shelters. President Trump approved emergency declarations for the islands."},
+  {"id": "f2", "text": "The Philippine weather service says Champi weakened, then regained super typhoon strength on Monday, with sustained winds of one hundred eighty-five kilometers per hour. It expects it to enter the Philippine area on Tuesday, where it would be named Rosal."},
+  {"id": "f3", "text": "PAGASA says landfall is unlikely, but heavy rain may reach extreme northern Luzon. The storm could pass closest to Batanes on Friday. It cautions that the track could still shift, and wind warnings may be raised in the north."},
+  {"id": "cta", "text": "Will Champi stay offshore of the Philippines? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE GUAM PASS", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "THE COMEBACK", "seg": "f2", "color": "info"},
+  {"n": "03", "name": "THE TRACK", "seg": "f3", "to": "cta -0.2", "color": "danger"}
+ ],
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.25", "exit": "zoom",
+   "view": [{"at": 0, "lon": 175, "lat": 15, "R": 360}, {"at": 3.4, "lon": 140, "lat": 15, "R": 600}],
+   "chip": {"text": "SUPER TYPHOON CHAMPI", "at": 0.25, "color": "accent"},
+   "headline": {"at": "hook:super", "lines": [["CATEGORY 5", "danger", 130], ["NEXT STOP?", "text", 130]]},
+   "highlights": [{"iso": "PHL", "color": "info", "at": "hook:Where", "alpha": 0.4}],
+   "markers": [{"loc": [144.75, 13.4], "color": "danger", "at": "hook:Guam.", "label": "GUAM", "sub": "", "dx": 150, "dy": -120, "big": true}]
+  },
+  {
+   "type": "map", "from": "hook$ +0.25", "to": "cta -0.1", "center": [134, 17],
+   "camera": [
+    {"at": "hook$ +0.25", "lon": 140, "lat": 15, "dist": 43, "pitch": 0, "yaw": 0, "oy": 0},
+    {"at": "f1 +0.4", "lon": 141, "lat": 14.5, "dist": 40, "pitch": 30, "yaw": -4, "oy": 170},
+    {"at": "f2 +0.3", "lon": 134, "lat": 16.5, "dist": 62, "pitch": 28, "yaw": 4, "oy": 170},
+    {"at": "f3 +0.3", "lon": 126, "lat": 19, "dist": 38, "pitch": 40, "yaw": -6, "oy": 180},
+    {"at": "cta -0.1", "lon": 127, "lat": 18.5, "dist": 60, "pitch": 35, "yaw": 0, "oy": 160}
+   ],
+   "layers": [
+    {
+     "kind": "track", "at": "hook$", "until": "cta +0.6", "color": "storm",
+     "name": "CHAMPI", "sub": "SUPER TYPHOON · TRACK APPROXIMATE", "forecast": 3, "now": 2, "cone": true,
+     "points": [
+      {"loc": [147.5, 12.6], "cat": 4, "label": "OCT 17", "dx": 10, "dy": 30, "until": "f1 +1"},
+      {"loc": [144.7, 12.9], "cat": 5, "label": "PASSES GUAM", "dx": 10, "dy": 30, "big": true, "until": "f2"},
+      {"loc": [139.5, 14.5], "cat": 5, "label": "SUPER TYPHOON AGAIN · OCT 19", "dx": -30, "dy": -70, "big": true, "until": "f3"},
+      {"loc": [131.5, 16.8], "cat": 4},
+      {"loc": [126.5, 19.2], "cat": 4},
+      {"loc": [122.8, 21.2], "cat": 3, "label": "CLOSEST: FRI OCT 23", "dx": -250, "dy": -50}
+     ],
+     "steps": [
+      {"at": "hook +0.3", "to": 1, "dur": 2.2},
+      {"at": "f2:Philippine", "to": 2, "dur": 2.0},
+      {"at": "f3:landfall", "to": 5, "dur": 3.4}
+     ],
+     "nameUntil": "f3", "nameDx": -60, "nameDy": -100
+    },
+    {"kind": "note", "text": "TRACK APPROXIMATE · PAGASA, JTWC REPORTS", "y": 1170, "at": "f1 +1"},
+    {"kind": "marker", "loc": [144.75, 13.4], "style": "x", "color": "danger", "at": "f1:Guam", "label": {"text": "GUAM", "sub": "POWER + WATER OUTAGES", "dx": 60, "dy": -80, "until": "f2"}},
+    {"kind": "marker", "loc": [121.9, 20.45], "style": "pulse", "color": "accent", "at": "f3:Batanes", "label": {"text": "BATANES", "sub": "HEAVY RAIN POSSIBLE", "dx": -270, "dy": 60, "until": "cta"}}
+   ]
+  },
+  {
+   "type": "facts", "from": "f1:Red", "to": "f1$ -0.1", "color": "accent",
+   "items": [
+    {"icon": "storm", "big": "CATEGORY 5", "text": "SIX HOURS AFTER GUAM · PER JTWC", "color": "danger", "at": "f1:Category"},
+    {"icon": "people", "big": "1,000+", "text": "IN SHELTERS · PER RED CROSS", "color": "info", "at": "f1:thousand"}
+   ],
+   "source": "SOURCE: JTWC, YALE CLIMATE CONNECTIONS, RED CROSS"
+  },
+  {
+   "type": "gauge", "from": "f2:sustained", "to": "f2$ -0.1",
+   "label": "MAX SUSTAINED WINDS · MONDAY", "value": 185, "max": 250, "suffix": " km/h", "icon": "storm", "color": "info",
+   "at": "f2:sustained", "doneAt": "f2:kilometers",
+   "note": "SUPER TYPHOON STRENGTH AGAIN", "source": "SOURCE: PAGASA, VIA BUSINESSWORLD / RAPPLER"
+  },
+  {
+   "type": "facts", "from": "f3:PAGASA", "to": "f3$ -0.1", "color": "info",
+   "items": [
+    {"icon": "rain", "big": "HEAVY RAIN", "text": "EXTREME NORTHERN LUZON POSSIBLE", "color": "info", "at": "f3:heavy"},
+    {"icon": "eye", "big": "FRI OCT 23", "text": "CLOSEST TO BATANES · PAGASA", "color": "accent", "at": "f3:Friday"},
+    {"icon": "flag", "big": "TRACK MAY SHIFT", "text": "WARNINGS MAY BE RAISED IN THE NORTH", "color": "danger", "at": "f3:cautions"}
+   ],
+   "source": "SOURCE: PAGASA, VIA RAPPLER, MANILA TIMES"
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "lines": [["CATEGORY 5 PAST GUAM.", "text"], ["WILL IT STAY OFFSHORE?", "accent"]],
+   "sources": ["PAGASA, JTWC, RED CROSS, YALE CLIMATE CONNECTIONS, RAPPLER, BUSINESSWORLD (SEARCH EXCERPTS)", "OCT 19, 2026 · TRACK APPROXIMATE · FORECASTS CAN CHANGE"],
+   "view": [{"at": "cta -0.6", "lon": 160, "lat": 15, "R": 800}, {"at": "cta +1", "lon": 135, "lat": 17, "R": 600}, {"at": "end", "lon": 132, "lat": 17, "R": 600}],
+   "markers": [{"loc": [144.75, 13.4], "color": "danger"}, {"loc": [121.9, 20.45], "color": "accent"}],
+   "highlights": [{"iso": "PHL", "color": "info", "alpha": 0.5}]
+  }
+ ],
+ "upload": {
+  "title": "Super Typhoon Champi Passes Guam, Eyes the Philippines #shorts",
+  "description": "Super Typhoon Champi passed about ten miles south of Guam on Sunday and reached Category 5, the Joint Typhoon Warning Center says. PAGASA says it regained super typhoon strength on Monday and is expected to enter the Philippine area on Tuesday; landfall is considered unlikely, but the track could still shift.\n\nSources: PAGASA via Rappler, BusinessWorld and Manila Times; Red Cross; Yale Climate Connections; Guam Daily Post (based on search-result excerpts). The storm track on the map is approximate.\n\n#climate #weather #typhoon #champi",
+  "tags": ["climate", "weather", "extreme weather", "news", "typhoon", "Champi", "Guam", "Philippines"],
+  "cover": "f2 +1"
+ },
+ "thumbnail": {
+  "at": "f2 +1",
+  "number": "CAT 5",
+  "numberColor": "danger",
+  "source": "CHAMPI · JTWC · OCT 18",
+  "focus": [141, 14],
+  "lines": [["PHILIPPINES NEXT?", "accent"]],
+  "zoom": 1.1
+ },
+ "gap": 0.9
+}
