@@ -1,0 +1,275 @@
+{
+ "id": "2026-10-19-chip-rout-nasdaq",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Chip stocks just fell eight days in a row. Is the AI boom cracking?"
+  },
+  {
+   "id": "f1",
+   "text": "On Friday the Nasdaq fell 2.1 percent to 26,140, its worst week since June, CNBC reports. The Philadelphia chip index lost 3.8 percent. That was its eighth straight daily drop, the longest streak since 2008, Investing.com says."
+  },
+  {
+   "id": "f2",
+   "text": "CNBC ties the sell-off to doubts about AI spending and to high oil prices. Market reports say Brent crude settled near 110 dollars, the highest since May. The Wall Street Journal adds worries about Chinese memory chip makers."
+  },
+  {
+   "id": "f3",
+   "text": "Micron fell 5.6 percent and Intel 5.8 percent, market reports say. The chip index now sits 23.9 percent below its June record. The S and P 500 closed down 1.1 percent at 7,659. The Dow slipped 0.3 percent to 52,002."
+  },
+  {
+   "id": "cta",
+   "text": "Will chip stocks stop falling this week? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE SLIDE",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE CAUSE",
+   "seg": "f2",
+   "color": "oil"
+  },
+  {
+   "n": "03",
+   "name": "THE DAMAGE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -60,
+     "lat": 30,
+     "R": 360
+    },
+    {
+     "at": 3.2,
+     "lon": -98,
+     "lat": 38,
+     "R": 640
+    }
+   ],
+   "chip": {
+    "text": "MARKETS · OCT 19, 2026",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "USA",
+     "color": "danger",
+     "at": "hook:fell",
+     "alpha": 0.3
+    }
+   ],
+   "headline": {
+    "at": "hook:fell",
+    "lines": [
+     [
+      "8 DAYS DOWN",
+      "danger",
+      120
+     ],
+     [
+      "CHIP RETREAT",
+      "accent",
+      125
+     ]
+    ]
+   }
+  },
+  {
+   "type": "ticker",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.1",
+   "label": "WALL STREET CLOSE",
+   "sublabel": "FRIDAY, OCT 16, 2026",
+   "rows": [
+    {
+     "name": "NASDAQ",
+     "sub": "CLOSE 26,140.03",
+     "change": -2.14,
+     "at": "f1:Nasdaq"
+    },
+    {
+     "name": "CHIP INDEX",
+     "sub": "PHILADELPHIA SEMI · 11,137",
+     "change": -3.83,
+     "at": "f1:Philadelphia"
+    },
+    {
+     "name": "S&P 500",
+     "sub": "CLOSE 7,659.44",
+     "change": -1.09,
+     "at": "f1:drop,"
+    }
+   ],
+   "format": {
+    "decimals": 2,
+    "suffix": "%"
+   },
+   "note": "NASDAQ -4.5% FOR THE WEEK · EIGHTH STRAIGHT CHIP-INDEX LOSS",
+   "source": "SOURCES: CNBC · INVESTING.COM · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "chain",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "WHY CHIPS FELL",
+   "color": "oil",
+   "steps": [
+    {
+     "icon": "chip",
+     "title": "DOUBTS ON AI SPENDING",
+     "sub": "PER CNBC",
+     "dir": "down",
+     "at": "f2:doubts"
+    },
+    {
+     "icon": "barrel",
+     "title": "BRENT NEAR $110",
+     "sub": "HIGHEST SINCE MAY · MARKET REPORTS",
+     "dir": "up",
+     "at": "f2:Brent"
+    },
+    {
+     "icon": "factory",
+     "title": "CHINESE MEMORY RIVALS",
+     "sub": "PER WALL STREET JOURNAL",
+     "dir": "down",
+     "at": "f2:Chinese"
+    }
+   ],
+   "source": "SOURCES: CNBC · WSJ · MARKET REPORTS · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "ticker",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "CHIP STOCKS FRIDAY",
+   "sublabel": "OCT 16, 2026 CLOSE",
+   "rows": [
+    {
+     "name": "MICRON",
+     "sub": "MEMORY CHIPS",
+     "change": -5.6,
+     "at": "f3:Micron"
+    },
+    {
+     "name": "INTEL",
+     "sub": "PROCESSORS",
+     "change": -5.8,
+     "at": "f3:Intel"
+    },
+    {
+     "name": "CHIP INDEX",
+     "sub": "23.9% BELOW JUNE 22 RECORD",
+     "change": -3.83,
+     "at": "f3:chip"
+    }
+   ],
+   "format": {
+    "decimals": 1,
+    "suffix": "%"
+   },
+   "note": "CHIP INDEX LOST 11.4% OVER THE WEEK",
+   "source": "SOURCES: MARKET REPORTS · INVESTING.COM · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -60,
+     "lat": 30,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -98,
+     "lat": 38,
+     "R": 560
+    },
+    {
+     "at": "end",
+     "lon": -96,
+     "lat": 38,
+     "R": 560
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "USA",
+     "color": "danger",
+     "alpha": 0.4
+    }
+   ],
+   "lines": [
+    [
+     "EIGHT DAYS DOWN.",
+     "text"
+    ],
+    [
+     "WILL CHIPS STEADY?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AS REPORTED BY CNBC, INVESTING.COM, WSJ",
+    "OCT 16, 2026 · NOT FINANCIAL ADVICE"
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Nasdaq Drops 2.1% as Chip Stocks Fall Eight Days Straight #shorts",
+  "description": "The Nasdaq fell 2.1% on Friday to 26,140, its worst week since June, CNBC reports. The Philadelphia chip index lost 3.8%, its eighth straight daily decline and longest streak since 2008, according to Investing.com. CNBC links the sell-off to doubts about AI spending and high oil prices.\n\nSources: CNBC, Investing.com, Wall Street Journal (via Quartz), market reports (Oct 16, 2026).\n\n#stocks #markets #chips #Nasdaq #AI",
+  "tags": [
+   "markets",
+   "stocks",
+   "economy",
+   "news",
+   "Nasdaq",
+   "chip stocks",
+   "semiconductors",
+   "Micron",
+   "Intel",
+   "AI stocks",
+   "Wall Street"
+  ],
+  "cover": "hook:fell +0.4"
+ },
+ "thumbnail": {
+  "at": "hook:fell +1.0",
+  "focus": "USA",
+  "number": "-2.1%",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "8 DAYS DOWN",
+    "text"
+   ],
+   [
+    "AI BOOM CRACKING?",
+    "accent"
+   ]
+  ],
+  "source": "NASDAQ FRIDAY · PER CNBC"
+ }
+}
