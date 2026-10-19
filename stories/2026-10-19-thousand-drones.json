@@ -1,0 +1,476 @@
+{
+ "id": "2026-10-19-thousand-drones",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "One thousand drones hit Russia overnight. Is the energy truce over?"
+  },
+  {
+   "id": "f1",
+   "text": "Russia's defense ministry says it shot down one thousand and fifteen Ukrainian drones over fifteen regions on Sunday. In Saint Petersburg, the governor reports fires at an oil terminal and an oil depot. One person died, five were hurt."
+  },
+  {
+   "id": "f2",
+   "text": "Ukrainian drone maker Fire Point claims its drone hit the terminal. Reports also name a data center of the company VK. A week ago, Trump announced an energy ceasefire. Zelenskyy says Russia has hit Ukrainian energy sites seventy-six times since."
+  },
+  {
+   "id": "f3",
+   "text": "Kremlin spokesman Dmitry Peskov called the strikes a sign of desperation. He said Russia will respond. NBC News reports that U.S. officials see Washington's easing of Russian diesel sanctions as pressure on Kyiv."
+  },
+  {
+   "id": "cta",
+   "text": "Will the energy truce survive the winter? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE ATTACK",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE TRUCE",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "MOSCOW REPLIES",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "1,000 Drones Hit Russia. Is the Energy Truce Dead? #shorts",
+  "description": "Russia's defense ministry says it downed 1,015 Ukrainian drones over 15 regions on October 18. St. Petersburg's governor reported fires at an oil terminal and an oil depot, with one person killed and five injured. Ukrainian drone maker Fire Point claims its drone hit the terminal. The strikes came a week after Trump announced an energy ceasefire; Zelenskyy says Russia has struck Ukrainian energy sites 76 times since. Kremlin spokesman Dmitry Peskov said Russia will respond.\n\nSources:\nCNN: Ukraine defies Trump and launches one of its biggest drone attacks on Russia this year (Oct 18, 2026)\nAP / The Hill: St. Petersburg oil facilities ablaze as Ukraine launches more than 1,000 drones at Russia (Oct 18, 2026)\nABC News: Ukraine targets Russia with more than 1,000 drones, striking oil terminal in St. Petersburg (Oct 18, 2026)\nKyiv Independent: Massive Ukrainian drone attack hit oil facility, bridge, and data center in St. Petersburg (Oct 18, 2026)\nNBC News: Ukraine resumes strikes on Russian oil refineries as anger mounts with Trump (Oct 2026)\n\n#geopolitics #Ukraine #Russia #EnergyCeasefire",
+  "tags": [
+   "geopolitics",
+   "Ukraine",
+   "Russia",
+   "St Petersburg",
+   "drones",
+   "energy ceasefire",
+   "Trump",
+   "Zelensky",
+   "Peskov",
+   "world news",
+   "war in Ukraine"
+  ],
+  "cover": "f2 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:Saint",
+  "focus": "St. Petersburg",
+  "zoom": 1.4,
+  "number": "1,015",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "DRONES IN ONE NIGHT",
+    "text"
+   ],
+   [
+    "TRUCE OVER?",
+    "accent"
+   ]
+  ],
+  "source": "DRONES DOWNED · PER RUSSIAN MOD · OCT 18"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 20,
+     "lat": 45,
+     "R": 360
+    },
+    {
+     "at": 3.2,
+     "lon": 30,
+     "lat": 58,
+     "R": 480
+    }
+   ],
+   "chip": {
+    "text": "RUSSIA · OCT 19, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "UKR",
+     "color": "info",
+     "at": "hook:drones"
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "at": "hook:Russia"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "St. Petersburg",
+     "color": "danger",
+     "at": "hook:overnight.",
+     "label": "ST. PETERSBURG",
+     "dx": 90,
+     "dy": -70,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:drones",
+    "lines": [
+     [
+      "1,000 DRONES",
+      "text",
+      110
+     ],
+     [
+      "ONE NIGHT",
+      "danger",
+      120
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:truce",
+    "icon": "bolt",
+    "iconColor": "accent",
+    "color": "accent",
+    "kicker": "ENERGY TRUCE",
+    "title": "OVER?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    32,
+    56
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 30,
+     "lat": 58,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 31,
+     "lat": 57,
+     "dist": 60,
+     "pitch": 44,
+     "yaw": -5,
+     "oy": 190
+    },
+    {
+     "at": "f1:Saint",
+     "lon": 30.3,
+     "lat": 59.9,
+     "dist": 16,
+     "pitch": 52,
+     "yaw": 4,
+     "oy": 200
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 30.3,
+     "lat": 59.9,
+     "dist": 14,
+     "pitch": 54,
+     "yaw": -4,
+     "oy": 200
+    },
+    {
+     "at": "f2:Trump",
+     "lon": 32,
+     "lat": 52,
+     "dist": 70,
+     "pitch": 46,
+     "yaw": 5,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": 36,
+     "lat": 56,
+     "dist": 62,
+     "pitch": 42,
+     "yaw": 6,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 33,
+     "lat": 53,
+     "dist": 75,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.55,
+     "fill": 0.12,
+     "at": "f1"
+    },
+    {
+     "kind": "tint",
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.3,
+     "fill": 0.05,
+     "at": "f1"
+    },
+    {
+     "kind": "arc",
+     "from": "Kiev",
+     "to": "St. Petersburg",
+     "color": "danger",
+     "height": 0.6,
+     "width": 6,
+     "at": "f1",
+     "until": "f2 -0.2"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      60,
+      290,
+      560
+     ],
+     "title": "MOD CLAIM",
+     "badge": "PER RUSSIA",
+     "color": "danger",
+     "at": "f1:Russia's",
+     "until": "f1:In",
+     "rows": [
+      {
+       "icon": "plane",
+       "text": "1,015 DRONES DOWNED",
+       "at": "f1:one"
+      },
+      {
+       "icon": "flag",
+       "text": "15 REGIONS",
+       "at": "f1:fifteen"
+      }
+     ]
+    },
+    {
+     "kind": "marker",
+     "loc": "St. Petersburg",
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Saint",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "ST. PETERSBURG",
+      "sub": "OIL TERMINAL · DEPOT",
+      "dx": 100,
+      "dy": -70
+     }
+    },
+    {
+     "kind": "card",
+     "screen": [
+      60,
+      290,
+      560
+     ],
+     "title": "GOVERNOR BEGLOV",
+     "badge": "PER RUSSIA",
+     "color": "accent",
+     "at": "f1:One#1",
+     "until": "f2 -0.2",
+     "rows": [
+      {
+       "icon": "x",
+       "text": "1 KILLED",
+       "at": "f1:One#1"
+      },
+      {
+       "icon": "people",
+       "text": "5 HURT",
+       "at": "f1:five"
+      }
+     ]
+    },
+    {
+     "kind": "tag",
+     "loc": "St. Petersburg",
+     "text": "FIRE POINT CLAIM",
+     "sub": "DRONE HIT TERMINAL",
+     "color": "ally",
+     "at": "f2:Ukrainian",
+     "until": "f2:Reports",
+     "dx": 110,
+     "dy": 90
+    },
+    {
+     "kind": "tag",
+     "loc": "St. Petersburg",
+     "text": "VK DATA CENTER",
+     "sub": "REPORTED",
+     "color": "info",
+     "at": "f2:Reports",
+     "until": "f2:A",
+     "dx": 110,
+     "dy": 90
+    },
+    {
+     "kind": "stamp",
+     "text": "ENERGY CEASEFIRE",
+     "icon": "bolt",
+     "color": "accent",
+     "screen": [
+      540,
+      900
+     ],
+     "at": "f2:Trump",
+     "until": "f2:Zelenskyy",
+     "note": "ANNOUNCED BY TRUMP · OCT 11"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      60,
+      290,
+      560
+     ],
+     "title": "SINCE THE TRUCE",
+     "badge": "PER ZELENSKYY",
+     "color": "danger",
+     "at": "f2:Zelenskyy",
+     "until": "f3 -0.2",
+     "rows": [
+      {
+       "icon": "bolt",
+       "text": "76 RUSSIAN STRIKES",
+       "at": "f2:seventy-six"
+      },
+      {
+       "icon": "flag",
+       "text": "UKRAINIAN CLAIM",
+       "at": "f2:since."
+      }
+     ]
+    },
+    {
+     "kind": "tag",
+     "loc": "Moscow",
+     "text": "MOSCOW",
+     "color": "danger",
+     "at": "f3",
+     "until": "cta",
+     "dy": -70
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      380,
+      420,
+      640
+     ],
+     "kicker": "KREMLIN (PESKOV):",
+     "text": "\"RUSSIA WILL RESPOND\"",
+     "color": "danger",
+     "at": "f3:He",
+     "until": "f3:NBC"
+    },
+    {
+     "kind": "stamp",
+     "text": "PRESSURE ON KYIV?",
+     "icon": "flag",
+     "color": "accent",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f3:NBC",
+     "until": "cta",
+     "note": "DIESEL SANCTIONS EASED · PER NBC NEWS"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 31,
+     "lat": 52,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 31,
+     "lat": 52,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": 33,
+     "lat": 54,
+     "R": 470
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.8
+    },
+    {
+     "iso": "RUS",
+     "color": "danger"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Kiev",
+     "color": "info"
+    },
+    {
+     "loc": "St. Petersburg",
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "1,015 DRONES CLAIMED DOWNED.",
+     "text"
+    ],
+    [
+     "THE TRUCE: OVER?",
+     "danger"
+    ]
+   ],
+   "sources": [
+    "REPORTING: CNN, AP, ABC NEWS, KYIV INDEPENDENT, NBC",
+    "OCT 18, 2026"
+   ]
+  }
+ ]
+}
