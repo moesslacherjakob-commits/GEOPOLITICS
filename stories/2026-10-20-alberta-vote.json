@@ -1,0 +1,442 @@
+{
+ "id": "2026-10-20-alberta-vote",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "The world's fourth-largest oil reserves just voted on leaving Canada. What happened?"
+  },
+  {
+   "id": "f1",
+   "text": "Alberta voted on Monday. The ballot carried ten questions, but one drew the world's attention. Should Alberta remain a province, or begin the legal process toward a binding separation vote? NPR reports that ballots are counted by hand, so results come slowly."
+  },
+  {
+   "id": "f2",
+   "text": "Polls before the vote put support for starting that process at around twenty-three percent. Premier Danielle Smith says she wants Alberta to stay, but called that figure too high. Fortune notes that Alberta sits on the fourth-largest oil reserves on Earth."
+  },
+  {
+   "id": "f3",
+   "text": "Prime Minister Mark Carney called the vote a dangerous bluff. He says the United States is trying to break Canada. Separatist leaders say their movement will outlast a defeat. The vote itself does not split the country."
+  },
+  {
+   "id": "cta",
+   "text": "Will Alberta still be part of Canada in ten years? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE VOTE",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE STAKES",
+   "seg": "f2",
+   "color": "oil"
+  },
+  {
+   "n": "03",
+   "name": "OTTAWA REPLIES",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Alberta Voted on Leaving Canada. What Now? #shorts",
+  "description": "On October 19, 2026, voters in Alberta, home to the world's fourth-largest oil reserves, answered a referendum question on whether the province should remain in Canada or begin the legal process toward a binding separation vote. Ballots are counted by hand, so results come slowly. Pre-vote polling put support for starting the process around 23 percent; Premier Danielle Smith opposes leaving. Prime Minister Mark Carney called the vote a dangerous bluff and said the U.S. is trying to break Canada. The vote itself does not separate Alberta from Canada.\n\nSources:\nNPR: Alberta voters weigh future in Canada (Oct 18, 2026)\nPBS NewsHour: Prime Minister Mark Carney says U.S. is trying to break Canada as Alberta votes on separation path (Oct 2026)\nFortune: Alberta, home to the world's 4th-largest oil reserves, will vote on a first step to leaving Canada (Oct 17, 2026)\nNBC News: Mark Carney makes final appeal against Alberta separation ahead of referendum (Oct 2026)\nDawn / Reuters-style wire: Oil-rich Alberta vote to determine next step towards possible separation from Canada (Oct 2026)\n\n#geopolitics #Alberta #Canada #Carney #oil",
+  "tags": [
+   "geopolitics",
+   "Alberta",
+   "Canada",
+   "referendum",
+   "separation",
+   "Mark Carney",
+   "Danielle Smith",
+   "oil",
+   "world news"
+  ],
+  "cover": "f2 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:remain",
+  "focus": [
+   -113.5,
+   53.5
+  ],
+  "zoom": 1.6,
+  "number": "23%",
+  "numberColor": "oil",
+  "lines": [
+   [
+    "LEAVE CANADA?",
+    "text"
+   ],
+   [
+    "COUNT UNDER WAY",
+    "accent"
+   ]
+  ],
+  "source": "PRE-VOTE POLL · OCT 19"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -100,
+     "lat": 50,
+     "R": 360
+    },
+    {
+     "at": 3.2,
+     "lon": -112,
+     "lat": 54,
+     "R": 480
+    }
+   ],
+   "chip": {
+    "text": "ALBERTA · OCT 19, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "CAN",
+     "color": "oil",
+     "at": "hook:oil"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Calgary",
+     "color": "accent",
+     "at": "hook:leaving",
+     "label": "ALBERTA",
+     "dx": -120,
+     "dy": -70,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:oil",
+    "lines": [
+     [
+      "LEAVE CANADA?",
+      "text",
+      110
+     ],
+     [
+      "ALBERTA VOTES",
+      "oil",
+      110
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:What",
+    "icon": "flag",
+    "iconColor": "accent",
+    "color": "accent",
+    "kicker": "REFERENDUM",
+    "title": "RESULT?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -112,
+    54
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -112,
+     "lat": 54,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": -113,
+     "lat": 54,
+     "dist": 30,
+     "pitch": 46,
+     "yaw": -4,
+     "oy": 190
+    },
+    {
+     "at": "f1:Should",
+     "lon": -113,
+     "lat": 52,
+     "dist": 22,
+     "pitch": 52,
+     "yaw": 4,
+     "oy": 200
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": -112,
+     "lat": 54,
+     "dist": 24,
+     "pitch": 52,
+     "yaw": -4,
+     "oy": 200
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": -95,
+     "lat": 50,
+     "dist": 75,
+     "pitch": 44,
+     "yaw": 5,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": -100,
+     "lat": 52,
+     "dist": 80,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "CAN",
+     "color": "info",
+     "alpha": 0.35,
+     "fill": 0.06,
+     "at": "f1"
+    },
+    {
+     "kind": "zone",
+     "clip": "CAN",
+     "poly": [
+      [
+       -120,
+       60
+      ],
+      [
+       -110,
+       60
+      ],
+      [
+       -110,
+       49
+      ],
+      [
+       -114.07,
+       49
+      ],
+      [
+       -120,
+       54
+      ]
+     ],
+     "color": "oil",
+     "fill": 0.28,
+     "outline": true,
+     "pulse": true,
+     "at": "f1"
+    },
+    {
+     "kind": "marker",
+     "loc": "Calgary",
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1:Alberta",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "CALGARY",
+      "dx": -100,
+      "dy": 60
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": "Edmonton",
+     "style": "dot",
+     "color": "accent",
+     "at": "f1:Alberta",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "EDMONTON",
+      "dx": 110,
+      "dy": -50
+     }
+    },
+    {
+     "kind": "card",
+     "screen": [
+      60,
+      290,
+      560
+     ],
+     "title": "THE QUESTION",
+     "badge": "PER NPR",
+     "color": "accent",
+     "at": "f1:Should",
+     "until": "f2 -0.2",
+     "rows": [
+      {
+       "icon": "flag",
+       "text": "STAY A PROVINCE",
+       "at": "f1:remain"
+      },
+      {
+       "icon": "check",
+       "text": "OR START SEPARATION PROCESS",
+       "at": "f1:begin"
+      },
+      {
+       "icon": "eye",
+       "text": "COUNTED BY HAND",
+       "at": "f1:ballots"
+      }
+     ]
+    },
+    {
+     "kind": "card",
+     "screen": [
+      60,
+      290,
+      560
+     ],
+     "title": "BEFORE THE VOTE",
+     "badge": "POLL",
+     "color": "oil",
+     "at": "f2 +0.2",
+     "until": "f2:Fortune",
+     "rows": [
+      {
+       "icon": "people",
+       "text": "≈23% BACK THE PROCESS",
+       "at": "f2:around"
+      },
+      {
+       "icon": "x",
+       "text": "SMITH: \"STILL TOO HIGH\"",
+       "at": "f2:called"
+      }
+     ]
+    },
+    {
+     "kind": "stamp",
+     "text": "4TH-LARGEST OIL RESERVES",
+     "icon": "barrel",
+     "color": "oil",
+     "screen": [
+      540,
+      1060
+     ],
+     "at": "f2:Fortune",
+     "until": "f3 -0.2",
+     "note": "PER FORTUNE"
+    },
+    {
+     "kind": "tag",
+     "loc": "Ottawa",
+     "text": "OTTAWA",
+     "color": "info",
+     "at": "f3",
+     "until": "cta",
+     "dy": -70
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      380,
+      420,
+      640
+     ],
+     "kicker": "PM CARNEY:",
+     "text": "\"A DANGEROUS BLUFF\"",
+     "color": "info",
+     "at": "f3:called",
+     "until": "f3:Separatist"
+    },
+    {
+     "kind": "stamp",
+     "text": "NOT BINDING",
+     "icon": "shield",
+     "color": "accent",
+     "screen": [
+      540,
+      1060
+     ],
+     "at": "f3:The",
+     "until": "cta",
+     "note": "VOTE ITSELF DOES NOT SPLIT CANADA"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": -100,
+     "lat": 52,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": -108,
+     "lat": 54,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": -110,
+     "lat": 54,
+     "R": 470
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "CAN",
+     "color": "oil",
+     "alpha": 0.6
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Calgary",
+     "color": "accent"
+    },
+    {
+     "loc": "Ottawa",
+     "color": "info"
+    }
+   ],
+   "lines": [
+    [
+     "COUNT STILL UNDER WAY.",
+     "text"
+    ],
+    [
+     "STAY IN CANADA: YES OR NO?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: NPR, PBS, FORTUNE, NBC NEWS",
+    "OCT 19, 2026"
+   ]
+  }
+ ]
+}
