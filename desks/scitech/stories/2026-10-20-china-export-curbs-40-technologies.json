@@ -1,0 +1,277 @@
+{
+ "id": "2026-10-20-china-export-curbs-40-technologies",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "China just drafted limits on forty technologies, including AI. What would it block?"
+  },
+  {
+   "id": "f1",
+   "text": "On October sixteenth, China's commerce and science ministries published a draft. It would add forty technologies to the country's export control catalog. Twenty three are in AI, twelve in solar power, and five in biomedicine, including cell and gene therapy."
+  },
+  {
+   "id": "f2",
+   "text": "Fourteen items would be banned outright. Twenty six more would need a government export license. The A.P. reports that core technology of large AI models trained on sensitive national data would be prohibited, along with some agents built for defense."
+  },
+  {
+   "id": "f3",
+   "text": "The commerce ministry calls the step necessary, citing national security and keeping AI under human control. It is only a draft. Public comments are open until November fifteenth, and the final list may still change before it takes effect."
+  },
+  {
+   "id": "cta",
+   "text": "Will China's final list be as strict as this draft? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE DRAFT",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE LIST",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE CATCH",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "China Drafts Export Limits on 40 Technologies #shorts",
+  "description": "China's Ministry of Commerce and Ministry of Science and Technology published a draft on October 16, 2026 that would add 40 technologies to the export control catalog: 23 in AI, 12 in solar power and 5 in biomedicine. Per reports, 14 items would be banned and 26 would need a license. It is a draft; public comments are open until November 15.\n\nSources: Associated Press; Global Times; Caixin; Fortune.\n\n#tech #AI #china",
+  "tags": [
+   "technology",
+   "news",
+   "China",
+   "export controls",
+   "AI",
+   "solar",
+   "Ministry of Commerce"
+  ],
+  "cover": "hook:block, +0.4"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": "CHN",
+  "number": "40 TECHS",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "EXPORT LIMITS",
+    "text"
+   ],
+   [
+    "AI ON THE LIST",
+    "accent"
+   ]
+  ],
+  "source": "DRAFT OCT 16 \u00b7 CHINA COMMERCE MINISTRY \u00b7 PER AP"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": 95,
+     "lat": 30,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": 116.4,
+     "lat": 39.9,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "TECH POLICY \u00b7 DRAFT RULES",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      116.4,
+      39.9
+     ],
+     "color": "accent",
+     "at": "hook:drafted",
+     "label": "BEIJING",
+     "sub": "EXPORT DRAFT",
+     "dx": -30,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:limits",
+    "lines": [
+     [
+      "40 TECHNOLOGIES",
+      "text",
+      96
+     ],
+     [
+      "EXPORT LIMITS",
+      "accent",
+      76
+     ]
+    ]
+   }
+  },
+  {
+   "type": "scale",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "WHAT THE DRAFT COVERS",
+   "sublabel": "NUMBER OF TECHNOLOGIES",
+   "color": "accent",
+   "items": [
+    {
+     "name": "AI",
+     "value": 23,
+     "display": "23",
+     "color": "accent",
+     "at": "f1:Twenty"
+    },
+    {
+     "name": "SOLAR",
+     "value": 12,
+     "display": "12",
+     "color": "info",
+     "at": "f1:twelve"
+    },
+    {
+     "name": "BIOMEDICINE",
+     "value": 5,
+     "display": "5",
+     "color": "violet",
+     "at": "f1:five"
+    }
+   ],
+   "note": "DRAFT \u00b7 NOT YET LAW",
+   "source": "CHINA COMMERCE MINISTRY DRAFT \u00b7 AP \u00b7 GLOBAL TIMES"
+  },
+  {
+   "type": "facts",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "x",
+     "big": "14 BANNED",
+     "text": "PROPOSED OUTRIGHT PROHIBITION",
+     "color": "danger",
+     "at": "f2:Fourteen"
+    },
+    {
+     "icon": "check",
+     "big": "26 LICENSED",
+     "text": "EXPORT LICENSE WOULD BE NEEDED",
+     "color": "accent",
+     "at": "f2:Twenty"
+    },
+    {
+     "icon": "chip",
+     "big": "AI MODELS",
+     "text": "SENSITIVE-DATA MODELS \u00b7 DEFENSE AGENTS \u00b7 PER AP",
+     "color": "info",
+     "at": "f2:The"
+    }
+   ],
+   "source": "SOURCES: AP \u00b7 GLOBAL TIMES \u00b7 CAIXIN"
+  },
+  {
+   "type": "timeline",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "WHAT HAPPENS NEXT",
+   "color": "info",
+   "items": [
+    {
+     "date": "OCT 16",
+     "title": "DRAFT PUBLISHED",
+     "sub": "COMMERCE + SCIENCE MINISTRIES",
+     "color": "accent",
+     "at": "f3:The"
+    },
+    {
+     "date": "NOV 15",
+     "title": "COMMENTS CLOSE",
+     "sub": "PUBLIC FEEDBACK DEADLINE",
+     "color": "info",
+     "big": true,
+     "at": "f3:Public"
+    },
+    {
+     "date": "LATER",
+     "title": "FINAL LIST",
+     "sub": "MAY CHANGE \u00b7 NO DATE YET",
+     "color": "danger",
+     "at": "f3:final"
+    }
+   ],
+   "source": "SOURCES: AP \u00b7 GLOBAL TIMES \u00b7 CAIXIN"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 90,
+     "lat": 30,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 116.4,
+     "lat": 39.9,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": 126.4,
+     "lat": 34.9,
+     "R": 470
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      116.4,
+      39.9
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "AS STRICT AS",
+     "text"
+    ],
+    [
+     "THE DRAFT?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AP \u00b7 GLOBAL TIMES \u00b7 CAIXIN",
+    "DRAFT \u2014 FINAL RULES NOT SET"
+   ]
+  }
+ ]
+}
