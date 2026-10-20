@@ -1,0 +1,108 @@
+{
+ "id": "2026-10-20-rosal-champi-luzon",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "A super typhoon with one hundred ninety-five kilometer winds nears Luzon. Will it make landfall?"},
+  {"id": "f1", "text": "PAGASA says Champi entered the Philippine area Tuesday and is now called Rosal. At five p.m., sustained winds were one hundred ninety-five kilometers per hour, with gusts up to two hundred forty. It was about twelve hundred seventy kilometers east of central Luzon."},
+  {"id": "f2", "text": "PAGASA raised Signal Number One over Batanes and parts of Cagayan, Isabela and Catanduanes. Higher signals may follow as the storm approaches. The agency says Rosal should not make direct landfall in Batanes, but the northernmost islands may still be affected."},
+  {"id": "f3", "text": "For Thursday and Friday, PAGASA forecasts heavy to intense rain of one hundred to two hundred millimeters in Batanes, and waves up to four and a half meters. PAGASA expects weakening to begin Thursday. The closest approach is expected around Friday."},
+  {"id": "cta", "text": "Will Rosal stay off the Philippine coast? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE ENTRY", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "THE WARNINGS", "seg": "f2", "color": "danger"},
+  {"n": "03", "name": "THE RAIN", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.25", "exit": "zoom",
+   "view": [{"at": 0, "lon": 160, "lat": 18, "R": 380}, {"at": 3.4, "lon": 130, "lat": 18, "R": 620}],
+   "chip": {"text": "SUPER TYPHOON ROSAL (CHAMPI)", "at": 0.25, "color": "accent"},
+   "headline": {"at": "hook:kilometer", "lines": [["195 KM/H", "danger", 140], ["HIT OR MISS?", "text", 120]]},
+   "highlights": [{"iso": "PHL", "color": "info", "at": "hook:Luzon.", "alpha": 0.4}],
+   "markers": [{"loc": [121.9, 20.45], "color": "accent", "at": "hook:Luzon.", "label": "BATANES", "sub": "", "dx": -170, "dy": -90, "big": true}]
+  },
+  {
+   "type": "map", "from": "hook$ +0.25", "to": "cta -0.1", "center": [128, 18],
+   "camera": [
+    {"at": "hook$ +0.25", "lon": 132, "lat": 17.5, "dist": 43, "pitch": 0, "yaw": 0, "oy": 0},
+    {"at": "f1 +0.4", "lon": 133, "lat": 17, "dist": 46, "pitch": 32, "yaw": 5, "oy": 170},
+    {"at": "f2 +0.3", "lon": 124, "lat": 19.5, "dist": 28, "pitch": 42, "yaw": -5, "oy": 180},
+    {"at": "f3 +0.3", "lon": 123, "lat": 20.5, "dist": 20, "pitch": 48, "yaw": 6, "oy": 190},
+    {"at": "cta -0.1", "lon": 126, "lat": 19, "dist": 55, "pitch": 35, "yaw": 0, "oy": 160}
+   ],
+   "layers": [
+    {
+     "kind": "track", "at": "hook$", "until": "cta +0.6", "color": "storm",
+     "name": "ROSAL", "sub": "SUPER TYPHOON · TRACK APPROXIMATE", "forecast": 3, "now": 2, "cone": true,
+     "points": [
+      {"loc": [139.5, 14.5], "cat": 5, "label": "OCT 19", "dx": 10, "dy": 30, "until": "f1 +1"},
+      {"loc": [135, 16.3], "cat": 5, "label": "ENTERS PAR · OCT 20", "dx": 10, "dy": 30, "big": true, "until": "f2"},
+      {"loc": [132.3, 17.5], "cat": 5, "label": "5 PM TUE", "dx": -10, "dy": -60, "big": true, "until": "f3"},
+      {"loc": [127, 19.4], "cat": 4},
+      {"loc": [124.5, 20.5], "cat": 4},
+      {"loc": [122.8, 21.2], "cat": 3, "label": "CLOSEST: ~FRI OCT 23", "dx": -250, "dy": -50}
+     ],
+     "steps": [
+      {"at": "hook +0.3", "to": 1, "dur": 2.0},
+      {"at": "f1:entered", "to": 2, "dur": 2.0},
+      {"at": "f3:Thursday", "to": 5, "dur": 4.0}
+     ],
+     "nameUntil": "f3", "nameDx": -60, "nameDy": -100
+    },
+    {"kind": "note", "text": "TRACK APPROXIMATE · PAGASA REPORTS", "y": 1170, "at": "f1 +1"},
+    {"kind": "tint", "iso": "PHL", "color": "danger", "alpha": 0.18, "at": "f2:Signal"},
+    {"kind": "marker", "loc": [121.9, 20.45], "style": "pulse", "color": "danger", "at": "f2:Batanes", "label": {"text": "BATANES", "sub": "SIGNAL NO. 1", "dx": -260, "dy": 60, "until": "f3"}},
+    {"kind": "field", "at": "f3:rain", "until": "cta", "blobs": [{"loc": [122, 20.5], "r": 2.2, "v": 0.9}, {"loc": [121.8, 18.6], "r": 1.6, "v": 0.5}], "palette": "rain", "alpha": 0.7, "grow": 1.5, "legend": {"title": "ILLUSTRATIVE RAIN AREA", "low": "", "high": "", "screen": [60, 1090], "w": 380}}
+   ]
+  },
+  {
+   "type": "gauge", "from": "f1:sustained", "to": "f1$ -0.1",
+   "label": "MAX SUSTAINED WINDS · 5 PM TUESDAY", "value": 195, "max": 250, "suffix": " km/h", "icon": "storm", "color": "danger",
+   "at": "f1:sustained", "doneAt": "f1:kilometers",
+   "note": "GUSTS UP TO 240 KM/H", "source": "SOURCE: PAGASA, VIA RAPPLER / BUSINESSWORLD"
+  },
+  {
+   "type": "facts", "from": "f2:PAGASA", "to": "f2$ -0.1", "color": "danger",
+   "items": [
+    {"icon": "flag", "big": "SIGNAL NO. 1", "text": "BATANES · CAGAYAN · ISABELA · CATANDUANES", "color": "danger", "at": "f2:Signal"},
+    {"icon": "storm", "big": "HIGHER SIGNALS", "text": "POSSIBLE AS THE STORM APPROACHES · PAGASA", "color": "accent", "at": "f2:Higher"},
+    {"icon": "eye", "big": "NO DIRECT LANDFALL", "text": "EXPECTED IN BATANES · PAGASA", "color": "info", "at": "f2:Rosal"}
+   ],
+   "source": "SOURCE: PAGASA, VIA MANILA TIMES, MANILA BULLETIN, SUNSTAR"
+  },
+  {
+   "type": "facts", "from": "f3:For", "to": "f3$ -0.1", "color": "info",
+   "items": [
+    {"icon": "rain", "big": "100–200 MM", "text": "RAIN IN BATANES · THU–FRI · PAGASA", "color": "info", "at": "f3:heavy"},
+    {"icon": "ship", "big": "4.5 M WAVES", "text": "SOUTHEAST COAST OF BATANES · PAGASA", "color": "accent", "at": "f3:waves"},
+    {"icon": "thermo", "big": "WEAKENING", "text": "EXPECTED TO START THURSDAY · PAGASA", "color": "ok", "at": "f3:weakening"}
+   ],
+   "source": "SOURCE: PAGASA, VIA RAPPLER, BUSINESSWORLD"
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "lines": [["195 KM/H TOWARD LUZON.", "text"], ["WILL IT STAY OFFSHORE?", "accent"]],
+   "sources": ["PAGASA, RAPPLER, BUSINESSWORLD, MANILA TIMES, MANILA BULLETIN, PTV NEWS (SEARCH EXCERPTS)", "OCT 20, 2026 · TRACK APPROXIMATE · FORECASTS CAN CHANGE"],
+   "view": [{"at": "cta -0.6", "lon": 150, "lat": 18, "R": 800}, {"at": "cta +1", "lon": 130, "lat": 19, "R": 620}, {"at": "end", "lon": 127, "lat": 19, "R": 620}],
+   "markers": [{"loc": [121.9, 20.45], "color": "accent"}],
+   "highlights": [{"iso": "PHL", "color": "info", "alpha": 0.5}]
+  }
+ ],
+ "upload": {
+  "title": "Super Typhoon Rosal Nears Luzon With 195 km/h Winds #shorts",
+  "description": "Super Typhoon Champi, now called Rosal in the Philippines, entered the Philippine area on Tuesday with sustained winds of 195 km/h, PAGASA says. Signal No. 1 is up over Batanes and parts of northern Luzon; PAGASA says direct landfall in Batanes is not expected, but heavy rain and rough seas are forecast for Thursday and Friday.\n\nSources: PAGASA via Rappler, BusinessWorld, Manila Times, Manila Bulletin, SunStar and PTV News (based on search-result excerpts). The storm track on the map is approximate; forecasts can change.\n\n#climate #weather #typhoon #rosal #champi",
+  "tags": ["climate", "weather", "extreme weather", "news", "typhoon", "Rosal", "Champi", "Philippines", "Luzon"],
+  "cover": "f2 +1"
+ },
+ "thumbnail": {
+  "at": "f1 +1",
+  "number": "195 KM/H",
+  "numberColor": "danger",
+  "source": "ROSAL (CHAMPI) · PAGASA · OCT 20",
+  "focus": [129, 18.2],
+  "lines": [["LUZON NEXT?", "accent"]],
+  "zoom": 1.1
+ },
+ "gap": 0.9
+}
