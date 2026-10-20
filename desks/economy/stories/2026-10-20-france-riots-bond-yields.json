@@ -1,0 +1,258 @@
+{
+ "id": "2026-10-20-france-riots-bond-yields",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "France's borrowing costs are near their highest since 2002. Why do riots move markets?"
+  },
+  {
+   "id": "f1",
+   "text": "On Monday, French bond yields rose by more than a tenth of a percentage point, CNBC reports. The ten-year yield reached about 4.9 percent. Reuters says its peak in early October, 4.99 percent, was the highest since 2002. The CAC 40 closed down 1.1 percent."
+  },
+  {
+   "id": "f2",
+   "text": "Reuters ties the move to weekend riots, with thousands arrested. Investors doubt that Prime Minister Lecornu's minority government can pass the 2027 budget and cut the deficit, CNBC says. A bond yield is simply what a state pays to borrow."
+  },
+  {
+   "id": "f3",
+   "text": "The gap over German yields hit 146 basis points, Reuters says. BNP Paribas and Societe Generale each fell about 3 percent in Monday trading. The euro slipped too. Moody's is due to review France's credit rating on Friday."
+  },
+  {
+   "id": "cta",
+   "text": "Will France's borrowing costs top five percent again? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE YIELD",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE CAUSE",
+   "seg": "f2",
+   "color": "oil"
+  },
+  {
+   "n": "03",
+   "name": "THE DAMAGE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -30,
+     "lat": 40,
+     "R": 360
+    },
+    {
+     "at": 3.2,
+     "lon": 2.5,
+     "lat": 46.5,
+     "R": 700
+    }
+   ],
+   "chip": {
+    "text": "MARKETS \u00b7 OCT 20, 2026",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "FRA",
+     "color": "danger",
+     "at": "hook:borrowing",
+     "alpha": 0.35
+    }
+   ],
+   "headline": {
+    "at": "hook:near",
+    "lines": [
+     [
+      "FRANCE: YIELDS",
+      "danger",
+      110
+     ],
+     [
+      "NEAR 2002 HIGH",
+      "accent",
+      115
+     ]
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.1",
+   "label": "FRANCE 10-YEAR YIELD",
+   "sublabel": "MONDAY, OCT 19, 2026",
+   "icon": "money",
+   "value": 4.9,
+   "start": 4.7,
+   "prefix": "",
+   "suffix": "%",
+   "decimals": 1,
+   "at": "f1:ten-year",
+   "doneAt": "f1:Reuters",
+   "note": "EARLY-OCT PEAK 4.99% \u00b7 HIGHEST SINCE 2002 \u00b7 CAC 40 -1.1%",
+   "source": "SOURCES: CNBC \u00b7 REUTERS \u00b7 NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "chain",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "WHY YIELDS ROSE",
+   "color": "oil",
+   "steps": [
+    {
+     "icon": "people",
+     "title": "WEEKEND RIOTS",
+     "sub": "PER REUTERS",
+     "dir": "up",
+     "at": "f2:riots,"
+    },
+    {
+     "icon": "flag",
+     "title": "BUDGET DOUBTS",
+     "sub": "2027 BUDGET \u00b7 PER CNBC",
+     "dir": "down",
+     "at": "f2:doubt"
+    },
+    {
+     "icon": "money",
+     "title": "FRENCH YIELDS UP",
+     "sub": "COST OF BORROWING",
+     "dir": "up",
+     "at": "f2:bond"
+    }
+   ],
+   "source": "SOURCES: REUTERS \u00b7 CNBC \u00b7 NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "ticker",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "PARIS MARKETS MONDAY",
+   "sublabel": "OCT 19, 2026",
+   "rows": [
+    {
+     "name": "CAC 40",
+     "sub": "CLOSE 7,868",
+     "change": -1.1,
+     "at": "f3:gap"
+    },
+    {
+     "name": "BNP PARIBAS",
+     "sub": "BANK \u00b7 INTRADAY",
+     "change": -3,
+     "at": "f3:BNP"
+    },
+    {
+     "name": "SOCIETE GENERALE",
+     "sub": "BANK \u00b7 INTRADAY",
+     "change": -3,
+     "at": "f3:Societe"
+    }
+   ],
+   "format": {
+    "decimals": 1,
+    "suffix": "%"
+   },
+   "note": "FRANCE-GERMANY YIELD GAP 146 BP \u00b7 MOODY'S REVIEW FRIDAY",
+   "source": "SOURCES: REUTERS \u00b7 AD-HOC-NEWS \u00b7 NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -30,
+     "lat": 40,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 2.5,
+     "lat": 46.5,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": 2.5,
+     "lat": 46.5,
+     "R": 600
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "FRA",
+     "color": "danger",
+     "alpha": 0.4
+    }
+   ],
+   "lines": [
+    [
+     "RIOTS MEET BOND MARKETS.",
+     "text"
+    ],
+    [
+     "ABOVE 5% AGAIN?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AS REPORTED BY CNBC, REUTERS",
+    "OCT 19, 2026 \u00b7 NOT FINANCIAL ADVICE"
+   ]
+  }
+ ],
+ "upload": {
+  "title": "French Bond Yields Jump as Riots Hit Paris Markets #shorts",
+  "description": "French 10-year bond yields rose to about 4.9% on Monday, CNBC reports, near the early-October peak of 4.99%, the highest since 2002, according to Reuters. The CAC 40 closed down 1.1% as investors doubted the government can pass its 2027 budget after weekend riots.\n\nSources: CNBC, Reuters, Bloomberg, ad-hoc-news (Oct 19, 2026).\n\n#stocks #markets #France #bonds #CAC40",
+  "tags": [
+   "markets",
+   "stocks",
+   "economy",
+   "news",
+   "France",
+   "bond yields",
+   "CAC 40",
+   "riots",
+   "euro",
+   "BNP Paribas"
+  ],
+  "cover": "hook:borrowing +0.4"
+ },
+ "thumbnail": {
+  "at": "hook:near +1.0",
+  "focus": "FRA",
+  "number": "4.9%",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "RIOTS HIT BONDS",
+    "text"
+   ],
+   [
+    "BREAKING POINT?",
+    "accent"
+   ]
+  ],
+  "source": "FRENCH 10-YR YIELD MON \u00b7 PER CNBC"
+ }
+}
