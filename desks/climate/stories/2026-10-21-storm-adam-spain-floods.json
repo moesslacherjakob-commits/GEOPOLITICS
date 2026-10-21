@@ -1,0 +1,491 @@
+{
+ "id": "2026-10-21-storm-adam-spain-floods",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Six hundred millimeters of rain in thirty-six hours. Why did Spain flood so fast?"
+  },
+  {
+   "id": "f1",
+   "text": "AEMET, Spain's weather agency, says the town of Pego near Alicante got six hundred thirty-two millimeters in thirty-six hours. Several spots in Valencia and Alicante passed five hundred. The agency issued its highest red alert for the Valencia region."
+  },
+  {
+   "id": "f2",
+   "text": "Media report at least four dead. Pego's mayor said residents waited on rooftops, and helicopters lifted people to safety. Emergency units were deployed, and classes were suspended in dozens of municipalities."
+  },
+  {
+   "id": "f3",
+   "text": "Meteorologists call the system a DANA, an isolated high-altitude low, nicknamed Adam. Its remnants then hit southern France. Euronews reports one dead near Marseille and one missing in Corsica, with about two hundred millimeters in parts of the Gard."
+  },
+  {
+   "id": "cta",
+   "text": "Will Spain's coast see another flood this autumn? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE DOWNPOUR",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "THE RESCUES",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE REASON",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 10,
+     "lat": 42,
+     "R": 420
+    },
+    {
+     "at": 3.4,
+     "lon": 0,
+     "lat": 39.5,
+     "R": 700
+    }
+   ],
+   "chip": {
+    "text": "STORM ADAM · SPAIN FLOODS",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:rain",
+    "lines": [
+     [
+      "632 MM",
+      "info",
+      150
+     ],
+     [
+      "IN 36 HOURS",
+      "text",
+      110
+     ]
+    ]
+   },
+   "highlights": [
+    {
+     "iso": "ESP",
+     "color": "info",
+     "at": "hook:thirty-six",
+     "alpha": 0.4
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -0.12,
+      38.84
+     ],
+     "color": "accent",
+     "at": "hook:Spain",
+     "label": "PEGO",
+     "sub": "",
+     "dx": 170,
+     "dy": -80,
+     "big": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    0,
+    40
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 0,
+     "lat": 39.5,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": -0.2,
+     "lat": 39.0,
+     "dist": 16,
+     "pitch": 45,
+     "yaw": -8,
+     "oy": 180
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": -0.2,
+     "lat": 39.2,
+     "dist": 11,
+     "pitch": 50,
+     "yaw": 8,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": 3.5,
+     "lat": 41.5,
+     "dist": 38,
+     "pitch": 40,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 2,
+     "lat": 40.5,
+     "dist": 55,
+     "pitch": 35,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "ESP",
+     "color": "info",
+     "alpha": 0.15,
+     "at": "hook$"
+    },
+    {
+     "kind": "field",
+     "at": "f1:Pego",
+     "until": "f2$",
+     "blobs": [
+      {
+       "loc": [
+        -0.12,
+        38.84
+       ],
+       "r": 0.9,
+       "v": 1.0
+      },
+      {
+       "loc": [
+        -0.35,
+        39.1
+       ],
+       "r": 1.0,
+       "v": 0.7
+      },
+      {
+       "loc": [
+        -0.5,
+        39.5
+       ],
+       "r": 1.2,
+       "v": 0.45
+      }
+     ],
+     "palette": "rain",
+     "alpha": 0.75,
+     "grow": 1.5,
+     "legend": {
+      "title": "ILLUSTRATIVE RAIN AREA",
+      "low": "",
+      "high": "",
+      "screen": [
+       60,
+       1090
+      ],
+      "w": 380
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -0.12,
+      38.84
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Pego",
+     "label": {
+      "text": "PEGO",
+      "sub": "632 MM · 36 H · AEMET",
+      "dx": 150,
+      "dy": -90,
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -0.12,
+      38.92
+     ],
+     "style": "dot",
+     "color": "info",
+     "at": "f2:Pego's",
+     "label": {
+      "text": "OLIVA",
+      "sub": "",
+      "dx": 170,
+      "dy": -20,
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -0.38,
+      39.47
+     ],
+     "style": "dot",
+     "color": "danger",
+     "at": "f1:Valencia",
+     "label": {
+      "text": "VALENCIA",
+      "sub": "RED ALERT",
+      "dx": -250,
+      "dy": -40,
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      5.37,
+      43.3
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f3:Euronews",
+     "label": {
+      "text": "MARSEILLE",
+      "sub": "1 DEAD",
+      "dx": -20,
+      "dy": 70
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      9.4,
+      42.02
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f3:Corsica",
+     "label": {
+      "text": "CORSICA",
+      "sub": "1 MISSING",
+      "dx": -30,
+      "dy": 70
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      4.36,
+      43.84
+     ],
+     "style": "dot",
+     "color": "info",
+     "at": "f3:Gard",
+     "label": {
+      "text": "GARD",
+      "sub": "~200 MM",
+      "dx": -170,
+      "dy": -60
+     }
+    },
+    {
+     "kind": "note",
+     "text": "RAIN AREA ILLUSTRATIVE · AEMET REPORTS",
+     "y": 1170,
+     "at": "f1 +1"
+    }
+   ]
+  },
+  {
+   "type": "gauge",
+   "from": "f1:Pego",
+   "to": "f1$ -0.1",
+   "label": "RAIN IN PEGO · 36 HOURS",
+   "value": 632,
+   "max": 800,
+   "suffix": " mm",
+   "icon": "rain",
+   "color": "info",
+   "at": "f1:Pego",
+   "doneAt": "f1:millimeters",
+   "note": "SEVERAL SPOTS ABOVE 500 MM",
+   "source": "SOURCE: AEMET, VIA NEWS REPORTS"
+  },
+  {
+   "type": "facts",
+   "from": "f2:Media",
+   "to": "f2$ -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "x",
+     "big": "AT LEAST 4 DEAD",
+     "text": "PER MEDIA REPORTS · TOLL MAY CHANGE",
+     "color": "danger",
+     "at": "f2:Media"
+    },
+    {
+     "icon": "people",
+     "big": "ROOFTOP RESCUES",
+     "text": "HELICOPTERS IN PEGO · PER MAYOR",
+     "color": "accent",
+     "at": "f2:helicopters"
+    },
+    {
+     "icon": "flag",
+     "big": "CLASSES SUSPENDED",
+     "text": "DOZENS OF MUNICIPALITIES",
+     "color": "info",
+     "at": "f2:classes"
+    }
+   ],
+   "source": "SOURCE: MEDIA REPORTS, AS OF OCT 20–21"
+  },
+  {
+   "type": "facts",
+   "from": "f3:Euronews",
+   "to": "f3$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "DANA 'ADAM'",
+     "text": "ISOLATED HIGH-ALTITUDE LOW",
+     "color": "accent",
+     "at": "f3:Meteorologists"
+    },
+    {
+     "icon": "x",
+     "big": "1 DEAD · MARSEILLE",
+     "text": "EURONEWS",
+     "color": "danger",
+     "at": "f3:Euronews"
+    },
+    {
+     "icon": "drop",
+     "big": "~200 MM · GARD",
+     "text": "PARTS OF THE DEPARTMENT",
+     "color": "info",
+     "at": "f3:two"
+    }
+   ],
+   "source": "SOURCE: EURONEWS, REGIONAL REPORTS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "632 MM IN 36 HOURS.",
+     "text"
+    ],
+    [
+     "MORE FLOODS THIS AUTUMN?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AEMET, EURONEWS, ZDF, BLUEWIN, MAJORCA DAILY BULLETIN, DEVDISCOURSE (SEARCH EXCERPTS)",
+    "OCT 21, 2026 · RAIN AREA ILLUSTRATIVE · TOLLS MAY CHANGE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 10,
+     "lat": 42,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 2,
+     "lat": 40,
+     "R": 650
+    },
+    {
+     "at": "end",
+     "lon": 0,
+     "lat": 40,
+     "R": 650
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -0.12,
+      38.84
+     ],
+     "color": "accent"
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "ESP",
+     "color": "info",
+     "alpha": 0.5
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Storm Adam: 632 mm of Rain Floods Eastern Spain #shorts",
+  "description": "Spain's weather agency AEMET says Pego near Alicante received 632 mm of rain in 36 hours, and its highest red alert covered the Valencia region. Media report at least four dead; the system's remnants then brought floods to southern France, where Euronews reports one dead and one missing.\n\nSources: AEMET, Euronews, ZDF, Bluewin, Majorca Daily Bulletin, Devdiscourse (based on search-result excerpts). Rain areas on the map are illustrative; death tolls may change.\n\n#climate #weather #floods #spain #stormadam",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "floods",
+   "Spain",
+   "Valencia",
+   "DANA",
+   "Storm Adam",
+   "France"
+  ],
+  "cover": "f2 +1"
+ },
+ "thumbnail": {
+  "at": "f1 +1",
+  "number": "632 MM",
+  "numberColor": "info",
+  "source": "PEGO, SPAIN · AEMET · 36 HOURS",
+  "focus": [
+   -0.12,
+   38.84
+  ],
+  "lines": [
+   [
+    "SPAIN UNDERWATER",
+    "accent"
+   ]
+  ],
+  "zoom": 1.1
+ },
+ "gap": 0.9
+}
