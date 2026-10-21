@@ -1,0 +1,117 @@
+{
+ "id": "2026-10-21-spacex-q3-ai-profit",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "SpaceX just reported 14.6 billion dollars in sales. What is it actually selling?"},
+  {"id": "f1", "text": "After the close on Tuesday, SpaceX reported third-quarter revenue up 161 percent, to 14.6 billion dollars. Analysts polled by LSEG expected about 12.7 billion. Net income was 4.4 billion dollars, after a loss of 541 million last quarter."},
+  {"id": "f2", "text": "The biggest piece was not Starlink. The AI unit, now called Super Intelligence, brought in 7.56 billion dollars, about 52 percent of sales. Starlink's connectivity business earned 5.25 billion, above analyst forecasts."},
+  {"id": "f3", "text": "SpaceX shares closed at 147.79 dollars on Tuesday. CNBC reports they rose about 10 percent in premarket trading Wednesday. On the call, Elon Musk called a merger with Tesla a good idea. Both boards have formed special committees to discuss it."},
+  {"id": "cta", "text": "Will SpaceX and Tesla really merge? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE NUMBERS", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "THE SHIFT", "seg": "f2", "color": "info"},
+  {"n": "03", "name": "THE REACTION", "seg": "f3", "to": "cta -0.2", "color": "oil"}
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {"at": 0, "lon": -150, "lat": 20, "R": 360},
+    {"at": 3.2, "lon": -97, "lat": 29, "R": 700}
+   ],
+   "chip": {"text": "MARKETS · OCT 20, 2026", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "USA", "color": "accent", "at": "hook:reported", "alpha": 0.3}],
+   "markers": [{"loc": [-97.15, 25.99], "color": "accent", "at": "hook:billion", "label": "STARBASE", "sub": "SPACEX"}],
+   "headline": {
+    "at": "hook:14.6",
+    "lines": [["SPACEX: $14.6B", "accent", 110], ["IN ONE QUARTER", "text", 115]]
+   }
+  },
+  {
+   "type": "counter",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.1",
+   "label": "SPACEX Q3 REVENUE",
+   "sublabel": "REPORTED OCT 20, 2026 · +161% YEAR ON YEAR",
+   "icon": "money",
+   "value": 14.6,
+   "start": 8,
+   "prefix": "$",
+   "suffix": "B",
+   "decimals": 1,
+   "at": "f1:revenue",
+   "doneAt": "f1:Analysts",
+   "note": "EXPECTED ~$12.7B (LSEG) · NET INCOME $4.4B",
+   "source": "SOURCES: SPACEX · LSEG · CNBC · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "bars",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "SPACEX Q3 REVENUE BY UNIT",
+   "sublabel": "BILLIONS OF DOLLARS",
+   "bars": [
+    {"label": "AI \u00b7 52% OF SALES", "value": 7.56, "display": "$7.56B", "color": "info", "at": "f2:AI", "dur": 1.2},
+    {"label": "STARLINK", "value": 5.25, "display": "$5.25B", "color": "accent", "at": "f2:Starlink's", "dur": 1.2}
+   ],
+   "source": "SOURCES: SPACEX · CNBC · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "ticker",
+   "from": "f3 -0.1",
+   "to": "f3:On#1",
+   "label": "SPACEX SHARES",
+   "sublabel": "TUE CLOSE $147.79",
+   "rows": [
+    {"name": "SPACEX (SPCX)", "sub": "PREMARKET WED · APPROX.", "change": 10, "at": "f3:rose"}
+   ],
+   "format": {"decimals": 0, "suffix": "%"},
+   "note": "PREMARKET MOVES CAN REVERSE",
+   "source": "SOURCES: CNBC · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "chain",
+   "from": "f3:On#1",
+   "to": "cta -0.1",
+   "label": "SPACEX AND TESLA",
+   "color": "oil",
+   "steps": [
+    {"icon": "people", "title": "MUSK: MERGER", "sub": "\"GOOD IDEA\" · PER CNBC", "dir": "up", "at": "f3:Elon"},
+    {"icon": "flag", "title": "SPECIAL COMMITTEES", "sub": "BOTH BOARDS · PER CNBC", "at": "f3:Both"},
+    {"icon": "check", "title": "NO DEAL ANNOUNCED", "sub": "TALKS ONLY", "at": "f3:discuss"}
+   ],
+   "source": "SOURCES: CNBC · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": -150, "lat": 20, "R": 800},
+    {"at": "cta +1", "lon": -97, "lat": 29, "R": 600},
+    {"at": "end", "lon": -97, "lat": 29, "R": 600}
+   ],
+   "highlights": [{"iso": "USA", "color": "accent", "alpha": 0.35}],
+   "lines": [["SPACE COMPANY, AI SALES.", "text"], ["SPACEX + TESLA?", "accent"]],
+   "sources": ["AS REPORTED BY CNBC, YAHOO FINANCE, AXIOS", "OCT 20-21, 2026 · NOT FINANCIAL ADVICE"]
+  }
+ ],
+ "upload": {
+  "title": "SpaceX Revenue Jumps 161%, AI Now Outsells Starlink #shorts",
+  "description": "SpaceX reported third-quarter revenue of $14.6 billion, up 161%, versus about $12.7 billion expected by LSEG analysts. Its AI unit brought in $7.56 billion, more than Starlink's $5.25 billion. CNBC reports Musk said Tesla and SpaceX have formed special committees to discuss a merger.\n\nSources: CNBC, Yahoo Finance, Axios, Fortune, ABC News (Oct 20-21, 2026).\n\n#stocks #markets #SpaceX #Starlink #Tesla",
+  "tags": ["markets", "stocks", "economy", "news", "SpaceX", "SPCX", "Starlink", "Tesla", "earnings", "AI"],
+  "cover": "hook:billion +0.4"
+ },
+ "thumbnail": {
+  "at": "hook:14.6 +1.0",
+  "focus": [-97.15, 25.99],
+  "number": "+161%",
+  "numberColor": "accent",
+  "lines": [["WHAT DOES", "text"], ["SPACEX SELL?", "accent"]],
+  "source": "Q3 REVENUE YOY · PER SPACEX"
+ }
+}
