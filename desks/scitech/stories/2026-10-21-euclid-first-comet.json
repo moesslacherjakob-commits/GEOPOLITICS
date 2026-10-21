@@ -1,0 +1,288 @@
+{
+ "id": "2026-10-21-euclid-first-comet",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A dark energy telescope just found a comet nobody had seen. How?"
+  },
+  {
+   "id": "f1",
+   "text": "The European Space Agency says its Euclid telescope caught a new comet in images taken between September sixteenth and twenty fourth. A researcher's software flagged a moving dot. Checks against catalogues of known comets and asteroids found no match."
+  },
+  {
+   "id": "f2",
+   "text": "The Minor Planet Center confirmed it as a comet on October eighth. It is named C twenty twenty six S one, Euclid. It is faint, about one point three billion kilometres from Earth, and ESA says its orbit takes thousands of years."
+  },
+  {
+   "id": "f3",
+   "text": "Euclid was built to map billions of galaxies, so this is its first comet. ESA says this one is not a target for its Comet Interceptor mission. But quick detections like it could help find future targets, ESA scientists say."
+  },
+  {
+   "id": "cta",
+   "text": "Will Euclid find more comets? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE FINDING",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE CONFIRMATION",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "WHY IT MATTERS",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Dark Energy Telescope Finds Its First Comet #shorts",
+  "description": "ESA says its Euclid space telescope, built to study dark energy and galaxies, has found a previously unknown comet in images taken on September 16 to 24, 2026. The Minor Planet Center confirmed it as comet C/2026 S1 (Euclid) on October 8. It is about 1.3 billion km from Earth; ESA says it is not a target for the Comet Interceptor mission.\n\nSources: ESA release (Oct 2026); Universe Today; Sci.News; Minor Planet Center.\n\n#science #space #comet #euclid",
+  "tags": [
+   "science",
+   "news",
+   "Euclid",
+   "comet",
+   "ESA",
+   "space telescope",
+   "astronomy",
+   "Minor Planet Center"
+  ],
+  "cover": "hook:comet, +0.4"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [
+   2.3,
+   48.9
+  ],
+  "number": "1ST COMET",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "DARK ENERGY",
+    "text"
+   ],
+   [
+    "TELESCOPE?!",
+    "accent"
+   ]
+  ],
+  "source": "ESA · EUCLID · CONFIRMED OCT 8"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": -10,
+     "lat": 30,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": 2.3,
+     "lat": 48.9,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "SPACE · ESA DISCOVERY",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      2.3,
+      48.9
+     ],
+     "color": "accent",
+     "at": "hook:found",
+     "label": "ESA",
+     "sub": "EUCLID TELESCOPE",
+     "dx": -60,
+     "dy": -150,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:telescope",
+    "lines": [
+     [
+      "DARK ENERGY",
+      "text",
+      110
+     ],
+     [
+      "TELESCOPE FINDS A COMET",
+      "accent",
+      70
+     ]
+    ]
+   }
+  },
+  {
+   "type": "flow",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "HOW IT WAS SPOTTED",
+   "color": "accent",
+   "steps": [
+    {
+     "icon": "eye",
+     "title": "EUCLID IMAGES",
+     "sub": "SEPT 16–24, 2026",
+     "color": "info",
+     "at": "f1:European"
+    },
+    {
+     "icon": "chip",
+     "title": "SOFTWARE FLAGS A MOVING DOT",
+     "sub": "A RESEARCHER'S CODE",
+     "color": "accent",
+     "at": "f1:researcher's"
+    },
+    {
+     "icon": "x",
+     "title": "NO CATALOGUE MATCH",
+     "sub": "KNOWN COMETS · ASTEROIDS",
+     "color": "ok",
+     "at": "f1:Checks"
+    }
+   ],
+   "source": "ESA · UNIVERSE TODAY · SCI.NEWS · MPC"
+  },
+  {
+   "type": "timeline",
+   "from": "f2 -0.1",
+   "to": "f2:faint",
+   "label": "FROM IMAGE TO COMET",
+   "color": "accent",
+   "items": [
+    {
+     "date": "SEPT 16–24",
+     "title": "EUCLID IMAGES THE OBJECT",
+     "sub": "PER ESA",
+     "at": "f2"
+    },
+    {
+     "date": "OCT 8",
+     "title": "MPC CONFIRMS: A COMET",
+     "sub": "NAMED C/2026 S1 (EUCLID)",
+     "big": true,
+     "color": "ok",
+     "at": "f2:confirmed"
+    }
+   ],
+   "source": "ESA · UNIVERSE TODAY · SCI.NEWS · MPC"
+  },
+  {
+   "type": "counter",
+   "from": "f2:faint",
+   "to": "f3 -0.1",
+   "label": "DISTANCE FROM EARTH",
+   "sublabel": "ABOUT · PER REPORTS",
+   "icon": "eye",
+   "color": "accent",
+   "value": 1.3,
+   "start": 0,
+   "suffix": " BILLION KM",
+   "decimals": 1,
+   "at": "f2:about",
+   "doneAt": "f2:about +1.5",
+   "note": "ORBIT TAKES THOUSANDS OF YEARS · PER ESA",
+   "source": "ESA · UNIVERSE TODAY · SCI.NEWS · MPC"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "flag",
+     "big": "FIRST COMET",
+     "text": "FOR EUCLID · BUILT TO MAP GALAXIES",
+     "color": "accent",
+     "at": "f3:Euclid"
+    },
+    {
+     "icon": "x",
+     "big": "NOT A TARGET",
+     "text": "FOR ESA'S COMET INTERCEPTOR MISSION",
+     "color": "danger",
+     "at": "f3:says"
+    },
+    {
+     "icon": "eye",
+     "big": "EARLY DETECTION",
+     "text": "COULD HELP FIND FUTURE TARGETS · ESA SCIENTISTS",
+     "color": "info",
+     "at": "f3:quick"
+    }
+   ],
+   "source": "SOURCES: ESA · UNIVERSE TODAY · SCI.NEWS · MPC"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -20,
+     "lat": 30,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 2.3,
+     "lat": 48.9,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": 15,
+     "lat": 40,
+     "R": 470
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      2.3,
+      48.9
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "MORE COMETS",
+     "text"
+    ],
+    [
+     "IN EUCLID'S DATA?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "ESA · UNIVERSE TODAY · SCI.NEWS · MPC",
+    "FIRST COMET FOUND BY EUCLID"
+   ]
+  }
+ ]
+}
