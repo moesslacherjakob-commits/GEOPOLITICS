@@ -1,0 +1,76 @@
+{
+ "id": "2026-10-22-iran-strike-plans",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Reportedly, the U.S. and Israel are planning new Iran strikes. Why wait until November?"},
+  {"id": "f1", "text": "The New York Times reports that American and Israeli planners have drawn up options for a short, intense campaign against Iran. Targets under discussion are nuclear sites, energy infrastructure, and missile and drone systems."},
+  {"id": "f2", "text": "The reported window opens in early November, after the U.S. midterm elections. Officials say no final decision has been made, and President Trump has not authorized an operation. The Financial Times reported that he opposed an Israeli strike planned for around October tenth."},
+  {"id": "f3", "text": "Some officials believe a concentrated campaign could pressure Tehran into concessions. Iran has threatened data centers, undersea internet cables, and Saudi oil refineries. Iranian officials say there are no talks until Washington lifts sanctions."},
+  {"id": "cta", "text": "Will the U.S. strike Iran again before January? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE PLANS", "seg": "f1", "color": "danger"},
+  {"n": "02", "name": "THE WINDOW", "seg": "f2", "color": "accent"},
+  {"n": "03", "name": "IRAN'S THREATS", "seg": "f3", "to": "cta -0.2", "color": "oil"}
+ ],
+ "upload": {
+  "title": "Iran: US and Israel Reportedly Plan New Strikes #shorts",
+  "description": "The New York Times reports that U.S. and Israeli planners have drawn up options for a short, intense campaign against Iran, with nuclear sites, energy infrastructure and missile and drone systems among the targets under discussion. According to the reports, the window would open in early November, after the U.S. midterm elections. Officials say no final decision has been made, and President Trump has not authorized a new operation. The Financial Times reported that Trump opposed an Israeli strike that was planned for around October 10. Some officials believe a concentrated campaign could pressure Tehran into concessions. Iran has threatened to hit data centers, undersea internet cables and Saudi oil refineries; Iranian officials say there will be no talks until Washington lifts sanctions. The reports rely on anonymous officials and have not been confirmed by either government.\n\nSources:\nThe New York Times via Investing.com: U.S., Israel prepare for renewed Iran strikes after midterm elections (Oct 2026)\nYnetnews: US, Israel prepare for renewed strikes on Iran after midterms, report says (Oct 2026)\nIsrael National News: Report: US and Israel prepare new Iran strikes after midterm elections (Oct 2026)\nThe Times of Israel: Netanyahu planned attack on Iran earlier this month, but Trump opposed it - report (Oct 2026)\n\n#geopolitics #Iran #Israel #USPolitics",
+  "tags": ["geopolitics", "Iran", "Israel", "US Iran war", "Trump", "midterms", "Netanyahu", "Iran strikes", "world news", "Middle East"],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:Iran",
+  "focus": "Tehran",
+  "zoom": 1.5,
+  "number": "NOV",
+  "numberColor": "danger",
+  "lines": [["STRIKES PLANNED?", "text"], ["AFTER THE VOTE", "accent"]],
+  "source": "PER NEW YORK TIMES · OCT 2026"
+ },
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.25", "exit": "zoom",
+   "view": [{"at": 0, "lon": 35, "lat": 30, "R": 380}, {"at": 3.4, "lon": 50, "lat": 32, "R": 480}],
+   "chip": {"text": "IRAN · OCT 22, 2026", "at": 0.25},
+   "highlights": [
+    {"iso": "IRN", "color": "danger", "at": "hook:Iran"},
+    {"iso": "ISR", "color": "info", "at": "hook:Israel"}
+   ],
+   "markers": [{"loc": "Tehran", "color": "danger", "at": "hook:Iran", "label": "TEHRAN", "sub": "STRIKES PLANNED?", "dx": 90, "dy": -70, "big": true}],
+   "headline": {"at": "hook:planning", "lines": [["NEW STRIKES", "danger", 130], ["PLANNED?", "text", 110]]},
+   "card": {"at": "hook:Why", "icon": "flag", "iconColor": "accent", "color": "accent", "kicker": "THE TIMING", "title": "WHY NOVEMBER?", "reticle": false}
+  },
+  {
+   "type": "map", "from": "hook$ +0.25", "to": "cta -0.1",
+   "center": [50, 31],
+   "camera": [
+    {"at": "hook$ +0.25", "lon": 50, "lat": 32, "dist": 43, "pitch": 0, "yaw": 0},
+    {"at": "f1 +0.4", "lon": 48, "lat": 32, "dist": 60, "pitch": 40, "yaw": -6, "oy": 190},
+    {"at": "f2 +0.1", "lon": 46, "lat": 31, "dist": 85, "pitch": 44, "yaw": 5, "oy": 190},
+    {"at": "f3 +0.2", "lon": 51, "lat": 28, "dist": 50, "pitch": 46, "yaw": -4, "oy": 190},
+    {"at": "cta", "lon": 50, "lat": 29, "dist": 62, "pitch": 46, "yaw": 0, "oy": 190}
+   ],
+   "layers": [
+    {"kind": "tint", "iso": "IRN", "color": "danger", "alpha": 0.45, "fill": 0.08, "at": "f1"},
+    {"kind": "tint", "iso": "ISR", "color": "info", "alpha": 0.5, "fill": 0.15, "at": "f1:American"},
+    {"kind": "arc", "from": "Jerusalem", "to": "Tehran", "color": "info", "height": 0.35, "dur": 1.8, "at": "f1:Israeli"},
+    {"kind": "marker", "loc": "Tehran", "style": "pulse", "color": "danger", "at": "f1:Iran", "until": "f2 -0.2", "label": {"text": "TEHRAN", "sub": "OPTIONS DRAWN UP · PER NYT", "dx": 100, "dy": 80}},
+    {"kind": "marker", "loc": "Isfahan", "style": "x", "color": "oil", "at": "f1:nuclear", "until": "f2 -0.2", "label": {"text": "NUCLEAR SITES", "sub": "UNDER DISCUSSION", "dx": -110, "dy": 70}},
+    {"kind": "stamp", "text": "EARLY NOVEMBER", "icon": "flag", "color": "accent", "screen": [540, 1120], "at": "f2:The", "until": "f2:Officials -0.1", "note": "REPORTED WINDOW · AFTER U.S. MIDTERMS"},
+    {"kind": "stamp", "text": "NO DECISION YET", "icon": "eye", "color": "info", "screen": [540, 1120], "at": "f2:Officials", "until": "f3 -0.2", "note": "TRUMP HAS NOT AUTHORIZED · PER OFFICIALS"},
+    {"kind": "marker", "loc": "Riyadh", "style": "dot", "color": "oil", "at": "f3:Saudi", "until": "cta -0.2", "label": {"text": "SAUDI REFINERIES", "sub": "IRAN WARNS", "dx": -60, "dy": 80}},
+    {"kind": "arc", "from": "Tehran", "to": "Riyadh", "color": "danger", "height": 0.3, "dur": 1.5, "at": "f3:Saudi"},
+    {"kind": "stamp", "text": "NO TALKS", "icon": "x", "color": "danger", "screen": [540, 1120], "at": "f3:Iranian", "until": "cta -0.2", "note": "UNTIL SANCTIONS LIFTED · PER IRAN"}
+   ]
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "view": [{"at": "cta -0.4", "lon": 50, "lat": 31, "R": 900}, {"at": "cta +1", "lon": 50, "lat": 31, "R": 520}, {"at": "end", "lon": 52, "lat": 31, "R": 520}],
+   "highlights": [{"iso": "IRN", "color": "danger", "alpha": 0.7}, {"iso": "ISR", "color": "info"}],
+   "markers": [{"loc": "Tehran", "color": "danger"}],
+   "lines": [["STRIKES AFTER THE VOTE?", "text"], ["BEFORE JANUARY?", "accent"]],
+   "sources": ["REPORTING: NEW YORK TIMES, FINANCIAL TIMES, YNET, TIMES OF ISRAEL", "OCT 2026"]
+  }
+ ]
+}
