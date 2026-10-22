@@ -1,0 +1,105 @@
+{
+ "id": "2026-10-22-oil-110-futures-fall",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Oil is back above 110 dollars. Why are stock futures falling with it?"},
+  {"id": "f1", "text": "Brent crude settled at 108.82 dollars on Wednesday, CNBC reports. Early Thursday it traded above 110. The National reports a Houthi drone attack near Saudi Aramco's Shaybah oil field. Saudi Arabia's energy ministry says operations were not affected."},
+  {"id": "f2", "text": "The National also reports that Washington ordered non-emergency staff to leave Saudi Arabia. Analysts quoted there link the oil price to the Iran war and risks around the Strait of Hormuz. Shaybah's pipeline carries crude to the Red Sea, bypassing that strait."},
+  {"id": "f3", "text": "Stocks felt it. At 5:16 a.m. Eastern, Investing.com reported Nasdaq 100 futures down 1.8 percent, and S and P 500 futures down 1.0 percent. Tesla and Meta earnings also weighed, CNBC says. Futures can reverse before the open."},
+  {"id": "cta", "text": "Will oil stay above 110 dollars next week? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE OIL MOVE", "seg": "f1", "color": "oil"},
+  {"n": "02", "name": "THE CAUSE", "seg": "f2", "color": "danger"},
+  {"n": "03", "name": "THE STOCKS", "seg": "f3", "to": "cta -0.2", "color": "accent"}
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {"at": 0, "lon": 20, "lat": 15, "R": 360},
+    {"at": 3.2, "lon": 45, "lat": 24, "R": 700}
+   ],
+   "chip": {"text": "MARKETS · OCT 22, 2026", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "SAU", "color": "oil", "at": "hook:Oil", "alpha": 0.35}],
+   "markers": [{"loc": [53.6, 22.5], "color": "danger", "at": "hook:above", "label": "SHAYBAH OIL FIELD"}],
+   "headline": {
+    "at": "hook:above",
+    "lines": [["OIL ABOVE $110", "oil", 110], ["STOCKS SLIDE", "danger", 115]]
+   }
+  },
+  {
+   "type": "counter",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.1",
+   "label": "BRENT CRUDE, PER BARREL",
+   "sublabel": "WEDNESDAY SETTLEMENT · PER CNBC",
+   "icon": "barrel",
+   "value": 108.82,
+   "start": 95,
+   "prefix": "$",
+   "decimals": 2,
+   "at": "f1:Brent",
+   "doneAt": "f1:Early",
+   "note": "EARLY THURSDAY: ABOVE $110 · INTRADAY",
+   "source": "SOURCES: CNBC · THE NATIONAL · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "chain",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "WHY OIL JUMPED",
+   "color": "oil",
+   "steps": [
+    {"icon": "plane", "title": "DRONE NEAR SHAYBAH", "sub": "HOUTHI ATTACK · PER THE NATIONAL", "dir": "up", "dirColor": "danger", "at": "f2:The"},
+    {"icon": "flag", "title": "U.S. STAFF TOLD TO LEAVE", "sub": "NON-EMERGENCY · PER THE NATIONAL", "at": "f2:Washington"},
+    {"icon": "barrel", "title": "OIL ABOVE $110", "sub": "IRAN WAR, HORMUZ RISK", "dir": "up", "at": "f2:Analysts"}
+   ],
+   "source": "SOURCES: THE NATIONAL · CNBC · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "ticker",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "U.S. STOCK FUTURES",
+   "sublabel": "THU 5:16 A.M. ET · BEFORE THE OPEN",
+   "rows": [
+    {"name": "NASDAQ 100", "sub": "FUTURES", "change": -1.8, "at": "f3:Nasdaq"},
+    {"name": "S&P 500", "sub": "FUTURES", "change": -1.0, "at": "f3:S"}
+   ],
+   "format": {"decimals": 1, "suffix": "%"},
+   "note": "FUTURES CAN REVERSE BEFORE THE OPEN",
+   "source": "SOURCES: INVESTING.COM · CNBC · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": 20, "lat": 15, "R": 800},
+    {"at": "cta +1", "lon": 45, "lat": 24, "R": 600},
+    {"at": "end", "lon": 45, "lat": 24, "R": 600}
+   ],
+   "highlights": [{"iso": "SAU", "color": "oil", "alpha": 0.35}],
+   "lines": [["OIL ABOVE $110.", "text"], ["STAYING THERE?", "accent"]],
+   "sources": ["AS REPORTED BY CNBC, THE NATIONAL, INVESTING.COM", "OCT 21-22, 2026 · NOT FINANCIAL ADVICE"]
+  }
+ ],
+ "upload": {
+  "title": "Oil Tops $110 After Saudi Drone Attack, Futures Fall #shorts",
+  "description": "Brent crude settled at $108.82 on Wednesday and traded above $110 early Thursday after a reported Houthi drone attack near Saudi Aramco's Shaybah field, according to CNBC and The National. Investing.com reported Nasdaq 100 futures down 1.8% and S&P 500 futures down 1.0% at 5:16 a.m. ET.\n\nSources: CNBC, The National, Investing.com (Oct 21-22, 2026).\n\n#stocks #markets #oil #Brent #Saudi",
+  "tags": ["markets", "stocks", "economy", "news", "oil", "Brent", "Saudi Aramco", "Houthi", "futures", "Nasdaq"],
+  "cover": "hook:above +0.4"
+ },
+ "thumbnail": {
+  "at": "hook:above +1.0",
+  "focus": [53.6, 22.5],
+  "number": "$110",
+  "numberColor": "oil",
+  "lines": [["STOCKS", "text"], ["FALL WITH IT", "accent"]],
+  "source": "BRENT, EARLY THU · PER CNBC, THE NATIONAL"
+}
+}
