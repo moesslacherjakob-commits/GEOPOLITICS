@@ -1,0 +1,506 @@
+{
+ "id": "2026-10-22-champi-taiwan-warning",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Taiwan just issued a typhoon land warning. Will Champi hit the island?"
+  },
+  {
+   "id": "f1",
+   "text": "Taiwan's weather agency issued a land warning Thursday for Typhoon Champi. It covers Yilan, Hualien, Taitung and Pingtung counties. Late morning, sustained winds were one hundred eighty-four kilometers per hour, with gusts up to two hundred twenty-seven. The storm's radius was three hundred twenty kilometers."
+  },
+  {
+   "id": "f2",
+   "text": "The agency says Champi should turn north earlier than first expected. That would spare Taiwan a direct hit. But heavy rain is still forecast for the north on Friday and Saturday, with extremely heavy rain in northern and northeastern mountains."
+  },
+  {
+   "id": "f3",
+   "text": "AFP reports more than one hundred fifty flights were cancelled Thursday. Work and classes were suspended on Lanyu and Green Island, and many counties cancelled Friday. The premier urged people to avoid creeks, beaches and mountains over the long weekend."
+  },
+  {
+   "id": "cta",
+   "text": "Will Champi spare Taiwan a direct hit? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE WARNING",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE TURN",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE DISRUPTION",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 150,
+     "lat": 20,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": 126,
+     "lat": 23,
+     "R": 640
+    }
+   ],
+   "chip": {
+    "text": "TYPHOON CHAMPI",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:typhoon",
+    "lines": [
+     [
+      "LAND WARNING",
+      "danger",
+      120
+     ],
+     [
+      "FOR TAIWAN",
+      "text",
+      120
+     ]
+    ]
+   },
+   "highlights": [
+    {
+     "iso": "TWN",
+     "color": "danger",
+     "at": "hook:warning.",
+     "alpha": 0.45
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      121.6,
+      23.9
+     ],
+     "color": "accent",
+     "at": "hook:warning.",
+     "label": "HUALIEN",
+     "sub": "",
+     "dx": -190,
+     "dy": -60,
+     "big": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    124,
+    23.5
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 126,
+     "lat": 23,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 125,
+     "lat": 22.5,
+     "dist": 30,
+     "pitch": 34,
+     "yaw": -6,
+     "oy": 170
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": 123,
+     "lat": 25,
+     "dist": 26,
+     "pitch": 44,
+     "yaw": 5,
+     "oy": 180
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": 121.5,
+     "lat": 24.2,
+     "dist": 22,
+     "pitch": 48,
+     "yaw": -4,
+     "oy": 190
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 123,
+     "lat": 24,
+     "dist": 42,
+     "pitch": 35,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "track",
+     "at": "hook$",
+     "until": "cta +0.6",
+     "color": "storm",
+     "name": "CHAMPI",
+     "sub": "TYPHOON · TRACK APPROXIMATE",
+     "forecast": 3,
+     "now": 2,
+     "cone": true,
+     "points": [
+      {
+       "loc": [
+        130,
+        19
+       ],
+       "cat": 5,
+       "label": "OCT 21",
+       "dx": 10,
+       "dy": 30,
+       "until": "f1 +1"
+      },
+      {
+       "loc": [
+        126.5,
+        21
+       ],
+       "cat": 4,
+       "label": "WED",
+       "dx": 10,
+       "dy": 30,
+       "until": "f2"
+      },
+      {
+       "loc": [
+        124.2,
+        22.6
+       ],
+       "cat": 3,
+       "label": "THU",
+       "dx": -10,
+       "dy": -60,
+       "big": true,
+       "until": "f3"
+      },
+      {
+       "loc": [
+        123.6,
+        24.6
+       ],
+       "cat": 3
+      },
+      {
+       "loc": [
+        123.8,
+        26.8
+       ],
+       "cat": 2,
+       "label": "TURNS NORTH",
+       "dx": -230,
+       "dy": -30
+      },
+      {
+       "loc": [
+        125,
+        29
+       ],
+       "cat": 1
+      }
+     ],
+     "steps": [
+      {
+       "at": "hook +0.3",
+       "to": 1,
+       "dur": 2.0
+      },
+      {
+       "at": "f1:Thursday",
+       "to": 2,
+       "dur": 2.0
+      },
+      {
+       "at": "f2:turn",
+       "to": 5,
+       "dur": 4.0
+      }
+     ],
+     "nameUntil": "f3",
+     "nameDx": -60,
+     "nameDy": -100
+    },
+    {
+     "kind": "note",
+     "text": "TRACK APPROXIMATE · CWA / MEDIA REPORTS",
+     "y": 1170,
+     "at": "f1 +1"
+    },
+    {
+     "kind": "tint",
+     "iso": "TWN",
+     "color": "danger",
+     "alpha": 0.2,
+     "at": "f1:land"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      121.6,
+      23.9
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Yilan,",
+     "label": {
+      "text": "LAND WARNING",
+      "sub": "YILAN · HUALIEN · TAITUNG · PINGTUNG",
+      "dx": -300,
+      "dy": 70,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "field",
+     "at": "f2:heavy",
+     "until": "cta",
+     "blobs": [
+      {
+       "loc": [
+        121.7,
+        25.0
+       ],
+       "r": 1.0,
+       "v": 0.9
+      },
+      {
+       "loc": [
+        121.6,
+        24.2
+       ],
+       "r": 0.9,
+       "v": 0.7
+      }
+     ],
+     "palette": "rain",
+     "alpha": 0.7,
+     "grow": 1.5,
+     "legend": {
+      "title": "ILLUSTRATIVE RAIN AREA",
+      "low": "",
+      "high": "",
+      "screen": [
+       60,
+       1090
+      ],
+      "w": 380
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      121.55,
+      22.04
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f3:Lanyu",
+     "label": {
+      "text": "LANYU · GREEN ISLAND",
+      "sub": "WORK & CLASSES SUSPENDED",
+      "dx": -80,
+      "dy": 120,
+      "until": "cta"
+     }
+    }
+   ]
+  },
+  {
+   "type": "gauge",
+   "from": "f1:sustained",
+   "to": "f1$ -0.1",
+   "label": "MAX SUSTAINED WINDS · THURSDAY AM",
+   "value": 184,
+   "max": 250,
+   "suffix": " km/h",
+   "icon": "storm",
+   "color": "danger",
+   "at": "f1:sustained",
+   "doneAt": "f1:kilometers",
+   "note": "GUSTS UP TO 227 KM/H · RADIUS 320 KM",
+   "source": "SOURCE: TAIWAN CWA, VIA FOCUS TAIWAN"
+  },
+  {
+   "type": "facts",
+   "from": "f2:agency",
+   "to": "f2$ -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "TURNS NORTH EARLIER",
+     "text": "THAN FIRST EXPECTED · CWA",
+     "color": "accent",
+     "at": "f2:turn"
+    },
+    {
+     "icon": "eye",
+     "big": "NO DIRECT HIT",
+     "text": "EXPECTED FOR TAIWAN · CWA",
+     "color": "ok",
+     "at": "f2:spare"
+    },
+    {
+     "icon": "rain",
+     "big": "HEAVY RAIN FRI–SAT",
+     "text": "NORTH & NORTHEAST MOUNTAINS · CWA",
+     "color": "info",
+     "at": "f2:heavy"
+    }
+   ],
+   "source": "SOURCE: TAIPEI TIMES, FOCUS TAIWAN"
+  },
+  {
+   "type": "facts",
+   "from": "f3:AFP",
+   "to": "f3$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "plane",
+     "big": "150+ FLIGHTS",
+     "text": "CANCELLED THURSDAY · AFP",
+     "color": "danger",
+     "at": "f3:flights"
+    },
+    {
+     "icon": "flag",
+     "big": "FRIDAY CLOSURES",
+     "text": "WORK & CLASSES IN MANY COUNTIES",
+     "color": "accent",
+     "at": "f3:many"
+    },
+    {
+     "icon": "shield",
+     "big": "AVOID BEACHES, MOUNTAINS",
+     "text": "PREMIER, LONG WEEKEND",
+     "color": "info",
+     "at": "f3:premier"
+    }
+   ],
+   "source": "SOURCE: AFP VIA YAHOO, TAIPEI TIMES"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "LAND WARNING FOR TAIWAN.",
+     "text"
+    ],
+    [
+     "DIRECT HIT OR NEAR MISS?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "TAIWAN CWA VIA FOCUS TAIWAN, TAIPEI TIMES, TAIWAN NEWS, AFP (SEARCH EXCERPTS)",
+    "OCT 22, 2026 · TRACK APPROXIMATE · FORECASTS CAN CHANGE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 150,
+     "lat": 22,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 128,
+     "lat": 24,
+     "R": 620
+    },
+    {
+     "at": "end",
+     "lon": 124,
+     "lat": 24,
+     "R": 620
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      121.6,
+      23.9
+     ],
+     "color": "accent"
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "TWN",
+     "color": "danger",
+     "alpha": 0.5
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Typhoon Champi Triggers a Land Warning in Taiwan #shorts",
+  "description": "Taiwan's Central Weather Administration issued a land warning on Thursday for Typhoon Champi, covering Yilan, Hualien, Taitung and Pingtung counties. The agency says the storm should turn north earlier than first expected, sparing a direct hit, but heavy rain is forecast for the north on Friday and Saturday. AFP reports more than 150 flights were cancelled.\n\nSources: Taiwan CWA via Focus Taiwan, Taipei Times, Taiwan News and AFP (based on search-result excerpts). Sources differ on how close the core will pass. The storm track on the map is approximate; forecasts can change.\n\n#climate #weather #typhoon #champi #taiwan",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "typhoon",
+   "Champi",
+   "Taiwan"
+  ],
+  "cover": "f2 +1"
+ },
+ "thumbnail": {
+  "at": "f1 +1",
+  "number": "184 KM/H",
+  "numberColor": "danger",
+  "source": "CHAMPI · TAIWAN CWA · OCT 22",
+  "focus": [
+   124.2,
+   22.8
+  ],
+  "lines": [
+   [
+    "TAIWAN ON ALERT",
+    "accent"
+   ]
+  ],
+  "zoom": 1.1
+ },
+ "gap": 0.9
+}
