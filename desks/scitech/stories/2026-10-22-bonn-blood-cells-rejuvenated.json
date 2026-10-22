@@ -1,0 +1,101 @@
+{
+ "id": "2026-10-22-bonn-blood-cells-rejuvenated",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Blood cells from an eighty year old now read as under twenty. How?"},
+  {"id": "f1", "text": "Researchers at the University of Bonn report in the journal Aging Cell that they turned red blood cell precursors from an eighty year old donor directly into neural stem cells. They skipped the usual detour through stem cells that can become anything."},
+  {"id": "f2", "text": "Then they checked age with epigenetic clocks. These read chemical tags on D.N.A. that build up over a lifetime. By that measure, the new cells came out younger than twenty. The team says it was unplanned. The change unfolded slowly."},
+  {"id": "f3", "text": "The paper was peer reviewed. This is still a laboratory result in cells in a dish, not a treatment for people. Epigenetic clocks are a proxy for biological age. The lead researcher says the cells also behave like young cells. That claim comes from the authors."},
+  {"id": "cta", "text": "Will cell rejuvenation ever reach patients? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE EXPERIMENT", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "THE FINDING", "seg": "f2", "color": "violet"},
+  {"n": "03", "name": "THE CAVEATS", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "upload": {
+  "title": "Old Blood Cells Turned Into Cells Under 20 #shorts",
+  "description": "Researchers at the University of Bonn report in the journal Aging Cell that red blood cell precursors from an 80-year-old donor, converted directly into neural stem cells, came out with an epigenetic age below 20. It is a laboratory result in cultured cells, not a treatment; epigenetic clocks are a proxy for biological age.\n\nSources: Aging Cell paper (University Hospital Bonn / University of Bonn); Newswise / Bionity release; News-Medical; Nautilus; ScienceDaily.\n\n#science #aging #biology #stemcells",
+  "tags": ["science", "news", "aging", "stem cells", "epigenetic clock", "University of Bonn", "Aging Cell", "biology"],
+  "cover": "hook:under, +0.4"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [7.1, 50.73],
+  "number": "80 → <20",
+  "numberColor": "accent",
+  "lines": [["OLD BLOOD CELLS", "text"], ["YOUNG AGAIN?", "accent"]],
+  "source": "AGING CELL · U. BONN · LAB CELLS"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {"at": 0, "lon": -10, "lat": 30, "R": 380},
+    {"at": 4.5, "lon": 7.1, "lat": 50.73, "R": 560}
+   ],
+   "chip": {"text": "SCIENCE · BONN STUDY", "at": 0.25, "color": "accent"},
+   "markers": [
+    {"loc": [7.1, 50.73], "color": "accent", "at": "hook:under", "label": "BONN", "sub": "UNIVERSITY HOSPITAL", "dx": -60, "dy": -150, "big": true}
+   ],
+   "headline": {
+    "at": "hook:cells",
+    "lines": [["80-YEAR-OLD CELLS", "text", 90], ["READ UNDER 20", "accent", 90]]
+   }
+  },
+  {
+   "type": "flow",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "HOW THEY DID IT",
+   "color": "accent",
+   "steps": [
+    {"icon": "drop", "title": "BLOOD CELL PRECURSORS", "sub": "FROM AN 80-YEAR-OLD DONOR", "color": "danger", "at": "f1:red"},
+    {"icon": "bolt", "title": "DIRECT CONVERSION", "sub": "SKIPS THE ANY-CELL STAGE", "color": "accent", "at": "f1:directly"},
+    {"icon": "eye", "title": "NEURAL STEM CELLS", "sub": "GROWN IN A DISH", "color": "ok", "at": "f1:neural"}
+   ],
+   "source": "AGING CELL · U. BONN · NEWS-MEDICAL · NAUTILUS"
+  },
+  {
+   "type": "scale",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "MOLECULAR AGE · EPIGENETIC CLOCKS",
+   "sublabel": "PER THE BONN TEAM",
+   "color": "accent",
+   "items": [
+    {"name": "DONOR", "value": 80, "display": "80", "color": "danger", "icon": "people", "at": "f2:Then"},
+    {"name": "NEW CELLS", "value": 20, "display": "UNDER 20", "color": "ok", "icon": "check", "at": "f2:younger"}
+   ],
+   "note": "EPIGENETIC CLOCKS ARE A PROXY FOR BIOLOGICAL AGE",
+   "source": "AGING CELL · U. BONN · NEWS-MEDICAL · NAUTILUS"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {"icon": "x", "big": "NOT A TREATMENT", "text": "LAB RESULT IN CELLS IN A DISH", "color": "danger", "at": "f3:laboratory"},
+    {"icon": "eye", "big": "A PROXY", "text": "EPIGENETIC CLOCKS ≠ DIRECT AGE", "color": "info", "at": "f3:Epigenetic"},
+    {"icon": "flag", "big": "AUTHORS' CLAIM", "text": "CELLS ALSO ACT YOUNG · LEAD RESEARCHER", "color": "accent", "at": "f3:lead"}
+   ],
+   "source": "SOURCES: AGING CELL · U. BONN · NEWS-MEDICAL · NAUTILUS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": -20, "lat": 30, "R": 800},
+    {"at": "cta +1", "lon": 7.1, "lat": 50.73, "R": 470},
+    {"at": "end", "lon": 15, "lat": 45, "R": 470}
+   ],
+   "markers": [{"loc": [7.1, 50.73], "color": "accent"}],
+   "lines": [["CELLS IN A DISH", "text"], ["TO PATIENTS?", "accent"]],
+   "sources": ["AGING CELL · U. BONN · NEWS-MEDICAL · NAUTILUS", "LAB RESULT · NOT MEDICAL ADVICE"]
+  }
+ ]
+}
