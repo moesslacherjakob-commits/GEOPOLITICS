@@ -1,0 +1,107 @@
+{
+ "id": "2026-10-23-meta-ai-bill-nasdaq",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Meta's AI bill could reach 145 billion dollars. Did that sink the Nasdaq?"},
+  {"id": "f1", "text": "The Nasdaq fell more than 2 percent on Thursday, Reuters reports. Its chip index had the biggest drop since July, as Lam Research shares plunged 10 percent after its results. Yahoo Finance says Meta shares fell nearly 7 percent after the company's earnings."},
+  {"id": "f2", "text": "Meta now expects 2026 capital spending of 135 to 145 billion dollars, according to Bloomberg. It also created a new class of non-voting shares, which it could use to help fund its AI buildout. Meta says Mark Zuckerberg keeps control."},
+  {"id": "f3", "text": "Reuters says the steep bill for AI buildouts punished other tech favorites too. Yahoo Finance reports oil at a five-month high sent investors toward bonds, and Treasury yields fell. The Dow was little changed."},
+  {"id": "cta", "text": "Will investors keep worrying about AI spending next week? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE SELL-OFF", "seg": "f1", "color": "danger"},
+  {"n": "02", "name": "THE BILL", "seg": "f2", "color": "accent"},
+  {"n": "03", "name": "THE SPREAD", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {"at": 0, "lon": -60, "lat": 25, "R": 380},
+    {"at": 3.2, "lon": -98, "lat": 38, "R": 760}
+   ],
+   "chip": {"text": "MARKETS · OCT 23, 2026", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "USA", "color": "info", "at": "hook:AI", "alpha": 0.3}],
+   "markers": [{"loc": [-122.15, 37.45], "color": "danger", "at": "hook:AI", "label": "META"}],
+   "headline": {
+    "at": "hook:AI",
+    "lines": [["META'S AI BILL", "accent", 105], ["NASDAQ SINKS", "danger", 115]]
+   }
+  },
+  {
+   "type": "ticker",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.1",
+   "label": "THURSDAY'S SELL-OFF",
+   "sublabel": "U.S. MARKETS · PER REUTERS, YAHOO FINANCE",
+   "rows": [
+    {"name": "NASDAQ", "sub": "COMPOSITE", "change": -2.1, "display": "OVER -2%", "at": "f1:The"},
+    {"name": "CHIP INDEX", "sub": "BIGGEST DROP SINCE JULY", "change": -5, "display": "SINCE JULY", "at": "f1:Its"},
+    {"name": "META", "sub": "AFTER EARNINGS", "change": -7, "display": "NEARLY -7%", "at": "f1:Yahoo"}
+   ],
+   "format": {"decimals": 1, "suffix": "%"},
+   "note": "CLOSING MOVES AS REPORTED · SOURCES DIFFER SLIGHTLY",
+   "source": "SOURCES: REUTERS · YAHOO FINANCE · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "counter",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "META 2026 CAPITAL SPENDING",
+   "sublabel": "FORECAST UP TO · PER BLOOMBERG",
+   "icon": "money",
+   "value": 145,
+   "start": 100,
+   "prefix": "$",
+   "suffix": "B",
+   "decimals": 0,
+   "at": "f2:Meta",
+   "doneAt": "f2:billion",
+   "note": "RANGE $135-145B · NEW NON-VOTING SHARES",
+   "source": "SOURCES: BLOOMBERG · INVESTING.COM · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "chain",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "HOW IT SPREAD",
+   "color": "info",
+   "steps": [
+    {"icon": "chip", "title": "AI BILL RISES", "sub": "BIG TECH SPENDING · PER REUTERS", "dir": "up", "dirColor": "danger", "at": "f3:Reuters"},
+    {"icon": "barrel", "title": "OIL AT 5-MONTH HIGH", "sub": "PER YAHOO FINANCE", "dir": "up", "at": "f3:Yahoo"},
+    {"icon": "money", "title": "TREASURY YIELDS FALL", "sub": "INVESTORS MOVE TO BONDS", "dir": "down", "dirColor": "ok", "at": "f3:Treasury"}
+   ],
+   "source": "SOURCES: REUTERS · YAHOO FINANCE · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": -60, "lat": 25, "R": 800},
+    {"at": "cta +1", "lon": -98, "lat": 38, "R": 650},
+    {"at": "end", "lon": -98, "lat": 38, "R": 650}
+   ],
+   "highlights": [{"iso": "USA", "color": "info", "alpha": 0.3}],
+   "lines": [["META'S AI BILL.", "text"], ["STILL A WORRY?", "accent"]],
+   "sources": ["AS REPORTED BY REUTERS, YAHOO FINANCE, BLOOMBERG", "OCT 21-22, 2026 · NOT FINANCIAL ADVICE"]
+  }
+ ],
+ "upload": {
+  "title": "Meta's $145B AI Bill Hits Nasdaq, Chips Tumble #shorts",
+  "description": "The Nasdaq fell more than 2% on Thursday, Reuters reports, as chips had their biggest drop since July. Yahoo Finance says Meta fell nearly 7% after earnings; Bloomberg reports it now expects 2026 capital spending of $135-145 billion.\n\nSources: Reuters, Yahoo Finance, Bloomberg, Investing.com (Oct 21-22, 2026).\n\n#stocks #markets #Meta #Nasdaq #AI",
+  "tags": ["markets", "stocks", "economy", "news", "Meta", "Nasdaq", "AI", "semiconductors", "earnings", "Treasury yields"],
+  "cover": "hook:AI +0.4"
+ },
+ "thumbnail": {
+  "at": "hook:AI +1.0",
+  "focus": [-122.15, 37.45],
+  "number": "$145B",
+  "numberColor": "accent",
+  "lines": [["NASDAQ", "text"], ["PAYS THE PRICE", "danger"]],
+  "source": "META CAPEX FORECAST · PER BLOOMBERG"
+ }
+}
