@@ -1,0 +1,484 @@
+{
+ "id": "2026-10-23-europe-heat-deaths",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Heat may have killed fifty thousand people in Europe this summer. Why so many?"
+  },
+  {
+   "id": "f1",
+   "text": "Two studies in Nature Health, from Imperial College London and the London School of Hygiene and Tropical Medicine, estimate fifty thousand, three hundred ninety-one heat deaths in eight hundred fifty-four European cities, from June to August."
+  },
+  {
+   "id": "f2",
+   "text": "About thirty-two thousand six hundred of those deaths are linked to extra heat from burning fossil fuels, the researchers say. Climate change's share rose from about forty percent early this century to sixty-five percent this summer."
+  },
+  {
+   "id": "f3",
+   "text": "Italy has the highest estimated toll, at thirteen thousand three hundred, then France, Spain and Germany. People aged eighty-five and over make up forty-five percent. The cities studied hold about forty percent of the population in thirty countries. The authors say these are modeled estimates, probably an undercount."
+  },
+  {
+   "id": "cta",
+   "text": "Will Europe see another summer this deadly? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE TOLL",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE CAUSE",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE WORST HIT",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -20,
+     "lat": 40,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": 10,
+     "lat": 46,
+     "R": 700
+    }
+   ],
+   "chip": {
+    "text": "EUROPE HEAT STUDY",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:fifty",
+    "lines": [
+     [
+      "50,000 HEAT DEATHS",
+      "danger",
+      110
+     ],
+     [
+      "IN EUROPE",
+      "text",
+      120
+     ]
+    ]
+   },
+   "highlights": [
+    {
+     "iso": "ITA",
+     "color": "danger",
+     "at": "hook:Europe",
+     "alpha": 0.35
+    },
+    {
+     "iso": "FRA",
+     "color": "danger",
+     "at": "hook:Europe",
+     "alpha": 0.35
+    },
+    {
+     "iso": "ESP",
+     "color": "danger",
+     "at": "hook:Europe",
+     "alpha": 0.35
+    },
+    {
+     "iso": "DEU",
+     "color": "danger",
+     "at": "hook:Europe",
+     "alpha": 0.35
+    }
+   ],
+   "markers": []
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    10,
+    46
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 10,
+     "lat": 46,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 10,
+     "lat": 46,
+     "dist": 60,
+     "pitch": 30,
+     "yaw": -4,
+     "oy": 170
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": 12,
+     "lat": 45,
+     "dist": 50,
+     "pitch": 40,
+     "yaw": 4,
+     "oy": 180
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": 8,
+     "lat": 44,
+     "dist": 46,
+     "pitch": 46,
+     "yaw": -3,
+     "oy": 190
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 10,
+     "lat": 46,
+     "dist": 70,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "field",
+     "at": "hook$",
+     "until": "cta",
+     "blobs": [
+      {
+       "loc": [
+        12.5,
+        42.5
+       ],
+       "r": 6,
+       "v": 0.95
+      },
+      {
+       "loc": [
+        2.5,
+        46.5
+       ],
+       "r": 5,
+       "v": 0.8
+      },
+      {
+       "loc": [
+        -3.5,
+        40
+       ],
+       "r": 5,
+       "v": 0.8
+      },
+      {
+       "loc": [
+        10,
+        51
+       ],
+       "r": 4.5,
+       "v": 0.7
+      },
+      {
+       "loc": [
+        22,
+        40
+       ],
+       "r": 4,
+       "v": 0.5
+      }
+     ],
+     "palette": "heat",
+     "clip": "land",
+     "alpha": 0.65,
+     "grow": 1.4,
+     "legend": {
+      "title": "ILLUSTRATIVE HEAT AREA",
+      "low": "",
+      "high": "",
+      "screen": [
+       60,
+       1090
+      ],
+      "w": 380
+     }
+    },
+    {
+     "kind": "note",
+     "text": "ILLUSTRATIVE \u00b7 MODELLED ESTIMATES, NOT COUNTED DEATHS",
+     "y": 1170,
+     "at": "f1 +1"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      12.5,
+      42.5
+     ],
+     "text": "ITALY",
+     "sub": "13,303",
+     "color": "danger",
+     "dx": 60,
+     "dy": 60,
+     "at": "f3:Italy"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      2.5,
+      46.5
+     ],
+     "text": "FRANCE",
+     "sub": "7,268",
+     "color": "accent",
+     "dx": -200,
+     "dy": -40,
+     "at": "f3:France"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -3.5,
+      40
+     ],
+     "text": "SPAIN",
+     "sub": "6,824",
+     "color": "accent",
+     "dx": -60,
+     "dy": 80,
+     "at": "f3:Spain"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      10,
+      51
+     ],
+     "text": "GERMANY",
+     "sub": "6,340",
+     "color": "accent",
+     "dx": 60,
+     "dy": -60,
+     "at": "f3:Germany."
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "from": "f1:fifty",
+   "to": "f1$ -0.1",
+   "label": "ESTIMATED HEAT DEATHS \u00b7 JUNE\u2013AUGUST",
+   "sublabel": "854 EUROPEAN CITIES",
+   "icon": "thermo",
+   "color": "danger",
+   "value": 50391,
+   "start": 0,
+   "format": "",
+   "decimals": 0,
+   "at": "f1:fifty",
+   "doneAt": "f1:cities,",
+   "note": "MODELLED ESTIMATE \u00b7 NATURE HEALTH",
+   "source": "SOURCE: IMPERIAL COLLEGE LONDON, LSHTM, VIA CNN, CBC, NPR"
+  },
+  {
+   "type": "facts",
+   "from": "f2:About",
+   "to": "f2$ -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "flame",
+     "big": "32,600 LINKED",
+     "text": "TO FOSSIL-FUEL HEATING \u00b7 RESEARCHERS",
+     "color": "danger",
+     "at": "f2:thirty-two"
+    },
+    {
+     "icon": "thermo",
+     "big": "40% \u2192 65%",
+     "text": "CLIMATE CHANGE'S SHARE OF HEAT DEATHS",
+     "color": "accent",
+     "at": "f2:Climate"
+    },
+    {
+     "icon": "eye",
+     "big": "71% ABOVE 2022",
+     "text": "PREVIOUS DEADLIEST SUMMER \u00b7 29,480",
+     "color": "info",
+     "at": "f2:sixty-five"
+    }
+   ],
+   "source": "SOURCE: NATURE HEALTH VIA CNN, CBC, ABC, RTE"
+  },
+  {
+   "type": "bars",
+   "from": "f3:Italy",
+   "to": "f3$ -0.1",
+   "label": "ESTIMATED HEAT DEATHS BY COUNTRY",
+   "sublabel": "SUMMER 2026 \u00b7 CITIES STUDIED",
+   "bars": [
+    {
+     "label": "ITALY",
+     "sub": "",
+     "value": 13303,
+     "display": "13,303",
+     "color": "danger",
+     "at": "f3:Italy",
+     "dur": 1.0
+    },
+    {
+     "label": "FRANCE",
+     "sub": "",
+     "value": 7268,
+     "display": "7,268",
+     "color": "accent",
+     "at": "f3:France",
+     "dur": 1.0
+    },
+    {
+     "label": "SPAIN",
+     "sub": "",
+     "value": 6824,
+     "display": "6,824",
+     "color": "accent",
+     "at": "f3:Spain",
+     "dur": 1.0
+    },
+    {
+     "label": "GERMANY",
+     "sub": "",
+     "value": 6340,
+     "display": "6,340",
+     "color": "accent",
+     "at": "f3:Germany.",
+     "dur": 1.0
+    }
+   ],
+   "source": "SOURCE: IMPERIAL / LSHTM VIA RTE, THE NATIONAL"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "50,000 ESTIMATED HEAT DEATHS.",
+     "text"
+    ],
+    [
+     "ANOTHER DEADLY SUMMER?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "IMPERIAL COLLEGE / LSHTM (NATURE HEALTH) VIA CNN, CBC, ABC NEWS, NPR, RTE (SEARCH EXCERPTS)",
+    "OCT 22\u201323, 2026 \u00b7 MODELLED ESTIMATES \u00b7 ILLUSTRATIVE HEAT AREA"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -20,
+     "lat": 40,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 5,
+     "lat": 45,
+     "R": 680
+    },
+    {
+     "at": "end",
+     "lon": 10,
+     "lat": 46,
+     "R": 680
+    }
+   ],
+   "markers": [],
+   "highlights": [
+    {
+     "iso": "ITA",
+     "color": "danger",
+     "at": "cta",
+     "alpha": 0.4
+    },
+    {
+     "iso": "FRA",
+     "color": "danger",
+     "at": "cta",
+     "alpha": 0.4
+    },
+    {
+     "iso": "ESP",
+     "color": "danger",
+     "at": "cta",
+     "alpha": 0.4
+    },
+    {
+     "iso": "DEU",
+     "color": "danger",
+     "at": "cta",
+     "alpha": 0.4
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Europe's Summer Heat Killed an Estimated 50,000 #shorts",
+  "description": "Two Nature Health studies from Imperial College London and the London School of Hygiene & Tropical Medicine estimate 50,391 heat deaths in 854 European cities between June and August 2026. Researchers link about 32,600 of them to extra heat from burning fossil fuels. Italy has the highest estimated toll. The figures are modelled estimates and probably an undercount, the authors say.\n\nSources: CNN, CBC, ABC News, NPR, RTE and LSHTM (based on search-result excerpts). Heat area on the map is illustrative.\n\n#climate #weather #heatwave #europe #heat",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "heatwave",
+   "Europe",
+   "heat deaths"
+  ],
+  "cover": "f2 +1"
+ },
+ "thumbnail": {
+  "at": "f1 +1",
+  "number": "50,000",
+  "numberColor": "danger",
+  "source": "EST. HEAT DEATHS \u00b7 NATURE HEALTH \u00b7 OCT 22",
+  "focus": [
+   10,
+   45
+  ],
+  "lines": [
+   [
+    "EUROPE'S DEADLY SUMMER",
+    "accent"
+   ]
+  ],
+  "zoom": 1.1
+ },
+ "gap": 0.9
+}
