@@ -1,0 +1,287 @@
+{
+ "id": "2026-10-23-openai-models-google-cloud",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "OpenAI's top models just landed on a rival's cloud. What changes for companies?"
+  },
+  {
+   "id": "f1",
+   "text": "On October twenty-first, Google Cloud said it is adding three OpenAI models to its Model Garden: GPT-6 Astra, GPT-6.1 Sol and GPT-6 Luna. Axios reports it starts as a private preview for select enterprise customers."
+  },
+  {
+   "id": "f2",
+   "text": "Here is what changes. Companies can buy the models through Google Cloud Marketplace, and Axios reports the spending can count toward existing cloud commitments. Google says prompts and outputs stay inside customer data perimeters and are not used to train foundation models."
+  },
+  {
+   "id": "f3",
+   "text": "Reports describe Google Cloud as the third big U.S. cloud to sell OpenAI models, after Microsoft and Amazon. OpenAI says general availability is planned in the coming weeks. Per-token prices have not been published."
+  },
+  {
+   "id": "cta",
+   "text": "Will most companies now buy A.I. models from several clouds? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE DEAL",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "WHAT CHANGES",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "WHAT'S NEXT",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "OpenAI Models Now Sold on Rival Google Cloud #shorts",
+  "description": "On October 21, Google Cloud said it is adding OpenAI's GPT-6 Astra, GPT-6.1 Sol and GPT-6 Luna to its Model Garden, starting as a private preview for select enterprise customers. Companies can buy the models through Google Cloud Marketplace; OpenAI says general availability is planned in the coming weeks, and per-token prices have not been published.\n\nSources: Axios (Oct 21); Google Cloud and OpenAI announcements as reported by Forkast, TechNode, Blockchain.News and Remio. Availability and data-handling terms are company statements.\n\n#tech #AI #GoogleCloud #OpenAI",
+  "tags": [
+   "technology",
+   "news",
+   "OpenAI",
+   "Google Cloud",
+   "AI",
+   "cloud computing",
+   "Model Garden",
+   "GPT-6"
+  ],
+  "cover": "hook$ -0.2"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [
+   -122.2,
+   37.6
+  ],
+  "number": "3",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "RIVALS",
+    "text"
+   ],
+   [
+    "SHARE A SHELF",
+    "accent"
+   ]
+  ],
+  "source": "OCT 21 · PER GOOGLE CLOUD · PREVIEW"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": -60,
+     "lat": 30,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": -122.2,
+     "lat": 37.6,
+     "R": 600
+    }
+   ],
+   "chip": {
+    "text": "A.I. CLOUD · OCT 21, 2026",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "USA",
+     "color": "info",
+     "at": "hook:OpenAI's",
+     "alpha": 0.5
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -122.2,
+      37.6
+     ],
+     "color": "accent",
+     "at": "hook:OpenAI's",
+     "label": "SILICON VALLEY",
+     "sub": "OPENAI · GOOGLE",
+     "dx": -60,
+     "dy": -160,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:models",
+    "lines": [
+     [
+      "OPENAI ON",
+      "text",
+      110
+     ],
+     [
+      "GOOGLE CLOUD",
+      "accent",
+      100
+     ]
+    ]
+   }
+  },
+  {
+   "type": "facts",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "chip",
+     "big": "3 OPENAI MODELS",
+     "text": "ADDED TO GOOGLE'S MODEL GARDEN",
+     "color": "accent",
+     "at": "f1:Google"
+    },
+    {
+     "icon": "bolt",
+     "big": "ASTRA · SOL · LUNA",
+     "text": "GPT-6 ASTRA · GPT-6.1 SOL · GPT-6 LUNA",
+     "color": "violet",
+     "at": "f1:Astra"
+    },
+    {
+     "icon": "eye",
+     "big": "PRIVATE PREVIEW",
+     "text": "SELECT ENTERPRISE CUSTOMERS · PER AXIOS",
+     "color": "info",
+     "at": "f1:private"
+    }
+   ],
+   "source": "SOURCES: AXIOS · GOOGLE CLOUD (VIA FORKAST, TECHNODE)"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "HOW COMPANIES GET THE MODELS",
+   "color": "violet",
+   "steps": [
+    {
+     "icon": "factory",
+     "title": "OPENAI MODELS",
+     "sub": "ASTRA · SOL · LUNA",
+     "color": "ok",
+     "at": "f2:Here"
+    },
+    {
+     "icon": "money",
+     "title": "GOOGLE CLOUD MARKETPLACE",
+     "sub": "COUNTS TOWARD EXISTING COMMITMENTS · AXIOS",
+     "color": "accent",
+     "at": "f2:Marketplace"
+    },
+    {
+     "icon": "shield",
+     "title": "CUSTOMER DATA PERIMETER",
+     "sub": "NOT USED TO TRAIN MODELS · PER GOOGLE",
+     "color": "info",
+     "at": "f2:Google"
+    }
+   ],
+   "source": "SOURCES: AXIOS · GOOGLE CLOUD ANNOUNCEMENT AS REPORTED"
+  },
+  {
+   "type": "timeline",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "WHERE THINGS STAND",
+   "color": "info",
+   "items": [
+    {
+     "date": "OCT 21",
+     "title": "PRIVATE PREVIEW STARTS",
+     "sub": "SELECT ENTERPRISE CUSTOMERS",
+     "color": "accent",
+     "at": "f3:Reports"
+    },
+    {
+     "date": "COMING WEEKS",
+     "title": "GENERAL AVAILABILITY PLANNED",
+     "sub": "PER OPENAI · NO FIRM DATE",
+     "color": "ok",
+     "big": true,
+     "at": "f3:OpenAI"
+    },
+    {
+     "date": "NOT YET",
+     "title": "PER-TOKEN PRICES",
+     "sub": "NOT PUBLISHED AS OF OCT 21",
+     "color": "danger",
+     "at": "f3:prices"
+    }
+   ],
+   "source": "SOURCES: AXIOS · OPENAI AND GOOGLE CLOUD STATEMENTS AS REPORTED"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -60,
+     "lat": 30,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -122.2,
+     "lat": 37.6,
+     "R": 500
+    },
+    {
+     "at": "end",
+     "lon": -110,
+     "lat": 38,
+     "R": 500
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -122.08,
+      37.39
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "MODELS FROM",
+     "text"
+    ],
+    [
+     "SEVERAL CLOUDS?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AXIOS · GOOGLE CLOUD · OPENAI ANNOUNCEMENTS AS REPORTED",
+    "AVAILABILITY AND TERMS ARE COMPANY STATEMENTS"
+   ]
+  }
+ ]
+}
