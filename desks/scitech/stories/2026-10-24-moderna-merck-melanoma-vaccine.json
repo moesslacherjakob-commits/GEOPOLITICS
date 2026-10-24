@@ -1,0 +1,118 @@
+{
+ "id": "2026-10-24-moderna-merck-melanoma-vaccine",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "A personalized cancer vaccine just beat the standard drug alone. By how much?"},
+  {"id": "f1", "text": "Moderna and Merck report a phase three melanoma trial. Surgeons had removed the tumors of eleven hundred thirty seven patients. Two thirds then got the vaccine plus Keytruda. One third got Keytruda and a placebo. Each vaccine is made from the patient's own tumor mutations."},
+  {"id": "f2", "text": "The companies say it cut the risk of the cancer returning, or death, by forty two percent. For spread to distant organs, or death, the figure was thirty eight percent. After two years, eighty two percent of the combination group had no recurrence. Against seventy percent."},
+  {"id": "f3", "text": "These are company figures, shown at a cancer meeting in Madrid. A peer reviewed paper is not yet confirmed. Some analysts hoped for more. The vaccine is experimental and not approved."},
+  {"id": "cta", "text": "Will personalized cancer vaccines win approval within five years? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE TRIAL", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "THE RESULT", "seg": "f2", "color": "ok"},
+  {"n": "03", "name": "THE CAVEATS", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "upload": {
+  "title": "Moderna-Merck Cancer Vaccine Beats Keytruda Alone #shorts",
+  "description": "Moderna and Merck report that their personalized mRNA melanoma vaccine, given with Keytruda, cut the risk of recurrence or death by 42% versus Keytruda alone in a phase 3 trial of 1,137 patients. These are company-reported figures presented at the ESMO meeting; the therapy is investigational and not approved.\n\nSources: Merck / Moderna announcements (INTerpath-001); BioSpace; Endpoints News; CNBC; AJMC.\n\n#science #cancer #mRNA #melanoma",
+  "tags": ["science", "news", "cancer vaccine", "Moderna", "Merck", "melanoma", "mRNA", "ESMO", "Keytruda"],
+  "cover": "hook:much, +0.4"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [-3.7, 40.42],
+  "number": "42%",
+  "numberColor": "accent",
+  "lines": [["LOWER CANCER RISK", "text"], ["PROVEN?", "accent"]],
+  "source": "MODERNA · MERCK · PHASE 3 · COMPANY DATA"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {"at": 0, "lon": -30, "lat": 30, "R": 380},
+    {"at": 4.5, "lon": -3.7, "lat": 40.42, "R": 560}
+   ],
+   "chip": {"text": "SCIENCE · ESMO MADRID", "at": 0.25, "color": "accent"},
+   "markers": [
+    {"loc": [-3.7, 40.42], "color": "accent", "at": "hook:cancer", "label": "MADRID", "sub": "ESMO 2026", "dx": 60, "dy": -150, "big": true}
+   ],
+   "headline": {
+    "at": "hook:cancer",
+    "lines": [["PERSONALIZED", "text", 90], ["CANCER VACCINE", "accent", 90]]
+   }
+  },
+  {
+   "type": "flow",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "HOW THE TRIAL WORKS",
+   "color": "accent",
+   "steps": [
+    {"icon": "people", "title": "1,137 PATIENTS", "sub": "MELANOMA FULLY REMOVED BY SURGERY", "color": "info", "at": "f1:Surgeons"},
+    {"icon": "bolt", "title": "VACCINE + KEYTRUDA", "sub": "TWO THIRDS · MADE FROM OWN TUMOR", "color": "accent", "at": "f1:Two"},
+    {"icon": "shield", "title": "KEYTRUDA + PLACEBO", "sub": "ONE THIRD · COMPARISON GROUP", "color": "neutral", "at": "f1:One"}
+   ],
+   "source": "MERCK · MODERNA · INTERPATH-001 · BIOSPACE"
+  },
+  {
+   "type": "counter",
+   "from": "f2 -0.1",
+   "to": "f2:After -0.4",
+   "label": "LOWER RISK OF RECURRENCE OR DEATH",
+   "sublabel": "VACCINE + KEYTRUDA VS KEYTRUDA ALONE",
+   "icon": "shield",
+   "color": "ok",
+   "value": 42,
+   "start": 0,
+   "prefix": "−",
+   "suffix": "%",
+   "doneSuffix": "",
+   "decimals": 0,
+   "at": "f2:cut",
+   "doneAt": "f2:percent. +0.2",
+   "note": "SPREAD TO DISTANT ORGANS OR DEATH: −38% · COMPANY-REPORTED",
+   "source": "SOURCES: MERCK · MODERNA · BIOSPACE · ENDPOINTS NEWS"
+  },
+  {
+   "type": "bars",
+   "from": "f2:After -0.4",
+   "to": "f3 -0.1",
+   "label": "NO RECURRENCE AFTER 2 YEARS",
+   "sublabel": "COMPANY-REPORTED · PERCENT OF PATIENTS",
+   "bars": [
+    {"label": "VACCINE + KEYTRUDA", "value": 82.2, "display": "82%", "color": "ok", "at": "f2:eighty", "dur": 1.2},
+    {"label": "KEYTRUDA ALONE", "value": 70.0, "display": "70%", "color": "neutral", "at": "f2:Against", "dur": 1.2}
+   ],
+   "source": "SOURCES: MERCK · MODERNA · BIOSPACE · ENDPOINTS NEWS"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {"icon": "flag", "big": "COMPANY FIGURES", "text": "SHOWN AT ESMO · MADRID", "color": "accent", "at": "f3:company"},
+    {"icon": "eye", "big": "NOT YET PEER REVIEWED", "text": "PAPER NOT YET CONFIRMED", "color": "info", "at": "f3:peer"},
+    {"icon": "x", "big": "NOT APPROVED", "text": "STILL EXPERIMENTAL", "color": "danger", "at": "f3:experimental"}
+   ],
+   "source": "SOURCES: MERCK · MODERNA · BIOSPACE · ENDPOINTS NEWS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": -20, "lat": 30, "R": 800},
+    {"at": "cta +1", "lon": -3.7, "lat": 40.42, "R": 470},
+    {"at": "end", "lon": 10, "lat": 42, "R": 470}
+   ],
+   "markers": [{"loc": [-3.7, 40.42], "color": "accent"}],
+   "lines": [["PERSONALIZED VACCINES", "text"], ["APPROVED BY 2031?", "accent"]],
+   "sources": ["MERCK · MODERNA · BIOSPACE · ENDPOINTS NEWS", "COMPANY DATA · NOT MEDICAL ADVICE"]
+  }
+ ]
+}
