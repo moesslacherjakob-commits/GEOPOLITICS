@@ -1,0 +1,504 @@
+{
+ "id": "2026-10-24-champi-okinawa-record-rain",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Okinawa just got record rain from Typhoon Champi. Is Japan's mainland next?"
+  },
+  {
+   "id": "f1",
+   "text": "Iriomote Island in Okinawa recorded five hundred sixty-seven millimeters of rain in forty-eight hours. Jiji Press says that is a new record for that location. Japan's weather agency issued a level four landslide warning for parts of the prefecture."
+  },
+  {
+   "id": "f2",
+   "text": "Saturday afternoon, Champi was about two hundred fifty kilometers north of Yonaguni Island, moving north-northeast. Central pressure was nine hundred eighty-five hectopascals. The agency says it could approach Kyushu on Monday, then become an extratropical cyclone, and urges caution about heavy rain."
+  },
+  {
+   "id": "f3",
+   "text": "Reuters reports Japan Airlines, ANA and Skymark canceled more than one hundred flights from Thursday to Sunday, affecting over eleven thousand passengers. Organizers also canceled the Okinawa Industrial Festival, which expected hundreds of thousands of visitors."
+  },
+  {
+   "id": "cta",
+   "text": "Will Champi bring heavy rain to Kyushu on Monday? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE RECORD",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE TRACK",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE DISRUPTION",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 135,
+     "lat": 22,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": 127,
+     "lat": 26,
+     "R": 640
+    }
+   ],
+   "chip": {
+    "text": "TYPHOON CHAMPI",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:record",
+    "lines": [
+     [
+      "RECORD RAIN",
+      "danger",
+      120
+     ],
+     [
+      "IN OKINAWA",
+      "text",
+      120
+     ]
+    ]
+   },
+   "highlights": [
+    {
+     "iso": "JPN",
+     "color": "danger",
+     "at": "hook:rain.",
+     "alpha": 0.35
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      123.8,
+      24.33
+     ],
+     "color": "accent",
+     "at": "hook:rain.",
+     "label": "IRIOMOTE",
+     "sub": "",
+     "dx": -200,
+     "dy": -60,
+     "big": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    126,
+    27
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 127,
+     "lat": 26,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 124.5,
+     "lat": 25,
+     "dist": 22,
+     "pitch": 40,
+     "yaw": -5,
+     "oy": 180
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": 126.5,
+     "lat": 28.5,
+     "dist": 34,
+     "pitch": 44,
+     "yaw": 5,
+     "oy": 180
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": 129,
+     "lat": 31,
+     "dist": 30,
+     "pitch": 46,
+     "yaw": -4,
+     "oy": 190
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 128,
+     "lat": 29,
+     "dist": 48,
+     "pitch": 35,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "track",
+     "at": "hook$",
+     "until": "cta +0.6",
+     "color": "storm",
+     "name": "CHAMPI",
+     "sub": "TYPHOON \u00b7 TRACK APPROXIMATE",
+     "forecast": 3,
+     "now": 2,
+     "cone": true,
+     "points": [
+      {
+       "loc": [
+        124.2,
+        22.8
+       ],
+       "cat": 4,
+       "label": "THU",
+       "dx": 10,
+       "dy": 30,
+       "until": "f1 +1"
+      },
+      {
+       "loc": [
+        124.0,
+        24.8
+       ],
+       "cat": 3,
+       "label": "FRI",
+       "dx": -110,
+       "dy": 30,
+       "until": "f2"
+      },
+      {
+       "loc": [
+        124.2,
+        26.7
+       ],
+       "cat": 1,
+       "label": "SAT",
+       "dx": -110,
+       "dy": -50,
+       "big": true,
+       "until": "f3"
+      },
+      {
+       "loc": [
+        127,
+        30
+       ],
+       "cat": "TS",
+       "label": "SUN",
+       "dx": 10,
+       "dy": 30
+      },
+      {
+       "loc": [
+        130.5,
+        32.8
+       ],
+       "cat": "EX",
+       "label": "MON \u00b7 KYUSHU?",
+       "dx": -250,
+       "dy": -30
+      }
+     ],
+     "steps": [
+      {
+       "at": "hook +0.3",
+       "to": 1,
+       "dur": 2.0
+      },
+      {
+       "at": "f1:Iriomote",
+       "to": 2,
+       "dur": 2.5
+      },
+      {
+       "at": "f2:Saturday",
+       "to": 4,
+       "dur": 4.0
+      }
+     ],
+     "nameUntil": "f3",
+     "nameDx": -60,
+     "nameDy": -100
+    },
+    {
+     "kind": "note",
+     "text": "TRACK APPROXIMATE \u00b7 JMA / MEDIA REPORTS",
+     "y": 1170,
+     "at": "f1 +1"
+    },
+    {
+     "kind": "tint",
+     "iso": "JPN",
+     "color": "danger",
+     "alpha": 0.18,
+     "at": "f1:Okinawa"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      123.8,
+      24.33
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Island",
+     "label": {
+      "text": "RECORD 567 MM / 48 H",
+      "sub": "IRIOMOTE \u00b7 LEVEL 4 LANDSLIDE WARNING",
+      "dx": -60,
+      "dy": 110,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "field",
+     "at": "f2:heavy",
+     "until": "cta",
+     "blobs": [
+      {
+       "loc": [
+        130.5,
+        33.2
+       ],
+       "r": 1.6,
+       "v": 0.9
+      },
+      {
+       "loc": [
+        132.5,
+        34.2
+       ],
+       "r": 1.3,
+       "v": 0.6
+      }
+     ],
+     "palette": "rain",
+     "alpha": 0.7,
+     "grow": 1.5,
+     "clip": "JPN",
+     "legend": {
+      "title": "ILLUSTRATIVE RAIN AREA",
+      "low": "",
+      "high": "",
+      "screen": [
+       60,
+       1090
+      ],
+      "w": 380
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      127.68,
+      26.21
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f3:Okinawa",
+     "label": {
+      "text": "OKINAWA",
+      "sub": "100+ FLIGHTS CANCELED \u00b7 FESTIVAL OFF",
+      "dx": -80,
+      "dy": 120,
+      "until": "cta"
+     }
+    }
+   ]
+  },
+  {
+   "type": "gauge",
+   "from": "f1:Iriomote",
+   "to": "f1$ -0.1",
+   "label": "RAINFALL IN 48 HOURS \u00b7 IRIOMOTE",
+   "value": 567,
+   "max": 700,
+   "suffix": " mm",
+   "icon": "storm",
+   "color": "info",
+   "at": "f1:Iriomote",
+   "doneAt": "f1:millimeters",
+   "note": "NEW RECORD FOR THAT LOCATION \u00b7 JIJI",
+   "source": "SOURCE: JMA VIA JIJI PRESS / NIPPON.COM"
+  },
+  {
+   "type": "facts",
+   "from": "f2:Central",
+   "to": "f2$ -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "985 HPA",
+     "text": "CENTRAL PRESSURE \u00b7 SAT PM \u00b7 JMA",
+     "color": "accent",
+     "at": "f2:pressure"
+    },
+    {
+     "icon": "eye",
+     "big": "KYUSHU MONDAY?",
+     "text": "MAY APPROACH \u00b7 JMA",
+     "color": "danger",
+     "at": "f2:Kyushu"
+    },
+    {
+     "icon": "rain",
+     "big": "THEN EXTRATROPICAL",
+     "text": "HEAVY RAIN CAUTION",
+     "color": "info",
+     "at": "f2:extratropical"
+    }
+   ],
+   "source": "SOURCE: JMA VIA JIJI PRESS / NIPPON.COM"
+  },
+  {
+   "type": "facts",
+   "from": "f3:Reuters",
+   "to": "f3$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "plane",
+     "big": "100+ FLIGHTS",
+     "text": "CANCELED THU\u2013SUN \u00b7 REUTERS",
+     "color": "danger",
+     "at": "f3:flights"
+    },
+    {
+     "icon": "people",
+     "big": "11,000+ PASSENGERS",
+     "text": "AFFECTED \u00b7 REUTERS",
+     "color": "accent",
+     "at": "f3:affecting"
+    },
+    {
+     "icon": "flag",
+     "big": "FESTIVAL CANCELED",
+     "text": "OKINAWA INDUSTRIAL FESTIVAL",
+     "color": "info",
+     "at": "f3:Organizers"
+    }
+   ],
+   "source": "SOURCE: REUTERS, JIJI PRESS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "RECORD RAIN IN OKINAWA.",
+     "text"
+    ],
+    [
+     "KYUSHU NEXT?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "JMA VIA JIJI PRESS / NIPPON.COM, REUTERS (SEARCH EXCERPTS)",
+    "OCT 24, 2026 \u00b7 TRACK APPROXIMATE \u00b7 FORECASTS CAN CHANGE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 140,
+     "lat": 24,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 130,
+     "lat": 28,
+     "R": 620
+    },
+    {
+     "at": "end",
+     "lon": 128,
+     "lat": 29,
+     "R": 620
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      123.8,
+      24.33
+     ],
+     "color": "accent"
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "JPN",
+     "color": "danger",
+     "alpha": 0.4
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Typhoon Champi Sets a Rain Record in Okinawa #shorts",
+  "description": "Japan's weather agency says Typhoon Champi may approach Kyushu on Monday. Jiji Press reports Iriomote Island in Okinawa recorded 567 millimeters of rain in 48 hours, a new record for that location. Reuters reports more than 100 flights were canceled.\n\nSources: Japan Meteorological Agency via Jiji Press / Nippon.com, Reuters (based on search-result excerpts). The storm track on the map is approximate; forecasts can change.\n\n#climate #weather #typhoon #champi #japan",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "typhoon",
+   "Champi",
+   "Japan",
+   "Okinawa"
+  ],
+  "cover": "f2 +1"
+ },
+ "thumbnail": {
+  "at": "hook$ +0.2",
+  "number": "567 MM",
+  "numberColor": "danger",
+  "source": "IRIOMOTE, 48 H \u00b7 JMA VIA JIJI \u00b7 OCT 24",
+  "focus": [
+   124.5,
+   25.5
+  ],
+  "lines": [
+   [
+    "KYUSHU NEXT?",
+    "accent"
+   ]
+  ],
+  "zoom": 1.3
+ },
+ "gap": 0.9
+}
