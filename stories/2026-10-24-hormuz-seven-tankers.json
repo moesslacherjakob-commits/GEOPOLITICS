@@ -1,0 +1,90 @@
+{
+ "id": "2026-10-24-hormuz-seven-tankers",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Oil just topped one hundred seventeen dollars. Did Iran really hit seven tankers?"},
+  {"id": "f1", "text": "Iran's Revolutionary Guards say they disabled seven tankers near the Strait of Hormuz. They claim four caught fire during ship-to-ship oil transfers, and three hit mines. Reports say none of this has been independently verified."},
+  {"id": "f2", "text": "President Trump disagrees. On Truth Social he said Iran is making up fake hits, because more oil is flowing through Hormuz than before the war. The Guards also warn they could strike U.S. bases if Washington escorts tankers."},
+  {"id": "f3", "text": "Markets reacted anyway. CBS reports Brent crude briefly rose above one hundred seventeen dollars a barrel on Friday. Al Jazeera had it near one hundred eleven on Wednesday. If confirmed, it would be the most vessels damaged in the Gulf in one day since the war began in February."},
+  {"id": "cta", "text": "Will Brent stay above one hundred dollars through November? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "IRAN'S CLAIM", "seg": "f1", "color": "danger"},
+  {"n": "02", "name": "TRUMP'S REPLY", "seg": "f2", "color": "info"},
+  {"n": "03", "name": "THE PRICE", "seg": "f3", "to": "cta -0.2", "color": "oil"}
+ ],
+ "upload": {
+  "title": "Oil Hits $117: Did Iran Really Hit 7 Tankers? #shorts",
+  "description": "Iran's Revolutionary Guards (IRGC) said on October 22-23 that they disabled seven tankers near the Strait of Hormuz: four allegedly caught fire during ship-to-ship oil transfers, three allegedly hit mines. The claims have not been independently verified. President Trump wrote on Truth Social that Iran is \"making up fake hits, mines, and everything else\" because more oil is coming through Hormuz than before the conflict began. The IRGC also warned it could strike US bases in the region if Washington moves to help tankers transit the strait. CBS News reports Brent crude briefly rose above $117 a barrel on Friday, October 23; other outlets differ on whether this is the highest level of the war. If the IRGC claim were confirmed, it would be the most vessels damaged in the Gulf in a single day since the war began on February 28.\n\nSources:\nAl Jazeera: Iran says seven ships hit in Hormuz Strait, warns US of wider response (Oct 22, 2026)\nCBS News live updates: Trump accuses Iran of making up fake strikes on ships to drive up oil prices (Oct 23, 2026)\nCBS News live updates: Iran war, oil and gas prices, Strait of Hormuz (Oct 23, 2026)\nABC News / AP: World shares retreat as report of damage to oil tankers pushes oil prices higher (Oct 22, 2026)\n\n#geopolitics #Iran #Hormuz #OilPrice",
+  "tags": ["geopolitics", "Iran", "Hormuz", "Strait of Hormuz", "oil price", "Brent crude", "IRGC", "tankers", "Trump", "world news"],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:Iran's",
+  "focus": "Strait of Hormuz",
+  "zoom": 1.4,
+  "number": "$117",
+  "numberColor": "oil",
+  "lines": [["7 TANKERS HIT?", "text"], ["TRUMP SAYS FAKE", "accent"]],
+  "source": "BRENT · PER CBS · OCT 23"
+ },
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.25", "exit": "zoom",
+   "view": [{"at": 0, "lon": 35, "lat": 22, "R": 360}, {"at": 3.4, "lon": 56, "lat": 26, "R": 480}],
+   "chip": {"text": "HORMUZ · OCT 23, 2026", "at": 0.25},
+   "highlights": [
+    {"iso": "IRN", "color": "danger", "at": "hook:Oil"},
+    {"iso": "OMN", "color": "info", "at": "hook:Iran"}
+   ],
+   "markers": [{"loc": "Strait of Hormuz", "color": "oil", "at": "hook:topped", "label": "HORMUZ", "sub": "7 TANKERS?", "dx": -90, "dy": -70, "big": true}],
+   "headline": {"at": "hook:topped", "lines": [["OIL $117", "oil", 130], ["7 TANKERS HIT?", "text", 100]]},
+   "card": {"at": "hook:Did", "icon": "ship", "iconColor": "oil", "color": "oil", "kicker": "IRAN'S CLAIM", "title": "REAL OR FAKE?", "reticle": false}
+  },
+  {
+   "type": "map", "from": "hook$ +0.25", "to": "cta -0.1",
+   "center": [56, 26],
+   "camera": [
+    {"at": "hook$ +0.25", "lon": 56, "lat": 26, "dist": 43, "pitch": 0, "yaw": 0},
+    {"at": "f1 +0.4", "lon": 56.3, "lat": 26.4, "dist": 24, "pitch": 48, "yaw": 8, "oy": 190},
+    {"at": "f2 +0.1", "lon": 51, "lat": 26, "dist": 60, "pitch": 44, "yaw": -6, "oy": 190},
+    {"at": "f3 +0.2", "lon": 54, "lat": 26, "dist": 75, "pitch": 40, "yaw": 3, "oy": 190},
+    {"at": "cta", "lon": 54, "lat": 26, "dist": 62, "pitch": 46, "yaw": 0, "oy": 190}
+   ],
+   "layers": [
+    {"kind": "tint", "iso": "IRN", "color": "danger", "alpha": 0.5, "fill": 0.1, "at": "f1"},
+    {"kind": "marker", "loc": "Strait of Hormuz", "style": "pulse", "color": "danger", "at": "f1:Revolutionary", "until": "f2 -0.2", "label": {"text": "7 TANKERS", "sub": "PER IRGC · UNVERIFIED", "dx": -110, "dy": -80}},
+    {"kind": "card", "screen": [60, 290, 560], "title": "IRGC CLAIMS", "badge": "UNVERIFIED", "color": "danger", "at": "f1:They", "until": "f2 -0.2", "rows": [{"icon": "flame", "text": "4 FIRES AT TRANSFER", "at": "f1:four"}, {"icon": "x", "text": "3 HIT MINES", "at": "f1:three"}]},
+    {"kind": "stamp", "text": "UNVERIFIED", "icon": "eye", "color": "oil", "screen": [540, 1120], "at": "f1:Reports", "until": "f2 -0.1", "note": "NO INDEPENDENT CONFIRMATION"},
+    {"kind": "tint", "iso": "USA", "color": "info", "alpha": 0.4, "fill": 0.08, "at": "f2"},
+    {"kind": "bubble", "screen": [300, 400, 700], "kicker": "TRUMP ON TRUTH SOCIAL:", "text": "\"MAKING UP FAKE HITS\"", "color": "info", "at": "f2:On", "until": "f2:The"},
+    {"kind": "stamp", "text": "BASES AT RISK", "icon": "shield", "color": "danger", "screen": [540, 1120], "at": "f2:The", "until": "f3 -0.2", "note": "IRGC WARNING IF US ESCORTS TANKERS"},
+    {"kind": "stamp", "text": "SINCE FEBRUARY", "icon": "ship", "color": "oil", "screen": [540, 560], "at": "f3:If", "until": "cta -0.2", "note": "MOST VESSELS HIT IN ONE DAY · IF CONFIRMED"}
+   ]
+  },
+  {
+   "type": "counter",
+   "from": "f3 -0.2",
+   "to": "f3:If -0.2",
+   "label": "BRENT CRUDE · PER BARREL",
+   "sublabel": "FRIDAY, OCT 23 · PER CBS",
+   "icon": "barrel",
+   "color": "oil",
+   "value": 117,
+   "start": 110,
+   "prefix": "$",
+   "at": "f3:Brent",
+   "doneAt": "f3:one",
+   "note": "BRIEFLY ABOVE · INTRADAY",
+   "source": "CBS NEWS"
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "view": [{"at": "cta -0.4", "lon": 56, "lat": 26, "R": 900}, {"at": "cta +1", "lon": 56, "lat": 26, "R": 520}, {"at": "end", "lon": 52, "lat": 27, "R": 520}],
+   "highlights": [{"iso": "IRN", "color": "danger", "alpha": 0.7}, {"iso": "OMN", "color": "info"}, {"iso": "ARE", "color": "info"}],
+   "markers": [{"loc": "Strait of Hormuz", "color": "oil"}],
+   "lines": [["7 TANKERS: REAL OR FAKE?", "text"], ["OIL ABOVE $100 IN NOVEMBER?", "accent"]],
+   "sources": ["REPORTING: AL JAZEERA, CBS NEWS, ABC NEWS/AP", "OCT 22–23, 2026"]
+  }
+ ]
+}
