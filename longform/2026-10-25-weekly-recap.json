@@ -5,45 +5,45 @@
  "script": [
   {
    "id": "hook",
-   "text": "Oil at a five-month high. A funeral turned into a massacre. A vote that kept a country together. This was a week of five stories, and the last one will reach your wallet."
+   "text": "Oil at a five-month high. A deadly attack on a funeral. A vote against a separation process. This was a week of five stories, and the last one will reach your wallet."
   },
   {
    "id": "promise",
-   "text": "I will count them down from five to one. For each, you will see who said what, what is confirmed, and what is only claimed. And stay to the end, because three of these stories point to the same short window on the calendar. It is closer than you think."
+   "text": "I will count them down from five to one. For each, you will see who said what, what is confirmed, and what is only claimed. And stay to the end, because several of these stories point to the same short window on the calendar. The order is editorial: I rank them by how far their consequences reach."
   },
   {
    "id": "ch5",
-   "text": "Number five asks a simple question. Can a country lose a province with one ballot question? On Monday, October nineteenth, voters in Alberta answered question ten. It did not ask whether Alberta should leave Canada. It asked whether the province should begin a legal process toward a second referendum on separation. Preliminary results from Elections Alberta, reported by Al Jazeera and the Globe and Mail, show about seventy-five percent voted no, and about twenty-five percent voted yes. Turnout was roughly sixty-two percent. Outside the big cities, many districts voted to stay by more than sixty percent, and only two districts backed the separation option. Prime Minister Mark Carney welcomed the result. Premier Danielle Smith said she would use every legal and political tool to advance the interests of Albertans. And separatist leader Jeffrey Rath told reporters his push will absolutely continue. Alberta is Canada's oil heartland, which is why the vote was watched far beyond Canada. So why does this rank only fifth? Because the margin was wide. But a quarter of a province is still hundreds of thousands of people, and these counts are preliminary.",
+   "text": "Number five is a vote in Canada. On Monday, October nineteenth, voters in Alberta answered question ten. It did not ask whether Alberta should leave Canada. It asked whether the province should begin a legal process toward a second referendum on separation. Preliminary results from Elections Alberta, reported by Al Jazeera and the Globe and Mail, show about seventy-five percent voted no, and about twenty-five percent voted yes. Turnout was roughly sixty-two percent. Outside the big cities, many districts voted to stay by more than sixty percent, and only two districts backed the separation option. Prime Minister Mark Carney welcomed the result. Premier Danielle Smith said she would use every legal and political tool to advance the interests of Albertans. And separatist leader Jeffrey Rath told reporters his push will absolutely continue. So why does this rank only fifth? Because the margin was wide. But about a quarter of voters still backed the process, and these counts are preliminary.",
    "pauseBefore": 0.4
   },
   {
    "id": "ch4",
-   "text": "Number four is the story that was hardest to watch. On Friday, October twenty-third, gunmen opened fire at a Greek Orthodox church in the village of Hamoud, in Jordan's Karak region, during a funeral. NPR reports seven people killed and about forty wounded. Fox News later reported nine dead. Al Jazeera counted at least seven dead and thirty-four wounded. The numbers differ because the toll was still being counted. Footage on Jordanian state television showed three gunmen. As of Saturday, Al Jazeera said the attackers were unidentified, and no group had claimed responsibility. Fox News, citing authorities, reported that officials pointed to an extremist ideology linked to ISIS, while it remained unclear whether the gunmen belonged to any group. King Abdullah the Second promised the harshest penalties for those responsible, and Jordan declared three days of national mourning. Jordan's interior minister called the attack unprecedented. Christians are a small minority in Jordan, and attacks on churches there are rare. That is why this one drew coverage around the world.",
+   "text": "Number four is a deadly attack on a funeral in Jordan. On Friday, October twenty-third, gunmen opened fire at a Greek Orthodox church in the village of Hamoud, in Jordan's Karak region, during a funeral. NPR reports seven people killed and about forty wounded. Fox News later reported nine dead. Al Jazeera counted at least seven dead and thirty-four wounded. Reports differ. As of Saturday, Al Jazeera said the attackers were unidentified, and no group had claimed responsibility. Fox News, citing authorities, reported that officials pointed to an extremist ideology linked to ISIS, while it remained unclear whether the gunmen belonged to any group. King Abdullah the Second vowed the harshest penalties for those responsible, and Jordan's state news agency said three days of national mourning were declared.",
    "pauseBefore": 0.4
   },
   {
    "id": "ch3",
-   "text": "Number three is a door that opened a crack. On Wednesday, October twenty-first, Vladimir Putin met Steve Witkoff, President Trump's envoy, in Saint Petersburg. Afterward, Kremlin adviser Yuri Ushakov said Putin agreed, in principle, to resume three-way talks with Washington and Kyiv after November tenth. He said the focus would be a security system for Russia and Ukraine after the war ends. Ushakov also said the ideas Witkoff brought from a meeting in Oslo had little substance. President Zelensky said Kyiv had heard Moscow was ready for an expert-level meeting. His message was simple: do not talk about us without us. He called a halt along the current front line the most realistic path. But the obstacle has not moved. Russia has demanded that Ukraine give up the whole Donetsk region, including land its troops have not captured. Ukraine rejects giving up territory as a condition. The Associated Press noted that the American push to end the war has made no significant progress since early last year. No date or venue is confirmed, though Abu Dhabi has been mentioned. And the backdrop matters. The Sunday before, Russia's defense ministry said it shot down more than a thousand Ukrainian drones, as a fire broke out at an oil terminal in Saint Petersburg.",
+   "text": "Number three is a possible restart of peace talks on Ukraine. On Wednesday, October twenty-first, Vladimir Putin met Steve Witkoff, President Trump's envoy, in Saint Petersburg. Afterward, Kremlin adviser Yuri Ushakov said Putin agreed, in principle, to resume three-way talks with Washington and Kyiv after November tenth. He said the focus would be a security system for Russia and Ukraine after the war ends. Ushakov also said the ideas Witkoff brought from a meeting in Oslo had little substance. President Zelensky said Kyiv had heard Moscow was ready for an expert-level meeting. His message was simple: do not talk about us without us. He called a halt along the current front line the most realistic path. But the obstacle has not moved. Russia has demanded that Ukraine give up the whole Donetsk region, including land its troops have not captured. Ukraine rejects giving up territory as a condition. The Associated Press noted that the American push to end the war has made no significant progress since early twenty twenty-five. No date or venue is confirmed, though Ushakov said Abu Dhabi is possible. For context, the Sunday before, Russia's defense ministry said it shot down more than a thousand Ukrainian drones. Separately, the Associated Press reported a fire at an oil terminal in Saint Petersburg.",
    "pauseBefore": 0.4
   },
   {
    "id": "ch2",
-   "text": "Number two is a calendar problem. For weeks, American and Israeli officials have reportedly been drawing up options for renewed strikes on Iran. Axios reported on October seventh that the Pentagon told Central Command to prepare to resume major combat operations, with no date set. The next day, President Trump posted that the United States will not strike Iran before the midterm elections on November third, and said talks are ongoing. This week, The New York Times reported that options are still being drawn up, with a possible window in early November. No decision has been made. Israel votes on October twenty-seventh. Israeli commentator Ben Caspit reported that Washington pressed Israel to strike before the American vote, then backed away. That is one reporter's account, not a confirmed fact. Why does this rank second? Because the war began on February twenty-eighth, when the United States and Israel first struck Iran. A ceasefire framework followed in June. If the strikes resume, everything in our number one story gets worse.",
+   "text": "Number two is a calendar problem. For weeks, American and Israeli officials have reportedly been drawing up options for renewed strikes on Iran. Axios reported on October seventh that the Pentagon told Central Command to prepare to resume major combat operations, with no date set. The next day, President Trump posted that the United States will not strike Iran before the midterm elections on November third, and said talks are ongoing. This week, reports citing The New York Times said options are still being drawn up, with a possible window in early November. No decision has been made. Israel votes on October twenty-seventh. Israeli journalist Ben Caspit reported, according to i24 News, that Washington pressed Israel to strike before the American vote, then backed away. That is one reporter's account, not a confirmed fact. Why does this rank second? Because the decision shapes everything else on this list. The war began on February twenty-eighth, when the United States and Israel first struck Iran. Negotiations began in June under a memorandum of understanding. That history is why the Hormuz story comes next.",
    "pauseBefore": 0.4
   },
   {
    "id": "ch1",
-   "text": "Number one is the story you can feel at the pump. On Thursday, October twenty-second, Iran's Revolutionary Guards navy said it had struck seven commercial vessels in the Gulf and the Strait of Hormuz. Four, it said, were hit during ship-to-ship oil transfers, and three by naval mines. Independent confirmation was not available. President Trump answered on Truth Social that Iran was making up fake hits, mines, and everything else, and argued that more oil is moving through the strait than before the war. He accused Tehran of faking the attacks to push up prices before the midterms. What we can check is the market. According to CBS News, Brent crude rose three to four percent that day, to around one hundred twelve or one hundred thirteen dollars a barrel. That is its highest level since May. Other outlets called it a five-month high. Why the doubt about the claims? The British maritime monitoring center, known as UKMTO, has said it is struggling to report every incident, partly because many attacked ships do not report. So here is the honest summary. The price jump is real. The attacks behind it are claims that no independent source has confirmed. And whoever is right, about a fifth of the world's oil normally passes through Hormuz, according to the US Energy Information Administration. At its narrowest, the strait is about twenty-one miles wide. When traders get nervous there, prices move everywhere.",
+   "text": "Number one is the story that can reach your wallet. On Thursday, October twenty-second, Iran's Revolutionary Guards navy said it had struck seven commercial vessels in the Gulf and the Strait of Hormuz. Four, it said, were hit during ship-to-ship oil transfers, and three by naval mines. Independent confirmation was not available. President Trump answered on Truth Social that Iran was making up fake hits, mines, and everything else, and said more oil is moving through the strait than before the war, a claim we could not verify. He accused Tehran of faking the attacks to push up prices before the midterms. What we can check is the market. According to CBS News, Brent crude rose three to four percent that day, to around one hundred twelve or one hundred thirteen dollars a barrel, which CBS says is its highest level since May. Other outlets called it a five-month high. Why is confirmation hard? The British maritime monitoring center, known as UKMTO, has said it is struggling to report every incident, and many attacked ships do not report. So here is the summary. The price jump is real. The attacks reported alongside it are claims we could not independently confirm. And whoever is right, about a fifth of the world's oil normally passes through Hormuz, according to the US Energy Information Administration. At its narrowest, the strait is about twenty-one miles wide. When traders get nervous there, prices move everywhere.",
    "pauseBefore": 0.4
   },
   {
    "id": "outlook",
-   "text": "So what should you watch next? Three dates. October twenty-seventh: Israel votes. November third: Americans vote in the midterms, and President Trump has said there will be no strikes on Iran before it. And after November tenth: the earliest date Moscow named for resuming talks on Ukraine. That is the window I promised. Late October to mid-November holds the decisions behind three of this week's five stories. Analysts quoted by Al Jazeera note that striking Iran before the midterms would be politically risky, because the war is unpopular with Americans. Al Jazeera also points out that in June twenty twenty-five, Mr. Trump said he would decide on Iran in two weeks, and the United States struck within days. Neither point is a prediction. Both are on the record. In Canada, Premier Smith has promised to keep pressing Ottawa. In Jordan, the hunt for the attackers goes on. And at sea, shipping data will show whether the tanker claims hold up. The oil price will tell you first.",
+   "text": "So what should you watch next? Three dates. October twenty-seventh: Israel votes. November third: Americans vote in the midterms, and President Trump has said there will be no strikes on Iran before it. And after November tenth: the earliest date Moscow named for resuming talks on Ukraine. That is the window I promised. Late October to mid-November holds decisions behind two of this week's stories, Iran and Ukraine, and the oil story depends on the Iran decision. Analysts quoted by Al Jazeera note that striking Iran before the midterms would be politically risky, because the war is unpopular with Americans. Al Jazeera also points out that in June twenty twenty-five, Mr. Trump said he would decide on Iran in two weeks, and the United States struck within days. Neither point is a prediction. Both are on the record. In Canada, Premier Smith says she will use every legal and political tool. In Jordan, no group had claimed the attack as of Saturday. And at sea, shipping data could help check the tanker claims.",
    "pauseBefore": 0.4
   },
   {
    "id": "next",
-   "text": "Next, we go behind the headlines on the question that sits under number one. How can a gap in the sea just twenty-one miles wide hold so much power over the price you pay?",
+   "text": "One question sits under number one. How can a gap in the sea just twenty-one miles wide hold so much power over the price you pay?",
    "pauseBefore": 0.4
   }
  ],
@@ -51,7 +51,7 @@
   {
    "n": "05",
    "name": "ALBERTA STAYS",
-   "chapter": "Number 5: Can one ballot question split a country?",
+   "chapter": "Number 5: Alberta votes on starting a separation process",
    "seg": "ch5",
    "color": "info"
   },
@@ -65,7 +65,7 @@
   {
    "n": "03",
    "name": "TALKS ON UKRAINE",
-   "chapter": "Number 3: A door opens a crack in Moscow",
+   "chapter": "Number 3: Moscow agrees to talks, in principle",
    "seg": "ch3",
    "color": "violet"
   },
@@ -79,7 +79,7 @@
   {
    "n": "01",
    "name": "HORMUZ AND OIL",
-   "chapter": "Number 1: Oil at a five-month high",
+   "chapter": "Number 1: Oil at a five-month high and the Hormuz claims",
    "seg": "ch1",
    "color": "oil"
   },
@@ -100,7 +100,7 @@
  ],
  "upload": {
   "title": "Oil at a 5-Month High: The Week's 5 Biggest Stories",
-  "description": "Five stories shaped the week of October 19 to 25, 2026: Alberta's vote to stay in Canada, the deadly attack on a funeral at a church in Jordan, Putin's conditional yes to new Ukraine talks, reported planning for new strikes on Iran, and the claims of tanker attacks near the Strait of Hormuz that sent Brent crude to a five-month high. This recap shows who said what, what is confirmed and what is only claimed.\n\nSources:\nAl Jazeera: Alberta voters reject separation (Oct 20, 2026)\nThe Globe and Mail: The Alberta referendum by the numbers\nNPR: Gunmen open fire at a church during a funeral in Jordan (Oct 24, 2026)\nAl Jazeera: Who was behind the deadly church shooting in Jordan? (Oct 24, 2026)\nFox News: Jordan church attack in Karak kills 9 at a Greek Orthodox funeral\nAP: Trump envoy Witkoff meets Putin in St. Petersburg for Ukraine war talks (Oct 21, 2026)\nAP: Putin agrees to resume trilateral talks on Ukraine war with Kyiv and Washington: Kremlin\nFrance 24: Ukraine and Russia both say ready to resume trilateral talks with US (Oct 21, 2026)\nAP: Blaze at St Petersburg oil sites as Kyiv launches more than 1,000 drones at Russia (Oct 18, 2026)\nAxios: Military ordered to be ready for possible Iran strikes as Trump weighs timing (Oct 7, 2026)\nAxios: Trump rules out Iran strikes before midterms (Oct 8, 2026)\nAl Jazeera: Is Trump signalling a return to war with Iran after the midterms? (Oct 9, 2026)\nCBS News live updates: Trump accuses Iran of making up fake strikes on ships (Oct 22, 2026)\nThe Washington Times: Trump rejects Iranian claims of tanker strikes in Strait of Hormuz as oil prices rise (Oct 22, 2026)\ngCaptain: Iran claims more ships struck near Hormuz as Trump accuses Tehran of faking hits\nSplash247: Hormuz attacks overwhelm UKMTO\nU.S. Energy Information Administration (EIA): World Oil Transit Chokepoints\n\n#geopolitics #news #weeklyrecap #Iran #Ukraine",
+  "description": "Five stories shaped the week of October 19 to 25, 2026: Alberta's vote against starting a separation process, the deadly attack on a funeral at a church in Jordan, Putin's agreement in principle, per the Kremlin, to resume Ukraine talks, reported planning for new strikes on Iran, and claims of tanker attacks near the Strait of Hormuz as Brent crude reached a five-month high. This recap shows who said what, what is confirmed and what is only claimed.\n\nSources:\nAl Jazeera: Alberta voters reject separation (Oct 20, 2026)\nThe Globe and Mail: The Alberta referendum by the numbers\nNPR: Gunmen open fire at a church during a funeral in Jordan (Oct 24, 2026)\nAl Jazeera: Who was behind the deadly church shooting in Jordan? (Oct 24, 2026)\nFox News: Jordan church attack in Karak kills 9 at a Greek Orthodox funeral\nAP: Trump envoy Witkoff meets Putin in St. Petersburg for Ukraine war talks (Oct 21, 2026)\nAP: Putin agrees to resume trilateral talks on Ukraine war with Kyiv and Washington: Kremlin\nFrance 24: Ukraine and Russia both say ready to resume trilateral talks with US (Oct 21, 2026)\nAP: Blaze at St Petersburg oil sites as Kyiv launches more than 1,000 drones at Russia (Oct 18, 2026)\nAxios: Military ordered to be ready for possible Iran strikes as Trump weighs timing (Oct 7, 2026)\nAxios: Trump rules out Iran strikes before midterms (Oct 8, 2026)\nAl Jazeera: Is Trump signalling a return to war with Iran after the midterms? (Oct 9, 2026)\nNew York Times (as cited by Axios, Al Jazeera and Israeli media): options for renewed Iran strikes\ni24 News: report that the US pressed Israel to strike Iran ahead of elections (Ben Caspit)\nABC News: background on the war that began Feb 28, 2026\nPetra (Jordan News Agency), via Latin Times: national mourning\nCBS News live updates: Trump accuses Iran of making up fake strikes on ships (Oct 22, 2026)\nThe Washington Times: Trump rejects Iranian claims of tanker strikes in Strait of Hormuz as oil prices rise (Oct 22, 2026)\ngCaptain: Iran claims more ships struck near Hormuz as Trump accuses Tehran of faking hits\nSplash247: Hormuz attacks overwhelm UKMTO\nU.S. Energy Information Administration (EIA): World Oil Transit Chokepoints\n\n#geopolitics #news #weeklyrecap #Iran #Ukraine",
   "tags": [
    "geopolitics",
    "weekly recap",
@@ -130,7 +130,7 @@
     "text"
    ],
    [
-    "WHO IS RIGHT?",
+    "ATTACKS: UNCONFIRMED",
     "accent"
    ]
   ],
@@ -299,7 +299,7 @@
      "oy": 50
     },
     {
-     "at": "ch5:And",
+     "at": "ch5:separatist",
      "lon": -96,
      "lat": 52,
      "dist": 126,
@@ -414,7 +414,10 @@
     },
     {
      "kind": "marker",
-     "loc": "Edmonton",
+     "loc": [
+      -111.5,
+      52.2
+     ],
      "style": "dot",
      "color": "ok",
      "at": "ch5:Outside",
@@ -445,7 +448,7 @@
      "text": "\"EVERY LEGAL AND POLITICAL TOOL\"",
      "color": "accent",
      "at": "ch5:Premier",
-     "until": "ch5:And"
+     "until": "ch5:separatist"
     },
     {
      "kind": "bubble",
@@ -457,7 +460,7 @@
      "kicker": "SEPARATIST LEADER RATH",
      "text": "PUSH WILL \"ABSOLUTELY\" CONTINUE",
      "color": "danger",
-     "at": "ch5:And",
+     "at": "ch5:separatist",
      "until": "ch5:So"
     }
    ]
@@ -551,7 +554,7 @@
      "oy": 40
     },
     {
-     "at": "ch4:Footage",
+     "at": "ch4:Reports",
      "lon": 36,
      "lat": 31.2,
      "dist": 24,
@@ -569,15 +572,6 @@
      "oy": 40
     },
     {
-     "at": "ch4:Christians",
-     "lon": 36.3,
-     "lat": 31.6,
-     "dist": 40,
-     "pitch": 42,
-     "yaw": 0,
-     "oy": 40
-    },
-    {
      "at": "ch4$",
      "lon": 36.3,
      "lat": 31.6,
@@ -591,7 +585,7 @@
     {
      "kind": "tint",
      "iso": "JOR",
-     "color": "danger",
+     "color": "oil",
      "alpha": 0.4,
      "fill": 0.08,
      "at": "ch4"
@@ -611,7 +605,7 @@
      "style": "pulse",
      "color": "danger",
      "at": "ch4:Hamoud",
-     "until": "ch4:Footage",
+     "until": "ch4:Reports",
      "label": {
       "text": "HAMOUD · KARAK",
       "sub": "OCT 23 · GREEK ORTHODOX CHURCH",
@@ -642,7 +636,7 @@
      "title": "JORDAN'S RESPONSE",
      "color": "info",
      "at": "ch4:King",
-     "until": "ch4:Christians",
+     "until": "ch4$",
      "rows": [
       {
        "icon": "shield",
@@ -651,13 +645,8 @@
       },
       {
        "icon": "flag",
-       "text": "3 DAYS OF NATIONAL MOURNING",
+       "text": "3 DAYS OF MOURNING · PETRA",
        "at": "ch4:mourning"
-      },
-      {
-       "icon": "eye",
-       "text": "INTERIOR MINISTER: UNPRECEDENTED",
-       "at": "ch4:unprecedented"
       }
      ]
     }
@@ -666,7 +655,7 @@
   {
    "type": "facts",
    "from": "ch4:NPR -0.2",
-   "to": "ch4:Footage -0.2",
+   "to": "ch4:Reports",
    "color": "danger",
    "items": [
     {
@@ -757,7 +746,7 @@
      "oy": 40
     },
     {
-     "at": "ch3:Russia",
+     "at": "ch3:demanded",
      "lon": 37.5,
      "lat": 48.2,
      "dist": 32,
@@ -766,7 +755,7 @@
      "oy": 40
     },
     {
-     "at": "ch3:No",
+     "at": "ch3:Associated",
      "lon": 40,
      "lat": 40,
      "dist": 85,
@@ -775,7 +764,7 @@
      "oy": 40
     },
     {
-     "at": "ch3:backdrop",
+     "at": "ch3:context",
      "lon": 30.3,
      "lat": 59.9,
      "dist": 30,
@@ -797,7 +786,7 @@
     {
      "kind": "tint",
      "iso": "RUS",
-     "color": "danger",
+     "color": "neutral",
      "alpha": 0.35,
      "fill": 0.07,
      "at": "ch3"
@@ -847,7 +836,7 @@
      "height": 0.25,
      "dur": 1.4,
      "at": "ch3:Oslo",
-     "until": "ch3:President"
+     "until": "ch3:Zelensky"
     },
     {
      "kind": "marker",
@@ -855,7 +844,7 @@
      "style": "dot",
      "color": "accent",
      "at": "ch3:Oslo",
-     "until": "ch3:President",
+     "until": "ch3:Zelensky",
      "label": {
       "text": "OSLO IDEAS",
       "sub": "\"LITTLE SUBSTANCE\" · USHAKOV",
@@ -874,7 +863,7 @@
      "text": "\"DO NOT TALK ABOUT US WITHOUT US\"",
      "color": "info",
      "at": "ch3:simple",
-     "until": "ch3:He"
+     "until": "ch3:front"
     },
     {
      "kind": "zone",
@@ -909,17 +898,17 @@
      "fill": 0.25,
      "hatch": true,
      "pulse": true,
-     "at": "ch3:Russia",
-     "until": "ch3:No"
+     "at": "ch3:demanded",
+     "until": "ch3:Associated"
     },
     {
      "kind": "tag",
      "loc": "Donetsk",
      "text": "RUSSIA'S DEMAND",
-     "sub": "ALL OF DONETSK",
+     "sub": "ALL OF DONETSK · APPROXIMATE",
      "color": "danger",
      "at": "ch3:Donetsk",
-     "until": "ch3:No",
+     "until": "ch3:Associated",
      "dx": -170,
      "dy": -60
     },
@@ -932,9 +921,9 @@
       960,
       250
      ],
-     "at": "ch3:No",
-     "until": "ch3:backdrop",
-     "note": "ABU DHABI MENTIONED · NOT CONFIRMED"
+     "at": "ch3:venue",
+     "until": "ch3:context",
+     "note": "ABU DHABI \"POSSIBLE\" · USHAKOV"
     },
     {
      "kind": "marker",
@@ -944,7 +933,7 @@
      ],
      "style": "pulse",
      "color": "danger",
-     "at": "ch3:backdrop",
+     "at": "ch3:context",
      "until": "ch3$",
      "label": {
       "text": "OIL TERMINAL FIRE",
@@ -957,7 +946,7 @@
   },
   {
    "type": "timeline",
-   "from": "ch3:backdrop",
+   "from": "ch3:context",
    "to": "ch3$ +0.2",
    "label": "THE LEAD-UP",
    "color": "violet",
@@ -993,30 +982,6 @@
     }
    ],
    "source": "AP · FRANCE 24 · KREMLIN VIA AP"
-  },
-  {
-   "type": "footage",
-   "asset": "f02",
-   "from": "ch3:Saint -0.4",
-   "to": "ch3:Saint +5.4",
-   "query": "saint petersburg skyline",
-   "pick": false,
-   "kind": "any",
-   "symbolic": true,
-   "move": "in",
-   "start": 0
-  },
-  {
-   "type": "footage",
-   "asset": "f03",
-   "from": "ch3:security",
-   "to": "ch3:security +5.5",
-   "query": "diplomats conference table meeting",
-   "pick": false,
-   "kind": "video",
-   "symbolic": true,
-   "move": "in",
-   "start": 0
   },
   {
    "type": "map",
@@ -1091,7 +1056,7 @@
      "oy": 40
     },
     {
-     "at": "ch2:If",
+     "at": "ch2:Hormuz",
      "lon": 56,
      "lat": 28,
      "dist": 48,
@@ -1137,7 +1102,7 @@
       250
      ],
      "at": "ch2:date",
-     "until": "ch2:The",
+     "until": "ch2:next",
      "note": "PENTAGON TELLS CENTCOM TO PREPARE · AXIOS"
     },
     {
@@ -1179,16 +1144,16 @@
       960,
       250
      ],
-     "at": "ch2:That",
+     "at": "ch2:account",
      "until": "ch2:Why",
-     "note": "BEN CASPIT · NOT CONFIRMED"
+     "note": "BEN CASPIT VIA I24 NEWS · NOT CONFIRMED"
     },
     {
      "kind": "marker",
      "loc": "Strait of Hormuz",
      "style": "pulse",
      "color": "danger",
-     "at": "ch2:If",
+     "at": "ch2:Hormuz",
      "until": "ch2$",
      "label": {
       "text": "HORMUZ",
@@ -1222,7 +1187,7 @@
     },
     {
      "date": "THIS WEEK",
-     "title": "NYT: OPTIONS STILL DRAWN UP",
+     "title": "REPORTS CITING NYT: OPTIONS STILL DRAWN UP",
      "sub": "POSSIBLE WINDOW IN EARLY NOVEMBER",
      "color": "oil",
      "at": "ch2:This"
@@ -1236,12 +1201,12 @@
      "at": "ch2:decision"
     }
    ],
-   "source": "AXIOS · AL JAZEERA · NEW YORK TIMES (AS REPORTED)"
+   "source": "AXIOS · AL JAZEERA · NEW YORK TIMES (AS CITED) · I24 NEWS"
   },
   {
    "type": "facts",
    "from": "ch2:Because",
-   "to": "ch2:If -0.2",
+   "to": "ch2$",
    "color": "heat",
    "items": [
     {
@@ -1254,9 +1219,9 @@
     {
      "icon": "check",
      "big": "JUNE",
-     "text": "CEASEFIRE FRAMEWORK FOLLOWS",
+     "text": "NEGOTIATIONS BEGIN UNDER A MEMORANDUM OF UNDERSTANDING",
      "color": "ok",
-     "at": "ch2:ceasefire"
+     "at": "ch2:memorandum"
     }
    ],
    "source": "ABC NEWS · AL JAZEERA"
@@ -1354,7 +1319,7 @@
      "oy": 40
     },
     {
-     "at": "ch1:And",
+     "at": "ch1:whoever",
      "lon": 52,
      "lat": 25,
      "dist": 95,
@@ -1485,7 +1450,7 @@
     },
     {
      "kind": "stamp",
-     "text": "CLAIMS UNCONFIRMED",
+     "text": "CLAIMS NOT CONFIRMED",
      "icon": "eye",
      "color": "oil",
      "screen": [
@@ -1493,7 +1458,7 @@
       250
      ],
      "at": "ch1:attacks",
-     "until": "ch1:And",
+     "until": "ch1:whoever",
      "note": "THE PRICE JUMP ITSELF IS REAL"
     }
    ]
@@ -1555,21 +1520,9 @@
    "start": 0,
    "lower": {
     "kicker": "ILLUSTRATIVE",
-    "text": "TANKERS CROSS THE GULF EVERY DAY",
+    "text": "SHIPS AT SEA",
     "at": "ch1:Iran's +0.8"
    }
-  },
-  {
-   "type": "footage",
-   "asset": "f06",
-   "from": "ch1:Why -0.2",
-   "to": "ch1:Why +5.5",
-   "query": "oil refinery night",
-   "pick": 0,
-   "kind": "video",
-   "symbolic": true,
-   "move": "in",
-   "start": 0
   },
   {
    "type": "map",
@@ -1653,7 +1606,7 @@
      "oy": 40
     },
     {
-     "at": "outlook:And -1.2",
+     "at": "outlook:sea -1.2",
      "lon": 36,
      "lat": 31.4,
      "dist": 42,
@@ -1662,7 +1615,7 @@
      "oy": 40
     },
     {
-     "at": "outlook:And",
+     "at": "outlook:sea",
      "lon": 54,
      "lat": 26.5,
      "dist": 34,
@@ -1694,8 +1647,8 @@
     {
      "kind": "tag",
      "loc": "Tehran",
-     "text": "NOV 3",
-     "sub": "US MIDTERMS · NO IRAN STRIKES BEFORE (TRUMP)",
+     "text": "NOV 3 MIDTERMS",
+     "sub": "TRUMP: NO IRAN STRIKES BEFORE",
      "color": "heat",
      "at": "outlook:November",
      "until": "outlook:Analysts",
@@ -1716,8 +1669,8 @@
      "loc": "Strait of Hormuz",
      "style": "pulse",
      "color": "oil",
-     "at": "outlook:And",
-     "until": "outlook:oil",
+     "at": "outlook:sea",
+     "until": "outlook$",
      "label": {
       "text": "SHIPPING DATA",
       "sub": "CLAIMS VS. FACTS",
@@ -1757,17 +1710,6 @@
     }
    ],
    "source": "AXIOS · AP · AL JAZEERA"
-  },
-  {
-   "type": "footage",
-   "asset": "f07",
-   "from": "outlook:Analysts +4.5",
-   "to": "outlook:Analysts +9.5",
-   "query": "voting ballot box election",
-   "pick": 4,
-   "kind": "image",
-   "symbolic": true,
-   "move": "left"
   },
   {
    "type": "end",
@@ -1815,11 +1757,11 @@
    ],
    "lines": [
     [
-     "NEXT: THE 21-MILE GAP",
+     "THE QUESTION UNDER #1",
      "text"
     ],
     [
-     "THAT MOVES THE OIL PRICE",
+     "THE 21-MILE GAP",
      "accent"
     ]
    ],
