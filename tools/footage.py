@@ -57,7 +57,7 @@ def http(url, headers=None, timeout=25, binary=False, max_bytes=None):
         with urllib.request.urlopen(req, timeout=timeout) as r:
             if max_bytes and int(r.headers.get('Content-Length') or 0) > max_bytes:
                 raise ValueError(f'file too large ({int(r.headers["Content-Length"]) // 1e6:.0f} MB)')
-            data = r.read(max_bytes + 1 if max_bytes else -1)
+            data = r.read(max_bytes + 1) if max_bytes else r.read()
             if max_bytes and len(data) > max_bytes: raise ValueError('file too large')
             return data if binary else json.loads(data)
     except urllib.error.HTTPError as e:
