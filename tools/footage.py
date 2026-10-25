@@ -6,6 +6,9 @@ Commands (run from the repo root):
                                                      write out/<id>/footage/candidates.json + sheet_*.jpg (look at them!)
   python3 tools/footage.py fetch <story.json>        download the picked candidate per scene (scene.pick, default 0),
                                                      normalise it, write out/<id>/footage/manifest.json + credits.json
+  python3 tools/footage.py grid <story.json> [asset [x1 y1 x2 y2]]
+                                                     coordinate grids of the downloaded assets (out/<id>/footage/grid_<asset>.jpg)
+                                                     for placing marks (underline, circle, arrow, zoom …); with a region: zoomed grid
   python3 tools/footage.py selftest                  offline test of parsers, licence filter and normalising
 
 A footage scene in the story (see LONGFORM.md):
@@ -57,7 +60,7 @@ def http(url, headers=None, timeout=25, binary=False, max_bytes=None):
         with urllib.request.urlopen(req, timeout=timeout) as r:
             if max_bytes and int(r.headers.get('Content-Length') or 0) > max_bytes:
                 raise ValueError(f'file too large ({int(r.headers["Content-Length"]) // 1e6:.0f} MB)')
-            data = r.read(max_bytes + 1 if max_bytes else -1)
+            data = r.read(max_bytes + 1) if max_bytes else r.read()
             if max_bytes and len(data) > max_bytes: raise ValueError('file too large')
             return data if binary else json.loads(data)
     except urllib.error.HTTPError as e:
@@ -192,7 +195,7 @@ def search(provider, query, kind, n=8):
     if provider == 'commons':
         ft = 'filetype:video' if kind == 'video' else 'filetype:bitmap'
         u = ('https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6'
-             f'&gsrsearch={urllib.parse.quote(query + " " + ft)}&gsrlimit={n * 3}&prop=imageinfo&iiprop=url|size|mime|extmetadata&iiurlwidth=2560')
+             f'&gsrsearch={urllib.parse.quote(query + " " + ft)}&gsrlimit={n * 3}&prop=imageinfo&iiprop=url|size|mime|extmetadata&iiurlwidth=3840')
         return parse_commons(http(u), kind)
     if provider == 'nasa':
         return parse_nasa(http(f'https://images-api.nasa.gov/search?q={q}&media_type={"video" if kind == "video" else "image"}'), kind)
@@ -280,11 +283,14 @@ def normalise_video(src, dst, start=0.0, fps=24):
                     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', dst], check=True)
 
 
-def normalise_image(src, dst):
+def normalise_image(src, dst, hires=False):
+    """16:9 centre crop at 2304x1296 (headroom for the slow move); scenes with a 'zoom' mark keep up to 3840x2160 so the push-in stays sharp."""
     from PIL import Image, ImageEnhance
     im = Image.open(src); im = im.convert('RGB')
-    s = max(IMG_W / im.width, IMG_H / im.height); im = im.resize((int(im.width * s + .5), int(im.height * s + .5)), Image.LANCZOS)
-    l, t = (im.width - IMG_W) // 2, (im.height - IMG_H) // 2; im = im.crop((l, t, l + IMG_W, t + IMG_H))
+    if hires: IW = max(IMG_W, min(3840, int(min(im.width, im.height * 16 / 9)) // 16 * 16)); IH = IW * 9 // 16
+    else: IW, IH = IMG_W, IMG_H
+    s = max(IW / im.width, IH / im.height); im = im.resize((int(im.width * s + .5), int(im.height * s + .5)), Image.LANCZOS)
+    l, t = (im.width - IW) // 2, (im.height - IH) // 2; im = im.crop((l, t, l + IW, t + IH))
     im = ImageEnhance.Color(im).enhance(.92); im = ImageEnhance.Contrast(im).enhance(1.04)
     im.save(dst, quality=90)
 
@@ -349,7 +355,8 @@ def cmd_fetch(story_path):
                 raw = os.path.join(rawdir, a + ext)
                 open(raw, 'wb').write(http(url, binary=True, timeout=180, max_bytes=250_000_000))
                 dst = os.path.join(d, a + ('.mp4' if c['kind'] == 'video' else '.jpg'))
-                normalise_video(raw, dst, float(sc.get('start', 0)), fps) if c['kind'] == 'video' else normalise_image(raw, dst)
+                hires = any(m.get('type') == 'zoom' for m in sc.get('marks') or [])
+                normalise_video(raw, dst, float(sc.get('start', 0)), fps) if c['kind'] == 'video' else normalise_image(raw, dst, hires)
                 sym = sc.get('symbolic', True)
                 manifest['assets'][a] = {'file': os.path.relpath(dst, ROOT), 'kind': c['kind'], 'label': sc.get('label', LABELS[bool(sym)]),
                                          'credit': c.get('credit', ''), 'provider': c['provider'], 'id': c['id'], 'page': c.get('page'), 'license': c.get('license')}
@@ -367,6 +374,63 @@ def cmd_fetch(story_path):
         json.dump({k: v for k, v in seen.items() if v >= cutoff}, open(USED_PATH, 'w'), indent=0, sort_keys=True)
     except Exception as e: print('could not update footage_used.json:', e)
     print(f"footage: {len(manifest['assets'])}/{len(scenes)} assets ready" + (f", missing {', '.join(missing)} (map stays visible there)" if missing else ''))
+
+
+def grid_image(src_img, box=None, out=None, label=''):
+    """Draw a labelled coordinate grid over the picture (coordinates = fractions of the normalised asset, as the engine uses them)."""
+    from PIL import Image, ImageDraw, ImageFont
+    def font(sz):
+        p = os.path.join(ROOT, 'assets', 'fonts', 'Inter-ExtraBold.otf')
+        return ImageFont.truetype(p, sz) if os.path.exists(p) else ImageFont.load_default()
+    im = src_img.convert('RGB'); x1, y1, x2, y2 = box or (0, 0, 1, 1)
+    im = im.crop((int(x1 * im.width), int(y1 * im.height), int(x2 * im.width), int(y2 * im.height)))
+    TW = 1600; th = max(1, int(TW * im.height / im.width)); im = im.resize((TW, th), Image.LANCZOS)
+    M = 56; can = Image.new('RGB', (TW + 2 * M, th + 2 * M + 30), (8, 12, 20)); can.paste(im, (M, M + 30)); d = ImageDraw.Draw(can, 'RGBA')
+    span = max(x2 - x1, y2 - y1); step = 0.1 if span > .5 else 0.05 if span > .25 else 0.02 if span > .1 else 0.01
+    minor = step / 2
+    def gx(u): return M + (u - x1) / (x2 - x1) * TW
+    def gy(v): return M + 30 + (v - y1) / (y2 - y1) * th
+    k = 0
+    import math
+    u = math.ceil(x1 / minor - 1e-9) * minor
+    while u <= x2 + 1e-9:
+        major = abs(round(u / step) * step - u) < 1e-6; X = gx(u)
+        d.line([(X, M + 30), (X, M + 30 + th)], fill=(255, 255, 255, 120 if major else 45), width=2 if major else 1)
+        if major: d.text((X, M + 30 - 6), f'{u:.2f}'.rstrip('0').rstrip('.'), font=font(18), fill=(246, 183, 60), anchor='md'); d.text((X, M + 30 + th + 6), f'{u:.2f}'.rstrip('0').rstrip('.'), font=font(18), fill=(246, 183, 60), anchor='ma')
+        u += minor
+    v = math.ceil(y1 / minor - 1e-9) * minor
+    while v <= y2 + 1e-9:
+        major = abs(round(v / step) * step - v) < 1e-6; Y = gy(v)
+        d.line([(M, Y), (M + TW, Y)], fill=(255, 255, 255, 120 if major else 45), width=2 if major else 1)
+        if major: d.text((M - 8, Y), f'{v:.2f}'.rstrip('0').rstrip('.'), font=font(18), fill=(92, 200, 255), anchor='rm'); d.text((M + TW + 8, Y), f'{v:.2f}'.rstrip('0').rstrip('.'), font=font(18), fill=(92, 200, 255), anchor='lm')
+        v += minor
+    d.text((M, 12), label + f'   x = gold (left→right), y = blue (top→bottom); region {x1:g},{y1:g} → {x2:g},{y2:g}', font=font(20), fill=(230, 235, 242))
+    can.save(out, quality=88); return out
+
+
+def cmd_grid(story_path, asset=None, box=None):
+    from PIL import Image
+    s, scenes = load_story(story_path); d = out_dir(s); mp = os.path.join(d, 'manifest.json')
+    man = json.load(open(mp)) if os.path.exists(mp) else {'assets': {}}
+    outs = []
+    for sc in scenes:
+        a = sc['asset'] if not sc.get('file') else sc['asset']
+        if asset and a != asset: continue
+        f = sc.get('file') or (man['assets'].get(a) or {}).get('file')
+        if not f: print(f'  {a}: no asset (run fetch first)'); continue
+        f = f if os.path.isabs(f) else os.path.join(ROOT, f)
+        if f.lower().endswith(('.mp4', '.mov', '.webm', '.mkv', '.m4v')):
+            tmp = os.path.join(d, f'_frame_{a}.jpg')  # managed clips are already cut at scene.start; a raw scene.file is not
+            ss = float(sc.get('start', 0)) if sc.get('file') else 0.0
+            subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-ss', f'{ss + 1.0:.2f}', '-i', f, '-frames:v', '1', '-vf', f'scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}', tmp], check=True)
+            img = Image.open(tmp); lab = f'{a} (video frame at 1 s — marks only stay on target in a static shot)'
+        else:
+            img = Image.open(f); lab = a
+        tag = '' if not box else '_' + '_'.join(f'{x:g}' for x in box)
+        outs.append(grid_image(img, box, os.path.join(d, f'grid_{a}{tag}.jpg'), lab))
+    for o in outs: print('  ' + os.path.relpath(o, ROOT))
+    if not outs: print('no grids written')
+    return outs
 
 
 def cmd_selftest():
@@ -402,6 +466,11 @@ def cmd_selftest():
         pr = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v', '-show_entries', 'stream=width,height,r_frame_rate', '-of', 'csv=p=0', os.path.join(t, 'o.mp4')], capture_output=True, text=True).stdout.strip()
         assert pr.startswith('1920,1080,24'), pr
         assert Image.open(os.path.join(t, 'o.jpg')).size == (IMG_W, IMG_H)
+        Image.new('RGB', (4200, 2600), (90, 90, 90)).save(im); normalise_image(im, os.path.join(t, 'h.jpg'), hires=True)
+        assert Image.open(os.path.join(t, 'h.jpg')).size == (3840, 2160)
+        Image.new('RGB', (2600, 1500), (90, 90, 90)).save(im); normalise_image(im, os.path.join(t, 'h2.jpg'), hires=True)
+        assert Image.open(os.path.join(t, 'h2.jpg')).size == (2592, 1458), Image.open(os.path.join(t, 'h2.jpg')).size
+        g = grid_image(Image.open(os.path.join(t, 'h.jpg')), (0.2, 0.3, 0.6, 0.5), os.path.join(t, 'g.jpg'), 'test'); assert os.path.getsize(g) > 1000
     print('footage selftest ok')
 
 
@@ -410,5 +479,6 @@ if __name__ == '__main__':
     if a[0] == 'check': cmd_check()
     elif a[0] == 'candidates': cmd_candidates(a[1])
     elif a[0] == 'fetch': cmd_fetch(a[1])
+    elif a[0] == 'grid': cmd_grid(a[1], a[2] if len(a) > 2 else None, tuple(float(x) for x in a[3:7]) if len(a) >= 7 else None)
     elif a[0] == 'selftest': cmd_selftest()
     else: print(__doc__)

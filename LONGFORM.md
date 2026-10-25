@@ -26,6 +26,7 @@ Example of every building block: `longform/examples/hormuz-explained-example.jso
 - ≥ 3 independent sources per explainer (wire services, major papers, broadcasters) plus primary sources for evergreen numbers (EIA, IEA, UN, World Bank, SIPRI, IISS, official statements). Recap: ≥ 2 independent outlets per story.
 - Collect facts as *who says what* with dates. Mark unverified items as claims on screen ("CLAIM", "REPORTED", "PER …"). Never state one side's claim as fact. No invented quotes.
 - Paraphrase, never copy article sentences. Quotes on screen ≤ 15 words and only when the exact wording matters.
+- Collect 1–3 **primary texts** for `document` scenes: the exact wording of an official statement, resolution, treaty clause, law or filing (copy it word-for-word from the official page, keep the URL and date). Never use a news article's own sentences as a document.
 
 ## 3. Script (English, 1,300–1,700 words ≈ 9–12 min at ~145 wpm)
 Segment ids are fixed so chapters, timing and checks work:
@@ -48,6 +49,7 @@ Check: `node engine/engine.mjs longform/<id>.json check` → no WARNING.
 Same story format as the Shorts (`STORY_FORMAT.md`), rendered at **1920×1080, 24 fps**. Differences:
 - `sections` = YouTube chapters: one per chapter segment (`ch1`, `ch2`, …, `outlook`, `next`), with `n`, an on-screen `name` (CAPS, ≤ 4 words) and a `chapter` title for the description (a question or tension, not a label). The intro (hook + promise) becomes chapter `0:00` automatically (`upload.introChapter`).
 - **Visual rhythm:** a new visual element every 4–8 s (camera move, marker, label, overlay row); a format change every 45–60 s (map → footage → overlay → map …). Per chapter: one `map` scene with 5–10 camera keys, at least one data overlay (`facts`, `bars`, `chart` with real data only, `timeline`, `scale`, `chain`, `quote`, `ticker`, `counter`, `gauge`) and 1–3 footage shots.
+- **Annotated beat in every chapter:** at least one moment where a graphic points at something *while the voice says it* — a `document` excerpt whose key phrase gets highlighted/underlined/circled, or a footage shot with `marks` (circle around the ship, arrow to the terminal, zoom into the paragraph, highlight on the line). This is what keeps eyes on the screen; a still photo without a mark is the weakest shot in the video. Formats and fields: `STORY_FORMAT.md` → `document` and *Footage marks*.
 - **Mix:** own maps/graphics ≥ 55 % of the runtime, footage ≤ 35 % (`check` warns above 40 %), no footage shot longer than 8 s, never more than two shots in a row. Pure stock footage under an AI voice is exactly what YouTube refuses to monetise — the maps carry the video.
 - **Every footage shot lies on top of a map scene covering the same time.** If an asset is missing the map shows instead, so the video never breaks.
 - Screen (1920×1080): chapter label top left (0–130), footage label/credit top right, stage 130–880, lower thirds 820–940, captions ~950–1010. Screen-space layers use 1920×1080 coordinates (cards x 70 y 170, stamps x 960 y 260, notes centred). Overlays are drawn in a centred panel automatically. Map camera `oy` 20–60.
@@ -66,6 +68,15 @@ Same story format as the Shorts (`STORY_FORMAT.md`), rendered at **1920×1080, 2
 - `symbolic: true` (default) → on-screen label **ILLUSTRATIVE**: stock footage that only *represents* the subject. `false` → **FILE**: only when the asset really shows the subject (the actual ship, the actual summit) and its date is known — mention the date in `lower`.
 - `move`: `in`, `out`, `left`, `right`, `up`, `down`, `none` (photos default to a slow zoom/pan, videos to a gentle zoom-in). `focus`: point in the picture to keep in frame. `start`: seconds into the clip.
 - `lower`: optional lower third (kicker + one line). `label`/`credit` come from the manifest automatically.
+- `marks`: motion graphics on the picture, e.g. `[{"type": "zoom", "rect": [0.28, 0.30, 0.67, 0.46], "at": "ch1:narrowest -0.4"}, {"type": "highlight", "x": [0.279, 0.409], "y": 0.391, "at": "ch1:twenty-one"}]` or `[{"type": "circle", "c": [0.72, 0.63], "r": 0.17, "ry": 0.13, "label": "LNG CARRIER", "at": "ch2:gas"}]`. Coordinates come from the grid image (section 5), never guessed. Photos are the best canvas; on video only static shots.
+
+**Document scene** (verbatim primary text, see `STORY_FORMAT.md`):
+```json
+{"type": "document", "from": "ch3:statement -0.3", "to": "ch3$ +0.2", "kicker": "JOINT STATEMENT", "source": "mofa.gov.xx · 21 Oct 2026",
+ "title": "…", "paragraphs": ["<exact wording, ≤ 120 words>"],
+ "marks": [{"text": "<phrase exactly as in the text>", "style": "highlight", "at": "ch3:principle"}, {"text": "…", "style": "underline", "at": "ch3:after"}]}
+```
+Keep it on screen ≥ 4 s per mark; the narration paraphrases or reads the marked phrase at the same moment.
 - **Never:** real violence, casualties, weapons fired at people, anything distressing; TV/agency/social-media material; recognisable logos or brands (Pixabay forbids them commercially); photos of real people from stock sites. Politicians only from public-domain official photos on Wikimedia Commons, never altered.
 
 **Thumbnail block** (16:9, written as 1280×720): `at` (a sharp map or footage moment), `focus` (place/ISO3/[lon,lat] or `{x,y}` — pushed to the right third), `number` (the one big number, exactly as sourced), `lines` (max 2 lines, ≤ 3 words each, one in `accent`), `source` (required with a number or claim), optional `kicker`. Text must not repeat the title. Check it at small size: `node engine/engine.mjs longform/<id>.json thumb /tmp/qa/thumb.jpg`.
@@ -80,16 +91,21 @@ python3 tools/footage.py candidates longform/<id>.json
 Look at every `out/<id>/footage/sheet_*.jpg` (Read the images). For each scene: does candidate 0 really match the sentence being spoken? If not, set `"pick": <index>`; if none fits, change `query`/`kind` and run `candidates` again (max 2 rounds), or set `"pick": false` (the map stays). Then:
 ```
 python3 tools/footage.py fetch longform/<id>.json   # downloads, normalises, writes manifest.json + credits.json
+python3 tools/footage.py grid longform/<id>.json    # coordinate grid per asset: out/<id>/footage/grid_<asset>.jpg
+python3 tools/footage.py grid longform/<id>.json f03 0.2 0.3 0.7 0.5   # zoomed grid of a region (exact text lines)
 ```
+Now place the `marks`: Read each `grid_<asset>.jpg`, pick the object or text line the sentence is about and copy its coordinates (x gold, y blue). For text: highlight `y` = middle of the line, underline `y` = just below the letters, `x` = first and last letter. A scene with a `zoom` mark gets a larger image on fetch, so run `fetch` again if you added a zoom afterwards.
 Providers and licences: Pixabay (free licence, no credit required — credited anyway), Wikimedia Commons (only public domain, CC0 or CC BY — the tool filters), NASA (public domain, no endorsement). Key: env `PIXABAY_API_KEY`. Pexels is supported but **off** (no key, since 2026-10-25) — it is only used when `config.json → longform.footage.providers` lists it; never switch it on yourself. Hosts the environment must allow: see the top of `tools/footage.py`. If providers are unreachable, render anyway and say so in the report ("Footage: x/y — <provider>: <reason>").
 Assets used in the last 90 days are skipped automatically (`data/footage_used.json`), so the same clip never repeats.
 
 ## 6. QA — automatic, two passes (no human approval)
-1. **Stills:** `node engine/engine.mjs longform/<id>.json stills /tmp/qa <18–24 times across the video, incl. 0,3,8,15>` → `python3 tools/sheet.py /tmp/qa/sheet.png /tmp/qa/still_*.png` → look. Fix overlaps, empty frames, unreadable labels, wrong countries, footage that doesn't match the words.
+1. **Stills:** `node engine/engine.mjs longform/<id>.json stills /tmp/qa <18–24 times across the video, incl. 0,3,8,15, and every mark time + 0.8 s>` → `python3 tools/sheet.py /tmp/qa/sheet.png /tmp/qa/still_*.png` → look. Fix overlaps, empty frames, unreadable labels, wrong countries, footage that doesn't match the words, **marks that miss their target** (ring not around the ship, highlight off the line) — adjust the coordinates and render the still again.
 2. **Independent review:** start a sub-agent with the Agent tool (fresh context, it has not seen your work). Give it: the story path, the list of sources you used (URLs), the footage sheets, `longform/log.md` and this checklist — it must answer PASS or a numbered list of fixes:
    - every number/claim in the script is backed by a listed source and attributed; claims are labelled as claims; nothing presented as fact that a source only reports as allegation;
    - no own predictions; scenarios are attributed;
    - footage: each shot matches its sentence, licence is allowed, label correct (ILLUSTRATIVE/FILE), nothing violent or distressing, no logos;
+   - marks: each mark sits on the object/words it claims, its label is true (an "ILLUSTRATIVE" ship is never labelled as a specific named ship), no person is marked or named without a source caption;
+   - documents: every `document` text is word-for-word identical to the official source (open the URL and compare), it is a primary text (not a news article), the marked phrase says what the narration says at that moment;
    - variety: hook type, chapter structure and look are not a copy of the last 3 entries in `longform/log.md`;
    - title and thumbnail are honest (the video delivers them) and don't repeat each other;
    - script has no filler, no AI clichés, the open loop from `promise` is resolved, chapter titles match their content.
