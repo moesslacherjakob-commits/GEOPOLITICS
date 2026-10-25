@@ -56,6 +56,7 @@ body = parts[:1] + ([chapter_block] if chapter_block else []) + parts[1:]
 def assemble(cr):
     blocks = list(body)
     if cr: blocks.append('Footage & images (free licences / public domain):\n' + '\n'.join(cr))
+    blocks.append('Maps: Natural Earth (public domain). Place coordinates: GeoNames (CC BY 4.0).')
     if disc: blocks.append(disc)
     return '\n\n'.join(blocks + tags_tail)
 

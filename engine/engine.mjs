@@ -10,6 +10,7 @@ import fs from 'fs';
 import path from 'path';
 import { spawn, spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
+import zlib from 'zlib';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
@@ -163,7 +164,7 @@ const WORLD = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/world.json')));
 const GLOBE = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/globe.json')));
 const PLACES = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/places.json')));
 const BY = {}, GBY = {};
-for (const c of WORLD) {
+function prepShape(c) { // rings -> Float64Array (+ mean lon), label point = area-weighted centroid of the largest ring, bbox
   let mnx = 1e9, mny = 1e9, mxx = -1e9, mxy = -1e9, best = null, bestA = 0;
   c.rings = c.rings.map(r => {
     const a = new Float64Array(r.length * 2); let sx = 0, ar = 0;
@@ -172,21 +173,44 @@ for (const c of WORLD) {
     a.mlon = sx / r.length; if (Math.abs(ar) > bestA) { bestA = Math.abs(ar); best = r; }
     return a;
   });
-  // label point: area-weighted centroid of largest ring
   let cx = 0, cy = 0, aa = 0; for (let i = 0; i < best.length - 1; i++) { const f = best[i][0] * best[i + 1][1] - best[i + 1][0] * best[i][1]; aa += f; cx += (best[i][0] + best[i + 1][0]) * f; cy += (best[i][1] + best[i + 1][1]) * f; }
   c.center = aa ? [cx / (3 * aa), cy / (3 * aa)] : [(mnx + mxx) / 2, (mny + mxy) / 2];
   c.bb = [mnx, mny, mxx, mxy];
-  for (const k of c.codes) if (!BY[k]) BY[k] = c;
+  return c;
 }
+for (const c of WORLD) { prepShape(c); for (const k of c.codes) if (!BY[k]) BY[k] = c; }
+// first-level regions (oblasts, provinces, states — ISO 3166-2 codes like UA-14), loaded on first use: data/regions.json (Natural Earth)
+let RBY = null;
+function regionsByCode() {
+  if (RBY) return RBY; RBY = {};
+  try { for (const r of JSON.parse(fs.readFileSync(path.join(ROOT, 'data/regions.json'), 'utf8'))) { r.iso = r.code; RBY[r.code] = prepShape(r); } } catch (e) { console.log('regions.json:', e.message); }
+  return RBY;
+}
+const isRegion = s => typeof s === 'string' && /^[A-Z]{2}-[A-Z0-9]{1,3}$/.test(s);
 for (const f of GLOBE.features) for (const k of f.properties.codes) if (!GBY[k]) GBY[k] = f;
-function country(iso) { const c = BY[iso]; if (!c) throw new Error(`unknown country code "${iso}"`); return c; }
+function country(iso) { const c = BY[iso] || (isRegion(iso) ? regionsByCode()[iso] : null); if (!c) throw new Error(isRegion(iso) ? `unknown region code "${iso}" (find it with: python3 tools/places.py --region <name> <country>)` : `unknown country code "${iso}"`); return c; }
 function loc(x) {
   if (Array.isArray(x)) return x;
   if (typeof x === 'string') {
     if (BY[x]) return BY[x].center;
+    if (isRegion(x) && regionsByCode()[x]) return RBY[x].center;
     const p = PLACES[x.toLowerCase()]; if (p) return [p.lon, p.lat];
+    const g = gazetteer(x); if (g) return g;
   }
-  throw new Error(`unknown location ${JSON.stringify(x)} (use [lon,lat], an ISO3 code, or a place name)`);
+  throw new Error(`unknown location ${JSON.stringify(x)} (use [lon,lat], an ISO3 code, a region code like UA-14, or a place name — python3 tools/places.py <town> finds coordinates)`);
+}
+
+// towns that are not in places.json: data/gazetteer.tsv.gz (GeoNames, ≥ 1,000 inhabitants), loaded on first use.
+// "Pokrovsk" works if the name is unique, otherwise write "Pokrovsk, UA" (ISO2 country) — ambiguous names fail with the candidates.
+let GAZ = null;
+const gNorm = s => s.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[`'’ʼ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+function gazetteer(q) {
+  const m = q.match(/^(.*?)(?:,\s*([A-Za-z]{2}))?$/), name = gNorm(m[1]), cc = m[2] && m[2].toUpperCase(); if (!name) return null;
+  if (!GAZ) { GAZ = new Map(); try { for (const line of zlib.gunzipSync(fs.readFileSync(path.join(ROOT, 'data/gazetteer.tsv.gz'))).toString('utf8').split('\n')) { if (!line || line[0] === '#') continue; const [n, c, , lo, la] = line.split('\t'); const k = gNorm(n); if (!GAZ.has(k)) GAZ.set(k, []); GAZ.get(k).push({ c, ll: [+lo, +la] }); } } catch (e) { console.log('gazetteer:', e.message); } }
+  let hits = GAZ.get(name) || []; if (cc) hits = hits.filter(h => h.c === cc);
+  if (hits.length === 1) return hits[0].ll;
+  if (hits.length > 1) { const far = hits.some(h => Math.hypot(h.ll[0] - hits[0].ll[0], h.ll[1] - hits[0].ll[1]) > .3); if (!far) return hits[0].ll; throw new Error(`location "${q}" is ambiguous: ${hits.slice(0, 6).map(h => `${h.c} [${h.ll}]`).join(', ')} — add the country ("${m[1]}, UA") or use [lon, lat] (python3 tools/places.py shows the regions)`); }
+  return null;
 }
 
 // ---------------------------------------------------------------- 3D camera
@@ -239,13 +263,20 @@ function pulse(x, y, t, t0, c, r0 = 10, r1 = 90, period = 1.4, a = 1) {
   for (let k = 0; k < 3; k++) { if (t - t0 < k * period / 3) continue; const ph = ((t - t0) / period + k / 3) % 1; ctx.globalAlpha = a * (1 - ph) * .8; ctx.strokeStyle = c; ctx.lineWidth = 3 * (1 - ph) + 1; ctx.beginPath(); ctx.arc(x, y, lerp(r0, r1, E.out(ph)), 0, 7); ctx.stroke(); }
   ctx.restore();
 }
+const TAGBOX = []; // long-form: label boxes drawn this frame, so later labels step aside instead of overlapping
 function tag(x, y, label, c, a, o = {}) {
   if (a <= 0.003) return;
-  const { dy = -70, dx = 0, sub = null, size = 30 } = o;
+  const { dx = 0, sub = null, size = 30 } = o; let dy = o.dy ?? -70;
+  const f = `${size}px IXBold`, w = tw(label, f, 2) + 36, hh = size + 22, sw = sub ? tw(sub, `${Math.round(size * .72)}px ISemi`, 1.5) : 0;
+  if (LAND && a > .05) { // avoid overlaps with labels already drawn (move further away from the point, up or down)
+    const box = d => { const ly = y + d * E.outBack(clamp(a)), bx = clamp(x + dx - w / 2, 24, W - 24 - w); return [bx, ly - hh, Math.max(w, sw + 24), hh + (sub ? size * 1.1 : 0)]; };
+    const hit = b => TAGBOX.some(q => b[0] < q[0] + q[2] + 10 && q[0] < b[0] + b[2] + 10 && b[1] < q[1] + q[3] + 8 && q[1] < b[1] + b[3] + 8);
+    for (let k = 0; k < 6 && hit(box(dy)); k++) dy += (dy < 0 ? -1 : 1) * (hh + (sub ? size : 0) + 12);
+    TAGBOX.push(box(dy));
+  }
   ctx.save(); ctx.globalAlpha = a; const e = E.outBack(clamp(a)); const lx = x + dx, ly = y + dy * e;
   ctx.strokeStyle = rgba(c, .9); ctx.lineWidth = 2.5; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(lx, ly + (dy < 0 ? 8 : -size - 30)); ctx.stroke();
   ctx.fillStyle = c; ctx.beginPath(); ctx.arc(x, y, 6, 0, 7); ctx.fill();
-  const f = `${size}px IXBold`, w = tw(label, f, 2) + 36, hh = size + 22;
   const bx = clamp(lx - w / 2, 24, W - 24 - w), by = ly - hh;
   shadow('rgba(0,0,0,.6)', 18); rr(bx, by, w, hh, 10); ctx.fillStyle = 'rgba(6,11,20,.9)'; ctx.fill(); noShadow();
   ctx.lineWidth = 2; ctx.strokeStyle = rgba(c, .95); ctx.stroke(); ctx.fillStyle = c; ctx.fillRect(bx, by + 8, 5, hh - 16);
@@ -258,6 +289,7 @@ function icon(kind, x, y, s, c, lw = 4) {
   switch (kind) {
     case 'check': ctx.moveTo(-.32, .02); ctx.lineTo(-.08, .26); ctx.lineTo(.36, -.24); ctx.stroke(); break;
     case 'x': ctx.moveTo(-.3, -.3); ctx.lineTo(.3, .3); ctx.moveTo(.3, -.3); ctx.lineTo(-.3, .3); ctx.stroke(); break;
+    case 'chat': ctx.roundRect(-.4, -.32, .8, .52, .14); ctx.stroke(); ctx.beginPath(); ctx.moveTo(-.18, .2); ctx.lineTo(-.26, .4); ctx.lineTo(.02, .2); ctx.stroke(); for (let k = -1; k <= 1; k++) { ctx.beginPath(); ctx.arc(k * .17, -.06, .045, 0, 7); ctx.fill(); } break;
     case 'eye': ctx.moveTo(-.42, 0); ctx.quadraticCurveTo(0, -.42, .42, 0); ctx.quadraticCurveTo(0, .42, -.42, 0); ctx.stroke(); ctx.beginPath(); ctx.arc(0, 0, .13, 0, 7); ctx.fill(); break;
     case 'jet': case 'plane': ctx.moveTo(.42, 0); ctx.lineTo(-.1, -.07); ctx.lineTo(-.28, -.36); ctx.lineTo(-.36, -.36); ctx.lineTo(-.24, -.06); ctx.lineTo(-.42, -.04); ctx.lineTo(-.46, -.16); ctx.lineTo(-.5, -.16); ctx.lineTo(-.48, 0); ctx.lineTo(-.5, .16); ctx.lineTo(-.46, .16); ctx.lineTo(-.42, .04); ctx.lineTo(-.24, .06); ctx.lineTo(-.36, .36); ctx.lineTo(-.28, .36); ctx.lineTo(-.1, .07); ctx.closePath(); ctx.fill(); break;
     case 'drop': ctx.moveTo(0, -.42); ctx.bezierCurveTo(.08, -.2, .3, .02, .3, .16); ctx.arc(0, .16, .3, 0, Math.PI); ctx.bezierCurveTo(-.3, .02, -.08, -.2, 0, -.42); ctx.fill(); break;
@@ -425,8 +457,10 @@ for (const sc of SCENES) {
     if (sc.type === 'end') { ev(sc.from - .3, 'whoosh', 1); ev(sc.from + .4, 'impact', .6); }
     if (sc.exit === 'zoom') ev(sc.to - .55, 'whoosh', 1);
   } else if (sc.type === 'map') {
-    const keys = sc.camera.map(k => ({ ...k, t: A(k.at) })); keys.sort((a, b) => a.t - b.t); sc.keys = keys;
+    // missing pitch/yaw default to 0 (before the first and after the last key the key itself is used — undefined there made the whole map NaN/blank)
+    const keys = sc.camera.map(k => ({ ...k, pitch: k.pitch ?? 0, yaw: k.yaw ?? 0, t: A(k.at) })); keys.sort((a, b) => a.t - b.t); sc.keys = keys;
     sc.center = sc.center || [keys[0].lon, keys[0].lat];
+    if (sc.detail) { const want = new Set([].concat(sc.detail)); sc.DR = Object.values(regionsByCode()).filter(r => want.has(r.a3) || want.has(r.code)); }
     ev(sc.from, 'impact', .5);
     for (let i = 1; i < keys.length; i++) if (Math.abs(Math.log(keys[i].dist / keys[i - 1].dist)) > .45 || Math.hypot(keys[i].lon - keys[i - 1].lon, keys[i].lat - keys[i - 1].lat) > 6) ev(keys[i - 1].t, 'whoosh', .6);
     sc.L = (sc.layers || []).map(l => {
@@ -441,6 +475,9 @@ for (const sc of SCENES) {
         (o.S.length ? o.S.map(s => s.t) : [o.at]).forEach(tt => ev(tt, 'flow', .6));
       }
       if (o.kind === 'field') { o.B = (l.blobs || []).map(b => ({ ...b, ll: loc(b.loc) })); ev(o.at, 'rise', .5); }
+      if (o.kind === 'push') { o.A = loc(l.from); o.B = loc(l.to); ev(o.at, 'whoosh', .45); ev(o.at + (o.dur ?? 1.4), 'impact', .3); if (o.label) o.label.t = A(o.label.at ?? (o.at + (o.dur ?? 1.4) * .7)); }
+      if (o.kind === 'front') { ev(o.at, 'flow', .5); if (o.label) { o.label.t = A(o.label.at ?? (o.at + .6)); o.label.u = A(o.label.until ?? o.until); } }
+      if (o.kind === 'tint' && o.wipe === undefined) o.wipe = LONG;
       if (o.kind === 'extrude') { ev(o.at, 'rise', .6); o.flat = (l.flatten || []).map(f => ({ t: A(f.at), to: f.to })); }
       if (o.kind === 'stamp' || o.kind === 'barrier') ev(o.at, 'stamp', 1);
       if (o.kind === 'column') ev(o.at, 'rise', .8);
@@ -475,6 +512,11 @@ for (const sc of SCENES) {
     sc.M = (sc.marks || []).map((m, i) => ({ ...m, t: A(m.at ?? (sc.from + .6 + i * .8)), u: m.until !== undefined ? A(m.until) : sc.to, hasUntil: m.until !== undefined }));
     for (const m of sc.M) if (m.sfx !== false) { if (m.type === 'zoom') ev(m.t, 'whoosh', .3); else if (m.type === 'spotlight') ev(m.t, 'blip', .3); else if (m.type === 'pin' || m.type === 'arrow') ev(m.t, 'blip', .55); else ev(m.t, 'mark', .6); }
   }
+  else if (sc.type === 'quiz') {
+    sc.t = A(sc.revealAt ?? (sc.to - 2)); sc.ot = sc.options.map((o, i) => A((sc.optionsAt || [])[i] ?? (sc.from + .5 + i * .35)));
+    ev(sc.from - .3, 'whoosh', .7); sc.ot.forEach(x => ev(x, 'blip', .55)); if ((sc.countdown ?? 3) > 0) ev(sc.t - (sc.countdown ?? 3), 'ticks', .45); ev(sc.t, 'stamp', .9);
+  }
+  else if (sc.type === 'prompt') ev(sc.from, 'blip', .6);
   else if (sc.type === 'document') {
     sc.M = (sc.marks || []).map((m, i) => ({ ...m, t: A(m.at ?? (sc.from + 1.2 + i * 1.5)) }));
     ev(sc.from - .3, 'whoosh', .6); sc.M.forEach(m => m.sfx !== false && ev(m.t, 'mark', .65));
@@ -564,6 +606,7 @@ async function prepStill(t) { // stills / thumbnail: one frame per active video 
 }
 const SECTIONS = (story.sections || []).map((s, i, arr) => ({ ...s, a: A(s.from ?? s.seg), b: A(s.to ?? (arr[i + 1] ? (arr[i + 1].from ?? arr[i + 1].seg) : SEGS[SEGS.length - 1].id + '$')) }));
 SECTIONS.forEach(s => ev(s.a - .45, 'whoosh', .9));
+if (LAND && story.chapterCards !== false) SECTIONS.forEach(s => { if (s.card !== false && !(s.card === undefined && s.seg === 'next')) ev(s.a - .3, 'impact', .55); });
 for (const e of story.sfx || []) ev(A(e.at), e.type, e.gain ?? 1);
 const FLASHES = [...SECTIONS.map(s => s.a), ...SCENES.filter(s => s.type === 'end').map(s => s.from)];
 
@@ -723,17 +766,142 @@ function heightOf(o, t) {
   let h = (o.height ?? .6) * E.out(P(t, o.at - .15, o.rise ?? 1.1)) * (1 - E.inOut(P(t, o.until - .8, .8)));
   let m = 1; for (const f of o.flat) m = lerp(m, f.to, E.inOut(P(t, f.t, 1.2))); return h * m;
 }
+// ---------------------------------------------------------------- story layers: regions, offensives (push), front lines
+// thin internal borders (oblasts, provinces) of the countries in map scene "detail" — gives close-ups a real-map texture
+function detailBorders(cam, regs) {
+  const p = new Path2D(); for (const r of regs) { if (!visible(cam, r)) continue; for (const ring of r.rings) ringPath(cam, ring, 0, p); }
+  ctx.save(); ctx.strokeStyle = rgba(THEME.border, .5); ctx.lineWidth = 1; ctx.setLineDash([5, 5]); ctx.stroke(p); ctx.restore();
+}
+function hatchFill(c, al, t, gap = 20) {
+  ctx.strokeStyle = rgba(c, al); ctx.lineWidth = 3; ctx.beginPath(); const off = (t * 10) % gap;
+  for (let k = -H; k < W + H; k += gap) { ctx.moveTo(k + off, 0); ctx.lineTo(k + off - H * .7, H); } ctx.stroke();
+}
+// country or region fill: wipe (fills outward from the centre — default in long-form), hatch (claimed / demanded / occupied), dashed outline, pulse
+function tintLayer(cam, o, t, a) {
+  const p = countryPath(cam, o.iso), c = col(o.color), pl = o.pulse ? .82 + .18 * Math.sin(t * 4.5) : 1;
+  ctx.save();
+  if (o.wipe) { const sh = country(o.iso), q = cam.p(sh.center[0], sh.center[1]), k = E.out(P(t, o.at, o.wipeDur ?? .8)); if (k < 1) { const cl = new Path2D(); cl.arc(q[0], q[1], 30 + k * 1600, 0, Math.PI * 2); ctx.clip(cl); } }
+  ctx.globalAlpha = a * (o.alpha ?? .55) * pl; ctx.fillStyle = rgba(c, o.fill ?? .3); ctx.fill(p);
+  if (o.hatch) { ctx.save(); ctx.clip(p); hatchFill(c, o.hatchAlpha ?? .55, t); ctx.restore(); }
+  ctx.globalAlpha = a * (o.alpha ?? .55) * (o.hatch || o.dash ? 1.4 : 1); if (o.glow) shadow(c, o.glow); ctx.strokeStyle = c; ctx.lineWidth = o.width ?? 2.5;
+  if (o.dash) { ctx.setLineDash([12, 9]); ctx.lineDashOffset = -t * 30; } ctx.stroke(p); ctx.restore();
+}
+// offensive / advance / pressure arrow: curved, tapered, grows from `from` to `to`
+function pushLayer(cam, o, t, a, c) {
+  const pr = E.inOut(P(t, o.at, o.dur ?? 1.4)); if (pr <= 0.01) return;
+  const [ax, ay] = o.A, [bx, by] = o.B, dx = bx - ax, dy = by - ay, bend = o.bend ?? .18, cx = (ax + bx) / 2 - dy * bend, cy = (ay + by) / 2 + dx * bend;
+  const N = 48, S = [];
+  for (let i = 0; i <= N; i++) { const s = i / N * pr, lo = (1 - s) ** 2 * ax + 2 * (1 - s) * s * cx + s * s * bx, la = (1 - s) ** 2 * ay + 2 * (1 - s) * s * cy + s * s * by, q = cam.p(lo, la, .02); if (q[2] < 2) return; S.push([q[0], q[1]]); }
+  const zs = clamp(cam.scale((ax + bx) / 2, (ay + by) / 2) / 55, .45, 1.6), w1 = (o.width ?? 30) * zs, w0 = w1 * (o.tail ?? .28), hl = w1 * 1.7 * clamp(pr * 4), hw = w1 * 1.3;
+  const len = [0]; for (let i = 1; i < S.length; i++) len.push(len[i - 1] + Math.hypot(S[i][0] - S[i - 1][0], S[i][1] - S[i - 1][1])); const tot = len[len.length - 1]; if (tot < 4) return;
+  const cut = Math.max(0, tot - hl * .75); let k = S.findIndex((_, i) => len[i] >= cut); if (k < 1) k = 1;
+  const nrm = i => { const p0 = S[Math.max(0, i - 1)], p1 = S[Math.min(S.length - 1, i + 1)], l = Math.hypot(p1[0] - p0[0], p1[1] - p0[1]) || 1; return [-(p1[1] - p0[1]) / l, (p1[0] - p0[0]) / l]; };
+  const L = [], R = [];
+  for (let i = 0; i <= k; i++) { const w = lerp(w0, w1 * .62, len[i] / Math.max(1, cut)) / 2, n = nrm(i); L.push([S[i][0] + n[0] * w, S[i][1] + n[1] * w]); R.push([S[i][0] - n[0] * w, S[i][1] - n[1] * w]); }
+  const tip = S[S.length - 1], base = S[k], ang = Math.atan2(tip[1] - base[1], tip[0] - base[0]), nx = -Math.sin(ang), ny = Math.cos(ang);
+  const body = new Path2D(); L.forEach((p, i) => i ? body.lineTo(p[0], p[1]) : body.moveTo(p[0], p[1]));
+  body.lineTo(base[0] + nx * hw / 2, base[1] + ny * hw / 2); body.lineTo(tip[0], tip[1]); body.lineTo(base[0] - nx * hw / 2, base[1] - ny * hw / 2);
+  for (let i = R.length - 1; i >= 0; i--) body.lineTo(R[i][0], R[i][1]); body.closePath();
+  const g = ctx.createLinearGradient(S[0][0], S[0][1], tip[0], tip[1]); g.addColorStop(0, rgba(c, .12)); g.addColorStop(.5, rgba(c, .7)); g.addColorStop(1, rgba(mix(c, '#ffffff', .15), .97));
+  ctx.save(); ctx.globalAlpha = a; shadow('rgba(0,0,0,.55)', 22, 8); ctx.fillStyle = g; ctx.fill(body); noShadow();
+  shadow(c, 18); ctx.strokeStyle = mix(c, '#ffffff', .35); ctx.lineWidth = 3; ctx.lineJoin = 'round'; ctx.stroke(body); noShadow();
+  // moving chevrons inside the body (direction of travel)
+  ctx.globalAlpha = a * .55; ctx.strokeStyle = 'rgba(255,255,255,.85)'; ctx.lineWidth = 2.5; ctx.lineCap = 'round';
+  for (let d = (t * 90) % 46; d < cut - 10; d += 46) { const i = len.findIndex(v => v >= d); if (i < 1) continue; const n = nrm(i), w = lerp(w0, w1 * .62, d / Math.max(1, cut)) * .32, f = [S[i][0] - n[1] * -6, S[i][1] + n[0] * -6]; ctx.beginPath(); ctx.moveTo(S[i][0] + n[0] * w - n[1] * 6, S[i][1] + n[1] * w + n[0] * 6); ctx.lineTo(f[0] + n[1] * 6, f[1] - n[0] * 6); ctx.lineTo(S[i][0] - n[0] * w - n[1] * 6, S[i][1] - n[1] * w + n[0] * 6); ctx.stroke(); }
+  ctx.restore();
+  if (o.label && t >= o.label.t - .05) tag(tip[0], tip[1], o.label.text, c, a * E.out(P(t, o.label.t, .4)) * (1 - P(t, A(o.label.until ?? o.until) - .3, .3)), { dx: o.label.dx ?? 0, dy: o.label.dy ?? -80, sub: o.label.sub, size: o.label.size ?? 24 });
+}
+// front line: bold line with teeth on the attacker's side (`side`: left|right of the drawing direction), drawn along `path`
+function frontLayer(cam, o, t, a, c) {
+  const pr = E.inOut(P(t, o.at, o.dur ?? 1.8)); if (pr <= 0.01) return;
+  const M = 140, S = []; for (let i = 0; i <= M * pr; i++) { const [lo, la] = along(o.pts, i / M), q = cam.p(lo, la, .02); S.push([q[0], q[1], q[2]]); }
+  if (S.length < 2 || S.some(q => q[2] < 2)) return;
+  const zs = clamp(cam.scale(o.pts[0][0], o.pts[0][1]) / 55, .5, 1.5), sd = o.side === 'left' ? -1 : 1, lw = (o.width ?? 5) * zs;
+  ctx.save(); ctx.globalAlpha = a; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+  // soft band on the teeth side (the side that pushes)
+  if (o.band !== false) { ctx.globalAlpha = a * .22; ctx.strokeStyle = c; ctx.lineWidth = 34 * zs; ctx.beginPath(); S.forEach((p, i) => { const q = S[Math.min(S.length - 1, i + 1)], r = S[Math.max(0, i - 1)], l = Math.hypot(q[0] - r[0], q[1] - r[1]) || 1, nx = -(q[1] - r[1]) / l * sd, ny = (q[0] - r[0]) / l * sd; i ? ctx.lineTo(p[0] + nx * 17 * zs, p[1] + ny * 17 * zs) : ctx.moveTo(p[0] + nx * 17 * zs, p[1] + ny * 17 * zs); }); ctx.stroke(); ctx.globalAlpha = a; }
+  shadow(c, 18); ctx.strokeStyle = c; ctx.lineWidth = lw; ctx.beginPath(); S.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1])); ctx.stroke(); noShadow();
+  ctx.fillStyle = c; let acc = 0;
+  for (let i = 1; i < S.length - 1; i++) {
+    acc += Math.hypot(S[i][0] - S[i - 1][0], S[i][1] - S[i - 1][1]); if (acc < 22 * zs) continue; acc = 0;
+    const q = S[i + 1], r = S[i - 1], l = Math.hypot(q[0] - r[0], q[1] - r[1]) || 1, tx = (q[0] - r[0]) / l, ty = (q[1] - r[1]) / l, nx = -ty * sd, ny = tx * sd, s = 7 * zs;
+    ctx.beginPath(); ctx.moveTo(S[i][0] - tx * s, S[i][1] - ty * s); ctx.lineTo(S[i][0] + nx * s * 1.6, S[i][1] + ny * s * 1.6); ctx.lineTo(S[i][0] + tx * s, S[i][1] + ty * s); ctx.closePath(); ctx.fill();
+  }
+  ctx.restore();
+  if (o.label && t >= o.label.t - .05) { const lp = o.label.loc ? loc(o.label.loc) : along(o.pts, o.label.f ?? .5), q = cam.p(lp[0], lp[1], .02); tag(q[0], q[1], o.label.text, c, a * win(t, o.label.t, o.label.u, .4, .4), { dx: o.label.dx ?? 0, dy: o.label.dy ?? -90, sub: o.label.sub, size: o.label.size ?? 22 }); }
+}
+
+// ---------------------------------------------------------------- long-form chrome: chapter cards, quiz, comment prompt
+// big chapter card for ~1.7 s at each chapter start (countdown number / chapter name) — off with "chapterCards": false or section "card": false
+function chapterCard(t) {
+  if (!LAND || story.chapterCards === false) return;
+  for (const s of SECTIONS) {
+    if (s.card === false || (s.card === undefined && s.seg === 'next')) continue;
+    const d = s.cardDur ?? 1.7; if (t < s.a - .35 || t > s.a + d + .5) continue;
+    const pin = E.outExpo(P(t, s.a - .35, .55)), a = pin * (1 - E.inOut(P(t, s.a + d, .45))); if (a <= 0) continue;
+    const c = col(s.color || 'accent'), cy = H / 2 - 20;
+    ctx.save(); ctx.globalAlpha = a;
+    const g = ctx.createLinearGradient(0, cy - 230, 0, cy + 230); g.addColorStop(0, 'rgba(3,7,14,0)'); g.addColorStop(.28, 'rgba(3,7,14,.88)'); g.addColorStop(.72, 'rgba(3,7,14,.88)'); g.addColorStop(1, 'rgba(3,7,14,0)'); ctx.fillStyle = g; ctx.fillRect(0, cy - 230, W, 460);
+    ctx.fillStyle = c; shadow(c, 18); ctx.fillRect(W / 2 - 20, cy + 26, 640 * E.outExpo(P(t, s.a - .15, .7)), 6); noShadow();
+    const num = String(s.n ?? ''), k = lerp(1.45, 1, pin);
+    if (num) { ctx.save(); ctx.translate(W / 2 - 60, cy + 120); ctx.scale(k, k); shadow(c, 40); text(num, 0, 0, fitFont(num, 'Anton', 300, 620), c, 'right'); ctx.restore(); }
+    const nx = W / 2 - 20 + (1 - pin) * 80;
+    text(s.name || '', nx, cy - 10, fitFont(s.name || '', 'IBlack', 78, 860, 2), THEME.text, 'left', 2);
+    if (s.chapter && s.chapter !== s.name) { ctx.globalAlpha = a * E.out(P(t, s.a + .1, .5)); text(s.chapter.replace(/^Number \d+:\s*/i, ''), nx, cy + 80, fitFont(s.chapter.replace(/^Number \d+:\s*/i, ''), 'ISemi', 32, 860, 1), '#C9D1DD', 'left', 1); }
+    ctx.restore();
+  }
+}
+// quiz: question + 2–4 options, 3-2-1 ring, reveal of the right answer (the narration asks it and gives a beat to guess)
+function quizScene(sc, t) {
+  const a = win(t, sc.from - .25, sc.to + .25, .4, .45); if (a <= 0) return;
+  backdrop(a); const c = col(sc.color || 'accent'), ok = col('ok'), n = sc.options.length, rev = t >= sc.t, rp = E.outBack(P(t, sc.t, .45));
+  ctx.save(); ctx.globalAlpha = a;
+  const kicker = sc.label || 'QUICK QUESTION', kw = tw(kicker, '24px IXBold', 4) + 50, top = LAND ? 170 : 360;
+  rr(W / 2 - kw / 2, top, kw, 46, 23); ctx.fillStyle = rgba(c, .16); ctx.fill(); ctx.strokeStyle = c; ctx.lineWidth = 2; ctx.stroke(); text(kicker, W / 2, top + 24, '24px IXBold', c, 'center', 4, 'middle');
+  const qf = LAND ? 64 : 58, qw = LAND ? 1500 : 940, lines = []; { let cur = ''; for (const w of sc.question.split(/\s+/)) { const tst = cur ? cur + ' ' + w : w; if (cur && tw(tst, `${qf}px IBlack`) > qw) { lines.push(cur); cur = w; } else cur = tst; } if (cur) lines.push(cur); }
+  lines.forEach((l, i) => text(l, W / 2, top + 130 + i * qf * 1.12, `${qf}px IBlack`, THEME.text, 'center'));
+  const oy = top + 150 + lines.length * qf * 1.12, ow = LAND ? Math.min(520, (1640 - (n - 1) * 30) / n) : 900, oh = LAND ? 190 : 120;
+  sc.options.forEach((o, i) => {
+    const p = E.outBack(P(t, sc.ot[i], .4)); if (p <= 0) return;
+    const x = LAND ? W / 2 - (n * ow + (n - 1) * 30) / 2 + i * (ow + 30) : (W - ow) / 2, y = LAND ? oy : oy + i * (oh + 24), right = i === sc.answer;
+    const dim = rev && !right ? 1 - .65 * E.out(P(t, sc.t, .4)) : 1, sk = rev && right ? 1 + .06 * Math.sin(Math.PI * clamp(rp)) : 1;
+    ctx.save(); ctx.globalAlpha = a * clamp(p) * dim; ctx.translate(x + ow / 2, y + oh / 2); ctx.scale(sk * lerp(.9, 1, clamp(p)), sk * lerp(.9, 1, clamp(p))); ctx.translate(-ow / 2, -oh / 2);
+    const bc = rev && right ? ok : c; shadow('rgba(0,0,0,.6)', 24, 6); rr(0, 0, ow, oh, 18); ctx.fillStyle = rev && right ? rgba(ok, .16) : 'rgba(12,20,34,.95)'; ctx.fill(); noShadow(); ctx.lineWidth = rev && right ? 5 : 2; ctx.strokeStyle = rgba(bc, rev && right ? 1 : .7); if (rev && right) shadow(ok, 26); ctx.stroke(); noShadow();
+    const letter = 'ABCD'[i]; ctx.beginPath(); ctx.arc(54, oh / 2, 30, 0, 7); ctx.fillStyle = rgba(bc, .2); ctx.fill(); text(letter, 54, oh / 2 + 2, '34px Anton', bc, 'center', 0, 'middle');
+    text(o, 104, oh / 2 + 2, fitFont(o, 'IXBold', LAND ? 40 : 38, ow - 130, 1), THEME.text, 'left', 1, 'middle');
+    if (rev && right) icon('check', ow - 44, 36, 44, ok, 6);
+    ctx.restore();
+  });
+  // countdown ring before the reveal
+  const cd = sc.countdown ?? 3, c0 = sc.t - cd;
+  if (!rev && t >= c0 && cd > 0) { const k = (t - c0) / cd, cx = W / 2, cy = LAND ? H - 205 : 1180, num = Math.ceil(cd - (t - c0)); ctx.lineWidth = 8; ctx.strokeStyle = 'rgba(255,255,255,.12)'; ctx.beginPath(); ctx.arc(cx, cy, 46, 0, 7); ctx.stroke(); ctx.strokeStyle = c; shadow(c, 16); ctx.beginPath(); ctx.arc(cx, cy, 46, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (1 - k)); ctx.stroke(); noShadow(); text(String(num), cx, cy + 3, '52px Anton', THEME.text, 'center', 0, 'middle'); }
+  if (rev && sc.note) { ctx.globalAlpha = a * E.out(P(t, sc.t + .3, .4)); text(sc.note, W / 2, LAND ? H - 190 : 1180, fitFont(sc.note, 'IXBold', 30, LAND ? 1500 : 940, 2), THEME.text, 'center', 2); if (sc.source) text(sc.source, W / 2, (LAND ? H - 190 : 1180) + 38, '20px ISemi', THEME.mute, 'center', 2); }
+  ctx.restore();
+}
+// comment prompt: small pill above the captions, does not cover the scene ("YOUR TAKE · Talks before 10 November? Comment YES or NO")
+function promptScene(sc, t) {
+  const a = win(t, sc.from, sc.to, .45, .4); if (a <= 0) return;
+  const c = col(sc.color || 'accent'), kick = sc.kicker || 'YOUR TAKE', f = fitFont(sc.text, 'IXBold', LAND ? 38 : 36, LAND ? 1300 : 880, 1), w = Math.max(tw(sc.text, f, 1), tw(kick, '22px IXBold', 3)) + 150, h = 110;
+  const x = (W - w) / 2, y = (LAND ? H - 300 : 1110) + (1 - E.outBack(P(t, sc.from, .5))) * 40;
+  ctx.save(); ctx.globalAlpha = a; shadow('rgba(0,0,0,.65)', 26, 8); rr(x, y, w, h, 20); ctx.fillStyle = 'rgba(8,14,26,.94)'; ctx.fill(); noShadow(); ctx.lineWidth = 2.5; ctx.strokeStyle = c; ctx.stroke();
+  const pr = (t - sc.from) % 1.6 / 1.6; ctx.globalAlpha = a * (1 - pr) * .6; ctx.beginPath(); ctx.arc(x + 62, y + h / 2, 30 + pr * 22, 0, 7); ctx.strokeStyle = c; ctx.lineWidth = 2; ctx.stroke(); ctx.globalAlpha = a;
+  ctx.beginPath(); ctx.arc(x + 62, y + h / 2, 30, 0, 7); ctx.fillStyle = rgba(c, .18); ctx.fill(); icon('chat', x + 62, y + h / 2, 38, c, 4);
+  text(kick, x + 112, y + 40, '22px IXBold', c, 'left', 3); text(sc.text, x + 112, y + 86, f, THEME.text, 'left', 1);
+  ctx.restore();
+}
+
 function mapScene(sc, t) {
   setCenter(sc.center[0], sc.center[1]);
   const cam = makeCam(camAt(sc.keys, t));
   PROJ = ll => cam.p(ll[0], ll[1]);
   drawMapBase(cam);
-  const H = {}; // current extrusion heights
-  for (const o of sc.L) if (o.kind === 'extrude') H[o.iso] = heightOf(o, t);
-  const zOf = o => o.on ? (H[o.on] || 0) + .03 : (o.z || 0);
+  if (sc.DR) detailBorders(cam, sc.DR);
+  const EH = {}; // current extrusion heights
+  for (const o of sc.L) if (o.kind === 'extrude') EH[o.iso] = heightOf(o, t);
+  const zOf = o => o.on ? (EH[o.on] || 0) + .03 : (o.z || 0);
   const fade = o => win(t, o.at, o.until, o.fin ?? .4, o.fout ?? .4);
   // pass 1: tints + zones + extrusions (sorted by depth)
-  for (const o of sc.L) if (o.kind === 'tint') { const a = fade(o); if (a > 0) { const p = countryPath(cam, o.iso), c = col(o.color); ctx.save(); ctx.globalAlpha = a * (o.alpha ?? .55); ctx.fillStyle = rgba(c, o.fill ?? .3); ctx.fill(p); if (o.glow) shadow(c, o.glow); ctx.strokeStyle = c; ctx.lineWidth = 2.5; ctx.stroke(p); ctx.restore(); } }
+  for (const o of sc.L) if (o.kind === 'tint') { const a = fade(o); if (a > 0) tintLayer(cam, o, t, a); }
   for (const o of sc.L) if (o.kind === 'zone') {
     const a = fade(o); if (a <= 0) continue; const c = col(o.color || 'danger');
     const z = new Path2D(); o.poly.forEach((p, i) => { const q = cam.p(p[0], p[1]); i ? z.lineTo(q[0], q[1]) : z.moveTo(q[0], q[1]); }); z.closePath();
@@ -743,8 +911,8 @@ function mapScene(sc, t) {
     if (o.outline !== false && o.clip) { ctx.save(); ctx.globalAlpha = a; shadow(c, 20); ctx.strokeStyle = rgba(c, .95); ctx.lineWidth = 2.5; ctx.stroke(countryPath(cam, o.clip)); ctx.restore(); }
   }
   for (const o of sc.L) if (o.kind === 'field') { const a = fade(o); if (a > 0) fieldLayer(cam, o, t, a); }
-  const ex = sc.L.filter(o => o.kind === 'extrude' && H[o.iso] > .002).map(o => ({ o, z: cam.p(...country(o.iso).center)[2] })).sort((a, b) => b.z - a.z);
-  for (const { o } of ex) extrude(cam, o.iso, H[o.iso], col(o.color), 1, o.glow ?? 12);
+  const ex = sc.L.filter(o => o.kind === 'extrude' && EH[o.iso] > .002).map(o => ({ o, z: cam.p(...country(o.iso).center)[2] })).sort((a, b) => b.z - a.z);
+  for (const { o } of ex) extrude(cam, o.iso, EH[o.iso], col(o.color), 1, o.glow ?? 12);
   // pass 2: routes, barriers, movers, arcs, markers, columns
   for (const o of sc.L) {
     const a = fade(o); if (a <= 0) continue; const c = col(o.color);
@@ -785,7 +953,9 @@ function mapScene(sc, t) {
       else { pulse(q[0], q[1], t, o.at, c, 8, 80, 1.4, .9); glowDot(q[0], q[1], 8, c); }
       ctx.restore();
       if (o.label) tag(q[0], q[1], o.label.text, c, a * win(t, o.at + .1, o.label.u ?? o.until, .3, .3), { dx: o.label.dx ?? 0, dy: o.label.dy ?? -80, sub: o.label.sub, size: o.label.size ?? 24 });
-    } else if (o.kind === 'track') {
+    } else if (o.kind === 'push') pushLayer(cam, o, t, a, col(o.color || 'danger'));
+    else if (o.kind === 'front') frontLayer(cam, o, t, a, col(o.color || 'danger'));
+    else if (o.kind === 'track') {
       trackLayer(cam, o, t, a, col(o.color || 'storm'));
     } else if (o.kind === 'column') {
       const g = E.out(P(t, o.at - .1, o.dur ?? 1.2)), v = (o.value ?? 10) * g, dec = o.decimals ?? 0;
@@ -1284,6 +1454,7 @@ function finishFrame() {
 function shakeAt(t) { let s = 0; for (const e of EVENTS) if (e.type === 'impact' || e.type === 'stamp') { const d = t - e.t; if (d >= 0 && d < .35) s = Math.max(s, (1 - d / .35) * (LAND ? 6 : 9) * e.g); } return s; }
 let THUMB = false;
 function renderFrame(t) {
+  TAGBOX.length = 0;
   if (!THUMB && OPEN_D && !OPENER) OPENER = buildThumb();
   ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.fillStyle = THEME.ink; ctx.fillRect(0, 0, W, H);
   const sh = THUMB ? 0 : shakeAt(t); if (sh > 0) ctx.translate((Math.random() - .5) * sh, (Math.random() - .5) * sh);
@@ -1293,10 +1464,12 @@ function renderFrame(t) {
     else if (sc.type === 'end') { const a = E.out(P(t, sc.from - .35, .7)); if (a > 0) { ctx.save(); ctx.globalAlpha = a; globeScene(sc, t); ctx.restore(); } }
     else if (sc.type === 'footage') footageScene(sc, t);
     else if (sc.type === 'document') { if (!THUMB || (TH && TH.overlays)) docScene(sc, t); }
+    else if (sc.type === 'quiz') { if (!THUMB) quizScene(sc, t); }
+    else if (sc.type === 'prompt') { if (!THUMB) promptScene(sc, t); }
     else if (!THUMB || (TH && TH.overlays)) overlayScene(sc, t);
   }
   for (const ft of THUMB ? [] : FLASHES) { const d = t - ft; if (d > -.05 && d < .25) { ctx.save(); ctx.globalAlpha = (1 - Math.abs(d - .05) / .2) * .18; ctx.fillStyle = '#fff'; ctx.fillRect(-20, -20, W + 40, H + 40); ctx.restore(); } }
-  ctx.setTransform(1, 0, 0, 1, 0, 0); if (!THUMB) sectionHeader(t); finishFrame();
+  ctx.setTransform(1, 0, 0, 1, 0, 0); if (!THUMB) { chapterCard(t); sectionHeader(t); } finishFrame();
   // no fade-in from black: frame 0 must already show something (it is what people see while swiping)
   const fo = THUMB ? 0 : P(t, DUR - .45, .45); if (fo > 0) { ctx.globalAlpha = fo; ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H); ctx.globalAlpha = 1; }
   if (!THUMB) opener(t);
@@ -1428,6 +1601,26 @@ if (CMD === 'check') {
     for (const s of SEGS) for (const sent of s.text.split(/(?<=[.?!])\s+/)) if (META.some(r => r.test(sent))) console.log(`WARNING: meta talk in "${s.id}": "${sent.trim()}" — say what happened, not how the video ranks or presents it`);
     const rk = SEGS.flatMap(s => (s.text.match(/\brank(ed|s|ing)?\b/gi) || []).map(() => s.id));
     if (rk.length > 1 || rk.some(id => id !== 'promise')) console.log(`WARNING: "rank" appears ${rk.length}× (${rk.join(', ')}) — only once, in promise: "ranked by impact"`);
+  }
+  if (LONG) { // visual density: something new must happen on screen at least every few seconds while the voice runs
+    const B = [], add = (x, what) => { if (typeof x === 'number' && !isNaN(x)) B.push({ t: x, what }); }, mmss = x => `${Math.floor(x / 60)}:${String(Math.floor(x % 60)).padStart(2, '0')}`;
+    for (const sc of SCENES) {
+      add(sc.from, sc.type);
+      if (sc.type === 'map') {
+        sc.keys.forEach((k, i) => { if (!i) return; const p = sc.keys[i - 1]; if (Math.abs(Math.log((k.dist || 1) / (p.dist || 1))) > .14 || Math.hypot(k.lon - p.lon, k.lat - p.lat) > .6 || Math.abs((k.yaw || 0) - (p.yaw || 0)) > 8 || Math.abs((k.pitch || 0) - (p.pitch || 0)) > 8) { add(p.t, 'camera'); if (k.t - p.t <= 8) add((p.t + k.t) / 2, 'camera'); } });
+        for (const o of sc.L) { add(o.at, o.kind); (o.rows || []).forEach(r => add(r.t, 'card row')); (o.S || []).forEach(s => add(s.t, 'track')); if (o.label && typeof o.label.t === 'number') add(o.label.t, 'label'); if (o.replyT !== undefined) add(o.replyT, 'reply'); }
+      } else if (sc.type === 'globe' || sc.type === 'end') { (sc.views || []).forEach(v => add(v.t, 'globe')); (sc.hls || []).forEach(h => add(h.at, 'highlight')); (sc.mks || []).forEach(m => add(m.at, 'marker')); if (sc.headline) add(sc.headline.t, 'headline'); if (sc.card) add(sc.card.t, 'card'); }
+      else if (sc.type === 'footage' || sc.type === 'document') { (sc.M || []).forEach(m => add(m.t, 'mark')); if (sc.lower) add(sc.lower.t, 'lower third'); }
+      else { for (const arr of [sc.items, sc.bars, sc.rows, sc.steps]) (arr || []).forEach(x => add(x.t, sc.type)); (sc.events || []).forEach(x => add(x.t, 'chart')); add(sc.t, sc.type); add(sc.done, sc.type); (sc.ot || []).forEach(x => add(x, 'option')); }
+    }
+    SECTIONS.forEach(s => add(s.a, 'chapter'));
+    const t0 = SEGS[0].a, t1 = SPEECH_END, MAXG = story.maxVisualGap ?? 6, ts = [t0, ...B.map(b => b.t).filter(x => x > t0 && x < t1).sort((a, b) => a - b), t1]; let gaps = 0;
+    for (let i = 1; i < ts.length; i++) if (ts[i] - ts[i - 1] > MAXG) { gaps++; const words = WORDS.filter(w => w.t0 >= ts[i - 1] && w.t0 < ts[i]).map(w => w.text).join(' '); console.log(`WARNING: nothing new on screen for ${(ts[i] - ts[i - 1]).toFixed(1)} s (${mmss(ts[i - 1])}–${mmss(ts[i])}): "${words.length > 170 ? words.slice(0, 170) + '…' : words}" — show what this sentence says (region, arrow, front, marker, number, camera move)`); }
+    const pm = B.filter(b => b.t >= t0 && b.t <= t1).length / ((t1 - t0) / 60);
+    console.log(`visual beats: ${pm.toFixed(1)} per minute (target ≥ 12) · ${gaps} gap(s) > ${MAXG} s`);
+    if (pm < 12) console.log('WARNING: too few visual beats — every place, actor, number or action in the script needs its own visual on its key word (LONGFORM.md)');
+    if (!SCENES.some(s => s.type === 'quiz')) console.log('WARNING: no quiz scene — one per video (LONGFORM.md → audience)');
+    if (!SCENES.some(s => s.type === 'prompt')) console.log('WARNING: no comment prompt — one in the outlook, same question as upload.firstComment');
   }
   const inUnit = v => Array.isArray(v) && v.every(x => typeof x === 'number' && x >= 0 && x <= 1);
   for (const sc of FOOT) for (const m of sc.M) {

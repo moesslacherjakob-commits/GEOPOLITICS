@@ -31,7 +31,7 @@ Every time value can be a number (seconds) or an anchor string:
 `text, mute, accent (gold — each desk config overrides it with the channel colour), danger (red), ally (orange), oil (amber), info (cyan), ok (green), neutral (grey), violet, heat (orange), cold (blue), storm (pale cyan)` or any `#hex`.
 
 ## Locations
-`[lon, lat]`, an ISO-3 country code (uses its centre), or a place name from `data/places.json` (capitals, big cities, straits, seas, hotspots: e.g. `"Strait of Hormuz"`, `"Bab al-Mandab"`, `"Gaza"`, `"Donbas"`, `"Taiwan Strait"`, `"Mekele"`). Unknown names throw an error — fall back to coordinates.
+`[lon, lat]`, an ISO-3 country code (uses its centre), or a place name from `data/places.json` (capitals, big cities, straits, seas, hotspots: e.g. `"Strait of Hormuz"`, `"Bab al-Mandab"`, `"Gaza"`, `"Donbas"`, `"Taiwan Strait"`, `"Mekele"`). Also a region code (`"UA-14"`, its centre) or any town with ≥ 1,000 inhabitants from `data/gazetteer.tsv.gz` (`"Kramatorsk"`; ambiguous names need the country: `"Pokrovsk, UA"` — the error lists the candidates). `python3 tools/places.py <town> <country>` shows coordinates and the region a town lies in. Unknown names throw an error — fall back to coordinates.
 
 ## Scene types
 ### `globe` (hook) / `end` (outro)
@@ -40,20 +40,23 @@ globe only: `exit: "zoom"` (zooms into the map scene — make the map's first ca
 end only: `lines: [[text, color]]` (2 short punchlines), `sources: [..]` (small print)
 
 ### `map` (the 3D map, usually from hook end to CTA)
-`center: [lon, lat]` (projection centre — middle of the region) · `camera: [{at, lon, lat, dist, pitch, yaw, oy}]`
-- `dist` ≈ zoom (15 = close-up of a border town, 40 = a country, 90 = a whole region); `pitch` 0 = top-down, 45–55 = cinematic tilt; `yaw` rotates; `oy` shifts the map down on screen (use 120–250 so content sits between the header and captions).
+`center: [lon, lat]` (projection centre — middle of the region) · `camera: [{at, lon, lat, dist, pitch, yaw, oy}]` · `detail: ["UKR", …]` (thin dashed internal borders of these countries — regions/oblasts — for close-ups)
+- **Regions:** first-level subdivisions work wherever a country code works (`tint`, `extrude`, `zone clip`, `tag loc`, `marker loc`): ISO 3166-2 codes like `UA-14` (Donetsk), `CA-AB` (Alberta), `IR-23` (Hormozgan). Find codes with `python3 tools/places.py --region <name> <country>`; towns not in `data/places.json` with `python3 tools/places.py <town> <country>` → `[lon, lat]`.
+- `dist` ≈ zoom (6–8 = one province/oblast or a front sector, 15 = close-up of a border town, 40 = a country, 90 = a whole region); `pitch` 0 = top-down, 45–55 = cinematic tilt; `yaw` rotates; `oy` shifts the map down on screen (use 120–250 so content sits between the header and captions).
 
 `layers` — each has `kind`, `at`, `until` (defaults to the scene span):
 | kind | fields |
 |---|---|
-| `tint` | `iso, color, alpha?, fill?, glow?` — coloured fill/outline |
+| `tint` | `iso, color, alpha?, fill?, glow?, hatch?, dash?, pulse?, wipe?, width?` — coloured fill/outline of a country **or a region** (`iso: "UA-14"`). `hatch` = diagonal hatching (claimed, demanded, occupied, contested), `dash` = moving dashed outline, `pulse` = breathing fill, `wipe` = fills outward from the centre (default on in long-form) |
 | `extrude` | `iso, color, height (0.3–0.9), rise?, flatten: [{at, to}]` — country rises as a 3D block |
 | `zone` | `clip (iso), poly [[lon,lat]..], color, fill?, hatch?, pulse?, outline?` — area inside a country (occupied zone, buffer). `python3 tools/border_band.py ETH ERI 60 south` builds an "N km inside the border" band. |
 | `tag` | `loc, text, sub?, color, dx?, dy?, size?, on? (iso of an extrusion to sit on)` — label with leader line |
 | `arc` | `from, to, color, height?, width?, dur?, headColor?` — 3D arc (attacks, support, flows) |
 | `route` | `path [..locs], style solid|dash|flow, color, width?, on?, label {text, sub, loc, dx, dy, at, until}` — pipelines, corridors, coastlines |
 | `movers` | `path, icon ship|plane, count, speed, spacing, offset, stopAt, blockAt` — ships/planes moving, stopping at a blockade |
-| `barrier` | `path, text, sub, stampLoc, stampUntil` — dashed red line + stamp (blockade, front line) |
+| `barrier` | `path, text, sub, stampLoc, stampUntil` — dashed red line + stamp (blockade, closed border) |
+| `front` | `path [locs], side left\|right, color, width?, band?, dur?, label {text, sub, loc?, f?}` — front line: bold glowing line with teeth on the side that pushes (left/right of the drawing direction), soft band behind. Build `path` from towns the sources name (`python3 tools/places.py`); label it "APPROX. FRONT LINE · <source, date>" |
+| `push` | `from, to, color, width? (30), tail? (.28), bend? (.18, negative bends the other way), dur?, label {text, sub, at}` — curved, tapered offensive/advance arrow that grows from `from` to `to` with moving chevrons (offensives, troop moves, migration, pressure on a region) |
 | `marker` | `loc, style pulse|x|dot, color, label {text, sub, dx, dy, until}` |
 | `column` | `loc, value, display "≈{v}%", label, color, scale?, dur?` — 3D data column on the map |
 | `callout` | `loc, place, icon, screen [x,y], reply {at, color}` — arc from the map to an off-map actor (Washington, UN, Beijing) |
@@ -77,6 +80,8 @@ Icons: `check x eye jet plane drop flame flag shield money ship factory people c
 - `chain` / `flow` — cause → effect or how-it-works diagram: `label, color, steps [{icon, title, sub?, color?, dir? up|down, dirColor?, at}]` (2–5 steps, arrows draw between them), `source`.
 - `timeline` — vertical timeline: `label, color, items [{date, title, sub?, color?, big?, at}]` (≤ 5 items), `source`.
 - `scale` — size comparison: `label, sublabel, color, items [{name, value, display, color?, icon?, at}]` (2–4 circles, area ∝ value), `maxRadius?, prefix/suffix/decimals` (for values without `display`), `note, source`.
+- `quiz` — audience question (long-form): `question, options [2–4], answer (index), optionsAt? [anchors], revealAt (anchor), countdown? (3 s ring before the reveal), label? ("QUICK QUESTION"), note? (shown with the answer), source?`. The narration asks it, gives a beat ("Take a guess."), then answers at `revealAt`.
+- `prompt` — comment prompt pill above the captions, does not cover the scene: `kicker? ("YOUR TAKE"), text ("Talks before mid-November? Comment YES or NO"), color?`. Same question as `upload.firstComment`.
 - `document` — a **verbatim excerpt** typeset as a paper page (serif), the narrated phrase gets marked while the voice says it, the rest of the text fades back and the page pushes in; top-right label `EXCERPT`. Fields: `kicker` (e.g. "JOINT STATEMENT"), `source` ("kremlin.ru · 21 Oct 2026"), `title?`, `paragraphs [..]` (≤ 120 words in total, copied exactly), `marks [{text, style: highlight|underline|circle|box, at, color?, occurrence?, zoom?}]` (`text` must appear word-for-word in the paragraphs — punctuation and case are ignored; `check` fails otherwise), `zoom?` (push-in, default 1.12), `push false?`, `dim false?`, `footer?`, `label?`. Only primary texts (official statements, resolutions, laws, treaties, filings, transcripts) — never news-article sentences. Works in both formats.
 
 ### Footage marks (long-form `footage` scenes): motion graphics on the picture

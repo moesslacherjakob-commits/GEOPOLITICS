@@ -1,0 +1,324 @@
+{
+ "id": "action-demo-example",
+ "format": "long",
+ "example": true,
+ "script": [
+  {
+   "id": "hook",
+   "text": "Moscow wants a region it has not even captured. Here is what that demand looks like on the map."
+  },
+  {
+   "id": "promise",
+   "text": "Five stories, ranked by impact. Number three changes the most lines on the map."
+  },
+  {
+   "id": "ch3",
+   "pauseBefore": 0.4,
+   "text": "Number three: talks on Ukraine could restart after November tenth. The obstacle is Donetsk. Russia demands the whole region, including the cities its troops have not taken, like Kramatorsk and Sloviansk. Russian forces have pushed toward Pokrovsk and Kostiantynivka for months. Luhansk is almost entirely under Russian control. Kyiv says a halt along the current front line is the most realistic path. Quick question: how much of Donetsk does Russia hold today? Take a guess. About three quarters, according to the Institute for the Study of the War."
+  },
+  {
+   "id": "outlook",
+   "pauseBefore": 0.4,
+   "text": "So will talks start before mid November? Tell us in the comments: yes or no."
+  }
+ ],
+ "sections": [
+  {
+   "n": "03",
+   "name": "TALKS ON UKRAINE",
+   "chapter": "Number 3: Moscow wants all of Donetsk",
+   "seg": "ch3",
+   "color": "violet"
+  },
+  {
+   "n": "→",
+   "name": "WHAT TO WATCH",
+   "chapter": "The dates to watch",
+   "seg": "outlook",
+   "color": "accent"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "map",
+   "from": 0,
+   "to": "end",
+   "center": [
+    36.5,
+    48.3
+   ],
+   "detail": [
+    "UKR",
+    "RUS"
+   ],
+   "camera": [
+    {
+     "at": 0,
+     "lon": 33,
+     "lat": 48.5,
+     "dist": 60,
+     "pitch": 30
+    },
+    {
+     "at": "hook:map",
+     "lon": 36.5,
+     "lat": 48.4,
+     "dist": 30,
+     "pitch": 42
+    },
+    {
+     "at": "promise:Number",
+     "lon": 37.2,
+     "lat": 48.4,
+     "dist": 20,
+     "pitch": 46,
+     "yaw": 8
+    },
+    {
+     "at": "ch3:Donetsk",
+     "lon": 37.6,
+     "lat": 48.2,
+     "dist": 14,
+     "pitch": 46
+    },
+    {
+     "at": "ch3:Kramatorsk -0.5",
+     "lon": 37.5,
+     "lat": 48.6,
+     "dist": 10,
+     "pitch": 50,
+     "yaw": -6
+    },
+    {
+     "at": "ch3:Russian -0.3",
+     "lon": 36.4,
+     "lat": 48.1,
+     "dist": 22,
+     "pitch": 44
+    },
+    {
+     "at": "ch3:pushed",
+     "lon": 37.4,
+     "lat": 48.3,
+     "dist": 7,
+     "pitch": 50,
+     "yaw": 4
+    },
+    {
+     "at": "ch3:Luhansk",
+     "lon": 38.8,
+     "lat": 48.8,
+     "dist": 16,
+     "pitch": 45
+    },
+    {
+     "at": "ch3:Kyiv",
+     "lon": 35.5,
+     "lat": 48.0,
+     "dist": 28,
+     "pitch": 42
+    },
+    {
+     "at": "ch3:Quick",
+     "lon": 35.6,
+     "lat": 48.0,
+     "dist": 29,
+     "pitch": 42
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.35,
+     "fill": 0.12,
+     "at": "hook:Moscow",
+     "until": "end"
+    },
+    {
+     "kind": "tint",
+     "iso": "UA-14",
+     "color": "danger",
+     "hatch": true,
+     "pulse": true,
+     "at": "ch3:Donetsk",
+     "until": "ch3:Quick"
+    },
+    {
+     "kind": "tag",
+     "loc": "UA-14",
+     "text": "MOSCOW DEMANDS ALL OF IT",
+     "sub": "Donetsk region",
+     "color": "danger",
+     "at": "ch3:demands",
+     "until": "ch3:Russian",
+     "dy": -120
+    },
+    {
+     "kind": "marker",
+     "loc": "Kramatorsk",
+     "style": "pulse",
+     "color": "accent",
+     "label": {
+      "text": "KRAMATORSK",
+      "sub": "held by Ukraine"
+     },
+     "at": "ch3:Kramatorsk",
+     "until": "ch3:Russian"
+    },
+    {
+     "kind": "marker",
+     "loc": "Slovyansk, UA",
+     "style": "dot",
+     "color": "accent",
+     "label": {
+      "text": "SLOVIANSK",
+      "dy": -70
+     },
+     "at": "ch3:Sloviansk",
+     "until": "ch3:Russian"
+    },
+    {
+     "kind": "front",
+     "path": [
+      [
+       37.62,
+       49.71
+      ],
+      [
+       38.1,
+       48.87
+      ],
+      [
+       37.8,
+       48.55
+      ],
+      [
+       37.25,
+       48.25
+      ],
+      [
+       36.6,
+       47.95
+      ],
+      [
+       36.26,
+       47.67
+      ],
+      [
+       35.78,
+       47.55
+      ],
+      [
+       35.0,
+       47.35
+      ],
+      [
+       34.3,
+       47.2
+      ],
+      [
+       33.5,
+       46.85
+      ],
+      [
+       32.7,
+       46.62
+      ]
+     ],
+     "side": "left",
+     "color": "danger",
+     "at": "ch3:Russian",
+     "label": {
+      "text": "APPROX. FRONT LINE",
+      "sub": "placeholder path · source, date",
+      "f": 0.35
+     }
+    },
+    {
+     "kind": "push",
+     "from": [
+      37.9,
+      48.0
+     ],
+     "to": [
+      37.25,
+      48.32
+     ],
+     "color": "heat",
+     "width": 32,
+     "at": "ch3:pushed",
+     "label": {
+      "text": "POKROVSK"
+     }
+    },
+    {
+     "kind": "push",
+     "from": [
+      38.25,
+      48.4
+     ],
+     "to": [
+      37.78,
+      48.53
+     ],
+     "color": "heat",
+     "width": 26,
+     "bend": -0.2,
+     "at": "ch3:Kostiantynivka -0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "UA-09",
+     "color": "danger",
+     "hatch": true,
+     "alpha": 0.7,
+     "at": "ch3:Luhansk",
+     "until": "ch3:Quick"
+    },
+    {
+     "kind": "tag",
+     "loc": "Kyiv",
+     "text": "KYIV: HALT ALONG THE FRONT",
+     "color": "info",
+     "at": "ch3:Kyiv",
+     "until": "ch3:Quick",
+     "dy": -90
+    },
+    {
+     "kind": "tint",
+     "iso": "UA-14",
+     "color": "danger",
+     "alpha": 0.35,
+     "at": "promise:lines",
+     "until": "ch3:Donetsk",
+     "pulse": true
+    }
+   ]
+  },
+  {
+   "type": "quiz",
+   "from": "ch3:Quick -0.2",
+   "to": "ch3$ +0.4",
+   "question": "How much of the Donetsk region does Russia control?",
+   "options": [
+    "About a quarter",
+    "About half",
+    "About three quarters"
+   ],
+   "answer": 2,
+   "revealAt": "ch3:About",
+   "note": "≈ 75 % — ISW estimate (test value)",
+   "source": "Institute for the Study of War"
+  },
+  {
+   "type": "prompt",
+   "from": "outlook:Tell",
+   "to": "end",
+   "kicker": "YOUR TAKE",
+   "text": "Talks before mid-November? Comment YES or NO"
+  }
+ ],
+ "note": "FORMAT EXAMPLE (never publish): regions (UA-14 hatch), front line, push arrows, labels, chapter card, quiz and comment prompt. The front path, the quiz answer and all numbers are placeholders — real episodes take them from sources (front line: towns named by ISW/AP with date)."
+}
