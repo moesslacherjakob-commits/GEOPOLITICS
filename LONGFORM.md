@@ -81,7 +81,7 @@ Look at every `out/<id>/footage/sheet_*.jpg` (Read the images). For each scene: 
 ```
 python3 tools/footage.py fetch longform/<id>.json   # downloads, normalises, writes manifest.json + credits.json
 ```
-Providers and licences: Pexels and Pixabay (free licences, no credit required — credited anyway), Wikimedia Commons (only public domain, CC0 or CC BY — the tool filters), NASA (public domain, no endorsement). Keys: env `PEXELS_API_KEY` or the environment's network secret for `api.pexels.com` (header `Authorization`), env `PIXABAY_API_KEY`. Hosts the environment must allow: see the top of `tools/footage.py`. If providers are unreachable, render anyway and say so in the report ("Footage: x/y — <provider>: <reason>").
+Providers and licences: Pixabay (free licence, no credit required — credited anyway), Wikimedia Commons (only public domain, CC0 or CC BY — the tool filters), NASA (public domain, no endorsement). Key: env `PIXABAY_API_KEY`. Pexels is supported but **off** (no key, since 2026-10-25) — it is only used when `config.json → longform.footage.providers` lists it; never switch it on yourself. Hosts the environment must allow: see the top of `tools/footage.py`. If providers are unreachable, render anyway and say so in the report ("Footage: x/y — <provider>: <reason>").
 Assets used in the last 90 days are skipped automatically (`data/footage_used.json`), so the same clip never repeats.
 
 ## 6. QA — automatic, two passes (no human approval)

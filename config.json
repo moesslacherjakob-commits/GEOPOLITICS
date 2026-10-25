@@ -62,17 +62,15 @@
     },
     "footage": {
       "providers": [
-        "pexels:video",
         "pixabay:video",
         "commons:image",
         "nasa:image",
-        "pexels:image",
         "pixabay:image",
         "commons:video",
         "nasa:video"
       ],
       "maxShare": 0.35
     },
-    "note": "Long-form videos (LONGFORM.md): Sunday weekly recap, Wednesday explainer, produced by the daily routine after the Short. Footage keys: env PEXELS_API_KEY (or network secret for api.pexels.com, header Authorization) and env PIXABAY_API_KEY; without them footage scenes fall back to the map."
+    "note": "Long-form videos (LONGFORM.md): Sunday weekly recap, Wednesday explainer, produced by the daily routine after the Short. Footage providers: Pixabay (env PIXABAY_API_KEY), Wikimedia Commons, NASA. Pexels is switched off (no key since 2026-10-25); to switch it on, add \"pexels:video\" / \"pexels:image\" to footage.providers and set env PEXELS_API_KEY or a network secret for api.pexels.com (header Authorization). Without keys or network access footage scenes fall back to the map."
   }
 }

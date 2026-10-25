@@ -13,7 +13,7 @@ A footage scene in the story (see LONGFORM.md):
    "query": "oil tanker at sea aerial", "kind": "video", "symbolic": true, "pick": 0, "lower": {...}}
 
 Providers (all free; licences checked per item):
-  pexels   videos + photos · Pexels License (free, commercial, no credit required)   · key: env PEXELS_API_KEY or the
+  pexels   OFF by default (no key) · videos + photos · Pexels License (free, no credit required) · key: env PEXELS_API_KEY or the
            environment's network secret for api.pexels.com (header Authorization)
   pixabay  videos + photos · Pixabay Content License (free, no credit; no logos/brands) · key: env PIXABAY_API_KEY
   commons  Wikimedia Commons photos/videos · ONLY public domain, CC0 or CC BY (credit in the description) · no key
@@ -33,6 +33,10 @@ MIN_W = 1280                       # never upscale smaller sources
 MAX_CLIP = 14.0                    # seconds kept per clip (scenes are <= 8 s)
 USED_PATH = os.path.join(ROOT, 'data', 'footage_used.json')
 LABELS = {True: 'ILLUSTRATIVE', False: 'FILE'}
+
+
+# Pexels is off by default (no key since 2026-10-25); add 'pexels:video' / 'pexels:image' in config.json to use it again.
+DEFAULT_ORDER = ['pixabay:video', 'commons:image', 'nasa:image', 'pixabay:image', 'commons:video', 'nasa:video']
 
 
 def cfg():
@@ -229,7 +233,7 @@ def used():
 
 def providers_for(scene, fcfg):
     if scene.get('providers'): return [(p, k) for p in scene['providers'] for k in ([scene.get('kind')] if scene.get('kind') in ('video', 'image') else ['video', 'image'])]
-    order = fcfg.get('providers') or ['pexels:video', 'pixabay:video', 'commons:image', 'nasa:image', 'pexels:image', 'pixabay:image', 'commons:video', 'nasa:video']
+    order = fcfg.get('providers') or DEFAULT_ORDER
     want = scene.get('kind', 'any')
     return [tuple(x.split(':')) for x in order if want == 'any' or x.endswith(':' + want)]
 
@@ -288,8 +292,10 @@ def normalise_image(src, dst):
 # ------------------------------------------------------------------ commands
 def cmd_check():
     tests = {'pexels': ('pexels', 'ship', 'video'), 'pixabay': ('pixabay', 'ship', 'video'), 'commons': ('commons', 'tanker ship', 'image'), 'nasa': ('nasa', 'earth', 'image')}
-    status = {}
+    on = {x.split(':')[0] for x in (cfg()[0].get('providers') or DEFAULT_ORDER)}
+    status = {name: 'off (not in config.json → longform.footage.providers)' for name in tests if name not in on}
     for name, (p, q, k) in tests.items():
+        if name not in on: continue
         try: r = search(p, q, k, 2); status[name] = f'ok ({len(r)} results)'
         except Unreachable as e: status[name] = f'unreachable: {e}'
         except Exception as e: status[name] = f'error: {e}'
