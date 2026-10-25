@@ -40,7 +40,9 @@ Segment ids are fixed so chapters, timing and checks work:
 | `outlook` | 150–250 | "What happens next": 2–3 scenarios **as stated by sources or analysts** (no own predictions). Resolve the open loop here. |
 | `next` | 25–40 | teaser of a related video ("watch next"). Never "in conclusion", "thanks for watching" or a recap — those signals make people leave. |
 
-Recap: `hook` (the week's biggest moment) → `promise` ("five stories — number one could change…") → `ch5` … `ch1` (countdown, ~230 words each) → `outlook` (what to watch next week) → `next`.
+Recap: `hook` (the week's biggest moment) → `promise` ("five stories — number one could change…") → `ch5` … `ch1` (countdown, ~230 words each) → `outlook` (what to watch next week) → `next`. Each chapter starts straight with the story ("Number five: Alberta voted…") — the ranking is shown, never justified.
+
+**No meta talk (Jakob, 2026-10-25 — nobody cares):** never explain how the topics were chosen, how or why they are ranked or ordered ("the order is editorial", "I rank them by…", "why does this rank fifth? Because…", "this ranks second because…"), what the video will do or show ("I will count them down", "for each you will see who said what"), or refer back to the script itself ("that is the window I promised", "here is the summary"). Every sentence is about the world, not about the video. Attribution ("according to AP", "a claim that could not be verified") stays — that is content, not meta talk. `check` warns on typical phrases.
 
 Rules: write for the ear (short sentences, numbers as spoken, no parentheses or slashes); address the viewer as "you"; concrete examples over abstractions; neutral and attributed; vary sentence openings; no filler or AI clichés ("delve", "let's dive in", "buckle up", "in today's video", "game-changer"). Add `"pauseBefore": 0.4` to each chapter's first segment. Abbreviations the voice must spell go into `config.json → voice.say`.
 Check: `node engine/engine.mjs longform/<id>.json check` → no WARNING.
@@ -108,7 +110,7 @@ Assets used in the last 90 days are skipped automatically (`data/footage_used.js
    - documents: every `document` text is word-for-word identical to the official source (open the URL and compare), it is a primary text (not a news article), the marked phrase says what the narration says at that moment;
    - variety: hook type, chapter structure and look are not a copy of the last 3 entries in `longform/log.md`;
    - title and thumbnail are honest (the video delivers them) and don't repeat each other;
-   - script has no filler, no AI clichés, the open loop from `promise` is resolved, chapter titles match their content.
+   - script has no filler, no AI clichés, no meta talk (how topics were picked, why they rank where they rank, what the video will show, "as promised"), the open loop from `promise` is resolved, chapter titles match their content.
    Fix everything, then run the review once more. If it still fails on facts or policy: **do not publish** — report why.
 
 ## 7. Voice + render (≈ 45–60 min for 10 min of video)

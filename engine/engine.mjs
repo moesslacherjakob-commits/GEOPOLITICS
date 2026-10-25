@@ -1421,6 +1421,12 @@ if (CMD === 'check') {
     if (lens.some(l => l > 9)) console.log('WARNING: a footage shot is longer than 9 s — split it or cut back to the map');
     if (SECTIONS.length && SECTIONS[0].a > 60) console.log('WARNING: first chapter starts after 60 s — the intro is too long');
   }
+  if (LONG) { // meta talk about the video itself (topic choice, ranking, "as promised") — viewers don't care (LONGFORM.md)
+    const META = [/\b(i|we)\s+(rank|ranked|picked|chose|choose|selected|select|ordered|count (them|it|these) down)\b/i, /\bwhy (does|did|do) (this|it|they) rank/i, /\b(this|it) ranks? (only )?(first|second|third|fourth|fifth|number|\w+th)\b/i,
+      /\bthe (order|ranking) is\b/i, /\beditorial\b/i, /\b(as|that is the \w+ (that )?)?i promised\b/i, /\bas promised\b/i, /\bhere is the summary\b|\bto sum up\b|\bin conclusion\b|\bin (this|today's) video\b/i,
+      /\byou will see (who|what|how)\b/i, /\bmade (it|the) (list|cut)\b/i, /\bcount (them|it|these|the stories) down\b/i];
+    for (const s of SEGS) for (const sent of s.text.split(/(?<=[.?!])\s+/)) if (META.some(r => r.test(sent))) console.log(`WARNING: meta talk in "${s.id}": "${sent.trim()}" — say what happened, not how the video ranks or presents it`);
+  }
   const inUnit = v => Array.isArray(v) && v.every(x => typeof x === 'number' && x >= 0 && x <= 1);
   for (const sc of FOOT) for (const m of sc.M) {
     const where = `footage ${sc.asset || sc.file} mark ${m.type}@${m.t.toFixed(1)}s`;
