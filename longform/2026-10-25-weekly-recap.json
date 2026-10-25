@@ -5,7 +5,7 @@
  "script": [
   {
    "id": "hook",
-   "text": "Oil at a five-month high. A deadly attack on a funeral. A vote against a separation process. This was a week of five stories, and the last one moved oil prices."
+   "text": "Oil at a five-month high. A deadly attack on a funeral. A vote against a separation process. This was a week of five stories, and the last one unfolded as oil hit a five-month high."
   },
   {
    "id": "promise",
@@ -28,12 +28,12 @@
   },
   {
    "id": "ch2",
-   "text": "Number two is a calendar problem. For weeks, American and Israeli officials have reportedly been drawing up options for renewed strikes on Iran. Axios reported on October seventh that the Pentagon told Central Command to prepare to resume major combat operations, with no date set. The next day, President Trump posted that the United States will not strike Iran before the midterm elections on November third, and said talks are ongoing. This week, reports citing The New York Times said options are still being drawn up, with a possible window in early November. According to those reports, no decision has been made. Israel votes on October twenty-seventh. Israeli journalist Ben Caspit reported, according to i24 News, that Washington pressed Israel to strike before the American vote, then backed away. That is one reporter's account, not a confirmed fact. Why does this rank second? Because it bears on the Hormuz story that follows. The war began on February twenty-eighth, when the United States and Israel first struck Iran. Negotiations began in June under a memorandum of understanding.",
+   "text": "Number two is a calendar problem. For weeks, American and Israeli officials have reportedly been drawing up options for renewed strikes on Iran. Axios reported on October seventh that the Pentagon told Central Command to prepare to resume major combat operations, with no date set. The next day, President Trump posted that the United States will not strike Iran before the midterm elections on November third, and said talks are ongoing. This week, reports citing The New York Times said options are still being drawn up, with a possible window in early November. According to those reports, no decision has been made. Israel votes on October twenty-seventh. Israeli journalist Ben Caspit reported, according to i24 News, that Washington pressed Israel to strike before the American vote, then backed away. That is one reporter's account, not a confirmed fact. Why does this rank second? Because it bears on the Hormuz story that follows. The war began on February twenty-eighth, when the United States and Israel first struck Iran. Negotiations began in June under a memorandum of understanding, according to ABC News.",
    "pauseBefore": 0.4
   },
   {
    "id": "ch1",
-   "text": "Number one is the story that moved oil prices. On Thursday, October twenty-second, Iran's Revolutionary Guards navy said it had struck seven commercial vessels in the Gulf and the Strait of Hormuz. Four, it said, were hit during ship-to-ship oil transfers, and three by naval mines. Independent confirmation was not available. President Trump answered on Truth Social that Iran was making up fake hits, mines, and everything else, and said more oil is moving through the strait than before the war, a claim we could not verify. He accused Tehran of faking the attacks to push up prices before the midterms. What we can check is the market. According to CBS News, Brent crude rose three to four percent that day, to around one hundred twelve or one hundred thirteen dollars a barrel, which CBS says is its highest level since May. Other outlets called it a five-month high. Why is confirmation hard? The British maritime monitoring center, known as UKMTO, has said it is struggling to report every incident, and that many attacked ships do not report. So here is the summary. The price jump is real. The attacks reported alongside it are claims we could not independently confirm. And whoever is right, about a fifth of the world's oil normally passes through Hormuz, according to the US Energy Information Administration. At its narrowest, the strait is about twenty-one miles wide. When traders get nervous there, oil prices react.",
+   "text": "Number one is the Hormuz story, and the week's oil price jump. On Thursday, October twenty-second, Iran's Revolutionary Guards navy said it had struck seven commercial vessels in the Gulf and the Strait of Hormuz. Four, it said, were hit during ship-to-ship oil transfers, and three by naval mines. Independent confirmation was not available. President Trump answered on Truth Social that Iran was making up fake hits, mines, and everything else, and said more oil is moving through the strait than before the war, a claim we could not verify. He accused Tehran of faking the attacks to push up prices before the midterms. What we can check is the market. According to CBS News, Brent crude rose three to four percent that day, to around one hundred twelve or one hundred thirteen dollars a barrel, which CBS says is its highest level since May. Other outlets called it a five-month high. Why is confirmation hard? The British maritime monitoring center, known as UKMTO, has said it is struggling to report every incident, and that many attacked ships do not report. So here is the summary. The price jump is real. The attacks reported alongside it are claims we could not independently confirm. And whoever is right, about a fifth of the world's oil normally passes through Hormuz, according to the US Energy Information Administration. At its narrowest, the strait is about twenty-one miles wide. When traders get nervous there, oil prices react.",
    "pauseBefore": 0.4
   },
   {
@@ -50,7 +50,7 @@
  "sections": [
   {
    "n": "05",
-   "name": "ALBERTA STAYS",
+   "name": "ALBERTA SAYS NO",
    "chapter": "Number 5: Alberta votes on starting a separation process",
    "seg": "ch5",
    "color": "info"
@@ -99,7 +99,7 @@
   }
  ],
  "upload": {
-  "title": "Oil at a 5-Month High: The Week's 5 Biggest Stories",
+  "title": "Oil at a 5-Month High: The Week's Top 5 Stories",
   "description": "Five stories shaped the week of October 19 to 25, 2026: Alberta's vote against starting a separation process, the deadly attack on a funeral at a church in Jordan, Putin's agreement in principle, per the Kremlin, to resume Ukraine talks, reported planning for new strikes on Iran, and claims of tanker attacks near the Strait of Hormuz as Brent crude reached a five-month high. This recap shows who said what, what is confirmed and what is only claimed.\n\nSources:\nAl Jazeera: Alberta voters reject separation (Oct 20, 2026)\nThe Globe and Mail: The Alberta referendum by the numbers\nNPR: Gunmen open fire at a church during a funeral in Jordan (Oct 24, 2026)\nAl Jazeera: Who was behind the deadly church shooting in Jordan? (Oct 24, 2026)\nFox News: Jordan church attack in Karak kills 9 at a Greek Orthodox funeral\nAP: Trump envoy Witkoff meets Putin in St. Petersburg for Ukraine war talks (Oct 21, 2026)\nAP: Putin agrees to resume trilateral talks on Ukraine war with Kyiv and Washington: Kremlin\nFrance 24: Ukraine and Russia both say ready to resume trilateral talks with US (Oct 21, 2026)\nAP: Blaze at St Petersburg oil sites as Kyiv launches more than 1,000 drones at Russia (Oct 18, 2026)\nAxios: Military ordered to be ready for possible Iran strikes as Trump weighs timing (Oct 7, 2026)\nAxios: Trump rules out Iran strikes before midterms (Oct 8, 2026)\nAl Jazeera: Is Trump signalling a return to war with Iran after the midterms? (Oct 9, 2026)\nNew York Times (as cited by Axios, Al Jazeera and Israeli media): options for renewed Iran strikes\ni24 News: report that the US pressed Israel to strike Iran ahead of elections (Ben Caspit)\nABC News: background on the war that began Feb 28, 2026\nPetra (Jordan News Agency), via Latin Times: national mourning\nCBS News live updates: Trump accuses Iran of making up fake strikes on ships (Oct 22, 2026)\nThe Washington Times: Trump rejects Iranian claims of tanker strikes in Strait of Hormuz as oil prices rise (Oct 22, 2026)\ngCaptain: Iran claims more ships struck near Hormuz as Trump accuses Tehran of faking hits\nSplash247: Hormuz attacks overwhelm UKMTO\nU.S. Energy Information Administration (EIA): World Oil Transit Chokepoints\n\n#geopolitics #news #weeklyrecap #Iran #Ukraine",
   "tags": [
    "geopolitics",
@@ -423,7 +423,8 @@
      "at": "ch5:Outside",
      "until": "ch5:Prime",
      "label": {
-      "text": "MOST DISTRICTS: STAY >60%",
+      "text": "MANY DISTRICTS OUTSIDE CITIES: STAY >60%",
+      "sub": "GLOBE AND MAIL",
       "dx": -300,
       "dy": -110
      }
@@ -1225,7 +1226,12 @@
    "pick": 4,
    "kind": "image",
    "symbolic": true,
-   "move": "right"
+   "move": "right",
+   "lower": {
+    "kicker": "ILLUSTRATIVE",
+    "text": "STOCK IMAGE · NOT RELATED TO THE REPORT",
+    "at": "ch2:This +0.6"
+   }
   },
   {
    "type": "map",
