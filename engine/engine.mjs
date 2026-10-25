@@ -1426,6 +1426,8 @@ if (CMD === 'check') {
       /\bthe (order|ranking) is\b/i, /\beditorial\b/i, /\b(as|that is the \w+ (that )?)?i promised\b/i, /\bas promised\b/i, /\bhere is the summary\b|\bto sum up\b|\bin conclusion\b|\bin (this|today's) video\b/i,
       /\byou will see (who|what|how)\b/i, /\bmade (it|the) (list|cut)\b/i, /\bcount (them|it|these|the stories) down\b/i];
     for (const s of SEGS) for (const sent of s.text.split(/(?<=[.?!])\s+/)) if (META.some(r => r.test(sent))) console.log(`WARNING: meta talk in "${s.id}": "${sent.trim()}" — say what happened, not how the video ranks or presents it`);
+    const rk = SEGS.flatMap(s => (s.text.match(/\brank(ed|s|ing)?\b/gi) || []).map(() => s.id));
+    if (rk.length > 1 || rk.some(id => id !== 'promise')) console.log(`WARNING: "rank" appears ${rk.length}× (${rk.join(', ')}) — only once, in promise: "ranked by impact"`);
   }
   const inUnit = v => Array.isArray(v) && v.every(x => typeof x === 'number' && x >= 0 && x <= 1);
   for (const sc of FOOT) for (const m of sc.M) {
