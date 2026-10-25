@@ -13,6 +13,7 @@ You are producing today's 60-second geopolitics Short end to end. Work unattende
 - Read today's roundups via WebSearch/WebFetch: Just Security "Early Edition: <Month D, YYYY>", Reuters World, AP Top News, BBC World, Al Jazeera. Search queries with today's date.
 - Score candidates: number of major outlets leading with it · genuinely new development (not a rehash) · global stakes · can it be explained on a map in 60 s.
 - Skip a topic covered in the last 2 entries of `log.md` unless there is a major escalation.
+- Learn from the numbers: call Metricool `getAnalyticsDataByMetrics` (brand `metricoolBlogId`, last 14 days, metrics `YTVP01, YTVP17, YTVP06, YTVP08`). Topic families whose Shorts got the most views and the longest average view duration (so far: Iran/Hormuz, Russia–Ukraine energy, US–Iran escalation) get a bonus when two candidates are close; side stories that flopped need a clearly bigger news value. Never skip the day's dominant story because of this, and mention the data in one line of the report.
 - Hard rule: the story must be supported by **≥ 2 independent outlets**. Otherwise take the next candidate.
 
 ## 2. Research (10 min)

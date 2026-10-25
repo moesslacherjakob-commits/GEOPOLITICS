@@ -14,4 +14,6 @@ Fonts: Anton and Inter (both SIL OFL, in `assets/fonts`).
 Daily run: a routine on claude.ai/code (environment **Default**, repo GEOPOLITICS, connector Metricool) follows `PLAYBOOK.md`.
 TikTok: every channel's video also goes to one shared TikTok account at the same time (`config.json → tiktok`, PLAYBOOK step 8b); the step skips itself until TikTok is connected in Metricool to brand `tiktok.blogId`.
 
+**Long-form** (YPP goal: 8,000 h long-form watch time): `"format": "long"` stories in `longform/` render 9–12-minute 16:9 videos with chapters, free/public-domain footage (`tools/footage.py`: Pexels, Pixabay, Wikimedia Commons, NASA) and a 1280×720 thumbnail. The daily routine makes them on Sundays (weekly recap) and Wednesdays (explainer) after the Short — see `LONGFORM.md`.
+
 **Sister channels** (@CLIMATE4YOU, @ECONOMY4YOU, @SCITECH4YOU) share the same engine and live in `desks/` — see `desks/README.md` and `desks/PLAYBOOK.md`. A story inside `desks/<desk>/stories/` automatically renders with that desk's `config.json`.

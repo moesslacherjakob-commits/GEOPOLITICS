@@ -1,0 +1,97 @@
+{
+ "id": "example-hormuz-explained",
+ "format": "long",
+ "example": true,
+ "note": "FORMAT EXAMPLE for LONGFORM.md — shows every long-form building block in about two minutes. Facts are evergreen EIA figures (2024). Never publish this file; real episodes are 8–12 minutes and researched on the day.",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Twenty percent of the world's oil passes through a gap just twenty-one miles wide. What happens when it closes?"},
+  {"id": "promise", "text": "In the next few minutes: why this strait matters more than any other, who depends on it most, and the escape routes the Gulf has built. Stay to the end for the one number traders worry about most."},
+  {"id": "ch1", "pauseBefore": 0.4, "text": "The Strait of Hormuz sits between Iran and Oman. At its narrowest it is about twenty-one miles wide, according to the U.S. Energy Information Administration. But tankers can't use all of it. Ships move in two lanes, each only two miles wide, one in and one out. Every day, roughly twenty million barrels of oil flow through. That is about a fifth of everything the world burns."},
+  {"id": "ch2", "pauseBefore": 0.4, "text": "Most of that oil does not go to Europe or America. The EIA estimates that more than eighty percent heads to Asia. China, India, Japan and South Korea are the biggest buyers. For Saudi Arabia, Iraq, Kuwait and the Emirates, Hormuz is the front door to their customers. Qatar's gas tankers have no other route to the ocean at all."},
+  {"id": "ch3", "pauseBefore": 0.4, "text": "So what if the strait closes? The Gulf has built two pipelines around it. Saudi Arabia can pump crude west to Yanbu on the Red Sea. The Emirates can send oil to Fujairah, outside the strait. Together, the EIA estimates about two point six million barrels a day of unused capacity. That is the number traders worry about. It covers barely an eighth of what normally sails through Hormuz."},
+  {"id": "next", "pauseBefore": 0.4, "text": "Next, we follow the tankers that tried the other way out, through the Red Sea. If you want to know why that route is just as dangerous, this is the video to watch next."}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE CHOKE POINT", "chapter": "The 21-mile choke point", "seg": "ch1", "color": "oil"},
+  {"n": "02", "name": "WHO DEPENDS ON IT", "chapter": "Who depends on Hormuz", "seg": "ch2", "color": "info"},
+  {"n": "03", "name": "THE ESCAPE ROUTES", "chapter": "The escape routes – and the number that worries traders", "seg": "ch3", "color": "danger"},
+  {"n": "04", "name": "WHAT'S NEXT", "chapter": "Next: the Red Sea route", "seg": "next", "color": "accent"}
+ ],
+ "upload": {
+  "title": "The 21-Mile Gap That Controls the World's Oil",
+  "description": "About a fifth of the world's oil passes through the Strait of Hormuz, a gap between Iran and Oman that is roughly 21 miles wide at its narrowest. This video explains why the strait matters, who depends on it and how much oil the Gulf's bypass pipelines could carry if it closed.\n\nSources:\nU.S. Energy Information Administration (EIA): World Oil Transit Chokepoints\nEIA: Amid regional conflict, the Strait of Hormuz remains critical oil chokepoint (2025)\n\n#geopolitics #Hormuz #oil #explained",
+  "tags": ["geopolitics", "Strait of Hormuz", "oil", "Iran", "Oman", "explained", "energy security", "EIA", "pipelines"],
+  "introChapter": "Intro: 21 miles, 20 % of the world's oil"
+ },
+ "thumbnail": {
+  "at": "ch1:Ships +1.5",
+  "focus": "Strait of Hormuz",
+  "zoom": 1.25,
+  "number": "20%",
+  "numberColor": "oil",
+  "lines": [["THROUGH 21 MILES", "text"], ["WHAT IF IT CLOSES?", "accent"]],
+  "source": "SHARE OF WORLD OIL USE · EIA 2024"
+ },
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.3", "exit": "zoom",
+   "view": [{"at": 0, "lon": 38, "lat": 20, "R": 360}, {"at": 4.2, "lon": 56, "lat": 26, "R": 400}],
+   "chip": {"text": "EXPLAINED", "at": 0.2, "color": "accent"},
+   "highlights": [{"iso": "IRN", "color": "danger", "at": "hook:gap"}, {"iso": "OMN", "color": "info", "at": "hook:gap"}],
+   "markers": [{"loc": "Strait of Hormuz", "color": "oil", "at": "hook:gap", "label": "STRAIT OF HORMUZ", "sub": "21 MILES", "dx": -160, "dy": -80, "big": true}],
+   "headline": {"at": "hook:percent", "lines": [["20% OF THE WORLD'S OIL", "oil", 120], ["21 MILES WIDE", "text", 96]]}
+  },
+  {
+   "type": "map", "from": "hook$ +0.3", "to": "next -0.1",
+   "center": [52, 24],
+   "camera": [
+    {"at": "hook$ +0.3", "lon": 56, "lat": 26, "dist": 43, "pitch": 0, "yaw": 0},
+    {"at": "promise +0.3", "lon": 56.2, "lat": 26.3, "dist": 34, "pitch": 46, "yaw": 6, "oy": 40},
+    {"at": "ch1 +0.2", "lon": 56.4, "lat": 26.5, "dist": 17, "pitch": 50, "yaw": 10, "oy": 40},
+    {"at": "ch1:Ships", "lon": 56.5, "lat": 26.4, "dist": 12, "pitch": 54, "yaw": 16, "oy": 40},
+    {"at": "ch1:Every", "lon": 56.4, "lat": 26.4, "dist": 15, "pitch": 50, "yaw": 12, "oy": 40},
+    {"at": "ch2 -0.4", "lon": 56.4, "lat": 26.4, "dist": 16, "pitch": 50, "yaw": 10, "oy": 40},
+    {"at": "ch2 +1.6", "lon": 82, "lat": 24, "dist": 175, "pitch": 30, "yaw": 0, "oy": 60},
+    {"at": "ch2:For", "lon": 51, "lat": 27, "dist": 46, "pitch": 44, "yaw": -4, "oy": 40},
+    {"at": "ch3 +0.2", "lon": 47.5, "lat": 24.6, "dist": 50, "pitch": 42, "yaw": 0, "oy": 30},
+    {"at": "next", "lon": 44, "lat": 20, "dist": 95, "pitch": 36, "yaw": 0, "oy": 40}
+   ],
+   "layers": [
+    {"kind": "tint", "iso": "IRN", "color": "danger", "alpha": 0.5, "fill": 0.1, "at": "ch1"},
+    {"kind": "tint", "iso": "OMN", "color": "info", "alpha": 0.5, "fill": 0.1, "at": "ch1"},
+    {"kind": "tag", "loc": [57.6, 27.6], "text": "IRAN", "color": "danger", "at": "ch1:Iran", "until": "ch2 -0.2", "dy": -60},
+    {"kind": "tag", "loc": [56.25, 26.05], "text": "OMAN", "sub": "MUSANDAM", "color": "info", "at": "ch1:Oman", "until": "ch2 -0.2", "dy": 110},
+    {"kind": "route", "path": [[55.4, 26.62], [56.25, 26.68], [56.65, 26.35], [57.0, 25.75]], "style": "dash", "color": "oil", "at": "ch1:lanes", "until": "ch2 -0.2", "label": {"text": "INBOUND LANE", "sub": "2 MILES WIDE", "loc": [56.0, 26.7], "dy": -90}},
+    {"kind": "route", "path": [[57.15, 25.8], [56.82, 26.4], [56.35, 26.8], [55.45, 26.78]], "style": "dash", "color": "info", "at": "ch1:one", "until": "ch2 -0.2", "label": {"text": "OUTBOUND LANE", "loc": [56.9, 26.2], "dx": 120, "dy": -40}},
+    {"kind": "movers", "path": [[57.15, 25.8], [56.82, 26.4], [56.35, 26.8], [55.45, 26.78]], "icon": "ship", "color": "oil", "count": 4, "speed": 0.03, "spacing": 0.2, "at": "ch1:Every", "until": "ch2 -0.2"},
+    {"kind": "column", "loc": "Strait of Hormuz", "value": 20, "display": "{v}M", "label": "BARRELS / DAY", "color": "oil", "scale": 0.25, "at": "ch1:Every", "until": "ch2 -0.2"},
+    {"kind": "arc", "from": "Strait of Hormuz", "to": "Shanghai", "color": "danger", "height": 0.22, "dur": 1.4, "at": "ch2:China", "until": "ch2:For -0.2"},
+    {"kind": "arc", "from": "Strait of Hormuz", "to": "Mumbai", "color": "danger", "height": 0.3, "dur": 1.0, "at": "ch2:India", "until": "ch2:For -0.2"},
+    {"kind": "arc", "from": "Strait of Hormuz", "to": "Tokyo", "color": "danger", "height": 0.2, "dur": 1.5, "at": "ch2:Japan", "until": "ch2:For -0.2"},
+    {"kind": "arc", "from": "Strait of Hormuz", "to": "Seoul", "color": "danger", "height": 0.2, "dur": 1.4, "at": "ch2:Korea", "until": "ch2:For -0.2"},
+    {"kind": "stamp", "text": "80%+ TO ASIA", "icon": "ship", "color": "danger", "screen": [960, 250], "at": "ch2:eighty", "until": "ch2:For -0.2", "note": "SHARE OF CRUDE THROUGH HORMUZ · EIA"},
+    {"kind": "card", "screen": [70, 180, 560], "title": "GULF EXPORTERS", "badge": "VIA HORMUZ", "color": "info", "at": "ch2:For", "until": "ch3 -0.2", "rows": [{"icon": "barrel", "text": "SAUDI ARABIA · IRAQ", "at": "ch2:Saudi"}, {"icon": "barrel", "text": "KUWAIT · UAE", "at": "ch2:Kuwait"}, {"icon": "flame", "text": "QATAR LNG: NO OTHER ROUTE", "at": "ch2:Qatar's"}]},
+    {"kind": "route", "path": [[49.6, 25.9], [47.5, 25.0], [45.0, 24.6], [42.0, 24.3], [38.1, 24.1]], "style": "flow", "color": "ok", "at": "ch3:Saudi", "until": "next -0.2", "label": {"text": "EAST–WEST PIPELINE", "sub": "TO YANBU, RED SEA", "loc": [43.5, 24.4], "dy": -110}},
+    {"kind": "route", "path": [[53.66, 23.8], [55.0, 24.4], [56.33, 25.12]], "style": "flow", "color": "ok", "at": "ch3:Emirates", "until": "next -0.2", "label": {"text": "TO FUJAIRAH", "sub": "OUTSIDE THE STRAIT", "loc": [55.1, 24.4], "dx": 80, "dy": 120}},
+    {"kind": "marker", "loc": "Strait of Hormuz", "style": "x", "color": "danger", "at": "ch3:closes", "until": "ch3:Saudi", "label": {"text": "CLOSED?", "dy": -80}}
+   ]
+  },
+  {"type": "footage", "asset": "f01", "from": "ch1:Every -0.2", "to": "ch1$ +0.3", "query": "oil tanker at sea aerial", "kind": "video", "symbolic": true,
+   "lower": {"kicker": "EVERY DAY · EIA, 2024", "text": "≈ 20 MILLION BARRELS THROUGH HORMUZ", "at": "ch1:twenty"}},
+  {"type": "footage", "asset": "f02", "from": "ch2:For -0.2", "to": "ch2:Qatar's -0.2", "query": "oil refinery persian gulf", "kind": "image", "symbolic": true, "move": "right"},
+  {"type": "footage", "asset": "f03", "from": "ch2:Qatar's -0.2", "to": "ch2$ +0.3", "query": "LNG tanker ship", "kind": "video", "symbolic": true,
+   "lower": {"kicker": "QATAR", "text": "LNG HAS NO OTHER ROUTE TO THE OCEAN", "at": "ch2:Qatar's +0.3"}},
+  {"type": "scale", "from": "ch3:That -0.2", "to": "ch3$ +0.3", "label": "THROUGH HORMUZ vs. BYPASS PIPELINES", "sublabel": "MILLION BARRELS PER DAY · EIA ESTIMATES", "color": "oil",
+   "items": [{"name": "THROUGH HORMUZ", "value": 20, "display": "20M", "color": "oil", "icon": "barrel", "at": "ch3:That"}, {"name": "UNUSED BYPASS CAPACITY", "value": 2.6, "display": "2.6M", "color": "ok", "at": "ch3:covers"}],
+   "note": "≈ ONE EIGHTH", "source": "U.S. ENERGY INFORMATION ADMINISTRATION"},
+  {
+   "type": "end", "from": "next +0.1", "to": "end",
+   "view": [{"at": "next -0.4", "lon": 44, "lat": 20, "R": 900}, {"at": "next +1", "lon": 42, "lat": 18, "R": 470}, {"at": "end", "lon": 40, "lat": 16, "R": 470}],
+   "highlights": [{"iso": "YEM", "color": "danger"}, {"iso": "SAU", "color": "info"}, {"iso": "EGY", "color": "neutral"}],
+   "markers": [{"loc": "Bab al-Mandab", "color": "danger"}, {"loc": "Suez Canal", "color": "info"}],
+   "lines": [["NEXT: THE RED SEA ROUTE", "text"], ["WHY IT'S JUST AS RISKY", "accent"]],
+   "sources": ["DATA: U.S. ENERGY INFORMATION ADMINISTRATION (EIA)", "FOOTAGE: SEE DESCRIPTION"]
+  }
+ ]
+}

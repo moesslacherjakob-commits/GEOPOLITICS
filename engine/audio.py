@@ -1,12 +1,13 @@
 """Sound design: tension bed (chord per section, pulse, bass) + SFX on the engine's cue list.
 Usage: python3 engine/audio.py <events.json> <out.wav> [voice.wav]"""
 import json, sys, numpy as np
-from scipy.signal import butter, sosfilt, fftconvolve
+from scipy.signal import butter, sosfilt, fftconvolve, oaconvolve
 from scipy.io import wavfile
 
 SR = 48000
 spec = json.load(open(sys.argv[1])); OUT = sys.argv[2]; VOICE = sys.argv[3] if len(sys.argv) > 3 else None
 DUR = spec['duration']; N = int(SR * DUR); ev = spec['events']; secs = spec.get('sections') or []
+LONG = spec.get('format') == 'long'  # long-form: calmer bed (beat only after the hook), float32 buffers, overlap-add reverb
 seed = abs(hash(json.dumps(ev[:5]))) % (2 ** 31); rng = np.random.default_rng(seed)
 t_all = np.arange(N) / SR
 
@@ -24,7 +25,7 @@ def place(bus, sig, t, pan=0.0, g=1.0):
     bus[0, i:i + n] += sig[:n] * l * g * 1.41; bus[1, i:i + n] += sig[:n] * r * g * 1.41
 def saw(f, n, det=0.0): t = np.arange(n) / SR; return 2 * ((t * f * (1 + det)) % 1.0) - 1
 
-music = np.zeros((2, N)); sfx = np.zeros((2, N))
+music = np.zeros((2, N), np.float32); sfx = np.zeros((2, N), np.float32)
 # progressions (minor-key tension); pick one per story deterministically
 PROGS = [
     [[73.42, 110.0, 146.83, 174.61], [58.27, 116.54, 146.83, 174.61], [73.42, 110.0, 155.56, 174.61], [49.0, 98.0, 146.83, 116.54]],
@@ -42,9 +43,10 @@ for i in range(len(bounds) - 1):
     sig = lp(sig, 560, 4)
     e = np.minimum(1, np.arange(n) / (0.6 * SR)) * np.minimum(1, (n - np.arange(n)) / (1.2 * SR))
     place(music, sig * e * (0.85 + 0.15 * np.sin(2 * np.pi * 0.18 * np.arange(n) / SR)), max(0, a - 0.2), 0, 0.055)
-music += np.sin(2 * np.pi * prog[0][0] / 2 * t_all) * 0.10 * np.minimum(1, t_all / 2)
+music += (np.sin(2 * np.pi * prog[0][0] / 2 * t_all) * (0.07 if LONG else 0.10) * np.minimum(1, t_all / 2)).astype(np.float32)
 
 BPM = 96; beat = 60 / BPM; start = secs[0]['a'] if secs else 5.0; stop = DUR - 2.0
+if LONG: stop = min(stop, start + 24.0)  # a steady beat for 11 minutes tires the ear: only after the hook
 kick_n = int(0.45 * SR); kt = np.arange(kick_n) / SR
 kick = np.sin(2 * np.pi * (45 * kt + 80 * 0.04 * (1 - np.exp(-kt / 0.04)))) * env(kick_n, 0.002, 0.16)
 hat = hp(rng.standard_normal(int(0.05 * SR)), 7000) * env(int(0.05 * SR), 0.0005, 0.012)
@@ -102,7 +104,7 @@ for e in ev:
     pan = rng.uniform(-.5, .5) if e['type'] in ('whoosh', 'blip') else 0
     place(sfx, FX[e['type']](), max(0, e['t'] - LEAD.get(e['type'], 0)), pan, GAIN[e['type']] * e.get('g', 1))
 ir_n = int(1.4 * SR); ir = lp(rng.standard_normal(ir_n) * np.exp(-np.arange(ir_n) / SR / 0.35), 5000); ir /= np.sqrt((ir ** 2).sum())
-for c in range(2): sfx[c] += fftconvolve(sfx[c], ir, mode='full')[:N] * 0.22
+for c in range(2): sfx[c] += ((oaconvolve if LONG else fftconvolve)(sfx[c], ir, mode='full')[:N] * 0.22).astype(sfx.dtype)
 duck = np.ones(N)
 for e in ev:
     if e['type'] in ('impact', 'stamp'):
@@ -116,7 +118,7 @@ if VOICE:
     env = lp(np.abs(vv), 6, 2); env = np.clip(env / (np.percentile(env[env > 1e-4], 90) if (env > 1e-4).any() else 1), 0, 1)
     music *= 1 - 0.68 * env; sfx *= 1 - 0.35 * env
     mix = music * duck * 0.8 + sfx * 0.75
-    mix /= max(np.sqrt((mix ** 2).mean()), 1e-6) / 10 ** (-24 / 20)            # bed around -24 dBFS RMS
+    mix /= max(np.sqrt((mix ** 2).mean()), 1e-6) / 10 ** ((-28 if LONG else -24) / 20)  # bed around -24 dBFS RMS (long-form -28)
     vrms = np.sqrt((vv[np.abs(vv) > 0.01] ** 2).mean()) if (np.abs(vv) > 0.01).any() else 1
     mix = mix + np.stack([vv, vv]) * (10 ** (-15 / 20) / vrms)                  # voice around -15 dBFS RMS
 else:

@@ -1,0 +1,19 @@
+{
+ "note": "YPP plan (base scenario, Monetarisierungsplan 2027): cumulative long-form watch hours since 2026-11-01 and subscribers at each month end. Ambitious scenario reaches 8,000 h at the end of August 2027.",
+ "start": "2026-11-01",
+ "goal": {"subscribers": 1000, "longformHours": 8000},
+ "months": {
+  "2026-11": {"subscribers": 60, "hours": 30, "longVideos": 3},
+  "2026-12": {"subscribers": 100, "hours": 160, "longVideos": 11},
+  "2027-01": {"subscribers": 150, "hours": 430, "longVideos": 20},
+  "2027-02": {"subscribers": 210, "hours": 830, "longVideos": 28},
+  "2027-03": {"subscribers": 280, "hours": 1360, "longVideos": 37},
+  "2027-04": {"subscribers": 360, "hours": 2030, "longVideos": 45},
+  "2027-05": {"subscribers": 450, "hours": 2830, "longVideos": 54},
+  "2027-06": {"subscribers": 550, "hours": 3760, "longVideos": 62},
+  "2027-07": {"subscribers": 660, "hours": 4830, "longVideos": 71},
+  "2027-08": {"subscribers": 780, "hours": 6030, "longVideos": 80},
+  "2027-09": {"subscribers": 900, "hours": 7360, "longVideos": 88},
+  "2027-10": {"subscribers": 1000, "hours": 8830, "longVideos": 97}
+ }
+}

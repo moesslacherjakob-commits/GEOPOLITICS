@@ -1,13 +1,14 @@
 // geo-shorts engine: story.json -> 1080x1920 motion-graphic frames (piped to ffmpeg)
+// Long-form ("format": "long" in the story) renders 1920x1080 instead: chapter header, footage scenes, 16:9 thumbnail (see LONGFORM.md).
 // Usage:
 //   node engine/engine.mjs <story.json> check                 -> validate + print timing
 //   node engine/engine.mjs <story.json> events <out.json>     -> audio cue list + word timings
 //   node engine/engine.mjs <story.json> stills <outdir> t1,t2  -> PNG stills (with captions)
-//   node engine/engine.mjs <story.json> render <outdir> f0 f1 tag -> two mp4 segments (clean + captions)
+//   node engine/engine.mjs <story.json> render <outdir> f0 f1 tag [caps] -> two mp4 segments (clean + captions), or only captions with "caps"
 import { createRequire } from 'module';
 import fs from 'fs';
 import path from 'path';
-import { spawn } from 'child_process';
+import { spawn, spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -16,7 +17,7 @@ const ROOT = path.resolve(HERE, '..');
 const NM = process.env.NODE_TOOLS || [path.join(ROOT, 'node_modules/'), '/opt/npm-tools/node_modules/']
   .find(d => fs.existsSync(path.join(d, '@napi-rs/canvas'))) || '/opt/npm-tools/node_modules/';
 const require = createRequire(NM);
-const { createCanvas, GlobalFonts, Path2D } = require('@napi-rs/canvas');
+const { createCanvas, GlobalFonts, Path2D, loadImage, Image } = require('@napi-rs/canvas');
 const d3 = await import(path.join(NM, 'd3-geo/src/index.js'));
 const [, , STORY_PATH, CMD, ...ARGS] = process.argv;
 if (!STORY_PATH || !CMD) { console.error('usage: engine.mjs <story.json> <check|events|stills|render> ...'); process.exit(1); }
@@ -28,8 +29,19 @@ FONT(path.join(ROOT, 'assets/fonts/Anton-Regular.ttf'), 'Anton');
 const INTER = fs.existsSync(path.join(ROOT, 'assets/fonts/Inter-ExtraBold.otf')) ? path.join(ROOT, 'assets/fonts/') : '/usr/share/fonts/opentype/inter/';
 FONT(INTER + 'InterDisplay-Black.otf', 'IBlack'); FONT(INTER + 'Inter-ExtraBold.otf', 'IXBold'); FONT(INTER + 'Inter-SemiBold.otf', 'ISemi');
 
+// ---------------------------------------------------------------- channel config + format
+// channel config: $GEO_CONFIG, else desks/<desk>/config.json for a story in desks/<desk>/stories/, else the root config.json (@GEOPOLITICS4YOU)
+const CFG_PATH = process.env.GEO_CONFIG || (() => {
+  const m = path.resolve(STORY_PATH).match(/^(.*[\/\\]desks[\/\\][^\/\\]+)[\/\\]stories[\/\\][^\/\\]+$/);
+  return m && fs.existsSync(path.join(m[1], 'config.json')) ? path.join(m[1], 'config.json') : path.join(ROOT, 'config.json');
+})();
+const CFG = (() => { try { return JSON.parse(fs.readFileSync(CFG_PATH, 'utf8')); } catch { return {}; } })();
+const LONG = story.format === 'long';                         // long-form video (LONGFORM.md)
+const LAND = LONG || story.orientation === 'landscape';        // 16:9 frame
+const LCFG = LONG ? (CFG.longform || {}) : {};                 // config.json -> longform overrides for long-form
+
 // ---------------------------------------------------------------- utils
-const W = 1080, H = 1920, FPS = story.fps || 30;
+const W = LAND ? 1920 : 1080, H = LAND ? 1080 : 1920, FPS = story.fps || LCFG.fps || 30;
 const DEG = Math.PI / 180;
 const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
 const lerp = (a, b, t) => a + (b - a) * t;
@@ -45,12 +57,6 @@ const hex = h => { if (h.length === 4) h = '#' + h[1] + h[1] + h[2] + h[2] + h[3
 const rgba = (h, a = 1) => { const [r, g, b] = hex(h); return `rgba(${r},${g},${b},${a})`; };
 const mix = (h1, h2, t) => { const a = hex(h1), b = hex(h2); const c = a.map((v, i) => Math.round(lerp(v, b[i], t))); return '#' + c.map(v => v.toString(16).padStart(2, '0')).join(''); };
 
-// channel config: $GEO_CONFIG, else desks/<desk>/config.json for a story in desks/<desk>/stories/, else the root config.json (@GEOPOLITICS4YOU)
-const CFG_PATH = process.env.GEO_CONFIG || (() => {
-  const m = path.resolve(STORY_PATH).match(/^(.*[\/\\]desks[\/\\][^\/\\]+)[\/\\]stories[\/\\][^\/\\]+$/);
-  return m && fs.existsSync(path.join(m[1], 'config.json')) ? path.join(m[1], 'config.json') : path.join(ROOT, 'config.json');
-})();
-const CFG = (() => { try { return JSON.parse(fs.readFileSync(CFG_PATH, 'utf8')); } catch { return {}; } })();
 const THEME = Object.assign({
   ink: '#04080f', ocean1: '#05162e', ocean2: '#0b2d58', land: '#222f41', border: '#465d7c',
   text: '#F3F6FA', mute: '#93A4BA', accent: '#F6B73C', danger: '#FF4438', ally: '#E8A33A', oil: '#FFB020',
@@ -89,8 +95,8 @@ function syl(tok) {
   for (const p of w.split(/\s+/)) { if (!p) continue; const m = p.match(/[aeiouy]+/g); let c = m ? m.length : 1; if (p.endsWith('e') && c > 1 && !p.endsWith('le')) c--; n += Math.max(1, c); }
   return Math.max(1, n);
 }
-const PACE = CFG.pace || {};
-const MAXD = story.maxDuration || PACE.maxDuration || 78;
+const PACE = Object.assign({}, CFG.pace || {}, LCFG.pace || {});
+const MAXD = story.maxDuration || PACE.maxDuration || (LONG ? 1200 : 78);
 // optional real voice timing (from tools/tts_elevenlabs.py): {segments:[{id,a,b,words:[{text,t0,t1}]}]}
 const VOICE = process.env.VOICE_TIMING && fs.existsSync(process.env.VOICE_TIMING) ? JSON.parse(fs.readFileSync(process.env.VOICE_TIMING, 'utf8')) : null;
 const SEGS = story.script.map(s => ({ ...s }));
@@ -102,7 +108,7 @@ const WORDS = [];
     const items = toks.map((tk, i) => ({ tk, w: syl(tk) + .45, pause: i === toks.length - 1 ? 0 : /[.?!:]$/.test(tk) ? 1.7 : /[,;—]$/.test(tk) ? .8 : 0 }));
     const tot = items.reduce((a, b) => a + b.w + b.pause, 0);
     const vs = VOICE && VOICE.segments.find(v => v.id === s.id);
-    if (vs) { s.a = vs.a; s.b = vs.b; } else { s.a = s.a ?? cursor; s.b = s.b ?? s.a + tot / (s.rate || (si === 0 && PACE.hookRate) || RATE); }
+    if (vs) { s.a = vs.a; s.b = vs.b; } else { s.a = s.a ?? cursor + (s.pauseBefore || 0); s.b = s.b ?? s.a + tot / (s.rate || (si === 0 && PACE.hookRate) || RATE); }
     const k = (s.b - s.a) / tot; let t = s.a; s.words = [];
     items.forEach((it, i) => {
       let t0 = t, t1 = t + it.w * k;
@@ -133,15 +139,15 @@ function A(x) {
   throw new Error(`anchor "${x}": word "${mm[3]}" (#${occ}) not found in segment "${seg.id}"`);
 }
 
-// captions
-const CAP_FONT = '68px IBlack';
+// captions (long-form: smaller, up to 5 words per chunk, lower in the frame)
+const CAP_FONT = LAND ? '52px IBlack' : '68px IBlack', CAP_W = LAND ? 1300 : 880, CAP_N = LAND ? 5 : 3, CAP_Y = LAND ? H - 86 : 1335;
 const meas = createCanvas(10, 10).getContext('2d');
 const CHUNKS = [];
 for (const s of SEGS) {
   let cur = []; const flush = () => { if (cur.length) CHUNKS.push({ seg: s, words: cur }); cur = []; };
   for (const w of s.words) {
     meas.font = CAP_FONT; const test = [...cur, w].map(x => x.text.toUpperCase()).join(' ');
-    if (cur.length && (cur.length >= 3 || meas.measureText(test).width > 880)) flush();
+    if (cur.length && (cur.length >= CAP_N || meas.measureText(test).width > CAP_W)) flush();
     cur.push(w); if (/[.,?!:;]$/.test(w.text)) flush();
   }
   flush();
@@ -183,7 +189,8 @@ function loc(x) {
 let LON0 = 0, LAT0 = 0, CL = 1;
 function setCenter(lon, lat) { LON0 = lon; LAT0 = lat; CL = Math.cos(LAT0 * DEG); }
 const wx = lon => (lon - LON0) * CL, wy = lat => lat - LAT0;
-const FOC = 1500, CX = 540, CY = 690;
+const FOC = 1500, CX = W / 2, CY = LAND ? 560 : 690;
+const GCY = LAND ? 600 : 800; // default globe centre y
 function makeCam(k) {
   const T = [wx(k.lon), wy(k.lat), 0], th = k.pitch * DEG, ps = k.yaw * DEG;
   const d = [-Math.sin(th) * Math.sin(ps), -Math.sin(th) * Math.cos(ps), Math.cos(th)];
@@ -300,7 +307,7 @@ function drawMapBase(cam) {
   for (const c of WORLD) { if (!visible(cam, c)) continue; for (const r of c.rings) { ringPath(cam, r, 0, top); ringPath(cam, r, -.32, base); } }
   ctx.fillStyle = '#060b13'; ctx.fill(base);
   ctx.save(); shadow('rgba(80,140,210,.25)', 24); ctx.fillStyle = THEME.land; ctx.fill(top); ctx.restore();
-  const lg = ctx.createLinearGradient(0, 200, 0, 1500); lg.addColorStop(0, 'rgba(70,95,125,0)'); lg.addColorStop(1, 'rgba(70,95,125,.3)'); ctx.fillStyle = lg; ctx.fill(top);
+  const lg = ctx.createLinearGradient(0, H * .1, 0, H * .78); lg.addColorStop(0, 'rgba(70,95,125,0)'); lg.addColorStop(1, 'rgba(70,95,125,.3)'); ctx.fillStyle = lg; ctx.fill(top);
   ctx.strokeStyle = rgba(THEME.border, .9); ctx.lineWidth = 1.3; ctx.stroke(top);
 }
 function extrude(cam, iso, h, topCol, a = 1, glow = 0) {
@@ -375,7 +382,7 @@ function column(cam, lon, lat, h, c, a, label, val) {
 // ---------------------------------------------------------------- globe renderer
 const grat = d3.geoGraticule10();
 function drawGlobe(o) {
-  const { lon, lat, R, cx = 540, cy = 800, hl = [], a = 1 } = o;
+  const { lon, lat, R, cx = W / 2, cy = GCY, hl = [], a = 1 } = o;
   const proj = d3.geoOrthographic().rotate([-lon, -lat]).scale(R).translate([cx, cy]).clipAngle(90).precision(.6), pth = d3.geoPath(proj, ctx);
   ctx.save(); ctx.globalAlpha = a;
   const bg = ctx.createRadialGradient(cx, cy, R * .5, cx, cy, Math.max(W, H)); bg.addColorStop(0, '#0a1a33'); bg.addColorStop(1, '#02050a'); ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
@@ -458,6 +465,86 @@ for (const sc of SCENES) {
   else if (sc.type === 'chain' || sc.type === 'flow') { sc.steps.forEach((s, i) => s.t = A(s.at ?? (sc.from + .3 + i * .8))); sc.steps.forEach(s => ev(s.t, 'blip', .7)); ev(sc.from - .3, 'whoosh', .7); }
   else if (sc.type === 'timeline') { sc.items.forEach((it, i) => it.t = A(it.at ?? (sc.from + .3 + i * .6))); sc.items.forEach(it => ev(it.t, 'blip', .6)); ev(sc.from - .3, 'whoosh', .7); }
   else if (sc.type === 'scale') { sc.items.forEach((it, i) => it.t = A(it.at ?? (sc.from + .3 + i * .7))); sc.items.forEach(it => ev(it.t, 'rise', .7)); ev(sc.from - .3, 'whoosh', .7); }
+  else if (sc.type === 'footage') { if (sc.lower) sc.lower.t = A(sc.lower.at ?? (sc.from + .5)); if (sc.sfx !== false) ev(sc.from - .2, 'whoosh', .45); }
+}
+
+// ---------------------------------------------------------------- footage (long-form): photos / video clips from tools/footage.py
+// A footage scene covers the frame for its span (cross-fade in/out); whatever scene lies underneath (usually the chapter's map)
+// shows through when the asset is missing, so a failed download never breaks the video.
+// Asset lookup: scene.file (path relative to the repo) or scene.asset -> out/<id>/footage/manifest.json {assets: {<id>: {file, kind, label, credit}}}.
+const FOOT_MANIFEST = (() => {
+  const p = process.env.GEO_FOOTAGE || path.join(ROOT, 'out', story.id, 'footage', 'manifest.json');
+  try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return null; }
+})();
+const FOOT = SCENES.filter(s => s.type === 'footage');
+for (const sc of FOOT) {
+  const m = sc.asset && FOOT_MANIFEST && FOOT_MANIFEST.assets ? FOOT_MANIFEST.assets[sc.asset] : null;
+  const f = sc.file || (m && m.file);
+  sc.path = f ? (path.isAbsolute(f) ? f : path.join(ROOT, f)) : null;
+  if (sc.path && !fs.existsSync(sc.path)) sc.path = null;
+  sc.kind = sc.kind || (m && m.kind) || (sc.path && /\.(mp4|mov|webm|mkv|m4v|ogv)$/i.test(sc.path) ? 'video' : 'image');
+  sc.label = sc.label ?? (m && m.label) ?? '';
+  sc.credit = sc.credit ?? (m && m.credit) ?? '';
+  if (sc.path && sc.kind === 'image') { try { sc.img = await loadImage(fs.readFileSync(sc.path)); } catch (e) { console.log(`footage ${sc.asset || sc.file}: ${e.message}`); sc.path = null; } }
+}
+// Video frames come from ffmpeg as a JPEG stream (q 2, visually lossless at this size) and are decoded with Image:
+// putImageData leaks native memory in @napi-rs/canvas, JPEG -> Image does not.
+const vfArgs = () => ['-vf', `fps=${FPS},scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H}`];
+const jpgArgs = ['-f', 'image2pipe', '-c:v', 'mjpeg', '-q:v', '2', 'pipe:1'];
+const EOI = Buffer.from([0xff, 0xd9]);
+function toImage(buf) { // the bitmap is only ready after onload, even though width is set synchronously
+  return new Promise(res => { const im = new Image(); im.onload = () => res(im.width ? im : null); im.onerror = () => res(null); im.src = buf; });
+}
+function openDecoder(sc, k) { // streaming decoder from clip frame k (frames are counted from scene start - .25 s)
+  const ss = (sc.start || 0) + k / FPS;
+  const p = spawn('ffmpeg', ['-loglevel', 'error', '-ss', ss.toFixed(3), '-i', sc.path, '-an', ...vfArgs(), ...jpgArgs], { stdio: ['ignore', 'pipe', 'inherit'] });
+  const d = { p, idx: k - 1, ended: false, acc: Buffer.alloc(0), frames: [], waiter: null };
+  const wake = () => { if (d.waiter) { const w = d.waiter; d.waiter = null; w(); } };
+  p.stdout.on('data', c => {
+    d.acc = d.acc.length ? Buffer.concat([d.acc, c]) : c;
+    for (;;) { const e = d.acc.indexOf(EOI, 2); if (e < 0) break; d.frames.push(d.acc.subarray(0, e + 2)); d.acc = d.acc.subarray(e + 2); }
+    if (d.frames.length > 6) p.stdout.pause(); wake();
+  });
+  p.stdout.on('end', () => { d.ended = true; wake(); });
+  p.on('error', () => { d.ended = true; wake(); });
+  return d;
+}
+async function readFrame(d) {
+  while (!d.frames.length) {
+    if (d.ended) return null;
+    if (d.p.stdout.isPaused()) d.p.stdout.resume();
+    await new Promise(res => { d.waiter = res; });
+  }
+  const f = d.frames.shift();
+  if (d.frames.length < 3 && d.p.stdout.isPaused()) d.p.stdout.resume();
+  return f;
+}
+async function blitFrame(sc, buf) { const im = await toImage(buf); if (im) sc.frame = im; }
+async function prepFootage(t) { // render: keep each active video scene's current frame in sc.frame
+  for (const sc of FOOT) {
+    if (sc.kind !== 'video' || !sc.path) continue;
+    const active = t >= sc.from - .25 && t < sc.to + .25;
+    if (!active) { if (sc.dec) { sc.dec.p.kill('SIGKILL'); sc.dec = null; } continue; }
+    const want = Math.max(0, Math.round((t - (sc.from - .25)) * FPS));
+    if (!sc.dec || want < sc.dec.idx) { if (sc.dec) sc.dec.p.kill('SIGKILL'); sc.dec = openDecoder(sc, want); }
+    let tries = 0;
+    while (sc.dec.idx < want) {
+      const b = await readFrame(sc.dec);
+      if (!b) { // clip shorter than the scene: play it again from the clip start
+        if (++tries > 2) { sc.dec.idx = want; break; } // unreadable: keep the last frame
+        sc.dec.p.kill('SIGKILL'); const d = openDecoder(sc, 0); d.idx = want - 1; sc.dec = d; continue;
+      }
+      sc.dec.idx++; if (sc.dec.idx === want) await blitFrame(sc, b);
+    }
+  }
+}
+async function prepStill(t) { // stills / thumbnail: one frame per active video scene
+  for (const sc of FOOT) {
+    if (sc.kind !== 'video' || !sc.path || t < sc.from - .25 || t >= sc.to + .25) continue;
+    const grab = ss => spawnSync('ffmpeg', ['-loglevel', 'error', ...(ss != null ? ['-ss', ss.toFixed(3)] : []), '-i', sc.path, '-an', '-frames:v', '1', ...vfArgs(), ...jpgArgs], { maxBuffer: 64 << 20 }).stdout;
+    const b = grab((sc.start || 0) + Math.max(0, t - (sc.from - .25)));
+    if (b && b.length > 1000) await blitFrame(sc, b); else { const b0 = grab(null); if (b0 && b0.length > 1000) await blitFrame(sc, b0); }
+  }
 }
 const SECTIONS = (story.sections || []).map((s, i, arr) => ({ ...s, a: A(s.from ?? s.seg), b: A(s.to ?? (arr[i + 1] ? (arr[i + 1].from ?? arr[i + 1].seg) : SEGS[SEGS.length - 1].id + '$')) }));
 SECTIONS.forEach(s => ev(s.a - .45, 'whoosh', .9));
@@ -467,18 +554,18 @@ const FLASHES = [...SECTIONS.map(s => s.a), ...SCENES.filter(s => s.type === 'en
 // opener: the designed thumbnail IS the first frame of the video (the Shorts feed shows no thumbnail, only the video),
 // held ~1 s while the hook starts, then it zooms away into the globe. Off with thumbnail.opener:false or config "opener": false.
 const TH = story.thumbnail || null;
-const OPEN_D = TH && TH.opener !== false && CFG.opener !== false ? (TH.openerDur ?? CFG.openerDur ?? 1.0) : 0, OPEN_X = .35;
+const OPEN_D = !LAND && TH && TH.opener !== false && CFG.opener !== false ? (TH.openerDur ?? CFG.openerDur ?? 1.0) : 0, OPEN_X = .35; // long-form: no opener (16:9 thumbnail is shown before the click)
 if (OPEN_D) ev(OPEN_D - .05, 'whoosh', .7);
 let PROJ = null; // lon/lat -> screen of the geo scene drawn last (used for thumbnail.focus)
 
 // ---------------------------------------------------------------- scene renderers
 function globeScene(sc, t) {
   const v = sc.views; let o = v[0];
-  for (let i = 0; i < v.length - 1; i++) if (t >= v[i].t) { const e = E.inOut(clamp((t - v[i].t) / Math.max(.01, v[i + 1].t - v[i].t))); o = { lon: lerp(v[i].lon, v[i + 1].lon, e), lat: lerp(v[i].lat, v[i + 1].lat, e), R: lerp(v[i].R, v[i + 1].R, e), cy: lerp(v[i].cy ?? 800, v[i + 1].cy ?? 800, e) }; }
+  for (let i = 0; i < v.length - 1; i++) if (t >= v[i].t) { const e = E.inOut(clamp((t - v[i].t) / Math.max(.01, v[i + 1].t - v[i].t))); o = { lon: lerp(v[i].lon, v[i + 1].lon, e), lat: lerp(v[i].lat, v[i + 1].lat, e), R: lerp(v[i].R, v[i + 1].R, e), cy: lerp(v[i].cy ?? GCY, v[i + 1].cy ?? GCY, e) }; }
   if (t >= v[v.length - 1].t) o = v[v.length - 1];
-  let { lon, lat, R } = o, cy = o.cy ?? 800;
+  let { lon, lat, R } = o, cy = o.cy ?? GCY;
   const zoom = sc.exit === 'zoom' ? E.in(P(t, sc.to - .95, .95)) : 0;
-  R = lerp(R, 2000, zoom); cy = lerp(cy, CY, zoom);
+  R = lerp(R, LAND ? 2600 : 2000, zoom); cy = lerp(cy, CY, zoom);
   const intro = sc.idx === 0 ? E.out(P(t, sc.from, .6)) : 1;
   const hl = sc.hls.map(h => ({ iso: h.iso, c: col(h.color), a: E.out(P(t, h.at, .4)) * (1 - P(t, h.until - .3, .3)) * (h.alpha ?? .9) }));
   const G = drawGlobe({ lon, lat, R: R * lerp(.85, 1, intro), cy, a: intro, hl });
@@ -490,22 +577,22 @@ function globeScene(sc, t) {
     if (m.label) tag(q[0], q[1], m.label, c, E.out(P(t, m.at, .35)) * fade * (1 - P(t, m.until - .3, .3)), { dy: m.dy ?? -90, dx: m.dx ?? 0, sub: m.sub });
   }
   if (sc.chip && !THUMB) {
-    const ba = win(t, sc.chip.t, sc.chip.u, .3, .3) * fade;
-    if (ba > 0) { const w = tw(sc.chip.text, '26px IXBold', 3) + 80; ctx.save(); ctx.globalAlpha = ba; rr(60, 196, w, 54, 27); ctx.fillStyle = rgba(col(sc.chip.color || 'danger'), .16); ctx.fill(); ctx.strokeStyle = rgba(col(sc.chip.color || 'danger'), .9); ctx.lineWidth = 2; ctx.stroke(); ctx.fillStyle = col(sc.chip.color || 'danger'); ctx.globalAlpha = ba * (.5 + .5 * Math.sin(t * 9)); ctx.beginPath(); ctx.arc(90, 223, 8, 0, 7); ctx.fill(); ctx.globalAlpha = ba; text(sc.chip.text, 110, 224, '26px IXBold', THEME.text, 'left', 3, 'middle'); ctx.restore(); }
+    const ba = win(t, sc.chip.t, sc.chip.u, .3, .3) * fade, cy0 = LAND ? 48 : 196;
+    if (ba > 0) { const w = tw(sc.chip.text, '26px IXBold', 3) + 80; ctx.save(); ctx.globalAlpha = ba; rr(60, cy0, w, 54, 27); ctx.fillStyle = rgba(col(sc.chip.color || 'danger'), .16); ctx.fill(); ctx.strokeStyle = rgba(col(sc.chip.color || 'danger'), .9); ctx.lineWidth = 2; ctx.stroke(); ctx.fillStyle = col(sc.chip.color || 'danger'); ctx.globalAlpha = ba * (.5 + .5 * Math.sin(t * 9)); ctx.beginPath(); ctx.arc(90, cy0 + 27, 8, 0, 7); ctx.fill(); ctx.globalAlpha = ba; text(sc.chip.text, 110, cy0 + 28, '26px IXBold', THEME.text, 'left', 3, 'middle'); ctx.restore(); }
   }
   if (sc.headline && !THUMB) {
     const hd = sc.headline, hs = P(t, hd.t - .05, .28);
     if (hs > 0) {
-      const a = clamp(hs * 3) * (1 - P(t, A(hd.until ?? sc.to) - .45, .3)) * fade, s = lerp(1.45, 1, E.outExpo(hs)), y0 = hd.y ?? 360;
-      ctx.save(); ctx.globalAlpha = a; ctx.translate(540, y0); ctx.scale(s, s); shadow('rgba(0,0,0,.8)', 30);
-      let y = -10; hd.lines.forEach(([str, c, size = 120], i) => { const f = fitFont(str, 'Anton', size, 960); if (i) y += parseInt(f) * .92; text(str, 0, y, f, col(c), 'center'); });
+      const a = clamp(hs * 3) * (1 - P(t, A(hd.until ?? sc.to) - .45, .3)) * fade, s = lerp(1.45, 1, E.outExpo(hs)), y0 = hd.y ?? (LAND ? 150 : 360);
+      ctx.save(); ctx.globalAlpha = a; ctx.translate(W / 2, y0); ctx.scale(s, s); shadow('rgba(0,0,0,.8)', 30);
+      let y = -10; hd.lines.forEach(([str, c, size = 120], i) => { const f = fitFont(str, 'Anton', size, LAND ? 1600 : 960); if (i) y += parseInt(f) * .92; text(str, 0, y, f, col(c), 'center'); });
       ctx.restore();
     }
   }
   if (sc.card && !THUMB) {
     const cd = sc.card, hb = P(t, cd.t - .1, .3);
     if (hb > 0) {
-      const a = clamp(hb * 2) * (1 - P(t, cd.u - .25, .25)) * fade, y = cd.y ?? 1060, w = 600, x = 240, h = 150;
+      const a = clamp(hb * 2) * (1 - P(t, cd.u - .25, .25)) * fade, y = cd.y ?? (LAND ? H - 300 : 1060), w = 600, x = cd.x ?? (W / 2 - 300), h = 150;
       ctx.save(); card(x, y, w, h, col(cd.color || 'danger'), a, lerp(.9, 1, E.outBack(hb)));
       icon(cd.icon || 'flame', x + 72, y + h / 2, 70, col(cd.iconColor || 'oil'));
       text(cd.kicker || '', x + 130, y + 62, fitFont(cd.kicker || '', 'IXBold', 30, 440, 3), THEME.mute, 'left', 3);
@@ -515,8 +602,8 @@ function globeScene(sc, t) {
     }
   }
   if (sc.type === 'end' && !THUMB) {
-    (sc.lines || []).forEach(([str, c, size = 120], i) => { const l = sc.lines[i], s = E.outExpo(P(t, l.t, .5)); if (s <= 0) return; ctx.save(); ctx.globalAlpha = clamp(s * 2); shadow('rgba(0,0,0,.85)', 30); text(str, 540, (sc.y ?? 330) + i * 130 + (1 - s) * 40, fitFont(str, 'Anton', size, 960), col(c), 'center', 1); ctx.restore(); });
-    const sa = E.out(P(t, sc.from + 1.6, .6)); ctx.save(); ctx.globalAlpha = sa; (sc.sources || []).forEach((s, i) => text(s, 540, 1170 + i * 30, fitFont(s, 'ISemi', 20, 940, 1.5), THEME.mute, 'center', 1.5)); ctx.restore();
+    (sc.lines || []).forEach(([str, c, size = 120], i) => { const l = sc.lines[i], s = E.outExpo(P(t, l.t, .5)); if (s <= 0) return; ctx.save(); ctx.globalAlpha = clamp(s * 2); shadow('rgba(0,0,0,.85)', 30); text(str, W / 2, (sc.y ?? (LAND ? 190 : 330)) + i * (LAND ? 120 : 130) + (1 - s) * 40, fitFont(str, 'Anton', size, LAND ? 1600 : 960), col(c), 'center', 1); ctx.restore(); });
+    const sa = E.out(P(t, sc.from + 1.6, .6)); ctx.save(); ctx.globalAlpha = sa; (sc.sources || []).forEach((s, i) => text(s, W / 2, (LAND ? H - 200 : 1170) + i * 30, fitFont(s, 'ISemi', 20, LAND ? 1600 : 940, 1.5), THEME.mute, 'center', 1.5)); ctx.restore();
   }
 }
 // ---------------------------------------------------------------- climate layers: field (heat/rain/fire areas) + track (storm paths)
@@ -706,7 +793,7 @@ function mapScene(sc, t) {
       ctx.globalAlpha = a * ca; rr(sx - 60, sy - 40, w, 70, 14); ctx.fillStyle = 'rgba(6,11,20,.92)'; ctx.fill(); ctx.strokeStyle = rgba(THEME.text, .7); ctx.lineWidth = 2; ctx.stroke();
       icon(o.icon || 'flag', sx - 20, sy - 5, 44, THEME.text, 3); text(lbl, sx + 15, sy - 4, '30px IXBold', THEME.text, 'left', 3, 'middle'); ctx.restore();
     } else if (o.kind === 'stamp') {
-      const gl = P(t, o.at - .05, .3); if (gl <= 0) continue; const [sx, sy] = o.screen || [540, 430], s = lerp(1.6, 1, E.outExpo(gl));
+      const gl = P(t, o.at - .05, .3); if (gl <= 0) continue; const [sx, sy] = o.screen || [W / 2, LAND ? 260 : 430], s = lerp(1.6, 1, E.outExpo(gl));
       const f = fitFont(o.text, 'Anton', o.size ?? 72, 600, 2), tw0 = tw(o.text, f, 2), w = tw0 + (o.icon ? 190 : 100);
       ctx.save(); ctx.globalAlpha = a * clamp(gl * 3); ctx.translate(sx, sy); ctx.scale(s, s); ctx.rotate(o.rotate ?? -.06);
       rr(-w / 2, -62, w, 124, 18); ctx.fillStyle = rgba(c, .14); ctx.fill(); ctx.lineWidth = 5; ctx.strokeStyle = c; shadow(c, 24); ctx.stroke(); noShadow();
@@ -724,7 +811,8 @@ function mapScene(sc, t) {
       o.rows.forEach((r, i) => { const ra = E.out(P(t, r.t - .1, .35)); ctx.globalAlpha = a * ra; icon(r.icon || 'dot', x + 62, y + 125 + i * 73, 60, c, 5); text(r.text, x + 115 + (1 - ra) * 20, y + 137 + i * 73, fitFont(r.text, 'IXBold', 36, w - 140, 2), THEME.text, 'left', 2); });
       ctx.restore();
     } else if (o.kind === 'note') {
-      ctx.save(); ctx.globalAlpha = a; text(o.text, 540, o.y ?? 1150, fitFont(o.text, 'IXBold', 28, 940, 3), THEME.text, 'center', 3); if (o.sub) text(o.sub, 540, (o.y ?? 1150) + 36, fitFont(o.sub, 'ISemi', 20, 940, 2), THEME.mute, 'center', 2); ctx.restore();
+      const ny = o.y ?? (LAND ? H - 210 : 1150), nw = LAND ? 1500 : 940;
+      ctx.save(); ctx.globalAlpha = a; text(o.text, W / 2, ny, fitFont(o.text, 'IXBold', 28, nw, 3), THEME.text, 'center', 3); if (o.sub) text(o.sub, W / 2, ny + 36, fitFont(o.sub, 'ISemi', 20, nw, 2), THEME.mute, 'center', 2); ctx.restore();
     }
   }
 }
@@ -736,16 +824,25 @@ function fmtNum(v, o) {
   if (o.format === 'money') { const a = Math.abs(v); const s = a >= 1e9 ? (v / 1e9).toFixed(1) + 'B' : a >= 1e6 ? (v / 1e6).toFixed(1) + 'M' : a >= 1e3 ? Math.round(v / 1e3) + 'K' : Math.round(v) + ''; return (o.prefix ?? '$') + s + (o.suffix ?? ''); }
   return (o.prefix ?? '') + v.toFixed(o.decimals ?? 0).replace(/\B(?=(\d{3})+(?!\d))/g, ',') + (o.suffix ?? '');
 }
+// long-form: the portrait overlay layout (x 0..1080, y ~290..1220) is drawn scaled into a centred panel of the 16:9 frame
+const OV_S = .86, OV_X = (1920 - 1080 * OV_S) / 2, OV_Y = 125 - 290 * OV_S;
 function overlayScene(sc, t) {
   const a = win(t, sc.from - .25, sc.to + .25, .4, .45); if (a <= 0) return;
+  if (!LAND) return overlayBody(sc, t, a, false);
+  if (sc.type === 'quote') { ctx.save(); ctx.globalAlpha = a * .9; ctx.fillStyle = '#02050b'; ctx.fillRect(0, 0, W, H); ctx.restore(); }
+  else backdrop(a);
+  ctx.save(); ctx.translate(OV_X, OV_Y); ctx.scale(OV_S, OV_S); overlayBody(sc, t, a, true); ctx.restore();
+}
+function overlayBody(sc, t, a, bgDone) {
   if (sc.type === 'quote') {
-    ctx.save(); ctx.globalAlpha = a * .9; ctx.fillStyle = '#02050b'; ctx.fillRect(0, 0, W, H); ctx.restore();
+    if (!bgDone) { ctx.save(); ctx.globalAlpha = a * .9; ctx.fillStyle = '#02050b'; ctx.fillRect(0, 0, W, H); ctx.restore(); }
     ctx.save(); ctx.globalAlpha = a; text('“', 120, 500, '220px Anton', rgba(col(sc.color || 'oil'), .5), 'left');
     sc.lines.forEach(([s, c], i) => { const p = E.outExpo(P(t, sc.t + .1 + i * .22, .45)); if (p <= 0) return; ctx.save(); ctx.beginPath(); ctx.rect(0, 470 + i * 150, W, 150); ctx.clip(); text(s, 540, 600 + i * 150 + (1 - p) * 150, fitFont(s, 'Anton', 150, 960, 1), col(c), 'center', 1); ctx.restore(); });
     const q = E.out(P(t, sc.t + .4, .5)); ctx.globalAlpha = a * q; ctx.fillStyle = col(sc.color || 'oil'); ctx.fillRect(540 - 60 * q, 510 + sc.lines.length * 150, 120 * q, 5);
     text(sc.by || '', 540, 570 + sc.lines.length * 150, fitFont(sc.by || '', 'IXBold', 28, 940, 3), THEME.mute, 'center', 3); ctx.restore(); return;
   }
-  backdrop(a); ctx.save(); ctx.globalAlpha = a;
+  if (!bgDone) backdrop(a);
+  ctx.save(); ctx.globalAlpha = a;
   if (sc.label) text(sc.label, 540, 330, fitFont(sc.label, 'IXBold', 32, 940, 4), THEME.mute, 'center', 4);
   if (sc.sublabel) text(sc.sublabel, 540, 378, fitFont(sc.sublabel, 'ISemi', 26, 940, 3), col(sc.color || 'oil'), 'center', 3);
   const c = col(sc.color || 'oil');
@@ -919,10 +1016,48 @@ function scaleScene(sc, t, a, c) {
   if (sc.source) text(sc.source, 540, 1190, fitFont(sc.source, 'ISemi', 20, 960, 3), THEME.mute, 'center', 3);
 }
 
+// ---------------------------------------------------------------- footage scene (long-form): photo or video clip, slow Ken Burns move, label + credit
+function footageScene(sc, t) {
+  const a = E.inOut(P(t, sc.from - .25, .45)) * (1 - E.inOut(P(t, sc.to - .2, .45))); if (a <= 0) return;
+  const src = sc.kind === 'video' ? sc.frame : sc.img; if (!src) return;
+  const iw = src.width, ih = src.height, base = Math.max(W / iw, H / ih);
+  const p = clamp((t - (sc.from - .25)) / Math.max(1, sc.to - sc.from + .45));
+  const mv = sc.move || (sc.kind === 'video' ? 'in' : ['in', 'right', 'out', 'left'][sc.idx % 4]);
+  const amt = sc.zoom ?? (sc.kind === 'video' ? .05 : .12);
+  let z = 1, px = 0, py = 0;
+  if (mv === 'in') z = 1 + amt * p; else if (mv === 'out') z = 1 + amt * (1 - p);
+  else if (mv !== 'none') { z = 1 + amt; const k = mv === 'left' || mv === 'up' ? 1 - p : p; if (mv === 'left' || mv === 'right') px = k - .5; else py = k - .5; }
+  const s = base * z, dw = iw * s, dh = ih * s, [fx, fy] = sc.focus || [.5, .5];
+  const dx = clamp(W / 2 - fx * dw + px * (dw - W), W - dw, 0), dy = clamp(H / 2 - fy * dh + py * (dh - H), H - dh, 0);
+  ctx.save(); ctx.globalAlpha = a; ctx.drawImage(src, dx, dy, dw, dh);
+  ctx.globalAlpha = a * (sc.tint ?? .14); ctx.fillStyle = THEME.ocean1; ctx.fillRect(0, 0, W, H); ctx.restore(); // channel look
+  if (THUMB) return;
+  const ty = LAND ? 40 : 270;
+  if (sc.label) { const f = '20px IXBold', w = tw(sc.label, f, 3) + 36; ctx.save(); ctx.globalAlpha = a * .92; rr(W - 60 - w, ty, w, 38, 19); ctx.fillStyle = 'rgba(6,11,20,.78)'; ctx.fill(); ctx.strokeStyle = 'rgba(255,255,255,.35)'; ctx.lineWidth = 1.5; ctx.stroke(); text(sc.label, W - 60 - w / 2, ty + 20, f, '#E6EBF2', 'center', 3, 'middle'); ctx.restore(); }
+  if (sc.credit) { ctx.save(); ctx.globalAlpha = a * .8; shadow('rgba(0,0,0,.9)', 8); text(sc.credit, W - 60, ty + (sc.label ? 66 : 22), fitFont(sc.credit, 'ISemi', 17, 600, 1), '#C9D1DD', 'right', 1); ctx.restore(); }
+  if (sc.lower) {
+    const L = sc.lower, la = a * E.out(P(t, L.t, .4)) * (1 - P(t, A(L.until ?? sc.to) - .3, .3));
+    if (la > 0) {
+      const x = 60, y = LAND ? H - 260 : 1060, kc = col(L.color || 'accent'), f = fitFont(L.text || '', 'Anton', LAND ? 56 : 60, LAND ? 1100 : 900, 1), w = Math.max(tw(L.text || '', f, 1), tw(L.kicker || '', '24px IXBold', 3)) + 70;
+      ctx.save(); ctx.globalAlpha = la; ctx.translate((1 - E.out(P(t, L.t, .4))) * -40, 0);
+      rr(x, y, w, L.kicker ? 120 : 84, 14); ctx.fillStyle = 'rgba(6,11,20,.86)'; ctx.fill(); ctx.fillStyle = kc; ctx.fillRect(x, y + 10, 6, (L.kicker ? 120 : 84) - 20);
+      if (L.kicker) text(L.kicker, x + 30, y + 42, '24px IXBold', kc, 'left', 3);
+      text(L.text || '', x + 30, y + (L.kicker ? 100 : 62), f, THEME.text, 'left', 1); ctx.restore();
+    }
+  }
+}
+
 // ---------------------------------------------------------------- chrome
 function sectionHeader(t) {
   if (!SECTIONS.length) return;
   const vis = win(t, SECTIONS[0].a - .1, SECTIONS[SECTIONS.length - 1].b + .2, .4, .4); if (vis <= 0) return;
+  if (LAND) { // long-form: chapter number + name top left, one small tick per chapter
+    const n = SECTIONS.length, cur = SECTIONS.find(s => t >= s.a && t < s.b) || (t < SECTIONS[0].a ? SECTIONS[0] : SECTIONS[n - 1]), ap = E.out(P(t, cur.a, .45));
+    ctx.save(); ctx.globalAlpha = vis * ap; shadow('rgba(0,0,0,.8)', 14);
+    text(cur.n || '', 60, 96, '46px Anton', col(cur.color || 'accent'), 'left'); text(cur.name || '', 60 + 74 + (1 - ap) * 30, 92, fitFont(cur.name || '', 'IXBold', 28, 900, 4), THEME.text, 'left', 4); noShadow();
+    ctx.globalAlpha = vis * .95; SECTIONS.forEach((s, i) => { const x = 60 + i * 34, y = 114; rr(x, y, 26, 5, 2.5); ctx.fillStyle = 'rgba(255,255,255,.2)'; ctx.fill(); const p = P(t, s.a, s.b - s.a); if (p > 0) { rr(x, y, 26 * p, 5, 2.5); ctx.fillStyle = col(s.color || 'accent'); ctx.fill(); } });
+    ctx.restore(); return;
+  }
   ctx.save(); ctx.globalAlpha = vis; const x0 = 60, x1 = 1020, gap = 14, n = SECTIONS.length, bw = (x1 - x0 - gap * (n - 1)) / n, y = 168;
   SECTIONS.forEach((s, i) => { const x = x0 + i * (bw + gap); rr(x, y, bw, 7, 4); ctx.fillStyle = 'rgba(255,255,255,.18)'; ctx.fill(); const p = P(t, s.a, s.b - s.a); if (p > 0) { rr(x, y, bw * p, 7, 4); ctx.fillStyle = col(s.color || 'accent'); ctx.fill(); } });
   const cur = SECTIONS.find(s => t >= s.a && t < s.b) || (t < SECTIONS[0].a ? SECTIONS[0] : SECTIONS[n - 1]), ap = E.out(P(t, cur.a, .45));
@@ -932,24 +1067,31 @@ function sectionHeader(t) {
 function captions(t) {
   if (OPEN_D && t < OPEN_D + OPEN_X * .6) return; // the opener carries its own big text
   const ch = CHUNKS.find(c => t >= c.t0 && t < c.t1); if (!ch) return;
-  const pop = E.outBack(P(t, ch.t0, .16)), y = 1335; ctx.save(); ctx.font = CAP_FONT; ctx.textBaseline = 'alphabetic'; ctx.textAlign = 'left';
-  const words = ch.words.map(w => w.text.toUpperCase()), sp = 22, ws = words.map(w => ctx.measureText(w).width), tot = ws.reduce((a, b) => a + b, 0) + sp * (words.length - 1);
+  const pop = E.outBack(P(t, ch.t0, .16)), y = CAP_Y; ctx.save(); ctx.font = CAP_FONT; ctx.textBaseline = 'alphabetic'; ctx.textAlign = 'left';
+  const words = ch.words.map(w => w.text.toUpperCase()), sp = LAND ? 18 : 22, ws = words.map(w => ctx.measureText(w).width), tot = ws.reduce((a, b) => a + b, 0) + sp * (words.length - 1);
   let x = W / 2 - tot / 2; ctx.translate(W / 2, y - 24); ctx.scale(.86 + .14 * pop, .86 + .14 * pop); ctx.translate(-W / 2, -(y - 24)); ctx.globalAlpha = clamp(pop * 1.5);
   ch.words.forEach((w, i) => {
     const active = t >= w.t0 - .03 && (i === ch.words.length - 1 ? t < ch.t1 : t < ch.words[i + 1].t0 - .03), cxw = x + ws[i] / 2;
     ctx.save(); if (active) { const s = 1 + .06 * E.out(P(t, w.t0, .1)); ctx.translate(cxw, y - 24); ctx.scale(s, s); ctx.translate(-cxw, -(y - 24)); }
-    ctx.lineJoin = 'round'; ctx.lineWidth = 14; ctx.strokeStyle = 'rgba(2,4,9,.92)'; ctx.strokeText(words[i], x, y); ctx.fillStyle = active ? '#FFC93D' : '#FFFFFF'; ctx.fillText(words[i], x, y);
+    ctx.lineJoin = 'round'; ctx.lineWidth = LAND ? 11 : 14; ctx.strokeStyle = 'rgba(2,4,9,.92)'; ctx.strokeText(words[i], x, y); ctx.fillStyle = active ? '#FFC93D' : '#FFFFFF'; ctx.fillText(words[i], x, y);
     ctx.restore(); x += ws[i] + sp;
   });
   ctx.restore();
 }
 function finishFrame() {
+  if (LAND) { // long-form: softer vignette, shade only behind the chapter header and the captions, static grain (keeps the file small)
+    const v = ctx.createRadialGradient(W / 2, H * .45, W * .3, W / 2, H * .5, W * .62); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,.45)'); ctx.fillStyle = v; ctx.fillRect(0, 0, W, H);
+    const tg = ctx.createLinearGradient(0, 0, 0, 170); tg.addColorStop(0, 'rgba(2,5,10,.7)'); tg.addColorStop(1, 'rgba(2,5,10,0)'); ctx.fillStyle = tg; ctx.fillRect(0, 0, W, 170);
+    const bg = ctx.createLinearGradient(0, H - 230, 0, H); bg.addColorStop(0, 'rgba(2,5,10,0)'); bg.addColorStop(.45, 'rgba(2,5,10,.6)'); bg.addColorStop(1, 'rgba(2,5,10,.85)'); ctx.fillStyle = bg; ctx.fillRect(0, H - 230, W, 230);
+    ctx.save(); ctx.globalAlpha = .3; ctx.fillStyle = grainPat; ctx.fillRect(0, 0, W, H); ctx.restore();
+    return;
+  }
   const v = ctx.createRadialGradient(W / 2, H * .42, H * .28, W / 2, H * .5, H * .78); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,.55)'); ctx.fillStyle = v; ctx.fillRect(0, 0, W, H);
   const tg = ctx.createLinearGradient(0, 0, 0, 330); tg.addColorStop(0, 'rgba(2,5,10,.85)'); tg.addColorStop(1, 'rgba(2,5,10,0)'); ctx.fillStyle = tg; ctx.fillRect(0, 0, W, 330);
   const bg = ctx.createLinearGradient(0, 1130, 0, H); bg.addColorStop(0, 'rgba(2,5,10,0)'); bg.addColorStop(.35, 'rgba(2,5,10,.72)'); bg.addColorStop(1, 'rgba(2,5,10,.92)'); ctx.fillStyle = bg; ctx.fillRect(0, 1130, W, H - 1130);
   ctx.save(); ctx.globalAlpha = .55; ctx.translate(Math.random() * 256, Math.random() * 256); ctx.fillStyle = grainPat; ctx.fillRect(-256, -256, W + 512, H + 512); ctx.restore();
 }
-function shakeAt(t) { let s = 0; for (const e of EVENTS) if (e.type === 'impact' || e.type === 'stamp') { const d = t - e.t; if (d >= 0 && d < .35) s = Math.max(s, (1 - d / .35) * 9 * e.g); } return s; }
+function shakeAt(t) { let s = 0; for (const e of EVENTS) if (e.type === 'impact' || e.type === 'stamp') { const d = t - e.t; if (d >= 0 && d < .35) s = Math.max(s, (1 - d / .35) * (LAND ? 6 : 9) * e.g); } return s; }
 let THUMB = false;
 function renderFrame(t) {
   if (!THUMB && OPEN_D && !OPENER) OPENER = buildThumb();
@@ -959,6 +1101,7 @@ function renderFrame(t) {
     if (sc.type === 'globe') { if (t >= sc.from - .3 && t < sc.to + .4) globeScene(sc, t); }
     else if (sc.type === 'map') { const a = E.inOut(P(t, sc.from - .2, .5)) * (1 - P(t, sc.to - .2, .5)); if (a > 0) { ctx.save(); ctx.globalAlpha = a; mapScene(sc, t); ctx.restore(); } }
     else if (sc.type === 'end') { const a = E.out(P(t, sc.from - .35, .7)); if (a > 0) { ctx.save(); ctx.globalAlpha = a; globeScene(sc, t); ctx.restore(); } }
+    else if (sc.type === 'footage') footageScene(sc, t);
     else if (!THUMB || (TH && TH.overlays)) overlayScene(sc, t);
   }
   for (const ft of THUMB ? [] : FLASHES) { const d = t - ft; if (d > -.05 && d < .25) { ctx.save(); ctx.globalAlpha = (1 - Math.abs(d - .05) / .2) * .18; ctx.fillStyle = '#fff'; ctx.fillRect(-20, -20, W + 40, H + 40); ctx.restore(); } }
@@ -1036,7 +1179,43 @@ function buildThumb() {
   const out = createCanvas(W, H); out.getContext('2d').drawImage(cv, 0, 0);
   THUMB = false; return out;
 }
-function renderThumb(file) { fs.writeFileSync(file, buildThumb().toBuffer('image/jpeg', 88)); }
+// ---------------------------------------------------------------- long-form thumbnail (16:9, written as 1280x720)
+// Layout: a sharp map/footage moment, the focus point pushed into the right part of the frame, a dark fade on the left
+// carrying an optional kicker, ONE big number, 1–2 short lines (≤ 4 words) and a source line; channel pill bottom left.
+function buildThumbLand() {
+  THUMB = true; PROJ = null;
+  const th = TH || {}, t = thumbTime();
+  renderFrame(t); // footage frame prepared by renderThumb (prepStill)
+  const proj = PROJ, bgc = createCanvas(W, H); bgc.getContext('2d').drawImage(cv, 0, 0);
+  let fx = W / 2, fy = H / 2, z = th.zoom ?? 1;
+  if (th.focus != null) {
+    let q = null; try { q = typeof th.focus === 'object' && !Array.isArray(th.focus) ? [th.focus.x, th.focus.y] : proj ? proj(loc(th.focus)) : null; } catch (e) { console.log('thumb: ' + e.message); }
+    if (q) { fx = q[0]; fy = q[1]; z = th.zoom ?? 1.15; } else console.log(`thumb: focus ${JSON.stringify(th.focus)} not on screen at ${t.toFixed(2)}s — using the full frame`);
+  }
+  const tx = th.focusX ?? W * .74, ox = clamp(tx - fx * z, W - W * z, 0), oy = clamp(H * .5 - fy * z, H - H * z, 0);
+  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.fillStyle = THEME.ink; ctx.fillRect(0, 0, W, H);
+  ctx.save(); ctx.filter = 'saturate(1.3) contrast(1.1)'; ctx.translate(ox, oy); ctx.scale(z, z); ctx.drawImage(bgc, 0, 0); ctx.filter = 'none'; ctx.restore();
+  const g = ctx.createLinearGradient(0, 0, W * .66, 0); g.addColorStop(0, 'rgba(2,5,10,.94)'); g.addColorStop(.55, 'rgba(2,5,10,.72)'); g.addColorStop(1, 'rgba(2,5,10,0)'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  const lines = th.lines || [[story.upload?.title || '', 'text']], num = th.number != null && th.number !== '' ? String(th.number) : null;
+  const MAXW = th.textWidth ?? 1020, KH = th.kicker ? 96 : 0, SH = th.source ? 56 : 0, gap = 6, lh = sz => sz * .9;
+  let nsz = num ? parseInt(fitFont(num, 'Anton', th.numberSize ?? 300, MAXW)) : 0;
+  let sizes = lines.map(([str, c, size]) => parseInt(fitFont(str, 'Anton', size ?? (num ? 150 : 190), MAXW)));
+  const meas = () => KH + (num ? lh(nsz) + gap : 0) + sizes.reduce((a, b) => a + lh(b), 0) + gap * Math.max(0, lines.length - 1) + SH;
+  if (meas() > 860) { const fixed = KH + SH, k = (860 - fixed) / (meas() - fixed); nsz = Math.floor(nsz * k); sizes = sizes.map(v => Math.floor(v * k)); }
+  let y = (H - meas()) / 2 - 20; const x = 84;
+  if (th.kicker) { const kc = col(th.kickerColor || 'danger'), f = '40px IXBold', w = tw(th.kicker, f, 4) + 64; rr(x, y, w, 70, 35); ctx.fillStyle = kc; ctx.fill(); text(th.kicker, x + w / 2, y + 36, f, '#ffffff', 'center', 4, 'middle'); y += KH; }
+  const big = (str, sz, c) => { y += lh(sz); ctx.save(); ctx.font = `${sz}px Anton`; ctx.textAlign = 'left'; ctx.lineJoin = 'round'; const base = y - sz * .1; ctx.lineWidth = sz * .09; ctx.strokeStyle = 'rgba(2,4,9,.95)'; ctx.strokeText(str, x, base); shadow('rgba(0,0,0,.7)', 36); ctx.fillStyle = col(c); ctx.fillText(str, x, base); ctx.restore(); y += gap; };
+  if (num) big(num, nsz, th.numberColor || 'danger');
+  lines.forEach(([str, c], i) => big(str, sizes[i], c));
+  if (th.source) { ctx.save(); shadow('rgba(0,0,0,.9)', 12); text(th.source, x + 4, y + 38, fitFont(th.source, 'IXBold', 30, MAXW, 3), '#C9D1DD', 'left', 3); ctx.restore(); }
+  const brand = story.brand || CFG.channel || '@GEOPOLITICS4YOU', bf = '30px IXBold', bw = tw(brand, bf, 5) + 64, by = H - 96;
+  ctx.save(); rr(x, by, bw, 54, 27); ctx.fillStyle = 'rgba(6,11,20,.88)'; ctx.fill(); ctx.strokeStyle = rgba(THEME.accent, .9); ctx.lineWidth = 2; ctx.stroke();
+  ctx.fillStyle = THEME.accent; ctx.beginPath(); ctx.arc(x + 28, by + 27, 8, 0, 7); ctx.fill(); text(brand, x + bw / 2 + 10, by + 28, bf, THEME.text, 'center', 5, 'middle'); ctx.restore();
+  const out = createCanvas(1280, 720); out.getContext('2d').drawImage(cv, 0, 0, 1280, 720);
+  THUMB = false; return out;
+}
+function thumbTime() { const mp = SCENES.find(s => s.type === 'map'); return A((TH || {}).at ?? (mp ? mp.from + 4 : 3)); }
+async function renderThumb(file) { if (LAND) await prepStill(thumbTime()); fs.writeFileSync(file, (LAND ? buildThumbLand() : buildThumb()).toBuffer('image/jpeg', 88)); }
 
 // ================================================================ CLI
 if (CMD === 'check') {
@@ -1044,27 +1223,37 @@ if (CMD === 'check') {
   for (const s of SEGS) console.log(`  ${s.id.padEnd(8)} ${s.a.toFixed(2)} → ${s.b.toFixed(2)}  ${s.words.map(w => w.text + '@' + w.t0.toFixed(1)).join(' ')}`);
   for (const sc of SCENES) console.log(`  scene ${sc.type.padEnd(7)} ${sc.from.toFixed(2)} → ${sc.to.toFixed(2)}`);
   if (DUR >= MAXD && SPEECH_END + 1.5 > DUR) console.log('WARNING: script too long for the max duration — shorten it');
+  if (LONG) {
+    const fs0 = FOOT.reduce((s, sc) => s + Math.max(0, sc.to - sc.from), 0), lens = FOOT.map(sc => sc.to - sc.from);
+    console.log(`long-form ${W}x${H} @${FPS}fps · ${SECTIONS.length} chapters · footage ${FOOT.length} shots, ${(100 * fs0 / DUR).toFixed(0)}% of the runtime, ${FOOT.filter(s => s.path).length} assets present`);
+    if (fs0 / DUR > .4) console.log('WARNING: footage covers more than 40% of the runtime — keep own maps/graphics the core (LONGFORM.md)');
+    if (lens.some(l => l > 9)) console.log('WARNING: a footage shot is longer than 9 s — split it or cut back to the map');
+    if (SECTIONS.length && SECTIONS[0].a > 60) console.log('WARNING: first chapter starts after 60 s — the intro is too long');
+  }
   console.log(VOICE ? 'timing: real voice' : 'timing: estimated (no voice)');
 } else if (CMD === 'events') {
   const hd = SCENES.find(s => s.headline); const cover = A(story.upload?.cover ?? (OPEN_D ? .3 : hd ? hd.headline.t + .4 : 2));
-  fs.writeFileSync(ARGS[0], JSON.stringify({ id: story.id, duration: DUR, frames: NF, fps: FPS, cover, events: EVENTS.sort((a, b) => a.t - b.t), sections: SECTIONS.map(s => ({ a: s.a, b: s.b })), words: WORDS }, null, 1));
+  fs.writeFileSync(ARGS[0], JSON.stringify({ id: story.id, format: LONG ? 'long' : 'short', duration: DUR, frames: NF, fps: FPS, cover, events: EVENTS.sort((a, b) => a.t - b.t), sections: SECTIONS.map(s => ({ a: s.a, b: s.b, n: s.n, name: s.name, chapter: s.chapter })), words: WORDS }, null, 1));
   console.log('events', EVENTS.length);
 } else if (CMD === 'thumb') {
-  renderThumb(ARGS[0]); console.log('thumb ok', ARGS[0]);
+  await renderThumb(ARGS[0]); console.log('thumb ok', ARGS[0]);
 } else if (CMD === 'stills') {
   const out = ARGS[0]; fs.mkdirSync(out, { recursive: true });
-  for (const t of ARGS[1].split(',').map(Number)) { renderFrame(t); captions(t); fs.writeFileSync(path.join(out, `still_${t.toFixed(2)}.png`), cv.toBuffer('image/png')); }
+  for (const t of ARGS[1].split(',').map(Number)) { await prepStill(t); renderFrame(t); captions(t); fs.writeFileSync(path.join(out, `still_${t.toFixed(2)}.png`), cv.toBuffer('image/png')); }
   console.log('stills ok');
 } else if (CMD === 'render') {
-  const [out, f0s, f1s, tg] = ARGS, f0 = +f0s, f1 = Math.min(+f1s, NF);
-  const enc = name => spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgba', '-s', `${W}x${H}`, '-r', String(FPS), '-i', '-', '-c:v', 'libx264', '-preset', 'medium', '-crf', '17', '-pix_fmt', 'yuv420p', '-r', String(FPS), name], { stdio: ['pipe', 'inherit', 'inherit'] });
-  const clean = enc(path.join(out, `seg_clean_${tg}.mp4`)), capd = enc(path.join(out, `seg_caps_${tg}.mp4`));
+  const [out, f0s, f1s, tg, mode] = ARGS, f0 = +f0s, f1 = Math.min(+f1s, NF), capsOnly = mode === 'caps';
+  // long-form segments are intermediates: fast preset, high quality; make.sh does the final encode
+  const enc = name => spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgba', '-s', `${W}x${H}`, '-r', String(FPS), '-i', '-', '-c:v', 'libx264', '-preset', LAND ? 'veryfast' : 'medium', '-crf', LAND ? '16' : '17', '-pix_fmt', 'yuv420p', '-r', String(FPS), name], { stdio: ['pipe', 'inherit', 'inherit'] });
+  const clean = capsOnly ? null : enc(path.join(out, `seg_clean_${tg}.mp4`)), capd = enc(path.join(out, `seg_caps_${tg}.mp4`));
   const write = (p, buf) => new Promise(res => { if (!p.stdin.write(buf)) p.stdin.once('drain', res); else res(); });
   const t0 = Date.now();
   for (let f = f0; f < f1; f++) {
-    const t = f / FPS; renderFrame(t); await write(clean, Buffer.from(ctx.getImageData(0, 0, W, H).data.buffer));
-    captions(t); await write(capd, Buffer.from(ctx.getImageData(0, 0, W, H).data.buffer));
+    // canvas.data() + one JS-owned copy: getImageData leaks native memory in long loops (~2 MB per frame)
+    const t = f / FPS; await prepFootage(t); renderFrame(t); if (clean) await write(clean, Buffer.from(cv.data()));
+    captions(t); await write(capd, Buffer.from(cv.data()));
     if ((f - f0) % 90 === 0) console.log(`[${tg}] ${f}/${f1} ${((Date.now() - t0) / (f - f0 + 1)).toFixed(0)}ms/f`);
   }
-  clean.stdin.end(); capd.stdin.end(); await Promise.all([clean, capd].map(p => new Promise(r => p.on('close', r)))); console.log(`[${tg}] done`);
+  for (const sc of FOOT) if (sc.dec) sc.dec.p.kill('SIGKILL');
+  const encs = [clean, capd].filter(Boolean); encs.forEach(p => p.stdin.end()); await Promise.all(encs.map(p => new Promise(r => p.on('close', r)))); console.log(`[${tg}] done`);
 } else { console.error('unknown command ' + CMD); process.exit(1); }

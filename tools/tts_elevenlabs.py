@@ -20,6 +20,8 @@ def config_path(story_path):
         if os.path.exists(c): return c
     return os.path.join(ROOT, 'config.json')
 cfg = json.load(open(config_path(sys.argv[1]))); vc = cfg['voice']; pace = cfg.get('pace', {})
+if story.get('format') == 'long':  # long-form: config.json -> longform.voice / longform.pace override the Shorts settings
+    lf = cfg.get('longform', {}); vc = {**vc, **lf.get('voice', {})}; vc['say'] = {**cfg['voice'].get('say', {}), **lf.get('voice', {}).get('say', {})}; pace = {**pace, **lf.get('pace', {})}
 SAY = vc.get('say', {}); SR = 48000
 
 def say_token(tok):
@@ -56,6 +58,7 @@ def word_times(tokens, align):
 
 segs, clips, cursor, gap = [], [], pace.get('start', 0.4), vc.get('gap', 0.35)
 for s in story['script']:
+    cursor += float(s.get('pauseBefore', 0))  # optional extra breath, e.g. before a new chapter
     cap_tokens = s['text'].strip().split()
     tokens = [say_token(t) for t in cap_tokens]
     res = tts(' '.join(tokens))

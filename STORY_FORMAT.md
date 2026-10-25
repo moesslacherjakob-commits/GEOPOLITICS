@@ -3,6 +3,8 @@
 One file = one Short. The engine renders it with `./make.sh stories/<id>.json` (@GEOPOLITICS4YOU) or `./make.sh desks/<desk>/stories/<id>.json` (other channels).
 Two full examples: `stories/2026-10-09-second-front.json` (Gulf / oil) and `stories/2026-10-09-ethiopia-eritrea.json` (Horn of Africa). Climate example with `track` + `field`: `desks/climate/stories/2026-10-10-isaias-late-hurricane.json`. Markets example with `ticker`, `counter`, `chain`, `quote`: `desks/economy/stories/2026-10-09-spacex-spectrum-telecoms.json`.
 
+**Long-form (16:9):** a story with `"format": "long"` (in `longform/`) renders at 1920×1080 / 24 fps with a chapter header, footage scenes (`{"type": "footage", "asset", "query", "kind", "symbolic", "move", "lower"}`), a 16:9 thumbnail and YouTube chapters — see `LONGFORM.md` and `longform/examples/hormuz-explained-example.json`. Everything below applies too; screen coordinates are then 1920×1080.
+
 **Channel config:** a story inside `desks/<desk>/stories/` automatically uses `desks/<desk>/config.json` (channel handle on the thumbnail, accent colour via `theme`, voice, disclaimer, pronunciations); everything else uses the root `config.json`. `$GEO_CONFIG` overrides both.
 
 ## Top level

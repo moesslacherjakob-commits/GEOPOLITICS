@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # One command: story.json -> out/<id>/{short.mp4 (captions), short_clean.mp4, cover.png, upload.json}
+# Long-form story ("format": "long", see LONGFORM.md) -> out/<id>/{long.mp4 (1920x1080, captions), thumb.jpg (1280x720), upload.json with chapters + credits}
 # Usage: ./make.sh stories/<file>.json [parts]            (@GEOPOLITICS4YOU, root config.json)
+#        ./make.sh longform/<file>.json [parts]          (@GEOPOLITICS4YOU long-form)
 #        ./make.sh desks/<desk>/stories/<file>.json [parts] (other channels, desks/<desk>/config.json)
 set -euo pipefail
 cd "$(dirname "$0")"
@@ -12,7 +14,9 @@ if [ -z "${GEO_CONFIG:-}" ]; then
 fi
 export GEO_CONFIG=$(realpath "$GEO_CONFIG"); echo "config: $GEO_CONFIG"
 ID=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['id'])" "$STORY")
+LONG=$(python3 -c "import json,sys;print(1 if json.load(open(sys.argv[1])).get('format')=='long' else 0)" "$STORY")
 OUT=out/$ID; mkdir -p "$OUT"; rm -f "$OUT"/seg_*.mp4
+MODE=""; [ "$LONG" = 1 ] && MODE=caps   # long-form: only the captioned version (halves render time)
 VOICE_WAV=""; unset VOICE_TIMING
 if python3 -c "import json,os,sys;sys.exit(0 if json.load(open(os.environ['GEO_CONFIG'])).get('voice',{}).get('enabled') else 1)"; then
   if python3 tools/tts_elevenlabs.py "$STORY" "$OUT"; then export VOICE_TIMING="$(realpath "$OUT/voice_timing.json")"; VOICE_WAV="$OUT/voice.wav"
@@ -27,9 +31,23 @@ echo "rendering $NF frames in $PARTS parts"
 pids=()
 for ((p=0; p<PARTS; p++)); do
   f0=$((p*STEP)); f1=$(( (p+1)*STEP < NF ? (p+1)*STEP : NF ))
-  node engine/engine.mjs "$STORY" render "$OUT" $f0 $f1 $(printf "%02d" $p) > "$OUT/log_$p.txt" 2>&1 & pids+=($!)
+  node engine/engine.mjs "$STORY" render "$OUT" $f0 $f1 $(printf "%02d" $p) $MODE > "$OUT/log_$p.txt" 2>&1 & pids+=($!)
 done
 for pid in "${pids[@]}"; do wait $pid; done
+if [ "$LONG" = 1 ]; then
+  ls "$OUT"/seg_caps_*.mp4 | sort | sed "s|^$OUT/|file '|; s|$|'|" > "$OUT/caps.txt"
+  DURS=$(python3 -c "import json;print(json.load(open('$OUT/events.json'))['duration'])")
+  # final encode: two-pass 1080p sized to stay < ~88 MB (the media-long branch on GitHub takes files up to 100 MB)
+  VB=$(python3 -c "print(max(600, min(4500, int(88*8192/$DURS - 140))))")k
+  echo "long-form video bitrate $VB for ${DURS}s"
+  ffmpeg -y -loglevel error -f concat -safe 0 -i "$OUT/caps.txt" -c:v libx264 -preset veryfast -b:v $VB -profile:v high -pix_fmt yuv420p -pass 1 -passlogfile "$OUT/pllong" -an -f mp4 /dev/null
+  ffmpeg -y -loglevel error -f concat -safe 0 -i "$OUT/caps.txt" -i "$OUT/sound.wav" -map 0:v -map 1:a -c:v libx264 -preset fast -b:v $VB -maxrate $((${VB%k} * 2))k -bufsize $((${VB%k} * 4))k -profile:v high -pix_fmt yuv420p -pass 2 -passlogfile "$OUT/pllong" -c:a aac -b:a 128k -shortest -movflags +faststart "$OUT/long.mp4"
+  rm -f "$OUT"/pllong*
+  node engine/engine.mjs "$STORY" thumb "$OUT/thumb.jpg"
+  python3 tools/longform_meta.py "$STORY" "$OUT"
+  rm -f "$OUT"/seg_*.mp4 "$OUT"/caps.txt
+  ls -la "$OUT"; exit 0
+fi
 for v in caps clean; do ls "$OUT"/seg_${v}_*.mp4 | sort | sed "s|^$OUT/|file '|; s|$|'|" > "$OUT/$v.txt"; done
 DURS=$(python3 -c "import json;print(json.load(open('$OUT/events.json'))['duration'])")
 VB=$(python3 -c "print(min(3500, int(28*8192/$DURS - 170)))")k   # keep the file < ~28 MB
