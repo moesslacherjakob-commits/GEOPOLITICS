@@ -854,7 +854,7 @@ function chapterCard(t) {
 // quiz: question + 2–4 options, 3-2-1 ring, reveal of the right answer (the narration asks it and gives a beat to guess)
 function quizScene(sc, t) {
   const a = win(t, sc.from - .25, sc.to + .25, .4, .45); if (a <= 0) return;
-  backdrop(a); const c = col(sc.color || 'accent'), ok = col('ok'), n = sc.options.length, rev = t >= sc.t, rp = E.outBack(P(t, sc.t, .45));
+  backdrop(a); backdrop(a * .8); const c = col(sc.color || 'accent'), ok = col('ok'), n = sc.options.length, rev = t >= sc.t, rp = E.outBack(P(t, sc.t, .45));
   ctx.save(); ctx.globalAlpha = a;
   const kicker = sc.label || 'QUICK QUESTION', kw = tw(kicker, '24px IXBold', 4) + 50, top = LAND ? 170 : 360;
   rr(W / 2 - kw / 2, top, kw, 46, 23); ctx.fillStyle = rgba(c, .16); ctx.fill(); ctx.strokeStyle = c; ctx.lineWidth = 2; ctx.stroke(); text(kicker, W / 2, top + 24, '24px IXBold', c, 'center', 4, 'middle');
