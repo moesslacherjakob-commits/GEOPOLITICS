@@ -1,0 +1,101 @@
+{
+ "id": "2026-10-25-shamonda-first-human-case",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "A livestock virus infected a person for the first time. How?"},
+  {"id": "f1", "text": "France reported the first known human case of Shamonda virus on October twenty second. Until now it was known only in animals. The patient, treated in Lyon for a serious illness, died in early October. Authorities say the infection very probably caused the brain complications."},
+  {"id": "f2", "text": "Shamonda spreads through biting midges. It appeared in European farm animals for the first time this summer. As of October twentieth, French authorities counted it in cattle in fifty two departments. Officials believe the patient was bitten by a midge in eastern France."},
+  {"id": "f3", "text": "Authorities call it an exceptional case, tied to the patient's severely weakened immune system. They have found no spread between people and no risk to the general public. France has told the W.H.O. and the E.C.D.C. Investigations continue."},
+  {"id": "cta", "text": "Will this stay a one-off case? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE CASE", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "HOW IT SPREADS", "seg": "f2", "color": "violet"},
+  {"n": "03", "name": "THE RISK", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "upload": {
+  "title": "France Reports First Human Case of Shamonda Virus #shorts",
+  "description": "French health authorities report the first known human infection with Shamonda virus, until now known only in livestock. The patient was severely immunocompromised and died in early October; officials say there is no spread between people and no risk identified for the general public, and investigations continue.\n\nSources: Santé publique France; ECDC; Al Jazeera; PBS NewsHour / AP; Forbes.\n\n#science #health #virus #france",
+  "tags": ["science", "news", "Shamonda virus", "France", "livestock", "midges", "ECDC", "public health"],
+  "cover": "hook:person, +0.4"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [4.85, 45.75],
+  "number": "1ST",
+  "numberColor": "accent",
+  "lines": [["HUMAN CASE", "text"], ["MIDGE-BORNE", "accent"]],
+  "source": "SANTÉ PUBLIQUE FRANCE · OCT 22"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {"at": 0, "lon": -10, "lat": 35, "R": 380},
+    {"at": 4.5, "lon": 4.85, "lat": 45.75, "R": 600}
+   ],
+   "chip": {"text": "SCIENCE · FRANCE", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "FRA", "color": "accent", "at": "hook:livestock", "alpha": 0.25}],
+   "markers": [
+    {"loc": [4.85, 45.75], "color": "danger", "at": "hook:person", "label": "LYON", "sub": "FIRST HUMAN CASE", "dx": -60, "dy": -150, "big": true}
+   ],
+   "headline": {
+    "at": "hook:infected",
+    "lines": [["LIVESTOCK VIRUS", "text", 90], ["INFECTS A HUMAN", "accent", 90]]
+   }
+  },
+  {
+   "type": "timeline",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "THE FIRST HUMAN CASE",
+   "color": "accent",
+   "items": [
+    {"date": "UNTIL NOW", "title": "ANIMALS ONLY", "sub": "A LIVESTOCK VIRUS", "color": "info", "at": "f1:Until"},
+    {"date": "EARLY OCTOBER", "title": "PATIENT DIES", "sub": "TREATED IN LYON FOR A SERIOUS ILLNESS", "color": "danger", "at": "f1:died"},
+    {"date": "OCT 22", "title": "FRANCE REPORTS IT", "sub": "INFECTION VERY PROBABLY CAUSED BRAIN COMPLICATIONS", "color": "accent", "big": true, "at": "f1:Authorities"}
+   ],
+   "source": "SANTÉ PUBLIQUE FRANCE · ECDC · AL JAZEERA · PBS/AP"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "HOW SHAMONDA SPREADS",
+   "color": "violet",
+   "steps": [
+    {"icon": "thermo", "title": "LIVESTOCK", "sub": "52 FRENCH DEPARTMENTS · CATTLE · OCT 20", "color": "info", "at": "f2:Shamonda"},
+    {"icon": "eye", "title": "BITING MIDGES", "sub": "CARRY THE VIRUS", "color": "accent", "at": "f2:biting"},
+    {"icon": "people", "title": "ONE PERSON", "sub": "PROBABLY BITTEN IN EASTERN FRANCE", "color": "danger", "at": "f2:Officials"}
+   ],
+   "source": "SANTÉ PUBLIQUE FRANCE · ECDC · FORBES"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {"icon": "flag", "big": "EXCEPTIONAL CASE", "text": "TIED TO A WEAKENED IMMUNE SYSTEM", "color": "accent", "at": "f3:exceptional"},
+    {"icon": "check", "big": "NO SPREAD FOUND", "text": "NO PERSON-TO-PERSON · NO PUBLIC RISK", "color": "ok", "at": "f3:found"},
+    {"icon": "shield", "big": "W.H.O. + ECDC TOLD", "text": "INVESTIGATIONS CONTINUE", "color": "info", "at": "f3:France"}
+   ],
+   "source": "SOURCES: SANTÉ PUBLIQUE FRANCE · ECDC · AL JAZEERA"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": -20, "lat": 35, "R": 800},
+    {"at": "cta +1", "lon": 4.85, "lat": 45.75, "R": 470},
+    {"at": "end", "lon": 12, "lat": 46, "R": 470}
+   ],
+   "markers": [{"loc": [4.85, 45.75], "color": "accent"}],
+   "lines": [["ONE CASE SO FAR", "text"], ["A ONE-OFF?", "accent"]],
+   "sources": ["SANTÉ PUBLIQUE FRANCE · ECDC · AL JAZEERA · PBS/AP", "NOT MEDICAL ADVICE"]
+  }
+ ]
+}
