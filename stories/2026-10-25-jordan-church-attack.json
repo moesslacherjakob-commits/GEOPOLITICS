@@ -1,0 +1,344 @@
+{
+ "id": "2026-10-25-jordan-church-attack",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Gunmen attacked a funeral inside a church in Jordan. Who were they?"
+  },
+  {
+   "id": "f1",
+   "text": "On Friday, at least seven people were killed in the village of Hammoud, near Karak, in southern Jordan. The Associated Press reports forty wounded. CNN and Fox News put the death toll at nine. The gunmen opened fire during a funeral at a Greek Orthodox church."
+  },
+  {
+   "id": "f2",
+   "text": "Jordan's government spokesman said the attackers followed an extremist takfiri ideology. Officials call them unknown assailants so far. No group has claimed responsibility. Security forces are hunting the gunmen. One witness said the shooting lasted about five minutes."
+  },
+  {
+   "id": "f3",
+   "text": "King Abdullah vowed the harshest retaliation and ordered three days of national mourning. CNN calls the attack unprecedented, and says the toll was revised several times. Officials have not said whether the attackers had links to a terror group."
+  },
+  {
+   "id": "cta",
+   "text": "Will Jordan identify the attackers within a week? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE ATTACK",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE SUSPECTS",
+   "seg": "f2",
+   "color": "info"
+  },
+  {
+   "n": "03",
+   "name": "THE RESPONSE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "upload": {
+  "title": "Gunmen Hit a Funeral in Jordan: Who Did It? #shorts",
+  "description": "Gunmen opened fire at a Greek Orthodox church during a funeral in the village of Hammoud, Karak governorate, Jordan, on Friday, October 23, 2026. At least seven people were killed and about 40 wounded according to AP-based reports; CNN and Fox News report nine dead, so the toll is still being revised. Government spokesman Mohammad Momani said the attackers subscribed to an \"extremist takfiri ideology\". No group has claimed responsibility and no suspects have been named; a manhunt is under way. King Abdullah II vowed the \"harshest retaliation\" and Jordan declared three days of national mourning.\n\nSources:\nAP / NPR: Gunmen open fire at a church during a funeral in Jordan, killing 7 and wounding 40 (Oct 24, 2026)\nCBS News: At least 7 killed in attack on Jordan church during funeral (Oct 2026)\nCNN: At least 9 people killed in unprecedented shooting at church in Jordan (Oct 23, 2026)\nAl Jazeera: At least seven killed after gunmen open fire at church in Jordan (Oct 23, 2026)\n\n#geopolitics #Jordan #MiddleEast #Karak",
+  "tags": [
+   "geopolitics",
+   "Jordan",
+   "Karak",
+   "church attack",
+   "Middle East",
+   "King Abdullah",
+   "terrorism",
+   "world news"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:On",
+  "focus": "al karak",
+  "zoom": 1.5,
+  "number": "7+",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "JORDAN FUNERAL ATTACK",
+    "text"
+   ],
+   [
+    "WHO'S BEHIND IT?",
+    "accent"
+   ]
+  ],
+  "source": "KILLED · PER AP · OCT 23"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 20,
+     "lat": 25,
+     "R": 360
+    },
+    {
+     "at": 3.4,
+     "lon": 36,
+     "lat": 31.2,
+     "R": 520
+    }
+   ],
+   "chip": {
+    "text": "JORDAN · OCT 23, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "JOR",
+     "color": "danger",
+     "at": "hook:Gunmen"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "al karak",
+     "color": "danger",
+     "at": "hook:attacked",
+     "label": "KARAK",
+     "sub": "CHURCH ATTACK",
+     "dx": -90,
+     "dy": -70,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:attacked",
+    "lines": [
+     [
+      "FUNERAL",
+      "danger",
+      130
+     ],
+     [
+      "ATTACKED",
+      "text",
+      110
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:Who",
+    "icon": "eye",
+    "iconColor": "accent",
+    "color": "accent",
+    "kicker": "NO CLAIM YET",
+    "title": "WHO DID IT?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    36,
+    31.2
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 36,
+     "lat": 31.2,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 35.75,
+     "lat": 31.15,
+     "dist": 16,
+     "pitch": 48,
+     "yaw": 8,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 36,
+     "lat": 31.3,
+     "dist": 34,
+     "pitch": 44,
+     "yaw": -6,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 36.2,
+     "lat": 31.2,
+     "dist": 45,
+     "pitch": 40,
+     "yaw": 3,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 36,
+     "lat": 31.2,
+     "dist": 40,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "JOR",
+     "color": "danger",
+     "alpha": 0.4,
+     "fill": 0.08,
+     "at": "f1"
+    },
+    {
+     "kind": "marker",
+     "loc": "al karak",
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Hammoud",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "HAMMOUD · KARAK",
+      "sub": "GREEK ORTHODOX CHURCH",
+      "dx": -110,
+      "dy": -80
+     }
+    },
+    {
+     "kind": "card",
+     "screen": [
+      60,
+      290,
+      560
+     ],
+     "title": "DEATH TOLL",
+     "badge": "STILL RISING",
+     "color": "danger",
+     "at": "f1:The",
+     "until": "f2 -0.2",
+     "rows": [
+      {
+       "icon": "people",
+       "text": "7+ KILLED · PER AP",
+       "at": "f1:Associated"
+      },
+      {
+       "icon": "x",
+       "text": "9 KILLED · PER CNN, FOX",
+       "at": "f1:CNN"
+      }
+     ]
+    },
+    {
+     "kind": "stamp",
+     "text": "NO CLAIM",
+     "icon": "eye",
+     "color": "accent",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f2:No",
+     "until": "f3 -0.1",
+     "note": "NO GROUP HAS CLAIMED IT"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      300,
+      400,
+      700
+     ],
+     "kicker": "GOVERNMENT SPOKESMAN:",
+     "text": "\"EXTREMIST TAKFIRI IDEOLOGY\"",
+     "color": "info",
+     "at": "f2:Jordan's",
+     "until": "f2:No"
+    },
+    {
+     "kind": "stamp",
+     "text": "3 DAYS OF MOURNING",
+     "icon": "flag",
+     "color": "danger",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f3:King",
+     "until": "cta -0.2",
+     "note": "KING VOWS HARSHEST RETALIATION"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 36,
+     "lat": 31,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 36,
+     "lat": 31,
+     "R": 560
+    },
+    {
+     "at": "end",
+     "lon": 36,
+     "lat": 31.5,
+     "R": 560
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "JOR",
+     "color": "danger",
+     "alpha": 0.7
+    }
+   ],
+   "markers": [
+    {
+     "loc": "al karak",
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "WHO ATTACKED THE FUNERAL?",
+     "text"
+    ],
+    [
+     "NAMED WITHIN A WEEK?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: AP/NPR, CBS NEWS, CNN, AL JAZEERA",
+    "OCT 23–24, 2026"
+   ]
+  }
+ ]
+}
