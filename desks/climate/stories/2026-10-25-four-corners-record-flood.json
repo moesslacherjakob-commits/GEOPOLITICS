@@ -1,0 +1,454 @@
+{
+ "id": "2026-10-25-four-corners-record-flood",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "New Mexico's San Juan River just broke a record from nineteen oh nine. Who is in its path?"
+  },
+  {
+   "id": "f1",
+   "text": "At Farmington, the river reached fourteen point one feet on Friday, the National Weather Service says. The old record, set in nineteen oh nine, was twelve point three. Days of heavy rain, over five inches in places, sent water off Colorado's mountains into the desert."
+  },
+  {
+   "id": "f2",
+   "text": "Authorities estimate about fifteen hundred homes and buildings were affected, based on a National Weather Service database. Rescuers pulled people from rooftops. Near Shiprock, the river passed its flood stage of fifteen point five feet, and hundreds of homes lost power."
+  },
+  {
+   "id": "f3",
+   "text": "The Associated Press says more rain is expected through the weekend. As of Saturday, no deaths had been reported in either state. Farmington's police chief said, quote, this is not over."
+  },
+  {
+   "id": "cta",
+   "text": "Will the Four Corners see more flooding this week? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE RECORD",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE DAMAGE",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE RISK",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -100,
+     "lat": 34,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": -108,
+     "lat": 36.5,
+     "R": 700
+    }
+   ],
+   "chip": {
+    "text": "FOUR CORNERS FLOOD",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:just",
+    "lines": [
+     [
+      "RECORD FLOOD",
+      "danger",
+      120
+     ],
+     [
+      "SINCE 1909",
+      "text",
+      120
+     ]
+    ]
+   },
+   "highlights": [
+    {
+     "iso": "US-NM",
+     "color": "danger",
+     "at": "hook:record",
+     "alpha": 0.35
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -108.218,
+      36.728
+     ],
+     "color": "accent",
+     "at": "hook:River",
+     "label": "FARMINGTON",
+     "sub": "",
+     "dx": -230,
+     "dy": -60,
+     "big": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -108,
+    36.8
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -108,
+     "lat": 36.5,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": -108.2,
+     "lat": 36.8,
+     "dist": 14,
+     "pitch": 42,
+     "yaw": -6,
+     "oy": 180
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": -108.2,
+     "lat": 36.9,
+     "dist": 11,
+     "pitch": 48,
+     "yaw": 8,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": -107.6,
+     "lat": 37.0,
+     "dist": 18,
+     "pitch": 40,
+     "yaw": -4,
+     "oy": 180
+    },
+    {
+     "at": "cta -0.1",
+     "lon": -108,
+     "lat": 36.8,
+     "dist": 22,
+     "pitch": 35,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "US-NM",
+     "color": "info",
+     "alpha": 0.14,
+     "at": "f1:River"
+    },
+    {
+     "kind": "tint",
+     "iso": "US-CO",
+     "color": "info",
+     "alpha": 0.1,
+     "at": "f1:Colorado's"
+    },
+    {
+     "kind": "field",
+     "at": "f1:heavy",
+     "until": "cta",
+     "blobs": [
+      {
+       "loc": [
+        -107.01,
+        37.269
+       ],
+       "r": 0.8,
+       "v": 0.9
+      },
+      {
+       "loc": [
+        -107.6,
+        37.2
+       ],
+       "r": 1.0,
+       "v": 0.7
+      },
+      {
+       "loc": [
+        -108.218,
+        36.728
+       ],
+       "r": 0.7,
+       "v": 0.6
+      }
+     ],
+     "palette": "rain",
+     "alpha": 0.6,
+     "grow": 1.5,
+     "clip": "USA"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -108.218,
+      36.728
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Farmington",
+     "label": {
+      "text": "RECORD 14.1 FT",
+      "sub": "FARMINGTON \u00b7 OLD RECORD 12.3 FT (1909)",
+      "dx": -90,
+      "dy": 110,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -107.01,
+      37.269
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f1:Colorado's",
+     "label": {
+      "text": "PAGOSA SPRINGS",
+      "sub": "",
+      "dx": 10,
+      "dy": -70,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -108.687,
+      36.786
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f2:Shiprock",
+     "label": {
+      "text": "SHIPROCK",
+      "sub": "ABOVE FLOOD STAGE \u00b7 POWER OUTAGES",
+      "dx": -300,
+      "dy": -70,
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "ILLUSTRATIVE RAIN AREA \u00b7 APPROXIMATE \u00b7 NWS / AP",
+     "y": 1170,
+     "at": "f1 +1"
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "from": "f1:The",
+   "to": "f1$ -0.1",
+   "label": "SAN JUAN RIVER AT FARMINGTON \u00b7 PEAK",
+   "sublabel": "FLOOD HEIGHT IN FEET",
+   "color": "danger",
+   "bars": [
+    {
+     "label": "1909",
+     "sub": "",
+     "value": 12.3,
+     "display": "12.3 FT",
+     "color": "accent",
+     "at": "f1:old",
+     "dur": 1.0
+    },
+    {
+     "label": "OCT 2026",
+     "sub": "",
+     "value": 14.1,
+     "display": "14.1 FT",
+     "color": "danger",
+     "at": "f1:fourteen",
+     "dur": 1.0
+    }
+   ],
+   "source": "SOURCE: NATIONAL WEATHER SERVICE (PROVISIONAL)"
+  },
+  {
+   "type": "facts",
+   "from": "f2:Authorities",
+   "to": "f2$ -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "people",
+     "big": "~1,500 BUILDINGS",
+     "text": "AFFECTED \u00b7 NWS DATABASE",
+     "color": "danger",
+     "at": "f2:fifteen"
+    },
+    {
+     "icon": "drop",
+     "big": "ROOFTOP RESCUES",
+     "text": "REPORTED \u00b7 AP / NBC",
+     "color": "accent",
+     "at": "f2:rooftops."
+    },
+    {
+     "icon": "bolt",
+     "big": "POWER OUT",
+     "text": "HUNDREDS OF HOMES \u00b7 SHIPROCK AREA",
+     "color": "info",
+     "at": "f2:hundreds"
+    }
+   ],
+   "source": "SOURCE: NWS, AP, NBC NEWS"
+  },
+  {
+   "type": "facts",
+   "from": "f3:The",
+   "to": "f3$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "rain",
+     "big": "MORE RAIN",
+     "text": "EXPECTED THROUGH WEEKEND \u00b7 AP",
+     "color": "info",
+     "at": "f3:more"
+    },
+    {
+     "icon": "check",
+     "big": "NO DEATHS",
+     "text": "REPORTED AS OF SATURDAY \u00b7 AP",
+     "color": "ok",
+     "at": "f3:no"
+    },
+    {
+     "icon": "eye",
+     "big": "\u201cTHIS IS NOT OVER\u201d",
+     "text": "FARMINGTON POLICE CHIEF",
+     "color": "danger",
+     "at": "f3:quote"
+    }
+   ],
+   "source": "SOURCE: AP, ALBUQUERQUE JOURNAL"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "RECORD FLOOD ON THE SAN JUAN.",
+     "text"
+    ],
+    [
+     "MORE RAIN AHEAD?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "NWS, AP, NBC NEWS, ALBUQUERQUE JOURNAL (SEARCH EXCERPTS)",
+    "OCT 25, 2026 \u00b7 RAIN AREA ILLUSTRATIVE \u00b7 READINGS PROVISIONAL"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -100,
+     "lat": 34,
+     "R": 700
+    },
+    {
+     "at": "cta +1",
+     "lon": -106,
+     "lat": 36,
+     "R": 900
+    },
+    {
+     "at": "end",
+     "lon": -107,
+     "lat": 36.5,
+     "R": 900
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -108.218,
+      36.728
+     ],
+     "color": "accent"
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "US-NM",
+     "color": "danger",
+     "alpha": 0.4
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Four Corners Flood Tops the River's 1909 Record #shorts",
+  "description": "The National Weather Service says the San Juan River at Farmington, New Mexico, reached 14.1 feet on Friday, above the 12.3-foot record from 1909. The Associated Press reports more rain is expected through the weekend; no deaths had been reported as of Saturday.\n\nSources: National Weather Service, Associated Press, NBC News, Albuquerque Journal (based on search-result excerpts). River readings are provisional; the rain area on the map is illustrative.\n\n#climate #weather #flood #fourcorners #newmexico",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "flood",
+   "New Mexico",
+   "Colorado",
+   "San Juan River",
+   "Farmington"
+  ],
+  "cover": "f2 +1"
+ },
+ "thumbnail": {
+  "at": "f2:Rescuers",
+  "number": "14.1 FT",
+  "numberColor": "danger",
+  "source": "SAN JUAN RIVER, FARMINGTON \u00b7 NWS \u00b7 OCT 23",
+  "focus": [
+   -108.218,
+   36.728
+  ],
+  "lines": [
+   [
+    "BEATS 1909",
+    "accent"
+   ]
+  ],
+  "zoom": 1.4
+ },
+ "gap": 0.9
+}
