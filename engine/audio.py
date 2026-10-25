@@ -96,8 +96,11 @@ def ticks(dur=1.3, k=14):
 def flow(dur=1.8):
     n = int(dur * SR); tt = np.arange(n) / SR; return bp(rng.standard_normal(n), 300, 1400) * (0.6 + 0.4 * np.sin(2 * np.pi * 7 * tt)) * np.sin(np.pi * tt / dur) * 0.5
 
-FX = {'whoosh': whoosh, 'impact': impact, 'stamp': stamp, 'blip': blip, 'lock': lock, 'rise': rise, 'riser': riser, 'ticks': ticks, 'flow': flow}
-GAIN = {'whoosh': .45, 'impact': .9, 'stamp': .75, 'blip': .35, 'lock': .35, 'rise': .4, 'riser': .4, 'ticks': .35, 'flow': .3}
+def mark(dur=0.42):  # felt-tip stroke for highlights / underlines / circles
+    n = int(dur * SR); tt = np.arange(n) / SR; e = np.sin(np.pi * np.minimum(1, tt / dur)) ** 0.6
+    return bp(rng.standard_normal(n), 1800, 6500) * e * (0.75 + 0.25 * np.sin(2 * np.pi * 23 * tt)) * 0.5
+FX = {'whoosh': whoosh, 'impact': impact, 'stamp': stamp, 'blip': blip, 'lock': lock, 'rise': rise, 'riser': riser, 'ticks': ticks, 'flow': flow, 'mark': mark}
+GAIN = {'whoosh': .45, 'impact': .9, 'stamp': .75, 'blip': .35, 'lock': .35, 'rise': .4, 'riser': .4, 'ticks': .35, 'flow': .3, 'mark': .22}
 LEAD = {'riser': 1.2, 'whoosh': 0.35}
 for e in ev:
     if e['type'] not in FX: continue

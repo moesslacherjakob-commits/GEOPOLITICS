@@ -3,7 +3,7 @@
 One file = one Short. The engine renders it with `./make.sh stories/<id>.json` (@GEOPOLITICS4YOU) or `./make.sh desks/<desk>/stories/<id>.json` (other channels).
 Two full examples: `stories/2026-10-09-second-front.json` (Gulf / oil) and `stories/2026-10-09-ethiopia-eritrea.json` (Horn of Africa). Climate example with `track` + `field`: `desks/climate/stories/2026-10-10-isaias-late-hurricane.json`. Markets example with `ticker`, `counter`, `chain`, `quote`: `desks/economy/stories/2026-10-09-spacex-spectrum-telecoms.json`.
 
-**Long-form (16:9):** a story with `"format": "long"` (in `longform/`) renders at 1920×1080 / 24 fps with a chapter header, footage scenes (`{"type": "footage", "asset", "query", "kind", "symbolic", "move", "lower"}`), a 16:9 thumbnail and YouTube chapters — see `LONGFORM.md` and `longform/examples/hormuz-explained-example.json`. Everything below applies too; screen coordinates are then 1920×1080.
+**Long-form (16:9):** a story with `"format": "long"` (in `longform/`) renders at 1920×1080 / 24 fps with a chapter header, footage scenes (`{"type": "footage", "asset", "query", "kind", "symbolic", "move", "lower", "marks"}` — marks = motion graphics on the picture, see below), `document` excerpts, a 16:9 thumbnail and YouTube chapters — see `LONGFORM.md` and `longform/examples/hormuz-explained-example.json`. Everything below applies too; screen coordinates are then 1920×1080.
 
 **Channel config:** a story inside `desks/<desk>/stories/` automatically uses `desks/<desk>/config.json` (channel handle on the thumbnail, accent colour via `theme`, voice, disclaimer, pronunciations); everything else uses the root `config.json`. `$GEO_CONFIG` overrides both.
 
@@ -77,6 +77,21 @@ Icons: `check x eye jet plane drop flame flag shield money ship factory people c
 - `chain` / `flow` — cause → effect or how-it-works diagram: `label, color, steps [{icon, title, sub?, color?, dir? up|down, dirColor?, at}]` (2–5 steps, arrows draw between them), `source`.
 - `timeline` — vertical timeline: `label, color, items [{date, title, sub?, color?, big?, at}]` (≤ 5 items), `source`.
 - `scale` — size comparison: `label, sublabel, color, items [{name, value, display, color?, icon?, at}]` (2–4 circles, area ∝ value), `maxRadius?, prefix/suffix/decimals` (for values without `display`), `note, source`.
+- `document` — a **verbatim excerpt** typeset as a paper page (serif), the narrated phrase gets marked while the voice says it, the rest of the text fades back and the page pushes in; top-right label `EXCERPT`. Fields: `kicker` (e.g. "JOINT STATEMENT"), `source` ("kremlin.ru · 21 Oct 2026"), `title?`, `paragraphs [..]` (≤ 120 words in total, copied exactly), `marks [{text, style: highlight|underline|circle|box, at, color?, occurrence?, zoom?}]` (`text` must appear word-for-word in the paragraphs — punctuation and case are ignored; `check` fails otherwise), `zoom?` (push-in, default 1.12), `push false?`, `dim false?`, `footer?`, `label?`. Only primary texts (official statements, resolutions, laws, treaties, filings, transcripts) — never news-article sentences. Works in both formats.
+
+### Footage marks (long-form `footage` scenes): motion graphics on the picture
+`"marks": [...]` on a footage scene draws annotations that stick to the picture (they follow the slow camera move and zooms). Coordinates are **fractions of the normalised asset** (0..1, x left→right, y top→bottom) — read them off `out/<id>/footage/grid_<asset>.jpg` (`python3 tools/footage.py grid <story> [asset [x1 y1 x2 y2]]`; with a region you get a zoomed grid for exact text lines). Every mark: `type`, `at` (anchor, usually the spoken word), `until?` (default: end of shot), `color?` (default accent; highlight = marker yellow), `draw?` (s), `label?`, `sub?`, `place? above|below`, `sfx false?`.
+| type | fields | use |
+|---|---|---|
+| `highlight` | `x [x1,x2], y` (centre of the text line), `h?` (line height, default .045) — or `lines [{x, y}, …]` for several lines | marker over a line of text in a photographed document |
+| `underline` | `x [x1,x2], y` (just below the text) or `lines` · `w?` | pen stroke under words |
+| `circle` | `c [x,y], r` (fraction of the width), `ry?` (fraction of the height) | hand-drawn ring around an object |
+| `box` | `rect [x1,y1,x2,y2]` | corner brackets locking onto an object |
+| `arrow` | `to [x,y]`, `from? [x,y]` (default: from the frame centre side), `label` | curved arrow with a label at its tail |
+| `pin` | `p [x,y]`, `label`, `sub?`, `dx?, dy?` | map-style tag on a point |
+| `spotlight` | `rect` or `c, r, ry?`, `dim?` (.62) | darkens everything but the region |
+| `zoom` | `rect [x1,y1,x2,y2]`, `dur?` (1 s), `fill?` (.85), `max?` (2.6) | camera pushes in until the region fills the stage; stays (or returns before `until`) |
+Rules: 1–3 marks per shot, each on the word it illustrates; marks on video only for static shots (`check` notes it); never mark or label a person's face, never put a name on a person unless the source caption identifies them.
 
 ## Screen layout (1080×1920, YouTube Shorts safe zones)
 - 0–150: platform UI · 168–245: section header · 250–1150: stage · 1270–1360: captions · 1500+: platform UI (title, buttons). Right edge x > 960 is covered by buttons from y ≈ 900.
