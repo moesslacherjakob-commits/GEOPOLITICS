@@ -1,0 +1,390 @@
+{
+ "id": "2026-10-26-serbia-vucic-concedes",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Serbia's president of fourteen years just conceded defeat. To whom?"
+  },
+  {
+   "id": "f1",
+   "text": "On Sunday night, Aleksandar Vučić said the Student List had won Serbia's snap election. Final counts were not in. By his projection, the students take one hundred thirty-five to one hundred forty of two hundred fifty seats. His own list gets about one hundred five."
+  },
+  {
+   "id": "f2",
+   "text": "The Student List grew out of almost two years of protests. They began after a train station canopy collapsed in Novi Sad in twenty twenty-four, killing sixteen people. Protesters accuse the government of corruption. Al Jazeera reports the highest turnout in decades."
+  },
+  {
+   "id": "f3",
+   "text": "Vučić blamed independent media, and alleged interference by unnamed European countries and an American deep state. Reuters compares the result to Orbán's defeat in Hungary in April. Results are preliminary. A presidential vote is due by May twenty twenty-seven."
+  },
+  {
+   "id": "cta",
+   "text": "Will Vučić's party accept the final result? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE CONCESSION",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE MOVEMENT",
+   "seg": "f2",
+   "color": "info"
+  },
+  {
+   "n": "03",
+   "name": "THE REACTION",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "violet"
+  }
+ ],
+ "upload": {
+  "title": "Serbia's Vučić Concedes to Student Protesters #shorts",
+  "description": "On the night of Sunday, October 25, 2026, Serbian President Aleksandar Vučić conceded defeat in the snap parliamentary election to the student-led Student List. Based on a sample of votes, he projected the Student List at 135 to 140 of 250 seats and his own list at about 105; final results are still pending. The movement grew out of almost two years of protests that began after the 2024 Novi Sad railway station canopy collapse, which killed 16 people. Vučić blamed independent media and alleged interference by unnamed European countries and an \"American deep state\". Reuters compared the result to Viktor Orbán's defeat in Hungary in April.\n\nSources:\nCNN: Serbia's leader concedes defeat to student-led movement in seismic political shift (Oct 25, 2026)\nAl Jazeera: Serbia's Vucic concedes election defeat to student-led movement (Oct 25, 2026)\nEuronews: Student List wins Serbian election as Vučić concedes defeat (Oct 25, 2026)\nABC News (Australia): Serbian president concedes defeat to student-led movement (Oct 26, 2026)\nReuters via Times of Israel: Serbia's Vucic concedes election defeat in historic win for student protest movement (Oct 2026)\n\n#geopolitics #Serbia #Vucic #Europe",
+  "tags": [
+   "geopolitics",
+   "Serbia",
+   "Vučić",
+   "Belgrade",
+   "Student List",
+   "election",
+   "Europe",
+   "world news"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:On",
+  "focus": "Belgrade",
+  "zoom": 1.5,
+  "number": "14 YEARS",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "STUDENTS BEAT",
+    "text"
+   ],
+   [
+    "THE PRESIDENT?",
+    "accent"
+   ]
+  ],
+  "source": "IN POWER · PER CNN · OCT 25"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 5,
+     "lat": 40,
+     "R": 360
+    },
+    {
+     "at": 3.4,
+     "lon": 20.5,
+     "lat": 44.2,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "SERBIA · OCT 25, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "SRB",
+     "color": "accent",
+     "at": "hook:Serbia's"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Belgrade",
+     "color": "accent",
+     "at": "hook:president",
+     "label": "BELGRADE",
+     "sub": "ELECTION NIGHT",
+     "dx": 90,
+     "dy": -70,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:president",
+    "lines": [
+     [
+      "VUČIĆ",
+      "accent",
+      130
+     ],
+     [
+      "CONCEDES",
+      "text",
+      110
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:To",
+    "icon": "flag",
+    "iconColor": "info",
+    "color": "info",
+    "kicker": "STUDENT LIST",
+    "title": "WHO WON?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "f2$ +0.1",
+   "center": [
+    20.5,
+    44.2
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 20.5,
+     "lat": 44.2,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 20.4,
+     "lat": 44.5,
+     "dist": 14,
+     "pitch": 48,
+     "yaw": 8,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 19.9,
+     "lat": 45.0,
+     "dist": 12,
+     "pitch": 46,
+     "yaw": -6,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "SRB",
+     "color": "accent",
+     "alpha": 0.4,
+     "fill": 0.1,
+     "at": "f1"
+    },
+    {
+     "kind": "marker",
+     "loc": "Belgrade",
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1:Aleksandar",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "BELGRADE",
+      "sub": "CONCESSION SPEECH",
+      "dx": 100,
+      "dy": -80
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": "Novi Sad",
+     "style": "pulse",
+     "color": "danger",
+     "at": "f2:Novi",
+     "until": "f2$",
+     "label": {
+      "text": "NOVI SAD",
+      "sub": "CANOPY COLLAPSE · 16 DEAD",
+      "dx": -120,
+      "dy": -90
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "PRELIMINARY",
+     "icon": "eye",
+     "color": "accent",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f1:Final",
+     "until": "f1:By",
+     "note": "FINAL COUNTS NOT IN"
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "from": "f1:By -0.1",
+   "to": "f1$ +0.1",
+   "label": "SEATS OF 250 · VUČIĆ'S PROJECTION",
+   "sublabel": "PRELIMINARY · NOT FINAL",
+   "color": "accent",
+   "bars": [
+    {
+     "label": "STUDENT LIST",
+     "value": 137.5,
+     "display": "135–140",
+     "color": "info",
+     "at": "f1:students",
+     "dur": 1.2
+    },
+    {
+     "label": "VUČIĆ'S LIST",
+     "value": 105,
+     "display": "≈ 105",
+     "color": "danger",
+     "at": "f1:His",
+     "dur": 1.0
+    }
+   ],
+   "source": "PER VUČIĆ · CNN"
+  },
+  {
+   "type": "map",
+   "from": "f2$ +0.1",
+   "to": "cta -0.1",
+   "center": [
+    20.5,
+    44.2
+   ],
+   "camera": [
+    {
+     "at": "f2$ +0.1",
+     "lon": 19.9,
+     "lat": 45.0,
+     "dist": 12,
+     "pitch": 46,
+     "yaw": -6,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 20.5,
+     "lat": 44.2,
+     "dist": 20,
+     "pitch": 42,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 20.5,
+     "lat": 44.2,
+     "dist": 24,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "SRB",
+     "color": "violet",
+     "alpha": 0.4,
+     "fill": 0.08,
+     "at": "f3"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      300,
+      400,
+      700
+     ],
+     "kicker": "VUČIĆ BLAMES:",
+     "text": "MEDIA · \"AMERICAN DEEP STATE\"",
+     "color": "danger",
+     "at": "f3:Vučić",
+     "until": "f3:Reuters"
+    },
+    {
+     "kind": "stamp",
+     "text": "LIKE ORBÁN?",
+     "icon": "flag",
+     "color": "violet",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f3:Reuters",
+     "until": "cta -0.2",
+     "note": "REUTERS COMPARISON · HUNGARY, APRIL"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 20.5,
+     "lat": 44,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 20.5,
+     "lat": 44,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": 20.5,
+     "lat": 44.3,
+     "R": 600
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "SRB",
+     "color": "accent",
+     "alpha": 0.7
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Belgrade",
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "WILL HIS PARTY ACCEPT IT?",
+     "text"
+    ],
+    [
+     "FINAL RESULT PENDING",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: CNN, AL JAZEERA, EURONEWS, ABC",
+    "OCT 25–26, 2026"
+   ]
+  }
+ ]
+}
