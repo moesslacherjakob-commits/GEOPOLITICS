@@ -1,0 +1,98 @@
+{
+ "id": "2026-10-26-spacex-40b-gpu-financing",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "SpaceX says it just borrowed forty billion dollars for chips. Is it really done?"},
+  {"id": "f1", "text": "On Sunday, Elon Musk said on X that SpaceX closed forty billion dollars in financing to buy graphics chips. Reuters and CNBC carried the claim. He said the chips arrive in the first half of twenty twenty-seven."},
+  {"id": "f2", "text": "But a Monday filing is more careful. It describes a binding commitment signed October twenty-fourth with a fund managed by Apollo. Apollo's entity would buy the chips and lease them to SpaceX. The interest rate is not set yet. Pricing and closing conditions still apply."},
+  {"id": "f3", "text": "Leases would run about five years. The final agreement is expected before the end of twenty twenty-six. SpaceX says the money supports Nvidia's next chips, called Vera Rubin. Musk also warned that smaller A.I. cloud firms may struggle to borrow."},
+  {"id": "cta", "text": "Will the deal close as planned this year? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE CLAIM", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "THE FILING", "seg": "f2", "color": "violet"},
+  {"n": "03", "name": "WHAT'S NEXT", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "upload": {
+  "title": "SpaceX Says It Raised $40B for A.I. Chips. Not Quite #shorts",
+  "description": "On October 25, Elon Musk said SpaceX had closed $40 billion in financing for GPUs. A SpaceX filing on October 26 is more cautious: a binding commitment with an Apollo-managed entity, which would buy the chips and lease them to SpaceX, with the interest rate not yet set and the final agreement expected before the end of 2026.\n\nSources: CNBC, Reuters (via Investing.com), Fox Business, Seeking Alpha / TradingView, SpaceX filing as reported (Oct 26). Financing terms are company statements; Musk's remarks are his own claims.\n\n#tech #AI #SpaceX #Nvidia",
+  "tags": ["technology", "news", "SpaceX", "Elon Musk", "Apollo", "Nvidia", "AI", "GPU", "financing"],
+  "cover": "hook$ -0.2"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [-97.15, 25.99],
+  "number": "$40B",
+  "numberColor": "accent",
+  "lines": [["CLOSED OR", "text"], ["JUST PLANNED?", "accent"]],
+  "source": "OCT 26 · PER SPACEX FILING · MUSK'S CLAIM"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {"at": 0, "lon": -60, "lat": 30, "R": 380},
+    {"at": 4.5, "lon": -97.15, "lat": 26, "R": 600}
+   ],
+   "chip": {"text": "SPACEX · OCT 26, 2026", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "USA", "color": "info", "at": "hook:SpaceX", "alpha": 0.5}],
+   "markers": [
+    {"loc": [-97.15, 25.99], "color": "accent", "at": "hook:SpaceX", "label": "SPACEX", "sub": "STARBASE, TEXAS", "dx": -60, "dy": -160, "big": true}
+   ],
+   "headline": {"at": "hook:borrowed", "lines": [["$40 BILLION", "text", 110], ["FOR CHIPS?", "accent", 100]]}
+  },
+  {
+   "type": "facts",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "color": "accent",
+   "items": [
+    {"icon": "money", "big": "$40 BILLION", "text": "FINANCING FOR GPUS · PER MUSK ON X", "color": "accent", "at": "f1:forty"},
+    {"icon": "eye", "big": "REUTERS · CNBC", "text": "REPORTED HIS CLAIM, SUNDAY OCT 25", "color": "violet", "at": "f1:Reuters"},
+    {"icon": "chip", "big": "H1 2027", "text": "CHIPS DUE · PER MUSK", "color": "info", "at": "f1:He"}
+   ],
+   "source": "SOURCES: CNBC · REUTERS (VIA INVESTING.COM)"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "WHAT THE FILING DESCRIBES",
+   "color": "violet",
+   "steps": [
+    {"icon": "shield", "title": "BINDING COMMITMENT", "sub": "SIGNED OCT 24 · APOLLO-MANAGED FUND", "color": "ok", "at": "f2:binding"},
+    {"icon": "chip", "title": "APOLLO BUYS THE CHIPS", "sub": "GPUS AND RELATED EQUIPMENT", "color": "accent", "at": "f2:Apollo's"},
+    {"icon": "money", "title": "LEASES THEM TO SPACEX", "sub": "INTEREST RATE NOT SET YET", "color": "info", "at": "f2:lease"}
+   ],
+   "source": "SOURCES: SPACEX FILING AS REPORTED · SEEKING ALPHA · CNBC"
+  },
+  {
+   "type": "timeline",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "WHERE THINGS STAND",
+   "color": "info",
+   "items": [
+    {"date": "5 YEARS", "title": "LEASE LENGTH", "sub": "ABOUT FIVE YEARS · PER FILING", "color": "accent", "at": "f3:Leases"},
+    {"date": "BEFORE END 2026", "title": "FINAL AGREEMENT EXPECTED", "sub": "SUBJECT TO PRICING AND CLOSING", "color": "ok", "big": true, "at": "f3:final"},
+    {"date": "H1 2027", "title": "LEASES START", "sub": "NVIDIA VERA RUBIN · PER SPACEX", "color": "violet", "at": "f3:Nvidia's"}
+   ],
+   "source": "SOURCES: SPACEX FILING AS REPORTED · SEEKING ALPHA · TRADINGVIEW"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": -60, "lat": 30, "R": 800},
+    {"at": "cta +1", "lon": -97.15, "lat": 26, "R": 500},
+    {"at": "end", "lon": -90, "lat": 30, "R": 500}
+   ],
+   "markers": [{"loc": [-97.15, 25.99], "color": "accent"}],
+   "lines": [["DEAL CLOSES", "text"], ["THIS YEAR?", "accent"]],
+   "sources": ["CNBC · REUTERS · FOX BUSINESS · SPACEX FILING AS REPORTED", "FINANCING TERMS ARE COMPANY STATEMENTS"]
+  }
+ ]
+}
