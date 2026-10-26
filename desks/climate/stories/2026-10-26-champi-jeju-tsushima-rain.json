@@ -1,0 +1,499 @@
+{
+ "id": "2026-10-26-champi-jeju-tsushima-rain",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Typhoon Champi dumped over four hundred millimeters on Jeju. What does Japan get next?"
+  },
+  {
+   "id": "f1",
+   "text": "South Korea's Jeju Island saw up to four hundred fifteen millimeters of rain over four days, Korean media report. One Mount Halla station logged three hundred forty-one by Sunday evening. Flights and ferries were disrupted, and hiking trails on the mountain were closed."
+  },
+  {
+   "id": "f2",
+   "text": "Early Monday, Champi weakened into an extratropical cyclone south of Jeju. Japan's weather agency says it could approach Kyushu. Reports say Tsushima Island logged more than two hundred millimeters in one day, an October record."
+  },
+  {
+   "id": "f3",
+   "text": "The agency expects up to two hundred millimeters more in northern Kyushu and Shikoku within twenty-four hours, and one hundred fifty in southern Kyushu. A stalled front is adding to the rain, it says. It warns of landslides and flooding."
+  },
+  {
+   "id": "cta",
+   "text": "Will Champi's rain cause flooding in Japan? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE RAIN",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE HANDOFF",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE FORECAST",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 135,
+     "lat": 28,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": 128,
+     "lat": 33,
+     "R": 700
+    }
+   ],
+   "chip": {
+    "text": "TYPHOON CHAMPI",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:dumped",
+    "lines": [
+     [
+      "400+ MM OF RAIN",
+      "danger",
+      110
+     ],
+     [
+      "ON JEJU",
+      "text",
+      120
+     ]
+    ]
+   },
+   "highlights": [
+    {
+     "iso": "KOR",
+     "color": "danger",
+     "at": "hook:Jeju.",
+     "alpha": 0.35
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      126.53,
+      33.4
+     ],
+     "color": "accent",
+     "at": "hook:Jeju.",
+     "label": "JEJU",
+     "sub": "",
+     "dx": -170,
+     "dy": -60,
+     "big": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    128,
+    32
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 128,
+     "lat": 33,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 126.5,
+     "lat": 33.4,
+     "dist": 14,
+     "pitch": 40,
+     "yaw": -5,
+     "oy": 180
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": 128.5,
+     "lat": 33.3,
+     "dist": 22,
+     "pitch": 44,
+     "yaw": 5,
+     "oy": 180
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": 131.5,
+     "lat": 33.5,
+     "dist": 22,
+     "pitch": 46,
+     "yaw": -4,
+     "oy": 190
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 128.5,
+     "lat": 32,
+     "dist": 40,
+     "pitch": 35,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "track",
+     "at": "hook$",
+     "until": "cta +0.6",
+     "color": "storm",
+     "name": "CHAMPI",
+     "sub": "TYPHOON \u00b7 TRACK APPROXIMATE",
+     "forecast": 3,
+     "now": 2,
+     "cone": true,
+     "points": [
+      {
+       "loc": [
+        124.2,
+        26.7
+       ],
+       "cat": 1,
+       "label": "SAT",
+       "dx": -100,
+       "dy": 30,
+       "until": "f1 +1"
+      },
+      {
+       "loc": [
+        125.3,
+        30.3
+       ],
+       "cat": "TS",
+       "label": "SUN",
+       "dx": -110,
+       "dy": 20,
+       "until": "f2"
+      },
+      {
+       "loc": [
+        126.5,
+        32.2
+       ],
+       "cat": "EX",
+       "label": "MON DAWN",
+       "dx": -250,
+       "dy": 10,
+       "big": true,
+       "until": "f3"
+      },
+      {
+       "loc": [
+        130.3,
+        33.3
+       ],
+       "cat": "EX",
+       "label": "KYUSHU?",
+       "dx": 10,
+       "dy": 40
+      }
+     ],
+     "steps": [
+      {
+       "at": "hook +0.3",
+       "to": 1,
+       "dur": 2.0
+      },
+      {
+       "at": "f1:Jeju",
+       "to": 2,
+       "dur": 3.5
+      },
+      {
+       "at": "f2:Japan's",
+       "to": 3,
+       "dur": 3.0
+      }
+     ],
+     "nameUntil": "f3",
+     "nameDx": -60,
+     "nameDy": -100
+    },
+    {
+     "kind": "note",
+     "text": "TRACK APPROXIMATE \u00b7 MEDIA REPORTS / JMA",
+     "y": 1170,
+     "at": "f1 +1"
+    },
+    {
+     "kind": "tint",
+     "iso": "KOR",
+     "color": "danger",
+     "alpha": 0.16,
+     "at": "f1:South"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      126.53,
+      33.4
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Island",
+     "label": {
+      "text": "UP TO 415 MM / 4 DAYS",
+      "sub": "JEJU \u00b7 KOREAN MEDIA",
+      "dx": -60,
+      "dy": 110,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "field",
+     "at": "f2:Japan's",
+     "until": "cta",
+     "blobs": [
+      {
+       "loc": [
+        130.5,
+        33.4
+       ],
+       "r": 1.5,
+       "v": 0.9
+      },
+      {
+       "loc": [
+        133.2,
+        33.8
+       ],
+       "r": 1.2,
+       "v": 0.6
+      }
+     ],
+     "palette": "rain",
+     "alpha": 0.7,
+     "grow": 1.5,
+     "clip": "JPN",
+     "legend": {
+      "title": "ILLUSTRATIVE RAIN AREA",
+      "low": "",
+      "high": "",
+      "screen": [
+       60,
+       1090
+      ],
+      "w": 380
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      129.3,
+      34.4
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f2:Tsushima",
+     "label": {
+      "text": "TSUSHIMA",
+      "sub": "200+ MM / DAY \u00b7 OCT RECORD",
+      "dx": -80,
+      "dy": -110,
+      "until": "f3"
+     }
+    }
+   ]
+  },
+  {
+   "type": "gauge",
+   "from": "f1:South",
+   "to": "f1$ -0.1",
+   "label": "RAINFALL OVER 4 DAYS \u00b7 JEJU",
+   "value": 415,
+   "max": 500,
+   "suffix": " mm",
+   "icon": "storm",
+   "color": "info",
+   "at": "f1:South",
+   "doneAt": "f1:fifteen",
+   "note": "UP TO \u00b7 MOUNT HALLA AREA",
+   "source": "SOURCE: KOREAN MEDIA (JKN, FN NEWS)"
+  },
+  {
+   "type": "facts",
+   "from": "f2:Reports",
+   "to": "f2$ -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "EXTRATROPICAL",
+     "text": "EARLY MONDAY \u00b7 SOUTH OF JEJU",
+     "color": "accent",
+     "at": "f2:weakened"
+    },
+    {
+     "icon": "eye",
+     "big": "KYUSHU",
+     "text": "MAY BE APPROACHED \u00b7 JMA",
+     "color": "danger",
+     "at": "f2:Kyushu"
+    },
+    {
+     "icon": "rain",
+     "big": "200+ MM / DAY",
+     "text": "TSUSHIMA \u00b7 OCTOBER RECORD",
+     "color": "info",
+     "at": "f2:Tsushima"
+    }
+   ],
+   "source": "SOURCE: JMA VIA JIJI / NIPPON.COM, SBS, FN NEWS"
+  },
+  {
+   "type": "facts",
+   "from": "f3:expects",
+   "to": "f3$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "rain",
+     "big": "UP TO 200 MM",
+     "text": "N. KYUSHU + SHIKOKU \u00b7 24 H",
+     "color": "danger",
+     "at": "f3:two"
+    },
+    {
+     "icon": "rain",
+     "big": "150 MM",
+     "text": "S. KYUSHU \u00b7 24 H",
+     "color": "accent",
+     "at": "f3:one"
+    },
+    {
+     "icon": "shield",
+     "big": "LANDSLIDE RISK",
+     "text": "JMA CAUTION",
+     "color": "info",
+     "at": "f3:landslides"
+    }
+   ],
+   "source": "SOURCE: JMA VIA SBS NEWS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "400+ MM ON JEJU.",
+     "text"
+    ],
+    [
+     "FLOODS IN JAPAN?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "JKN, FN NEWS, SBS, JIJI/NIPPON.COM, ASIA BUSINESS DAILY (SEARCH EXCERPTS)",
+    "OCT 26, 2026 \u00b7 TRACK APPROXIMATE \u00b7 FORECASTS CAN CHANGE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 140,
+     "lat": 28,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 130,
+     "lat": 33,
+     "R": 640
+    },
+    {
+     "at": "end",
+     "lon": 128.5,
+     "lat": 33,
+     "R": 640
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      126.53,
+      33.4
+     ],
+     "color": "accent"
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "JPN",
+     "color": "danger",
+     "alpha": 0.35
+    },
+    {
+     "iso": "KOR",
+     "color": "danger",
+     "alpha": 0.3
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Typhoon Champi Drops 400+ mm on Korea's Jeju #shorts",
+  "description": "Korean media report up to 415 millimeters of rain on Jeju Island over four days from Typhoon Champi. Reports say Tsushima, Japan, logged more than 200 millimeters in one day, an October record, and Japan's weather agency expects more heavy rain in Kyushu and Shikoku.\n\nSources: JKN, FN News, SBS News, Asia Business Daily, Jiji Press / Nippon.com (based on search-result excerpts). The storm track and rain areas on the map are approximate or illustrative; forecasts can change.\n\n#climate #weather #typhoon #champi #japan #korea",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "typhoon",
+   "Champi",
+   "Japan",
+   "Jeju"
+  ],
+  "cover": "f2 +1"
+ },
+ "thumbnail": {
+  "at": "hook$ +0.2",
+  "number": "415 MM",
+  "numberColor": "danger",
+  "source": "JEJU, 4 DAYS \u00b7 KOREAN MEDIA \u00b7 OCT 26",
+  "focus": [
+   126.53,
+   33.4
+  ],
+  "lines": [
+   [
+    "JAPAN IS NEXT",
+    "accent"
+   ]
+  ],
+  "zoom": 1.4
+ },
+ "gap": 0.9
+}
