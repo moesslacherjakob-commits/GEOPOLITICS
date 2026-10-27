@@ -1,0 +1,477 @@
+{
+ "id": "2026-10-27-typhoon-infa-intensifies",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Typhoon In-fa gained sixty miles an hour in one day. Where is it heading?"
+  },
+  {
+   "id": "f1",
+   "text": "On Monday, the Joint Typhoon Warning Center says, In-fa leapt from a category one to a category four storm within hours. Winds rose from ninety to one hundred thirty miles an hour. Warm water and favorable conditions drove the surge, the center says."
+  },
+  {
+   "id": "f2",
+   "text": "Then it nearly stalled, held between two high pressure ridges, the Guam service says. On Tuesday afternoon, the National Weather Service in Guam put In-fa about eleven hundred sixty-five miles east of Guam, creeping at two miles an hour, with winds of one hundred twenty-five."
+  },
+  {
+   "id": "f3",
+   "text": "The Joint Typhoon Warning Center forecasts a super typhoon by Thursday, passing near Pagan Island in the northern Marianas on Friday. Saipan sits just outside the forecast cone. No watches or warnings were in effect Tuesday morning."
+  },
+  {
+   "id": "cta",
+   "text": "Will In-fa pass north of Saipan? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE SURGE",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE STALL",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE TRACK",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 150,
+     "lat": 15,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": 153,
+     "lat": 16,
+     "R": 700
+    }
+   ],
+   "chip": {
+    "text": "TYPHOON IN-FA",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:gained",
+    "lines": [
+     [
+      "+60 MPH IN A DAY",
+      "danger",
+      110
+     ],
+     [
+      "TYPHOON IN-FA",
+      "text",
+      110
+     ]
+    ]
+   },
+   "markers": [
+    {
+     "loc": [
+      161.5,
+      16.2
+     ],
+     "color": "danger",
+     "at": "hook:gained",
+     "label": "IN-FA",
+     "sub": "",
+     "dx": -190,
+     "dy": -70,
+     "big": true
+    },
+    {
+     "loc": [
+      144.79,
+      13.44
+     ],
+     "color": "accent",
+     "at": "hook:heading",
+     "label": "GUAM",
+     "sub": "",
+     "dx": -20,
+     "dy": 80
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    153,
+    16
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 153,
+     "lat": 16,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 162,
+     "lat": 16,
+     "dist": 20,
+     "pitch": 42,
+     "yaw": -6,
+     "oy": 180
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": 157,
+     "lat": 16.3,
+     "dist": 36,
+     "pitch": 40,
+     "yaw": 6,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": 154,
+     "lat": 16.8,
+     "dist": 40,
+     "pitch": 45,
+     "yaw": -4,
+     "oy": 180
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 150,
+     "lat": 16,
+     "dist": 40,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "track",
+     "at": "hook$",
+     "until": "cta +0.6",
+     "color": "storm",
+     "name": "IN-FA",
+     "sub": "TYPHOON \u00b7 TRACK APPROXIMATE",
+     "forecast": 3,
+     "now": 2,
+     "cone": true,
+     "points": [
+      {
+       "loc": [
+        163.5,
+        15.3
+       ],
+       "cat": 1,
+       "label": "",
+       "dx": -60,
+       "dy": 60,
+       "until": "f2"
+      },
+      {
+       "loc": [
+        163.0,
+        15.6
+       ],
+       "cat": 4,
+       "label": "",
+       "dx": 40,
+       "dy": -60,
+       "until": "f2"
+      },
+      {
+       "loc": [
+        161.5,
+        16.2
+       ],
+       "cat": 4,
+       "label": "TUE",
+       "dx": 60,
+       "dy": 70,
+       "until": "f3"
+      },
+      {
+       "loc": [
+        153.0,
+        17.2
+       ],
+       "cat": 5,
+       "label": "THU?",
+       "dx": 0,
+       "dy": 60
+      },
+      {
+       "loc": [
+        145.77,
+        18.12
+       ],
+       "cat": 5,
+       "label": "FRI \u00b7 PAGAN?",
+       "dx": -60,
+       "dy": -90,
+       "big": true
+      }
+     ],
+     "steps": [
+      {
+       "at": "hook +0.3",
+       "to": 1,
+       "dur": 1.5
+      },
+      {
+       "at": "f1:leapt",
+       "to": 2,
+       "dur": 2.5
+      },
+      {
+       "at": "f2:Then",
+       "to": 3,
+       "dur": 3.0
+      },
+      {
+       "at": "f3:forecasts",
+       "to": 4,
+       "dur": 4.0
+      }
+     ],
+     "nameUntil": "f3",
+     "nameDx": -60,
+     "nameDy": -110
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      145.755,
+      15.212
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f3:Saipan",
+     "label": {
+      "text": "SAIPAN",
+      "sub": "JUST OUTSIDE CONE",
+      "dx": -20,
+      "dy": 70,
+      "until": "cta"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      144.79,
+      13.44
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f2:Guam",
+     "label": {
+      "text": "GUAM",
+      "sub": "1,165 MI WEST OF IN-FA",
+      "dx": -30,
+      "dy": 70,
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "TRACK APPROXIMATE \u00b7 POSITIONS ILLUSTRATIVE \u00b7 JTWC / NWS GUAM",
+     "y": 1170,
+     "at": "f1 +1"
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "from": "f1:Winds",
+   "to": "f1$ -0.1",
+   "label": "TYPHOON IN-FA \u00b7 MAX SUSTAINED WINDS",
+   "sublabel": "MILES PER HOUR",
+   "color": "danger",
+   "bars": [
+    {
+     "label": "MON NOON",
+     "sub": "CAT 1",
+     "value": 90,
+     "display": "90 MPH",
+     "color": "accent",
+     "at": "f1:ninety",
+     "dur": 1.0
+    },
+    {
+     "label": "MON EVE",
+     "sub": "CAT 4",
+     "value": 130,
+     "display": "130 MPH",
+     "color": "danger",
+     "at": "f1:one#1",
+     "dur": 1.0
+    }
+   ],
+   "source": "SOURCE: JOINT TYPHOON WARNING CENTER"
+  },
+  {
+   "type": "facts",
+   "from": "f2:On",
+   "to": "f2$ -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "125 MPH",
+     "text": "WINDS TUE PM \u00b7 NWS GUAM",
+     "color": "danger",
+     "at": "f2:winds"
+    },
+    {
+     "icon": "eye",
+     "big": "2 MPH",
+     "text": "CREEPING WEST-NORTHWEST",
+     "color": "accent",
+     "at": "f2:creeping"
+    },
+    {
+     "icon": "flag",
+     "big": "1,165 MI",
+     "text": "EAST OF GUAM",
+     "color": "info",
+     "at": "f2:eleven"
+    }
+   ],
+   "source": "SOURCE: NWS GUAM"
+  },
+  {
+   "type": "facts",
+   "from": "f3:Pagan",
+   "to": "f3$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "SUPER TYPHOON",
+     "text": "FORECAST BY THU \u00b7 JTWC",
+     "color": "danger",
+     "at": "f3:super"
+    },
+    {
+     "icon": "flag",
+     "big": "NEAR PAGAN FRI",
+     "text": "NORTHERN MARIANAS \u00b7 JTWC",
+     "color": "accent",
+     "at": "f3:passing"
+    },
+    {
+     "icon": "check",
+     "big": "NO WARNINGS YET",
+     "text": "AS OF TUE MORNING \u00b7 NWS GUAM",
+     "color": "ok",
+     "at": "f3:No"
+    }
+   ],
+   "source": "SOURCE: JTWC, NWS GUAM"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "+60 MPH IN ONE DAY.",
+     "text"
+    ],
+    [
+     "PAGAN ON FRIDAY?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "JTWC, NWS GUAM, RNZ, PACIFIC ISLAND TIMES, MARIANAS VARIETY (SEARCH EXCERPTS)",
+    "OCT 27, 2026 \u00b7 TRACK AND POSITIONS APPROXIMATE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 140,
+     "lat": 15,
+     "R": 700
+    },
+    {
+     "at": "cta +1",
+     "lon": 148,
+     "lat": 16,
+     "R": 900
+    },
+    {
+     "at": "end",
+     "lon": 150,
+     "lat": 16,
+     "R": 900
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      145.77,
+      18.12
+     ],
+     "color": "accent"
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Typhoon In-fa Jumps to Category 4 Near the Marianas #shorts",
+  "description": "The Joint Typhoon Warning Center says Typhoon In-fa intensified from a category 1 to a category 4 storm on Monday, with winds rising from 90 to 130 mph. The National Weather Service in Guam put it about 1,165 miles east of Guam on Tuesday afternoon, moving very slowly; the JTWC forecasts a super typhoon by Thursday and a pass near Pagan Island in the northern Marianas on Friday.\n\nSources: Joint Typhoon Warning Center, National Weather Service Guam, RNZ, Pacific Island Times, Marianas Variety (based on search-result excerpts). Storm track and positions on the map are approximate.\n\n#climate #weather #typhoon #infa #marianas",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "typhoon",
+   "In-fa",
+   "Mariana Islands",
+   "Guam",
+   "Saipan"
+  ],
+  "cover": "f2 +1"
+ },
+ "thumbnail": {
+  "at": "f1:Winds",
+  "number": "+60 MPH",
+  "numberColor": "danger",
+  "source": "TYPHOON IN-FA IN ONE DAY \u00b7 JTWC \u00b7 OCT 26",
+  "focus": [
+   161.5,
+   16.2
+  ],
+  "lines": [
+   [
+    "MARIANAS NEXT?",
+    "accent"
+   ]
+  ],
+  "zoom": 1.4
+ },
+ "gap": 0.9
+}
