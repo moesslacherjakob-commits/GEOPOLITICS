@@ -1,0 +1,412 @@
+{
+ "id": "2026-10-27-israel-votes",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Israel votes today, the first time since October seventh. Will anyone win?"
+  },
+  {
+   "id": "f1",
+   "text": "Final polls on three Israeli TV channels put Gadi Eisenkot's Yashar party narrowly first. Twenty-two to twenty-three seats, against nineteen to twenty-one for Netanyahu's Likud. The Knesset has one hundred twenty seats. A government needs sixty-one."
+  },
+  {
+   "id": "f2",
+   "text": "But those polls show no majority. All three give Netanyahu's bloc exactly fifty seats. The opposition bloc gets fifty-two to fifty-six. Both fall short of sixty-one. Small parties, including those backed by Palestinian citizens of Israel, could decide it."
+  },
+  {
+   "id": "f3",
+   "text": "The issues are Iran, Gaza, and drafting ultra-Orthodox men. NPR reports Netanyahu suggests he wants to strike Iran again. Eisenkot's campaign pushes the draft. Analysts warn that coalition talks could take weeks, or end in another election."
+  },
+  {
+   "id": "cta",
+   "text": "Will Israel have a new government by January? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE POLLS",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE MATH",
+   "seg": "f2",
+   "color": "info"
+  },
+  {
+   "n": "03",
+   "name": "THE STAKES",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "danger"
+  }
+ ],
+ "upload": {
+  "title": "Israel Votes: Can Anyone Win a Majority? #shorts",
+  "description": "Israel holds a general election on Tuesday, October 27, 2026, the first since the October 7, 2023 attacks. Final polls on Israel's three main TV channels put Gadi Eisenkot's Yashar party narrowly ahead of Benjamin Netanyahu's Likud (22 to 23 seats against 19 to 21 in the 120-seat Knesset), but all three show Netanyahu's bloc at 50 seats and the opposition bloc at 52 to 56, short of the 61 needed for a government. Smaller parties, including those representing Palestinian citizens of Israel, could be decisive. Main issues: Iran, Gaza and military service for ultra-Orthodox men. NPR reports Netanyahu has suggested he wants to strike Iran again. Coalition talks could take weeks.\n\nSources:\nAnadolu Agency: Israel votes Tuesday in closely contested election as Netanyahu faces challenge from Eisenkot (Oct 2026)\nYnet News: Final Israel election polls put Eisenkot's Yashar ahead of Likud, but neither bloc wins a majority (Oct 2026)\nCNN: Israel is holding its most important election in years. Here's what's at stake (Oct 25, 2026)\nNPR: Israel holds consequential election after years of war (Oct 25, 2026)\nCNBC: Israel election 2026: war, security and coalition math (Oct 26, 2026)\nForeign Policy: Neither Netanyahu nor his opponents are expected to win outright (Oct 20, 2026)\n\n#geopolitics #Israel #Netanyahu #election",
+  "tags": [
+   "geopolitics",
+   "Israel",
+   "Netanyahu",
+   "Eisenkot",
+   "Knesset",
+   "election",
+   "Middle East",
+   "world news"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:Yashar",
+  "focus": "Jerusalem",
+  "zoom": 1.5,
+  "number": "61",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "SEATS NEEDED.",
+    "text"
+   ],
+   [
+    "NO ONE HAS THEM?",
+    "accent"
+   ]
+  ],
+  "source": "MAJORITY OF 120 · FINAL TV POLLS · OCT 26"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 20,
+     "lat": 30,
+     "R": 360
+    },
+    {
+     "at": 3.4,
+     "lon": 35,
+     "lat": 31.5,
+     "R": 600
+    }
+   ],
+   "chip": {
+    "text": "ISRAEL · ELECTION DAY",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "ISR",
+     "color": "accent",
+     "at": "hook:Israel"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Jerusalem",
+     "color": "accent",
+     "at": "hook:votes",
+     "label": "KNESSET",
+     "sub": "120 SEATS",
+     "dx": -110,
+     "dy": -70,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:today,",
+    "lines": [
+     [
+      "ISRAEL",
+      "accent",
+      130
+     ],
+     [
+      "VOTES",
+      "text",
+      120
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:Will",
+    "icon": "flag",
+    "iconColor": "info",
+    "color": "info",
+    "kicker": "MAJORITY?",
+    "title": "WHO WINS?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "f2$ +0.1",
+   "center": [
+    35,
+    31.5
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 35,
+     "lat": 31.5,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 35,
+     "lat": 31.6,
+     "dist": 10,
+     "pitch": 48,
+     "yaw": 8,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 35,
+     "lat": 31.4,
+     "dist": 9,
+     "pitch": 46,
+     "yaw": -6,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "ISR",
+     "color": "accent",
+     "alpha": 0.4,
+     "fill": 0.1,
+     "at": "f1"
+    },
+    {
+     "kind": "marker",
+     "loc": "Jerusalem",
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1:Final",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "KNESSET",
+      "sub": "61 OF 120 NEEDED",
+      "dx": -110,
+      "dy": -80
+     }
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "from": "f1:Yashar -0.2",
+   "to": "f1:Knesset -0.1",
+   "label": "SEATS · FINAL TV POLLS",
+   "sublabel": "KAN · CHANNEL 12 · CHANNEL 13",
+   "color": "accent",
+   "bars": [
+    {
+     "label": "YASHAR (EISENKOT)",
+     "value": 22.5,
+     "display": "22–23",
+     "color": "info",
+     "at": "f1:Yashar",
+     "dur": 1.2
+    },
+    {
+     "label": "LIKUD (NETANYAHU)",
+     "value": 20,
+     "display": "19–21",
+     "color": "danger",
+     "at": "f1:against",
+     "dur": 1.0
+    }
+   ],
+   "source": "PER ISRAELI TV POLLS · YNET"
+  },
+  {
+   "type": "bars",
+   "from": "f2:All -0.1",
+   "to": "f2:Small -0.1",
+   "label": "BLOC SEATS · 61 NEEDED",
+   "sublabel": "FINAL TV POLLS",
+   "color": "accent",
+   "bars": [
+    {
+     "label": "OPPOSITION BLOC",
+     "value": 54,
+     "display": "52–56",
+     "color": "info",
+     "at": "f2:opposition",
+     "dur": 1.2
+    },
+    {
+     "label": "NETANYAHU BLOC",
+     "value": 50,
+     "display": "50",
+     "color": "danger",
+     "at": "f2:Netanyahu's",
+     "dur": 1.0
+    }
+   ],
+   "source": "PER ISRAELI TV POLLS · YNET"
+  },
+  {
+   "type": "map",
+   "from": "f2$ +0.1",
+   "to": "cta -0.1",
+   "center": [
+    40,
+    32
+   ],
+   "camera": [
+    {
+     "at": "f2$ +0.1",
+     "lon": 35,
+     "lat": 31.4,
+     "dist": 9,
+     "pitch": 46,
+     "yaw": -6,
+     "oy": 190
+    },
+    {
+     "at": "f3:Iran,",
+     "lon": 42,
+     "lat": 32,
+     "dist": 26,
+     "pitch": 44,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 38,
+     "lat": 32,
+     "dist": 22,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "ISR",
+     "color": "accent",
+     "alpha": 0.4,
+     "fill": 0.1,
+     "at": "f3"
+    },
+    {
+     "kind": "tint",
+     "iso": "IRN",
+     "color": "danger",
+     "alpha": 0.35,
+     "fill": 0.08,
+     "at": "f3:Iran,",
+     "until": "f3:Eisenkot's"
+    },
+    {
+     "kind": "marker",
+     "loc": "Gaza",
+     "style": "pulse",
+     "color": "info",
+     "at": "f3:Gaza,",
+     "until": "f3:NPR",
+     "label": {
+      "text": "GAZA",
+      "dx": -90,
+      "dy": -60
+     }
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      300,
+      400,
+      700
+     ],
+     "kicker": "NPR REPORTS:",
+     "text": "NETANYAHU SUGGESTS NEW IRAN STRIKE",
+     "color": "danger",
+     "at": "f3:NPR",
+     "until": "f3:Eisenkot's"
+    },
+    {
+     "kind": "stamp",
+     "text": "DEADLOCK?",
+     "icon": "eye",
+     "color": "violet",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f3:Analysts",
+     "until": "cta -0.2",
+     "note": "COALITION TALKS COULD TAKE WEEKS"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 35,
+     "lat": 31.5,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 35,
+     "lat": 31.5,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": 35,
+     "lat": 31.7,
+     "R": 600
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "ISR",
+     "color": "accent",
+     "alpha": 0.7
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Jerusalem",
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "A NEW GOVERNMENT BY JANUARY?",
+     "text"
+    ],
+    [
+     "NO BLOC AT 61 IN POLLS",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: ANADOLU, YNET, CNN, NPR, CNBC",
+    "OCT 25–27, 2026"
+   ]
+  }
+ ]
+}
