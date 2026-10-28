@@ -1,0 +1,398 @@
+{
+ "id": "2026-10-28-israel-deadlock",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Israel's election has no clear winner. So who decides the next government?"
+  },
+  {
+   "id": "f1",
+   "text": "Exit polls on Tuesday night split. Channel 12 first showed Eisenkot's bloc ahead, fifty-two to fifty. A revised poll flipped it: fifty-two seats for Netanyahu's bloc, forty-nine for Eisenkot's. Kan showed a tie."
+  },
+  {
+   "id": "f2",
+   "text": "Likud is projected near twenty-seven seats, Eisenkot's Yashar about twenty-one. But neither bloc reaches sixty-one of one hundred twenty. Arab parties are projected at sixteen to nineteen seats. Netanyahu's side rules out working with them, and Eisenkot has all but ruled it out too."
+  },
+  {
+   "id": "f3",
+   "text": "Both men claimed victory. Netanyahu urged a strong right-wing government. These are exit polls, not official results. The Central Elections Committee is still counting. Axios says Netanyahu would likely stay on as caretaker prime minister."
+  },
+  {
+   "id": "cta",
+   "text": "Will Israel need yet another election? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "EXIT POLLS",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE MATH",
+   "seg": "f2",
+   "color": "info"
+  },
+  {
+   "n": "03",
+   "name": "WHAT NEXT",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "danger"
+  }
+ ],
+ "upload": {
+  "title": "Israel Election: Exit Polls Split, No Majority #shorts",
+  "description": "Israel's election on October 27, 2026 produced no clear winner in exit polls. Channel 12 first showed Gadi Eisenkot's bloc ahead 52 to 50, then a revised poll showed Benjamin Netanyahu's bloc ahead 52 to 49; Kan showed a tie (reports via CNN, Axios and others). Likud is projected near 27 seats and Eisenkot's Yashar about 21 in the 120-seat Knesset, but neither bloc reaches the 61 needed. Arab parties are projected at 16 to 19 seats; Netanyahu's side rules out working with them and Eisenkot has all but ruled it out, per reports. Both leaders claimed victory. Exit polls are not official results; the Central Elections Committee count continues. Axios says Netanyahu would likely remain caretaker prime minister.\n\nSources:\nCNN: Israeli election results: No clear winner as exit polls suggest rebuke for Netanyahu (Oct 27, 2026)\nAxios: Netanyahu, Eisenkot blocs running close, but both shy of majority (Oct 27, 2026)\nNBC News: Exit polls indicate no clear winner in Israeli election (Oct 27, 2026)\nThe Jerusalem Post: Netanyahu, Eisenkot both fail to win majority in exit polls (Oct 27, 2026)\ni24NEWS: Exit poll (Oct 27, 2026)\nYnet News: Revised exit polls (Oct 27-28, 2026)\n\n#geopolitics #Israel #Netanyahu #election",
+  "tags": [
+   "geopolitics",
+   "Israel",
+   "Netanyahu",
+   "Eisenkot",
+   "Knesset",
+   "election results",
+   "exit poll",
+   "world news"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f2:Likud",
+  "focus": "Jerusalem",
+  "zoom": 1.5,
+  "number": "61",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "NOBODY HAS IT.",
+    "text"
+   ],
+   [
+    "WHO RULES?",
+    "accent"
+   ]
+  ],
+  "source": "MAJORITY OF 120 · EXIT POLLS · OCT 27"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 20,
+     "lat": 30,
+     "R": 360
+    },
+    {
+     "at": 3.4,
+     "lon": 35,
+     "lat": 31.5,
+     "R": 600
+    }
+   ],
+   "chip": {
+    "text": "ISRAEL · ELECTION RESULT",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "ISR",
+     "color": "accent",
+     "at": "hook:Israel's"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Jerusalem",
+     "color": "accent",
+     "at": "hook:election",
+     "label": "KNESSET",
+     "sub": "120 SEATS",
+     "dx": -110,
+     "dy": -70,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:no",
+    "lines": [
+     [
+      "NO CLEAR",
+      "accent",
+      120
+     ],
+     [
+      "WINNER",
+      "text",
+      120
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:So",
+    "icon": "flag",
+    "iconColor": "info",
+    "color": "info",
+    "kicker": "61 NEEDED",
+    "title": "WHO RULES?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "f2$ +0.1",
+   "center": [
+    35,
+    31.5
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 35,
+     "lat": 31.5,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 35,
+     "lat": 31.6,
+     "dist": 10,
+     "pitch": 48,
+     "yaw": 8,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 35,
+     "lat": 31.4,
+     "dist": 9,
+     "pitch": 46,
+     "yaw": -6,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "ISR",
+     "color": "accent",
+     "alpha": 0.4,
+     "fill": 0.1,
+     "at": "f1"
+    },
+    {
+     "kind": "marker",
+     "loc": "Jerusalem",
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1:Exit",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "KNESSET",
+      "sub": "61 OF 120 NEEDED",
+      "dx": -110,
+      "dy": -80
+     }
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "from": "f1:A -0.1",
+   "to": "f1$ -0.2",
+   "label": "BLOC SEATS · EXIT POLLS",
+   "sublabel": "CHANNEL 12 REVISED",
+   "color": "info",
+   "bars": [
+    {
+     "label": "NETANYAHU BLOC",
+     "value": 52,
+     "display": "52",
+     "color": "danger",
+     "at": "f1:revised",
+     "dur": 1.2
+    },
+    {
+     "label": "EISENKOT BLOC",
+     "value": 49,
+     "display": "49",
+     "color": "info",
+     "at": "f1:forty-nine",
+     "dur": 1.0
+    }
+   ],
+   "source": "PER ISRAELI EXIT POLLS · CNN · AXIOS"
+  },
+  {
+   "type": "bars",
+   "from": "f2:Likud -0.2",
+   "to": "f2:But +3.2",
+   "label": "SEATS · 120 IN KNESSET",
+   "sublabel": "61 NEEDED · EXIT POLLS",
+   "color": "accent",
+   "bars": [
+    {
+     "label": "LIKUD",
+     "value": 27,
+     "display": "≈27",
+     "color": "danger",
+     "at": "f2:Likud",
+     "dur": 1.1
+    },
+    {
+     "label": "YASHAR",
+     "value": 21,
+     "display": "≈21",
+     "color": "info",
+     "at": "f2:Yashar",
+     "dur": 1.0
+    },
+    {
+     "label": "ARAB PARTIES",
+     "value": 17.5,
+     "display": "16–19",
+     "color": "violet",
+     "at": "f2:Arab",
+     "dur": 1.0
+    }
+   ],
+   "source": "PER CHANNEL 12 · i24NEWS · AXIOS"
+  },
+  {
+   "type": "map",
+   "from": "f2$ +0.1",
+   "to": "cta -0.1",
+   "center": [
+    40,
+    32
+   ],
+   "camera": [
+    {
+     "at": "f2$ +0.1",
+     "lon": 35,
+     "lat": 31.4,
+     "dist": 9,
+     "pitch": 46,
+     "yaw": -6,
+     "oy": 190
+    },
+    {
+     "at": "f3",
+     "lon": 42,
+     "lat": 32,
+     "dist": 26,
+     "pitch": 44,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 38,
+     "lat": 32,
+     "dist": 22,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "ISR",
+     "color": "accent",
+     "alpha": 0.4,
+     "fill": 0.1,
+     "at": "f3"
+    },
+    {
+     "kind": "marker",
+     "loc": "Jerusalem",
+     "style": "pulse",
+     "color": "accent",
+     "at": "f3:Both",
+     "until": "f3:These",
+     "label": {
+      "text": "BOTH CLAIM VICTORY",
+      "dx": -150,
+      "dy": -80
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "NOT OFFICIAL",
+     "icon": "eye",
+     "color": "violet",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f3:These",
+     "until": "cta -0.2",
+     "note": "EXIT POLLS · COUNT CONTINUES"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 35,
+     "lat": 31.5,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 35,
+     "lat": 31.5,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": 35,
+     "lat": 31.7,
+     "R": 600
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "ISR",
+     "color": "accent",
+     "alpha": 0.7
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Jerusalem",
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "ANOTHER ELECTION?",
+     "text"
+    ],
+    [
+     "NO BLOC AT 61",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: CNN, AXIOS, NBC, JPOST, i24NEWS",
+    "OCT 27–28, 2026"
+   ]
+  }
+ ]
+}
