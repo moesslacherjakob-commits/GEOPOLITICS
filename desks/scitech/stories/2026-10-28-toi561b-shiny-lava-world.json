@@ -1,0 +1,295 @@
+{
+ "id": "2026-10-28-toi561b-shiny-lava-world",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A planet covered in lava may be hiding behind shiny clouds. How?"
+  },
+  {
+   "id": "f1",
+   "text": "Astronomers pointed the Webb telescope at a planet called TOI five sixty one b for thirty seven hours, nearly four orbits. It circles so close to its star that its year lasts less than an Earth day. Its temperature is estimated at two thousand three hundred kelvin."
+  },
+  {
+   "id": "f2",
+   "text": "A team led by the University of Waterloo reports in The Astronomical Journal that the planet reflects about three quarters of its starlight, comparable to Venus. The night side is too cool to explain the missing heat. Models point to bright silicate clouds."
+  },
+  {
+   "id": "f3",
+   "text": "The researchers say the air could be thick with carbon dioxide, like a hotter Venus, or rich in sulphur dioxide, like the volcanic moon Io. The composition is unresolved, and the clouds are a model explanation."
+  },
+  {
+   "id": "cta",
+   "text": "Will Webb confirm what these clouds are made of? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE TARGET",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE FINDING",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "WHAT'S UNKNOWN",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Webb Finds a Lava Planet That Shines Like Venus #shorts",
+  "description": "A study in The Astronomical Journal, led by the University of Waterloo, used 37 hours of James Webb Space Telescope observations of the lava planet TOI-561 b. The team reports it reflects about three quarters of its starlight, comparable to Venus, and models suggest bright silicate clouds. The atmosphere's composition is still unresolved.\n\nSources: University of Birmingham / EurekAlert release (Oct 26); ScienceDaily; Sci.News; The Astronomical Journal paper (Boucher et al., arXiv preprint version).\n\n#science #space #webb #exoplanet",
+  "tags": [
+   "science",
+   "news",
+   "James Webb",
+   "exoplanet",
+   "TOI-561 b",
+   "lava planet",
+   "astronomy",
+   "University of Waterloo"
+  ],
+  "cover": "hook:lava, +0.4"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [
+   -80.5,
+   43.5
+  ],
+  "number": "75%",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "LAVA WORLD",
+    "text"
+   ],
+   [
+    "WITH CLOUDS?",
+    "accent"
+   ]
+  ],
+  "source": "WEBB \u00b7 TOI-561 b \u00b7 PER U. WATERLOO"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": -60,
+     "lat": 35,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": -80.5,
+     "lat": 43.5,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "SPACE \u00b7 WEBB RESULT",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      -80.5,
+      43.5
+     ],
+     "color": "accent",
+     "at": "hook:lava",
+     "label": "WATERLOO",
+     "sub": "STUDY LEAD",
+     "dx": -60,
+     "dy": -150,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:lava",
+    "lines": [
+     [
+      "LAVA PLANET",
+      "text",
+      110
+     ],
+     [
+      "WITH SHINY CLOUDS?",
+      "accent",
+      70
+     ]
+    ]
+   }
+  },
+  {
+   "type": "facts",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "color": "accent",
+   "label": "TOI-561 b",
+   "items": [
+    {
+     "icon": "eye",
+     "big": "37 HOURS",
+     "text": "OF WEBB OBSERVATION \u00b7 NEARLY 4 ORBITS",
+     "color": "accent",
+     "at": "f1:thirty"
+    },
+    {
+     "icon": "clock",
+     "big": "YEAR < 1 DAY",
+     "text": "ORBITS VERY CLOSE TO ITS STAR",
+     "color": "info",
+     "at": "f1:circles"
+    },
+    {
+     "icon": "flame",
+     "big": "~2,300 K",
+     "text": "ESTIMATED TEMPERATURE \u00b7 MELTS ROCK",
+     "color": "danger",
+     "at": "f1:temperature"
+    }
+   ],
+   "source": "U. BIRMINGHAM \u00b7 EUREKALERT \u00b7 SCIENCEDAILY"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f2:comparable",
+   "label": "THE PUZZLE",
+   "color": "accent",
+   "steps": [
+    {
+     "icon": "eye",
+     "title": "WEBB MEASURES THE HEAT",
+     "sub": "DAY SIDE VS NIGHT SIDE",
+     "color": "info",
+     "at": "f2:team"
+    },
+    {
+     "icon": "x",
+     "title": "NIGHT SIDE TOO COOL",
+     "sub": "CAN'T EXPLAIN MISSING HEAT",
+     "color": "danger",
+     "at": "f2:night"
+    },
+    {
+     "icon": "flag",
+     "title": "MODELS: BRIGHT CLOUDS",
+     "sub": "SILICATE MINERALS",
+     "color": "accent",
+     "at": "f2:Models"
+    }
+   ],
+   "source": "THE ASTRONOMICAL JOURNAL \u00b7 SCI.NEWS \u00b7 U. BIRMINGHAM"
+  },
+  {
+   "type": "counter",
+   "from": "f2:comparable",
+   "to": "f3 -0.1",
+   "label": "STARLIGHT REFLECTED",
+   "sublabel": "ABOUT \u00b7 COMPARABLE TO VENUS",
+   "icon": "eye",
+   "color": "accent",
+   "value": 75,
+   "start": 0,
+   "suffix": "%",
+   "decimals": 0,
+   "at": "f2:about",
+   "doneAt": "f2:about +1.5",
+   "note": "MODEL-BASED \u00b7 NOT A DIRECT CLOUD DETECTION",
+   "source": "U. WATERLOO \u00b7 U. BIRMINGHAM \u00b7 SCIENCEDAILY"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "flame",
+     "big": "LIKE VENUS?",
+     "text": "THICK CARBON DIOXIDE \u00b7 HOTTER",
+     "color": "accent",
+     "at": "f3:carbon"
+    },
+    {
+     "icon": "flame",
+     "big": "LIKE IO?",
+     "text": "SULPHUR DIOXIDE \u00b7 VOLCANIC MOON",
+     "color": "warn",
+     "at": "f3:sulphur"
+    },
+    {
+     "icon": "x",
+     "big": "UNRESOLVED",
+     "text": "COMPOSITION \u00b7 CLOUDS ARE A MODEL",
+     "color": "danger",
+     "at": "f3:unresolved"
+    }
+   ],
+   "source": "SOURCES: U. BIRMINGHAM \u00b7 SCIENCEDAILY \u00b7 SCI.NEWS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -100,
+     "lat": 30,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -80.5,
+     "lat": 43.5,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": -65,
+     "lat": 40,
+     "R": 470
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -80.5,
+      43.5
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "WHAT ARE THE",
+     "text"
+    ],
+    [
+     "CLOUDS MADE OF?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "U. BIRMINGHAM \u00b7 SCIENCEDAILY \u00b7 SCI.NEWS",
+    "THE ASTRONOMICAL JOURNAL \u00b7 WEBB"
+   ]
+  }
+ ]
+}
