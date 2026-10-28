@@ -1,0 +1,420 @@
+{
+ "id": "2026-10-28-cyclone-arnab-andhra-landfall",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A very severe cyclone just hit India's east coast. How bad was it?"
+  },
+  {
+   "id": "f1",
+   "text": "India's weather department says Cyclone Arnab, a very severe cyclonic storm born over the Bay of Bengal, crossed the Andhra Pradesh coast early Wednesday, near Narsapur. Winds were one hundred twenty-five to one hundred thirty-five kilometers an hour, with gusts up to one hundred fifty."
+  },
+  {
+   "id": "f2",
+   "text": "Reports say more than fifty thousand people were moved to shelters before the storm arrived. India's disaster response force confirms three deaths and thirty-one damaged houses. State radio reports extremely heavy rain at one hundred sixty-one locations."
+  },
+  {
+   "id": "f3",
+   "text": "The chief minister's office says crops on seventy thousand nine hundred hectares were hit. Arnab has since weakened to a severe cyclonic storm. Early figures differ between reports, and officials are still counting. Heavy rain is expected in Odisha on Friday, reports say."
+  },
+  {
+   "id": "cta",
+   "text": "Will Odisha avoid the worst of the rain? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE LANDFALL",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE TOLL",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE DAMAGE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 80,
+     "lat": 16,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": 82.5,
+     "lat": 16.5,
+     "R": 700
+    }
+   ],
+   "chip": {
+    "text": "CYCLONE ARNAB",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:cyclone",
+    "lines": [
+     [
+      "INDIA'S EAST COAST",
+      "text",
+      100
+     ],
+     [
+      "CYCLONE ARNAB",
+      "danger",
+      100
+     ]
+    ]
+   },
+   "markers": [
+    {
+     "loc": [
+      81.9,
+      16.45
+     ],
+     "color": "danger",
+     "at": "hook:cyclone",
+     "label": "LANDFALL",
+     "sub": "",
+     "dx": -190,
+     "dy": -70,
+     "big": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    83,
+    17
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 82.5,
+     "lat": 16.5,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 82.5,
+     "lat": 16.3,
+     "dist": 16,
+     "pitch": 42,
+     "yaw": -6,
+     "oy": 180
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": 81.6,
+     "lat": 16.9,
+     "dist": 10,
+     "pitch": 45,
+     "yaw": 5,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": 83.5,
+     "lat": 18.6,
+     "dist": 24,
+     "pitch": 40,
+     "yaw": -4,
+     "oy": 180
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 84,
+     "lat": 18,
+     "dist": 32,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "track",
+     "at": "hook$",
+     "until": "cta +0.6",
+     "color": "storm",
+     "name": "ARNAB",
+     "sub": "CYCLONE \u00b7 ILLUSTRATIVE",
+     "now": 2,
+     "points": [
+      {
+       "loc": [
+        87.5,
+        13.2
+       ],
+       "cat": "TS",
+       "label": "",
+       "until": "f2"
+      },
+      {
+       "loc": [
+        85.0,
+        14.9
+       ],
+       "cat": 1,
+       "label": "",
+       "until": "f2"
+      },
+      {
+       "loc": [
+        81.9,
+        16.45
+       ],
+       "cat": 1,
+       "label": "WED \u00b7 LANDFALL",
+       "dx": -70,
+       "dy": 70,
+       "big": true
+      }
+     ],
+     "steps": [
+      {
+       "at": "hook +0.3",
+       "to": 1,
+       "dur": 1.5
+      },
+      {
+       "at": "f1:crossed",
+       "to": 2,
+       "dur": 3.0
+      }
+     ],
+     "nameUntil": "f3",
+     "nameDx": -40,
+     "nameDy": -130
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      81.698,
+      16.434
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Narsapur",
+     "label": {
+      "text": "NARSAPUR",
+      "sub": "LANDFALL \u00b7 IMD",
+      "dx": -150,
+      "dy": -90,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "tint",
+     "iso": "IN-OR",
+     "color": "info",
+     "alpha": 0.35,
+     "hatch": true,
+     "at": "f3:Odisha",
+     "until": "cta +0.5"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      85.834,
+      20.272
+     ],
+     "text": "ODISHA",
+     "sub": "RAIN EXPECTED FRI",
+     "color": "info",
+     "at": "f3:Odisha",
+     "dx": -30,
+     "dy": -70
+    },
+    {
+     "kind": "note",
+     "text": "TRACK ILLUSTRATIVE \u00b7 IMD, NDRF, ALL INDIA RADIO",
+     "y": 1170,
+     "at": "f1 +1"
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f1:Winds",
+   "to": "f1$ -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "125-135 KM/H",
+     "text": "SUSTAINED WINDS AT LANDFALL \u00b7 IMD",
+     "color": "danger",
+     "at": "f1:Winds"
+    },
+    {
+     "icon": "flame",
+     "big": "150 KM/H",
+     "text": "GUSTS",
+     "color": "accent",
+     "at": "f1:gusts"
+    }
+   ],
+   "source": "SOURCE: INDIA METEOROLOGICAL DEPARTMENT"
+  },
+  {
+   "type": "facts",
+   "from": "f2:Reports",
+   "to": "f2$ -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "people",
+     "big": "50,000+",
+     "text": "MOVED TO SHELTERS \u00b7 REPORTS",
+     "color": "accent",
+     "at": "f2:fifty"
+    },
+    {
+     "icon": "x",
+     "big": "3 DEAD",
+     "text": "31 HOUSES DAMAGED \u00b7 NDRF",
+     "color": "danger",
+     "at": "f2:three"
+    },
+    {
+     "icon": "rain",
+     "big": "161 SITES",
+     "text": "EXTREMELY HEAVY RAIN \u00b7 ALL INDIA RADIO",
+     "color": "info",
+     "at": "f2:State"
+    }
+   ],
+   "source": "SOURCE: NDRF, ALL INDIA RADIO, NEWS REPORTS"
+  },
+  {
+   "type": "facts",
+   "from": "f3:Arnab",
+   "to": "f3$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "wheat",
+     "big": "70,900 HA",
+     "text": "CROPS HIT \u00b7 CHIEF MINISTER'S OFFICE",
+     "color": "danger",
+     "at": "f3:seventy"
+    },
+    {
+     "icon": "storm",
+     "big": "WEAKENED",
+     "text": "NOW A SEVERE CYCLONIC STORM",
+     "color": "accent",
+     "at": "f3:weakened"
+    }
+   ],
+   "source": "SOURCE: ANDHRA PRADESH CM OFFICE, IMD"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "3 DEAD, 70,900 HA OF CROPS HIT.",
+     "text"
+    ],
+    [
+     "ODISHA NEXT?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "IMD, NDRF, ALL INDIA RADIO, THE QUINT, DAILY PIONEER (SEARCH EXCERPTS)",
+    "OCT 28, 2026 \u00b7 TRACK ILLUSTRATIVE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 78,
+     "lat": 16,
+     "R": 700
+    },
+    {
+     "at": "cta +1",
+     "lon": 82,
+     "lat": 17,
+     "R": 900
+    },
+    {
+     "at": "end",
+     "lon": 83,
+     "lat": 17,
+     "R": 900
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      81.9,
+      16.45
+     ],
+     "color": "accent"
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Cyclone Arnab Hits India's Andhra Coast #shorts",
+  "description": "India's weather department says Cyclone Arnab made landfall on the Andhra Pradesh coast near Narsapur early Wednesday with winds of 125 to 135 km/h. India's disaster response force confirms three deaths; the chief minister's office reports crop damage on about 70,900 hectares.\n\nSources: India Meteorological Department, NDRF, All India Radio, The Quint, Daily Pioneer (based on search-result excerpts; figures are preliminary and differ between reports). The storm track on the map is illustrative.\n\n#climate #weather #cyclone #arnab #india",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "cyclone",
+   "Cyclone Arnab",
+   "India",
+   "Andhra Pradesh",
+   "Odisha"
+  ],
+  "cover": "f2 +1"
+ },
+ "thumbnail": {
+  "at": "f1:Winds",
+  "number": "3 DEAD",
+  "numberColor": "danger",
+  "source": "CYCLONE ARNAB \u00b7 NDRF \u00b7 OCT 28",
+  "focus": [
+   81.9,
+   16.45
+  ],
+  "lines": [
+   [
+    "ODISHA NEXT?",
+    "accent"
+   ]
+  ],
+  "zoom": 1.4
+ },
+ "gap": 0.9
+}
