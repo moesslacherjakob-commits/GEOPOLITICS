@@ -3,7 +3,6 @@
 Evergreen questions behind the news. Pick one that ties to this week's headlines and to the story families that perform best (Metricool). Move used topics to the bottom with the date. Add new ideas whenever a Short reveals a question viewers keep asking.
 
 ## Open
-- The Strait of Hormuz: why 21 miles control a fifth of the world's oil — and what happens if it closes
 - Who are the Houthis — and how did a rebel group shut down the Red Sea?
 - Bab al-Mandab and Suez: the Red Sea route explained
 - Why Russia keeps hitting Ukraine's power grid — and what an "energy truce" would change
@@ -21,3 +20,4 @@ Evergreen questions behind the news. Pick one that ties to this week's headlines
 - The Panama Canal: drought, China and Washington's pressure
 
 ## Used
+- 2026-10-28: The Strait of Hormuz explainer (used)
