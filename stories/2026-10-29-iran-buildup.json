@@ -1,0 +1,76 @@
+{
+ "id": "2026-10-29-iran-buildup",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Washington is moving more forces toward Iran. Will the war restart after the midterms?"},
+  {"id": "f1", "text": "The Wall Street Journal reports that an extra carrier strike group and a Marine expeditionary unit are being repositioned. A Patriot system is moving into Israel, and munitions stocks are being refilled. Officials told Fox News that no decision has been made."},
+  {"id": "f2", "text": "Asked about strikes after the November third midterms, President Trump said he can't tell, adding that anything is possible. CBS reports he has said any strikes would wait until after the vote."},
+  {"id": "f3", "text": "Middle East Eye reports that Gulf states were told to prepare for a short, intense campaign. The Wall Street Journal says Trump leans toward striking infrastructure and nuclear sites, but nothing is final. CBS says he is also weighing a deal, and Iran says messages are still being passed."},
+  {"id": "cta", "text": "Will U.S. forces strike Iran before December? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE BUILD-UP", "seg": "f1", "color": "danger"},
+  {"n": "02", "name": "TRUMP'S WORDS", "seg": "f2", "color": "accent"},
+  {"n": "03", "name": "STRIKE OR DEAL?", "seg": "f3", "to": "cta -0.2", "color": "oil"}
+ ],
+ "upload": {
+  "title": "US Moves Forces Toward Iran. Strikes After Midterms? #shorts",
+  "description": "The Wall Street Journal reports that an additional carrier strike group and a Marine expeditionary unit are being repositioned in the Middle East, that a Patriot system is moving into Israel and that U.S. forces are restocking munitions. Officials told Fox News the moves keep the military ready if President Trump orders action and that no decision has been made. Asked on October 28 about strikes on Iran after the November 3 midterm elections, Trump said he can't tell and that \"anything's possible\"; CBS reports he has said any strikes would wait until after the election and that he is weighing a deal against renewed military action. Middle East Eye reports that the U.S. told several Gulf states to prepare for a short, intense campaign, and the Wall Street Journal says Trump is inclined toward a major strike on Iranian infrastructure and nuclear sites, which has not been finalized. Iran says messages are still being passed to Washington. Much of this reporting relies on anonymous officials and has not been confirmed by the White House.\n\nSources:\nFox News live blog, Oct 28, 2026: Trump says 'anything's possible' regarding potential strikes on Iran after midterm elections\nCBS News live updates: Trump says he's weighing deal with Iran against action to 'finish them off'\nMiddle East Eye: US warns Gulf of intense strikes on Iran after midterms\nJFeed: Trump leaning toward broad Iran strike after midterms (citing the Wall Street Journal)\n\n#geopolitics #Iran #USPolitics #MiddleEast",
+  "tags": ["geopolitics", "Iran", "US Iran war", "Trump", "midterms", "Iran strikes", "carrier strike group", "Gulf states", "world news", "Middle East"],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:carrier",
+  "focus": "Kharg Island",
+  "zoom": 1.5,
+  "number": "NOV 3",
+  "numberColor": "danger",
+  "lines": [["FORCES MOVING", "text"], ["THEN STRIKES?", "accent"]],
+  "source": "PER WSJ, FOX · OCT 28, 2026"
+ },
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.25", "exit": "zoom",
+   "view": [{"at": 0, "lon": 42, "lat": 29, "R": 380}, {"at": 3.4, "lon": 50, "lat": 30, "R": 480}],
+   "chip": {"text": "IRAN · OCT 29, 2026", "at": 0.25},
+   "highlights": [
+    {"iso": "IRN", "color": "danger", "at": "hook:Iran"},
+    {"iso": "ISR", "color": "info", "at": "hook:more"}
+   ],
+   "markers": [{"loc": "Tehran", "color": "danger", "at": "hook:Iran", "label": "TEHRAN", "sub": "WAR RESTART?", "dx": 90, "dy": -70, "big": true}],
+   "headline": {"at": "hook:moving", "lines": [["FORCES MOVING", "danger", 120], ["TOWARD IRAN", "text", 110]]},
+   "card": {"at": "hook:Will", "icon": "flag", "iconColor": "accent", "color": "accent", "kicker": "AFTER NOV 3", "title": "WAR RESTART?", "reticle": false}
+  },
+  {
+   "type": "map", "from": "hook$ +0.25", "to": "cta -0.1",
+   "center": [48, 30],
+   "camera": [
+    {"at": "hook$ +0.25", "lon": 50, "lat": 30, "dist": 43, "pitch": 0, "yaw": 0},
+    {"at": "f1 +0.4", "lon": 44, "lat": 29, "dist": 80, "pitch": 42, "yaw": -5, "oy": 190},
+    {"at": "f2 +0.1", "lon": 50, "lat": 30, "dist": 55, "pitch": 45, "yaw": 4, "oy": 190},
+    {"at": "f3 +0.2", "lon": 51, "lat": 28, "dist": 48, "pitch": 46, "yaw": -4, "oy": 190},
+    {"at": "cta", "lon": 50, "lat": 29, "dist": 62, "pitch": 46, "yaw": 0, "oy": 190}
+   ],
+   "layers": [
+    {"kind": "tint", "iso": "IRN", "color": "danger", "alpha": 0.45, "fill": 0.08, "at": "f1"},
+    {"kind": "tint", "iso": "ISR", "color": "info", "alpha": 0.5, "fill": 0.15, "at": "f1:Patriot"},
+    {"kind": "marker", "loc": "Persian Gulf", "style": "pulse", "color": "info", "at": "f1:carrier", "until": "f2 -0.2", "label": {"text": "CARRIER GROUP + MARINES", "sub": "REPOSITIONING · PER WSJ", "dx": -60, "dy": 90}},
+    {"kind": "arc", "from": "Persian Gulf", "to": "Tehran", "color": "info", "height": 0.3, "dur": 1.6, "at": "f1:carrier"},
+    {"kind": "marker", "loc": "Jerusalem", "style": "dot", "color": "info", "at": "f1:Patriot", "until": "f2 -0.2", "label": {"text": "PATRIOT", "sub": "MOVING TO ISRAEL", "dx": -110, "dy": -60}},
+    {"kind": "stamp", "text": "NOV 3 MIDTERMS", "icon": "flag", "color": "accent", "screen": [540, 1120], "at": "f2:Asked", "until": "f2:CBS -0.1", "note": "ANYTHING IS POSSIBLE · TRUMP, OCT 28"},
+    {"kind": "stamp", "text": "WAIT UNTIL AFTER", "icon": "eye", "color": "info", "screen": [540, 1120], "at": "f2:CBS", "until": "f3 -0.2", "note": "STRIKES AFTER THE VOTE · PER CBS"},
+    {"kind": "marker", "loc": "Kharg Island", "style": "x", "color": "oil", "at": "f3:infrastructure", "until": "cta -0.2", "label": {"text": "INFRASTRUCTURE", "sub": "REPORTED TARGETS · PER WSJ", "dx": -120, "dy": 80}},
+    {"kind": "marker", "loc": [51.92, 33.51], "style": "x", "color": "danger", "at": "f3:nuclear", "until": "cta -0.2", "label": {"text": "NUCLEAR SITES", "sub": "NOT FINALIZED", "dx": 110, "dy": -70}},
+    {"kind": "stamp", "text": "OR A DEAL?", "icon": "check", "color": "ok", "screen": [540, 1120], "at": "f3:CBS", "until": "cta -0.2", "note": "MESSAGES STILL PASSING · PER IRAN"}
+   ]
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "view": [{"at": "cta -0.4", "lon": 50, "lat": 31, "R": 900}, {"at": "cta +1", "lon": 50, "lat": 31, "R": 520}, {"at": "end", "lon": 52, "lat": 31, "R": 520}],
+   "highlights": [{"iso": "IRN", "color": "danger", "alpha": 0.7}, {"iso": "ISR", "color": "info"}],
+   "markers": [{"loc": "Tehran", "color": "danger"}],
+   "lines": [["STRIKES AFTER THE VOTE?", "text"], ["BEFORE DECEMBER?", "accent"]],
+   "sources": ["REPORTING: WSJ, FOX NEWS, CBS NEWS, MIDDLE EAST EYE", "OCT 28, 2026"]
+  }
+ ]
+}
