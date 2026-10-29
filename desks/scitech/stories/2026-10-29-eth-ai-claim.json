@@ -1,0 +1,99 @@
+{
+ "id": "2026-10-29-eth-ai-claim",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Two A.I. labs say they broke a famous computing rule. Can anyone confirm it?"},
+  {"id": "f1", "text": "The Exponential Time Hypothesis, from the late nineteen nineties, says a hard puzzle called three-SAT has no fast shortcut. Many results in computer science rest on it. On October twenty-sixth, OpenAI said its model found a faster method."},
+  {"id": "f2", "text": "Science reported that Anthropic made a similar claim. Both are company claims in papers that are not peer-reviewed. OpenAI says it also checked its proof with Lean, software that verifies every logical step."},
+  {"id": "f3", "text": "Now outside experts are checking. The hypothesis's original authors, including M.I.T.'s Ryan Williams, are helping organize an open review. Holger Dell, who was not involved, called it a major breakthrough. Even so, the famous P versus N.P. question stays open."},
+  {"id": "cta", "text": "Will outside experts confirm the proof? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE RULE", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "THE CLAIM", "seg": "f2", "color": "violet"},
+  {"n": "03", "name": "THE CHECK", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "upload": {
+  "title": "OpenAI Says Its A.I. Broke a Core Computing Rule #shorts",
+  "description": "OpenAI says an internal model refuted the Exponential Time Hypothesis, a widely used assumption about how hard the 3-SAT puzzle is. Science reports that Anthropic made a similar claim. Both are company claims in papers that are not yet peer-reviewed; the hypothesis's original authors are helping organize an open review.\n\nSources: Science, The Washington Times, The Next Web, OpenAI statement and preprint (Oct 26), Forklog. All results are company claims, not yet independently confirmed.\n\n#tech #AI #computerscience #OpenAI",
+  "tags": ["technology", "news", "OpenAI", "Anthropic", "AI", "computer science", "Exponential Time Hypothesis", "3-SAT"],
+  "cover": "hook$ -0.2"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [-122.42, 37.77],
+  "number": "27 YEARS",
+  "numberColor": "accent",
+  "lines": [["A.I. BROKE", "text"], ["THE RULE?", "accent"]],
+  "source": "OCT 26 · PER OPENAI · NOT PEER-REVIEWED"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {"at": 0, "lon": -150, "lat": 25, "R": 380},
+    {"at": 4.5, "lon": -122.4, "lat": 37.8, "R": 600}
+   ],
+   "chip": {"text": "OPENAI · OCT 26, 2026", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "USA", "color": "info", "at": "hook:labs", "alpha": 0.5}],
+   "markers": [
+    {"loc": [-122.42, 37.77], "color": "accent", "at": "hook:labs", "label": "OPENAI", "sub": "SAN FRANCISCO", "dx": -60, "dy": -160, "big": true}
+   ],
+   "headline": {"at": "hook:they", "lines": [["A.I. BROKE", "text", 110], ["A RULE?", "accent", 100]]}
+  },
+  {
+   "type": "flow",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "THE EXPONENTIAL TIME HYPOTHESIS",
+   "color": "accent",
+   "steps": [
+    {"icon": "chip", "title": "HARD PUZZLE: 3-SAT", "sub": "CHECK MANY YES/NO CONDITIONS AT ONCE", "color": "info", "at": "f1:hard"},
+    {"icon": "shield", "title": "ETH: NO FAST SHORTCUT", "sub": "TIME GROWS EXPONENTIALLY · LATE 1990S", "color": "accent", "at": "f1:no"},
+    {"icon": "bolt", "title": "OPENAI CLAIMS A FASTER WAY", "sub": "OCT 26 · COMPANY CLAIM", "color": "violet", "at": "f1:OpenAI"}
+   ],
+   "source": "SOURCES: SCIENCE · WASHINGTON TIMES · THE NEXT WEB"
+  },
+  {
+   "type": "facts",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "color": "violet",
+   "items": [
+    {"icon": "eye", "big": "OPENAI + ANTHROPIC", "text": "BOTH CLAIM A REFUTATION · PER SCIENCE", "color": "violet", "at": "f2:Anthropic"},
+    {"icon": "x", "big": "NOT PEER-REVIEWED", "text": "COMPANY PAPERS · NO OUTSIDE CONFIRMATION YET", "color": "danger", "at": "f2:Both"},
+    {"icon": "check", "big": "LEAN-CHECKED", "text": "SOFTWARE VERIFIES EACH STEP · PER OPENAI", "color": "ok", "at": "f2:Lean,"}
+   ],
+   "source": "SOURCES: SCIENCE · OPENAI STATEMENT · WASHINGTON TIMES"
+  },
+  {
+   "type": "timeline",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "FROM CLAIM TO CHECK",
+   "color": "info",
+   "items": [
+    {"date": "OCT 16–17", "title": "PROOF FOUND, THEN FORMALIZED", "sub": "PER OPENAI", "color": "violet", "at": "f3:Now"},
+    {"date": "OCT 26", "title": "OPENAI GOES PUBLIC", "sub": "PREPRINT, NOT PEER-REVIEWED", "color": "accent", "at": "f3:hypothesis's"},
+    {"date": "NOW", "title": "OPEN REVIEW BEING ORGANIZED", "sub": "WILLIAMS, IMPAGLIAZZO, PATURI", "color": "ok", "big": true, "at": "f3:helping"},
+    {"date": "UNCHANGED", "title": "P VS NP STAYS OPEN", "sub": "ETH IS A STRONGER ASSUMPTION", "color": "info", "at": "f3:Even"}
+   ],
+   "source": "SOURCES: WASHINGTON TIMES · THE NEXT WEB · FORKLOG"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": -150, "lat": 25, "R": 800},
+    {"at": "cta +1", "lon": -122.4, "lat": 37.8, "R": 500},
+    {"at": "end", "lon": -110, "lat": 35, "R": 500}
+   ],
+   "markers": [{"loc": [-122.42, 37.77], "color": "accent"}],
+   "lines": [["PROOF CONFIRMED", "text"], ["BY EXPERTS?", "accent"]],
+   "sources": ["SCIENCE · WASHINGTON TIMES · THE NEXT WEB · OPENAI", "ALL RESULTS ARE COMPANY CLAIMS"]
+  }
+ ]
+}
