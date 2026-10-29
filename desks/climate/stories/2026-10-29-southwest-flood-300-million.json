@@ -1,0 +1,477 @@
+{
+ "id": "2026-10-29-southwest-flood-300-million",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "New Mexico's floods may cost three hundred million dollars. Is more rain coming?"
+  },
+  {
+   "id": "f1",
+   "text": "New Mexico's governor estimates recovery from the floods could cost up to three hundred million dollars, NPR reports. The Associated Press says federal disaster aid has been announced, with the state covering twenty-five percent of eligible costs."
+  },
+  {
+   "id": "f2",
+   "text": "San Juan County officials say rescuers pulled between two hundred and three hundred people to safety. Colorado's governor declared a disaster emergency in eleven counties. The town of Bluff, Utah, was partly underwater, and the Associated Press reports one death."
+  },
+  {
+   "id": "f3",
+   "text": "NBC News says flooding damaged wastewater facilities on the Navajo Nation near Shiprock, sending sewage into the San Juan River. Weather dot com reports more rain and mountain snow from Saturday into Monday, on saturated ground."
+  },
+  {
+   "id": "cta",
+   "text": "Will the Southwest see new flooding this weekend? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE RECORD",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE DAMAGE",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE RISK",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -100,
+     "lat": 34,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": -108,
+     "lat": 36.5,
+     "R": 700
+    }
+   ],
+   "chip": {
+    "text": "SOUTHWEST FLOODS",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:floods",
+    "lines": [
+     [
+      "$300 MILLION",
+      "danger",
+      120
+     ],
+     [
+      "NEW MEXICO FLOODS",
+      "text",
+      90
+     ]
+    ]
+   },
+   "highlights": [
+    {
+     "iso": "US-NM",
+     "color": "danger",
+     "at": "hook:floods",
+     "alpha": 0.35
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -108.218,
+      36.728
+     ],
+     "color": "accent",
+     "at": "hook:Mexico's",
+     "label": "FARMINGTON",
+     "sub": "",
+     "dx": -230,
+     "dy": -60,
+     "big": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -108,
+    36.8
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -108,
+     "lat": 36.5,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": -108.2,
+     "lat": 36.8,
+     "dist": 14,
+     "pitch": 42,
+     "yaw": -6,
+     "oy": 180
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": -108.6,
+     "lat": 36.9,
+     "dist": 11,
+     "pitch": 48,
+     "yaw": 8,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": -107.6,
+     "lat": 37.0,
+     "dist": 18,
+     "pitch": 40,
+     "yaw": -4,
+     "oy": 180
+    },
+    {
+     "at": "cta -0.1",
+     "lon": -108,
+     "lat": 36.8,
+     "dist": 22,
+     "pitch": 35,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "US-NM",
+     "color": "info",
+     "alpha": 0.14,
+     "at": "f1:governor"
+    },
+    {
+     "kind": "tint",
+     "iso": "US-CO",
+     "color": "info",
+     "alpha": 0.1,
+     "at": "f2:Colorado's"
+    },
+    {
+     "kind": "field",
+     "at": "f2:rescuers",
+     "until": "cta",
+     "blobs": [
+      {
+       "loc": [
+        -107.01,
+        37.269
+       ],
+       "r": 0.8,
+       "v": 0.9
+      },
+      {
+       "loc": [
+        -107.6,
+        37.2
+       ],
+       "r": 1.0,
+       "v": 0.7
+      },
+      {
+       "loc": [
+        -108.218,
+        36.728
+       ],
+       "r": 0.7,
+       "v": 0.6
+      }
+     ],
+     "palette": "rain",
+     "alpha": 0.6,
+     "grow": 1.5,
+     "clip": "USA"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -108.218,
+      36.728
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:governor",
+     "label": {
+      "text": "FARMINGTON",
+      "sub": "SAN JUAN COUNTY",
+      "dx": -90,
+      "dy": 110,
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -107.01,
+      37.269
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f2:Colorado's",
+     "label": {
+      "text": "11 COUNTIES",
+      "sub": "DISASTER EMERGENCY",
+      "dx": 10,
+      "dy": -70,
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -108.687,
+      36.786
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f3:Shiprock,",
+     "label": {
+      "text": "SHIPROCK",
+      "sub": "WASTEWATER DAMAGE \u00b7 NAVAJO NATION",
+      "dx": -300,
+      "dy": -70,
+      "until": "cta"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "ILLUSTRATIVE RAIN AREA \u00b7 APPROXIMATE \u00b7 NPR, AP, NBC",
+     "y": 1170,
+     "at": "f1 +1"
+    },
+    {
+     "kind": "tint",
+     "iso": "US-UT",
+     "color": "info",
+     "alpha": 0.1,
+     "at": "f2:Bluff,"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -109.55,
+      37.28
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f2:Bluff,",
+     "label": {
+      "text": "BLUFF, UTAH",
+      "sub": "PARTLY UNDERWATER",
+      "dx": -60,
+      "dy": 110,
+      "until": "f3"
+     }
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "from": "f1:New",
+   "to": "f1$ -0.1",
+   "label": "NEW MEXICO FLOOD RECOVERY COST",
+   "sublabel": "GOVERNOR'S ESTIMATE, USD MILLIONS",
+   "color": "danger",
+   "bars": [
+    {
+     "label": "LOW",
+     "sub": "",
+     "value": 200,
+     "display": "$200M",
+     "color": "accent",
+     "at": "f1:estimates",
+     "dur": 1.0
+    },
+    {
+     "label": "HIGH",
+     "sub": "",
+     "value": 300,
+     "display": "$300M",
+     "color": "danger",
+     "at": "f1:three",
+     "dur": 1.0
+    }
+   ],
+   "source": "SOURCE: GOV. LUJAN GRISHAM VIA NPR (ESTIMATE, NOT FINAL)"
+  },
+  {
+   "type": "facts",
+   "from": "f2:San",
+   "to": "f2$ -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "people",
+     "big": "200-300 RESCUED",
+     "text": "SAN JUAN COUNTY OFFICIALS",
+     "color": "danger",
+     "at": "f2:two"
+    },
+    {
+     "icon": "drop",
+     "big": "11 COUNTIES",
+     "text": "COLORADO DISASTER EMERGENCY",
+     "color": "accent",
+     "at": "f2:eleven"
+    },
+    {
+     "icon": "x",
+     "big": "1 DEATH",
+     "text": "REPORTED \u00b7 AP",
+     "color": "info",
+     "at": "f2:reports"
+    }
+   ],
+   "source": "SOURCE: SAN JUAN COUNTY, COLORADO GOVERNOR, AP"
+  },
+  {
+   "type": "facts",
+   "from": "f3:NBC",
+   "to": "f3$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "drop",
+     "big": "SEWAGE",
+     "text": "INTO SAN JUAN RIVER \u00b7 NBC NEWS",
+     "color": "danger",
+     "at": "f3:sending"
+    },
+    {
+     "icon": "rain",
+     "big": "RAIN + SNOW",
+     "text": "SAT-MON FORECAST \u00b7 WEATHER.COM",
+     "color": "info",
+     "at": "f3:more"
+    }
+   ],
+   "source": "SOURCE: NBC NEWS, WEATHER.COM"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "UP TO $300 MILLION IN DAMAGE.",
+     "text"
+    ],
+    [
+     "MORE RAIN THIS WEEKEND?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "NPR, AP, NBC NEWS, WEATHER.COM (SEARCH EXCERPTS)",
+    "OCT 29, 2026 \u00b7 RAIN AREA ILLUSTRATIVE \u00b7 ESTIMATES PRELIMINARY"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -100,
+     "lat": 34,
+     "R": 700
+    },
+    {
+     "at": "cta +1",
+     "lon": -106,
+     "lat": 36,
+     "R": 900
+    },
+    {
+     "at": "end",
+     "lon": -107,
+     "lat": 36.5,
+     "R": 900
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -108.218,
+      36.728
+     ],
+     "color": "accent"
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "US-NM",
+     "color": "danger",
+     "alpha": 0.4
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "New Mexico Floods Could Cost $300 Million #shorts",
+  "description": "New Mexico's governor estimates flood recovery could cost up to $300 million, NPR reports. The Associated Press says federal disaster aid has been announced; NBC News reports sewage from damaged Navajo Nation facilities entered the San Juan River, and Weather.com expects more rain this weekend.\n\nSources: NPR, Associated Press, NBC News, Weather.com (based on search-result excerpts; estimates are preliminary). The rain area on the map is illustrative.\n\n#climate #weather #flood #newmexico #southwest",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "flood",
+   "New Mexico",
+   "Colorado",
+   "San Juan River",
+   "Farmington",
+   "Utah",
+   "Navajo Nation"
+  ],
+  "cover": "f2 +1"
+ },
+ "thumbnail": {
+  "at": "f2:Colorado's",
+  "number": "$300M",
+  "numberColor": "danger",
+  "source": "NEW MEXICO FLOOD COST \u00b7 GOVERNOR VIA NPR \u00b7 OCT 27",
+  "focus": [
+   -108.218,
+   36.728
+  ],
+  "lines": [
+   [
+    "MORE RAIN",
+    "accent"
+   ],
+   [
+    "COMING?",
+    "text"
+   ]
+  ],
+  "zoom": 1.4
+ },
+ "gap": 1.4
+}
