@@ -1,0 +1,521 @@
+{
+ "id": "2026-10-30-typhoon-infa-northern-marianas",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Typhoon In-fa is tearing through the Northern Marianas. How bad will it get?"
+  },
+  {
+   "id": "f1",
+   "text": "The National Weather Service in Guam issued typhoon warnings for Agrihan, Pagan and Alamagan, three remote Northern Mariana islands. For Agrihan, it warned of destructive winds of one hundred twenty to one hundred forty-five miles an hour near the eyewall."
+  },
+  {
+   "id": "f2",
+   "text": "Marianas Variety reported In-fa was forecast to pass over or just north of Agrihan on Friday evening as a category four. Local reports citing the weather service put sustained winds near one hundred forty-five miles an hour."
+  },
+  {
+   "id": "f3",
+   "text": "Guam, Saipan, Tinian and Rota sit outside the forecast cone, the weather service says. Japan's weather agency expects In-fa near the Ogasawara Islands around Sunday. AccuWeather calls it the fifth typhoon to affect the Marianas this year."
+  },
+  {
+   "id": "cta",
+   "text": "Will In-fa weaken before it nears Japan? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE WARNINGS",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE EYE",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "WHAT'S NEXT",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 146,
+     "lat": 18,
+     "R": 400
+    },
+    {
+     "at": 3.2,
+     "lon": 145.7,
+     "lat": 18.5,
+     "R": 760
+    }
+   ],
+   "chip": {
+    "text": "TYPHOON IN-FA",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:tearing",
+    "lines": [
+     [
+      "CATEGORY 4",
+      "danger",
+      120
+     ],
+     [
+      "NORTHERN MARIANAS",
+      "text",
+      84
+     ]
+    ]
+   },
+   "markers": [
+    {
+     "loc": [
+      145.67,
+      18.77
+     ],
+     "color": "danger",
+     "at": "hook:tearing",
+     "label": "AGRIHAN",
+     "sub": "",
+     "dx": -190,
+     "dy": -70,
+     "big": true
+    },
+    {
+     "loc": [
+      144.79,
+      13.44
+     ],
+     "color": "accent",
+     "at": "hook:How",
+     "label": "GUAM",
+     "sub": "",
+     "dx": -20,
+     "dy": 80
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    146,
+    18
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 146,
+     "lat": 18,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 146.4,
+     "lat": 17.8,
+     "dist": 12,
+     "pitch": 48,
+     "yaw": -8,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": 146.0,
+     "lat": 18.9,
+     "dist": 10,
+     "pitch": 52,
+     "yaw": 6,
+     "oy": 200
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": 144.8,
+     "lat": 19.5,
+     "dist": 38,
+     "pitch": 42,
+     "yaw": -4,
+     "oy": 180
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 143.5,
+     "lat": 22,
+     "dist": 46,
+     "pitch": 32,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "track",
+     "at": "hook$",
+     "until": "cta +0.6",
+     "color": "storm",
+     "name": "IN-FA",
+     "sub": "TYPHOON \u00b7 TRACK APPROXIMATE",
+     "forecast": 3,
+     "now": 2,
+     "cone": true,
+     "points": [
+      {
+       "loc": [
+        152.0,
+        17.6
+       ],
+       "cat": 4,
+       "label": "THU",
+       "dx": -40,
+       "dy": 60,
+       "until": "f2"
+      },
+      {
+       "loc": [
+        148.5,
+        18.2
+       ],
+       "cat": 4,
+       "label": "",
+       "until": "f2"
+      },
+      {
+       "loc": [
+        145.7,
+        19.0
+       ],
+       "cat": 4,
+       "label": "FRI EVE",
+       "dx": 70,
+       "dy": -70,
+       "big": true
+      },
+      {
+       "loc": [
+        143.9,
+        22.5
+       ],
+       "cat": 4,
+       "label": "SAT?",
+       "dx": 50,
+       "dy": 50
+      },
+      {
+       "loc": [
+        142.3,
+        26.5
+       ],
+       "cat": 4,
+       "label": "SUN \u00b7 OGASAWARA?",
+       "dx": -80,
+       "dy": -70,
+       "big": true
+      }
+     ],
+     "steps": [
+      {
+       "at": "hook +0.3",
+       "to": 1,
+       "dur": 1.5
+      },
+      {
+       "at": "f1:issued",
+       "to": 2,
+       "dur": 3.0
+      },
+      {
+       "at": "f2:Marianas",
+       "to": 3,
+       "dur": 3.0
+      },
+      {
+       "at": "f3:Japan's",
+       "to": 4,
+       "dur": 4.0
+      }
+     ],
+     "nameUntil": "f3",
+     "nameDx": -250,
+     "nameDy": -200
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      145.67,
+      18.77
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Agrihan",
+     "label": {
+      "text": "AGRIHAN",
+      "sub": "TYPHOON WARNING",
+      "dx": 150,
+      "dy": -40,
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      145.77,
+      18.12
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Pagan",
+     "label": {
+      "text": "PAGAN",
+      "sub": "WARNING",
+      "dx": 150,
+      "dy": 60,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      145.83,
+      17.6
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Alamagan",
+     "label": {
+      "text": "ALAMAGAN",
+      "sub": "WARNING",
+      "dx": 150,
+      "dy": 90,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      145.755,
+      15.212
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f3:Guam",
+     "label": {
+      "text": "SAIPAN",
+      "sub": "OUTSIDE CONE",
+      "dx": 50,
+      "dy": 50,
+      "until": "cta"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      144.79,
+      13.44
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f3:Guam",
+     "label": {
+      "text": "GUAM",
+      "sub": "OUTSIDE CONE",
+      "dx": -60,
+      "dy": 60,
+      "until": "cta"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "TRACK APPROXIMATE \u00b7 POSITIONS ILLUSTRATIVE \u00b7 NWS GUAM / JMA",
+     "y": 1170,
+     "at": "f1 +1"
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f1:For",
+   "to": "f1$ -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "3 ISLANDS",
+     "text": "TYPHOON WARNINGS \u00b7 NWS GUAM",
+     "color": "danger",
+     "at": "f1:three"
+    },
+    {
+     "icon": "bolt",
+     "big": "120\u2013145 MPH",
+     "text": "AGRIHAN, NEAR EYEWALL \u00b7 NWS",
+     "color": "accent",
+     "at": "f1:destructive"
+    }
+   ],
+   "source": "SOURCE: NWS GUAM"
+  },
+  {
+   "type": "facts",
+   "from": "f2:Marianas",
+   "to": "f2$ -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "eye",
+     "big": "OVER OR JUST N.",
+     "text": "OF AGRIHAN \u00b7 FRI EVENING \u00b7 MARIANAS VARIETY",
+     "color": "accent",
+     "at": "f2:forecast"
+    },
+    {
+     "icon": "storm",
+     "big": "CATEGORY 4",
+     "text": "TYPHOON \u00b7 MARIANAS VARIETY",
+     "color": "danger",
+     "at": "f2:category"
+    },
+    {
+     "icon": "bolt",
+     "big": "~145 MPH",
+     "text": "SUSTAINED \u00b7 LOCAL REPORTS CITING NWS",
+     "color": "danger",
+     "at": "f2:sustained"
+    }
+   ],
+   "source": "SOURCE: MARIANAS VARIETY, LOCAL REPORTS"
+  },
+  {
+   "type": "facts",
+   "from": "f3:Guam,",
+   "to": "f3$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "check",
+     "big": "GUAM \u00b7 SAIPAN",
+     "text": "OUTSIDE FORECAST CONE \u00b7 NWS",
+     "color": "ok",
+     "at": "f3:Guam,"
+    },
+    {
+     "icon": "flag",
+     "big": "OGASAWARA SUN",
+     "text": "JAPAN'S WEATHER AGENCY",
+     "color": "accent",
+     "at": "f3:Japan's"
+    },
+    {
+     "icon": "storm",
+     "big": "5TH TYPHOON",
+     "text": "TO AFFECT MARIANAS THIS YEAR \u00b7 ACCUWEATHER",
+     "color": "danger",
+     "at": "f3:AccuWeather"
+    }
+   ],
+   "source": "SOURCE: NWS GUAM, JMA, ACCUWEATHER"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "CATEGORY 4 OVER AGRIHAN.",
+     "text"
+    ],
+    [
+     "JAPAN NEXT?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "NWS GUAM, MARIANAS VARIETY, RNZ, ACCUWEATHER, WEATHERNEWS (SEARCH EXCERPTS)",
+    "OCT 30, 2026 \u00b7 TRACK AND POSITIONS APPROXIMATE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 140,
+     "lat": 20,
+     "R": 700
+    },
+    {
+     "at": "cta +1",
+     "lon": 143,
+     "lat": 22,
+     "R": 900
+    },
+    {
+     "at": "end",
+     "lon": 143,
+     "lat": 23,
+     "R": 900
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      142.3,
+      26.5
+     ],
+     "color": "accent"
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Typhoon In-fa Hits the Northern Marianas as a Category 4 #shorts",
+  "description": "The National Weather Service in Guam issued typhoon warnings for Agrihan, Pagan and Alamagan in the Northern Mariana Islands, warning of destructive winds of 120 to 145 mph near the eyewall on Agrihan. Marianas Variety reported In-fa was forecast to pass over or just north of Agrihan on Friday evening as a category 4 typhoon; Guam, Saipan, Tinian and Rota are outside the forecast cone, and Japan's weather agency expects the storm near the Ogasawara Islands around Sunday.\n\nSources: NWS Guam, Marianas Variety, RNZ, AccuWeather, Weathernews (based on search-result excerpts). Track and positions on the map are approximate.\n\n#climate #weather #typhoon #infa #marianas",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "typhoon",
+   "In-fa",
+   "Northern Mariana Islands",
+   "Agrihan",
+   "Guam",
+   "Japan"
+  ],
+  "cover": "f1 +1"
+ },
+ "thumbnail": {
+  "at": "f2:Marianas",
+  "number": "145 MPH",
+  "numberColor": "danger",
+  "source": "IN-FA SUSTAINED WINDS \u00b7 LOCAL REPORTS CITING NWS \u00b7 OCT 30",
+  "focus": [
+   145.67,
+   18.77
+  ],
+  "lines": [
+   [
+    "EYE OVER AGRIHAN?",
+    "accent"
+   ]
+  ],
+  "zoom": 1.5
+ },
+ "gap": 0.9
+}
