@@ -1,0 +1,274 @@
+{
+ "id": "2026-10-30-brain-purges-flawed-neurons",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Around birth, your brain quietly throws out its flawed cells. How?"
+  },
+  {
+   "id": "f1",
+   "text": "A study in Nature, led by Boston Children's Hospital and Harvard, sequenced single neurons from donated human brains. Ages ranged from fourteen weeks of gestation to ninety years. The team counted neurons with extra or missing pieces of chromosomes."
+  },
+  {
+   "id": "f2",
+   "text": "Before birth, about twenty six percent of cortical neurons carried such changes, the authors report. After birth, only about six percent did. That is a fall of roughly three quarters. The drop happens around the time of delivery."
+  },
+  {
+   "id": "f3",
+   "text": "The team suggests the affected neurons are removed, since surviving cells lack changes in the genes that matter most. Why this happens is still being studied. The authors note that such changes have been linked to autism and epilepsy. The brains came from people without a neurological diagnosis."
+  },
+  {
+   "id": "cta",
+   "text": "Will scientists find this cleanup fails in some conditions? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE SAMPLE",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE FINDING",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "WHAT'S NEXT",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Your Brain Purges Flawed Neurons Around Birth #shorts",
+  "description": "A study in Nature, led by Boston Children's Hospital and Harvard, sequenced single neurons from donated human brains. The authors report that about 26% of prenatal cortical neurons carried large chromosome changes, falling to about 6% after birth, and suggest those neurons are selectively removed. The work was done on postmortem brains of people without a neurological diagnosis.\n\nSources: Nature paper (Shao et al., Oct 28) and Nature news; News-Medical; GEN; Neuroscience News.\n\n#science #neuroscience #brain #nature",
+  "tags": [
+   "science",
+   "news",
+   "neuroscience",
+   "brain",
+   "Nature",
+   "neurons",
+   "Boston Children's Hospital",
+   "Harvard",
+   "genetics"
+  ],
+  "cover": "hook:flawed, +0.4"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [
+   -71.1,
+   42.34
+  ],
+  "number": "26% → 6%",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "BRAIN CELLS",
+    "text"
+   ],
+   [
+    "PURGED AT BIRTH?",
+    "accent"
+   ]
+  ],
+  "source": "NATURE STUDY · CORTICAL NEURONS · PER AUTHORS"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": -30,
+     "lat": 35,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": -71.1,
+     "lat": 42.34,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "SCIENCE · NATURE STUDY",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      -71.1,
+      42.34
+     ],
+     "color": "accent",
+     "at": "hook:flawed",
+     "label": "BOSTON",
+     "sub": "STUDY LEAD",
+     "dx": -60,
+     "dy": -150,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:flawed",
+    "lines": [
+     [
+      "BRAIN PURGES",
+      "text",
+      110
+     ],
+     [
+      "FLAWED CELLS?",
+      "accent",
+      80
+     ]
+    ]
+   }
+  },
+  {
+   "type": "flow",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "THE EXPERIMENT",
+   "color": "accent",
+   "steps": [
+    {
+     "icon": "people",
+     "title": "DONATED BRAINS",
+     "sub": "14 WEEKS TO 90 YEARS",
+     "color": "info",
+     "at": "f1:sequenced"
+    },
+    {
+     "icon": "eye",
+     "title": "SINGLE-CELL SEQUENCING",
+     "sub": "ONE NEURON AT A TIME",
+     "color": "accent",
+     "at": "f1:single"
+    },
+    {
+     "icon": "check",
+     "title": "COUNT CHROMOSOME CHANGES",
+     "sub": "EXTRA OR MISSING PIECES",
+     "color": "violet",
+     "at": "f1:counted"
+    }
+   ],
+   "source": "NATURE PAPER · NEWS-MEDICAL · GEN"
+  },
+  {
+   "type": "bars",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "NEURONS WITH CHROMOSOME CHANGES",
+   "sublabel": "SHARE OF CORTICAL NEURONS · AVERAGE · PER THE AUTHORS",
+   "bars": [
+    {
+     "label": "BEFORE BIRTH",
+     "value": 26,
+     "display": "~26%",
+     "color": "danger",
+     "at": "f2:Before",
+     "dur": 1.2
+    },
+    {
+     "label": "AFTER BIRTH",
+     "value": 6,
+     "display": "~6%",
+     "color": "accent",
+     "at": "f2:After",
+     "dur": 1.2
+    }
+   ],
+   "source": "NATURE PAPER · NEUROSCIENCE NEWS · GEN"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "x",
+     "big": "REMOVED?",
+     "text": "AUTHORS' INTERPRETATION · NOT PROVEN",
+     "color": "accent",
+     "at": "f3:removed"
+    },
+    {
+     "icon": "flag",
+     "big": "WHY? OPEN",
+     "text": "MECHANISM STILL BEING STUDIED",
+     "color": "warn",
+     "at": "f3:Why"
+    },
+    {
+     "icon": "people",
+     "big": "HEALTHY BRAINS",
+     "text": "NO NEUROLOGICAL DIAGNOSIS",
+     "color": "info",
+     "at": "f3:brains"
+    }
+   ],
+   "source": "SOURCES: NATURE · NEWS-MEDICAL · GEN"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -100,
+     "lat": 30,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -71.1,
+     "lat": 42.34,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": -60,
+     "lat": 40,
+     "R": 470
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -71.1,
+      42.34
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "DOES THE CLEANUP",
+     "text"
+    ],
+    [
+     "EVER FAIL?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "NATURE · NEWS-MEDICAL · GEN",
+    "BOSTON CHILDREN'S · HARVARD"
+   ]
+  }
+ ]
+}
