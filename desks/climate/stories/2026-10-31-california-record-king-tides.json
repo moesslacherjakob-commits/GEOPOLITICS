@@ -1,0 +1,498 @@
+{
+ "id": "2026-10-31-california-record-king-tides",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "California's coast just broke tide records. Why was the sea so high?"
+  },
+  {
+   "id": "f1",
+   "text": "At San Diego, water hit eight point five two feet above the average low-tide level on Tuesday, the National Weather Service says. That is the highest at that gauge on record. Santa Barbara, San Pedro and La Jolla also set record highs."
+  },
+  {
+   "id": "f2",
+   "text": "The service blames a full moon on top of unusually warm water. Seas are about seventeen inches higher than last year, as heated water expands. Scripps pier measured seventy three point six degrees Wednesday, about nine above average."
+  },
+  {
+   "id": "f3",
+   "text": "Huntington Beach declared a local emergency. ABC Seven counted over one hundred damaged properties. Pacific Coast Highway closed, and Metrolink halted trains at San Clemente. The Los Angeles Times reports peak El Niño could add one to two feet more."
+  },
+  {
+   "id": "cta",
+   "text": "Will California see even higher tides this winter? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE RECORD",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE REASON",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE DAMAGE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -135,
+     "lat": 30,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": -119,
+     "lat": 34,
+     "R": 760
+    }
+   ],
+   "chip": {
+    "text": "CALIFORNIA KING TIDES",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:broke",
+    "lines": [
+     [
+      "RECORD TIDES",
+      "danger",
+      120
+     ],
+     [
+      "CALIFORNIA",
+      "text",
+      120
+     ]
+    ]
+   },
+   "highlights": [
+    {
+     "iso": "US-CA",
+     "color": "danger",
+     "at": "hook:coast",
+     "alpha": 0.35
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -117.17,
+      32.71
+     ],
+     "color": "accent",
+     "at": "hook:tide",
+     "label": "SAN DIEGO",
+     "sub": "",
+     "dx": -230,
+     "dy": 40,
+     "big": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -118.3,
+    33.5
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -119,
+     "lat": 34,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": -117.5,
+     "lat": 33.0,
+     "dist": 16,
+     "pitch": 42,
+     "yaw": -8,
+     "oy": 180
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": -119.5,
+     "lat": 33.4,
+     "dist": 30,
+     "pitch": 38,
+     "yaw": 6,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": -117.9,
+     "lat": 33.65,
+     "dist": 11,
+     "pitch": 48,
+     "yaw": 8,
+     "oy": 190
+    },
+    {
+     "at": "cta -0.1",
+     "lon": -118.3,
+     "lat": 33.5,
+     "dist": 24,
+     "pitch": 35,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "US-CA",
+     "color": "info",
+     "alpha": 0.12,
+     "at": "f1:San"
+    },
+    {
+     "kind": "field",
+     "at": "f2:warm",
+     "until": "cta",
+     "blobs": [
+      {
+       "loc": [
+        -120.5,
+        33.0
+       ],
+       "r": 3.0,
+       "v": 0.9
+      },
+      {
+       "loc": [
+        -118.5,
+        32.4
+       ],
+       "r": 2.5,
+       "v": 0.8
+      },
+      {
+       "loc": [
+        -121.5,
+        35.5
+       ],
+       "r": 2.5,
+       "v": 0.6
+      }
+     ],
+     "palette": "heat",
+     "alpha": 0.5,
+     "grow": 1.5
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -117.17,
+      32.71
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:San",
+     "label": {
+      "text": "RECORD 8.52 FT",
+      "sub": "SAN DIEGO GAUGE · OCT 27 · NWS",
+      "dx": 60,
+      "dy": 80,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -119.69,
+      34.41
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f1:Santa",
+     "label": {
+      "text": "SANTA BARBARA",
+      "sub": "",
+      "dx": -30,
+      "dy": -70,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -118.27,
+      33.74
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f1:San#1",
+     "label": {
+      "text": "SAN PEDRO",
+      "sub": "",
+      "dx": -250,
+      "dy": -20,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -117.26,
+      32.85
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f1:La",
+     "label": {
+      "text": "LA JOLLA",
+      "sub": "",
+      "dx": 90,
+      "dy": -40,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -118.0,
+      33.66
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f3:Huntington",
+     "label": {
+      "text": "HUNTINGTON BEACH",
+      "sub": "LOCAL EMERGENCY",
+      "dx": -330,
+      "dy": -70,
+      "until": "cta"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -117.61,
+      33.43
+     ],
+     "style": "x",
+     "color": "accent",
+     "at": "f3:San",
+     "label": {
+      "text": "SAN CLEMENTE",
+      "sub": "METROLINK HALTED",
+      "dx": 60,
+      "dy": 70,
+      "until": "cta"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "WARM-WATER AREA ILLUSTRATIVE · APPROXIMATE · NWS / SCRIPPS",
+     "y": 1170,
+     "at": "f2 +1"
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f1:That",
+   "to": "f1$ -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "drop",
+     "big": "8.52 FT",
+     "text": "SAN DIEGO · HIGHEST ON RECORD",
+     "color": "danger",
+     "at": "f1:That"
+    },
+    {
+     "icon": "check",
+     "big": "BEATS 8.26 FT",
+     "text": "PREVIOUS RECORD · JULY 2026",
+     "color": "accent",
+     "at": "f1:highest"
+    },
+    {
+     "icon": "flag",
+     "big": "4 GAUGES",
+     "text": "RECORD HIGHS · NWS",
+     "color": "info",
+     "at": "f1:Santa"
+    }
+   ],
+   "source": "SOURCE: NATIONAL WEATHER SERVICE"
+  },
+  {
+   "type": "facts",
+   "from": "f2:The",
+   "to": "f2$ -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "eye",
+     "big": "FULL MOON",
+     "text": "HIGH ASTRONOMICAL TIDES · NWS",
+     "color": "info",
+     "at": "f2:full"
+    },
+    {
+     "icon": "drop",
+     "big": "+17 INCHES",
+     "text": "SEA LEVEL VS. LAST YEAR · NWS",
+     "color": "danger",
+     "at": "f2:seventeen"
+    },
+    {
+     "icon": "thermo",
+     "big": "73.6°F",
+     "text": "SCRIPPS PIER · ~9° ABOVE AVERAGE",
+     "color": "accent",
+     "at": "f2:seventy"
+    }
+   ],
+   "source": "SOURCE: NWS SAN DIEGO, SCRIPPS (VIA NEWS REPORTS)"
+  },
+  {
+   "type": "facts",
+   "from": "f3:Huntington",
+   "to": "f3$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "flag",
+     "big": "LOCAL EMERGENCY",
+     "text": "HUNTINGTON BEACH",
+     "color": "danger",
+     "at": "f3:Huntington"
+    },
+    {
+     "icon": "drop",
+     "big": "100+ PROPERTIES",
+     "text": "DAMAGED · ABC7",
+     "color": "accent",
+     "at": "f3:ABC"
+    },
+    {
+     "icon": "x",
+     "big": "PCH CLOSED",
+     "text": "METROLINK HALTED AT SAN CLEMENTE",
+     "color": "info",
+     "at": "f3:Pacific"
+    }
+   ],
+   "source": "SOURCE: ABC7, CBS LOS ANGELES, VOICE OF OC"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "RECORD TIDES ON THE COAST.",
+     "text"
+    ],
+    [
+     "HIGHER THIS WINTER?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "NWS, CBS NEWS, ABC7, KTLA / LOS ANGELES TIMES (SEARCH EXCERPTS)",
+    "OCT 31, 2026 · WARM-WATER AREA ILLUSTRATIVE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -125,
+     "lat": 33,
+     "R": 700
+    },
+    {
+     "at": "cta +1",
+     "lon": -121,
+     "lat": 34,
+     "R": 900
+    },
+    {
+     "at": "end",
+     "lon": -119,
+     "lat": 34,
+     "R": 900
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -117.17,
+      32.71
+     ],
+     "color": "accent"
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "US-CA",
+     "color": "danger",
+     "alpha": 0.4
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "California's Coast Sets Record Tides in El Niño Year #shorts",
+  "description": "The National Weather Service says the San Diego tide gauge reached 8.52 feet on Oct. 27, the highest in its record, with record highs also at Santa Barbara, San Pedro and La Jolla. The service links the high water to a full moon and sea levels about 17 inches above last year as warm water expands. Huntington Beach declared a local emergency.\n\nSources: National Weather Service, CBS News, ABC7 Los Angeles, KTLA / Los Angeles Times, Voice of OC (based on search-result excerpts). The warm-water area on the map is illustrative.\n\n#climate #weather #kingtides #california #elnino",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "king tides",
+   "California",
+   "El Niño",
+   "San Diego",
+   "Huntington Beach"
+  ],
+  "cover": "f2 +1"
+ },
+ "thumbnail": {
+  "at": "f2:seventeen",
+  "number": "8.52 FT",
+  "numberColor": "danger",
+  "source": "SAN DIEGO TIDE GAUGE · NWS · OCT 27",
+  "focus": [
+   -117.17,
+   32.71
+  ],
+  "lines": [
+   [
+    "HIGHEST EVER",
+    "accent"
+   ]
+  ],
+  "zoom": 1.4
+ },
+ "gap": 0.9
+}
