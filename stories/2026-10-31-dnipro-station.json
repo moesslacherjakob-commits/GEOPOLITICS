@@ -1,0 +1,71 @@
+{
+ "id": "2026-10-31-dnipro-station",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Fourteen people died waiting for a train in Ukraine. And a truce nearby was holding. Why?"},
+  {"id": "f1", "text": "Ukrainian officials say a Russian jet-powered drone hit a platform at Dnipro's main station on Thursday morning, where a passenger train was standing. CBS News reports at least fourteen dead. CNN counts fifteen. President Zelensky called it a horrific attack."},
+  {"id": "f2", "text": "Daytime strikes also hit Chernihiv and Kremenchuk, according to the Kyiv Independent. Russia has not commented on Dnipro in the reports we found. Its defense ministry says air defenses downed twelve hundred and fourteen Ukrainian drones overnight."},
+  {"id": "f3", "text": "The same week, a local truce began around the occupied town of Oleshky. Both sides credit Melania Trump with brokering it, to let aid reach about two thousand trapped civilians. Russia says the pause applies only there."},
+  {"id": "cta", "text": "Can local truces lead to a wider ceasefire? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "DNIPRO STATION", "seg": "f1", "color": "danger"},
+  {"n": "02", "name": "MORE STRIKES", "seg": "f2", "color": "oil"},
+  {"n": "03", "name": "LOCAL TRUCE", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "upload": {
+  "title": "Dnipro Station Strike Kills 14 Despite Local Truce #shorts",
+  "description": "Ukrainian officials say a Russian jet-powered drone hit a platform at the main railway station in Dnipro on Thursday, October 29, 2026, where a passenger train was standing. CBS News and ABC Australia report at least 14 dead; CNN reports 15, so the toll is provisional. President Zelensky called it a horrific attack. The Kyiv Independent reports further daytime strikes on Chernihiv and Kremenchuk. Russia's defense ministry has said its air defenses downed 1,214 Ukrainian drones overnight; in the reports we found, Russia had not commented on the Dnipro strike. Separately, a local truce around the Russian-occupied town of Oleshky took effect on Tuesday; both sides credit Melania Trump with brokering it so aid can reach about 2,000 trapped civilians. Russia says the pause applies only to that area.\n\nSources:\nCBS News, Oct 29-30, 2026: Russian drone kills 14 at Ukraine train station, but local truce credited to Melania Trump brings some hope\nCNN, Oct 29, 2026: Russia strikes Dnipro train station in central Ukraine\nABC News (Australia), Oct 30, 2026: Russian drone strike kills at least 14 at rail platform\nThe Kyiv Independent: Drone strike on Dnipro station kills 15 amid deadly daytime attacks on Chernihiv, Kremenchuk\nChannel 4 News: Russian train strike kills 14 despite Melania Trump's negotiated ceasefire\n\n#geopolitics #Ukraine #Russia #Dnipro",
+  "tags": ["geopolitics", "Ukraine", "Russia", "Dnipro", "Oleshky", "ceasefire", "Zelensky", "drone strike", "world news", "Ukraine war"],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:CBS",
+  "focus": "Dnipro, UA",
+  "zoom": 1.5,
+  "number": "14",
+  "numberColor": "danger",
+  "lines": [["KILLED AT STATION", "text"], ["DURING A TRUCE?", "accent"]],
+  "source": "PER CBS NEWS · OCT 29, 2026"
+ },
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.25", "exit": "zoom",
+   "view": [{"at": 0, "lon": 30, "lat": 46, "R": 380}, {"at": 3.4, "lon": 34, "lat": 48.5, "R": 480}],
+   "chip": {"text": "UKRAINE · OCT 29, 2026", "at": 0.25},
+   "highlights": [{"iso": "UKR", "color": "danger", "at": "hook:Ukraine."}],
+   "markers": [{"loc": "Dnipro, UA", "color": "danger", "at": "hook:Ukraine.", "label": "DNIPRO", "sub": "STATION HIT", "dx": 90, "dy": -70, "big": true}],
+   "headline": {"at": "hook:died", "lines": [["14 DEAD AT", "danger", 120], ["A STATION", "text", 120]]},
+   "card": {"at": "hook:And", "icon": "flag", "iconColor": "accent", "color": "accent", "kicker": "WHILE A TRUCE HOLDS", "title": "WHY THE STRIKE?", "reticle": false}
+  },
+  {
+   "type": "map", "from": "hook$ +0.25", "to": "cta -0.1",
+   "center": [33, 48.5],
+   "camera": [
+    {"at": "hook$ +0.25", "lon": 34, "lat": 48.5, "dist": 43, "pitch": 0, "yaw": 0},
+    {"at": "f1 +0.4", "lon": 35, "lat": 48.4, "dist": 9, "pitch": 45, "yaw": -4, "oy": 190},
+    {"at": "f2 +0.1", "lon": 32.5, "lat": 49.8, "dist": 18, "pitch": 45, "yaw": 3, "oy": 190},
+    {"at": "f3 +0.2", "lon": 32.7, "lat": 46.8, "dist": 8, "pitch": 46, "yaw": -3, "oy": 190},
+    {"at": "cta", "lon": 33, "lat": 48, "dist": 40, "pitch": 46, "yaw": 0, "oy": 190}
+   ],
+   "layers": [
+    {"kind": "tint", "iso": "UKR", "color": "neutral", "alpha": 0.3, "fill": 0.05, "at": "f1"},
+    {"kind": "marker", "loc": "Dnipro, UA", "style": "x", "color": "danger", "at": "f1", "until": "f2 -0.2", "label": {"text": "DNIPRO STATION", "sub": "JET-POWERED DRONE · PER UKRAINE", "dx": -20, "dy": -150}},
+    {"kind": "stamp", "text": "AT LEAST 14 DEAD", "icon": "x", "color": "danger", "screen": [540, 1120], "at": "f1:CBS", "until": "f1:CNN", "note": "PER CBS NEWS · TOLL PROVISIONAL"},
+    {"kind": "stamp", "text": "15 DEAD", "icon": "x", "color": "danger", "screen": [540, 1120], "at": "f1:CNN", "until": "f2 -0.2", "note": "PER CNN"},
+    {"kind": "marker", "loc": "Chernihiv", "style": "pulse", "color": "oil", "at": "f2", "until": "f3 -0.2", "label": {"text": "CHERNIHIV", "sub": "DAYTIME STRIKE · KYIV INDEPENDENT", "dx": -40, "dy": -80}},
+    {"kind": "marker", "loc": "Kremenchuk", "style": "pulse", "color": "oil", "at": "f2", "until": "f3 -0.2", "label": {"text": "KREMENCHUK", "sub": "DAYTIME STRIKE", "dx": 80, "dy": 60}},
+    {"kind": "marker", "loc": "Oleshky", "style": "pulse", "color": "info", "at": "f3", "until": "cta -0.2", "label": {"text": "OLESHKY", "sub": "LOCAL TRUCE · ~2,000 CIVILIANS", "dx": 60, "dy": 90}},
+    {"kind": "stamp", "text": "LOCAL TRUCE ONLY", "icon": "check", "color": "info", "screen": [540, 1120], "at": "f3:Russia", "until": "cta -0.2", "note": "RUSSIA SAYS IT APPLIES ONLY THERE"}
+   ]
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "view": [{"at": "cta -0.4", "lon": 33, "lat": 48, "R": 900}, {"at": "cta +1", "lon": 33, "lat": 48, "R": 520}, {"at": "end", "lon": 35, "lat": 48, "R": 520}],
+   "highlights": [{"iso": "UKR", "color": "danger", "alpha": 0.5}],
+   "markers": [{"loc": "Dnipro, UA", "color": "danger"}, {"loc": "Oleshky", "color": "info"}],
+   "lines": [["LOCAL TRUCES", "text"], ["A WIDER CEASEFIRE?", "accent"]],
+   "sources": ["REPORTING: CBS NEWS, CNN, ABC AUSTRALIA, KYIV INDEPENDENT, CHANNEL 4", "OCT 29-30, 2026"]
+  }
+ ]
+}
