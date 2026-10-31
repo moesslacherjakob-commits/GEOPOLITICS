@@ -1,0 +1,277 @@
+{
+ "id": "2026-10-31-photonic-chip-links-telescopes",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A glass chip just made two telescopes act as one. What can it see?"
+  },
+  {
+   "id": "f1",
+   "text": "Researchers at Heriot-Watt University in Scotland built the chip, with colleagues in Germany and the United States, the university says. It is a couple of centimetres across. Ultrafast lasers write tiny channels for light inside the glass."
+  },
+  {
+   "id": "f2",
+   "text": "The chip sits inside an instrument called CHARIOT at the CHARA Array in California, which links six telescopes. Observing campaigns in 2024 and 2025 combined light from two of them and recorded signals from a range of stars, according to the team."
+  },
+  {
+   "id": "f3",
+   "text": "Joining telescopes this way gives sharper detail than either could alone. Coverage of the study, published in Monthly Notices of the Royal Astronomical Society, says the chip detects fainter stars than the previous system. It has two inputs now, and could be upgraded to four."
+  },
+  {
+   "id": "cta",
+   "text": "Will chips like this link many more telescopes? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE CHIP",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE TEST",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "WHY IT MATTERS",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "A Glass Chip Links Two Telescopes Into One #shorts",
+  "description": "Heriot-Watt University says a centimetre-scale glass photonic chip, written with ultrafast lasers, has combined the light of two telescopes at the CHARA Array in California. Observing campaigns in 2024 and 2025 recorded signals from a range of stars, per the team; the study appears in Monthly Notices of the Royal Astronomical Society.\n\nSources: Heriot-Watt University release via Phys.org; Nanowerk; Edinburgh Chamber; The Business Desk; MNRAS paper (CHARIOT, first on-sky fringes).\n\n#science #astronomy #telescope #photonics",
+  "tags": [
+   "science",
+   "news",
+   "astronomy",
+   "telescope",
+   "photonics",
+   "Heriot-Watt",
+   "CHARA Array",
+   "interferometry",
+   "chip"
+  ],
+  "cover": "hook:chip, +0.4"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [
+   -118.06,
+   34.22
+  ],
+  "number": "2 \u2192 1",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "TELESCOPES FUSED",
+    "text"
+   ],
+   [
+    "BY A TINY CHIP",
+    "accent"
+   ]
+  ],
+  "source": "HERIOT-WATT \u00b7 CHARA ARRAY \u00b7 PER THE TEAM"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": -150,
+     "lat": 30,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": -118.06,
+     "lat": 34.22,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "SCIENCE \u00b7 ASTRONOMY",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      -118.06,
+      34.22
+     ],
+     "color": "accent",
+     "at": "hook:chip",
+     "label": "CHARA ARRAY",
+     "sub": "CALIFORNIA",
+     "dx": -60,
+     "dy": -150,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:chip",
+    "lines": [
+     [
+      "TWO TELESCOPES,",
+      "text",
+      100
+     ],
+     [
+      "ONE CHIP",
+      "accent",
+      100
+     ]
+    ]
+   }
+  },
+  {
+   "type": "flow",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "HOW IT WORKS",
+   "color": "accent",
+   "steps": [
+    {
+     "icon": "people",
+     "title": "HERIOT-WATT, SCOTLAND",
+     "sub": "WITH GERMAN AND U.S. PARTNERS",
+     "color": "info",
+     "at": "f1:Researchers"
+    },
+    {
+     "icon": "chip",
+     "title": "GLASS CHIP",
+     "sub": "A COUPLE OF CM ACROSS",
+     "color": "accent",
+     "at": "f1:Germany"
+    },
+    {
+     "icon": "bolt",
+     "title": "LASER-WRITTEN CHANNELS",
+     "sub": "GUIDE LIGHT INSIDE THE GLASS",
+     "color": "violet",
+     "at": "f1:Ultrafast"
+    }
+   ],
+   "source": "HERIOT-WATT RELEASE VIA PHYS.ORG \u00b7 NANOWERK"
+  },
+  {
+   "type": "timeline",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "ON-SKY TESTS",
+   "color": "violet",
+   "items": [
+    {
+     "date": "2024",
+     "title": "FIRST CAMPAIGN",
+     "sub": "CHARA ARRAY, CALIFORNIA",
+     "at": "f2:2024"
+    },
+    {
+     "date": "2025",
+     "title": "MORE CAMPAIGNS",
+     "sub": "SIGNALS FROM A RANGE OF STARS",
+     "at": "f2:2025"
+    },
+    {
+     "date": "OCT 2026",
+     "title": "STUDY PUBLISHED",
+     "sub": "MONTHLY NOTICES OF THE RAS",
+     "big": true,
+     "at": "f3:Monthly"
+    }
+   ],
+   "source": "PER THE TEAM \u00b7 HERIOT-WATT \u00b7 MNRAS"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "eye",
+     "big": "SHARPER DETAIL",
+     "text": "LINKED TELESCOPES BEAT EITHER ALONE",
+     "color": "accent",
+     "at": "f3:sharper"
+    },
+    {
+     "icon": "chip",
+     "big": "FAINTER STARS",
+     "text": "THAN THE PREVIOUS SYSTEM \u00b7 PER COVERAGE",
+     "color": "info",
+     "at": "f3:fainter"
+    },
+    {
+     "icon": "check",
+     "big": "2 INPUTS \u2192 4?",
+     "text": "UPGRADE POSSIBLE \u00b7 NOT YET BUILT",
+     "color": "warn",
+     "at": "f3:two"
+    }
+   ],
+   "source": "SOURCES: PHYS.ORG \u00b7 NANOWERK \u00b7 MNRAS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -150,
+     "lat": 30,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -118.06,
+     "lat": 34.22,
+     "R": 470
+    },
+    {
+     "at": "end",
+     "lon": -110,
+     "lat": 36,
+     "R": 470
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -118.06,
+      34.22
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "MORE TELESCOPES,",
+     "text"
+    ],
+    [
+     "ONE SHARP IMAGE?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "PHYS.ORG \u00b7 NANOWERK \u00b7 MNRAS",
+    "HERIOT-WATT UNIVERSITY"
+   ]
+  }
+ ]
+}
