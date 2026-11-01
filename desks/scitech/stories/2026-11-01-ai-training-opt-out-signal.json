@@ -1,0 +1,101 @@
+{
+ "id": "2026-11-01-ai-training-opt-out-signal",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Four A.I. giants agreed on one switch to refuse A.I. training. Will it work?"},
+  {"id": "f1", "text": "On October thirtieth, OpenAI, Google, Microsoft and Anthropic said they will honor a new signal in robots dot text, the file websites use to give crawlers rules. A publisher adds one line, and participating companies should not train on those pages."},
+  {"id": "f2", "text": "The proposal is a draft at the Internet Engineering Task Force, written by Anthropic's Kevin Kelley. It is not an official standard. Anthropic says it has started. OpenAI plans to in the coming months. Microsoft says February first, twenty twenty-seven. Google's documentation says early twenty twenty-seven."},
+  {"id": "f3", "text": "The limits are clear. The signal covers training only, not how content is used afterwards. It is voluntary, with no penalty and no independent check. So the real test is whether companies keep their word."},
+  {"id": "cta", "text": "Will most A.I. companies honor it by next year? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE SWITCH", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "THE ROLLOUT", "seg": "f2", "color": "violet"},
+  {"n": "03", "name": "THE LIMITS", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "upload": {
+  "title": "4 A.I. Giants Back One Opt-Out for A.I. Training #shorts",
+  "description": "OpenAI, Google, Microsoft and Anthropic said on October 30 that they will honor a shared robots.txt signal that lets websites opt out of A.I. training. It is an IETF draft, not an official standard, rollout dates differ by company, and it is voluntary with no penalty or independent verification.\n\nSources: SiliconANGLE (Oct 30), Unite.AI, FourWeekMBA, Mashdigi, the IETF draft. Company timelines are company statements.\n\n#tech #AI #copyright #OpenAI",
+  "tags": ["technology", "news", "AI", "robots.txt", "OpenAI", "Google", "Microsoft", "Anthropic", "copyright", "IETF"],
+  "cover": "hook$ -0.2"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [-122.42, 37.77],
+  "number": "4 GIANTS",
+  "numberColor": "accent",
+  "lines": [["ONE LINE", "text"], ["BLOCKS A.I.?", "accent"]],
+  "source": "OCT 30 · PER THE COMPANIES · NOT A STANDARD"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {"at": 0, "lon": -140, "lat": 35, "R": 380},
+    {"at": 4.5, "lon": -122.3, "lat": 41, "R": 560}
+   ],
+   "chip": {"text": "OPT-OUT SIGNAL · OCT 30, 2026", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "USA", "color": "info", "at": "hook:giants", "alpha": 0.45}],
+   "markers": [
+    {"loc": [-122.42, 37.77], "color": "accent", "at": "hook:giants", "label": "OPENAI · ANTHROPIC", "sub": "SAN FRANCISCO", "dx": -130, "dy": -40},
+    {"loc": [-122.08, 37.39], "color": "info", "at": "hook:giants", "label": "GOOGLE", "sub": "MOUNTAIN VIEW", "dx": -40, "dy": 120},
+    {"loc": [-122.12, 47.67], "color": "violet", "at": "hook:giants", "label": "MICROSOFT", "sub": "REDMOND", "dx": 60, "dy": -210}
+   ],
+   "headline": {"at": "hook:agreed", "lines": [["ONE SWITCH", "text", 110], ["TO REFUSE A.I.", "accent", 100]]}
+  },
+  {
+   "type": "flow",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "HOW THE SIGNAL WORKS",
+   "color": "accent",
+   "steps": [
+    {"icon": "shield", "title": "SITE ADDS ONE LINE", "sub": "IN ITS ROBOTS.TXT FILE", "color": "accent", "at": "f1:publisher"},
+    {"icon": "eye", "title": "CRAWLERS READ IT", "sub": "OPENAI · GOOGLE · MICROSOFT · ANTHROPIC", "color": "info", "at": "f1:participating"},
+    {"icon": "x", "title": "NO TRAINING ON THOSE PAGES", "sub": "IF COMPANIES HONOR IT", "color": "violet", "at": "f1:train"}
+   ],
+   "source": "SOURCES: SILICONANGLE · UNITE.AI · FOURWEEKMBA"
+  },
+  {
+   "type": "timeline",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "WHO HONORS IT, AND WHEN",
+   "color": "violet",
+   "items": [
+    {"date": "NOW", "title": "ANTHROPIC HAS STARTED", "sub": "PER ANTHROPIC'S KEVIN KELLEY", "color": "ok", "at": "f2:Anthropic"},
+    {"date": "COMING MONTHS", "title": "OPENAI PLANS TO", "sub": "COMPANY STATEMENT", "color": "info", "at": "f2:OpenAI"},
+    {"date": "FEB 1, 2027", "title": "MICROSOFT", "sub": "PER MICROSOFT", "color": "accent", "big": true, "at": "f2:Microsoft"},
+    {"date": "EARLY 2027", "title": "GOOGLE", "sub": "PER GOOGLE DOCUMENTATION", "color": "violet", "at": "f2:Google's"}
+   ],
+   "source": "SOURCES: UNITE.AI · FOURWEEKMBA · MASHDIGI"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {"icon": "shield", "big": "TRAINING ONLY", "text": "NOT HOW CONTENT IS USED LATER", "color": "info", "at": "f3:training"},
+    {"icon": "flag", "big": "VOLUNTARY", "text": "IETF DRAFT · NOT AN OFFICIAL STANDARD", "color": "accent", "at": "f3:voluntary,"},
+    {"icon": "x", "big": "NO CHECK", "text": "NO PENALTY · NO INDEPENDENT VERIFICATION", "color": "danger", "at": "f3:independent"}
+   ],
+   "source": "SOURCES: SILICONANGLE · UNITE.AI · IETF DRAFT"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": -140, "lat": 35, "R": 800},
+    {"at": "cta +1", "lon": -122.3, "lat": 41, "R": 520},
+    {"at": "end", "lon": -110, "lat": 38, "R": 500}
+   ],
+   "markers": [{"loc": [-122.42, 37.77], "color": "accent"}, {"loc": [-122.12, 47.67], "color": "violet"}],
+   "lines": [["WILL THEY", "text"], ["KEEP THEIR WORD?", "accent"]],
+   "sources": ["SILICONANGLE · UNITE.AI · FOURWEEKMBA · MASHDIGI", "TIMELINES ARE COMPANY STATEMENTS"]
+  }
+ ]
+}
