@@ -1,0 +1,367 @@
+{
+ "id": "2026-11-02-ukraine-power-truce",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Hundreds of thousands lost power in Ukraine overnight. Is Trump's energy truce over?"
+  },
+  {
+   "id": "f1",
+   "text": "President Zelenskyy says Russia hit power infrastructure in four regions overnight, cutting electricity to hundreds of thousands of households. Ukraine's air force says it shot down 371 of 433 long-range drones Russia launched since Saturday evening."
+  },
+  {
+   "id": "f2",
+   "text": "Russia's Defense Ministry says it downed 235 Ukrainian drones overnight. Nizhny Novgorod's governor, Gleb Nikitin, says an industrial site was hit and more than 100 drones were destroyed. Zelenskyy says Ukraine struck a missile plant in Rostov."
+  },
+  {
+   "id": "f3",
+   "text": "Trump said on October eleventh that both sides agreed to an energy ceasefire. Russia has not confirmed that. On Friday, Moscow accused Kyiv of resuming refinery strikes despite a request from Trump to stop."
+  },
+  {
+   "id": "cta",
+   "text": "Will Russia and Ukraine stop energy strikes before winter? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "POWER CUTS",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "STRIKES BACK",
+   "seg": "f2",
+   "color": "oil"
+  },
+  {
+   "n": "03",
+   "name": "THE TRUCE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "upload": {
+  "title": "Ukraine Loses Power Again. Is the Energy Truce Dead? #shorts",
+  "description": "Ukrainian President Volodymyr Zelenskyy says Russia struck power infrastructure in four Ukrainian regions overnight on November 1, cutting electricity to hundreds of thousands of households. Ukraine's air force says it shot down 371 of 433 long-range drones launched by Russia since Saturday evening. Russia's Defense Ministry says it downed 235 Ukrainian drones over Russian regions overnight; Nizhny Novgorod Governor Gleb Nikitin says an industrial site was damaged in a large drone attack and more than 100 drones were destroyed, without naming the facility. Kyiv had not claimed that attack. Zelenskyy says Ukraine also hit a plant in Russia's Rostov region that makes missiles. President Donald Trump said on October 11 that Russia and Ukraine had agreed to an energy ceasefire; Russia has not confirmed an agreement. On Friday, Moscow accused Kyiv of resuming refinery strikes despite a request from Trump to stop. Most details come from the warring parties and could not be independently verified.\n\nSources:\nReuters-based report via Newcastle Herald, Nov 2, 2026: Russian strikes cut power to thousands in Ukraine\nRFE/RL, Nov 1, 2026: Moscow reports drone attack on Nizhny Novgorod as Russian strikes cut power in Ukraine\nNBC News, Nov 1, 2026: Russian strikes cut power to thousands in Ukraine, despite Trump's energy ceasefire push\nAl Arabiya, Nov 2, 2026: Russian strikes cut power to thousands in Ukraine as drones damage Russian facility\nEuronews, Oct 11, 2026: Energy ceasefire agreed between Russia and Ukraine, Trump says\n\n#geopolitics #Ukraine #Russia #EnergyCeasefire",
+  "tags": [
+   "geopolitics",
+   "Ukraine",
+   "Russia",
+   "energy ceasefire",
+   "power outage",
+   "Zelenskyy",
+   "Trump",
+   "Nizhny Novgorod",
+   "drones",
+   "world news"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:Russia",
+  "focus": "Kyiv",
+  "zoom": 1.5,
+  "number": "371",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "DRONES SHOT DOWN",
+    "text"
+   ],
+   [
+    "TRUCE OVER?",
+    "accent"
+   ]
+  ],
+  "source": "PER UKRAINE AIR FORCE · NOV 1, 2026"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 32,
+     "lat": 49,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": 33,
+     "lat": 49.5,
+     "R": 470
+    }
+   ],
+   "chip": {
+    "text": "UKRAINE · NOV 1, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "UKR",
+     "color": "info",
+     "at": "hook:Ukraine"
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "at": "hook:Trump's"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Kyiv",
+     "color": "oil",
+     "at": "hook:Ukraine",
+     "label": "UKRAINE",
+     "sub": "POWER CUT IN 4 REGIONS",
+     "dx": -120,
+     "dy": -80,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:lost",
+    "lines": [
+     [
+      "LIGHTS OUT",
+      "oil",
+      120
+     ],
+     [
+      "AGAIN?",
+      "text",
+      120
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:Is",
+    "icon": "bolt",
+    "iconColor": "accent",
+    "color": "accent",
+    "kicker": "ENERGY TRUCE",
+    "title": "STILL ALIVE?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    35,
+    50
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 33,
+     "lat": 49.5,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 31,
+     "lat": 49.5,
+     "dist": 30,
+     "pitch": 45,
+     "yaw": -4,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 40,
+     "lat": 50.5,
+     "dist": 38,
+     "pitch": 44,
+     "yaw": 3,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 35,
+     "lat": 50,
+     "dist": 55,
+     "pitch": 46,
+     "yaw": -3,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 35,
+     "lat": 50,
+     "dist": 50,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.5,
+     "fill": 0.12,
+     "at": "f1"
+    },
+    {
+     "kind": "tint",
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.35,
+     "fill": 0.06,
+     "at": "f2"
+    },
+    {
+     "kind": "marker",
+     "loc": "Ternopil",
+     "style": "pulse",
+     "color": "oil",
+     "at": "f1:power",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "TERNOPIL",
+      "sub": "POWER HIT · PER ZELENSKYY",
+      "dx": -60,
+      "dy": -90
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": "Nizhny Novgorod",
+     "style": "x",
+     "color": "oil",
+     "at": "f2:Nizhny",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "NIZHNY NOVGOROD",
+      "sub": "INDUSTRIAL SITE HIT · PER GOVERNOR",
+      "dx": -80,
+      "dy": -90
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": "Rostov-on-Don",
+     "style": "x",
+     "color": "danger",
+     "at": "f2:Zelenskyy",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "ROSTOV REGION",
+      "sub": "MISSILE PLANT · PER ZELENSKYY",
+      "dx": -40,
+      "dy": 90
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "371 OF 433",
+     "icon": "bolt",
+     "color": "danger",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f1:371",
+     "until": "f2 -0.2",
+     "note": "DRONES SHOT DOWN · PER UKRAINE AIR FORCE"
+    },
+    {
+     "kind": "stamp",
+     "text": "235 DRONES",
+     "icon": "plane",
+     "color": "oil",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f2",
+     "until": "f2:Nizhny",
+     "note": "DOWNED · PER RUSSIA'S MOD"
+    },
+    {
+     "kind": "stamp",
+     "text": "TRUCE UNCONFIRMED",
+     "icon": "flag",
+     "color": "accent",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f3:Russia",
+     "until": "cta -0.2",
+     "note": "ANNOUNCED BY TRUMP OCT 11"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 35,
+     "lat": 49,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 33,
+     "lat": 49.5,
+     "R": 500
+    },
+    {
+     "at": "end",
+     "lon": 34,
+     "lat": 49.5,
+     "R": 500
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.7
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.5
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Kyiv",
+     "color": "oil"
+    }
+   ],
+   "lines": [
+    [
+     "ENERGY STRIKES STOP",
+     "text"
+    ],
+    [
+     "BEFORE WINTER?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: REUTERS, RFE/RL, NBC NEWS, AL ARABIYA",
+    "NOV 1–2, 2026"
+   ]
+  }
+ ]
+}
