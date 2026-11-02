@@ -1,0 +1,100 @@
+{
+ "id": "2026-11-02-white-dwarf-double-rings",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "A dead star has two rings of gas around it. What carved them?"},
+  {"id": "f1", "text": "Astronomers used the Very Large Telescope in Chile to study a white dwarf, the dead core of a sun-like star, about sixteen hundred light years away. Its light revealed not one disc of gas, but two rings with a gap between them."},
+  {"id": "f2", "text": "The study, published in Nature Astronomy, says the rings differ in chemistry. Magnesium shows up only in the inner ring. The team's best explanation is two surviving rocky bodies that release gas where they meet dust. Nobody has seen them directly."},
+  {"id": "f3", "text": "There is a caveat. The authors also consider that the star may be two white dwarfs, too close to tell apart. Either way, they say it challenges models of how such discs form, and may hint at our own Solar System's future."},
+  {"id": "cta", "text": "Will astronomers find those hidden bodies by twenty thirty? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE DEAD STAR", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "THE FINDING", "seg": "f2", "color": "violet"},
+  {"n": "03", "name": "THE CAVEAT", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "upload": {
+  "title": "A Dead Star Is Ringed by Two Gas Rings. What Made Them? #shorts",
+  "description": "Astronomers report that the white dwarf WD J1328-1450, about 1,600 light years away, is surrounded by two separate rings of gas rather than one disc. A study in Nature Astronomy proposes two surviving rocky bodies sculpt the rings; they have not been detected, and an unresolved double white dwarf is an alternative.\n\nSources: Nature Astronomy paper (Gentile Fusillo et al.), ESO release eso2613, Phys.org, Universe Today, Nautilus.\n\n#science #astronomy #whitedwarf #ESO",
+  "tags": ["science", "news", "astronomy", "white dwarf", "ESO", "Very Large Telescope", "Nature Astronomy", "exoplanets", "Solar System"],
+  "cover": "hook$ -0.2"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [-70.4, -24.63],
+  "number": "2 RINGS",
+  "numberColor": "accent",
+  "lines": [["ONE DEAD STAR", "text"], ["WHO CARVED THEM?", "accent"]],
+  "source": "PER NATURE ASTRONOMY · ESO VLT"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {"at": 0, "lon": -95, "lat": -10, "R": 380},
+    {"at": 4.5, "lon": -70.4, "lat": -22, "R": 560}
+   ],
+   "chip": {"text": "NATURE ASTRONOMY · OCT 2026", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "CHL", "color": "info", "at": "hook:dead", "alpha": 0.45}],
+   "markers": [
+    {"loc": [-70.4, -24.63], "color": "accent", "at": "hook:dead", "label": "VERY LARGE TELESCOPE", "sub": "PARANAL, CHILE", "dx": 120, "dy": -60}
+   ],
+   "headline": {"at": "hook:two", "lines": [["TWO RINGS", "text", 120], ["AROUND A DEAD STAR", "accent", 90]]}
+  },
+  {
+   "type": "scale",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "WHAT WAS FOUND",
+   "sublabel": "WHITE DWARF WD J1328-1450",
+   "color": "accent",
+   "items": [
+    {"name": "WHITE DWARF", "value": 1, "display": "DEAD STAR CORE", "color": "text", "icon": "eye", "at": "f1:white"},
+    {"name": "INNER GAS RING", "value": 6, "display": "RING 1", "color": "violet", "at": "f1:not"},
+    {"name": "OUTER GAS RING", "value": 14, "display": "RING 2 · AFTER A GAP", "color": "info", "at": "f1:two"}
+   ],
+   "note": "ILLUSTRATIVE · NOT TO SCALE",
+   "source": "SOURCES: NATURE ASTRONOMY · ESO · PHYS.ORG"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "THE TEAM'S EXPLANATION",
+   "color": "violet",
+   "steps": [
+    {"icon": "eye", "title": "DIFFERENT CHEMISTRY", "sub": "MAGNESIUM ONLY IN INNER RING", "color": "accent", "at": "f2:differ"},
+    {"icon": "shield", "title": "TWO ROCKY BODIES", "sub": "SURVIVORS · NOT SEEN DIRECTLY", "color": "violet", "at": "f2:two"},
+    {"icon": "flame", "title": "GAS RELEASED", "sub": "WHERE THEY MEET DUST", "color": "info", "at": "f2:release"}
+   ],
+   "source": "SOURCES: NATURE ASTRONOMY · UNIVERSE TODAY"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {"icon": "x", "big": "NOT CONFIRMED", "text": "BODIES NOT DETECTED DIRECTLY", "color": "danger", "at": "f3:caveat."},
+    {"icon": "eye", "big": "OR TWO STARS", "text": "UNRESOLVED DOUBLE WHITE DWARF POSSIBLE", "color": "accent", "at": "f3:two"},
+    {"icon": "flag", "big": "NEW PUZZLE", "text": "CHALLENGES DISC-FORMATION MODELS", "color": "info", "at": "f3:challenges"}
+   ],
+   "source": "SOURCES: NATURE ASTRONOMY · PHYS.ORG"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": -95, "lat": -10, "R": 800},
+    {"at": "cta +1", "lon": -70.4, "lat": -22, "R": 520},
+    {"at": "end", "lon": -60, "lat": -20, "R": 500}
+   ],
+   "markers": [{"loc": [-70.4, -24.63], "color": "accent"}],
+   "lines": [["WILL WE SEE", "text"], ["THE HIDDEN BODIES?", "accent"]],
+   "sources": ["NATURE ASTRONOMY · ESO · PHYS.ORG · UNIVERSE TODAY", "EXPLANATION IS THE AUTHORS' PROPOSAL"]
+  }
+ ]
+}
