@@ -1,0 +1,511 @@
+{
+ "id": "2026-11-03-us-floods-florida-southwest",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Florida got a so-called thousand-year rain. The Southwest is flooding too. Why?"
+  },
+  {
+   "id": "f1",
+   "text": "In Melbourne, Florida, more than eleven inches fell in one day, a record, the National Weather Service says. Parts of southern Brevard County saw over twenty inches, forecasters reported. Officials counted more than two hundred high-water rescues, and Florida declared a state of emergency."
+  },
+  {
+   "id": "f2",
+   "text": "Out west, a storm dropped months of rain in days. Evacuations reached at least a dozen counties in Arizona, Colorado, Utah and New Mexico, the Associated Press reports. Arizona's governor declared a statewide emergency. One person died, and a man is missing in Flagstaff."
+  },
+  {
+   "id": "f3",
+   "text": "So why now? Climate scientist Daniel Swain says back-to-back events in a strong El Niño are no coincidence. A NOAA meteorologist says it can't yet be tied to El Niño."
+  },
+  {
+   "id": "cta",
+   "text": "Will more of the U.S. flood this month? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE FLORIDA RAIN",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "THE SOUTHWEST",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE REASON",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -95,
+     "lat": 33,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": -81,
+     "lat": 28.5,
+     "R": 700
+    }
+   ],
+   "chip": {
+    "text": "US FLOODS",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:so-called",
+    "lines": [
+     [
+      "1,000-YEAR RAIN",
+      "info",
+      110
+     ],
+     [
+      "WHY NOW?",
+      "text",
+      120
+     ]
+    ]
+   },
+   "highlights": [
+    {
+     "iso": "US-FL",
+     "color": "info",
+     "at": "hook:rain.",
+     "alpha": 0.35
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -80.608,
+      28.083
+     ],
+     "color": "accent",
+     "at": "hook:Florida",
+     "label": "MELBOURNE",
+     "sub": "",
+     "dx": -250,
+     "dy": -60,
+     "big": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -95,
+    34
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -81,
+     "lat": 28.5,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": -80.7,
+     "lat": 28.0,
+     "dist": 10,
+     "pitch": 45,
+     "yaw": 8,
+     "oy": 180
+    },
+    {
+     "at": "f2 -0.3",
+     "lon": -95,
+     "lat": 33,
+     "dist": 85,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 150
+    },
+    {
+     "at": "f2 +0.8",
+     "lon": -110.5,
+     "lat": 35.5,
+     "dist": 20,
+     "pitch": 40,
+     "yaw": -8,
+     "oy": 180
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": -96,
+     "lat": 33,
+     "dist": 80,
+     "pitch": 28,
+     "yaw": 0,
+     "oy": 160
+    },
+    {
+     "at": "cta -0.1",
+     "lon": -96,
+     "lat": 33,
+     "dist": 90,
+     "pitch": 25,
+     "yaw": 0,
+     "oy": 150
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "US-FL",
+     "color": "info",
+     "alpha": 0.14,
+     "at": "f1:Melbourne,"
+    },
+    {
+     "kind": "field",
+     "at": "f1:In",
+     "until": "f2",
+     "blobs": [
+      {
+       "loc": [
+        -80.608,
+        28.083
+       ],
+       "r": 0.6,
+       "v": 0.8
+      },
+      {
+       "loc": [
+        -80.57,
+        27.95
+       ],
+       "r": 0.6,
+       "v": 1.0
+      }
+     ],
+     "palette": "rain",
+     "alpha": 0.65,
+     "grow": 1.5,
+     "clip": "USA"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -80.608,
+      28.083
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Melbourne,",
+     "label": {
+      "text": "MELBOURNE",
+      "sub": "RECORD DAILY RAIN · NWS",
+      "dx": 60,
+      "dy": -90,
+      "until": "f1:Parts"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -80.57,
+      27.95
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f1:southern",
+     "label": {
+      "text": "20+ INCHES",
+      "sub": "SOUTHERN BREVARD",
+      "dx": -330,
+      "dy": 100,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "tint",
+     "iso": "US-AZ",
+     "color": "danger",
+     "alpha": 0.2,
+     "at": "f2:Evacuations",
+     "pulse": true
+    },
+    {
+     "kind": "tint",
+     "iso": "US-CO",
+     "color": "info",
+     "alpha": 0.14,
+     "at": "f2:Colorado,"
+    },
+    {
+     "kind": "tint",
+     "iso": "US-UT",
+     "color": "info",
+     "alpha": 0.14,
+     "at": "f2:Utah"
+    },
+    {
+     "kind": "tint",
+     "iso": "US-NM",
+     "color": "info",
+     "alpha": 0.14,
+     "at": "f2:New"
+    },
+    {
+     "kind": "field",
+     "at": "f2:storm",
+     "until": "cta",
+     "blobs": [
+      {
+       "loc": [
+        -111.6,
+        35.2
+       ],
+       "r": 2.2,
+       "v": 0.9
+      },
+      {
+       "loc": [
+        -107.5,
+        37.2
+       ],
+       "r": 2.0,
+       "v": 0.8
+      },
+      {
+       "loc": [
+        -108.2,
+        36.7
+       ],
+       "r": 1.6,
+       "v": 0.6
+      }
+     ],
+     "palette": "rain",
+     "alpha": 0.55,
+     "grow": 1.5,
+     "clip": "USA"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -111.65,
+      35.198
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f2:Flagstaff.",
+     "label": {
+      "text": "FLAGSTAFF",
+      "sub": "MAN MISSING · AP",
+      "dx": -230,
+      "dy": -90,
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "ILLUSTRATIVE RAIN AREAS · APPROXIMATE · NWS / AP",
+     "y": 1170,
+     "at": "f1 +1"
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f1:Officials",
+   "to": "f1$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "drop",
+     "big": "11+ INCHES IN A DAY",
+     "text": "MELBOURNE RECORD · NWS",
+     "color": "info",
+     "at": "f1:eleven"
+    },
+    {
+     "icon": "rain",
+     "big": "20+ INCHES",
+     "text": "SOUTHERN BREVARD · FORECASTERS",
+     "color": "accent",
+     "at": "f1:twenty"
+    },
+    {
+     "icon": "shield",
+     "big": "200+ RESCUES",
+     "text": "HIGH-WATER · STATE OF EMERGENCY",
+     "color": "danger",
+     "at": "f1:two"
+    }
+   ],
+   "source": "SOURCE: NWS, CFPUBLIC, YAHOO NEWS (FIGURES VARY BY REPORT)"
+  },
+  {
+   "type": "facts",
+   "from": "f2:Arizona's",
+   "to": "f2$ -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "flag",
+     "big": "STATEWIDE EMERGENCY",
+     "text": "ARIZONA GOVERNOR HOBBS",
+     "color": "accent",
+     "at": "f2:Arizona's"
+    },
+    {
+     "icon": "x",
+     "big": "1 DEAD · 1 MISSING",
+     "text": "FLAGSTAFF AREA · AS OF MONDAY",
+     "color": "danger",
+     "at": "f2:One"
+    }
+   ],
+   "source": "SOURCE: AP, CNN, COLORADO SUN"
+  },
+  {
+   "type": "facts",
+   "from": "f3:Climate",
+   "to": "f3$ -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "thermo",
+     "big": "SWAIN: NO COINCIDENCE",
+     "text": "BACK-TO-BACK EVENTS · STRONG EL NIÑO",
+     "color": "accent",
+     "at": "f3:Climate"
+    },
+    {
+     "icon": "eye",
+     "big": "NOAA: NOT YET LINKED",
+     "text": "CAN'T BE TIED TO EL NIÑO YET",
+     "color": "info",
+     "at": "f3:A"
+    }
+   ],
+   "source": "SOURCE: CNN / YAHOO NEWS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "FLORIDA AND THE SOUTHWEST UNDER WATER.",
+     "text"
+    ],
+    [
+     "MORE FLOODS THIS MONTH?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "NWS, AP, CNN, CFPUBLIC, YALE CLIMATE CONNECTIONS (SEARCH EXCERPTS)",
+    "NOV 3, 2026 · RAIN AREAS ILLUSTRATIVE · FIGURES VARY BY REPORT"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -85,
+     "lat": 30,
+     "R": 700
+    },
+    {
+     "at": "cta +1",
+     "lon": -95,
+     "lat": 33,
+     "R": 800
+    },
+    {
+     "at": "end",
+     "lon": -96,
+     "lat": 33,
+     "R": 800
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -80.608,
+      28.083
+     ],
+     "color": "accent"
+    },
+    {
+     "loc": [
+      -111.65,
+      35.198
+     ],
+     "color": "accent"
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "US-FL",
+     "color": "info",
+     "alpha": 0.4
+    },
+    {
+     "iso": "US-AZ",
+     "color": "danger",
+     "alpha": 0.4
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Florida and the Southwest Flood Within Days #shorts",
+  "description": "The National Weather Service says Melbourne, Florida, set a daily rainfall record of more than 11 inches, and Florida declared a state of emergency. In the Southwest, the Associated Press reports evacuations in at least a dozen counties and an Arizona statewide emergency. Scientists differ on whether El Niño is behind it.\n\nSources: National Weather Service, Associated Press, CNN, Central Florida Public Media, Yale Climate Connections (based on search-result excerpts). Figures vary between reports; rain areas on the map are illustrative.\n\n#climate #weather #flood #elnino #florida #arizona",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "flood",
+   "Florida",
+   "Arizona",
+   "El Niño",
+   "Brevard County"
+  ],
+  "cover": "f2 +1"
+ },
+ "thumbnail": {
+  "at": "f1:Parts",
+  "number": "11+ IN",
+  "numberColor": "info",
+  "source": "MELBOURNE, FL · DAILY RECORD · NWS · NOV 2",
+  "focus": [
+   -80.608,
+   28.083
+  ],
+  "lines": [
+   [
+    "TWO COASTS FLOODED",
+    "accent"
+   ]
+  ],
+  "zoom": 1.4
+ },
+ "gap": 0.9
+}
