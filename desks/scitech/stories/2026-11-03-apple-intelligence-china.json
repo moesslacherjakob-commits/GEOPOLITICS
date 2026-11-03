@@ -1,0 +1,99 @@
+{
+ "id": "2026-11-03-apple-intelligence-china",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Apple's A.I. is finally coming to China. But not the A.I. you may expect."},
+  {"id": "f1", "text": "Apple says the first test version of iOS twenty-seven point three arrives this week. It turns on some Apple Intelligence features for users in mainland China, the first time. Apple says the public release comes in December."},
+  {"id": "f2", "text": "Bloomberg reported that the first wave is basic tools, like photo editing, features Apple launched in the U.S. two years ago. Apple has said the new Siri and Image Playground will not be available in China. Reports say Alibaba's Qwen models will help power it."},
+  {"id": "f3", "text": "Chinese regulators must approve such services. Reports say Apple got initial clearance in July, and one report says network approval followed. Apple has not shared every detail, so dates can still slip. Until then, nothing is switched on for ordinary users."},
+  {"id": "cta", "text": "Will Apple's China launch really land in December? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE BETA", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "WHAT'S INSIDE", "seg": "f2", "color": "violet"},
+  {"n": "03", "name": "THE APPROVALS", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "upload": {
+  "title": "Apple Intelligence Finally Heads to China, With Limits #shorts",
+  "description": "Apple says the first iOS 27.3 beta, due this week, enables some Apple Intelligence features in China, with a public release planned for December. Per Apple and press reports, Siri A.I. and Image Playground are not included, and Alibaba's Qwen models are reported to be involved. Approval details come from press reports and may change.\n\nSources: MacRumors (Oct 30), Bloomberg reporting via MacRumors and iPhoneSoft (Oct 14-15), TechNode, Tech Jack Solutions. Company timelines are company statements.\n\n#tech #AI #Apple #China",
+  "tags": ["technology", "news", "AI", "Apple", "Apple Intelligence", "China", "iOS 27.3", "Alibaba", "Qwen"],
+  "cover": "hook$ -0.2"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [116.4, 39.9],
+  "number": "DECEMBER",
+  "numberColor": "accent",
+  "lines": [["APPLE A.I.", "text"], ["WITH LIMITS", "accent"]],
+  "source": "PER APPLE · REPORTS · NOT YET RELEASED"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {"at": 0, "lon": -150, "lat": 35, "R": 380},
+    {"at": 4.5, "lon": 110, "lat": 36, "R": 560}
+   ],
+   "chip": {"text": "APPLE INTELLIGENCE · CHINA", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "CHN", "color": "info", "at": "hook:China", "alpha": 0.45}],
+   "markers": [
+    {"loc": [-122.03, 37.32], "color": "accent", "at": "hook:Apple's", "label": "APPLE", "sub": "CUPERTINO", "dx": 60, "dy": -40},
+    {"loc": [116.4, 39.9], "color": "info", "at": "hook:China", "label": "BEIJING", "sub": "REGULATORS", "dx": -60, "dy": -130}
+   ],
+   "headline": {"at": "hook:finally", "lines": [["A.I. FOR CHINA", "text", 110], ["BUT LIMITED", "accent", 100]]}
+  },
+  {
+   "type": "timeline",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "FROM CLEARANCE TO LAUNCH",
+   "color": "accent",
+   "items": [
+    {"date": "JULY", "title": "INITIAL CLEARANCE", "sub": "PER PRESS REPORTS", "color": "info", "at": "f1:Apple"},
+    {"date": "THIS WEEK", "title": "FIRST iOS 27.3 BETA", "sub": "PER APPLE", "color": "accent", "big": true, "at": "f1:test"},
+    {"date": "DECEMBER", "title": "PUBLIC RELEASE", "sub": "PER APPLE", "color": "violet", "at": "f1:December."}
+   ],
+   "source": "SOURCES: MACRUMORS · IPHONESOFT · TECHNODE"
+  },
+  {
+   "type": "facts",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "color": "violet",
+   "items": [
+    {"icon": "check", "big": "BASIC TOOLS", "text": "LIKE PHOTO EDITING · PER BLOOMBERG", "color": "ok", "at": "f2:basic"},
+    {"icon": "x", "big": "NO NEW SIRI", "text": "NOR IMAGE PLAYGROUND · PER APPLE", "color": "danger", "at": "f2:Siri"},
+    {"icon": "chip", "big": "ALIBABA QWEN", "text": "REPORTED TO HELP POWER IT", "color": "info", "at": "f2:Alibaba's"}
+   ],
+   "source": "SOURCES: MACRUMORS · BLOOMBERG VIA IPHONESOFT · TECHJACK"
+  },
+  {
+   "type": "chain",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "THE APPROVAL PATH",
+   "color": "info",
+   "steps": [
+    {"icon": "shield", "title": "INITIAL CLEARANCE", "sub": "JULY · PER REPORTS", "color": "info", "at": "f3:initial"},
+    {"icon": "check", "title": "NETWORK APPROVAL", "sub": "ONE REPORT SAYS GRANTED", "color": "ok", "at": "f3:network"},
+    {"icon": "flag", "title": "DECEMBER RELEASE", "sub": "COULD STILL SLIP", "color": "accent", "at": "f3:slip."}
+   ],
+   "source": "SOURCES: TECHNODE · TECHJACK · MACRUMORS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": -150, "lat": 35, "R": 800},
+    {"at": "cta +1", "lon": 110, "lat": 36, "R": 520},
+    {"at": "end", "lon": 100, "lat": 34, "R": 500}
+   ],
+   "markers": [{"loc": [-122.03, 37.32], "color": "accent"}, {"loc": [116.4, 39.9], "color": "info"}],
+   "lines": [["DECEMBER", "text"], ["OR LATER?", "accent"]],
+   "sources": ["MACRUMORS · BLOOMBERG VIA IPHONESOFT · TECHNODE", "TIMELINES ARE COMPANY STATEMENTS"]
+  }
+ ]
+}
