@@ -1,0 +1,385 @@
+{
+ "id": "2026-11-04-abu-dhabi-talks",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Russia and Ukraine will sit down again next week. Can talks stop another winter of war?"
+  },
+  {
+   "id": "f1",
+   "text": "U.S. envoy Steve Witkoff says Washington will mediate talks between Russia and Ukraine in Abu Dhabi on November tenth and eleventh. He says they will cover security arrangements, easing the fighting, and humanitarian steps. Jared Kushner will co-lead the U.S. team."
+  },
+  {
+   "id": "f2",
+   "text": "On Tuesday, the Kremlin confirmed it will take part. Spokesman Dmitry Peskov named Vladimir Medinsky as Russia's chief negotiator. Reports say it is the first U.S.-mediated round since February, when the Iran war stalled the process."
+  },
+  {
+   "id": "f3",
+   "text": "Doubts remain. On Monday, Ukraine accused Russia of using a six-day local ceasefire around Oleshky to reinforce its positions. Russia has not commented in the reports so far. Neither side has announced concessions."
+  },
+  {
+   "id": "cta",
+   "text": "Will the Abu Dhabi talks lead to a ceasefire this year? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE TALKS",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "KREMLIN IN",
+   "seg": "f2",
+   "color": "oil"
+  },
+  {
+   "n": "03",
+   "name": "THE DOUBTS",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "danger"
+  }
+ ],
+ "upload": {
+  "title": "Russia and Ukraine Talk Again in Abu Dhabi. Will It Work? #shorts",
+  "description": "U.S. envoy Steve Witkoff announced on November 3 that the United States will mediate talks between Russia and Ukraine in Abu Dhabi on November 10 and 11. According to Witkoff, the agenda covers post-war security arrangements, de-escalation and humanitarian steps; Witkoff and Jared Kushner lead the U.S. delegation. Kremlin spokesman Dmitry Peskov confirmed on November 3 that Russia will take part, with Vladimir Medinsky as chief negotiator. Reports describe it as the first U.S.-mediated round since February, when the war with Iran stalled the process. Ukraine accused Russia on November 2 of using a six-day local ceasefire in the occupied Oleshky area of Kherson region to reinforce its positions; Russia's response was not found in the reports. No concessions from either side have been announced. Details could still change before the talks begin.\n\nSources:\nAxios, Nov 3, 2026: U.S., Russia and Ukraine to resume peace talks in Abu Dhabi next week, Witkoff says\nCNBC, Nov 3, 2026: Russia confirms new Ukraine peace talks as Melania Trump prepares to host ceasefire meeting\nThe Hill, Nov 3, 2026: Witkoff announces Abu Dhabi peace negotiations\nU.S. News / Reuters, Nov 3, 2026: Kremlin confirms trilateral Ukraine peace talks in Abu Dhabi next week\nThe Moscow Times, Nov 3, 2026: U.S.-mediated Ukraine peace talks to resume in Abu Dhabi next week\n\n#geopolitics #Ukraine #Russia #AbuDhabi",
+  "tags": [
+   "geopolitics",
+   "Ukraine",
+   "Russia",
+   "Abu Dhabi",
+   "peace talks",
+   "Witkoff",
+   "Kremlin",
+   "Medinsky",
+   "ceasefire",
+   "world news"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:Abu",
+  "focus": "Abu Dhabi",
+  "zoom": 1.4,
+  "number": "NOV 10",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "PEACE TALKS",
+    "text"
+   ],
+   [
+    "WILL IT WORK?",
+    "accent"
+   ]
+  ],
+  "source": "PER WITKOFF & KREMLIN \u00b7 NOV 3, 2026"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 40,
+     "lat": 40,
+     "R": 330
+    },
+    {
+     "at": 3.4,
+     "lon": 45,
+     "lat": 37,
+     "R": 380
+    }
+   ],
+   "chip": {
+    "text": "UKRAINE \u00b7 RUSSIA \u00b7 NOV 3, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "UKR",
+     "color": "info",
+     "at": "hook:Russia"
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "at": "hook:Russia"
+    },
+    {
+     "iso": "ARE",
+     "color": "accent",
+     "at": "hook:next"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Abu Dhabi",
+     "color": "accent",
+     "at": "hook:sit",
+     "label": "ABU DHABI",
+     "sub": "TALKS NOV 10\u201311",
+     "dx": -120,
+     "dy": -80,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:again",
+    "lines": [
+     [
+      "TALKS",
+      "accent",
+      120
+     ],
+     [
+      "AGAIN?",
+      "text",
+      120
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:Can",
+    "icon": "flag",
+    "iconColor": "accent",
+    "color": "accent",
+    "kicker": "NOV 10\u201311",
+    "title": "ABU DHABI",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    40,
+    40
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 45,
+     "lat": 37,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 54,
+     "lat": 24.4,
+     "dist": 14,
+     "pitch": 45,
+     "yaw": -4,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 37,
+     "lat": 50,
+     "dist": 60,
+     "pitch": 46,
+     "yaw": 3,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 34,
+     "lat": 46.7,
+     "dist": 16,
+     "pitch": 45,
+     "yaw": -3,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 42,
+     "lat": 42,
+     "dist": 85,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "ARE",
+     "color": "accent",
+     "alpha": 0.5,
+     "fill": 0.15,
+     "at": "f1"
+    },
+    {
+     "kind": "marker",
+     "loc": "Abu Dhabi",
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1:Abu",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "ABU DHABI",
+      "sub": "NOV 10\u201311 \u00b7 PER WITKOFF",
+      "dx": -60,
+      "dy": -90
+     }
+    },
+    {
+     "kind": "tint",
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.5,
+     "fill": 0.12,
+     "at": "f2"
+    },
+    {
+     "kind": "tint",
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.35,
+     "fill": 0.06,
+     "at": "f2"
+    },
+    {
+     "kind": "marker",
+     "loc": "Moscow",
+     "style": "dot",
+     "color": "danger",
+     "at": "f2:Kremlin",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "KREMLIN",
+      "sub": "CONFIRMS \u00b7 PER PESKOV",
+      "dx": -60,
+      "dy": -90
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "NOV 10\u201311",
+     "icon": "flag",
+     "color": "accent",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f1:November",
+     "until": "f2 -0.2",
+     "note": "ABU DHABI TALKS \u00b7 PER WITKOFF"
+    },
+    {
+     "kind": "stamp",
+     "text": "FIRST SINCE FEB",
+     "icon": "check",
+     "color": "oil",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f2:Reports",
+     "until": "f3 -0.2",
+     "note": "U.S.-MEDIATED ROUND \u00b7 PER REPORTS"
+    },
+    {
+     "kind": "marker",
+     "loc": "Oleshky",
+     "style": "x",
+     "color": "danger",
+     "at": "f3:Oleshky",
+     "until": "cta -0.2",
+     "label": {
+      "text": "OLESHKY",
+      "sub": "CEASEFIRE ROW \u00b7 PER UKRAINE",
+      "dx": -80,
+      "dy": -90
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "NO CONCESSIONS",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f3:Neither",
+     "until": "cta -0.2",
+     "note": "NONE ANNOUNCED SO FAR"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 40,
+     "lat": 42,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 38,
+     "lat": 46,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": 38,
+     "lat": 46,
+     "R": 520
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.7
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.5
+    },
+    {
+     "iso": "ARE",
+     "color": "accent",
+     "alpha": 0.7
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Abu Dhabi",
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "CEASEFIRE",
+     "text"
+    ],
+    [
+     "THIS YEAR?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: AXIOS, CNBC, THE HILL, REUTERS, MOSCOW TIMES",
+    "NOV 3, 2026"
+   ]
+  }
+ ]
+}
