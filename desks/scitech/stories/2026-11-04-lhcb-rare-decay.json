@@ -1,0 +1,99 @@
+{
+ "id": "2026-11-04-lhcb-rare-decay",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "One in ten billion. Physicists may have caught the rarest particle decay yet."},
+  {"id": "f1", "text": "At CERN near Geneva, the LHCb experiment studies particles called beauty mesons, made by the Large Hadron Collider. They break apart in many ways. CERN says one route, into two muons, happens in only about one in ten billion decays."},
+  {"id": "f2", "text": "At a CERN seminar, the team reported evidence for this decay at about three sigma. That is promising, but short of the five sigma physicists demand to call it a discovery. If confirmed, it would be the rarest decay of a beauty particle ever seen. The result is not yet peer-reviewed."},
+  {"id": "f3", "text": "The Standard Model predicts how often this should happen. A different rate could hint at unknown particles. But a similar hint from twenty fifteen was not confirmed by later data, so physicists are cautious."},
+  {"id": "cta", "text": "Will more data turn this into a discovery? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE DETECTOR", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "THE EVIDENCE", "seg": "f2", "color": "violet"},
+  {"n": "03", "name": "WHY IT MATTERS", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "upload": {
+  "title": "CERN Sees Hints of a One-in-Ten-Billion Decay #shorts",
+  "description": "The LHCb experiment at CERN reports evidence, at about three sigma, for a beauty-meson decay into two muons that happens in roughly one of ten billion decays. It is short of the five sigma needed for a discovery and not yet peer-reviewed; a similar hint in 2015 was not confirmed by later data.\n\nSources: CERN, UKRI / University of Cambridge release, Anadolu Agency, The European.\n\n#science #physics #CERN #LHCb",
+  "tags": ["science", "news", "physics", "CERN", "LHCb", "particle physics", "Standard Model", "Large Hadron Collider"],
+  "cover": "hook$ -0.2"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": "Geneva",
+  "number": "1 IN 10 BILLION",
+  "numberColor": "accent",
+  "lines": [["RAREST DECAY?", "text"], ["NOT YET PROVEN", "accent"]],
+  "source": "PER CERN · LHCB · ~3 SIGMA"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {"at": 0, "lon": -20, "lat": 30, "R": 380},
+    {"at": 4.5, "lon": 6.1, "lat": 46.2, "R": 600}
+   ],
+   "chip": {"text": "CERN · LHCB · NOV 2026", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "CHE", "color": "info", "at": "hook:Physicists", "alpha": 0.45}],
+   "markers": [
+    {"loc": "Geneva", "color": "accent", "at": "hook:Physicists", "label": "CERN · LHCb", "sub": "NEAR GENEVA", "dx": 120, "dy": -60}
+   ],
+   "headline": {"at": "hook:billion.", "lines": [["1 IN 10 BILLION", "text", 110], ["RAREST DECAY?", "accent", 100]]}
+  },
+  {
+   "type": "flow",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "THE DECAY IN QUESTION",
+   "color": "accent",
+   "steps": [
+    {"icon": "eye", "title": "BEAUTY MESON", "sub": "PARTICLE STUDIED AT LHCb", "color": "accent", "at": "f1:beauty"},
+    {"icon": "bolt", "title": "BREAKS APART", "sub": "MANY POSSIBLE ROUTES", "color": "violet", "at": "f1:break"},
+    {"icon": "check", "title": "TWO MUONS", "sub": "ABOUT 1 IN 10 BILLION · PER CERN", "color": "info", "at": "f1:route,"}
+   ],
+   "source": "SOURCES: CERN · UKRI"
+  },
+  {
+   "type": "gauge",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "SIGMA LEVEL · STATISTICAL SIGNIFICANCE",
+   "value": 3,
+   "max": 5,
+   "suffix": "",
+   "icon": "eye",
+   "at": "f2:evidence",
+   "doneAt": "f2:three",
+   "note": "5 SIGMA NEEDED FOR A DISCOVERY · NOT YET PEER-REVIEWED",
+   "source": "SOURCES: CERN · UKRI · LHCb SEMINAR"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {"icon": "check", "big": "STANDARD MODEL", "text": "PREDICTS HOW OFTEN IT HAPPENS", "color": "accent", "at": "f3:Standard"},
+    {"icon": "eye", "big": "A DIFFERENT RATE", "text": "COULD HINT AT UNKNOWN PARTICLES", "color": "violet", "at": "f3:different"},
+    {"icon": "x", "big": "2015 HINT FADED", "text": "NOT CONFIRMED BY LATER DATA", "color": "danger", "at": "f3:twenty"}
+   ],
+   "source": "SOURCES: CERN · UKRI"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": -20, "lat": 30, "R": 800},
+    {"at": "cta +1", "lon": 6.1, "lat": 46.2, "R": 520},
+    {"at": "end", "lon": 10, "lat": 40, "R": 500}
+   ],
+   "markers": [{"loc": "Geneva", "color": "accent"}],
+   "lines": [["DISCOVERY", "text"], ["OR STATISTICAL FLUKE?", "accent"]],
+   "sources": ["CERN · UKRI · ANADOLU · THE EUROPEAN", "EVIDENCE, NOT A DISCOVERY · NOT YET PEER-REVIEWED"]
+  }
+ ]
+}
