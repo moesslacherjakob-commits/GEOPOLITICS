@@ -9,41 +9,41 @@
   },
   {
    "id": "promise",
-   "text": "How much of Ukraine's electricity is already gone? Why is the grid a main target for both sides? And why has every energy truce so far fallen apart? One question from next week's Abu Dhabi talks stays open until the end."
+   "text": "How much of Ukraine's electricity is already gone? Why is energy infrastructure a target for both sides? Why have energy pauses not held so far? And how would a new one be checked?"
   },
   {
    "id": "ch1",
-   "text": "Start with one number. Ukraine's electricity demand peaks at about twelve gigawatts, according to the International Energy Agency. Before the war, the country could cover that with room to spare. Then the invasion came. The agency says that over 2022 and 2023, about half of Ukraine's power generation capacity was occupied by Russian forces, destroyed or damaged. The occupation of the Zaporizhzhia nuclear plant alone removed six gigawatts from the grid. About half of the large substations, the hubs that move electricity around the country, were damaged as well. Ukrainian authorities, cited by the Congressional Research Service, put the fall in available generation at fifty-one percent between early 2022 and April 2023. Many coal, gas and hydro plants have been hit since, and reports describe nuclear plants as now vital to the country's electricity. Imports from Europe, which Ukraine can use since it joined the European grid in March 2022, help to fill gaps. They cannot replace lost plants. For a family, that is the difference between a normal evening and one without light, heat or a working lift. If you want one of these explainers every Wednesday, subscribing is how you get it.",
+   "text": "Start with one number. Ukraine's electricity demand peaks at about twelve gigawatts, according to the International Energy Agency. Then the invasion came. Ukraine's grid is run by a state company, Ukrenergo. Its job is to balance supply and demand every second. When plants or lines are lost, it cuts demand with scheduled outages, region by region. The agency says that over 2022 and 2023, about half of Ukraine's power generation capacity was occupied by Russian forces, destroyed or damaged. The occupation of the Zaporizhzhia nuclear plant alone removed six gigawatts from the grid. About half of the large substations, the hubs that move electricity around the country, were damaged as well. Ukrainian authorities, cited by the Congressional Research Service, put the fall in available generation at fifty-one percent between early 2022 and April 2023. If you want one of these explainers every Wednesday, subscribing is how you get it.",
    "pauseBefore": 0.4
   },
   {
    "id": "ch2",
-   "text": "How fast can a grid be broken? Nine gigawatts, says the I.E.A. That is how much more generation Ukraine lost in just three months of strikes, between March and May 2024. It left Ukraine with about a third of its pre-war capacity. Ukraine's grid operator, Ukrenergo, gave a slightly lower estimate: more than eight gigawatts, about forty percent. By that summer, supply fell about two point three gigawatts short of peak demand, and Ukrenergo covered the gap with rolling blackouts. In 2025, Foreign Policy reported that Russian forces had destroyed or occupied about two thirds of Ukraine's pre-war generating capacity. Ukraine has since restored about three gigawatts. Every gigawatt rebuilt is a target again. And a repair crew works against the clock: a plant that took years to build can be disabled by one volley, and a replacement part can take months to arrive. That is why the winter months matter most. Heating demand rises, daylight falls, and every outage lasts longer in the cold.",
+   "text": "How fast can a grid be broken? The first large wave of strikes on the grid began in October 2022. Rolling blackouts followed, and the damage kept growing. Then came the spring of 2024. Nine gigawatts, says the I.E.A. That is how much more generation Ukraine lost in the spring of 2024. It left Ukraine with about a third of its pre-war capacity. Ukraine's grid operator, Ukrenergo, gave its own figure in May 2024: more than eight gigawatts destroyed. By that summer, supply fell about two point three gigawatts short of peak demand, and Ukrenergo covered the gap with rolling blackouts. In November 2025, Foreign Policy Analytics put the share destroyed or occupied at about two thirds of pre-war capacity, and said about three gigawatts had been restored.",
    "pauseBefore": 0.4
   },
   {
    "id": "ch3",
-   "text": "So why does Russia keep hitting the grid? Moscow's position is that it strikes energy facilities that support Ukraine's army and military industry. Ukraine and many Western analysts point to the effect instead: darkness, cold and broken water pumps for millions of civilians, just as winter starts. What is clear is that the pattern has changed. The business outlet bne IntelliNews reports that Russia increasingly targets substations and transmission links, not only power plants. A substation can be repaired faster than a plant, but a hit on the right one switches off a whole region, even if the plants behind it are intact. Water pumps and heating systems in apartment blocks depend on that power. This week showed it. Quick question: how many times did Russia hit Ukrainian energy facilities in a single day? Take a guess. More than twenty times in twenty-four hours, says Ukrenergo. Emergency outages began in Kyiv and several regions, some lasting more than twelve hours. Kyiv's water utility said its main facilities lost power, and the mayor, Vitali Klitschko, said warming centers were opened in the worst-hit districts. And Energy Minister Denys Shmyhal said three drones were aimed at a substation that is critical for the Khmelnytskyi nuclear plant.",
+   "text": "So why does Russia keep hitting the grid? Moscow's position is that it strikes energy facilities that support Ukraine's army and military industry. Ukraine says the effect falls on civilians: power, heat and water cut as winter starts. The business outlet bne IntelliNews reports that Russia increasingly targets substations, not only power plants. Substations can cut power over a wide area. Ukrenergo called Tuesday's attack unprecedented in the number of weapons used, according to the Ukrainian outlet Glavnoe. The energy company DTEK said three of its thermal power plants were knocked completely offline. Large power plants in the Dnipropetrovsk, Vinnytsia and Kharkiv regions were hit. This week showed it. Quick question: how many times did Russia hit Ukrainian energy facilities in a single day? Take a guess. More than twenty times in twenty-four hours, says Ukrenergo. Emergency outages began in Kyiv and several regions, some lasting more than twelve hours. Kyiv's water utility said its main facilities lost power, and the mayor, Vitali Klitschko, said warming centers were opened. And Energy Minister Denys Shmyhal said three drones were aimed at a substation that is critical for the Khmelnytskyi nuclear plant.",
    "pauseBefore": 0.4
   },
   {
    "id": "ch4",
-   "text": "Now the other side of the same war. Energy is a target in Russia too. Ukraine's president, Volodymyr Zelensky, said Ukrainian forces struck fifteen Russian oil refineries between January and May this year. Ukraine's general staff claims that by early July, more than forty percent of Russia's refining capacity was out of action. That is a Ukrainian claim, and it has not been independently verified. Other estimates are lower. One Ukrainian outlet cites about thirty percent of actual capacity. What is documented is the reaction. Russia banned gasoline exports, and Bloomberg reported that Russian crude exports reached their highest level since the war began, because less oil was being refined at home. Reuters reported in May that drone strikes forced central Russian refineries to halt or cut output. A ban on gasoline exports, announced by Deputy Prime Minister Alexander Novak, began on April first. On Friday, Moscow accused Kyiv of resuming refinery strikes despite a request from Donald Trump to stop. Ukraine's argument is that refineries feed the army. Russia's argument is that Kyiv is the one breaking the truce. For drivers in Russia, that means shortages. For the rest of us, it means a war that now reaches fuel markets.",
+   "text": "Now the other side of the same war. Energy is a target in Russia too. Ukraine's president, Volodymyr Zelensky, said Ukrainian forces struck fifteen Russian oil refineries between January and May this year. Ukraine's general staff claims that by early July, about forty-three percent of Russia's refining capacity was projected to be disabled. That is a Ukrainian claim, and we found no independent confirmation. The Ukrainian outlet Liga puts the actual figure at more than thirty percent. Ukrainian analyst Mykhailo Honchar goes further and says half of Russia's primary refining capacity is offline, a claim we could not verify. Several effects have been reported. Russia has banned gasoline exports from April first, announced by Deputy Prime Minister Alexander Novak. Reuters reported in May that drone strikes forced central Russian refineries to halt or cut output. The oil market noticed. Al Jazeera reported on October eleventh that mutual attacks on energy infrastructure had put pressure on global energy prices. And Bloomberg reported that Russian crude exports reached their highest level since the war began, because less oil was being refined at home.",
    "pauseBefore": 0.4
   },
   {
    "id": "ch5",
-   "text": "If both sides keep losing energy, why not stop? They tried. On March eighteenth, 2025, after a phone call between Donald Trump and Vladimir Putin, the Kremlin announced a thirty-day halt on strikes against energy targets. Moscow said it began that day. Kyiv said it began a week later. Within days, each side accused the other of breaking it. On March twenty-eighth, Kremlin spokesman Dmitry Peskov said Russia reserved the right to stop complying if Kyiv did. On April eighteenth, the Kremlin said the pause had expired. Then, on October eleventh this year, Trump announced that Russia and Ukraine had agreed to an energy ceasefire. A source close to Zelensky called the announcement a surprise. Russia has not confirmed an agreement. Days later, Zelensky said Russia hit power infrastructure in four Ukrainian regions in one night, and Russia's Defense Ministry said it downed two hundred and thirty-five Ukrainian drones, while the governor of Nizhny Novgorod reported an industrial site hit. Each side says the other started it. And the Financial Times reported in September that Putin does not want a deal to halt energy strikes before winter. The Kremlin even published a list of facilities covered by that first pause, and it included oil refineries and nuclear power plants. That is the reporter's account, and the Kremlin has not commented on it in the sources we found.",
+   "text": "If both sides keep losing energy, why not stop? They tried. On March eighteenth, 2025, after a phone call between Donald Trump and Vladimir Putin, the Kremlin announced a thirty-day halt on strikes against energy targets. Meduza reported that the Kremlin's list of covered facilities included oil refineries and nuclear power plants. Moscow said it began that day. Kyiv said it began a week later. Reports at the time describe accusations of violations from both sides. In a letter to the United Nations, Russia described Ukrainian strikes as violations and said it was strictly adhering to the moratorium. In April, the Kremlin accused Kyiv of effectively disregarding it. On March twenty-eighth, Kremlin spokesman Dmitry Peskov said Moscow reserved the right not to comply. On April eighteenth, the Kremlin said the pause had expired. Trump had already announced an energy ceasefire in mid-September. Then, on October eleventh, Trump announced that Russia and Ukraine had agreed to an energy ceasefire. A source close to Zelensky called the announcement a surprise. In the reports we reviewed, Moscow has not confirmed an agreement. On November first and second, Zelensky said Russia hit power infrastructure in four Ukrainian regions overnight, and Russia's Defense Ministry said it downed two hundred and thirty-five Ukrainian drones, while the governor of Nizhny Novgorod reported an industrial site hit. And the Financial Times reported in September that Putin does not want a deal to halt energy strikes before winter. That is the Financial Times account, as reported by Meduza.",
    "pauseBefore": 0.4
   },
   {
    "id": "outlook",
-   "text": "What happens next could start on November tenth. U.S. envoy Steve Witkoff says Russia, Ukraine and the United States will meet in Abu Dhabi on November tenth and eleventh. The Kremlin has confirmed it will take part. Witkoff says the agenda covers security arrangements, easing the fighting and humanitarian steps, and one report adds a possible energy and maritime ceasefire. Here are the scenarios that sources describe. First, a limited energy deal: lights stay on in Ukrainian cities through the coldest months, and refineries stop burning in Russia. Second, a wider package. Witkoff's agenda includes de-escalation, and the Moscow Times notes that Putin's only apparent concession so far is agreeing to resume talks. Third, no deal. The New York Times reported on October sixteenth that Russia is planning winter strikes to cut electricity, heat and water in Kyiv, Kharkiv and Odesa. That is a reported plan, not a confirmed event. So what is the open question? Who checks that the strikes have really stopped? In 2025, both sides said they kept the deal and the other side broke it. Will Russia and Ukraine agree to stop energy strikes before January? Tell us in the comments: yes or no.",
+   "text": "Talks are scheduled for November tenth and eleventh. U.S. envoy Steve Witkoff says Russia, Ukraine and the United States are scheduled to meet in Abu Dhabi. The Kremlin has confirmed it will take part, with Vladimir Medinsky as its chief negotiator. Steve Witkoff and Jared Kushner are to lead the American side. Reports describe it as the first U.S.-mediated round since February, when the war with Iran stalled the process. Witkoff says the agenda covers security arrangements, easing the fighting and humanitarian steps, and one report adds a possible energy and maritime ceasefire. Here is what has been reported so far. The Moscow Times notes that Putin's only apparent concession is agreeing to resume talks. And the New York Times reported on October sixteenth that Russia is planning winter strikes to cut electricity, heat and water in Kyiv, Kharkiv and Odesa. That is a reported plan, not a confirmed event. The open question: how would an energy pause be checked? The March 2025 pause ended with accusations from both sides. Will Russia and Ukraine agree to stop energy strikes before January? Tell us below: yes or no.",
    "pauseBefore": 0.4
   },
   {
    "id": "next",
-   "text": "Next, we follow the money behind Russia's war: how sanctions on oil actually work, what the price cap does, and who pays for the shadow fleet. Watch that one next.",
+   "text": "Next: how sanctions on Russian oil work, what the price cap does, and what the shadow fleet is. Watch that one next.",
    "pauseBefore": 0.4
   }
  ],
@@ -78,8 +78,8 @@
   },
   {
    "n": "05",
-   "name": "THE FAILED TRUCES",
-   "chapter": "Why every energy truce has failed",
+   "name": "THE TRUCES",
+   "chapter": "How the energy truces fell apart",
    "seg": "ch5",
    "color": "violet"
   },
@@ -100,7 +100,7 @@
  ],
  "upload": {
   "title": "Why Russia Keeps Hitting Ukraine's Power Grid",
-  "description": "Why do power plants keep becoming targets in the war in Ukraine? This explainer shows how much of Ukraine's electricity generation has been lost, why Russia strikes substations and power plants, how Ukraine's strikes on Russian refineries fit in, why the 2025 energy-strike pause and the October 2026 energy ceasefire announcement did not hold, and what sources say could come out of the Abu Dhabi talks on November 10 and 11. Claims are attributed to their sources; disputed or unverified claims are labelled.\n\nSources:\nInternational Energy Agency (IEA): Ukraine's Energy Security and the Coming Winter – Ukraine's energy system under attack\nIEA: Energy System Resilience – Lessons learned from Ukraine\nCongressional Research Service: Attacks on Ukraine's Electric Grid – Insights (R48067)\nForeign Policy Analytics: Investing in Energy Security – Ukraine (November 2025)\nKyiv Independent: Kyiv faces emergency power cuts, widespread water outages after Russia's largest attack on energy infrastructure this year (Nov 3, 2026)\nKyiv Post: Russia targets Ukraine's energy facilities more than 20 times in 24 hours, Ukrenergo says; Russian attack leaves Kyiv without water (Nov 3, 2026)\nEuromaidan Press: One of largest Russian attacks yet on Ukraine's energy system (Nov 4, 2026)\nbne IntelliNews: Ukraine's blackouts go round the clock as Russia increasingly targets substations\nMoscow Times / Reuters: Drone strikes force central Russian refineries to halt or cut output (May 20, 2026)\nMoscow Times / Bloomberg: Ukraine's refinery strikes push Russian crude exports to wartime high (June 2, 2026)\nUkrinform: Ukrainian forces have already struck 15 Russian oil refineries this year – Zelensky\nLiga.net: Russian refining capacity disabled by Ukrainian strikes\nMeduza: Kremlin publishes list of energy infrastructure covered under partial ceasefire (Mar 25, 2025); Russia says it will no longer observe moratorium (Apr 18, 2025)\nMoscow Times: Russia agrees to halt attacks on energy infrastructure (Mar 18, 2025)\nCNN: Trump claims Ukraine and Russia have agreed to energy ceasefire (Oct 11, 2026)\nAl Jazeera: Trump says Ukraine, Russia agree to energy ceasefire (Oct 11, 2026)\nMeduza: Financial Times reports Moscow has not agreed to any energy deal (Sep 14, 2026)\nAxios / CNBC / Moscow Times: U.S.-mediated Ukraine peace talks to resume in Abu Dhabi (Nov 3, 2026)\n\n#geopolitics #Ukraine #energy #explained",
+  "description": "Why do power plants keep becoming targets in the war in Ukraine? This explainer shows how much of Ukraine's electricity generation has been lost, why Russia strikes substations and power plants, how Ukraine's strikes on Russian refineries fit in, how the 2025 energy-strike pause ended and why the October 2026 energy ceasefire announcement has not been confirmed by Russia, and what sources say could come out of the Abu Dhabi talks on November 10 and 11. Claims are attributed to their sources; disputed or unverified claims are labelled.\n\nSources:\nInternational Energy Agency (IEA): Ukraine's Energy Security and the Coming Winter – Ukraine's energy system under attack\nIEA: Energy System Resilience – Lessons learned from Ukraine\nCongressional Research Service: Attacks on Ukraine's Electric Grid – Insights (R48067)\nForeign Policy Analytics: Investing in Energy Security – Ukraine (November 2025)\nKyiv Independent: Kyiv faces emergency power cuts, widespread water outages after Russia's largest attack on energy infrastructure this year (Nov 3, 2026)\nKyiv Post: Russia targets Ukraine's energy facilities more than 20 times in 24 hours, Ukrenergo says; Russian attack leaves Kyiv without water (Nov 3, 2026)\nEuromaidan Press: One of largest Russian attacks yet on Ukraine's energy system (Nov 4, 2026)\nbne IntelliNews: Ukraine's blackouts go round the clock as Russia increasingly targets substations\nMoscow Times / Reuters: Drone strikes force central Russian refineries to halt or cut output (May 20, 2026)\nMoscow Times / Bloomberg: Ukraine's refinery strikes push Russian crude exports to wartime high (June 2, 2026)\nUkrinform: Ukrainian forces have already struck 15 Russian oil refineries this year – Zelensky\nLiga.net: Russian refining capacity disabled by Ukrainian strikes\nMeduza: Kremlin publishes list of energy infrastructure covered under partial ceasefire (Mar 25, 2025); Russia says it will no longer observe moratorium (Apr 18, 2025)\nMoscow Times: Russia agrees to halt attacks on energy infrastructure (Mar 18, 2025)\nCNN: Trump claims Ukraine and Russia have agreed to energy ceasefire (Oct 11, 2026)\nAl Jazeera: Trump says Ukraine, Russia agree to energy ceasefire (Oct 11, 2026)\nMeduza: Financial Times reports Moscow has not agreed to any energy deal (Sep 14, 2026)\nNew York Times (via Meduza): Russia plans winter strikes on electricity, heat and water (Oct 16, 2026)\nReuters / RFE/RL / NBC News / Al Arabiya: Russian strikes on Ukrainian power infrastructure and Ukrainian drones over Russia (Nov 1–2, 2026)\nGlavnoe / Kyiv Post: Ukrenergo and DTEK statements on the Nov 3, 2026 attack\nEuromaidan Press: Ukrainian analyst on Russian refining (Jun 30, 2026)\nAxios / CNBC / Moscow Times: U.S.-mediated Ukraine peace talks to resume in Abu Dhabi (Nov 3, 2026)\n\n#geopolitics #Ukraine #energy #explained",
   "tags": [
    "geopolitics",
    "Ukraine",
@@ -116,11 +116,11 @@
    "winter"
   ],
   "introChapter": "Intro: Kyiv's taps run dry – why the grid is a target",
-  "firstComment": "Will Russia and Ukraine agree to stop energy strikes before January? Tell us in the comments: YES or NO.",
+  "firstComment": "Will Russia and Ukraine agree to stop energy strikes before January? Tell us below: YES or NO.",
   "youtubeCategory": "EDUCATION"
  },
  "thumbnail": {
-  "at": "ch2:Nine",
+  "at": "ch1:half",
   "focus": "Kyiv",
   "zoom": 1.3,
   "number": "50%",
@@ -131,11 +131,11 @@
     "text"
    ],
    [
-    "WHY A TARGET?",
+    "BEFORE WINTER",
     "accent"
    ]
   ],
-  "source": "UKRAINE'S GENERATION LOST 2022–23 · IEA"
+  "source": "OCCUPIED, DESTROYED OR DAMAGED 2022–23 · IEA"
  },
  "scenes": [
   {
@@ -190,9 +190,9 @@
       120
      ],
      [
-      "IN KYIV",
+      "IN PARTS OF KYIV",
       "text",
-      120
+      90
      ]
     ]
    }
@@ -236,7 +236,7 @@
      "oy": 40
     },
     {
-     "at": "promise:the",
+     "at": "promise:infrastructure",
      "lon": 31.5,
      "lat": 49.2,
      "dist": 34.3,
@@ -246,22 +246,12 @@
      "_fill": true
     },
     {
-     "at": "promise:energy",
+     "at": "promise:not",
      "lon": 31.5,
      "lat": 49.2,
      "dist": 24.5,
      "pitch": 52,
      "yaw": 14,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "promise:week's",
-     "lon": 31.5,
-     "lat": 49.2,
-     "dist": 34.3,
-     "pitch": 36,
-     "yaw": -6,
      "oy": 40,
      "_fill": true
     },
@@ -275,17 +265,7 @@
      "oy": 40
     },
     {
-     "at": "ch1:Before",
-     "lon": 31,
-     "lat": 49,
-     "dist": 23.1,
-     "pitch": 54,
-     "yaw": 10,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "ch1:over",
+     "at": "ch1:International",
      "lon": 31,
      "lat": 49,
      "dist": 32.4,
@@ -295,12 +275,41 @@
      "_fill": true
     },
     {
-     "at": "ch1:by",
+     "at": "ch1:every",
      "lon": 31,
      "lat": 49,
      "dist": 23.1,
      "pitch": 54,
      "yaw": 10,
+     "oy": 40,
+     "_fill": true
+    },
+    {
+     "at": "ch1:scheduled -0.3",
+     "lon": 26,
+     "lat": 49.8,
+     "dist": 27.2,
+     "pitch": 46,
+     "yaw": 4,
+     "oy": 40
+    },
+    {
+     "at": "ch1:says",
+     "lon": 26,
+     "lat": 49.8,
+     "dist": 30.5,
+     "pitch": 38,
+     "yaw": -6,
+     "oy": 40,
+     "_fill": true
+    },
+    {
+     "at": "ch1:by#2",
+     "lon": 26,
+     "lat": 49.8,
+     "dist": 21.8,
+     "pitch": 54,
+     "yaw": 14,
      "oy": 40,
      "_fill": true
     },
@@ -343,7 +352,7 @@
      "_fill": true
     },
     {
-     "at": "ch1:and#1",
+     "at": "ch1:2023#1",
      "lon": 31,
      "lat": 49.5,
      "dist": 28.6,
@@ -353,61 +362,12 @@
      "_fill": true
     },
     {
-     "at": "ch1:describe",
+     "at": "ch1:every#1",
      "lon": 31,
      "lat": 49.5,
      "dist": 20.4,
      "pitch": 54,
      "yaw": 6,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "ch1:Imports -0.3",
-     "lon": 26,
-     "lat": 49.8,
-     "dist": 27.2,
-     "pitch": 46,
-     "yaw": 4,
-     "oy": 40
-    },
-    {
-     "at": "ch1:European",
-     "lon": 26,
-     "lat": 49.8,
-     "dist": 30.5,
-     "pitch": 38,
-     "yaw": -6,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "ch1:the#15",
-     "lon": 26,
-     "lat": 49.8,
-     "dist": 21.8,
-     "pitch": 54,
-     "yaw": 14,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "ch1:heat",
-     "lon": 26,
-     "lat": 49.8,
-     "dist": 30.5,
-     "pitch": 38,
-     "yaw": -6,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "ch1:every",
-     "lon": 26,
-     "lat": 49.8,
-     "dist": 21.8,
-     "pitch": 54,
-     "yaw": 14,
      "oy": 40,
      "_fill": true
     },
@@ -421,7 +381,7 @@
      "oy": 40
     },
     {
-     "at": "ch2:much",
+     "at": "ch2:large",
      "lon": 31,
      "lat": 49.2,
      "dist": 34.3,
@@ -431,12 +391,22 @@
      "_fill": true
     },
     {
-     "at": "ch2:of",
+     "at": "ch2:growing",
      "lon": 31,
      "lat": 49.2,
      "dist": 24.5,
      "pitch": 52,
      "yaw": 10,
+     "oy": 40,
+     "_fill": true
+    },
+    {
+     "at": "ch2:generation",
+     "lon": 31,
+     "lat": 49.2,
+     "dist": 34.3,
+     "pitch": 36,
+     "yaw": -10,
      "oy": 40,
      "_fill": true
     },
@@ -444,9 +414,9 @@
      "at": "ch2:gave",
      "lon": 31,
      "lat": 49.2,
-     "dist": 34.3,
-     "pitch": 36,
-     "yaw": -10,
+     "dist": 24.5,
+     "pitch": 52,
+     "yaw": 10,
      "oy": 40,
      "_fill": true
     },
@@ -454,9 +424,9 @@
      "at": "ch2:short",
      "lon": 31,
      "lat": 49.2,
-     "dist": 24.5,
-     "pitch": 52,
-     "yaw": 10,
+     "dist": 34.3,
+     "pitch": 36,
+     "yaw": -10,
      "oy": 40,
      "_fill": true
     },
@@ -470,57 +440,7 @@
      "oy": 40
     },
     {
-     "at": "ch2:destroyed",
-     "lon": 31,
-     "lat": 49,
-     "dist": 38.1,
-     "pitch": 36,
-     "yaw": -13,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "ch2:pre-war#1",
-     "lon": 31,
-     "lat": 49,
-     "dist": 27.2,
-     "pitch": 52,
-     "yaw": 7,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "ch2:a#4",
-     "lon": 31,
-     "lat": 49,
-     "dist": 38.1,
-     "pitch": 36,
-     "yaw": -13,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "ch2:years",
-     "lon": 31,
-     "lat": 49,
-     "dist": 27.2,
-     "pitch": 52,
-     "yaw": 7,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "ch2:That#4",
-     "lon": 31,
-     "lat": 49,
-     "dist": 38.1,
-     "pitch": 36,
-     "yaw": -13,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "ch2:every#1",
+     "at": "ch2:two#1",
      "lon": 31,
      "lat": 49,
      "dist": 27.2,
@@ -558,7 +478,7 @@
      "oy": 40
     },
     {
-     "at": "ch3:darkness",
+     "at": "ch3:power",
      "lon": 31,
      "lat": 49.5,
      "dist": 24.5,
@@ -568,7 +488,7 @@
      "_fill": true
     },
     {
-     "at": "ch3:winter",
+     "at": "ch3:increasingly",
      "lon": 31,
      "lat": 49.5,
      "dist": 34.3,
@@ -578,7 +498,7 @@
      "_fill": true
     },
     {
-     "at": "ch3:targets",
+     "at": "ch3:Ukrainian",
      "lon": 31,
      "lat": 49.5,
      "dist": 24.5,
@@ -588,7 +508,7 @@
      "_fill": true
     },
     {
-     "at": "ch3:if",
+     "at": "ch3:offline",
      "lon": 31,
      "lat": 49.5,
      "dist": 34.3,
@@ -598,7 +518,7 @@
      "_fill": true
     },
     {
-     "at": "ch3:depend",
+     "at": "ch3:and#2",
      "lon": 31,
      "lat": 49.5,
      "dist": 24.5,
@@ -617,22 +537,12 @@
      "oy": 40
     },
     {
-     "at": "ch3:power#2",
+     "at": "ch3:power#5",
      "lon": 31.5,
      "lat": 50.2,
      "dist": 15.7,
      "pitch": 42,
      "yaw": -16,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "ch3:worst-hit",
-     "lon": 31.5,
-     "lat": 50.2,
-     "dist": 11.2,
-     "pitch": 58,
-     "yaw": 4,
      "oy": 40,
      "_fill": true
     },
@@ -646,12 +556,12 @@
      "oy": 40
     },
     {
-     "at": "ch3:is#3",
+     "at": "ch3:is#1",
      "lon": 28.5,
      "lat": 50.3,
-     "dist": 17.9,
-     "pitch": 42,
-     "yaw": -4,
+     "dist": 12.8,
+     "pitch": 58,
+     "yaw": 16,
      "oy": 40,
      "_fill": true
     },
@@ -665,20 +575,21 @@
      "oy": 40
     },
     {
-     "at": "ch4:Other -0.3",
-     "lon": 38,
-     "lat": 50,
-     "dist": 44.2,
-     "pitch": 42,
-     "yaw": 0,
-     "oy": 40
-    },
-    {
      "at": "ch4:is",
      "lon": 38,
-     "lat": 50,
+     "lat": 51,
+     "dist": 49.5,
+     "pitch": 32,
+     "yaw": -10,
+     "oy": 40,
+     "_fill": true
+    },
+    {
+     "at": "ch4:Volodymyr",
+     "lon": 38,
+     "lat": 51,
      "dist": 35.4,
-     "pitch": 50,
+     "pitch": 48,
      "yaw": 10,
      "oy": 40,
      "_fill": true
@@ -693,7 +604,7 @@
      "oy": 40
     },
     {
-     "at": "ch4:general",
+     "at": "ch4:year",
      "lon": 43,
      "lat": 52,
      "dist": 26.7,
@@ -703,7 +614,7 @@
      "_fill": true
     },
     {
-     "at": "ch4:That#1",
+     "at": "ch4:projected",
      "lon": 43,
      "lat": 52,
      "dist": 19.0,
@@ -713,7 +624,7 @@
      "_fill": true
     },
     {
-     "at": "ch4:Other#1",
+     "at": "ch4:we",
      "lon": 43,
      "lat": 52,
      "dist": 26.7,
@@ -723,72 +634,91 @@
      "_fill": true
     },
     {
-     "at": "ch4:is#2",
-     "lon": 43,
-     "lat": 52,
-     "dist": 19.0,
-     "pitch": 54,
-     "yaw": 6,
+     "at": "ch4:Liga -0.3",
+     "lon": 38,
+     "lat": 50,
+     "dist": 44.2,
+     "pitch": 42,
+     "yaw": 0,
+     "oy": 40
+    },
+    {
+     "at": "ch4:thirty",
+     "lon": 38,
+     "lat": 50,
+     "dist": 35.4,
+     "pitch": 50,
+     "yaw": 10,
      "oy": 40,
      "_fill": true
     },
     {
-     "at": "ch4:the#3",
-     "lon": 43,
-     "lat": 52,
-     "dist": 26.7,
-     "pitch": 38,
-     "yaw": -14,
+     "at": "ch4:refining#1",
+     "lon": 38,
+     "lat": 50,
+     "dist": 49.5,
+     "pitch": 34,
+     "yaw": -10,
      "oy": 40,
      "_fill": true
     },
     {
-     "at": "ch4:to",
-     "lon": 43,
-     "lat": 52,
-     "dist": 19.0,
-     "pitch": 54,
-     "yaw": 6,
+     "at": "ch4:Several",
+     "lon": 38,
+     "lat": 50,
+     "dist": 35.4,
+     "pitch": 50,
+     "yaw": 10,
      "oy": 40,
      "_fill": true
     },
     {
-     "at": "ch4:Deputy",
-     "lon": 43,
-     "lat": 52,
-     "dist": 26.7,
-     "pitch": 38,
-     "yaw": -14,
+     "at": "ch4:by#1",
+     "lon": 38,
+     "lat": 50,
+     "dist": 49.5,
+     "pitch": 34,
+     "yaw": -10,
      "oy": 40,
      "_fill": true
     },
     {
-     "at": "ch4:strikes#1",
-     "lon": 43,
-     "lat": 52,
-     "dist": 19.0,
-     "pitch": 54,
-     "yaw": 6,
+     "at": "ch4:refineries#1",
+     "lon": 38,
+     "lat": 50,
+     "dist": 35.4,
+     "pitch": 50,
+     "yaw": 10,
      "oy": 40,
      "_fill": true
     },
     {
-     "at": "ch4:argument#1",
-     "lon": 43,
-     "lat": 52,
-     "dist": 26.7,
-     "pitch": 38,
-     "yaw": -14,
+     "at": "ch4:eleventh",
+     "lon": 38,
+     "lat": 50,
+     "dist": 49.5,
+     "pitch": 34,
+     "yaw": -10,
      "oy": 40,
      "_fill": true
     },
     {
-     "at": "ch4:us",
-     "lon": 43,
-     "lat": 52,
-     "dist": 19.0,
-     "pitch": 54,
-     "yaw": 6,
+     "at": "ch4:had",
+     "lon": 38,
+     "lat": 50,
+     "dist": 35.4,
+     "pitch": 50,
+     "yaw": 10,
+     "oy": 40,
+     "_fill": true
+    },
+    {
+     "at": "ch4:the#5",
+     "lon": 38,
+     "lat": 50,
+     "dist": 49.5,
+     "pitch": 34,
+     "yaw": -10,
      "oy": 40,
      "_fill": true
     },
@@ -805,9 +735,9 @@
      "at": "ch5:Donald",
      "lon": 38,
      "lat": 50,
-     "dist": 49.5,
-     "pitch": 30,
-     "yaw": -10,
+     "dist": 35.4,
+     "pitch": 46,
+     "yaw": 10,
      "oy": 40,
      "_fill": true
     },
@@ -815,9 +745,49 @@
      "at": "ch5:a#1",
      "lon": 38,
      "lat": 50,
+     "dist": 49.5,
+     "pitch": 30,
+     "yaw": -10,
+     "oy": 40,
+     "_fill": true
+    },
+    {
+     "at": "ch5:facilities",
+     "lon": 38,
+     "lat": 50,
      "dist": 35.4,
      "pitch": 46,
      "yaw": 10,
+     "oy": 40,
+     "_fill": true
+    },
+    {
+     "at": "ch5:began#1",
+     "lon": 38,
+     "lat": 50,
+     "dist": 49.5,
+     "pitch": 30,
+     "yaw": -10,
+     "oy": 40,
+     "_fill": true
+    },
+    {
+     "at": "ch5:violations#1",
+     "lon": 38,
+     "lat": 50,
+     "dist": 35.4,
+     "pitch": 46,
+     "yaw": 10,
+     "oy": 40,
+     "_fill": true
+    },
+    {
+     "at": "ch5:April",
+     "lon": 38,
+     "lat": 50,
+     "dist": 49.5,
+     "pitch": 30,
+     "yaw": -10,
      "oy": 40,
      "_fill": true
     },
@@ -825,6 +795,16 @@
      "at": "ch5:reserved",
      "lon": 38,
      "lat": 50,
+     "dist": 35.4,
+     "pitch": 46,
+     "yaw": 10,
+     "oy": 40,
+     "_fill": true
+    },
+    {
+     "at": "ch5:Trump#1",
+     "lon": 38,
+     "lat": 50,
      "dist": 49.5,
      "pitch": 30,
      "yaw": -10,
@@ -832,7 +812,7 @@
      "_fill": true
     },
     {
-     "at": "ch5:Ukraine",
+     "at": "ch5:had#2",
      "lon": 38,
      "lat": 50,
      "dist": 35.4,
@@ -842,7 +822,7 @@
      "_fill": true
     },
     {
-     "at": "ch5:Russia#2",
+     "at": "ch5:reports#1",
      "lon": 38,
      "lat": 50,
      "dist": 49.5,
@@ -852,7 +832,7 @@
      "_fill": true
     },
     {
-     "at": "ch5:said#4",
+     "at": "ch5:November",
      "lon": 38,
      "lat": 50,
      "dist": 35.4,
@@ -862,7 +842,7 @@
      "_fill": true
     },
     {
-     "at": "ch5:in#1",
+     "at": "ch5:in#4",
      "lon": 38,
      "lat": 50,
      "dist": 49.5,
@@ -872,7 +852,7 @@
      "_fill": true
     },
     {
-     "at": "ch5:two",
+     "at": "ch5:it#4",
      "lon": 38,
      "lat": 50,
      "dist": 35.4,
@@ -891,7 +871,7 @@
      "oy": 40
     },
     {
-     "at": "ch5:Each#1",
+     "at": "ch5:Financial",
      "lon": 42,
      "lat": 54.5,
      "dist": 28.6,
@@ -901,42 +881,12 @@
      "_fill": true
     },
     {
-     "at": "ch5:deal",
+     "at": "ch5:a#6",
      "lon": 42,
      "lat": 54.5,
      "dist": 20.4,
      "pitch": 54,
      "yaw": 10,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "ch5:pause#1",
-     "lon": 42,
-     "lat": 54.5,
-     "dist": 28.6,
-     "pitch": 38,
-     "yaw": -10,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "ch5:plants",
-     "lon": 42,
-     "lat": 54.5,
-     "dist": 20.4,
-     "pitch": 54,
-     "yaw": 10,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "ch5:has#1",
-     "lon": 42,
-     "lat": 54.5,
-     "dist": 28.6,
-     "pitch": 38,
-     "yaw": -10,
      "oy": 40,
      "_fill": true
     },
@@ -959,17 +909,7 @@
      "oy": 40
     },
     {
-     "at": "outlook:Russia",
-     "lon": 54,
-     "lat": 24.4,
-     "dist": 12.8,
-     "pitch": 56,
-     "yaw": 6,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "outlook:Abu",
+     "at": "outlook:Steve",
      "lon": 54,
      "lat": 24.4,
      "dist": 17.9,
@@ -979,7 +919,7 @@
      "_fill": true
     },
     {
-     "at": "outlook:humanitarian",
+     "at": "outlook:are#1",
      "lon": 54,
      "lat": 24.4,
      "dist": 12.8,
@@ -989,7 +929,7 @@
      "_fill": true
     },
     {
-     "at": "outlook:maritime",
+     "at": "outlook:chief",
      "lon": 54,
      "lat": 24.4,
      "dist": 17.9,
@@ -999,7 +939,7 @@
      "_fill": true
     },
     {
-     "at": "outlook:cities",
+     "at": "outlook:American",
      "lon": 54,
      "lat": 24.4,
      "dist": 12.8,
@@ -1009,7 +949,7 @@
      "_fill": true
     },
     {
-     "at": "outlook:de-escalation",
+     "at": "outlook:February",
      "lon": 54,
      "lat": 24.4,
      "dist": 17.9,
@@ -1019,7 +959,7 @@
      "_fill": true
     },
     {
-     "at": "outlook:only",
+     "at": "outlook:fighting",
      "lon": 54,
      "lat": 24.4,
      "dist": 12.8,
@@ -1029,7 +969,27 @@
      "_fill": true
     },
     {
-     "at": "outlook:Third -0.5",
+     "at": "outlook:Here",
+     "lon": 54,
+     "lat": 24.4,
+     "dist": 17.9,
+     "pitch": 40,
+     "yaw": -14,
+     "oy": 40,
+     "_fill": true
+    },
+    {
+     "at": "outlook:concession",
+     "lon": 54,
+     "lat": 24.4,
+     "dist": 12.8,
+     "pitch": 56,
+     "yaw": 6,
+     "oy": 40,
+     "_fill": true
+    },
+    {
+     "at": "outlook:Times#1 -0.5",
      "lon": 36,
      "lat": 50,
      "dist": 44.2,
@@ -1038,7 +998,7 @@
      "oy": 40
     },
     {
-     "at": "outlook:is#1",
+     "at": "outlook:cut",
      "lon": 36,
      "lat": 50,
      "dist": 49.5,
@@ -1048,7 +1008,7 @@
      "_fill": true
     },
     {
-     "at": "outlook:in#3",
+     "at": "outlook:That#2",
      "lon": 36,
      "lat": 50,
      "dist": 35.4,
@@ -1058,22 +1018,12 @@
      "_fill": true
     },
     {
-     "at": "outlook:not",
+     "at": "outlook:checked",
      "lon": 36,
      "lat": 50,
      "dist": 49.5,
      "pitch": 30,
      "yaw": -10,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "outlook:the#10",
-     "lon": 36,
-     "lat": 50,
-     "dist": 35.4,
-     "pitch": 46,
-     "yaw": 10,
      "oy": 40,
      "_fill": true
     },
@@ -1081,9 +1031,9 @@
      "at": "outlook:January",
      "lon": 36,
      "lat": 50,
-     "dist": 49.5,
-     "pitch": 30,
-     "yaw": -10,
+     "dist": 35.4,
+     "pitch": 46,
+     "yaw": 10,
      "oy": 40,
      "_fill": true
     },
@@ -1097,17 +1047,7 @@
      "oy": 40
     },
     {
-     "at": "next:how",
-     "lon": 40,
-     "lat": 50,
-     "dist": 35.4,
-     "pitch": 44,
-     "yaw": 10,
-     "oy": 40,
-     "_fill": true
-    },
-    {
-     "at": "next:and",
+     "at": "next:does",
      "lon": 40,
      "lat": 50,
      "dist": 49.5,
@@ -1167,6 +1107,30 @@
       "sub": "FULL-SCALE INVASION",
       "at": "ch1:Then +0.8"
      }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      30.52,
+      50.45
+     ],
+     "style": "pulse",
+     "color": "info",
+     "at": "ch1:Ukrenergo",
+     "until": "ch1:Ukrenergo +8",
+     "label": {
+      "text": "UKRENERGO",
+      "dx": -100,
+      "dy": -90,
+      "sub": "STATE GRID OPERATOR · BALANCES SUPPLY & DEMAND"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "OUTAGES BY REGION WHEN SUPPLY FALLS SHORT",
+     "at": "ch1:scheduled",
+     "until": "ch1:scheduled +5",
+     "y": 800
     },
     {
      "kind": "stamp",
@@ -1229,38 +1193,23 @@
      "note": "AVAILABLE GENERATION · EARLY 2022–APR 2023 · UKRAINIAN AUTHORITIES VIA CRS"
     },
     {
-     "kind": "note",
-     "text": "COAL · GAS · HYDRO PLANTS HIT · NUCLEAR NOW VITAL",
-     "at": "ch1:Many",
-     "until": "ch1:Many +6.5",
-     "y": 800
-    },
-    {
-     "kind": "arc",
-     "from": "Warsaw",
-     "to": "Lviv",
-     "color": "ok",
-     "height": 0.2,
-     "dur": 1.2,
-     "at": "ch1:Imports",
-     "until": "ch1:Imports +6"
-    },
-    {
-     "kind": "tag",
-     "loc": "Lviv",
-     "text": "EUROPEAN GRID",
-     "sub": "CONNECTED MARCH 2022",
-     "color": "ok",
-     "at": "ch1:Imports",
-     "until": "ch1:Imports +7",
-     "dx": -110,
-     "dy": -60
+     "kind": "stamp",
+     "text": "OCT 2022",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      960,
+      250
+     ],
+     "at": "ch2:October",
+     "until": "ch2:October +5",
+     "note": "FIRST LARGE WAVE OF STRIKES ON THE GRID"
     },
     {
      "kind": "note",
-     "text": "IMPORTS HELP – BUT CANNOT REPLACE LOST PLANTS",
-     "at": "ch1:They",
-     "until": "ch1:They +5",
+     "text": "ROLLING BLACKOUTS FOLLOWED",
+     "at": "ch2:Rolling",
+     "until": "ch2:Rolling +4",
      "y": 800
     },
     {
@@ -1274,7 +1223,7 @@
      ],
      "at": "ch2:Nine",
      "until": "ch2:Nine +6",
-     "note": "MARCH–MAY 2024 · IEA"
+     "note": "SPRING 2024 · IEA"
     },
     {
      "kind": "note",
@@ -1285,7 +1234,7 @@
     },
     {
      "kind": "stamp",
-     "text": ">8 GW · ≈40%",
+     "text": ">8 GW DESTROYED",
      "icon": "bolt",
      "color": "oil",
      "screen": [
@@ -1294,7 +1243,7 @@
      ],
      "at": "ch2:more#1",
      "until": "ch2:more#1 +6",
-     "note": "UKRENERGO'S OWN ESTIMATE · MAY 2024"
+     "note": "UKRENERGO'S OWN FIGURE · MAY 2024"
     },
     {
      "kind": "stamp",
@@ -1310,21 +1259,11 @@
      "note": "SHORT OF PEAK DEMAND · SUMMER 2024 · IEA"
     },
     {
-     "kind": "marker",
-     "loc": [
-      30.52,
-      50.45
-     ],
-     "style": "pulse",
-     "color": "oil",
-     "at": "ch2:rolling",
-     "until": "ch2:rolling +5",
-     "label": {
-      "text": "ROLLING BLACKOUTS",
-      "dx": -60,
-      "dy": -90,
-      "sub": "UKRENERGO"
-     }
+     "kind": "note",
+     "text": "COVERED BY ROLLING BLACKOUTS",
+     "at": "ch2:covered",
+     "until": "ch2:covered +4",
+     "y": 800
     },
     {
      "kind": "stamp",
@@ -1337,7 +1276,7 @@
      ],
      "at": "ch2:Foreign",
      "until": "ch2:Foreign +7",
-     "note": "DESTROYED OR OCCUPIED · FOREIGN POLICY, 2025"
+     "note": "DESTROYED OR OCCUPIED · FOREIGN POLICY ANALYTICS, NOV 2025"
     },
     {
      "kind": "stamp",
@@ -1350,35 +1289,7 @@
      ],
      "at": "ch2:restored",
      "until": "ch2:restored +5",
-     "note": "SINCE THEN · FOREIGN POLICY"
-    },
-    {
-     "kind": "note",
-     "text": "EVERY GIGAWATT REBUILT IS A TARGET AGAIN",
-     "at": "ch2:Every",
-     "until": "ch2:Every +5",
-     "y": 800
-    },
-    {
-     "kind": "note",
-     "text": "COVERED BY ROLLING BLACKOUTS",
-     "at": "ch2:covered",
-     "until": "ch2:covered +4",
-     "y": 800
-    },
-    {
-     "kind": "note",
-     "text": "PARTS CAN TAKE MONTHS TO ARRIVE",
-     "at": "ch2:replacement",
-     "until": "ch2:replacement +5",
-     "y": 800
-    },
-    {
-     "kind": "note",
-     "text": "WINTER: MORE DEMAND, LESS DAYLIGHT",
-     "at": "ch2:Heating",
-     "until": "ch2:Heating +5",
-     "y": 800
+     "note": "PER FOREIGN POLICY ANALYTICS"
     },
     {
      "kind": "tint",
@@ -1386,8 +1297,7 @@
      "color": "danger",
      "alpha": 0.35,
      "fill": 0.08,
-     "at": "ch3:Moscow's",
-     "hatch": false
+     "at": "ch3:Moscow's"
     },
     {
      "kind": "callout",
@@ -1414,7 +1324,7 @@
     },
     {
      "kind": "note",
-     "text": "UKRAINE & ANALYSTS: THE EFFECT HITS CIVILIANS",
+     "text": "UKRAINE: THE EFFECT FALLS ON CIVILIANS",
      "at": "ch3:Ukraine",
      "until": "ch3:Ukraine +8",
      "y": 800
@@ -1440,21 +1350,34 @@
      ],
      "style": "x",
      "color": "oil",
-     "at": "ch3:hit",
-     "until": "ch3:hit +8",
+     "at": "ch3:Substations#1",
+     "until": "ch3:Substations#1 +8",
      "label": {
-      "text": "ONE SUBSTATION",
+      "text": "SUBSTATIONS",
       "dx": 70,
       "dy": -80,
-      "sub": "SWITCHES OFF A WHOLE REGION"
+      "sub": "CAN CUT POWER OVER A WIDE AREA"
      }
     },
     {
      "kind": "note",
-     "text": "WATER PUMPS & HEATING DEPEND ON THAT POWER",
-     "at": "ch3:Water#1",
-     "until": "ch3:Water#1 +5",
+     "text": "UKRENERGO: UNPRECEDENTED NUMBER OF WEAPONS · GLAVNOE",
+     "at": "ch3:unprecedented",
+     "until": "ch3:unprecedented +5",
      "y": 800
+    },
+    {
+     "kind": "stamp",
+     "text": "3 THERMAL PLANTS OFFLINE",
+     "icon": "factory",
+     "color": "danger",
+     "screen": [
+      960,
+      250
+     ],
+     "at": "ch3:three#0",
+     "until": "ch3:three#0 +6",
+     "note": "DTEK · NOV 3"
     },
     {
      "kind": "stamp",
@@ -1483,14 +1406,14 @@
       "text": "KYIV",
       "dx": -70,
       "dy": -90,
-      "sub": "EMERGENCY OUTAGES · 12 H+ SOME"
+      "sub": "EMERGENCY OUTAGES"
      }
     },
     {
      "kind": "marker",
      "loc": [
-      35.05,
-      50.0
+      34.55,
+      49.59
      ],
      "style": "pulse",
      "color": "oil",
@@ -1506,19 +1429,77 @@
     {
      "kind": "marker",
      "loc": [
-      35.1,
-      50.9
+      34.8,
+      50.91
      ],
      "style": "dot",
      "color": "oil",
      "at": "ch3:several",
-     "until": "ch3:several +7",
+     "until": "ch3:several +6",
      "label": {
-      "text": "SUMY · CHERNIHIV · CHERKASY · KHARKIV",
-      "dx": 130,
+      "text": "SUMY",
+      "dx": 110,
+      "dy": -60,
+      "sub": "OUTAGES"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      31.29,
+      51.5
+     ],
+     "style": "dot",
+     "color": "oil",
+     "at": "ch3:several +0.3",
+     "until": "ch3:several +6.3",
+     "label": {
+      "text": "CHERNIHIV",
+      "dx": -100,
       "dy": -70,
       "sub": "OUTAGES"
      }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      32.06,
+      49.44
+     ],
+     "style": "dot",
+     "color": "oil",
+     "at": "ch3:several +0.6",
+     "until": "ch3:several +6.6",
+     "label": {
+      "text": "CHERKASY",
+      "dx": -110,
+      "dy": 70,
+      "sub": "OUTAGES"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      36.23,
+      49.99
+     ],
+     "style": "dot",
+     "color": "oil",
+     "at": "ch3:several +0.9",
+     "until": "ch3:several +6.9",
+     "label": {
+      "text": "KHARKIV",
+      "dx": 110,
+      "dy": 60,
+      "sub": "OUTAGES"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "SOME OUTAGES LASTED MORE THAN 12 HOURS",
+     "at": "ch3:lasting",
+     "until": "ch3:lasting +5",
+     "y": 800
     },
     {
      "kind": "marker",
@@ -1528,8 +1509,8 @@
      ],
      "style": "x",
      "color": "info",
-     "at": "ch3:water#2",
-     "until": "ch3:water#2 +7",
+     "at": "ch3:water#1",
+     "until": "ch3:water#1 +7",
      "label": {
       "text": "KYIV WATER",
       "dx": -120,
@@ -1539,7 +1520,7 @@
     },
     {
      "kind": "note",
-     "text": "WARMING CENTERS OPEN · KLITSCHKO",
+     "text": "WARMING CENTERS OPENED · KLITSCHKO",
      "at": "ch3:warming",
      "until": "ch3:warming +5",
      "y": 800
@@ -1558,7 +1539,7 @@
       "text": "KHMELNYTSKYI NPP",
       "dx": -130,
       "dy": -80,
-      "sub": "3 DRONES AT KEY SUBSTATION · SHMYHAL"
+      "sub": "SUBSTATION CRITICAL TO THE PLANT · SITE NOT STATED · SHMYHAL"
      }
     },
     {
@@ -1568,22 +1549,6 @@
      "alpha": 0.45,
      "fill": 0.1,
      "at": "ch4:Now"
-    },
-    {
-     "kind": "arc",
-     "from": [
-      30.52,
-      50.45
-     ],
-     "to": [
-      39.7,
-      54.6
-     ],
-     "color": "oil",
-     "height": 0.2,
-     "dur": 1.2,
-     "at": "ch4:Ukraine's",
-     "until": "ch4:Ukraine's +6"
     },
     {
      "kind": "stamp",
@@ -1599,88 +1564,37 @@
      "note": "STRUCK JAN–MAY 2026 · PER ZELENSKY"
     },
     {
-     "kind": "marker",
-     "loc": [
-      39.7,
-      54.6
-     ],
-     "style": "x",
-     "color": "oil",
-     "at": "ch4:fifteen",
-     "until": "ch4:fifteen +5",
-     "label": {
-      "text": "RYAZAN",
-      "dx": -100,
-      "dy": -70,
-      "sub": "REFINERY AREA · ILLUSTRATIVE"
-     }
-    },
-    {
-     "kind": "marker",
-     "loc": [
-      46.0,
-      51.5
-     ],
-     "style": "x",
-     "color": "oil",
-     "at": "ch4:fifteen +1",
-     "until": "ch4:fifteen +6",
-     "label": {
-      "text": "SARATOV",
-      "dx": 100,
-      "dy": -60,
-      "sub": "REFINERY AREA · ILLUSTRATIVE"
-     }
-    },
-    {
-     "kind": "marker",
-     "loc": [
-      44.5,
-      48.7
-     ],
-     "style": "x",
-     "color": "oil",
-     "at": "ch4:fifteen +2",
-     "until": "ch4:fifteen +7",
-     "label": {
-      "text": "VOLGOGRAD",
-      "dx": 60,
-      "dy": 70,
-      "sub": "REFINERY AREA · ILLUSTRATIVE"
-     }
-    },
-    {
      "kind": "stamp",
-     "text": ">40% OFFLINE",
+     "text": "≈ 43% PROJECTED",
      "icon": "factory",
      "color": "oil",
      "screen": [
       960,
       250
      ],
-     "at": "ch4:forty",
-     "until": "ch4:forty +7",
-     "note": "CLAIM BY UKRAINE'S GENERAL STAFF · EARLY JULY · UNVERIFIED"
-    },
-    {
-     "kind": "note",
-     "text": "OTHER ESTIMATES ARE LOWER",
-     "at": "ch4:Other",
-     "until": "ch4:Other +4",
-     "y": 800
+     "at": "ch4:forty-three",
+     "until": "ch4:forty-three +7",
+     "note": "CLAIM BY UKRAINE'S GENERAL STAFF · EARLY JULY · NO INDEPENDENT CONFIRMATION FOUND"
     },
     {
      "kind": "stamp",
-     "text": "≈ 30% ACTUAL",
+     "text": ">30% ACTUAL",
      "icon": "bolt",
      "color": "oil",
      "screen": [
       960,
       250
      ],
-     "at": "ch4:thirty",
-     "until": "ch4:thirty +6",
-     "note": "ONE UKRAINIAN OUTLET (LIGA)"
+     "at": "ch4:Liga",
+     "until": "ch4:Liga +6",
+     "note": "UKRAINIAN OUTLET LIGA"
+    },
+    {
+     "kind": "note",
+     "text": "HONCHAR (UKRAINIAN ANALYST): HALF OFFLINE · UNVERIFIED",
+     "at": "ch4:Honchar",
+     "until": "ch4:Honchar +6",
+     "y": 800
     },
     {
      "kind": "stamp",
@@ -1693,14 +1607,7 @@
      ],
      "at": "ch4:banned",
      "until": "ch4:banned +6",
-     "note": "RUSSIA · SINCE APRIL 1 · NOVAK"
-    },
-    {
-     "kind": "note",
-     "text": "CRUDE EXPORTS AT WAR-TIME HIGH · BLOOMBERG",
-     "at": "ch4:Bloomberg",
-     "until": "ch4:Bloomberg +6",
-     "y": 800
+     "note": "RUSSIA · FROM APRIL 1, 2026 · NOVAK"
     },
     {
      "kind": "note",
@@ -1711,23 +1618,16 @@
     },
     {
      "kind": "note",
-     "text": "MOSCOW: KYIV RESUMED REFINERY STRIKES DESPITE TRUMP'S REQUEST",
-     "at": "ch4:Friday",
-     "until": "ch4:Friday +7",
+     "text": "ENERGY PRICES UNDER PRESSURE · AL JAZEERA, OCT 11",
+     "at": "ch4:noticed",
+     "until": "ch4:noticed +6",
      "y": 800
     },
     {
      "kind": "note",
-     "text": "UKRAINE: REFINERIES FEED THE ARMY · RUSSIA: KYIV BREAKS THE TRUCE",
-     "at": "ch4:Ukraine's#2",
-     "until": "ch4:Ukraine's#2 +8",
-     "y": 800
-    },
-    {
-     "kind": "note",
-     "text": "SHORTAGES FOR RUSSIAN DRIVERS",
-     "at": "ch4:drivers",
-     "until": "ch4:drivers +5",
+     "text": "CRUDE EXPORTS AT WAR-TIME HIGH · BLOOMBERG",
+     "at": "ch4:Bloomberg",
+     "until": "ch4:Bloomberg +6",
      "y": 800
     },
     {
@@ -1745,6 +1645,13 @@
     },
     {
      "kind": "note",
+     "text": "KREMLIN LIST INCLUDED REFINERIES & NUCLEAR PLANTS · MEDUZA",
+     "at": "ch5:Meduza",
+     "until": "ch5:Meduza +6",
+     "y": 800
+    },
+    {
+     "kind": "note",
      "text": "MOSCOW: BEGAN MAR 18 · KYIV: BEGAN MAR 25",
      "at": "ch5:Moscow",
      "until": "ch5:Moscow +6",
@@ -1752,53 +1659,21 @@
     },
     {
      "kind": "note",
-     "text": "BOTH SIDES ACCUSE THE OTHER",
-     "at": "ch5:Within",
-     "until": "ch5:Within +5",
+     "text": "ACCUSATIONS OF VIOLATIONS FROM BOTH SIDES",
+     "at": "ch5:accusations",
+     "until": "ch5:accusations +5",
      "y": 800
     },
     {
-     "kind": "stamp",
-     "text": "MAR 28",
-     "icon": "bolt",
-     "color": "oil",
-     "screen": [
-      960,
-      250
-     ],
-     "at": "ch5:twenty-eighth",
-     "until": "ch5:twenty-eighth +6",
-     "note": "PESKOV: RUSSIA 'RESERVES THE RIGHT' TO STOP COMPLYING"
-    },
-    {
-     "kind": "stamp",
-     "text": "APR 18",
-     "icon": "x",
-     "color": "danger",
-     "screen": [
-      960,
-      250
-     ],
-     "at": "ch5:eighteenth#1",
-     "until": "ch5:eighteenth#1 +6",
-     "note": "KREMLIN: THE PAUSE HAS EXPIRED"
-    },
-    {
-     "kind": "stamp",
-     "text": "OCT 11, 2026",
-     "icon": "flag",
-     "color": "accent",
-     "screen": [
-      960,
-      250
-     ],
-     "at": "ch5:eleventh",
-     "until": "ch5:eleventh +6",
-     "note": "TRUMP: BOTH SIDES AGREED · RUSSIA HAS NOT CONFIRMED"
+     "kind": "note",
+     "text": "RUSSIA TO THE U.N.: UKRAINE VIOLATED · RUSSIA COMPLIES",
+     "at": "ch5:letter",
+     "until": "ch5:letter +6",
+     "y": 800
     },
     {
      "kind": "note",
-     "text": "KYIV SOURCE: THE ANNOUNCEMENT WAS A SURPRISE",
+     "text": "A SOURCE CLOSE TO ZELENSKY: A SURPRISE",
      "at": "ch5:source",
      "until": "ch5:source +5",
      "y": 800
@@ -1814,21 +1689,14 @@
       "text": "NIZHNY NOVGOROD",
       "dx": -80,
       "dy": -70,
-      "sub": "INDUSTRIAL SITE HIT · GOVERNOR"
+      "sub": "CITY MARKER · SITE NOT STATED · GOVERNOR"
      }
     },
     {
      "kind": "note",
      "text": "FT, SEPTEMBER: PUTIN DOES NOT WANT A DEAL BEFORE WINTER",
-     "at": "ch5:Financial",
-     "until": "ch5:Financial +7",
-     "y": 800
-    },
-    {
-     "kind": "note",
-     "text": "KREMLIN LIST INCLUDED REFINERIES & NUCLEAR PLANTS",
-     "at": "ch5:published",
-     "until": "ch5:published +6",
+     "at": "ch5:Financial#1",
+     "until": "ch5:Financial#1 +7",
      "y": 800
     },
     {
@@ -1854,62 +1722,62 @@
     },
     {
      "kind": "note",
-     "text": "AGENDA: SECURITY · DE-ESCALATION · HUMANITARIAN",
+     "text": "AGENDA (PER WITKOFF): SECURITY · DE-ESCALATION · HUMANITARIAN",
      "at": "outlook:agenda",
      "until": "outlook:agenda +6",
      "y": 800
     },
     {
      "kind": "stamp",
-     "text": "1: ENERGY DEAL",
-     "icon": "check",
-     "color": "ok",
-     "screen": [
-      960,
-      250
-     ],
-     "at": "outlook:First",
-     "until": "outlook:First +5",
-     "note": "LIGHTS ON · REFINERIES SPARED"
-    },
-    {
-     "kind": "stamp",
-     "text": "2: WIDER PACKAGE",
+     "text": "ON THE TABLE? (ONE REPORT)",
      "icon": "flag",
      "color": "info",
      "screen": [
       960,
       250
      ],
-     "at": "outlook:Second",
-     "until": "outlook:Second +6",
-     "note": "PUTIN'S ONLY CONCESSION SO FAR: RESUME TALKS · MOSCOW TIMES"
+     "at": "outlook:possible",
+     "until": "outlook:possible +6",
+     "note": "ENERGY & MARITIME CEASEFIRE"
     },
     {
      "kind": "stamp",
-     "text": "3: NO DEAL",
+     "text": "SO FAR: TALKS ONLY",
+     "icon": "flag",
+     "color": "oil",
+     "screen": [
+      960,
+      250
+     ],
+     "at": "outlook:Moscow",
+     "until": "outlook:Moscow +6",
+     "note": "PUTIN'S ONLY APPARENT CONCESSION · MOSCOW TIMES"
+    },
+    {
+     "kind": "stamp",
+     "text": "WINTER STRIKES PLANNED?",
      "icon": "x",
      "color": "danger",
      "screen": [
       960,
       250
      ],
-     "at": "outlook:Third",
-     "until": "outlook:Third +6",
-     "note": "NYT, OCT 16: WINTER STRIKES PLANNED · REPORTED"
+     "at": "outlook:Times#1",
+     "until": "outlook:Times#1 +7",
+     "note": "NYT, OCT 16 · REPORTED PLAN, NOT CONFIRMED"
     },
     {
      "kind": "note",
-     "text": "WHO CHECKS THAT STRIKES HAVE STOPPED?",
-     "at": "outlook:Who",
-     "until": "outlook:Who +5",
+     "text": "HOW WOULD AN ENERGY PAUSE BE CHECKED?",
+     "at": "outlook:open",
+     "until": "outlook:open +5",
      "y": 800
     },
     {
      "kind": "note",
-     "text": "2025: BOTH SIDES SAID THEY KEPT THE DEAL",
-     "at": "outlook:2025",
-     "until": "outlook:2025 +5",
+     "text": "MARCH 2025 PAUSE: ACCUSATIONS FROM BOTH SIDES",
+     "at": "outlook:accusations",
+     "until": "outlook:accusations +5",
      "y": 800
     }
    ]
@@ -1948,8 +1816,8 @@
   {
    "type": "footage",
    "asset": "f02",
-   "from": "ch3:substation -0.2",
-   "to": "ch3:Water#1 -1.6",
+   "from": "ch3:Substations#1 -0.2",
+   "to": "ch3:Substations#1 +8",
    "query": "electrical substation transformer",
    "kind": "video",
    "symbolic": true,
@@ -1958,8 +1826,8 @@
    "pick": 0,
    "lower": {
     "kicker": "ILLUSTRATIVE",
-    "text": "ONE HIT SUBSTATION CAN DARKEN A REGION",
-    "at": "ch3:substation +0.8"
+    "text": "SUBSTATIONS CAN CUT POWER OVER A WIDE AREA",
+    "at": "ch3:Substations#1 +0.8"
    },
    "marks": [
     {
@@ -1970,32 +1838,15 @@
      ],
      "label": "INSULATORS",
      "sub": "illustrative · not a specific site",
-     "at": "ch3:switches"
+     "at": "ch3:Substations#1 +2.5"
     }
    ]
   },
   {
    "type": "footage",
-   "asset": "f03",
-   "from": "ch4:Ukraine's#2 -0.2",
-   "to": "ch4:For -0.2",
-   "query": "oil refinery",
-   "kind": "video",
-   "symbolic": true,
-   "move": "in",
-   "start": 0,
-   "pick": false,
-   "lower": {
-    "kicker": "ILLUSTRATIVE",
-    "text": "REFINERIES TURN CRUDE INTO FUEL",
-    "at": "ch4:Ukraine's#2 +0.8"
-   }
-  },
-  {
-   "type": "footage",
    "asset": "f04",
-   "from": "outlook:Third -0.2",
-   "to": "outlook:That#2 -0.3",
+   "from": "outlook:Times#1 -0.2",
+   "to": "outlook:Times#1 +8",
    "query": "city street night winter",
    "kind": "video",
    "symbolic": true,
@@ -2004,8 +1855,8 @@
    "pick": 0,
    "lower": {
     "kicker": "ILLUSTRATIVE",
-    "text": "WINTER IS THE DEADLINE",
-    "at": "outlook:Third +0.8"
+    "text": "CITY STREET AT NIGHT · NOT A SPECIFIC CITY",
+    "at": "outlook:Times#1 +0.8"
    }
   },
   {
@@ -2049,7 +1900,7 @@
   {
    "type": "bars",
    "from": "ch2:Ukraine's -0.2",
-   "to": "ch2:Every -0.2",
+   "to": "ch2:restored +5",
    "label": "UKRAINE'S POWER GENERATION",
    "sublabel": "GIGAWATTS · DIFFERENT MEASURES",
    "color": "oil",
@@ -2067,11 +1918,11 @@
      "value": 9,
      "display": "9",
      "color": "danger",
-     "at": "ch2:Ukraine's",
+     "at": "ch2:Nine",
      "dur": 1.0
     },
     {
-     "label": "RESTORED",
+     "label": "RESTORED · FP 2025",
      "value": 3,
      "display": "3",
      "color": "ok",
@@ -2083,10 +1934,10 @@
   },
   {
    "type": "bars",
-   "from": "ch4:Other -0.2",
-   "to": "ch4:What -0.2",
+   "from": "ch4:forty-three -0.3",
+   "to": "ch4:Several -0.2",
    "label": "SHARE OF RUSSIA'S REFINING CAPACITY OFFLINE",
-   "sublabel": "UKRAINIAN CLAIMS · NOT INDEPENDENTLY VERIFIED",
+   "sublabel": "UKRAINIAN FIGURES · NO INDEPENDENT CONFIRMATION FOUND",
    "color": "oil",
    "bars": [
     {
@@ -2094,7 +1945,7 @@
      "value": 42.7,
      "display": "42.7%",
      "color": "danger",
-     "at": "ch4:Other",
+     "at": "ch4:forty-three",
      "dur": 1.0
     },
     {
@@ -2102,7 +1953,7 @@
      "value": 30,
      "display": ">30%",
      "color": "oil",
-     "at": "ch4:thirty",
+     "at": "ch4:Liga",
      "dur": 1.0
     }
    ],
@@ -2110,8 +1961,8 @@
   },
   {
    "type": "timeline",
-   "from": "ch5:Within -0.1",
-   "to": "ch5:Days#1 -0.2",
+   "from": "ch5:twenty-eighth -0.3",
+   "to": "ch5:surprise +0.2",
    "label": "ENERGY-STRIKE PAUSES",
    "color": "accent",
    "items": [
@@ -2120,38 +1971,45 @@
      "title": "30-DAY HALT ANNOUNCED",
      "sub": "PUTIN–TRUMP CALL",
      "color": "info",
-     "at": "ch5:Within"
+     "at": "ch5:twenty-eighth -0.3"
     },
     {
-     "date": "MAR 25",
-     "title": "KYIV SAYS IT BEGAN",
-     "sub": "MOSCOW: MAR 18",
+     "date": "MAR 28",
+     "title": "PESKOV: MOSCOW RESERVES THE RIGHT NOT TO COMPLY",
+     "sub": "KREMLIN",
      "color": "oil",
-     "at": "ch5:Within +1"
+     "at": "ch5:twenty-eighth"
     },
     {
      "date": "APR 18",
-     "title": "KREMLIN: EXPIRED",
-     "sub": "BOTH ACCUSED THE OTHER",
+     "title": "KREMLIN: THE PAUSE HAS EXPIRED",
+     "sub": "ACCUSATIONS FROM BOTH SIDES",
      "color": "danger",
      "at": "ch5:eighteenth#1"
     },
     {
+     "date": "MID-SEPT 2026",
+     "title": "TRUMP ANNOUNCES AN ENERGY CEASEFIRE",
+     "sub": "FT: MOSCOW HAD NOT AGREED",
+     "color": "oil",
+     "at": "ch5:mid-September"
+    },
+    {
      "date": "OCT 11, 2026",
-     "title": "TRUMP: NEW ENERGY CEASEFIRE",
-     "sub": "RUSSIA HAS NOT CONFIRMED",
+     "title": "TRUMP: BOTH SIDES AGREED",
+     "sub": "MOSCOW HAS NOT CONFIRMED · REPORTS",
      "color": "accent",
      "at": "ch5:eleventh"
     }
    ],
-   "source": "KREMLIN · REUTERS · CNN · MOSCOW TIMES"
+   "source": "KREMLIN · MEDUZA · MOSCOW TIMES · CNN · FT"
   },
   {
    "type": "prompt",
-   "from": "outlook:Will#2",
+   "from": "outlook:Will#1",
    "to": "outlook$ +0.2",
    "kicker": "YOUR TAKE",
-   "text": "Energy strikes stopped before January? Comment YES or NO",
+   "text": "Will they agree to stop energy strikes before January? Comment YES or NO",
    "color": "accent"
   },
   {
