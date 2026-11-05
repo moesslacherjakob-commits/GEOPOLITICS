@@ -1,0 +1,488 @@
+{
+ "id": "2026-11-05-georgia-tennessee-record-flood",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A Georgia river just broke its 1990 record. Where did the water come from?"
+  },
+  {
+   "id": "f1",
+   "text": "Overnight, the Toccoa River crested at eighteen feet at Copperhill, Tennessee, a record, gauge readings show. The old mark was seventeen point seven five feet, from 1990. The National Weather Service issued a flash flood emergency, a rare warning for catastrophic, life-threatening flooding."
+  },
+  {
+   "id": "f2",
+   "text": "The Associated Press reports three to five inches of rain fell overnight in the mountains. The Tennessee Valley Authority reported eight to ten inches between Blue Ridge and Ellijay. Officials counted dozens of water rescues, at least fifty seven by one local station's count."
+  },
+  {
+   "id": "f3",
+   "text": "McCaysville declared a state of emergency. Its water plant shut down, and a boil water advisory followed. The police chief blamed drainage problems near highway construction. Gauge readings stay preliminary until the weather service reviews them."
+  },
+  {
+   "id": "cta",
+   "text": "Will another storm flood the South this month? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE RECORD",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "THE RAIN",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE DAMAGE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -90,
+     "lat": 36,
+     "R": 380
+    },
+    {
+     "at": 3.2,
+     "lon": -84.4,
+     "lat": 35.0,
+     "R": 760
+    }
+   ],
+   "chip": {
+    "text": "RECORD FLOOD",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:river",
+    "lines": [
+     [
+      "RECORD RIVER",
+      "info",
+      120
+     ],
+     [
+      "WHERE FROM?",
+      "text",
+      120
+     ]
+    ]
+   },
+   "highlights": [
+    {
+     "iso": "US-GA",
+     "color": "info",
+     "at": "hook:1990",
+     "alpha": 0.35
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -84.371,
+      34.986
+     ],
+     "color": "accent",
+     "at": "hook:Georgia",
+     "label": "MCCAYSVILLE",
+     "sub": "",
+     "dx": -250,
+     "dy": -60,
+     "big": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -84.4,
+    35.0
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -84.4,
+     "lat": 35.0,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": -84.37,
+     "lat": 34.9,
+     "dist": 20,
+     "pitch": 35,
+     "yaw": -6,
+     "oy": 170
+    },
+    {
+     "at": "f2 -0.3",
+     "lon": -84.4,
+     "lat": 34.85,
+     "dist": 26,
+     "pitch": 38,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "f2 +1.2",
+     "lon": -84.4,
+     "lat": 34.8,
+     "dist": 18,
+     "pitch": 40,
+     "yaw": 8,
+     "oy": 170
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": -84.37,
+     "lat": 34.9,
+     "dist": 16,
+     "pitch": 42,
+     "yaw": 4,
+     "oy": 170
+    },
+    {
+     "at": "cta -0.1",
+     "lon": -84.4,
+     "lat": 34.9,
+     "dist": 30,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "US-GA",
+     "color": "info",
+     "alpha": 0.2,
+     "at": "f1:Overnight,"
+    },
+    {
+     "kind": "tint",
+     "iso": "US-TN",
+     "color": "info",
+     "alpha": 0.14,
+     "at": "f1:Overnight,"
+    },
+    {
+     "kind": "field",
+     "at": "f1:Overnight,",
+     "until": "cta",
+     "blobs": [
+      {
+       "loc": [
+        -84.37,
+        34.99
+       ],
+       "r": 0.55,
+       "v": 0.7
+      },
+      {
+       "loc": [
+        -84.4,
+        34.78
+       ],
+       "r": 0.66,
+       "v": 1.0
+      },
+      {
+       "loc": [
+        -84.5,
+        34.9
+       ],
+       "r": 0.55,
+       "v": 0.8
+      }
+     ],
+     "palette": "rain",
+     "alpha": 0.75,
+     "grow": 1.5,
+     "clip": "USA"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -84.371,
+      34.986
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Copperhill,",
+     "label": {
+      "text": "COPPERHILL GAUGE",
+      "sub": "RECORD CREST \u00b7 PRELIMINARY",
+      "dx": 70.0,
+      "dy": -110,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -84.324,
+      34.864
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f2:Blue",
+     "label": {
+      "text": "BLUE RIDGE",
+      "sub": "8-10 IN \u00b7 TVA",
+      "dx": 80.0,
+      "dy": 70,
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -84.482,
+      34.695
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f2:Ellijay.",
+     "label": {
+      "text": "ELLIJAY",
+      "sub": "",
+      "dx": -200.0,
+      "dy": 40,
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -84.371,
+      34.986
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f3:McCaysville",
+     "label": {
+      "text": "MCCAYSVILLE",
+      "sub": "STATE OF EMERGENCY",
+      "dx": -260.0,
+      "dy": -110,
+      "until": "cta"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "ILLUSTRATIVE RAIN AREA \u00b7 APPROXIMATE \u00b7 NWS / AP / TVA",
+     "y": 1170,
+     "at": "f1 +1"
+    }
+   ],
+   "detail": [
+    "USA"
+   ]
+  },
+  {
+   "type": "bars",
+   "from": "f1:The",
+   "to": "f1$ -0.1",
+   "color": "info",
+   "label": "TOCCOA RIVER AT COPPERHILL",
+   "sublabel": "FLOOD CREST, FEET",
+   "bars": [
+    {
+     "label": "1990 RECORD",
+     "sub": "",
+     "value": 17.75,
+     "display": "17.75 FT",
+     "color": "neutral",
+     "at": "f1:seventeen",
+     "dur": 1.2
+    },
+    {
+     "label": "NOV 5, 2026",
+     "sub": "",
+     "value": 18.05,
+     "display": "18.05 FT",
+     "color": "danger",
+     "at": "f1:eighteen",
+     "dur": 1.2
+    }
+   ],
+   "source": "SOURCE: GAUGE READINGS VIA WSB-TV, NWS (PRELIMINARY)"
+  },
+  {
+   "type": "facts",
+   "from": "f2:The",
+   "to": "f2$ -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "rain",
+     "big": "3-5 INCHES",
+     "text": "OVERNIGHT \u00b7 AP",
+     "color": "info",
+     "at": "f2:three"
+    },
+    {
+     "icon": "drop",
+     "big": "8-10 INCHES",
+     "text": "BLUE RIDGE TO ELLIJAY \u00b7 TVA",
+     "color": "accent",
+     "at": "f2:eight"
+    },
+    {
+     "icon": "shield",
+     "big": "57+ RESCUES",
+     "text": "LOCAL COUNT \u00b7 WSB-TV",
+     "color": "danger",
+     "at": "f2:Officials"
+    }
+   ],
+   "source": "SOURCE: AP, TVA, WSB-TV (FIGURES VARY BY REPORT)"
+  },
+  {
+   "type": "facts",
+   "from": "f3:Its",
+   "to": "f3$ -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "flag",
+     "big": "STATE OF EMERGENCY",
+     "text": "MCCAYSVILLE \u00b7 CITY",
+     "color": "accent",
+     "at": "f3:McCaysville"
+    },
+    {
+     "icon": "drop",
+     "big": "WATER PLANT SHUT",
+     "text": "BOIL WATER ADVISORY",
+     "color": "danger",
+     "at": "f3:Its"
+    },
+    {
+     "icon": "eye",
+     "big": "POLICE CHIEF: DRAINAGE",
+     "text": "HIGHWAY CONSTRUCTION",
+     "color": "info",
+     "at": "f3:The"
+    }
+   ],
+   "source": "SOURCE: FOX 5 ATLANTA, WSB-TV, CNN"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "A RIVER ABOVE ITS 1990 RECORD.",
+     "text"
+    ],
+    [
+     "MORE FLOODS THIS MONTH?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AP, CNN, NWS, TVA, WSB-TV, FOX 5 (SEARCH EXCERPTS)",
+    "NOV 5, 2026 \u00b7 RAIN AREA ILLUSTRATIVE \u00b7 FIGURES VARY BY REPORT"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -84.4,
+     "lat": 35,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -85,
+     "lat": 34,
+     "R": 900
+    },
+    {
+     "at": "end",
+     "lon": -85,
+     "lat": 34,
+     "R": 900
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -84.371,
+      34.986
+     ],
+     "color": "accent"
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "US-GA",
+     "color": "info",
+     "alpha": 0.4
+    },
+    {
+     "iso": "US-TN",
+     "color": "info",
+     "alpha": 0.25
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "A Georgia River Just Beat Its 1990 Flood Record #shorts",
+  "description": "A flash flood emergency hit McCaysville, Georgia, and Copperhill, Tennessee, as the Toccoa River crested at a record 18.05 feet, above the 17.75 feet of 1990, according to gauge readings reported by local media. The Associated Press reports 3 to 5 inches of rain overnight; the Tennessee Valley Authority reported 8 to 10 inches in places. Dozens of people were rescued.\n\nSources: Associated Press, CNN, WSB-TV, FOX 5 Atlanta, National Weather Service, Tennessee Valley Authority (based on search-result excerpts). Gauge readings are preliminary; figures vary between reports; the rain area on the map is illustrative.\n\n#climate #weather #flood #georgia #tennessee",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "flood",
+   "Georgia",
+   "Tennessee",
+   "McCaysville",
+   "flash flood"
+  ],
+  "cover": "f2 +1"
+ },
+ "thumbnail": {
+  "at": "f1 +1.5",
+  "number": "18.05 FT",
+  "numberColor": "danger",
+  "source": "TOCCOA RIVER, COPPERHILL \u00b7 PRELIMINARY \u00b7 NOV 5",
+  "focus": [
+   -84.371,
+   34.986
+  ],
+  "lines": [
+   [
+    "BEATS 1990",
+    "accent"
+   ]
+  ],
+  "zoom": 1.3
+ },
+ "gap": 0.9
+}
