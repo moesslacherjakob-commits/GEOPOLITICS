@@ -1,0 +1,74 @@
+{
+ "id": "2026-11-05-amd-q3-record",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "One A.I. chip business almost doubled in a year. Who is buying all of it?"},
+  {"id": "f1", "text": "On November third, AMD reported record third-quarter revenue of thirteen point four billion dollars, up forty-five percent from a year earlier. Its data center business brought in eight point five billion dollars, up ninety-seven percent."},
+  {"id": "f2", "text": "AMD credits record sales of its Instinct A.I. chips and EPYC server processors. Client and gaming sales fell eight percent, to three point seven billion dollars. For the fourth quarter, AMD guides to about seventeen billion dollars."},
+  {"id": "f3", "text": "Here is part of it. Reuters reports that AMD agreed to sell Meta up to sixty billion dollars of chips over five years. Meta also received warrants, which are rights to buy shares, that could reach ten percent of AMD. Analysts there say it is unlikely to dent Nvidia's dominance."},
+  {"id": "cta", "text": "Will A.I. chip demand keep growing through next year? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE RESULTS", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "THE SPLIT", "seg": "f2", "color": "violet"},
+  {"n": "03", "name": "THE DEALS", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "upload": {
+  "title": "AMD's A.I. Chip Sales Nearly Doubled in a Year #shorts",
+  "description": "AMD reported record third-quarter 2026 revenue of $13.4 billion on November 3, up 45% year over year. Data center revenue was $8.5 billion, up 97%, while client and gaming revenue fell 8% to $3.7 billion. Reuters reports the growth comes with customer warrant deals, including Meta's; AMD's fourth-quarter outlook of about $17 billion is the company's own guidance.\n\nSources: AMD Q3 2026 results release (SEC 8-K); Investing.com; Guru3D; HotHardware; Reuters via Manila Times. Figures are company-reported.\n\n#tech #AMD #AIchips",
+  "tags": ["technology", "news", "AMD", "AI chips", "semiconductors", "earnings", "Nvidia", "data center"],
+  "cover": "hook:Who"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [-121.96, 37.37],
+  "number": "+97%",
+  "numberColor": "accent",
+  "lines": [["WHO IS BUYING", "text"], ["ALL THE CHIPS?", "accent"]],
+  "source": "NOV 3 · AMD DATA CENTER Y/Y · COMPANY-REPORTED"
+ },
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.3",
+   "view": [{"at": 0, "lon": -60, "lat": 30, "R": 380}, {"at": 4.5, "lon": -121.96, "lat": 37.37, "R": 600}],
+   "chip": {"text": "CHIPS · NOV 3, 2026", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "USA", "color": "info", "at": "hook:chip", "alpha": 0.5}],
+   "markers": [{"loc": [-121.96, 37.37], "color": "accent", "at": "hook:chip", "label": "SANTA CLARA", "sub": "AMD HEADQUARTERS", "dx": -30, "dy": -120, "big": true}],
+   "headline": {"at": "hook:almost", "lines": [["A.I. CHIP SALES", "text", 110], ["NEARLY DOUBLED", "accent", 100]]}
+  },
+  {
+   "type": "facts", "from": "f1 -0.1", "to": "f2 -0.1", "color": "accent",
+   "items": [
+    {"icon": "money", "big": "$13.4 BILLION", "text": "Q3 REVENUE · RECORD · PER AMD", "color": "accent", "at": "f1:record"},
+    {"icon": "bolt", "big": "+45%", "text": "VS A YEAR EARLIER · PER AMD", "color": "ok", "at": "f1:forty-five"},
+    {"icon": "chip", "big": "$8.5 BN · +97%", "text": "DATA CENTER REVENUE · PER AMD", "color": "info", "at": "f1:data"}
+   ],
+   "source": "SOURCES: AMD RESULTS RELEASE · INVESTING.COM · GURU3D · HOTHARDWARE"
+  },
+  {
+   "type": "scale", "from": "f2 -0.1", "to": "f3 -0.1", "label": "WHERE THE MONEY CAME FROM", "sublabel": "Q3 2026 REVENUE, USD BILLIONS", "color": "violet",
+   "items": [
+    {"name": "DATA CENTER", "value": 8.5, "display": "$8.5 BN · +97%", "color": "accent", "icon": "chip", "at": "f2:record"},
+    {"name": "CLIENT & GAMING", "value": 3.7, "display": "$3.7 BN · −8%", "color": "danger", "icon": "people", "at": "f2:Client"}
+   ],
+   "note": "Q4 OUTLOOK ≈ $17 BN ±3% · AMD'S OWN GUIDANCE",
+   "source": "SOURCES: AMD RESULTS RELEASE · INVESTING.COM"
+  },
+  {
+   "type": "flow", "from": "f3 -0.1", "to": "cta -0.1", "label": "HOW THE DEAL WORKS", "color": "info",
+   "steps": [
+    {"icon": "chip", "title": "CUSTOMER BUYS CHIPS", "sub": "META: UP TO $60 BN OVER 5 YEARS · PER REUTERS", "color": "accent", "at": "f3:Reuters"},
+    {"icon": "money", "title": "GETS WARRANTS", "sub": "RIGHT TO BUY AMD SHARES", "color": "violet", "at": "f3:warrants"},
+    {"icon": "flag", "title": "UP TO 10% OF AMD", "sub": "IF MILESTONES ARE MET · PER REUTERS", "color": "info", "at": "f3:percent"}
+   ],
+   "source": "SOURCES: REUTERS VIA MANILA TIMES · AMD RELEASE"
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "view": [{"at": "cta -0.6", "lon": -60, "lat": 30, "R": 800}, {"at": "cta +1", "lon": -121.96, "lat": 37.37, "R": 500}, {"at": "end", "lon": -100, "lat": 38, "R": 500}],
+   "markers": [{"loc": [-121.96, 37.37], "color": "accent"}],
+   "lines": [["A.I. CHIP DEMAND", "text"], ["STILL GROWING NEXT YEAR?", "accent"]],
+   "sources": ["AMD RESULTS RELEASE · INVESTING.COM · GURU3D · HOTHARDWARE · REUTERS", "COMPANY-REPORTED FIGURES · OUTLOOK IS AMD'S OWN"]
+  }
+ ]
+}
