@@ -1,0 +1,77 @@
+{
+ "id": "2026-11-06-hottest-october",
+ "lang": "en",
+ "gap": 0.9,
+ "script": [
+  {"id": "hook", "text": "Last month was the hottest October ever measured. What comes next?"},
+  {"id": "f1", "text": "Copernicus, the European Union's climate service, says October's global air temperature was one point seven five degrees above pre-industrial levels. That is the warmest October on record. And the third month in a row above one point five."},
+  {"id": "f2", "text": "The oceans set a record too. Copernicus says the average sea surface temperature outside the polar regions was twenty point nine five degrees Celsius. That is the highest for any October, ahead of the old mark from twenty twenty-three."},
+  {"id": "f3", "text": "Copernicus scientist Samantha Burgess says a very strong El Niño is adding heat to a climate already warmed by human activity. Copernicus says twenty twenty-six will most likely be the second warmest year, with a one in five chance of matching twenty twenty-four."},
+  {"id": "cta", "text": "Will twenty twenty-seven be the hottest year on record? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE RECORD", "seg": "f1", "color": "danger"},
+  {"n": "02", "name": "THE OCEANS", "seg": "f2", "color": "accent"},
+  {"n": "03", "name": "THE YEAR", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "scenes": [
+  {
+   "type": "globe", "from": 0, "to": "hook$ +0.25", "exit": "zoom",
+   "view": [{"at": 0, "lon": 10, "lat": 20, "R": 330}, {"at": 3.4, "lon": 0, "lat": 15, "R": 520}],
+   "chip": {"text": "COPERNICUS · OCTOBER 2026", "at": 0.25, "color": "accent"},
+   "headline": {"at": "hook:hottest", "lines": [["HOTTEST OCTOBER", "danger", 120], ["EVER MEASURED", "text", 120]]}
+  },
+  {
+   "type": "map", "from": "hook$ +0.25", "to": "cta -0.1", "center": [0, 15],
+   "camera": [
+    {"at": "hook$ +0.25", "lon": 0, "lat": 15, "dist": 43, "pitch": 0, "yaw": 0, "oy": 0},
+    {"at": "f1 +0.4", "lon": 10, "lat": 20, "dist": 150, "pitch": 28, "yaw": 0, "oy": 150},
+    {"at": "f2 +0.3", "lon": -60, "lat": 5, "dist": 140, "pitch": 35, "yaw": -6, "oy": 160},
+    {"at": "f3 +0.3", "lon": -130, "lat": 0, "dist": 110, "pitch": 40, "yaw": 5, "oy": 170},
+    {"at": "cta -0.1", "lon": -20, "lat": 10, "dist": 160, "pitch": 28, "yaw": 0, "oy": 150}
+   ],
+   "layers": [
+    {"kind": "field", "at": "hook$", "palette": "heat", "alpha": 0.85, "grow": 1.2, "pulse": true,
+     "blobs": [{"loc": [-30, 15], "r": 22, "v": 0.8}, {"loc": [20, 25], "r": 18, "v": 0.7}, {"loc": [80, 10], "r": 18, "v": 0.7}, {"loc": [-140, 0], "r": 22, "v": 1}, {"loc": [-70, 35], "r": 12, "v": 0.6}]},
+    {"kind": "note", "text": "WARM AREAS ILLUSTRATIVE · NOT GRIDDED DATA", "y": 1170, "at": "f1 +1", "until": "f3"},
+    {"kind": "tag", "loc": [-140, 0], "text": "EQUATORIAL PACIFIC", "sub": "VERY STRONG EL NIÑO", "color": "accent", "dx": -200, "dy": -140, "at": "f3:Burgess", "until": "cta"}
+   ]
+  },
+  {
+   "type": "gauge", "from": "f1:Copernicus", "to": "f1$ -0.1", "label": "OCTOBER 2026 · GLOBAL AIR TEMPERATURE", "value": 1.75, "max": 2, "prefix": "+", "suffix": "°C", "decimals": 2, "icon": "thermo",
+   "at": "f1:Copernicus", "doneAt": "f1:one", "note": "ABOVE PRE-INDUSTRIAL · 1.5°C MARK PASSED 3 MONTHS IN A ROW",
+   "source": "SOURCE: COPERNICUS C3S"
+  },
+  {
+   "type": "facts", "from": "f2:The", "to": "f2$ -0.1", "color": "danger",
+   "items": [
+    {"icon": "thermo", "big": "20.95°C", "text": "OCEAN SURFACE, OUTSIDE POLAR REGIONS · COPERNICUS", "color": "danger", "at": "f2:Copernicus"},
+    {"icon": "flag", "big": "OCTOBER RECORD", "text": "HIGHEST FOR ANY OCTOBER · PER COPERNICUS", "color": "accent", "at": "f2:highest"},
+    {"icon": "check", "big": "BEATS 2023", "text": "THE PREVIOUS OCTOBER RECORD", "color": "info", "at": "f2:ahead"}
+   ],
+   "source": "SOURCE: COPERNICUS C3S (ERA5)"
+  },
+  {
+   "type": "facts", "from": "f3:Copernicus", "to": "f3$ -0.1", "color": "info",
+   "items": [
+    {"icon": "storm", "big": "EL NIÑO", "text": "VERY STRONG · ADDING HEAT · S. BURGESS", "color": "info", "at": "f3:Copernicus"},
+    {"icon": "thermo", "big": "2ND WARMEST", "text": "2026 MOST LIKELY · PER COPERNICUS", "color": "accent", "at": "f3:twenty-six"},
+    {"icon": "flag", "big": "1 IN 5", "text": "CHANCE OF MATCHING 2024 · COPERNICUS", "color": "danger", "at": "f3:one"}
+   ],
+   "source": "SOURCE: COPERNICUS C3S"
+  },
+  {
+   "type": "end", "from": "cta +0.1", "to": "end",
+   "lines": [["THE HOTTEST OCTOBER.", "text"], ["A RECORD 2027?", "accent"]],
+   "sources": ["COPERNICUS C3S VIA REUTERS, AFP, DOWN TO EARTH (SEARCH EXCERPTS)", "OCTOBER 2026 DATA · WARM AREAS ILLUSTRATIVE"],
+   "view": [{"at": "cta -0.6", "lon": -20, "lat": 10, "R": 800}, {"at": "cta +1", "lon": -20, "lat": 10, "R": 600}, {"at": "end", "lon": -10, "lat": 10, "R": 600}]
+  }
+ ],
+ "upload": {
+  "title": "Copernicus: October 2026 Was the Warmest on Record #shorts",
+  "description": "Copernicus says October 2026 was the warmest October on record, 1.75°C above pre-industrial levels, and ocean surface temperatures also hit an October record of 20.95°C. Copernicus now expects 2026 to be the second warmest year.\n\nSources: Copernicus Climate Change Service, reported by Reuters, AFP and Down To Earth (based on search-result excerpts). Warm areas on the map are illustrative.\n\n#climate #weather #copernicus #elnino",
+  "tags": ["climate", "weather", "extreme weather", "news", "Copernicus", "warmest October", "El Niño", "global warming", "ocean temperature"],
+  "cover": "f1 +2"
+ },
+ "thumbnail": {"at": "f1 +2", "number": "+1.75°C", "numberColor": "danger", "source": "OCT 2026 VS PRE-INDUSTRIAL · COPERNICUS", "focus": [0, 15], "lines": [["WARMEST EVER", "accent"], ["WHAT'S NEXT?", "text"]], "zoom": 1.1}
+}
