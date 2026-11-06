@@ -1,0 +1,98 @@
+{
+ "id": "2026-11-06-hera-reaches-didymos",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "We hit an asteroid on purpose. Europe's probe just arrived to inspect it."},
+  {"id": "f1", "text": "The European Space Agency says its Hera spacecraft reached the Didymos asteroid pair this week, after launching in October twenty twenty-four. In September twenty twenty-two, NASA's DART probe slammed into Dimorphos, the small moon of Didymos."},
+  {"id": "f2", "text": "Telescopes on Earth showed the result. Dimorphos now circles its parent about thirty-three minutes faster. But nobody has seen the impact scar up close. Hera carries cameras and instruments to measure the moon's mass, shape and crater."},
+  {"id": "f3", "text": "ESA says Hera will also release two small CubeSats, named Milani and Juventas. Full-resolution images of both asteroids are due on November twenty-fifth. Until then, how the impact reshaped Dimorphos remains unknown."},
+  {"id": "cta", "text": "Will Hera's images show a clear crater? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE CRASH SITE", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "THE RESULT", "seg": "f2", "color": "violet"},
+  {"n": "03", "name": "WHAT'S NEXT", "seg": "f3", "to": "cta -0.2", "color": "info"}
+ ],
+ "upload": {
+  "title": "Europe's Probe Reaches the Asteroid NASA Smashed #shorts",
+  "description": "ESA says its Hera spacecraft has reached the Didymos asteroid pair, the target NASA's DART probe hit in 2022. DART shortened the orbit of the moon Dimorphos by about 33 minutes; Hera will now measure its mass, shape and impact scar. Full-resolution images are due on November 25.\n\nSources: ESA Hera mission pages, Tech Times, Starlust, Universe Today, Space.com.\n\n#science #space #asteroid #ESA",
+  "tags": ["science", "news", "space", "ESA", "Hera", "DART", "NASA", "asteroid", "planetary defense", "Didymos"],
+  "cover": "hook$ -0.2"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [-52.77, 5.23],
+  "number": "33 MIN",
+  "numberColor": "accent",
+  "lines": [["WE HIT IT.", "text"], ["WHAT'S LEFT?", "accent"]],
+  "source": "PER NASA · ESA HERA"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {"at": 0, "lon": -40, "lat": 15, "R": 380},
+    {"at": 4.5, "lon": -52.77, "lat": 8, "R": 560}
+   ],
+   "chip": {"text": "ESA HERA · NOV 2026", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "GUF", "color": "info", "at": "hook:asteroid", "alpha": 0.5}],
+   "markers": [
+    {"loc": [-52.77, 5.23], "color": "accent", "at": "hook:asteroid", "label": "HERA LAUNCHED HERE", "sub": "KOUROU · OCT 2024", "dx": 60, "dy": -110}
+   ],
+   "headline": {"at": "hook:asteroid", "lines": [["HIT ON PURPOSE", "text", 110], ["NOW: THE INSPECTION", "accent", 90]]}
+  },
+  {
+   "type": "timeline",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "FROM CRASH TO CHECK-UP",
+   "color": "accent",
+   "items": [
+    {"date": "SEP 2022", "title": "DART HITS DIMORPHOS", "sub": "NASA TEST OF ASTEROID DEFLECTION", "color": "violet", "at": "f1:September"},
+    {"date": "OCT 2024", "title": "HERA LAUNCHES", "sub": "ESA FOLLOW-UP MISSION", "color": "info", "at": "f1:launching"},
+    {"date": "NOV 2026", "title": "HERA ARRIVES AT DIDYMOS", "sub": "PER ESA", "color": "accent", "big": true, "at": "f1:reached"}
+   ],
+   "source": "SOURCES: ESA · NASA · SPACE.COM"
+  },
+  {
+   "type": "facts",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "color": "violet",
+   "items": [
+    {"icon": "check", "big": "-33 MINUTES", "text": "DIMORPHOS ORBIT, MEASURED FROM EARTH", "color": "accent", "at": "f2:circles"},
+    {"icon": "x", "big": "NO CLOSE LOOK", "text": "IMPACT SCAR NOT SEEN UP CLOSE YET", "color": "danger", "at": "f2:nobody"},
+    {"icon": "eye", "big": "HERA'S JOB", "text": "MEASURE MASS, SHAPE AND CRATER", "color": "info", "at": "f2:Hera"}
+   ],
+   "source": "SOURCES: NASA · ESA · UNIVERSE TODAY"
+  },
+  {
+   "type": "flow",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "WHAT COMES NEXT",
+   "color": "info",
+   "steps": [
+    {"icon": "plane", "title": "HERA AT DIDYMOS", "sub": "ARRIVED NOV 2026", "color": "accent", "at": "f3:Hera"},
+    {"icon": "chip", "title": "TWO CUBESATS", "sub": "MILANI AND JUVENTAS", "color": "violet", "at": "f3:two"},
+    {"icon": "eye", "title": "FULL IMAGES", "sub": "DUE NOV 25 · PER ESA", "color": "info", "at": "f3:Full-resolution"}
+   ],
+   "source": "SOURCES: ESA · TECH TIMES · STARLUST"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": -40, "lat": 15, "R": 800},
+    {"at": "cta +1", "lon": -52.77, "lat": 8, "R": 520},
+    {"at": "end", "lon": -45, "lat": 10, "R": 500}
+   ],
+   "markers": [{"loc": [-52.77, 5.23], "color": "accent"}],
+   "lines": [["A CLEAR CRATER", "text"], ["ON NOVEMBER 25?", "accent"]],
+   "sources": ["ESA · NASA · TECH TIMES · STARLUST · UNIVERSE TODAY", "ARRIVAL AND IMAGE DATES PER ESA REPORTS"]
+  }
+ ]
+}
