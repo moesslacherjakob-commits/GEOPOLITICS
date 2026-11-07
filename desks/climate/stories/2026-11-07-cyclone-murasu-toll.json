@@ -1,0 +1,489 @@
+{
+ "id": "2026-11-07-cyclone-murasu-toll",
+ "lang": "en",
+ "gap": 0.9,
+ "script": [
+  {
+   "id": "hook",
+   "text": "A second cyclone in one week hit India's east coast. What did it cost?"
+  },
+  {
+   "id": "f1",
+   "text": "Cyclone Murasu crossed the Andhra Pradesh coast near Ongole early on November third, says India's weather department. Sustained winds were up to one hundred ten kilometers an hour, with gusts to one hundred twenty. Cyclone Arnab had struck the same coast a week earlier."
+  },
+  {
+   "id": "f2",
+   "text": "Officials now report eight deaths. Five were in Bapatla district, two in Guntur and one in Palnadu, according to a news agency report. Authorities moved thousands of people out of low-lying areas before landfall."
+  },
+  {
+   "id": "f3",
+   "text": "A preliminary assessment puts the damage at one thousand nine hundred eighteen crore rupees. Reports on crop losses differ, so the final figure is not yet clear. Chief Minister Chandrababu Naidu planned to visit affected areas on Friday."
+  },
+  {
+   "id": "cta",
+   "text": "Will another cyclone hit India's east coast this month? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE LANDFALL",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE TOLL",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE DAMAGE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 78,
+     "lat": 14,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": 80.2,
+     "lat": 15.5,
+     "R": 700
+    }
+   ],
+   "chip": {
+    "text": "CYCLONE MURASU",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:cyclone",
+    "lines": [
+     [
+      "2ND CYCLONE",
+      "danger",
+      110
+     ],
+     [
+      "IN ONE WEEK",
+      "text",
+      110
+     ]
+    ]
+   },
+   "markers": [
+    {
+     "loc": [
+      80.05,
+      15.5
+     ],
+     "color": "danger",
+     "at": "hook:cyclone",
+     "label": "ONGOLE",
+     "sub": "",
+     "dx": -170,
+     "dy": -60,
+     "big": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    80.5,
+    15.5
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 80.2,
+     "lat": 15.5,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 80.4,
+     "lat": 15.6,
+     "dist": 22.400000000000002,
+     "pitch": 42,
+     "yaw": -6,
+     "oy": 180
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": 80.2,
+     "lat": 16.0,
+     "dist": 16.0,
+     "pitch": 45,
+     "yaw": 5,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": 80.4,
+     "lat": 16.2,
+     "dist": 22,
+     "pitch": 40,
+     "yaw": -4,
+     "oy": 180
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 81,
+     "lat": 16.5,
+     "dist": 34,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "IN-AP",
+     "color": "danger",
+     "alpha": 0.28,
+     "hatch": true,
+     "at": "hook$",
+     "until": "cta +0.5"
+    },
+    {
+     "kind": "field",
+     "at": "f1",
+     "palette": "rain",
+     "clip": "land",
+     "alpha": 0.7,
+     "grow": 1.1,
+     "blobs": [
+      {
+       "loc": [
+        80.1,
+        15.6
+       ],
+       "r": 1.6,
+       "v": 1
+      },
+      {
+       "loc": [
+        80.4,
+        16.0
+       ],
+       "r": 1.4,
+       "v": 0.8
+      },
+      {
+       "loc": [
+        80.3,
+        16.3
+       ],
+       "r": 1.2,
+       "v": 0.7
+      }
+     ]
+    },
+    {
+     "kind": "track",
+     "at": "hook$",
+     "until": "cta +0.6",
+     "color": "storm",
+     "name": "MURASU",
+     "sub": "CYCLONE · ILLUSTRATIVE",
+     "now": 2,
+     "points": [
+      {
+       "loc": [
+        84.5,
+        13.0
+       ],
+       "cat": "TS",
+       "label": "",
+       "until": "f2"
+      },
+      {
+       "loc": [
+        82.2,
+        14.2
+       ],
+       "cat": 1,
+       "label": "",
+       "until": "f2"
+      },
+      {
+       "loc": [
+        80.05,
+        15.5
+       ],
+       "cat": 1,
+       "label": "TUE · LANDFALL",
+       "dx": -90,
+       "dy": 70,
+       "big": true
+      }
+     ],
+     "steps": [
+      {
+       "at": "hook +0.3",
+       "to": 1,
+       "dur": 1.5
+      },
+      {
+       "at": "f1:crossed",
+       "to": 2,
+       "dur": 3.0
+      }
+     ],
+     "nameUntil": "f3",
+     "nameDx": -40,
+     "nameDy": -130
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      80.05,
+      15.5
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Ongole",
+     "label": {
+      "text": "ONGOLE",
+      "sub": "LANDFALL AREA · IMD",
+      "dx": -150,
+      "dy": -90,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      80.5,
+      15.9
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f2:Five",
+     "label": {
+      "text": "BAPATLA",
+      "sub": "5 DEAD",
+      "dx": 20,
+      "dy": -80,
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      80.45,
+      16.3
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f2:Guntur",
+     "label": {
+      "text": "GUNTUR",
+      "sub": "2 DEAD",
+      "dx": -150,
+      "dy": -70,
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "TRACK AND LOCATIONS APPROXIMATE · IMD, NEWS REPORTS",
+     "y": 1170,
+     "at": "f1 +1"
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f1:Sustained",
+   "to": "f1$ -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "UP TO 110 KM/H",
+     "text": "SUSTAINED WINDS AT LANDFALL · IMD",
+     "color": "danger",
+     "at": "f1:Sustained"
+    },
+    {
+     "icon": "flame",
+     "big": "120 KM/H",
+     "text": "GUSTS",
+     "color": "accent",
+     "at": "f1:gusts"
+    },
+    {
+     "icon": "flag",
+     "big": "2ND IN A WEEK",
+     "text": "ARNAB STRUCK OCT 28",
+     "color": "info",
+     "at": "f1:Cyclone#1"
+    }
+   ],
+   "source": "SOURCE: INDIA METEOROLOGICAL DEPARTMENT"
+  },
+  {
+   "type": "facts",
+   "from": "f2:Officials",
+   "to": "f2$ -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "x",
+     "big": "8 DEAD",
+     "text": "ANDHRA PRADESH · NEWS AGENCY REPORT",
+     "color": "danger",
+     "at": "f2:eight"
+    },
+    {
+     "icon": "people",
+     "big": "5 · 2 · 1",
+     "text": "BAPATLA · GUNTUR · PALNADU",
+     "color": "accent",
+     "at": "f2:Five"
+    },
+    {
+     "icon": "shield",
+     "big": "EVACUATIONS",
+     "text": "LOW-LYING AREAS CLEARED BEFORE LANDFALL",
+     "color": "info",
+     "at": "f2:Authorities"
+    }
+   ],
+   "source": "SOURCE: ANDHRA PRADESH OFFICIALS VIA NEWS REPORTS"
+  },
+  {
+   "type": "facts",
+   "from": "f3:A",
+   "to": "f3$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "money",
+     "big": "₹1,918 CRORE",
+     "text": "PRELIMINARY DAMAGE ESTIMATE · OFFICIALS",
+     "color": "danger",
+     "at": "f3:preliminary"
+    },
+    {
+     "icon": "wheat",
+     "big": "CROP LOSS UNCLEAR",
+     "text": "REPORTS DIFFER",
+     "color": "accent",
+     "at": "f3:Reports"
+    },
+    {
+     "icon": "flag",
+     "big": "CM VISIT FRIDAY",
+     "text": "CHANDRABABU NAIDU · PLANNED",
+     "color": "info",
+     "at": "f3:Chief"
+    }
+   ],
+   "source": "SOURCE: ANDHRA PRADESH OFFICIALS VIA NEWS REPORTS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "8 DEAD, ₹1,918 CRORE LOSS.",
+     "text"
+    ],
+    [
+     "A THIRD CYCLONE?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "IMD, AL JAZEERA, DOWN TO EARTH, DECCAN CHRONICLE, IANS (SEARCH EXCERPTS)",
+    "NOV 3–6, 2026 · TRACK APPROXIMATE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 78,
+     "lat": 16,
+     "R": 700
+    },
+    {
+     "at": "cta +1",
+     "lon": 82,
+     "lat": 16,
+     "R": 900
+    },
+    {
+     "at": "end",
+     "lon": 82,
+     "lat": 16,
+     "R": 900
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      80.05,
+      15.5
+     ],
+     "color": "accent"
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Cyclone Murasu Leaves 8 Dead in Andhra Pradesh #shorts",
+  "description": "Cyclone Murasu crossed India's Andhra Pradesh coast near Ongole on November 3, the second cyclone on that coast in a week. Officials now report eight deaths and a preliminary damage estimate of 1,918 crore rupees.\n\nSources: India Meteorological Department, Al Jazeera, Down To Earth, Deccan Chronicle, IANS (based on search-result excerpts). Track and locations on the map are approximate.\n\n#climate #weather #cyclone #india",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "Cyclone Murasu",
+   "Andhra Pradesh",
+   "India",
+   "cyclone",
+   "Ongole"
+  ],
+  "cover": "f1 +2"
+ },
+ "thumbnail": {
+  "at": "f1:Ongole",
+  "number": "8 DEAD",
+  "numberColor": "danger",
+  "source": "CYCLONE MURASU · ANDHRA OFFICIALS · NOV 6",
+  "focus": [
+   80.05,
+   15.5
+  ],
+  "lines": [
+   [
+    "2ND IN A WEEK",
+    "accent"
+   ]
+  ],
+  "zoom": 1.15
+ }
+}
