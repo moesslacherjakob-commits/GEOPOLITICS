@@ -1,0 +1,341 @@
+{
+ "id": "2026-11-07-south-africa-anc",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "South Africa's ANC is heading for a record low. Who runs the cities?"
+  },
+  {
+   "id": "f1",
+   "text": "Early results show the ANC at about thirty-two percent of the vote. That is roughly fourteen points less than in 2021, and its worst local result since 1994, reports say. The Democratic Alliance follows with about twenty-five percent."
+  },
+  {
+   "id": "f2",
+   "text": "Voters reportedly punished the party over crime, unemployment, corruption scandals and failing water and electricity. About sixteen million of twenty-nine million registered voters cast ballots, the electoral commission says. That is an estimated turnout of fifty-four percent."
+  },
+  {
+   "id": "f3",
+   "text": "No party is winning outright majorities, so coalition talks will likely decide major cities. In Johannesburg, early counts had the Democratic Alliance ahead of the ANC. Analysts stress the figures could still shift, and local votes do not decide national power."
+  },
+  {
+   "id": "cta",
+   "text": "Will a coalition run Johannesburg again? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "RECORD LOW",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "WHY VOTERS LEFT",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "COALITION TALKS",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "South Africa: ANC's Worst Local Vote Since 1994 #shorts",
+  "description": "Early results from South Africa's municipal elections show the ruling ANC at about 32% of the vote, roughly 14 percentage points below 2021 and its weakest local result since 1994, according to media reports. The Democratic Alliance is at about 25%. Voters reportedly punished the ANC over crime, unemployment, corruption scandals and failing basic services. About 15.9 million of 29.2 million registered voters cast ballots, an estimated turnout of 54.5%, the electoral commission said. No party is winning outright majorities, so coalition talks will likely decide major cities; in Johannesburg the Democratic Alliance was ahead in early counts. Analysts stress the figures are early and could still shift, and local elections do not directly decide national power.\n\nSources:\nAP via The Washington Post, Nov 6, 2026: South Africa's once-dominant ANC faces huge decline in voter support, early election results show\nAl Jazeera, Nov 5, 2026: South Africa's ANC on track for new lows in local polls\nThe Times of Israel (liveblog), Nov 2026: South Africa's ANC continues decline as early municipal election results show big losses\nPolity.org.za, Nov 5, 2026: ANC support falls sharply in early South Africa municipal election results\nBusinessTech, Nov 2026: 2026 election results\n\n#geopolitics #SouthAfrica #ANC #elections #news",
+  "tags": [
+   "geopolitics",
+   "South Africa",
+   "ANC",
+   "Democratic Alliance",
+   "municipal elections",
+   "Johannesburg",
+   "coalition",
+   "world news"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:Early",
+  "focus": "Johannesburg",
+  "zoom": 1.5,
+  "number": "32%",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "ANC SLUMPS",
+    "text"
+   ],
+   [
+    "COALITION NEXT?",
+    "accent"
+   ]
+  ],
+  "source": "EARLY RESULTS · NOV 2026 · PER MEDIA REPORTS"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 25,
+     "lat": -29,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": 25,
+     "lat": -28,
+     "R": 520
+    }
+   ],
+   "chip": {
+    "text": "SOUTH AFRICA · NOV 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "ZAF",
+     "color": "danger",
+     "at": "hook:ANC"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Johannesburg",
+     "color": "accent",
+     "at": "hook:low.",
+     "label": "JOHANNESBURG",
+     "sub": "CITIES AT STAKE",
+     "dx": -140,
+     "dy": -80,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:ANC",
+    "lines": [
+     [
+      "ANC AT",
+      "text",
+      110
+     ],
+     [
+      "RECORD LOW?",
+      "danger",
+      110
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:Who",
+    "icon": "people",
+    "iconColor": "accent",
+    "color": "accent",
+    "kicker": "LOCAL VOTE",
+    "title": "WHO GOVERNS?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    25,
+    -29
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 25,
+     "lat": -28,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 25,
+     "lat": -29,
+     "dist": 30,
+     "pitch": 46,
+     "yaw": -3,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 28,
+     "lat": -27,
+     "dist": 24,
+     "pitch": 48,
+     "yaw": 3,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 28,
+     "lat": -26.2,
+     "dist": 10,
+     "pitch": 50,
+     "yaw": -3,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 26,
+     "lat": -28,
+     "dist": 34,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "ZAF",
+     "color": "danger",
+     "alpha": 0.3,
+     "fill": 0.06,
+     "at": "f1"
+    },
+    {
+     "kind": "stamp",
+     "text": "ANC ≈ 32%",
+     "icon": "flag",
+     "color": "danger",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f1:Early",
+     "until": "f1:Democratic",
+     "note": "EARLY RESULTS · PER MEDIA REPORTS"
+    },
+    {
+     "kind": "stamp",
+     "text": "DA ≈ 25%",
+     "icon": "flag",
+     "color": "info",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f1:Democratic",
+     "until": "f2 -0.2",
+     "note": "EARLY RESULTS · NOT FINAL"
+    },
+    {
+     "kind": "stamp",
+     "text": "TURNOUT ≈ 54%",
+     "icon": "people",
+     "color": "accent",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f2:About",
+     "until": "f3 -0.2",
+     "note": "PER ELECTORAL COMMISSION"
+    },
+    {
+     "kind": "tint",
+     "iso": "ZA-GT",
+     "color": "accent",
+     "alpha": 0.5,
+     "fill": 0.12,
+     "pulse": true,
+     "at": "f3"
+    },
+    {
+     "kind": "marker",
+     "loc": "Johannesburg",
+     "style": "pulse",
+     "color": "accent",
+     "at": "f3",
+     "until": "cta -0.2",
+     "label": {
+      "text": "JOHANNESBURG",
+      "sub": "DA AHEAD IN EARLY COUNT",
+      "dx": 60,
+      "dy": 90
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "NO MAJORITIES",
+     "icon": "x",
+     "color": "info",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f3:No",
+     "until": "f3:In",
+     "note": "COALITIONS LIKELY · PER REPORTS"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 20,
+     "lat": -28,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 26,
+     "lat": -28,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": 26,
+     "lat": -28,
+     "R": 520
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "ZAF",
+     "color": "danger",
+     "alpha": 0.6
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Johannesburg",
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "ANOTHER COALITION",
+     "text"
+    ],
+    [
+     "IN JOHANNESBURG?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: AP, AL JAZEERA, TIMES OF ISRAEL, POLITY, BUSINESSTECH",
+    "NOV 2026 · EARLY RESULTS"
+   ]
+  }
+ ]
+}
