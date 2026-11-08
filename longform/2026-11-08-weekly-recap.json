@@ -23,17 +23,17 @@
   },
   {
    "id": "ch3",
-   "text": "Number three is a defense pact taking shape around Saudi Arabia. Quick question. Which country joins Saudi Arabia and Pakistan in the Mecca Defence Alliance? Take a guess. Turkey. The three signed the pact on August seventh, and Turkey's parliament has now ratified it, clearing the way for military support to Saudi Arabia. Turkish officials describe the pact as defensive. They told Reuters that Turkey's contribution would be limited to weapons, equipment and intelligence. Meanwhile, the Saudi and Syrian defense ministries signed a military cooperation agreement during Syrian President Ahmed al-Sharaa's visit to Riyadh, according to Semafor. Its terms have not been made public. Syria's foreign minister, Asaad al-Shaibani, said discussions are underway to evaluate Syria's entry into the alliance. An analyst told Middle East Eye that the talks are at an early stage, and that Syria is unlikely to join soon. Reuters reported that Syria is also considering helping Saudi Arabia in its war against the Houthis. Next: the talks returning to Abu Dhabi.",
+   "text": "Number three is a defense pact taking shape around Saudi Arabia. Quick question. Which country joins Saudi Arabia and Pakistan in the Mecca Defence Alliance? Take a guess. Turkey. The three signed the pact on August seventh, and Turkey's parliament has now ratified it, clearing the way for military support to Saudi Arabia. Turkish officials describe the pact as defensive. Meanwhile, the Saudi and Syrian defense ministries signed a military cooperation agreement during Syrian President Ahmed al-Sharaa's visit to Riyadh, according to Semafor. Its terms have not been made public. Syria's foreign minister, Asaad al-Shaibani, said discussions are underway to evaluate Syria's entry into the alliance. An analyst told Middle East Eye that the talks are at an early stage, and that Syria is unlikely to join soon. Next: the talks returning to Abu Dhabi.",
    "pauseBefore": 0.4
   },
   {
    "id": "ch2",
-   "text": "Number two is Ukraine. U.S. envoy Steve Witkoff announced that the United States will mediate Russia-Ukraine talks in Abu Dhabi on November tenth and eleventh, with Jared Kushner also on the American team. The Kremlin has confirmed the dates. Axios and other outlets report these would be the first U.S.-mediated talks since February, a gap of nine months. Kyiv Post describes them as working level. Witkoff listed security arrangements, de-escalation and humanitarian issues on the agenda. Ukraine accuses Russia of using a six-day ceasefire near Oleshky to reinforce its positions. No concessions have been announced. Meanwhile, the strikes continue. On November second, Zelenskyy said Russian attacks hit power infrastructure in four regions and left hundreds of thousands without electricity. Ukraine says it shot down three hundred seventy-one of four hundred thirty-three drones. Russia says Ukrainian drones hit an industrial site in Nizhny Novgorod. This weekend, AP reported that missiles targeting Kyiv wounded five people, and Zelenskyy accused Russia of escalating strikes before the talks. Next: the Iran war.",
+   "text": "Number two is Ukraine. U.S. envoy Steve Witkoff announced that the United States will mediate Russia-Ukraine talks in Abu Dhabi on November tenth and eleventh, with Jared Kushner also on the American team. The Kremlin has confirmed the dates. Axios and other outlets report these would be the first U.S.-mediated talks since February, a gap of nine months. Kyiv Post describes them as working level. Witkoff listed security arrangements, de-escalation and humanitarian issues on the agenda. No concessions have been announced so far. Meanwhile, the strikes continue. On November second, Zelenskyy said Russian attacks hit power infrastructure in four regions and left hundreds of thousands without electricity. Ukraine says it shot down three hundred seventy-one of four hundred thirty-three drones. Russia says Ukrainian drones hit an industrial site in Nizhny Novgorod. This weekend, AP reported that missiles targeting Kyiv wounded five people, and Zelenskyy accused Russia of escalating strikes before the talks. Next: the Iran war.",
    "pauseBefore": 0.4
   },
   {
    "id": "ch1",
-   "text": "Number one is the Iran war. On November second, three U.S. officials told CBS News that American forces carried out limited defensive strikes near the Strait of Hormuz. This week, President Trump confirmed new limited strikes on an Iranian air defense system, which he called minor. At the same time, Qatar has presented a draft memorandum of understanding. Reuters, citing sources, reports the United States approved it. Qatar says both sides are reviewing it, and a senior Iranian official said the two sides are far from a deal. Mohsen Rezaei, an Iranian security official, says Hormuz reopens only after Iran's seven conditions are met. On Thursday, Iran's Revolutionary Guard said two oil tankers and a tugboat caught fire, and that one tanker hit a mine. That claim is unverified. On Saturday, a Guard spokesman said Iran's limit of about two thousand kilometers on missile range has been lifted. The Associated Press notes Iran is not known to have longer-range missiles. In late October, Gulf states were reportedly told to prepare for a possible short, intense campaign, according to Middle East Eye and the Wall Street Journal as cited by Fox News. Axios reported before the midterms that Israel's prime minister was pressing Trump to strike after the vote, while Secretary of State Rubio said Trump had made no decision. The United States says its naval blockade of Iranian ports continues. About a fifth of the world's oil normally passes through Hormuz, according to the U.S. Energy Information Administration.",
+   "text": "Number one is the Iran war. On November second, three U.S. officials told CBS News that American forces carried out limited defensive strikes near the Strait of Hormuz. This week, President Trump confirmed new limited strikes on an Iranian air defense system, which he called minor. At the same time, Qatar has presented a draft memorandum of understanding. Reports citing sources close to the mediators say the United States approved it. Qatar says both sides are reviewing it, and a senior Iranian official told Reuters the two sides are far from a deal. Mohsen Rezaei, an Iranian security official, says Hormuz reopens only after Iran's seven conditions are met. On Thursday, Iran's Revolutionary Guard said two oil tankers and a tugboat caught fire, and that one tanker hit a mine. That claim is unverified. On Saturday, a Guard spokesman said Iran's limit of about two thousand kilometers on missile range has been lifted. The Associated Press notes Iran is not known to have longer-range missiles. In late October, Gulf states were reportedly told to prepare for a possible short, intense campaign, according to Middle East Eye and the Wall Street Journal as cited by Fox News. Axios reported before the midterms that Israel's prime minister was pressing Trump to strike after the vote, while Secretary of State Rubio said Trump had made no decision. The United States says its naval blockade of Iranian ports continues. About a fifth of the world's oil normally passes through Hormuz, according to the U.S. Energy Information Administration.",
    "pauseBefore": 0.4
   },
   {
@@ -1197,15 +1197,6 @@
      "oy": 40
     },
     {
-     "at": "ch3:considering",
-     "lon": 44,
-     "lat": 17,
-     "dist": 20,
-     "pitch": 46,
-     "yaw": 0,
-     "oy": 40
-    },
-    {
      "at": "ch3:Next:",
      "lon": 42,
      "lat": 27,
@@ -1259,13 +1250,6 @@
      "y": 890,
      "at": "ch3:Eye",
      "until": "ch3:Eye +2.8"
-    },
-    {
-     "kind": "note",
-     "text": "REUTERS: SYRIA MAY HELP SAUDI ARABIA",
-     "y": 890,
-     "at": "ch3:also",
-     "until": "ch3:also +2.8"
     },
     {
      "kind": "tint",
@@ -1370,21 +1354,8 @@
       250
      ],
      "at": "ch3:defensive.",
-     "until": "ch3:contribution",
-     "note": "PER TURKISH OFFICIALS"
-    },
-    {
-     "kind": "stamp",
-     "text": "WEAPONS · EQUIPMENT · INTEL",
-     "icon": "jet",
-     "color": "info",
-     "screen": [
-      960,
-      250
-     ],
-     "at": "ch3:contribution",
      "until": "ch3:ministries",
-     "note": "TURKEY'S ROLE · REUTERS"
+     "note": "PER TURKISH OFFICIALS"
     },
     {
      "kind": "tint",
@@ -1462,20 +1433,6 @@
      "at": "ch3:analyst",
      "until": "ch3:Next:",
      "note": "MIDDLE EAST EYE ANALYST"
-    },
-    {
-     "kind": "marker",
-     "loc": "Aden",
-     "style": "x",
-     "color": "danger",
-     "at": "ch3:Houthis.",
-     "until": "ch3$",
-     "label": {
-      "text": "HOUTHI WAR",
-      "dx": -250,
-      "dy": -60,
-      "sub": "SYRIA CONSIDERING HELP · REUTERS"
-     }
     },
     {
      "kind": "stamp",
@@ -1587,15 +1544,6 @@
      "oy": 40
     },
     {
-     "at": "ch2:Ukraine#1",
-     "lon": 32.7,
-     "lat": 46.6,
-     "dist": 9,
-     "pitch": 50,
-     "yaw": 4,
-     "oy": 40
-    },
-    {
      "at": "ch2:Meanwhile,",
      "lon": 32,
      "lat": 49,
@@ -1701,13 +1649,6 @@
      "y": 890,
      "at": "ch2:humanitarian",
      "until": "ch2:humanitarian +2.8"
-    },
-    {
-     "kind": "note",
-     "text": "UKRAINE ACCUSES RUSSIA",
-     "y": 890,
-     "at": "ch2:accuses",
-     "until": "ch2:accuses +2.8"
     },
     {
      "kind": "tint",
@@ -1830,21 +1771,8 @@
       250
      ],
      "at": "ch2:Witkoff#1",
-     "until": "ch2:six-day",
-     "note": "SECURITY · DE-ESCALATION · HUMANITARIAN · PER WITKOFF"
-    },
-    {
-     "kind": "stamp",
-     "text": "CLAIM: CEASEFIRE ABUSED",
-     "icon": "eye",
-     "color": "oil",
-     "screen": [
-      960,
-      250
-     ],
-     "at": "ch2:six-day",
      "until": "ch2:concessions",
-     "note": "UKRAINE ACCUSES RUSSIA · OLESHKY"
+     "note": "SECURITY · DE-ESCALATION · HUMANITARIAN · PER WITKOFF"
     },
     {
      "kind": "stamp",
@@ -2040,7 +1968,7 @@
      "oy": 40
     },
     {
-     "at": "ch1:Reuters,",
+     "at": "ch1:Reports",
      "lon": 48,
      "lat": 29,
      "dist": 48,
@@ -2241,16 +2169,16 @@
     },
     {
      "kind": "marker",
-     "loc": "Qeshm",
+     "loc": "Strait of Hormuz",
      "style": "x",
      "color": "danger",
      "at": "ch1:limited",
      "until": "ch1:This",
      "label": {
-      "text": "QESHM ISLAND",
+      "text": "NEAR HORMUZ",
       "dx": -300,
       "dy": -70,
-      "sub": "U.S. STRIKES · NOV 2 · PER AP / U.S. OFFICIALS"
+      "sub": "U.S. STRIKES · NOV 2 · PER U.S. OFFICIALS · CBS"
      }
     },
     {
@@ -2276,7 +2204,7 @@
       250
      ],
      "at": "ch1:confirmed",
-     "until": "ch1:Reuters,",
+     "until": "ch1:Reports",
      "note": "TRUMP: AIR DEFENSE SYSTEM · 'MINOR'"
     },
     {
@@ -2285,7 +2213,7 @@
      "style": "pulse",
      "color": "info",
      "at": "ch1:Qatar",
-     "until": "ch1:Reuters,",
+     "until": "ch1:Reports",
      "label": {
       "text": "QATAR",
       "dx": -60,
@@ -2310,9 +2238,9 @@
       960,
       250
      ],
-     "at": "ch1:Reuters,",
+     "at": "ch1:Reports",
      "until": "ch1:says",
-     "note": "REUTERS · CITING SOURCES"
+     "note": "UNNAMED SOURCES · NOT CONFIRMED BY QATAR"
     },
     {
      "kind": "stamp",
@@ -2895,7 +2823,7 @@
  ],
  "upload": {
   "title": "Hormuz, Yemen, Abu Dhabi: Top 5 Stories of the Week",
-  "description": "Five stories shaped the week of November 2 to 8, 2026: South Africa's ruling ANC dropping in early municipal results, the Houthi advance to within 80 kilometers of Aden in Yemen, the Mecca Defence Alliance and Saudi Arabia's new defense agreement with Syria, the U.S.-mediated Russia-Ukraine talks planned for Abu Dhabi on November 10 and 11, and the Iran war with new strikes, a Qatari draft memorandum and Iran's announcement that it has lifted its missile range limit. Every claim is attributed to the source that reported it; unverified claims are labelled as such.\n\nSources:\nAP via Washington Post: South Africa municipal election early results, ANC share and turnout (Nov 2026)\nAl Jazeera: South Africa local elections coverage (Nov 2026)\nReuters (via Investing.com, Internazionale): Yemen's Houthis advance to within 80 km of Aden, sources say (Nov 2, 2026)\nAl Jazeera: Yemeni government forces claim control of strategic al-Jawf mountain range (Nov 4, 2026)\nAl Jazeera: Houthis take control of Yemen's Red Sea coast, key shipping route (Sept 11, 2026)\nAP: Iran-backed Houthi rebels take strategic port city in Yemen (Sept 10, 2026)\nSemafor: Saudi Arabia signs defense deal with Syria (Nov 6, 2026)\nJerusalem Post / DTN: Turkey's parliament ratifies Mecca defense pact (Nov 5-6, 2026)\nMiddle East Eye: Why is Syria considering joining the Saudi-Turkey-Pakistan defence pact?\nJust Security: Early Edition, Nov 5, 2026\nKyiv Post: working-level Abu Dhabi talks, last U.S.-mediated round in February (Nov 2026)\nAl Jazeera: Yemen's leader announces military operation to retake Houthi-held territory (Oct 4, 2026)\nAl Jazeera: Rezaei says Hormuz reopens only after Iran's conditions (Nov 3, 2026)\nAxios, The Hill, Moscow Times: Ukraine accuses Russia of using the Oleshky ceasefire to reinforce (Nov 4, 2026)\nAxios: U.S., Russia and Ukraine to resume peace talks in Abu Dhabi next week, Witkoff says (Nov 3, 2026)\nThe Hill / Fox News: Witkoff announces Abu Dhabi talks, Nov 10-11 (Nov 2026)\nAl Jazeera: Zelenskyy accuses Russia of escalating strikes ahead of peace talks (Nov 7, 2026)\nAP: Missiles target Kyiv and wound 5 as Ukraine prepares for talks with Russia and the US (Nov 7, 2026)\nReuters via Newcastle Herald, RFE/RL, NBC News, Euronews: Russian strikes on Ukraine's power infrastructure, Nov 2, 2026\nMoscow Times / US News (Reuters): Kremlin confirms Abu Dhabi talks (Nov 4, 2026)\nCBS News live updates: U.S. defensive strikes on Iranian targets (Nov 2-7, 2026)\nReuters via Tribune / Al Jazeera: Qatar-presented draft memorandum on U.S.-Iran (Nov 6, 2026)\nAP via US News and others: Iran says it has lifted its self-imposed limit on missile ranges (Nov 7, 2026)\nIran International: Iran says missiles no longer bound by range limits (Nov 7, 2026)\nABC News (Australia): Explosions heard in Strait of Hormuz as Iran reviews de-escalation proposals (Nov 8, 2026)\nAxios / WSJ via Fox News and Middle East Eye: Gulf states told to prepare, Netanyahu pressing for strikes after the midterms (Oct 28 - Nov 3, 2026)\nU.S. Energy Information Administration (EIA): World Oil Transit Chokepoints\n\n#geopolitics #news #weeklyrecap #Iran #Ukraine #Yemen",
+  "description": "Five stories shaped the week of November 2 to 8, 2026: South Africa's ruling ANC dropping in early municipal results, the Houthi advance to within 80 kilometers of Aden in Yemen, the Mecca Defence Alliance and Saudi Arabia's new defense agreement with Syria, the U.S.-mediated Russia-Ukraine talks planned for Abu Dhabi on November 10 and 11, and the Iran war with new strikes, a Qatari draft memorandum and Iran's announcement that it has lifted its missile range limit. Every claim is attributed to the source that reported it; unverified claims are labelled as such.\n\nSources:\nAP via Washington Post: South Africa municipal election early results, ANC share (Nov 2026)\nAl Jazeera: South Africa local elections coverage (Nov 2026)\nReuters (via Investing.com, Internazionale): Yemen's Houthis advance to within 80 km of Aden, sources say (Nov 2, 2026)\nAl Jazeera: Yemeni government forces claim control of strategic al-Jawf mountain range (Nov 4, 2026)\nAl Jazeera: Houthis take control of Yemen's Red Sea coast, key shipping route (Sept 11, 2026)\nAP: Iran-backed Houthi rebels take strategic port city in Yemen (Sept 10, 2026)\nSemafor: Saudi Arabia signs defense deal with Syria (Nov 6, 2026)\nJerusalem Post / DTN: Turkey's parliament ratifies Mecca defense pact (Nov 5-6, 2026)\nReuters (as cited by JPost, DTN and Semafor): Mecca pact ratification coverage (Nov 2026)\nMiddle East Eye: Why is Syria considering joining the Saudi-Turkey-Pakistan defence pact?\nJust Security: Early Edition, Nov 5, 2026\nKyiv Post: working-level Abu Dhabi talks, last U.S.-mediated round in February (Nov 2026)\nAl Jazeera: Yemen's leader announces military operation to retake Houthi-held territory (Oct 4, 2026)\nAl Jazeera: Rezaei says Hormuz reopens only after Iran's conditions (Nov 3, 2026)\nAxios: U.S., Russia and Ukraine to resume peace talks in Abu Dhabi next week, Witkoff says (Nov 3, 2026)\nThe Hill / Fox News: Witkoff announces Abu Dhabi talks, Nov 10-11 (Nov 2026)\nAl Jazeera: Zelenskyy accuses Russia of escalating strikes ahead of peace talks (Nov 7, 2026)\nAP: Missiles target Kyiv and wound 5 as Ukraine prepares for talks with Russia and the US (Nov 7, 2026)\nReuters via Newcastle Herald, RFE/RL, NBC News, Euronews: Russian strikes on Ukraine's power infrastructure, Nov 2, 2026\nMoscow Times / US News (Reuters): Kremlin confirms Abu Dhabi talks (Nov 4, 2026)\nCBS News live updates: U.S. defensive strikes on Iranian targets (Nov 2-7, 2026)\nDaily Times / Ynet / Pakistan Today: US approves Qatar-presented draft memorandum, per sources (Nov 3-6, 2026)\nTribune (Reuters): US and Iran review draft proposal to end war, Qatar says (Nov 2026)\nU.S. News (Reuters): senior Iranian official says a deal with the U.S. is still far off (Nov 5, 2026)\nAP via US News and others: Iran says it has lifted its self-imposed limit on missile ranges (Nov 7, 2026)\nIran International: Iran says missiles no longer bound by range limits (Nov 7, 2026)\nABC News (Australia): Explosions heard in Strait of Hormuz as Iran reviews de-escalation proposals (Nov 8, 2026)\nAxios / WSJ via Fox News and Middle East Eye: Gulf states told to prepare, Netanyahu pressing for strikes after the midterms (Oct 28 - Nov 3, 2026)\nU.S. Energy Information Administration (EIA): World Oil Transit Chokepoints\n\n#geopolitics #news #weeklyrecap #Iran #Ukraine #Yemen",
   "tags": [
    "geopolitics",
    "weekly recap",
