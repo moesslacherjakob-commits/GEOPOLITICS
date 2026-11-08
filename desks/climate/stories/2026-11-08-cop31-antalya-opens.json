@@ -1,0 +1,335 @@
+{
+ "id": "2026-11-08-cop31-antalya-opens",
+ "lang": "en",
+ "gap": 0.9,
+ "script": [
+  {
+   "id": "hook",
+   "text": "The U.N. says the one point five limit is slipping away. Can this summit change that?"
+  },
+  {
+   "id": "f1",
+   "text": "COP thirty-one opens Monday in Antalya, Türkiye, and runs until November twentieth. Türkiye is the host and holds the presidency. Australia leads the negotiations. Climate Home News says it is the first summit facing a near-certain overshoot of one point five."
+  },
+  {
+   "id": "f2",
+   "text": "The U.N. Environment Programme says current national pledges point to about two point six degrees of warming this century. Current policies point to about two point eight. UNEP says the chance of holding one point five without overshoot has been lost."
+  },
+  {
+   "id": "f3",
+   "text": "Money is a main fault line. At COP thirty, countries agreed to call for efforts to triple adaptation finance to one hundred twenty billion dollars a year by twenty thirty-five. Climate Home News says developing countries want firm reassurances in Antalya."
+  },
+  {
+   "id": "cta",
+   "text": "Will Antalya deliver more money for adaptation? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE SUMMIT",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE GAP",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE MONEY",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 20,
+     "lat": 30,
+     "R": 330
+    },
+    {
+     "at": 3.6,
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 560
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "color": "accent",
+     "at": 0.5,
+     "label": "ANTALYA",
+     "big": true
+    }
+   ],
+   "chip": {
+    "text": "COP31 · OPENS MONDAY",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:limit",
+    "lines": [
+     [
+      "1.5°C LIMIT",
+      "danger",
+      120
+     ],
+     [
+      "SLIPPING AWAY?",
+      "text",
+      110
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    30.7,
+    36.9
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 30.7,
+     "lat": 36.9,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 31,
+     "lat": 37.5,
+     "dist": 22,
+     "pitch": 40,
+     "yaw": 8,
+     "oy": 170
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": 20,
+     "lat": 35,
+     "dist": 110,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 160
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": 25,
+     "lat": 20,
+     "dist": 150,
+     "pitch": 28,
+     "yaw": -4,
+     "oy": 160
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 30.7,
+     "lat": 36.9,
+     "dist": 60,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 150
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "TUR",
+     "color": "accent",
+     "alpha": 0.22,
+     "glow": true,
+     "at": "f1:Antalya,"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1:Antalya,",
+     "label": {
+      "text": "ANTALYA · COP31",
+      "dx": -170,
+      "dy": -120
+     }
+    },
+    {
+     "kind": "note",
+     "text": "LOCATIONS SHOWN FOR ORIENTATION",
+     "y": 1170,
+     "at": "f1 +1",
+     "until": "f1$"
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "from": "f2:The",
+   "to": "f2$ -0.1",
+   "label": "WARMING THIS CENTURY · UNEP PROJECTIONS",
+   "sublabel": "DEGREES ABOVE PRE-INDUSTRIAL",
+   "bars": [
+    {
+     "label": "1.5°C GOAL",
+     "value": 1.5,
+     "display": "1.5°C",
+     "color": "ok",
+     "at": "f2:Programme",
+     "dur": 1
+    },
+    {
+     "label": "NATIONAL PLEDGES",
+     "value": 2.6,
+     "display": "≈2.6°C",
+     "color": "accent",
+     "at": "f2:two",
+     "dur": 1
+    },
+    {
+     "label": "CURRENT POLICIES",
+     "value": 2.8,
+     "display": "≈2.8°C",
+     "color": "danger",
+     "at": "f2:Current",
+     "dur": 1
+    }
+   ],
+   "badge": {
+    "text": "1.5°C WITHOUT OVERSHOOT: LOST · UNEP",
+    "at": "f2:lost"
+   },
+   "source": "SOURCE: UNEP EMISSIONS GAP REPORT 2026 (OCT 21)"
+  },
+  {
+   "type": "facts",
+   "from": "f3:Money",
+   "to": "f3$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "flag",
+     "big": "TRIPLE",
+     "text": "COUNTRIES AGREED TO CALL FOR EFFORTS · COP30",
+     "color": "accent",
+     "at": "f3:At"
+    },
+    {
+     "icon": "money",
+     "big": "$120 BILLION",
+     "text": "ADAPTATION FINANCE A YEAR BY 2035 · COP30 CALL",
+     "color": "info",
+     "at": "f3:one"
+    },
+    {
+     "icon": "people",
+     "big": "NO DEAL YET",
+     "text": "ADAPTATION TALKS UNRESOLVED AT BONN · CLIMATE HOME NEWS",
+     "color": "danger",
+     "at": "f3:Climate"
+    }
+   ],
+   "source": "SOURCE: CLIMATE HOME NEWS · UN CLIMATE TALKS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "COP31 OPENS MONDAY.",
+     "text"
+    ],
+    [
+     "MORE ADAPTATION MONEY?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "UNEP · CLIMATE HOME NEWS · AL-MONITOR (EXCERPTS)",
+    "MAP LOCATIONS FOR ORIENTATION"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": 25,
+     "lat": 36.9,
+     "R": 600
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "COP31 Opens as the UN Says 1.5°C Is Slipping Away #shorts",
+  "description": "COP31 opens Monday in Antalya, Türkiye. The U.N. Environment Programme says current national pledges point to about 2.6°C of warming this century, and that the chance of holding 1.5°C without overshoot has been lost. Adaptation finance is a main fault line.\n\nSources: UNEP Emissions Gap Report 2026, Climate Home News, Al-Monitor, Eco-Business (based on search-result excerpts). Map locations are for orientation.\n\n#climate #cop31 #antalya #parisagreement",
+  "tags": [
+   "climate",
+   "weather",
+   "news",
+   "COP31",
+   "Antalya",
+   "Paris Agreement",
+   "UNEP",
+   "Emissions Gap Report",
+   "climate summit",
+   "adaptation finance"
+  ],
+  "cover": "f2 +1"
+ },
+ "thumbnail": {
+  "at": "f2 +1",
+  "number": "2.6°C",
+  "numberColor": "danger",
+  "source": "PLEDGES PATH · UNEP, OCT 2026",
+  "focus": [
+   30.7,
+   36.9
+  ],
+  "lines": [
+   [
+    "SUMMIT OPENS",
+    "text"
+   ],
+   [
+    "FIX IT?",
+    "accent"
+   ]
+  ],
+  "zoom": 1.15
+ }
+}
