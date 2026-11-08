@@ -5,40 +5,40 @@
  "script": [
   {
    "id": "hook",
-   "text": "Russia and Ukraine are about to talk again, while missiles still hit Kyiv. Yemen's Houthis are fifty miles from Aden. And Iran says its missiles have no range limit."
+   "text": "Russia and Ukraine are about to talk again, while missiles still hit Kyiv. Reuters sources say Yemen's Houthis are within fifty miles of Aden. And Iran says its missiles have no range limit."
   },
   {
    "id": "promise",
-   "text": "Five stories, ranked by impact. Number one is the Iran war, where strikes, a draft deal and a closed strait all happen at once. And one date, November tenth, decides whether Abu Dhabi hosts the first talks on Ukraine in nine months."
+   "text": "Five stories, ranked by impact. Number one is the Iran war, where strikes, a draft deal and a strait Iran says stays closed all happen at once. And on November tenth, Russia and Ukraine are due to sit down in Abu Dhabi, for the first U.S.-mediated talks since February."
   },
   {
    "id": "ch5",
-   "text": "Number five is a vote in South Africa. Municipal elections were held this week, and early results are a blow to the ruling African National Congress. The ANC had about thirty-two percent, according to early counts reported by the Associated Press. That is roughly fourteen points below its result in twenty twenty-one, and reports call it the party's worst local result since nineteen ninety-four. The opposition Democratic Alliance had about twenty-five percent, and was ahead in the early count in Johannesburg, the country's biggest city. Municipal councils run city services like water, electricity and waste collection, so these votes reach daily life. Turnout was about fifty-four and a half percent, and no party won an outright majority in the early results. These numbers are early and can still change. When no party wins a majority, councils are usually run through coalition deals, and the biggest cities will be the first test. The ANC has governed nationally since the end of apartheid in nineteen ninety-four. Next: a rebel advance in Yemen.",
+   "text": "Number five is a vote in South Africa. Municipal elections were held this week, and early results show a sharp drop for the ruling African National Congress. The ANC had about thirty-two percent in early counts, according to the Associated Press. That is roughly fourteen points below its result in twenty twenty-one. The opposition Democratic Alliance was close behind, and led narrowly in some early counts in Johannesburg, the country's biggest city. Municipal councils run city services like water, electricity and waste collection, so these votes reach daily life. No party won an outright majority in the early results. These numbers are early and can still change. When no party wins a majority, councils are usually run through coalition deals. The ANC has governed nationally since the end of apartheid in nineteen ninety-four. Next: a rebel advance in Yemen.",
    "pauseBefore": 0.4
   },
   {
    "id": "ch4",
-   "text": "Number four is the war in Yemen. On November second, Reuters reported that Houthi forces had advanced to within eighty kilometers, about fifty miles, of Aden, the temporary capital of the internationally recognized government. The advance matters far beyond Yemen. Aden sits on the Gulf of Aden, near the Bab el-Mandeb Strait, the southern gate of the Red Sea and the route toward the Suez Canal. Four military sources told Reuters it is the closest the group has come to the city since the early months of the war in twenty fifteen. The Houthis also took the Maqatirah district, which overlooks the road between Taiz and Aden. Taiz, Yemen's third largest city, has been encircled since early October. In September, the Houthis seized the Red Sea port of Mokha. In October, Yemen's leader announced an operation to retake Houthi-held land. On November fourth, government forces claimed control of the al-Jawf mountain range, Al Jazeera reported. Reuters' sources say the push could let the Houthis outflank government forces on the mountains overlooking that strait. Reuters also reported that the Houthis struck Aden airport after warning people to evacuate. AP describes the Houthis as Iran-backed. Next: the alliance Saudi Arabia is building.",
+   "text": "Number four is the war in Yemen. On November second, Reuters reported that Houthi forces had advanced to within eighty kilometers, about fifty miles, of Aden, the temporary capital of the internationally recognized government. Aden sits on the Gulf of Aden, near the Bab el-Mandeb Strait, the southern gate of the Red Sea and the route toward the Suez Canal. Four military sources told Reuters it is the closest the group has come to the city since the early months of the war in twenty fifteen. The Houthis also took the Maqatirah district, which overlooks the road between Taiz and Aden. Reuters' sources say the push could let the Houthis outflank government forces on the mountains overlooking the Bab el-Mandeb Strait. A Houthi camp is about fifty kilometers from Lahj province, and eighty from Aden, according to Reuters. Taiz, Yemen's third largest city, has been encircled since early October, Reuters reports. In September, AP reported, the Houthis seized the Red Sea port of Mokha. In October, Al Jazeera reported, Yemen's leader announced an operation to retake Houthi-held land. On November fourth, government forces claimed control of the al-Jawf mountain range, Al Jazeera reported. Reuters also reported that the Houthis struck Aden airport after warning people to evacuate. AP describes the Houthis as Iran-backed. Next: the alliance Saudi Arabia is building.",
    "pauseBefore": 0.4
   },
   {
    "id": "ch3",
-   "text": "Number three is a defense pact taking shape around Saudi Arabia. Quick question. Which country joins Saudi Arabia and Pakistan in the Mecca Defence Alliance? Take a guess. Turkey. The three signed the pact on August seventh, and on Thursday Turkey's parliament ratified it, clearing the way for military support to Saudi Arabia. Turkish officials describe the pact as defensive. They told Reuters that Turkey's contribution would be limited to weapons, equipment and intelligence. Meanwhile, on Wednesday the Saudi and Syrian defense ministries signed a military cooperation agreement during Syrian President Ahmed al-Sharaa's visit to Riyadh. Its terms have not been made public. Syria's foreign minister, Asaad al-Shaibani, said discussions are underway to evaluate Syria's entry into the alliance. An analyst told Middle East Eye that the talks are at an early stage, and that Syria is unlikely to join soon. Reuters reported that Syria is also considering helping Saudi Arabia in its war against the Houthis. Reports say Riyadh wants to widen its security partners beyond Washington. For Gulf oil and shipping, a new bloc changes who answers a threat. Next: the talks returning to Abu Dhabi.",
+   "text": "Number three is a defense pact taking shape around Saudi Arabia. Quick question. Which country joins Saudi Arabia and Pakistan in the Mecca Defence Alliance? Take a guess. Turkey. The three signed the pact on August seventh, and Turkey's parliament has now ratified it, clearing the way for military support to Saudi Arabia. Turkish officials describe the pact as defensive. They told Reuters that Turkey's contribution would be limited to weapons, equipment and intelligence. Meanwhile, the Saudi and Syrian defense ministries signed a military cooperation agreement during Syrian President Ahmed al-Sharaa's visit to Riyadh, according to Semafor. Its terms have not been made public. Syria's foreign minister, Asaad al-Shaibani, said discussions are underway to evaluate Syria's entry into the alliance. An analyst told Middle East Eye that the talks are at an early stage, and that Syria is unlikely to join soon. Reuters reported that Syria is also considering helping Saudi Arabia in its war against the Houthis. Next: the talks returning to Abu Dhabi.",
    "pauseBefore": 0.4
   },
   {
    "id": "ch2",
-   "text": "Number two is Ukraine. U.S. envoy Steve Witkoff announced that the United States will mediate Russia-Ukraine talks in Abu Dhabi on November tenth and eleventh. Jared Kushner will help lead the American side, and the Kremlin has confirmed the dates. Axios and other outlets report these are the first U.S.-mediated talks since February, a gap of nine months. The talks are described as working level, with Steve Witkoff and Jared Kushner leading for Washington. The agenda covers security arrangements, de-escalation and humanitarian issues. Kremlin spokesman Dmitry Peskov confirmed the meeting, and Ukraine accuses Russia of using a six-day ceasefire near Oleshky to reinforce its positions. No concessions have been announced, and critics note that Moscow's only visible step is agreeing to meet. Meanwhile, the strikes continue. On November second, Zelenskyy said Russian attacks hit power infrastructure in four regions and left hundreds of thousands without electricity. Ukraine says it shot down three hundred seventy-one of four hundred thirty-three drones. Russia says Ukrainian drones hit an industrial site in Nizhny Novgorod. This weekend, AP reported that missiles targeting Kyiv wounded five people, and Zelenskyy accused Russia of escalating strikes before the talks. For Ukrainians heading into winter, the power grid is the front line that most people feel at home. Next: the story that touches everything else.",
+   "text": "Number two is Ukraine. U.S. envoy Steve Witkoff announced that the United States will mediate Russia-Ukraine talks in Abu Dhabi on November tenth and eleventh, with Jared Kushner also on the American team. The Kremlin has confirmed the dates. Axios and other outlets report these would be the first U.S.-mediated talks since February, a gap of nine months. Kyiv Post describes them as working level. Witkoff listed security arrangements, de-escalation and humanitarian issues on the agenda. Ukraine accuses Russia of using a six-day ceasefire near Oleshky to reinforce its positions. No concessions have been announced. Meanwhile, the strikes continue. On November second, Zelenskyy said Russian attacks hit power infrastructure in four regions and left hundreds of thousands without electricity. Ukraine says it shot down three hundred seventy-one of four hundred thirty-three drones. Russia says Ukrainian drones hit an industrial site in Nizhny Novgorod. This weekend, AP reported that missiles targeting Kyiv wounded five people, and Zelenskyy accused Russia of escalating strikes before the talks. Next: the Iran war.",
    "pauseBefore": 0.4
   },
   {
    "id": "ch1",
-   "text": "Number one is the Iran war. On November second, three U.S. officials told CBS News that American forces carried out limited defensive strikes near the Strait of Hormuz. This week, President Trump confirmed new limited strikes on an Iranian air defense system, which he called minor. At the same time, Qatar has presented a draft memorandum of understanding. Reuters, citing sources, reports the United States approved it. Qatar says both sides are reviewing it, and a senior Iranian official said the two sides are far from a deal. Iranian security official Rezaei says Hormuz reopens only after Iran's seven conditions are met. On Thursday, Iran's Revolutionary Guard said two oil tankers and a tugboat caught fire, and that one tanker hit a mine. That claim is unverified. On Saturday, a Guard spokesman said Iran's limit of about two thousand kilometers on missile range has been lifted. The Associated Press notes Iran is not known to have longer-range missiles. In late October, Gulf states were told to prepare for a possible short, intense campaign, according to Middle East Eye and the Wall Street Journal as cited by Fox News. Axios reported before the midterms that Israel's prime minister was pressing Trump to strike after the vote, while Secretary of State Rubio said Trump had made no decision. The United States says its naval blockade of Iranian ports continues. About a fifth of the world's oil normally passes through Hormuz, according to the U.S. Energy Information Administration.",
+   "text": "Number one is the Iran war. On November second, three U.S. officials told CBS News that American forces carried out limited defensive strikes near the Strait of Hormuz. This week, President Trump confirmed new limited strikes on an Iranian air defense system, which he called minor. At the same time, Qatar has presented a draft memorandum of understanding. Reuters, citing sources, reports the United States approved it. Qatar says both sides are reviewing it, and a senior Iranian official said the two sides are far from a deal. Mohsen Rezaei, an Iranian security official, says Hormuz reopens only after Iran's seven conditions are met. On Thursday, Iran's Revolutionary Guard said two oil tankers and a tugboat caught fire, and that one tanker hit a mine. That claim is unverified. On Saturday, a Guard spokesman said Iran's limit of about two thousand kilometers on missile range has been lifted. The Associated Press notes Iran is not known to have longer-range missiles. In late October, Gulf states were reportedly told to prepare for a possible short, intense campaign, according to Middle East Eye and the Wall Street Journal as cited by Fox News. Axios reported before the midterms that Israel's prime minister was pressing Trump to strike after the vote, while Secretary of State Rubio said Trump had made no decision. The United States says its naval blockade of Iranian ports continues. About a fifth of the world's oil normally passes through Hormuz, according to the U.S. Energy Information Administration.",
    "pauseBefore": 0.4
   },
   {
    "id": "outlook",
-   "text": "Here are the dates to watch. On November tenth and eleventh, Russian and Ukrainian delegations meet in Abu Dhabi. On Iran, Qatar's draft memorandum remains under review in both capitals, and Iran says Hormuz stays closed until its conditions are met. In Yemen, the fight for the road between Taiz and Aden is the front to watch. A Houthi camp is about fifty kilometers from the provincial capital Lahj, according to Reuters' sources. And in South Africa, final municipal results will show whether the early numbers hold. Will the Abu Dhabi talks produce any agreement? Tell us in the comments: yes or no.",
+   "text": "Here are the dates to watch. On November tenth and eleventh, Russian and Ukrainian delegations are due to meet in Abu Dhabi. On Iran, Qatar's draft memorandum remains under review in both capitals, and Iran says Hormuz stays closed until its conditions are met. In Yemen, the fight for the road between Taiz and Aden is the front to watch. And in South Africa, final municipal results will show whether the early numbers hold. Will the Abu Dhabi talks produce any agreement? Tell us in the comments: yes or no.",
    "pauseBefore": 0.4
   },
   {
@@ -240,7 +240,7 @@
      "oy": 40
     },
     {
-     "at": "promise:date,",
+     "at": "promise:Russia",
      "lon": 35,
      "lat": 48,
      "dist": 70,
@@ -277,19 +277,19 @@
     },
     {
      "at": "ch5:Municipal",
-     "lon": 28,
-     "lat": -26.2,
-     "dist": 9,
-     "pitch": 48,
+     "lon": 27.5,
+     "lat": -28.2,
+     "dist": 16,
+     "pitch": 34,
      "yaw": 4,
      "oy": 40
     },
     {
      "at": "ch5:early",
-     "lon": 28,
-     "lat": -26.2,
-     "dist": 12,
-     "pitch": 46,
+     "lon": 27,
+     "lat": -28.5,
+     "dist": 18,
+     "pitch": 36,
      "yaw": 0,
      "oy": 40
     },
@@ -313,19 +313,19 @@
     },
     {
      "at": "ch5:opposition",
-     "lon": 28,
-     "lat": -26.2,
-     "dist": 8,
-     "pitch": 50,
+     "lon": 27.5,
+     "lat": -28.2,
+     "dist": 14,
+     "pitch": 34,
      "yaw": 6,
      "oy": 40
     },
     {
-     "at": "ch5:ahead",
-     "lon": 28.04,
-     "lat": -26.2,
-     "dist": 5.5,
-     "pitch": 52,
+     "at": "ch5:narrowly",
+     "lon": 27.8,
+     "lat": -27.8,
+     "dist": 11,
+     "pitch": 34,
      "yaw": 8,
      "oy": 40
     },
@@ -339,7 +339,7 @@
      "oy": 40
     },
     {
-     "at": "ch5:Turnout",
+     "at": "ch5:outright",
      "lon": 25,
      "lat": -29,
      "dist": 28,
@@ -358,15 +358,15 @@
     },
     {
      "at": "ch5:coalition",
-     "lon": 28,
-     "lat": -26.2,
-     "dist": 10,
-     "pitch": 46,
+     "lon": 27.5,
+     "lat": -28.2,
+     "dist": 16,
+     "pitch": 36,
      "yaw": 0,
      "oy": 40
     },
     {
-     "at": "ch5:ANC#1",
+     "at": "ch5:governed",
      "lon": 25,
      "lat": -29,
      "dist": 50,
@@ -446,8 +446,8 @@
       250
      ],
      "at": "promise:November",
-     "until": "ch5:thirty-two",
-     "note": "FIRST U.S.-MEDIATED TALKS IN 9 MONTHS"
+     "until": "promise$",
+     "note": "FIRST U.S.-MEDIATED TALKS SINCE FEBRUARY"
     },
     {
      "kind": "tag",
@@ -521,7 +521,7 @@
      ],
      "at": "ch5:thirty-two",
      "until": "ch5:roughly",
-     "note": "EARLY COUNT · AP"
+     "note": "EARLY COUNTS · AP"
     },
     {
      "kind": "stamp",
@@ -533,25 +533,12 @@
       250
      ],
      "at": "ch5:roughly",
-     "until": "ch5:worst",
-     "note": "VS 2021 LOCAL VOTE · PER REPORTS"
-    },
-    {
-     "kind": "stamp",
-     "text": "WORST LOCAL SINCE 1994",
-     "icon": "eye",
-     "color": "oil",
-     "screen": [
-      960,
-      250
-     ],
-     "at": "ch5:worst",
      "until": "ch5:opposition",
-     "note": "PER REPORTS"
+     "note": "VS 2021 LOCAL VOTE"
     },
     {
      "kind": "stamp",
-     "text": "DA ≈ 25%",
+     "text": "DA CLOSE BEHIND",
      "icon": "flag",
      "color": "info",
      "screen": [
@@ -560,17 +547,17 @@
      ],
      "at": "ch5:opposition",
      "until": "ch5:services",
-     "note": "EARLY COUNT"
+     "note": "EARLY COUNTS"
     },
     {
      "kind": "marker",
      "loc": "Johannesburg",
      "style": "pulse",
      "color": "info",
-     "at": "ch5:ahead",
+     "at": "ch5:narrowly",
      "until": "ch5:services",
      "label": {
-      "text": "DA AHEAD IN EARLY COUNT",
+      "text": "DA LED NARROWLY IN SOME EARLY COUNTS",
       "dx": -250,
       "dy": -60,
       "sub": "JOHANNESBURG · BIGGEST CITY"
@@ -588,19 +575,6 @@
      "at": "ch5:services",
      "until": "ch5:These",
      "note": "WATER · POWER · WASTE"
-    },
-    {
-     "kind": "stamp",
-     "text": "TURNOUT ≈ 54.5%",
-     "icon": "people",
-     "color": "ok",
-     "screen": [
-      960,
-      250
-     ],
-     "at": "ch5:Turnout",
-     "until": "ch5:outright",
-     "note": "EARLY RESULTS"
     },
     {
      "kind": "stamp",
@@ -625,12 +599,12 @@
       250
      ],
      "at": "ch5:These",
-     "until": "ch5:Turnout",
+     "until": "ch5:outright",
      "note": "NOT FINAL"
     },
     {
      "kind": "stamp",
-     "text": "COALITIONS",
+     "text": "COALITION DEALS",
      "icon": "people",
      "color": "info",
      "screen": [
@@ -639,7 +613,7 @@
      ],
      "at": "ch5:coalition",
      "until": "ch5:Next:",
-     "note": "BIGGEST CITIES = FIRST TEST"
+     "note": "USUAL WAY WHEN NO MAJORITY"
     },
     {
      "kind": "tag",
@@ -665,37 +639,6 @@
      "note": ""
     }
    ]
-  },
-  {
-   "type": "bars",
-   "from": "ch5:opposition",
-   "to": "ch5:Turnout -0.3",
-   "label": "SOUTH AFRICA · MUNICIPAL ELECTIONS",
-   "sublabel": "EARLY RESULTS, % OF VOTE · AS REPORTED BY AP",
-   "color": "info",
-   "bars": [
-    {
-     "label": "ANC",
-     "value": 32,
-     "display": "≈ 32%",
-     "color": "danger",
-     "at": "ch5:opposition",
-     "dur": 1.0
-    },
-    {
-     "label": "DEMOCRATIC ALLIANCE",
-     "value": 25,
-     "display": "≈ 25%",
-     "color": "info",
-     "at": "ch5:twenty-five",
-     "dur": 1.0
-    }
-   ],
-   "badge": {
-    "text": "EARLY · NOT FINAL",
-    "at": "ch5:ahead"
-   },
-   "source": "EARLY RESULTS · AP VIA WASHINGTON POST · AL JAZEERA"
   },
   {
    "type": "map",
@@ -734,6 +677,15 @@
      "oy": 40
     },
     {
+     "at": "ch4:Gulf",
+     "lon": 45,
+     "lat": 12.8,
+     "dist": 12,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 40
+    },
+    {
      "at": "ch4:Four#1",
      "lon": 44.4,
      "lat": 13.2,
@@ -761,7 +713,25 @@
      "oy": 40
     },
     {
-     "at": "ch4:Taiz,",
+     "at": "ch4:outflank",
+     "lon": 43.4,
+     "lat": 12.7,
+     "dist": 8,
+     "pitch": 52,
+     "yaw": 6,
+     "oy": 40
+    },
+    {
+     "at": "ch4:Lahj",
+     "lon": 44.9,
+     "lat": 13.1,
+     "dist": 7,
+     "pitch": 52,
+     "yaw": -4,
+     "oy": 40
+    },
+    {
+     "at": "ch4:Taiz#1",
      "lon": 44.0,
      "lat": 13.6,
      "dist": 6,
@@ -779,30 +749,12 @@
      "oy": 40
     },
     {
-     "at": "ch4:October",
+     "at": "ch4:October#1",
      "lon": 45.2,
      "lat": 15.3,
      "dist": 22,
      "pitch": 46,
      "yaw": 0,
-     "oy": 40
-    },
-    {
-     "at": "ch4:matters",
-     "lon": 44.5,
-     "lat": 12.7,
-     "dist": 12,
-     "pitch": 46,
-     "yaw": -6,
-     "oy": 40
-    },
-    {
-     "at": "ch4:outflank",
-     "lon": 43.4,
-     "lat": 12.7,
-     "dist": 8,
-     "pitch": 52,
-     "yaw": 6,
      "oy": 40
     },
     {
@@ -815,7 +767,7 @@
      "oy": 40
     },
     {
-     "at": "ch4:AP",
+     "at": "ch4:AP#1",
      "lon": 45,
      "lat": 15,
      "dist": 32,
@@ -836,10 +788,24 @@
    "layers": [
     {
      "kind": "note",
+     "text": "HOUTHI CAMP · REUTERS SOURCES",
+     "y": 890,
+     "at": "ch4:camp",
+     "until": "ch4:camp +2.8"
+    },
+    {
+     "kind": "note",
+     "text": "OVERLOOKING BAB EL-MANDEB",
+     "y": 890,
+     "at": "ch4:overlooking",
+     "until": "ch4:overlooking +2.8"
+    },
+    {
+     "kind": "note",
      "text": "SOURCE: AL JAZEERA · GOVERNMENT CLAIM",
      "y": 890,
-     "at": "ch4:Jazeera",
-     "until": "ch4:Jazeera +2.8"
+     "at": "ch4:Jazeera#1",
+     "until": "ch4:Jazeera#1 +2.8"
     },
     {
      "kind": "tag",
@@ -847,22 +813,9 @@
      "text": "GULF OF ADEN",
      "color": "info",
      "at": "ch4:Gulf",
-     "until": "ch4:Bab",
+     "until": "ch4:Four#1",
      "dy": 80,
      "sub": "ADEN SITS ON IT"
-    },
-    {
-     "kind": "stamp",
-     "text": "MATTERS BEYOND YEMEN",
-     "icon": "eye",
-     "color": "oil",
-     "screen": [
-      960,
-      250
-     ],
-     "at": "ch4:advance",
-     "until": "ch4:Suez",
-     "note": "SOUTHERN RED SEA"
     },
     {
      "kind": "stamp",
@@ -886,7 +839,7 @@
      "text": "AL-JAWF",
      "color": "oil",
      "at": "ch4:al-Jawf",
-     "until": "ch4:Reuters#2",
+     "until": "ch4:struck",
      "dy": -70,
      "sub": "GOVERNMENT CLAIM"
     },
@@ -901,7 +854,7 @@
      ],
      "at": "ch4:operation",
      "until": "ch4:fourth,",
-     "note": "ANNOUNCED OCTOBER"
+     "note": "ANNOUNCED OCT · AL JAZEERA"
     },
     {
      "kind": "tint",
@@ -917,7 +870,7 @@
      "style": "pulse",
      "color": "info",
      "at": "ch4:Aden,",
-     "until": "ch4:Reuters#1",
+     "until": "ch4:Gulf",
      "label": {
       "text": "ADEN",
       "dx": -250,
@@ -952,7 +905,7 @@
       250
      ],
      "at": "ch4:eighty",
-     "until": "ch4:advance",
+     "until": "ch4:Suez",
      "note": "REUTERS · NOV 2"
     },
     {
@@ -965,7 +918,7 @@
       250
      ],
      "at": "ch4:closest",
-     "until": "ch4:encircled",
+     "until": "ch4:outflank",
      "note": "4 MILITARY SOURCES · REUTERS"
     },
     {
@@ -977,12 +930,42 @@
      "style": "x",
      "color": "danger",
      "at": "ch4:Maqatirah",
-     "until": "ch4:Taiz,",
+     "until": "ch4:Lahj",
      "label": {
       "text": "MAQATIRAH DISTRICT",
       "dx": -260,
       "dy": -70,
       "sub": "OVERLOOKS TAIZ–ADEN ROAD"
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "OUTFLANK RISK",
+     "icon": "eye",
+     "color": "danger",
+     "screen": [
+      960,
+      250
+     ],
+     "at": "ch4:outflank",
+     "until": "ch4:encircled",
+     "note": "PER REUTERS SOURCES"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      44.9,
+      13.2
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "ch4:Lahj",
+     "until": "ch4:Taiz#1",
+     "label": {
+      "text": "HOUTHI CAMP",
+      "dx": -300,
+      "dy": -70,
+      "sub": "≈ 50 KM FROM LAHJ PROVINCE · 80 FROM ADEN · REUTERS"
      }
     },
     {
@@ -993,7 +976,7 @@
      ],
      "text": "TAIZ",
      "color": "text",
-     "at": "ch4:Taiz,",
+     "at": "ch4:Taiz#1",
      "until": "ch4:September",
      "dy": -70
     },
@@ -1007,8 +990,8 @@
       250
      ],
      "at": "ch4:encircled",
-     "until": "ch4:October",
-     "note": "SINCE EARLY OCTOBER"
+     "until": "ch4:operation",
+     "note": "SINCE EARLY OCTOBER · REUTERS"
     },
     {
      "kind": "marker",
@@ -1024,21 +1007,8 @@
       "text": "MOKHA SEIZED",
       "dx": -230,
       "dy": -60,
-      "sub": "SEPTEMBER"
+      "sub": "SEPTEMBER · AP"
      }
-    },
-    {
-     "kind": "stamp",
-     "text": "GOVERNMENT OFFENSIVE",
-     "icon": "flag",
-     "color": "info",
-     "screen": [
-      960,
-      250
-     ],
-     "at": "ch4:October",
-     "until": "ch4:operation",
-     "note": "ANNOUNCED OCT · BY YEMEN'S LEADER"
     },
     {
      "kind": "stamp",
@@ -1050,31 +1020,8 @@
       250
      ],
      "at": "ch4:fourth,",
-     "until": "ch4:outflank",
+     "until": "ch4:AP#1",
      "note": "GOVERNMENT CLAIM · AL JAZEERA"
-    },
-    {
-     "kind": "tag",
-     "loc": "Bab al-Mandab",
-     "text": "BAB EL-MANDEB",
-     "color": "oil",
-     "at": "ch4:Bab",
-     "until": "ch4:outflank",
-     "dy": -70,
-     "sub": "SOUTHERN GATE OF THE RED SEA"
-    },
-    {
-     "kind": "stamp",
-     "text": "OUTFLANK RISK",
-     "icon": "eye",
-     "color": "danger",
-     "screen": [
-      960,
-      250
-     ],
-     "at": "ch4:outflank",
-     "until": "ch4:AP",
-     "note": "PER REUTERS SOURCES"
     },
     {
      "kind": "marker",
@@ -1082,7 +1029,7 @@
      "style": "x",
      "color": "danger",
      "at": "ch4:struck",
-     "until": "ch4:AP",
+     "until": "ch4:AP#1",
      "label": {
       "text": "AIRPORT STRUCK",
       "dx": -300,
@@ -1099,7 +1046,7 @@
       960,
       250
      ],
-     "at": "ch4:AP",
+     "at": "ch4:AP#1",
      "until": "ch4:Next:",
      "note": "AS DESCRIBED BY AP"
     },
@@ -1134,7 +1081,7 @@
     {
      "icon": "people",
      "big": "3RD",
-     "text": "TAIZ · LARGEST CITY UNDER ENCIRCLEMENT",
+     "text": "TAIZ · YEMEN'S 3RD-LARGEST CITY",
      "color": "oil",
      "at": "ch4:closest"
     }
@@ -1187,7 +1134,7 @@
      "oy": 40
     },
     {
-     "at": "ch3:Thursday",
+     "at": "ch3:ratified",
      "lon": 33,
      "lat": 39.5,
      "dist": 24,
@@ -1259,10 +1206,10 @@
      "oy": 40
     },
     {
-     "at": "ch3:Reports",
+     "at": "ch3:Next:",
      "lon": 42,
      "lat": 27,
-     "dist": 44,
+     "dist": 55,
      "pitch": 44,
      "yaw": 0,
      "oy": 40
@@ -1271,7 +1218,7 @@
      "at": "ch3$",
      "lon": 42,
      "lat": 27,
-     "dist": 55,
+     "dist": 60,
      "pitch": 44,
      "yaw": 0,
      "oy": 40
@@ -1301,6 +1248,13 @@
     },
     {
      "kind": "note",
+     "text": "SOURCE: SEMAFOR",
+     "y": 890,
+     "at": "ch3:Semafor",
+     "until": "ch3:Semafor +2.8"
+    },
+    {
+     "kind": "note",
      "text": "SOURCE: MIDDLE EAST EYE",
      "y": 890,
      "at": "ch3:Eye",
@@ -1312,27 +1266,6 @@
      "y": 890,
      "at": "ch3:also",
      "until": "ch3:also +2.8"
-    },
-    {
-     "kind": "note",
-     "text": "WIDER SECURITY PARTNERS · REPORTS",
-     "y": 890,
-     "at": "ch3:widen",
-     "until": "ch3:widen +2.8"
-    },
-    {
-     "kind": "note",
-     "text": "GULF OIL AND SHIPPING",
-     "y": 890,
-     "at": "ch3:oil",
-     "until": "ch3:oil +2.8"
-    },
-    {
-     "kind": "note",
-     "text": "WHO ANSWERS A THREAT?",
-     "y": 890,
-     "at": "ch3:threat",
-     "until": "ch3:threat +2.8"
     },
     {
      "kind": "tint",
@@ -1373,7 +1306,7 @@
      "text": "ANKARA",
      "color": "info",
      "at": "ch3:Turkey.",
-     "until": "ch3:Thursday",
+     "until": "ch3:ratified",
      "dy": -70
     },
     {
@@ -1382,7 +1315,7 @@
      "text": "ISLAMABAD",
      "color": "violet",
      "at": "ch3:Turkey.",
-     "until": "ch3:Thursday",
+     "until": "ch3:ratified",
      "dy": -70
     },
     {
@@ -1411,7 +1344,7 @@
       250
      ],
      "at": "ch3:August",
-     "until": "ch3:Thursday",
+     "until": "ch3:ratified",
      "note": "MECCA DEFENCE ALLIANCE"
     },
     {
@@ -1423,7 +1356,7 @@
       960,
       250
      ],
-     "at": "ch3:Thursday",
+     "at": "ch3:ratified",
      "until": "ch3:defensive.",
      "note": "PARLIAMENT · PER REPORTS"
     },
@@ -1450,7 +1383,7 @@
       250
      ],
      "at": "ch3:contribution",
-     "until": "ch3:Wednesday",
+     "until": "ch3:ministries",
      "note": "TURKEY'S ROLE · REUTERS"
     },
     {
@@ -1487,9 +1420,9 @@
       960,
       250
      ],
-     "at": "ch3:Wednesday",
+     "at": "ch3:ministries",
      "until": "ch3:Its",
-     "note": "SAUDI + SYRIAN MINISTRIES"
+     "note": "SAUDI + SYRIAN MINISTRIES · SEMAFOR"
     },
     {
      "kind": "stamp",
@@ -1527,7 +1460,7 @@
       250
      ],
      "at": "ch3:analyst",
-     "until": "ch3:Reports",
+     "until": "ch3:Next:",
      "note": "MIDDLE EAST EYE ANALYST"
     },
     {
@@ -1543,19 +1476,6 @@
       "dy": -60,
       "sub": "SYRIA CONSIDERING HELP · REUTERS"
      }
-    },
-    {
-     "kind": "stamp",
-     "text": "WIDER PARTNERS?",
-     "icon": "shield",
-     "color": "violet",
-     "screen": [
-      960,
-      250
-     ],
-     "at": "ch3:Reports",
-     "until": "ch3:Next:",
-     "note": "REPORTS · RIYADH & WASHINGTON"
     },
     {
      "kind": "stamp",
@@ -1581,7 +1501,7 @@
    "options": [
     "EGYPT",
     "TURKEY",
-    "IRAN"
+    "UAE"
    ],
    "answer": 1,
    "optionsAt": [
@@ -1591,8 +1511,8 @@
    ],
    "revealAt": "ch3:Turkey.",
    "countdown": true,
-   "note": "SIGNED AUG 7, 2026 · TURKEY'S PARLIAMENT RATIFIED NOV 5",
-   "source": "REUTERS · JPOST · MIDDLE EAST EYE"
+   "note": "SIGNED AUG 7, 2026 · TURKEY'S PARLIAMENT HAS RATIFIED IT",
+   "source": "JPOST · DTN · SEMAFOR · MIDDLE EAST EYE"
   },
   {
    "type": "map",
@@ -1649,10 +1569,10 @@
      "oy": 40
     },
     {
-     "at": "ch2:working",
-     "lon": 37,
-     "lat": 47,
-     "dist": 50,
+     "at": "ch2:Kyiv",
+     "lon": 31,
+     "lat": 50,
+     "dist": 30,
      "pitch": 44,
      "yaw": 0,
      "oy": 40
@@ -1663,6 +1583,15 @@
      "lat": 55.7,
      "dist": 14,
      "pitch": 46,
+     "yaw": 4,
+     "oy": 40
+    },
+    {
+     "at": "ch2:Ukraine#1",
+     "lon": 32.7,
+     "lat": 46.6,
+     "dist": 9,
+     "pitch": 50,
      "yaw": 4,
      "oy": 40
     },
@@ -1694,7 +1623,7 @@
      "oy": 40
     },
     {
-     "at": "ch2:Russia",
+     "at": "ch2:Russia#1",
      "lon": 44,
      "lat": 56.3,
      "dist": 12,
@@ -1747,6 +1676,13 @@
     },
     {
      "kind": "note",
+     "text": "SOURCE: KYIV POST",
+     "y": 890,
+     "at": "ch2:Post",
+     "until": "ch2:Post +2.8"
+    },
+    {
+     "kind": "note",
      "text": "SECURITY ARRANGEMENTS",
      "y": 890,
      "at": "ch2:security",
@@ -1768,24 +1704,10 @@
     },
     {
      "kind": "note",
-     "text": "PESKOV CONFIRMS THE MEETING",
-     "y": 890,
-     "at": "ch2:Peskov",
-     "until": "ch2:Peskov +2.8"
-    },
-    {
-     "kind": "note",
      "text": "UKRAINE ACCUSES RUSSIA",
      "y": 890,
      "at": "ch2:accuses",
      "until": "ch2:accuses +2.8"
-    },
-    {
-     "kind": "note",
-     "text": "CRITICS: ONLY STEP IS MEETING",
-     "y": 890,
-     "at": "ch2:critics",
-     "until": "ch2:critics +2.8"
     },
     {
      "kind": "tint",
@@ -1832,7 +1754,7 @@
     },
     {
      "kind": "stamp",
-     "text": "KUSHNER CO-LEADS",
+     "text": "KUSHNER ON U.S. TEAM",
      "icon": "people",
      "color": "info",
      "screen": [
@@ -1841,7 +1763,7 @@
      ],
      "at": "ch2:Jared",
      "until": "ch2:Kremlin",
-     "note": "U.S. DELEGATION"
+     "note": "PER WITKOFF"
     },
     {
      "kind": "arc",
@@ -1861,6 +1783,19 @@
     },
     {
      "kind": "stamp",
+     "text": "KREMLIN CONFIRMS DATES",
+     "icon": "check",
+     "color": "danger",
+     "screen": [
+      960,
+      250
+     ],
+     "at": "ch2:Kremlin",
+     "until": "ch2:first",
+     "note": ""
+    },
+    {
+     "kind": "stamp",
      "text": "FIRST SINCE FEBRUARY",
      "icon": "eye",
      "color": "oil",
@@ -1869,8 +1804,21 @@
       250
      ],
      "at": "ch2:first",
-     "until": "ch2:agenda",
+     "until": "ch2:Kyiv",
      "note": "9 MONTHS · AXIOS"
+    },
+    {
+     "kind": "stamp",
+     "text": "WORKING LEVEL",
+     "icon": "people",
+     "color": "info",
+     "screen": [
+      960,
+      250
+     ],
+     "at": "ch2:Kyiv",
+     "until": "ch2:Witkoff#1",
+     "note": "PER KYIV POST"
     },
     {
      "kind": "stamp",
@@ -1881,22 +1829,9 @@
       960,
       250
      ],
-     "at": "ch2:agenda",
+     "at": "ch2:Witkoff#1",
      "until": "ch2:six-day",
-     "note": "SECURITY · DE-ESCALATION · HUMANITARIAN"
-    },
-    {
-     "kind": "stamp",
-     "text": "KREMLIN CONFIRMS",
-     "icon": "check",
-     "color": "danger",
-     "screen": [
-      960,
-      250
-     ],
-     "at": "ch2:Kremlin",
-     "until": "ch2:first",
-     "note": "PESKOV"
+     "note": "SECURITY · DE-ESCALATION · HUMANITARIAN · PER WITKOFF"
     },
     {
      "kind": "stamp",
@@ -1922,7 +1857,7 @@
      ],
      "at": "ch2:concessions",
      "until": "ch2:Meanwhile,",
-     "note": "CRITICS: ONLY STEP IS MEETING"
+     "note": ""
     },
     {
      "kind": "stamp",
@@ -1982,7 +1917,7 @@
      "loc": "Kiev",
      "style": "x",
      "color": "danger",
-     "at": "ch2:Kyiv",
+     "at": "ch2:Kyiv#1",
      "until": "ch2:accused",
      "label": {
       "text": "KYIV",
@@ -2001,21 +1936,8 @@
       250
      ],
      "at": "ch2:accused",
-     "until": "ch2:winter,",
-     "note": "BEFORE THE TALKS · AL JAZEERA"
-    },
-    {
-     "kind": "stamp",
-     "text": "WINTER AHEAD",
-     "icon": "bolt",
-     "color": "oil",
-     "screen": [
-      960,
-      250
-     ],
-     "at": "ch2:winter,",
      "until": "ch2:Next:",
-     "note": "POWER GRID = HOME FRONT"
+     "note": "BEFORE THE TALKS · AL JAZEERA"
     },
     {
      "kind": "stamp",
@@ -2220,6 +2142,20 @@
    "layers": [
     {
      "kind": "note",
+     "text": "MOHSEN REZAEI · SECURITY OFFICIAL",
+     "y": 890,
+     "at": "ch1:Mohsen",
+     "until": "ch1:Mohsen +2.8"
+    },
+    {
+     "kind": "note",
+     "text": "IRAN'S SEVEN CONDITIONS",
+     "y": 890,
+     "at": "ch1:seven",
+     "until": "ch1:seven +2.8"
+    },
+    {
+     "kind": "note",
      "text": "POSSIBLE SHORT, INTENSE CAMPAIGN",
      "y": 890,
      "at": "ch1:possible",
@@ -2238,13 +2174,6 @@
      "y": 890,
      "at": "ch1:far",
      "until": "ch1:far +2.8"
-    },
-    {
-     "kind": "note",
-     "text": "REZAEI · SECURITY OFFICIAL",
-     "y": 890,
-     "at": "ch1:security",
-     "until": "ch1:security +2.8"
     },
     {
      "kind": "note",
@@ -2321,7 +2250,7 @@
       "text": "QESHM ISLAND",
       "dx": -300,
       "dy": -70,
-      "sub": "U.S. STRIKES · NOV 2 · PER U.S. OFFICIALS"
+      "sub": "U.S. STRIKES · NOV 2 · PER AP / U.S. OFFICIALS"
      }
     },
     {
@@ -2422,7 +2351,7 @@
      ],
      "at": "ch1:Rezaei",
      "until": "ch1:Thursday,",
-     "note": "REZAEI · BEFORE HORMUZ REOPENS"
+     "note": "MOHSEN REZAEI · BEFORE HORMUZ REOPENS"
     },
     {
      "kind": "stamp",
@@ -2542,42 +2471,28 @@
   },
   {
    "type": "timeline",
-   "from": "ch1:This",
-   "to": "ch1:Qatar -0.2",
-   "label": "IRAN WAR · THE WEEK",
+   "from": "ch1:Thursday,",
+   "to": "ch1:Associated -0.2",
+   "label": "IRAN WAR · TWO CLAIMS",
    "color": "danger",
    "items": [
     {
-     "date": "NOV 2",
-     "title": "U.S. 'DEFENSIVE' STRIKES",
-     "sub": "PER U.S. OFFICIALS",
-     "color": "danger",
-     "at": "ch1:November"
-    },
-    {
      "date": "NOV 5",
-     "title": "IRGC: TANKER FIRES",
+     "title": "IRGC: TANKER FIRES, ONE MINE HIT",
      "sub": "UNVERIFIED CLAIM",
      "color": "oil",
-     "at": "ch1:This +1"
-    },
-    {
-     "date": "NOV 6",
-     "title": "QATAR DRAFT MOU",
-     "sub": "REUTERS",
-     "color": "info",
-     "at": "ch1:This +3"
+     "at": "ch1:Thursday,"
     },
     {
      "date": "NOV 7",
-     "title": "MISSILE RANGE LIMIT LIFTED",
-     "sub": "IRGC",
+     "title": "IRGC: MISSILE RANGE LIMIT LIFTED",
+     "sub": "IRGC SPOKESMAN",
      "color": "danger",
      "big": true,
-     "at": "ch1:minor,"
+     "at": "ch1:Saturday,"
     }
    ],
-   "source": "CBS · REUTERS · AP · IRGC STATEMENTS"
+   "source": "IRGC STATEMENTS · AP"
   },
   {
    "type": "map",
@@ -2621,15 +2536,6 @@
      "lat": 13.4,
      "dist": 10,
      "pitch": 50,
-     "yaw": 0,
-     "oy": 40
-    },
-    {
-     "at": "outlook:Lahj",
-     "lon": 44.9,
-     "lat": 13.06,
-     "dist": 9,
-     "pitch": 52,
      "yaw": 0,
      "oy": 40
     },
@@ -2739,7 +2645,7 @@
       "text": "ABU DHABI",
       "dx": -250,
       "dy": -60,
-      "sub": "NOV 10–11 · RUSSIA–UKRAINE"
+      "sub": "NOV 10–11 · RUSSIA–UKRAINE · DUE TO MEET"
      }
     },
     {
@@ -2775,26 +2681,12 @@
      "style": "pulse",
      "color": "danger",
      "at": "outlook:Yemen,",
-     "until": "outlook:A",
+     "until": "outlook:South",
      "label": {
       "text": "TAIZ–ADEN ROAD",
       "dx": -250,
       "dy": -60,
       "sub": "FRONT TO WATCH"
-     }
-    },
-    {
-     "kind": "marker",
-     "loc": "Aden",
-     "style": "pulse",
-     "color": "danger",
-     "at": "outlook:Houthi",
-     "until": "outlook:South",
-     "label": {
-      "text": "LAHJ · ≈ 50 KM",
-      "dx": -250,
-      "dy": -60,
-      "sub": "HOUTHI CAMP · REUTERS SOURCES"
      }
     },
     {
@@ -2898,8 +2790,8 @@
    "pick": 4,
    "type": "footage",
    "asset": "f03",
-   "from": "ch2:winter,",
-   "to": "ch2:winter, +6.0",
+   "from": "ch2:left",
+   "to": "ch2:left +6.0",
    "query": "power lines winter dusk",
    "kind": "video",
    "symbolic": true,
@@ -2908,7 +2800,7 @@
    "lower": {
     "kicker": "ILLUSTRATIVE",
     "text": "STOCK FOOTAGE · NOT A SPECIFIC PLACE",
-    "at": "ch2:winter, +0.6"
+    "at": "ch2:left +0.6"
    }
   },
   {
@@ -3002,8 +2894,8 @@
   }
  ],
  "upload": {
-  "title": "Hormuz, Aden, Abu Dhabi: Top 5 Stories of the Week",
-  "description": "Five stories shaped the week of November 2 to 8, 2026: South Africa's ruling ANC sliding in early municipal results, the Houthi advance to within 80 kilometers of Aden in Yemen, the Mecca Defence Alliance and Saudi Arabia's new defense agreement with Syria, the U.S.-mediated Russia-Ukraine talks planned for Abu Dhabi on November 10 and 11, and the Iran war with new strikes, a Qatari draft memorandum and Iran's announcement that it has lifted its missile range limit. Every claim is attributed to the source that reported it; unverified claims are labelled as such.\n\nSources:\nAP via Washington Post: South Africa municipal election early results, ANC share and turnout (Nov 2026)\nAl Jazeera: South Africa local elections coverage (Nov 2026)\nReuters (via Investing.com, Internazionale): Yemen's Houthis advance to within 80 km of Aden, sources say (Nov 2, 2026)\nAl Jazeera: Yemeni government forces claim control of strategic al-Jawf mountain range (Nov 4, 2026)\nAl Jazeera: Houthis take control of Yemen's Red Sea coast, key shipping route (Sept 11, 2026)\nAP: Iran-backed Houthi rebels take strategic port city in Yemen (Sept 10, 2026)\nSemafor: Saudi Arabia signs defense deal with Syria (Nov 6, 2026)\nJerusalem Post / DTN: Turkey's parliament ratifies Mecca defense pact (Nov 5-6, 2026)\nMiddle East Eye: Why is Syria considering joining the Saudi-Turkey-Pakistan defence pact?\nJust Security: Early Edition, Nov 5, 2026\nAxios: U.S., Russia and Ukraine to resume peace talks in Abu Dhabi next week, Witkoff says (Nov 3, 2026)\nThe Hill / Fox News: Witkoff announces Abu Dhabi talks, Nov 10-11 (Nov 2026)\nAl Jazeera: Zelenskyy accuses Russia of escalating strikes ahead of peace talks (Nov 7, 2026)\nAP: Missiles target Kyiv and wound 5 as Ukraine prepares for talks with Russia and the US (Nov 7, 2026)\nReuters via Newcastle Herald, RFE/RL, NBC News, Euronews: Russian strikes on Ukraine's power infrastructure, Nov 2, 2026\nMoscow Times / US News (Reuters): Kremlin confirms Abu Dhabi talks (Nov 4, 2026)\nCBS News live updates: U.S. defensive strikes on Iranian targets (Nov 2-7, 2026)\nReuters via Tribune / Al Jazeera: Qatar-presented draft memorandum on U.S.-Iran (Nov 6, 2026)\nAP via US News and others: Iran says it has lifted its self-imposed limit on missile ranges (Nov 7, 2026)\nIran International: Iran says missiles no longer bound by range limits (Nov 7, 2026)\nABC News (Australia): Explosions heard in Strait of Hormuz as Iran reviews de-escalation proposals (Nov 8, 2026)\nAxios / WSJ via Fox News and Middle East Eye: Gulf states told to prepare, Netanyahu pressing for strikes after the midterms (Oct 28 - Nov 3, 2026)\nU.S. Energy Information Administration (EIA): World Oil Transit Chokepoints\n\n#geopolitics #news #weeklyrecap #Iran #Ukraine #Yemen",
+  "title": "Hormuz, Yemen, Abu Dhabi: Top 5 Stories of the Week",
+  "description": "Five stories shaped the week of November 2 to 8, 2026: South Africa's ruling ANC dropping in early municipal results, the Houthi advance to within 80 kilometers of Aden in Yemen, the Mecca Defence Alliance and Saudi Arabia's new defense agreement with Syria, the U.S.-mediated Russia-Ukraine talks planned for Abu Dhabi on November 10 and 11, and the Iran war with new strikes, a Qatari draft memorandum and Iran's announcement that it has lifted its missile range limit. Every claim is attributed to the source that reported it; unverified claims are labelled as such.\n\nSources:\nAP via Washington Post: South Africa municipal election early results, ANC share and turnout (Nov 2026)\nAl Jazeera: South Africa local elections coverage (Nov 2026)\nReuters (via Investing.com, Internazionale): Yemen's Houthis advance to within 80 km of Aden, sources say (Nov 2, 2026)\nAl Jazeera: Yemeni government forces claim control of strategic al-Jawf mountain range (Nov 4, 2026)\nAl Jazeera: Houthis take control of Yemen's Red Sea coast, key shipping route (Sept 11, 2026)\nAP: Iran-backed Houthi rebels take strategic port city in Yemen (Sept 10, 2026)\nSemafor: Saudi Arabia signs defense deal with Syria (Nov 6, 2026)\nJerusalem Post / DTN: Turkey's parliament ratifies Mecca defense pact (Nov 5-6, 2026)\nMiddle East Eye: Why is Syria considering joining the Saudi-Turkey-Pakistan defence pact?\nJust Security: Early Edition, Nov 5, 2026\nKyiv Post: working-level Abu Dhabi talks, last U.S.-mediated round in February (Nov 2026)\nAl Jazeera: Yemen's leader announces military operation to retake Houthi-held territory (Oct 4, 2026)\nAl Jazeera: Rezaei says Hormuz reopens only after Iran's conditions (Nov 3, 2026)\nAxios, The Hill, Moscow Times: Ukraine accuses Russia of using the Oleshky ceasefire to reinforce (Nov 4, 2026)\nAxios: U.S., Russia and Ukraine to resume peace talks in Abu Dhabi next week, Witkoff says (Nov 3, 2026)\nThe Hill / Fox News: Witkoff announces Abu Dhabi talks, Nov 10-11 (Nov 2026)\nAl Jazeera: Zelenskyy accuses Russia of escalating strikes ahead of peace talks (Nov 7, 2026)\nAP: Missiles target Kyiv and wound 5 as Ukraine prepares for talks with Russia and the US (Nov 7, 2026)\nReuters via Newcastle Herald, RFE/RL, NBC News, Euronews: Russian strikes on Ukraine's power infrastructure, Nov 2, 2026\nMoscow Times / US News (Reuters): Kremlin confirms Abu Dhabi talks (Nov 4, 2026)\nCBS News live updates: U.S. defensive strikes on Iranian targets (Nov 2-7, 2026)\nReuters via Tribune / Al Jazeera: Qatar-presented draft memorandum on U.S.-Iran (Nov 6, 2026)\nAP via US News and others: Iran says it has lifted its self-imposed limit on missile ranges (Nov 7, 2026)\nIran International: Iran says missiles no longer bound by range limits (Nov 7, 2026)\nABC News (Australia): Explosions heard in Strait of Hormuz as Iran reviews de-escalation proposals (Nov 8, 2026)\nAxios / WSJ via Fox News and Middle East Eye: Gulf states told to prepare, Netanyahu pressing for strikes after the midterms (Oct 28 - Nov 3, 2026)\nU.S. Energy Information Administration (EIA): World Oil Transit Chokepoints\n\n#geopolitics #news #weeklyrecap #Iran #Ukraine #Yemen",
   "tags": [
    "geopolitics",
    "weekly recap",
