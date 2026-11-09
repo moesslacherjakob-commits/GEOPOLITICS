@@ -1,0 +1,97 @@
+{
+ "id": "2026-11-09-dinosaur-blood-aratasaurus",
+ "lang": "en",
+ "script": [
+  {"id": "hook", "text": "Scientists say they found blood chemistry in a dinosaur bone. Does it hold up?"},
+  {"id": "f1", "text": "A study in the journal PNAS reports traces of heme, the iron molecule that helps blood carry oxygen, in a leg bone of a dinosaur named Aratasaurus. The animal lived in Brazil about one hundred fifteen million years ago."},
+  {"id": "f2", "text": "The team, led by Curtin University, also saw tiny oval shapes inside the bone's blood vessel channels. They interpret them as fossilized red blood cells. They suggest fast burial with little oxygen helped preserve them. The authors do not claim that intact blood or proteins survived."},
+  {"id": "f3", "text": "Not everyone agrees. Paleontologist Mary Schweitzer, who was not involved, accepts the chemistry. But she says the shapes are dented and small, unlike typical red blood cells. So the cell claim stays disputed."},
+  {"id": "cta", "text": "Will other labs confirm dinosaur blood cells? Yes or no?"}
+ ],
+ "sections": [
+  {"n": "01", "name": "THE FINDING", "seg": "f1", "color": "accent"},
+  {"n": "02", "name": "HOW IT WAS FOUND", "seg": "f2", "color": "violet"},
+  {"n": "03", "name": "THE DOUBT", "seg": "f3", "to": "cta -0.2", "color": "danger"}
+ ],
+ "upload": {
+  "title": "Dinosaur Bone May Hold Traces of Blood, Study Says #shorts",
+  "description": "A PNAS study led by Curtin University reports heme molecules and oval structures, interpreted as fossilized red blood cells, in a 115-million-year-old Aratasaurus bone from Brazil. Outside experts such as Mary Schweitzer accept the chemistry but dispute that the shapes are cells.\n\nSources: PNAS paper (Grice et al.), Sci.News, CTV News, LiveScience, Nautilus.\n\n#science #dinosaurs #paleontology #PNAS",
+  "tags": ["science", "news", "dinosaur", "paleontology", "PNAS", "Curtin University", "Aratasaurus", "fossil", "heme", "Brazil"],
+  "cover": "hook$ -0.2"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [-39.7, -7.2],
+  "number": "115M YEARS",
+  "numberColor": "accent",
+  "lines": [["DINOSAUR BLOOD?", "text"], ["SCIENTISTS SPLIT", "accent"]],
+  "source": "PER PNAS STUDY · DISPUTED"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {"at": 0, "lon": -20, "lat": 5, "R": 380},
+    {"at": 4.5, "lon": -39.7, "lat": -7.2, "R": 560}
+   ],
+   "chip": {"text": "PNAS STUDY · NOV 2026", "at": 0.25, "color": "accent"},
+   "highlights": [{"iso": "BRA", "color": "info", "at": "hook:found", "alpha": 0.4}],
+   "markers": [
+    {"loc": [-39.7, -7.2], "color": "accent", "at": "hook:found", "label": "BONE FROM NE BRAZIL", "sub": "APPROXIMATE SITE", "dx": 60, "dy": -110}
+   ],
+   "headline": {"at": "hook:found", "lines": [["DINOSAUR BLOOD?", "text", 110], ["DOES IT HOLD UP?", "accent", 90]]}
+  },
+  {
+   "type": "facts",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "color": "accent",
+   "items": [
+    {"icon": "drop", "big": "HEME TRACES", "text": "IRON MOLECULE OF BLOOD, PER STUDY", "color": "danger", "at": "f1:traces"},
+    {"icon": "flag", "big": "ARATASAURUS", "text": "THEROPOD DINOSAUR FROM BRAZIL", "color": "accent", "at": "f1:Aratasaurus."},
+    {"icon": "check", "big": "115 MILLION YRS", "text": "AGE OF THE LEG BONE", "color": "info", "at": "f1:hundred"}
+   ],
+   "source": "SOURCES: PNAS PAPER · SCI.NEWS · CTV NEWS"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "WHAT THE TEAM REPORTS",
+   "color": "violet",
+   "steps": [
+    {"icon": "factory", "title": "FAST BURIAL", "sub": "LITTLE OXYGEN · TEAM'S IDEA", "color": "info", "at": "f2:fast"},
+    {"icon": "eye", "title": "OVAL SHAPES", "sub": "INSIDE VESSEL CHANNELS", "color": "violet", "at": "f2:tiny"},
+    {"icon": "drop", "title": "HEME DETECTED", "sub": "CURTIN UNIVERSITY-LED TEAM", "color": "accent", "at": "f2:interpret"}
+   ],
+   "source": "SOURCES: PNAS PAPER · LIVESCIENCE"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "danger",
+   "items": [
+    {"icon": "check", "big": "CHEMISTRY OK", "text": "SCHWEITZER ACCEPTS THE HEME DATA", "color": "ok", "at": "f3:accepts"},
+    {"icon": "x", "big": "CELLS DISPUTED", "text": "SHAPES DENTED AND SMALL, SHE SAYS", "color": "danger", "at": "f3:dented"},
+    {"icon": "eye", "big": "NOT SETTLED", "text": "OUTSIDE EXPERT NOT INVOLVED IN STUDY", "color": "info", "at": "f3:disputed"}
+   ],
+   "source": "SOURCES: CTV NEWS · NAUTILUS · SCI.NEWS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {"at": "cta -0.6", "lon": -20, "lat": 5, "R": 800},
+    {"at": "cta +1", "lon": -39.7, "lat": -7.2, "R": 520},
+    {"at": "end", "lon": -35, "lat": -5, "R": 500}
+   ],
+   "markers": [{"loc": [-39.7, -7.2], "color": "accent"}],
+   "lines": [["DINOSAUR BLOOD CELLS", "text"], ["CONFIRMED BY OTHERS?", "accent"]],
+   "sources": ["PNAS · SCI.NEWS · CTV NEWS · LIVESCIENCE · NAUTILUS", "CELL INTERPRETATION IS DISPUTED · SITE APPROXIMATE"]
+  }
+ ]
+}
