@@ -1,0 +1,398 @@
+{
+ "id": "2026-11-09-abu-dhabi-eve",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Russia and Ukraine meet again tomorrow. Is anyone ready to give ground?"
+  },
+  {
+   "id": "f1",
+   "text": "U.S. envoy Steve Witkoff says talks start Tuesday in Abu Dhabi and run two days. The agenda covers ending the war, security arrangements, de-escalation and humanitarian steps. Witkoff and Jared Kushner lead the U.S. side. Reports call it the first U.S.-mediated round since February."
+  },
+  {
+   "id": "f2",
+   "text": "The Kremlin says Vladimir Medinsky leads Russia's delegation. Deputy Foreign Minister Sergei Ryabkov joins for the first time, reports say. Ukraine's team is led by Rustem Umerov. France's foreign minister says European representatives will attend too."
+  },
+  {
+   "id": "f3",
+   "text": "Territory is the core dispute. In earlier rounds, Russia demanded that Ukraine leave the Donetsk region. Kyiv rejected that. Those rounds ended without a breakthrough, though the sides did swap prisoners. So far, neither side has announced any concession."
+  },
+  {
+   "id": "cta",
+   "text": "Will Russia and Ukraine agree to a ceasefire by year's end? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "DAY ONE",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "WHO SITS DOWN",
+   "seg": "f2",
+   "color": "oil"
+  },
+  {
+   "n": "03",
+   "name": "THE DISPUTE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "danger"
+  }
+ ],
+ "upload": {
+  "title": "Abu Dhabi Talks Start Tomorrow. Who Blinks First? #shorts",
+  "description": "U.S. envoy Steve Witkoff announced that the United States will bring Russian and Ukrainian delegations together in Abu Dhabi on November 10 and 11. According to Witkoff, the agenda covers ending the war, post-war security arrangements, de-escalation and humanitarian measures; Witkoff and Jared Kushner lead the U.S. team. Reports describe it as the first U.S.-mediated round since February. The Kremlin has said Vladimir Medinsky will head Russia's delegation; according to reports, Deputy Foreign Minister Sergei Ryabkov joins the negotiations for the first time. Ukraine's delegation is reported to be led by Rustem Umerov. French Foreign Minister Jean-Noel Barrot said European representatives will take part in Abu Dhabi. Territory remains the central dispute: in earlier rounds Russia demanded that Ukraine withdraw from the Donetsk region, which Kyiv rejected. No concessions have been announced. Details could still change before the talks begin.\n\nSources:\nAxios, Nov 3, 2026: U.S., Russia and Ukraine to resume peace talks in Abu Dhabi next week, Witkoff says\nU.S. News / Reuters, Nov 2, 2026: U.S. to mediate trilateral talks with Ukraine, Russia in Abu Dhabi next week\nThe Moscow Times, Nov 3, 2026: U.S.-mediated Ukraine peace talks to resume in Abu Dhabi next week\nKyiv Independent: Russia to send senior diplomats, military officials to upcoming peace talks in Abu Dhabi\nExaminer (AFP): Europeans to join Ukraine talks in UAE, French minister\n\n#geopolitics #Ukraine #Russia #AbuDhabi",
+  "tags": [
+   "geopolitics",
+   "Ukraine",
+   "Russia",
+   "Abu Dhabi",
+   "peace talks",
+   "Witkoff",
+   "Medinsky",
+   "Donetsk",
+   "world news"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:Abu",
+  "focus": "Abu Dhabi",
+  "zoom": 1.4,
+  "number": "TOMORROW",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "RUSSIA vs UKRAINE",
+    "text"
+   ],
+   [
+    "WHO BLINKS?",
+    "accent"
+   ]
+  ],
+  "source": "ABU DHABI · NOV 10–11 · PER WITKOFF"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 40,
+     "lat": 40,
+     "R": 330
+    },
+    {
+     "at": 3.4,
+     "lon": 45,
+     "lat": 37,
+     "R": 380
+    }
+   ],
+   "chip": {
+    "text": "UKRAINE · RUSSIA · NOV 9, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "UKR",
+     "color": "info",
+     "at": "hook:Russia"
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "at": "hook:Russia"
+    },
+    {
+     "iso": "ARE",
+     "color": "accent",
+     "at": "hook:Ukraine"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Abu Dhabi",
+     "color": "accent",
+     "at": "hook:again",
+     "label": "ABU DHABI",
+     "sub": "TALKS TOMORROW",
+     "dx": -120,
+     "dy": -80,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:tomorrow.",
+    "lines": [
+     [
+      "MEET",
+      "accent",
+      120
+     ],
+     [
+      "TOMORROW",
+      "text",
+      110
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:Is",
+    "icon": "flag",
+    "iconColor": "accent",
+    "color": "accent",
+    "kicker": "GIVE GROUND?",
+    "title": "WHO FIRST",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    40,
+    40
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 45,
+     "lat": 37,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 54,
+     "lat": 24.4,
+     "dist": 14,
+     "pitch": 45,
+     "yaw": -4,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 28,
+     "lat": 49,
+     "dist": 75,
+     "pitch": 46,
+     "yaw": 3,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 34,
+     "lat": 46.7,
+     "dist": 16,
+     "pitch": 45,
+     "yaw": -3,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 42,
+     "lat": 42,
+     "dist": 85,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "ARE",
+     "color": "accent",
+     "alpha": 0.5,
+     "fill": 0.15,
+     "at": "f1"
+    },
+    {
+     "kind": "marker",
+     "loc": "Abu Dhabi",
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1:Abu",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "ABU DHABI",
+      "sub": "NOV 10–11 · PER WITKOFF",
+      "dx": -60,
+      "dy": -90
+     }
+    },
+    {
+     "kind": "tint",
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.5,
+     "fill": 0.12,
+     "at": "f2"
+    },
+    {
+     "kind": "tint",
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.35,
+     "fill": 0.06,
+     "at": "f2"
+    },
+    {
+     "kind": "marker",
+     "loc": "Moscow",
+     "style": "dot",
+     "color": "danger",
+     "at": "f2:Kremlin",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "KREMLIN",
+      "sub": "MEDINSKY · PER KREMLIN",
+      "dx": -60,
+      "dy": -90
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "NOV 10–11",
+     "icon": "flag",
+     "color": "accent",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f1:talks",
+     "until": "f1:Reports -0.2",
+     "note": "ABU DHABI TALKS · PER WITKOFF"
+    },
+    {
+     "kind": "stamp",
+     "text": "FIRST SINCE FEB",
+     "icon": "check",
+     "color": "oil",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f1:Reports",
+     "until": "f2 -0.2",
+     "note": "U.S.-MEDIATED ROUND · PER REPORTS"
+    },
+    {
+     "kind": "marker",
+     "loc": "Donetsk",
+     "style": "x",
+     "color": "danger",
+     "at": "f3:Territory",
+     "until": "cta -0.2",
+     "label": {
+      "text": "DONETSK",
+      "sub": "RUSSIAN DEMAND · PER EARLIER ROUNDS",
+      "dx": -80,
+      "dy": -90
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "NO CONCESSIONS",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f3:So",
+     "until": "cta -0.2",
+     "note": "NONE ANNOUNCED SO FAR"
+    },
+    {
+     "kind": "marker",
+     "loc": "Kyiv",
+     "style": "dot",
+     "color": "info",
+     "at": "f2:Ukraine's",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "KYIV",
+      "sub": "UMEROV · PER REPORTS",
+      "dx": -70,
+      "dy": -90
+     }
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 40,
+     "lat": 42,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 38,
+     "lat": 46,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": 38,
+     "lat": 46,
+     "R": 520
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.7
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.5
+    },
+    {
+     "iso": "ARE",
+     "color": "accent",
+     "alpha": 0.7
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Abu Dhabi",
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "CEASEFIRE",
+     "text"
+    ],
+    [
+     "BY YEAR'S END?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: AXIOS, REUTERS, MOSCOW TIMES, KYIV INDEPENDENT, AFP",
+    "NOV 9, 2026"
+   ]
+  }
+ ]
+}
