@@ -1,0 +1,353 @@
+{
+ "id": "2026-11-09-cop31-opens-money-fight",
+ "lang": "en",
+ "gap": 0.9,
+ "script": [
+  {
+   "id": "hook",
+   "text": "A climate summit just opened with a fight over money. Who will pay?"
+  },
+  {
+   "id": "f1",
+   "text": "COP thirty-one opened Monday in Antalya, Türkiye. U.N. chief António Guterres told leaders to get serious. He said the world has entered a new age of climate extremes. AFP reports the opening ceremony started about ninety minutes late."
+  },
+  {
+   "id": "f2",
+   "text": "The first fight was over the agenda. Developing countries wanted climate finance items added. AFP reports a finance work programme is in. A separate point on tripling adaptation finance is not. It will be discussed under other items."
+  },
+  {
+   "id": "f3",
+   "text": "Money looks tight. A senior E.U. official said last week there would be no political will for extra pledges. AFP also reports the U.S. sent no officials. The talks run until November twentieth."
+  },
+  {
+   "id": "cta",
+   "text": "Will rich countries add climate money by November twentieth? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE OPENING",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE AGENDA FIGHT",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE MONEY",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 20,
+     "lat": 30,
+     "R": 330
+    },
+    {
+     "at": 3.6,
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 560
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "color": "accent",
+     "at": 0.5,
+     "label": "ANTALYA",
+     "big": true
+    }
+   ],
+   "chip": {
+    "text": "COP31 · OPENING DAY",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:fight",
+    "lines": [
+     [
+      "MONEY FIGHT",
+      "danger",
+      120
+     ],
+     [
+      "AT COP31",
+      "text",
+      110
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    30.7,
+    36.9
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 30.7,
+     "lat": 36.9,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 31,
+     "lat": 37.3,
+     "dist": 20,
+     "pitch": 45,
+     "yaw": -10,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": 30.7,
+     "lat": 36.9,
+     "dist": 30,
+     "pitch": 35,
+     "yaw": 10,
+     "oy": 200
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": -35,
+     "lat": 40,
+     "dist": 190,
+     "pitch": 28,
+     "yaw": 0,
+     "oy": 160
+    },
+    {
+     "at": "cta -0.1",
+     "lon": -20,
+     "lat": 38,
+     "dist": 170,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 150
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "TUR",
+     "color": "accent",
+     "alpha": 0.22,
+     "glow": true,
+     "at": "f1:Antalya,"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1:Antalya,",
+     "label": {
+      "text": "ANTALYA · COP31",
+      "dx": -170,
+      "dy": -120,
+      "until": "f2$"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "LOCATIONS SHOWN FOR ORIENTATION",
+     "y": 1170,
+     "at": "f1 +1",
+     "until": "f1$"
+    },
+    {
+     "kind": "tint",
+     "iso": "USA",
+     "color": "danger",
+     "alpha": 0.25,
+     "hatch": true,
+     "at": "f3:AFP"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -98,
+      39
+     ],
+     "text": "U.S.",
+     "sub": "NO OFFICIALS SENT · AFP",
+     "color": "danger",
+     "dx": 0,
+     "dy": -120,
+     "at": "f3:AFP"
+    },
+    {
+     "kind": "tint",
+     "iso": "FRA",
+     "color": "info",
+     "alpha": 0.3,
+     "at": "f3:E.U."
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      2.5,
+      47
+     ],
+     "text": "E.U.",
+     "sub": "\"NO POLITICAL WILL\" · OFFICIAL",
+     "color": "info",
+     "dx": -80,
+     "dy": -170,
+     "at": "f3:E.U."
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "from": "f1:He",
+   "to": "f1$ -0.1",
+   "at": "f1:He",
+   "lines": [
+    [
+     "\"We have entered a new age",
+     "text"
+    ],
+    [
+     "of climate extremes.\"",
+     "accent"
+    ]
+   ],
+   "by": "U.N. CHIEF ANTÓNIO GUTERRES · VIA AFP"
+  },
+  {
+   "type": "facts",
+   "from": "f2:The",
+   "to": "f2$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "check",
+     "big": "FINANCE PROGRAMME",
+     "text": "ADDED TO THE AGENDA · AFP SOURCE",
+     "color": "ok",
+     "at": "f2:AFP"
+    },
+    {
+     "icon": "x",
+     "big": "NO SEPARATE ITEM",
+     "text": "TRIPLING ADAPTATION FINANCE · AFP",
+     "color": "danger",
+     "at": "f2:A"
+    },
+    {
+     "icon": "flag",
+     "big": "OTHER ITEMS",
+     "text": "IT WILL BE DISCUSSED THERE · AFP",
+     "color": "accent",
+     "at": "f2:It"
+    }
+   ],
+   "source": "SOURCE: AFP · SOURCE FAMILIAR WITH THE TALKS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "COP31 IS OPEN.",
+     "text"
+    ],
+    [
+     "MORE CLIMATE MONEY?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AFP · GUTERRES STATEMENT · EU OFFICIAL (EXCERPTS)",
+    "MAP LOCATIONS FOR ORIENTATION"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": 25,
+     "lat": 36.9,
+     "R": 600
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "COP31 Opens With a Fight Over Climate Money #shorts",
+  "description": "COP31 opened Monday in Antalya, Türkiye. U.N. chief António Guterres told leaders to get serious, saying the world has entered a new age of climate extremes. According to AFP, negotiators argued over the agenda and over climate finance, a senior E.U. official said there was no political will for extra pledges, and the U.S. sent no officials.\n\nSources: AFP via RTE, Phys.org, Arab News, Malay Mail, Taipei Times, Turkish Minute (based on search-result excerpts). Map locations are for orientation.\n\n#climate #cop31 #antalya #climatefinance",
+  "tags": [
+   "climate",
+   "weather",
+   "news",
+   "COP31",
+   "Antalya",
+   "Guterres",
+   "climate finance",
+   "adaptation finance",
+   "climate summit",
+   "UN"
+  ],
+  "cover": "f2 +1"
+ },
+ "thumbnail": {
+  "at": "f1 +1",
+  "focus": [
+   30.7,
+   36.9
+  ],
+  "zoom": 1.15,
+  "lines": [
+   [
+    "CLIMATE MONEY",
+    "text"
+   ],
+   [
+    "WHO PAYS?",
+    "accent"
+   ]
+  ]
+ }
+}
