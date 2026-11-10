@@ -1,0 +1,288 @@
+{
+ "id": "2026-11-10-escapade-earth-flyby",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Two NASA probes just dove at Earth on purpose. Why the detour to Mars?"
+  },
+  {
+   "id": "f1",
+   "text": "NASA's twin ESCAPADE probes, named Blue and Gold, launched in November twenty twenty-five on a Blue Origin rocket. Earth and Mars were badly placed then, so the probes waited near Earth for a full year."
+  },
+  {
+   "id": "f2",
+   "text": "On November seventh, Blue fired its engine for more than nine minutes while passing close to Earth, Berkeley News reports. Gold did the same two days later. Burning deep in Earth's gravity adds extra speed. Rocket Lab, which built the probes, says both burns were completed."
+  },
+  {
+   "id": "f3",
+   "text": "NASA had said no Mars-bound spacecraft had done this kind of powered flyby before. Both probes are now headed for Mars, with arrival planned for September twenty twenty-seven, to study how the solar wind interacts with the planet."
+  },
+  {
+   "id": "cta",
+   "text": "Will both probes reach Mars on schedule? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE WAIT",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE BURN",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "WHAT'S NEXT",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "NASA's Twin Probes Dove at Earth to Get to Mars #shorts",
+  "description": "NASA's twin ESCAPADE probes, Blue and Gold, flew close past Earth on November 7 and 9 and fired their engines to speed toward Mars. Rocket Lab, which built them, says both burns were completed; arrival at Mars is planned for September 2027.\n\nSources: Berkeley News, SpaceNews, Starlust, Rocket Lab release, NASA ESCAPADE blog.\n\n#science #space #NASA #Mars",
+  "tags": [
+   "science",
+   "news",
+   "space",
+   "NASA",
+   "ESCAPADE",
+   "Mars",
+   "Rocket Lab",
+   "Blue Origin",
+   "Earth flyby",
+   "Berkeley"
+  ],
+  "cover": "hook$ -0.2"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [
+   -80.58,
+   28.52
+  ],
+  "number": "2 DAYS",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "TWO PROBES.",
+    "text"
+   ],
+   [
+    "ONE SLINGSHOT.",
+    "accent"
+   ]
+  ],
+  "source": "PER BERKELEY NEWS \u00b7 NOV 7 AND 9"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": -40,
+     "lat": 15,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": -80,
+     "lat": 22,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "NASA ESCAPADE \u00b7 NOV 2026",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "USA",
+     "color": "info",
+     "at": "hook:probes",
+     "alpha": 0.4
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -80.58,
+      28.52
+     ],
+     "color": "accent",
+     "at": "hook:probes",
+     "label": "LAUNCHED HERE",
+     "sub": "CAPE CANAVERAL \u00b7 NOV 2025",
+     "dx": -60,
+     "dy": -110
+    }
+   ],
+   "headline": {
+    "at": "hook:probes",
+    "lines": [
+     [
+      "DIVING AT EARTH",
+      "text",
+      110
+     ],
+     [
+      "ON PURPOSE",
+      "accent",
+      100
+     ]
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "A YEAR OF WAITING",
+   "color": "accent",
+   "items": [
+    {
+     "date": "NOV 2025",
+     "title": "LAUNCH ON NEW GLENN",
+     "sub": "BLUE ORIGIN ROCKET",
+     "color": "violet",
+     "at": "f1:launched"
+    },
+    {
+     "date": "2026",
+     "title": "PROBES WAIT NEAR EARTH",
+     "sub": "MARS NOT WELL PLACED",
+     "color": "info",
+     "at": "f1:waited"
+    },
+    {
+     "date": "NOV 2026",
+     "title": "TWO EARTH FLYBYS",
+     "sub": "BLUE NOV 7 \u00b7 GOLD NOV 9",
+     "color": "accent",
+     "big": true,
+     "at": "f2:November"
+    }
+   ],
+   "source": "SOURCES: BERKELEY NEWS \u00b7 NASA \u00b7 SPACENEWS"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "HOW THE SLINGSHOT WORKS",
+   "color": "violet",
+   "steps": [
+    {
+     "icon": "plane",
+     "title": "DIVE TOWARD EARTH",
+     "sub": "CLOSE PASS",
+     "color": "info",
+     "at": "f2:passing"
+    },
+    {
+     "icon": "flame",
+     "title": "FIRE THE ENGINE",
+     "sub": "9+ MIN \u00b7 PER BERKELEY",
+     "color": "accent",
+     "at": "f2:fired"
+    },
+    {
+     "icon": "bolt",
+     "title": "EXTRA SPEED",
+     "sub": "GRAVITY ADDS TO THE BURN",
+     "color": "violet",
+     "at": "f2:extra"
+    }
+   ],
+   "source": "SOURCES: BERKELEY NEWS \u00b7 ROCKET LAB \u00b7 STARLUST"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "flag",
+     "big": "NASA: A FIRST",
+     "text": "POWERED FLYBY FOR A MARS-BOUND PROBE",
+     "color": "accent",
+     "at": "f3:NASA"
+    },
+    {
+     "icon": "check",
+     "big": "BOTH BURNS DONE",
+     "text": "PER ROCKET LAB, WHICH BUILT THE PROBES",
+     "color": "ok",
+     "at": "f3:headed"
+    },
+    {
+     "icon": "eye",
+     "big": "SEPT 2027",
+     "text": "PLANNED ARRIVAL AT MARS",
+     "color": "info",
+     "at": "f3:September"
+    }
+   ],
+   "source": "SOURCES: NASA \u00b7 ROCKET LAB \u00b7 SPACENEWS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -40,
+     "lat": 15,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -80,
+     "lat": 22,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": -60,
+     "lat": 20,
+     "R": 500
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -80.58,
+      28.52
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "ON TIME TO MARS",
+     "text"
+    ],
+    [
+     "IN SEPTEMBER 2027?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "BERKELEY NEWS \u00b7 SPACENEWS \u00b7 STARLUST \u00b7 ROCKET LAB \u00b7 NASA",
+    "BURNS AND DATES PER MISSION PARTNERS AND MEDIA"
+   ]
+  }
+ ]
+}
