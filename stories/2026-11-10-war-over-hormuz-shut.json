@@ -1,0 +1,355 @@
+{
+ "id": "2026-11-10-war-over-hormuz-shut",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "The U.S. says the Iran war is over. So why is Hormuz still shut?"
+  },
+  {
+   "id": "f1",
+   "text": "On Monday, after meeting Qatar's prime minister, President Trump said the Iran war is militarily effectively over. He said the U.S. is keeping the status quo and holding off new strikes. Al Jazeera notes that means sanctions continue. But CBS reports he also warned American forces are locked and loaded."
+  },
+  {
+   "id": "f2",
+   "text": "The U.S. naval blockade of Iranian ports stays in place. Reuters reports Iran's proposal would halt U.S. bombing, ease sanctions and end the blockade of Iranian ports, in return for reopening Hormuz, with nuclear talks to follow."
+  },
+  {
+   "id": "f3",
+   "text": "Iran's foreign ministry says it will keep its commitments if Washington lifts the blockade and sanctions. Security official Mohsen Rezaei demands the U.S. accept Iran's seven conditions. Qatar says talks continue."
+  },
+  {
+   "id": "cta",
+   "text": "Will Hormuz reopen before December? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "WAR 'OVER'?",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "BLOCKADE STAYS",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "IRAN'S TERMS",
+   "seg": "f3",
+   "color": "info",
+   "to": "cta -0.2"
+  }
+ ],
+ "upload": {
+  "title": "US Says Iran War Is Over. Why Is Hormuz Still Shut? #shorts",
+  "description": "On Monday, November 9, after meeting Qatar's prime minister in Washington, President Donald Trump said the war with Iran is \"militarily effectively over\" and that the U.S. is keeping the \"status quo\" while holding off new strikes. CBS News reports he also said the American military is \"locked and loaded\". The U.S. naval blockade of Iranian ports remains in effect. According to Reuters, Iran's proposal would halt U.S. bombing, ease sanctions and end the blockade of Iranian ports in exchange for reopening the Strait of Hormuz, with nuclear negotiations to follow. Iran's Foreign Ministry spokesman Esmaeil Baghaei said Tehran would meet its commitments if Washington lifts sanctions and the blockade. Security official Mohsen Rezaei demanded that the U.S. accept Iran's seven conditions and dismissed reports of ongoing negotiations. Qatar said talks continue in close coordination with both sides. Most details come from officials and the parties themselves and could not be independently verified.\n\nSources:\nAl Jazeera, Nov 9, 2026: After meeting Qatar PM, Trump calls Iran war 'effectively over' militarily\nCBS News live updates, Nov 9-10, 2026\nIran International, Nov 10, 2026\nThe Globe and Mail / Arab News, Nov 9, 2026\nThe Tribune (India), Nov 10, 2026\n\n#geopolitics #Iran #Hormuz #Trump #Qatar\n\nℹ️ About this video: The information was carefully researched from the sources listed above. The script, visuals and edit were created with the help of AI. AI can make mistakes, so please check the linked sources for important details. All content is provided to the best of our knowledge and belief, without guarantee of accuracy or completeness and without liability.",
+  "tags": [
+   "geopolitics",
+   "Iran",
+   "Strait of Hormuz",
+   "Trump",
+   "Qatar",
+   "naval blockade",
+   "Iran war",
+   "world news"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f2:blockade",
+  "focus": "Strait of Hormuz",
+  "zoom": 1.6,
+  "number": "WAR 'OVER'",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "NO DEAL YET",
+    "text"
+   ],
+   [
+    "HORMUZ SHUT?",
+    "danger"
+   ]
+  ],
+  "source": "PER TRUMP · NOV 9, 2026"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 54,
+     "lat": 27,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": 52,
+     "lat": 27,
+     "R": 520
+    }
+   ],
+   "chip": {
+    "text": "US–IRAN · NOV 9, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "IRN",
+     "color": "danger",
+     "at": "hook:Iran"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Strait of Hormuz",
+     "color": "oil",
+     "at": "hook:war",
+     "label": "HORMUZ",
+     "sub": "STILL SHUT · PER IRAN",
+     "dx": -100,
+     "dy": -80,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:Iran",
+    "lines": [
+     [
+      "WAR 'OVER'?",
+      "accent",
+      110
+     ],
+     [
+      "HORMUZ SHUT",
+      "danger",
+      100
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:So",
+    "icon": "ship",
+    "iconColor": "oil",
+    "color": "oil",
+    "kicker": "BLOCKADE",
+    "title": "STILL ON",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    54,
+    27
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 52,
+     "lat": 27,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 50,
+     "lat": 28,
+     "dist": 48,
+     "pitch": 46,
+     "yaw": -3,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 56.4,
+     "lat": 26.5,
+     "dist": 10,
+     "pitch": 50,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 53,
+     "lat": 28,
+     "dist": 42,
+     "pitch": 46,
+     "yaw": -3,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 54,
+     "lat": 27,
+     "dist": 50,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "IRN",
+     "color": "danger",
+     "alpha": 0.4,
+     "fill": 0.07,
+     "at": "f1"
+    },
+    {
+     "kind": "marker",
+     "loc": "Doha",
+     "style": "pulse",
+     "color": "info",
+     "at": "f1:after",
+     "until": "f1:Al",
+     "label": {
+      "text": "QATAR PM",
+      "sub": "MET TRUMP · MON",
+      "dx": -60,
+      "dy": 90
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "\"EFFECTIVELY OVER\"",
+     "icon": "flag",
+     "color": "accent",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f1:the",
+     "until": "f1:But",
+     "note": "MILITARILY · PER TRUMP"
+    },
+    {
+     "kind": "stamp",
+     "text": "\"LOCKED AND LOADED\"",
+     "icon": "nuke",
+     "color": "danger",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f1:But",
+     "until": "f2 -0.2",
+     "note": "WARNING · PER CBS"
+    },
+    {
+     "kind": "barrier",
+     "path": [
+      [
+       56.1,
+       26.55
+      ],
+      [
+       56.9,
+       26.0
+      ]
+     ],
+     "text": "BLOCKADE",
+     "sub": "IRANIAN PORTS · US NAVY",
+     "stampLoc": "Strait of Hormuz",
+     "stampUntil": "f3 -0.2",
+     "at": "f2"
+    },
+    {
+     "kind": "stamp",
+     "text": "BOMBING HALTED, SANCTIONS EASED",
+     "icon": "check",
+     "color": "ok",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f2:Reuters",
+     "until": "f3 -0.2",
+     "note": "IRAN PROPOSAL · PER REUTERS"
+    },
+    {
+     "kind": "stamp",
+     "text": "7 CONDITIONS",
+     "icon": "shield",
+     "color": "info",
+     "screen": [
+      540,
+      1120
+     ],
+     "at": "f3:Security",
+     "until": "cta -0.2",
+     "note": "DEMANDED BY REZAEI"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 52,
+     "lat": 28,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 54,
+     "lat": 27,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": 55,
+     "lat": 27,
+     "R": 520
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "IRN",
+     "color": "danger",
+     "alpha": 0.6
+    },
+    {
+     "iso": "QAT",
+     "color": "info",
+     "alpha": 0.6
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Strait of Hormuz",
+     "color": "oil"
+    }
+   ],
+   "lines": [
+    [
+     "HORMUZ OPEN",
+     "text"
+    ],
+    [
+     "BEFORE DECEMBER?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: AL JAZEERA, CBS NEWS, REUTERS, IRAN INTERNATIONAL",
+    "NOV 9, 2026"
+   ]
+  }
+ ]
+}
