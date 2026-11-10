@@ -1,0 +1,368 @@
+{
+ "id": "2026-11-10-wmo-record-seas",
+ "lang": "en",
+ "gap": 0.9,
+ "script": [
+  {
+   "id": "hook",
+   "text": "The oceans hold more heat than ever measured. And El Niño is tapping it."
+  },
+  {
+   "id": "f1",
+   "text": "The World Meteorological Organization released its update as COP thirty-one opened. It says that from January to September, the planet averaged about one point four seven degrees above pre-industrial levels. That puts twenty twenty-six on track to be among the four warmest years on record."
+  },
+  {
+   "id": "f2",
+   "text": "Sea level hit a record too. The W.M.O. says June, July and August saw the highest global sea level since satellite measurements began in nineteen ninety-three. It says ocean heat set a record in twenty twenty-five and kept rising this year."
+  },
+  {
+   "id": "f3",
+   "text": "W.M.O. chief Celeste Saulo says El Niño releases heat stored in that ocean, and calls it a risk multiplier for heatwaves, tropical cyclones and rainstorms. The agency says this El Niño could reach record strength by December."
+  },
+  {
+   "id": "cta",
+   "text": "Will this El Niño become the strongest on record? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE YEAR",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE SEAS",
+   "seg": "f2",
+   "color": "info"
+  },
+  {
+   "n": "03",
+   "name": "THE EL NIÑO",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "danger"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -150,
+     "lat": 0,
+     "R": 340
+    },
+    {
+     "at": 3.4,
+     "lon": -140,
+     "lat": 5,
+     "R": 540
+    }
+   ],
+   "headline": {
+    "at": "hook:heat",
+    "lines": [
+     [
+      "RECORD OCEAN HEAT",
+      "danger",
+      96
+     ],
+     [
+      "EL NIÑO TAPS IT",
+      "accent",
+      96
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -140,
+    5
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -140,
+     "lat": 5,
+     "dist": 45,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 20,
+     "lat": 20,
+     "dist": 155,
+     "pitch": 26,
+     "yaw": 4,
+     "oy": 150
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": 70,
+     "lat": -10,
+     "dist": 135,
+     "pitch": 38,
+     "yaw": -8,
+     "oy": 165
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": -125,
+     "lat": -2,
+     "dist": 105,
+     "pitch": 42,
+     "yaw": 6,
+     "oy": 170
+    },
+    {
+     "at": "cta -0.1",
+     "lon": -150,
+     "lat": 5,
+     "dist": 150,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 150
+    }
+   ],
+   "layers": [
+    {
+     "kind": "field",
+     "at": "hook$",
+     "palette": "heat",
+     "alpha": 0.8,
+     "grow": 1.3,
+     "pulse": true,
+     "blobs": [
+      {
+       "loc": [
+        -130,
+        0
+       ],
+       "r": 26,
+       "v": 1
+      },
+      {
+       "loc": [
+        -95,
+        -5
+       ],
+       "r": 14,
+       "v": 0.8
+      },
+      {
+       "loc": [
+        -35,
+        20
+       ],
+       "r": 18,
+       "v": 0.65
+      },
+      {
+       "loc": [
+        75,
+        -10
+       ],
+       "r": 20,
+       "v": 0.65
+      },
+      {
+       "loc": [
+        150,
+        20
+       ],
+       "r": 16,
+       "v": 0.6
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "WARM AREAS ILLUSTRATIVE · NOT GRIDDED DATA",
+     "y": 1170,
+     "at": "f1 +1",
+     "until": "f3"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -130,
+      0
+     ],
+     "text": "EQUATORIAL PACIFIC",
+     "sub": "EL NIÑO · COULD HIT RECORD BY DEC",
+     "color": "danger",
+     "dx": -190,
+     "dy": -150,
+     "at": "f3:record",
+     "until": "cta"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "from": "f1:World",
+   "to": "f1$ -0.1",
+   "label": "JAN–SEP 2026 · GLOBAL TEMPERATURE",
+   "sublabel": "ABOVE 1850–1900 AVERAGE",
+   "icon": "thermo",
+   "value": 1.47,
+   "start": 0,
+   "prefix": "+",
+   "suffix": "°C",
+   "decimals": 2,
+   "at": "f1:World",
+   "doneAt": "f1:one",
+   "note": "2026 ON TRACK FOR TOP 4 WARMEST YEARS",
+   "source": "SOURCE: WMO STATE OF THE CLIMATE UPDATE"
+  },
+  {
+   "type": "facts",
+   "from": "f2:The",
+   "to": "f2$ -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "flag",
+     "big": "RECORD HIGH",
+     "text": "GLOBAL MEAN SEA LEVEL IN 2026 · WMO",
+     "color": "info",
+     "at": "f2:Sea"
+    },
+    {
+     "icon": "check",
+     "big": "JUN · JUL · AUG",
+     "text": "HIGHEST SINCE SATELLITE RECORDS BEGAN, 1993",
+     "color": "accent",
+     "at": "f2:June"
+    },
+    {
+     "icon": "thermo",
+     "big": "OCEAN HEAT",
+     "text": "RECORD IN 2025 · STILL RISING IN 2026",
+     "color": "danger",
+     "at": "f2:ocean"
+    }
+   ],
+   "source": "SOURCE: WMO STATE OF THE CLIMATE UPDATE"
+  },
+  {
+   "type": "facts",
+   "from": "f3:W.M.O.",
+   "to": "f3$ -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "\"RISK MULTIPLIER\"",
+     "text": "WMO CHIEF CELESTE SAULO ON EL NIÑO",
+     "color": "danger",
+     "at": "f3:Saulo"
+    },
+    {
+     "icon": "thermo",
+     "big": "STORED HEAT",
+     "text": "EL NIÑO RELEASES OCEAN HEAT · SAULO",
+     "color": "accent",
+     "at": "f3:releases"
+    },
+    {
+     "icon": "flag",
+     "big": "BY DECEMBER",
+     "text": "COULD REACH RECORD STRENGTH · PER WMO",
+     "color": "info",
+     "at": "f3:agency"
+    }
+   ],
+   "source": "SOURCE: WMO"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "RECORD SEAS. RECORD HEAT.",
+     "text"
+    ],
+    [
+     "A RECORD EL NIÑO?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "WMO VIA UN NEWS, IRISH TIMES, AFP/PHYS.ORG (SEARCH EXCERPTS)",
+    "DATA TO SEPT 2026 · WARM AREAS ILLUSTRATIVE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -150,
+     "lat": 5,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -150,
+     "lat": 5,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": -140,
+     "lat": 5,
+     "R": 600
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "WMO: Sea Level Hit a Record as El Niño Builds #shorts",
+  "description": "The World Meteorological Organization's State of the Climate update, released as COP31 opened in Antalya, says global sea level hit a record high in 2026 and ocean heat set a record in 2025. January–September 2026 averaged about 1.47°C above pre-industrial levels, and WMO says the current El Niño could reach record strength by December.\n\nSources: WMO State of the Climate Update for COP31, reported by UN News, The Irish Times and AFP via Phys.org (based on search-result excerpts). Warm areas on the map are illustrative.\n\n#climate #weather #wmo #elnino #cop31",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "WMO",
+   "State of the Climate",
+   "El Niño",
+   "sea level",
+   "ocean heat",
+   "COP31"
+  ],
+  "cover": "f1 +2"
+ },
+ "thumbnail": {
+  "at": "f3 +2",
+  "number": "+1.47°C",
+  "numberColor": "danger",
+  "source": "JAN–SEP 2026 VS PRE-INDUSTRIAL · WMO",
+  "focus": [
+   -130,
+   0
+  ],
+  "lines": [
+   [
+    "TOP-4 HOT YEAR",
+    "accent"
+   ],
+   [
+    "RECORD SEAS",
+    "text"
+   ]
+  ],
+  "zoom": 1.1
+ }
+}
