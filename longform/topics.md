@@ -3,7 +3,6 @@
 Evergreen questions behind the news. Pick one that ties to this week's headlines and to the story families that perform best (Metricool). Move used topics to the bottom with the date. Add new ideas whenever a Short reveals a question viewers keep asking.
 
 ## Open
-- Who are the Houthis — and how did a rebel group shut down the Red Sea?
 - Bab al-Mandab and Suez: the Red Sea route explained
 - Iran's network of allies: how the "axis of resistance" works
 - How sanctions on oil actually work (price caps, shadow fleets, who pays)
@@ -21,3 +20,4 @@ Evergreen questions behind the news. Pick one that ties to this week's headlines
 ## Used
 - 2026-10-28: The Strait of Hormuz explainer (used)
 - 2026-11-04: Why Russia keeps hitting Ukraine's power grid (used)
+- 2026-11-11: Who are the Houthis? Yemen's rebels and the Red Sea (used)
