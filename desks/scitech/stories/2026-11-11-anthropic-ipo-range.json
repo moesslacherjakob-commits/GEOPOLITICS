@@ -1,0 +1,397 @@
+{
+ "id": "2026-11-11-anthropic-ipo-range",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Anthropic wants up to sixty-four billion dollars from one stock sale. Who is buying?"
+  },
+  {
+   "id": "f1",
+   "text": "Anthropic, the company behind the Claude A.I. models, set the price range for its stock market debut on Tuesday. Its updated filing offers eight hundred twenty-five million shares at seventy to seventy-eight dollars each, to be listed on Nasdaq."
+  },
+  {
+   "id": "f2",
+   "text": "At the top of the range, that would raise about sixty-four billion dollars, TechCrunch and CNBC report. Counting all shares, it would value the company at up to one point four trillion dollars. Saudi Aramco raised about twenty-nine billion in twenty nineteen."
+  },
+  {
+   "id": "f3",
+   "text": "Seven tech giants, including Nvidia, Google and Microsoft, agreed to buy another twenty-six billion dollars of stock privately, the filing shows. Anthropic reported about seventeen billion dollars in third-quarter revenue. Sources told CNBC that trading could begin on November nineteenth."
+  },
+  {
+   "id": "cta",
+   "text": "Will Anthropic's shares start trading on November nineteenth? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE OFFER",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE SCALE",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "THE BUYERS",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Anthropic's IPO Could Raise $64 Billion #shorts",
+  "description": "A.I. company Anthropic set a price range of $70 to $78 per share for 825 million shares in its planned Nasdaq IPO on November 10, according to its amended SEC filing. At the top of the range that is about $64 billion in gross proceeds and an implied fully diluted valuation of up to about $1.4 trillion, per TechCrunch and CNBC. Seven companies including Nvidia, Google and Microsoft agreed to buy $26 billion of shares in a private placement; pricing and trading dates (Nov 18/19) come from people familiar with the matter cited by CNBC and are not final. Nothing here is investment advice.\n\nSources: Anthropic S-1/A (SEC), CNBC, TechCrunch, Decrypt, FourWeekMBA, The Tribune. Aramco 2019 figure: widely reported total including over-allotment.\n\n#tech #Anthropic #IPO #AI",
+  "tags": [
+   "technology",
+   "news",
+   "Anthropic",
+   "IPO",
+   "Nasdaq",
+   "AI",
+   "Claude",
+   "Nvidia",
+   "Google",
+   "Microsoft",
+   "stock market"
+  ],
+  "cover": "hook$ -0.2"
+ },
+ "thumbnail": {
+  "at": "f1:Nasdaq. +0.4",
+  "focus": [
+   -76,
+   40.5
+  ],
+  "number": "$64 BN",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "ONE STOCK SALE.",
+    "text"
+   ],
+   [
+    "WHO IS BUYING?",
+    "accent"
+   ]
+  ],
+  "source": "TOP OF RANGE · PER ANTHROPIC FILING · NOV 10",
+  "zoom": 1.5
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -60,
+     "lat": 30,
+     "R": 380
+    },
+    {
+     "at": 4.0,
+     "lon": -98,
+     "lat": 39,
+     "R": 520
+    }
+   ],
+   "chip": {
+    "text": "A.I. · IPO FILING · NOV 10, 2026",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "USA",
+     "color": "info",
+     "at": "hook:sixty-four",
+     "alpha": 0.4
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -122.39,
+      37.79
+     ],
+     "color": "accent",
+     "at": "hook:wants",
+     "label": "SAN FRANCISCO",
+     "sub": "ANTHROPIC HQ",
+     "dx": -20,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:sixty-four",
+    "lines": [
+     [
+      "UP TO $64 BILLION",
+      "text",
+      96
+     ],
+     [
+      "IN ONE IPO",
+      "accent",
+      100
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.1",
+   "center": [
+    -98,
+    39
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -98,
+     "lat": 39,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +1.0",
+     "lon": -112,
+     "lat": 37,
+     "dist": 30,
+     "pitch": 45,
+     "yaw": -8,
+     "oy": 170
+    },
+    {
+     "at": "f1:updated",
+     "lon": -100,
+     "lat": 38,
+     "dist": 52,
+     "pitch": 48,
+     "yaw": 0,
+     "oy": 180
+    },
+    {
+     "at": "f1:Nasdaq. +0.2",
+     "lon": -86,
+     "lat": 39,
+     "dist": 46,
+     "pitch": 50,
+     "yaw": 8,
+     "oy": 190
+    },
+    {
+     "at": "f2 -0.1",
+     "lon": -84,
+     "lat": 39.5,
+     "dist": 44,
+     "pitch": 52,
+     "yaw": 12,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "USA",
+     "color": "info",
+     "alpha": 0.25,
+     "at": "hook$ +0.4"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -122.39,
+      37.79
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1 +0.3",
+     "label": {
+      "text": "ANTHROPIC",
+      "sub": "MAKER OF CLAUDE · SAN FRANCISCO",
+      "dx": 60,
+      "dy": -110,
+      "until": "f1:listed"
+     }
+    },
+    {
+     "kind": "card",
+     "screen": [
+      90,
+      330,
+      560
+     ],
+     "title": "THE OFFER",
+     "badge": "PER S-1/A",
+     "color": "accent",
+     "at": "f1:updated",
+     "rows": [
+      {
+       "icon": "people",
+       "text": "825 MILLION SHARES",
+       "at": "f1:eight"
+      },
+      {
+       "icon": "money",
+       "text": "$70 TO $78 EACH",
+       "at": "f1:seventy"
+      }
+     ]
+    },
+    {
+     "kind": "arc",
+     "from": [
+      -122.39,
+      37.79
+     ],
+     "to": [
+      -74.0,
+      40.76
+     ],
+     "color": "accent",
+     "height": 0.35,
+     "at": "f1:listed",
+     "dur": 1.2
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -74.0,
+      40.76
+     ],
+     "text": "NASDAQ",
+     "sub": "NEW YORK · TICKER \"ANT\"",
+     "color": "accent",
+     "at": "f1:Nasdaq. -0.3",
+     "dx": -60,
+     "dy": -120
+    }
+   ]
+  },
+  {
+   "type": "scale",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "HOW BIG IS IT?",
+   "sublabel": "MONEY RAISED IN THE IPO, USD BILLIONS",
+   "color": "violet",
+   "items": [
+    {
+     "name": "ANTHROPIC 2026",
+     "value": 64.35,
+     "display": "≈ $64 BN · TOP OF RANGE",
+     "color": "accent",
+     "icon": "chip",
+     "at": "f2:sixty-four"
+    },
+    {
+     "name": "SAUDI ARAMCO 2019",
+     "value": 29.4,
+     "display": "≈ $29 BN",
+     "color": "oil",
+     "icon": "barrel",
+     "at": "f2:Aramco"
+    }
+   ],
+   "note": "VALUATION UP TO ≈ $1.4 TRILLION · FULLY DILUTED · PER TECHCRUNCH",
+   "source": "SOURCES: ANTHROPIC S-1/A · TECHCRUNCH · CNBC · ARAMCO: WIDELY REPORTED"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "chip",
+     "big": "$26 BILLION",
+     "text": "PRIVATE BUY · NVIDIA, GOOGLE, MICROSOFT + 4 · PER FILING",
+     "color": "accent",
+     "at": "f3:Seven"
+    },
+    {
+     "icon": "money",
+     "big": "≈ $17 BN",
+     "text": "Q3 2026 REVENUE · COMPANY-REPORTED",
+     "color": "ok",
+     "at": "f3:seventeen"
+    },
+    {
+     "icon": "flag",
+     "big": "NOV 19?",
+     "text": "TRADING START · PER SOURCES TO CNBC · NOT FINAL",
+     "color": "info",
+     "at": "f3:trading"
+    }
+   ],
+   "source": "SOURCES: ANTHROPIC S-1/A · CNBC · DECRYPT · FOURWEEKMBA"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -60,
+     "lat": 30,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -98,
+     "lat": 39,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": -90,
+     "lat": 38,
+     "R": 500
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -122.39,
+      37.79
+     ],
+     "color": "accent"
+    },
+    {
+     "loc": [
+      -74.0,
+      40.76
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "TRADING STARTS",
+     "text"
+    ],
+    [
+     "ON NOVEMBER 19?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "ANTHROPIC S-1/A · CNBC · TECHCRUNCH · DECRYPT · FOURWEEKMBA · THE TRIBUNE",
+    "TERMS NOT FINAL · DATES PER SOURCES · NOT INVESTMENT ADVICE"
+   ]
+  }
+ ]
+}
