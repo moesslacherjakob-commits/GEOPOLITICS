@@ -1,0 +1,478 @@
+{
+ "id": "2026-11-11-russia-refineries-rationing",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Thirty percent of Russia's oil refining knocked out, sources say. Who feels it first?"
+  },
+  {
+   "id": "f1",
+   "text": "Two industry sources told Reuters that Ukrainian drone strikes since late October have cut Russia's refining capacity by about thirty percent. Nine of thirty-five major refineries were disrupted. The regional governor says Kirishi, the second largest, caught fire on Monday."
+  },
+  {
+   "id": "f2",
+   "text": "Drivers feel it first. Euronews and Semafor report that Rosneft, Russia's biggest oil company, now caps fuel sales in several regions, at thirty litres per purchase in cities. It had eased rationing in October, during a pause in the strikes."
+  },
+  {
+   "id": "f3",
+   "text": "Overnight, the drones kept coming. The Leningrad governor says one hundred forty-six were downed, and a fire broke out at the Ust-Luga port on the Baltic. Lithuania and Latvia warned residents to shelter, reports say."
+  },
+  {
+   "id": "cta",
+   "text": "Will Russia and Ukraine agree to stop energy strikes this winter? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "REFINERIES HIT",
+   "seg": "f1",
+   "color": "oil"
+  },
+  {
+   "n": "02",
+   "name": "AT THE PUMP",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE BALTIC",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Russia Rations Fuel as Ukraine's Drones Hit Refineries #shorts",
+  "description": "Two industry sources told Reuters on November 10 that renewed Ukrainian drone strikes since late October have reduced Russia's oil refining capacity by about 30%, disrupting nine of Russia's 35 major refineries. Leningrad Governor Alexander Drozdenko said a Ukrainian drone attack set the Kirishi refinery, Russia's second-largest, on fire on Monday, November 9. Euronews, Semafor and the Kyiv Independent report that Rosneft has capped fuel sales in several Russian regions, at 30 litres per purchase in cities; Rosneft had eased rationing in late October during a pause in Ukraine's strikes. Overnight into November 11, Drozdenko said 146 drones were downed over the Leningrad region and a fire broke out in the Ust-Luga port zone; Reuters said it could not verify the drone count. Lithuania and Latvia warned residents to take shelter over unidentified drones, according to reports. US-mediated Russia-Ukraine talks in Abu Dhabi were set to continue on November 11. The 30% figure comes from anonymous industry sources and has not been officially confirmed.\n\nSources:\nReuters via Kyiv Independent and Euromaidan Press, Nov 10, 2026: Ukrainian strikes cut Russia's oil refining capacity by 30%\nAl Jazeera, Nov 9, 2026: At least four people killed as Russia and Ukraine trade strikes overnight\nEuronews, Nov 9, 2026: Ukraine hits Russia's second-largest refinery as fuel rationing spreads\nSemafor, Nov 9, 2026: Russia rations fuel as Ukraine resumes strikes on refineries\nAl Jazeera, Nov 11, 2026: Russia claims interception of 146 drones in Leningrad region\nTASS, Nov 11, 2026: Fire breaks out after drone attack in Ust-Luga port zone\n\n#geopolitics #Russia #Ukraine #Oil",
+  "tags": [
+   "geopolitics",
+   "Russia",
+   "Ukraine",
+   "oil refineries",
+   "fuel rationing",
+   "Kirishi",
+   "Ust-Luga",
+   "Rosneft",
+   "drones",
+   "world news"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:Kirishi +1.2",
+  "focus": "Kirishi",
+  "zoom": 1.4,
+  "number": "30%",
+  "numberColor": "oil",
+  "lines": [
+   [
+    "REFINING OFFLINE",
+    "text"
+   ],
+   [
+    "WHO PAYS?",
+    "accent"
+   ]
+  ],
+  "source": "PER REUTERS SOURCES · NOV 10, 2026"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 40,
+     "lat": 52,
+     "R": 360
+    },
+    {
+     "at": 3.4,
+     "lon": 36,
+     "lat": 56,
+     "R": 470
+    }
+   ],
+   "chip": {
+    "text": "RUSSIA · NOV 11, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "RUS",
+     "color": "oil",
+     "at": "hook:Russia's"
+    },
+    {
+     "iso": "UKR",
+     "color": "info",
+     "at": "hook:sources"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Kirishi",
+     "color": "danger",
+     "at": "hook:refining",
+     "label": "KIRISHI",
+     "sub": "REFINERY ON FIRE · PER GOVERNOR",
+     "dx": -200,
+     "dy": -110,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:of",
+    "lines": [
+     [
+      "30% OFFLINE",
+      "oil",
+      116
+     ],
+     [
+      "PER SOURCES",
+      "text",
+      70
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:Who",
+    "icon": "drop",
+    "iconColor": "accent",
+    "color": "accent",
+    "kicker": "FUEL",
+    "title": "WHO FEELS IT?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    36,
+    56
+   ],
+   "detail": [
+    "RUS"
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 36,
+     "lat": 56,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 36,
+     "lat": 55.5,
+     "dist": 44,
+     "pitch": 44,
+     "yaw": -4,
+     "oy": 190
+    },
+    {
+     "at": "f1:Kirishi -0.3",
+     "lon": 32,
+     "lat": 59,
+     "dist": 22,
+     "pitch": 46,
+     "yaw": -2,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 42,
+     "lat": 57,
+     "dist": 48,
+     "pitch": 44,
+     "yaw": 3,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 28,
+     "lat": 58.5,
+     "dist": 30,
+     "pitch": 46,
+     "yaw": -3,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 32,
+     "lat": 56,
+     "dist": 52,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "RUS",
+     "color": "oil",
+     "alpha": 0.55,
+     "fill": 0.14,
+     "at": "f1"
+    },
+    {
+     "kind": "tint",
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.45,
+     "fill": 0.1,
+     "at": "f1"
+    },
+    {
+     "kind": "arc",
+     "from": "Kyiv",
+     "to": "Kirishi",
+     "color": "info",
+     "height": 0.35,
+     "at": "f1:Ukrainian",
+     "until": "f2 -0.2"
+    },
+    {
+     "kind": "marker",
+     "loc": "Kirishi",
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Kirishi",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "KIRISHI REFINERY",
+      "sub": "FIRE MONDAY · PER GOVERNOR",
+      "dx": 40,
+      "dy": -100
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "9 OF 35",
+     "icon": "factory",
+     "color": "oil",
+     "screen": [
+      540,
+      1110
+     ],
+     "at": "f1:Nine",
+     "until": "f1:Kirishi -0.2",
+     "note": "MAJOR REFINERIES DISRUPTED · PER REUTERS SOURCES"
+    },
+    {
+     "kind": "tint",
+     "iso": "RU-NIZ",
+     "color": "danger",
+     "alpha": 0.6,
+     "fill": 0.25,
+     "pulse": true,
+     "at": "f2:Drivers",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "RU-PNZ",
+     "color": "danger",
+     "alpha": 0.6,
+     "fill": 0.25,
+     "pulse": true,
+     "at": "f2:Drivers",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "RU-ARK",
+     "color": "danger",
+     "alpha": 0.6,
+     "fill": 0.25,
+     "pulse": true,
+     "at": "f2:Drivers",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": "RU-NIZ",
+     "text": "SALES CAPPED",
+     "sub": "AMONG REGIONS NAMED IN REPORTS",
+     "color": "danger",
+     "dx": -300,
+     "dy": -110,
+     "at": "f2:Rosneft",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "30 LITRES",
+     "icon": "drop",
+     "color": "danger",
+     "screen": [
+      540,
+      1110
+     ],
+     "at": "f2:thirty",
+     "until": "f3 -0.2",
+     "note": "PER PURCHASE IN CITIES · ROSNEFT, PER REPORTS"
+    },
+    {
+     "kind": "tint",
+     "iso": "LTU",
+     "color": "info",
+     "alpha": 0.6,
+     "fill": 0.18,
+     "at": "f3:Lithuania",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "LVA",
+     "color": "info",
+     "alpha": 0.6,
+     "fill": 0.18,
+     "at": "f3:Latvia",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      28.287,
+      59.667
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f3:Ust-Luga",
+     "until": "cta -0.2",
+     "label": {
+      "text": "UST-LUGA PORT",
+      "sub": "FIRE · PER GOVERNOR",
+      "dx": 60,
+      "dy": -100
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "146 DRONES",
+     "icon": "plane",
+     "color": "oil",
+     "screen": [
+      540,
+      1110
+     ],
+     "at": "f3:Leningrad",
+     "until": "f3:Lithuania -0.2",
+     "note": "DOWNED OVER LENINGRAD REGION · PER GOVERNOR"
+    },
+    {
+     "kind": "note",
+     "text": "SHELTER WARNINGS",
+     "sub": "LITHUANIA · LATVIA · PER REPORTS",
+     "y": 1110,
+     "at": "f3:Lithuania",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "RU-LEN",
+     "color": "danger",
+     "alpha": 0.7,
+     "fill": 0.22,
+     "pulse": true,
+     "at": "f3",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "arc",
+     "from": "Kyiv",
+     "to": [
+      28.287,
+      59.667
+     ],
+     "color": "info",
+     "height": 0.35,
+     "at": "f3:drones",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "arc",
+     "from": "Chernihiv",
+     "to": [
+      30.314,
+      59.939
+     ],
+     "color": "info",
+     "height": 0.3,
+     "at": "f3:kept",
+     "until": "cta -0.2"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 36,
+     "lat": 54,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 34,
+     "lat": 54,
+     "R": 500
+    },
+    {
+     "at": "end",
+     "lon": 35,
+     "lat": 54,
+     "R": 500
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "RUS",
+     "color": "oil",
+     "alpha": 0.5
+    },
+    {
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.7
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Kirishi",
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "ENERGY STRIKES STOP",
+     "text"
+    ],
+    [
+     "THIS WINTER?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: REUTERS, AL JAZEERA, EURONEWS, SEMAFOR, TASS",
+    "NOV 9–11, 2026"
+   ]
+  }
+ ]
+}
