@@ -1,0 +1,294 @@
+{
+ "id": "2026-11-12-alphaproof-signal-proof",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Six and a half million lines of math, written by AI. Is Signal safer now?"
+  },
+  {
+   "id": "f1",
+   "text": "Google DeepMind says its new system, AlphaProof Code, has mathematically proven key security properties of the code library behind Signal's encryption. It checked the compiled machine code that phones actually run, not just the source code."
+  },
+  {
+   "id": "f2",
+   "text": "How did it work? Humans wrote and approved the security rules. Then teams of AI agents wrote about six and a half million lines of proof in a language called Lean. A separate checker verified every step. DeepMind says five people finished it in four weeks."
+  },
+  {
+   "id": "f3",
+   "text": "As a test, the team put back two old bugs that had already been fixed. The system caught both. Wired reports no new flaws were found. The proofs cover one-to-one chats only, not the whole app, and the report is not peer-reviewed."
+  },
+  {
+   "id": "cta",
+   "text": "Will AI-checked proofs become standard for security software? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE CLAIM",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "HOW IT WORKS",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "THE LIMITS",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Google's A.I. Checked Signal's Encryption With Math #shorts",
+  "description": "On November 10, Google DeepMind said its AlphaProof Code system produced machine-checked proofs of key security properties of libsignal, the library behind Signal's encryption, down to the compiled machine code. Per DeepMind's report, AI agents wrote about 6.5 million lines of Lean proof for a five-person team in four weeks; the proofs cover one-to-one sessions only and the report is not peer-reviewed.\n\nSources: Google DeepMind announcement and technical report, The Register, WIRED (via coverage), The Next Web, Unite.AI, Hardware Busters.\n\n#tech #AI #Signal #encryption #cybersecurity",
+  "tags": [
+   "technology",
+   "news",
+   "AI",
+   "Google DeepMind",
+   "AlphaProof",
+   "Signal",
+   "encryption",
+   "formal verification",
+   "Lean",
+   "cybersecurity"
+  ],
+  "cover": "f2:checker"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [
+   -0.125,
+   51.533
+  ],
+  "number": "6.5M",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "LINES OF PROOF",
+    "text"
+   ],
+   [
+    "SIGNAL SAFER?",
+    "accent"
+   ]
+  ],
+  "source": "PER GOOGLE DEEPMIND · NOV 10"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": -20,
+     "lat": 35,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": -2,
+     "lat": 48,
+     "R": 600
+    }
+   ],
+   "chip": {
+    "text": "GOOGLE DEEPMIND · NOV 10, 2026",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "GBR",
+     "color": "info",
+     "at": "hook:lines",
+     "alpha": 0.45
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -0.125,
+      51.533
+     ],
+     "color": "accent",
+     "at": "hook:lines",
+     "label": "GOOGLE DEEPMIND",
+     "sub": "LONDON HQ",
+     "dx": -60,
+     "dy": -110
+    }
+   ],
+   "headline": {
+    "at": "hook:half",
+    "lines": [
+     [
+      "6.5 MILLION LINES",
+      "text",
+      100
+     ],
+     [
+      "OF AI-WRITTEN MATH",
+      "accent",
+      90
+     ]
+    ]
+   }
+  },
+  {
+   "type": "flow",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "WHAT WAS CHECKED",
+   "color": "accent",
+   "steps": [
+    {
+     "icon": "people",
+     "title": "SIGNAL APP",
+     "sub": "NOT COVERED AS A WHOLE",
+     "color": "neutral",
+     "at": "f1:Google"
+    },
+    {
+     "icon": "shield",
+     "title": "LIBSIGNAL",
+     "sub": "THE ENCRYPTION CODE LIBRARY",
+     "color": "info",
+     "at": "f1:security"
+    },
+    {
+     "icon": "chip",
+     "title": "MACHINE CODE",
+     "sub": "WHAT PHONES RUN · PROVEN, PER DEEPMIND",
+     "color": "accent",
+     "at": "f1:compiled"
+    }
+   ],
+   "source": "SOURCES: GOOGLE DEEPMIND · THE REGISTER · HARDWARE BUSTERS"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "HOW THE PROOF WAS BUILT",
+   "color": "violet",
+   "steps": [
+    {
+     "icon": "people",
+     "title": "HUMANS SET THE RULES",
+     "sub": "WRITE + APPROVE THE SPECS",
+     "color": "info",
+     "at": "f2:Humans"
+    },
+    {
+     "icon": "bolt",
+     "title": "AI AGENTS WRITE PROOF",
+     "sub": "≈ 6.5 MILLION LINES OF LEAN",
+     "color": "violet",
+     "at": "f2:agents"
+    },
+    {
+     "icon": "check",
+     "title": "CHECKER VERIFIES",
+     "sub": "EVERY STEP, BY MACHINE",
+     "color": "ok",
+     "at": "f2:checker"
+    },
+    {
+     "icon": "flag",
+     "title": "5 PEOPLE · 4 WEEKS",
+     "sub": "PER DEEPMIND'S REPORT",
+     "color": "accent",
+     "at": "f2:five"
+    }
+   ],
+   "source": "SOURCES: GOOGLE DEEPMIND REPORT · THE NEXT WEB · UNITE.AI"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "info",
+   "items": [
+    {
+     "icon": "check",
+     "big": "2 OF 2 OLD BUGS",
+     "text": "CAUGHT IN A TEST, PER DEEPMIND",
+     "color": "ok",
+     "at": "f3:caught"
+    },
+    {
+     "icon": "eye",
+     "big": "NO NEW FLAWS",
+     "text": "IN THE CHECKED CODE, PER WIRED",
+     "color": "accent",
+     "at": "f3:Wired"
+    },
+    {
+     "icon": "x",
+     "big": "1-TO-1 CHATS ONLY",
+     "text": "NOT THE WHOLE APP · NOT PEER-REVIEWED",
+     "color": "danger",
+     "at": "f3:cover"
+    }
+   ],
+   "source": "SOURCES: GOOGLE DEEPMIND · WIRED · THE REGISTER"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -20,
+     "lat": 35,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -2,
+     "lat": 48,
+     "R": 540
+    },
+    {
+     "at": "end",
+     "lon": -10,
+     "lat": 42,
+     "R": 500
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -0.125,
+      51.533
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "AI-CHECKED PROOFS",
+     "text"
+    ],
+    [
+     "THE NEW STANDARD?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "GOOGLE DEEPMIND · THE REGISTER · WIRED · THE NEXT WEB · UNITE.AI",
+    "CLAIMS PER DEEPMIND'S REPORT · NOT PEER-REVIEWED"
+   ]
+  }
+ ]
+}
