@@ -1,0 +1,537 @@
+{
+ "id": "2026-11-12-bc-atmospheric-river-floods",
+ "lang": "en",
+ "gap": 0.8,
+ "script": [
+  {
+   "id": "hook",
+   "text": "Over three hundred millimetres of rain. Now a Canadian village is on evacuation alert."
+  },
+  {
+   "id": "f1",
+   "text": "A chain of Pacific storms has soaked southwest British Columbia since Tuesday. The CBC reports up to three hundred and six millimetres at Port Mellon, northwest of Vancouver. Environment Canada says two hundred and fourteen fell there in just twenty-four hours."
+  },
+  {
+   "id": "f2",
+   "text": "In Pemberton, north of Whistler, officials warn of extremely high river flows. On Wednesday, homes on Airport Road were ordered out, and the whole village was put on evacuation alert. Near Squamish, residents were told to shelter in place as water rose."
+  },
+  {
+   "id": "f3",
+   "text": "On Vancouver Island, The Canadian Press reports floodwater backing up into basements in Port Alberni. Close to half a million B.C. Hydro customers lost power during the storms. And Environment Canada warned of possible widespread flooding."
+  },
+  {
+   "id": "cta",
+   "text": "Will Pemberton's evacuation alert be lifted by the weekend? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE RAIN",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "THE ALERT",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE DAMAGE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -110,
+     "lat": 42,
+     "R": 360
+    },
+    {
+     "at": 3.4,
+     "lon": -123.6,
+     "lat": 49.8,
+     "R": 560
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -123.4,
+      49.7
+     ],
+     "color": "info",
+     "at": 1.2,
+     "label": "SOUTHWEST B.C."
+    }
+   ],
+   "chip": {
+    "text": "BRITISH COLUMBIA · CANADA",
+    "at": 1.0
+   },
+   "headline": {
+    "at": "hook:millimetres",
+    "lines": [
+     [
+      "300+ MM OF RAIN",
+      "info",
+      96
+     ],
+     [
+      "VILLAGE ON ALERT",
+      "accent",
+      96
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -123.6,
+    49.8
+   ],
+   "detail": [
+    "CAN"
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -123.6,
+     "lat": 49.8,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.6",
+     "lon": -123.7,
+     "lat": 49.7,
+     "dist": 10,
+     "pitch": 34,
+     "yaw": -6,
+     "oy": 160
+    },
+    {
+     "at": "f1:Port -0.3",
+     "lon": -123.45,
+     "lat": 49.6,
+     "dist": 6,
+     "pitch": 42,
+     "yaw": -12,
+     "oy": 180
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": -122.9,
+     "lat": 50.2,
+     "dist": 5,
+     "pitch": 44,
+     "yaw": 8,
+     "oy": 180
+    },
+    {
+     "at": "f2:Squamish -0.4",
+     "lon": -123.1,
+     "lat": 49.85,
+     "dist": 6,
+     "pitch": 40,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": -124.3,
+     "lat": 49.45,
+     "dist": 8,
+     "pitch": 36,
+     "yaw": 10,
+     "oy": 170
+    },
+    {
+     "at": "cta -0.1",
+     "lon": -123.6,
+     "lat": 49.8,
+     "dist": 14,
+     "pitch": 28,
+     "yaw": 0,
+     "oy": 150
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "CA-BC",
+     "color": "neutral",
+     "alpha": 0.14,
+     "at": "hook$ +0.3"
+    },
+    {
+     "kind": "field",
+     "at": "f1 +0.3",
+     "until": "f2 +0.2",
+     "palette": "rain",
+     "clip": "land",
+     "alpha": 0.75,
+     "grow": 0.9,
+     "blobs": [
+      {
+       "loc": [
+        -123.45,
+        49.55
+       ],
+       "r": 0.77,
+       "v": 1
+      },
+      {
+       "loc": [
+        -123.15,
+        49.85
+       ],
+       "r": 0.7,
+       "v": 0.85
+      },
+      {
+       "loc": [
+        -125.6,
+        49.3
+       ],
+       "r": 0.98,
+       "v": 0.85
+      },
+      {
+       "loc": [
+        -123.0,
+        49.4
+       ],
+       "r": 0.56,
+       "v": 0.7
+      },
+      {
+       "loc": [
+        -122.9,
+        50.2
+       ],
+       "r": 0.7,
+       "v": 0.65
+      },
+      {
+       "loc": [
+        -124.6,
+        49.8
+       ],
+       "r": 0.84,
+       "v": 0.6
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "RAIN AREAS ILLUSTRATIVE · STORMS SINCE TUE, NOV 10",
+     "y": 1170,
+     "at": "f1 +0.8",
+     "until": "f1:Environment"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -123.49,
+      49.52
+     ],
+     "style": "pulse",
+     "color": "info",
+     "at": "f1:Port",
+     "label": {
+      "text": "PORT MELLON",
+      "sub": "UP TO 306 MM SINCE TUE · CBC",
+      "dx": -200,
+      "dy": -150,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -123.119,
+      49.25
+     ],
+     "style": "dot",
+     "color": "text",
+     "at": "f1:Vancouver",
+     "label": {
+      "text": "VANCOUVER",
+      "dx": 120,
+      "dy": 90,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "route",
+     "at": "f2 +0.4",
+     "style": "flow",
+     "color": "info",
+     "width": 9,
+     "path": [
+      [
+       -123.15,
+       50.5
+      ],
+      [
+       -123.0,
+       50.42
+      ],
+      [
+       -122.88,
+       50.35
+      ],
+      [
+       -122.78,
+       50.3
+      ],
+      [
+       -122.65,
+       50.26
+      ],
+      [
+       -122.53,
+       50.22
+      ]
+     ],
+     "label": {
+      "text": "LILLOOET RIVER",
+      "sub": "COURSE APPROXIMATE",
+      "loc": [
+       -123.0,
+       50.42
+      ],
+      "dx": -150,
+      "dy": -150,
+      "at": "f2:river",
+      "until": "f2:Airport"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -122.803,
+      50.316
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f2:Pemberton",
+     "label": {
+      "text": "PEMBERTON",
+      "sub": "VILLAGE ON EVACUATION ALERT",
+      "dx": 120,
+      "dy": 140,
+      "until": "f2:Squamish"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -122.954,
+      50.118
+     ],
+     "style": "dot",
+     "color": "text",
+     "at": "f2:Whistler",
+     "label": {
+      "text": "WHISTLER",
+      "dx": -170,
+      "dy": 110,
+      "until": "f2:officials"
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "EVACUATION ALERT",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f2:whole -0.1",
+     "until": "f2:Near -0.2",
+     "note": "WHOLE VILLAGE · AIRPORT RD. UNDER ORDER · NOV 11 · CBC"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -123.156,
+      49.699
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f2:Squamish",
+     "label": {
+      "text": "SQUAMISH",
+      "sub": "SHELTER IN PLACE · PARADISE VALLEY",
+      "dx": -120,
+      "dy": 150,
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -124.803,
+      49.241
+     ],
+     "style": "pulse",
+     "color": "info",
+     "at": "f3:Port",
+     "label": {
+      "text": "PORT ALBERNI",
+      "sub": "FLOODWATER IN BASEMENTS · CP",
+      "dx": 120,
+      "dy": -150,
+      "until": "f3:Close"
+     }
+    },
+    {
+     "kind": "tint",
+     "iso": "CA-BC",
+     "color": "info",
+     "alpha": 0.08,
+     "dash": true,
+     "at": "f3:Island",
+     "until": "f3:Close"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "from": "f1:Environment -0.2",
+   "to": "f1$ -0.1",
+   "label": "PORT MELLON · 24-HOUR RAINFALL",
+   "sublabel": "NOV 10 – NOV 11",
+   "icon": "rain",
+   "value": 214,
+   "start": 0,
+   "suffix": " MM",
+   "decimals": 0,
+   "at": "f1:Environment",
+   "doneAt": "f1:hours +0.2",
+   "note": "UP TO 306 MM SINCE TUESDAY · PER CBC",
+   "source": "SOURCE: ENVIRONMENT AND CLIMATE CHANGE CANADA VIA CP"
+  },
+  {
+   "type": "facts",
+   "from": "f3:Close -0.3",
+   "to": "f3$ -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "bolt",
+     "big": "≈ 500,000",
+     "text": "B.C. HYDRO CUSTOMERS LOST POWER · CP",
+     "color": "accent",
+     "at": "f3:Close"
+    },
+    {
+     "icon": "rain",
+     "big": "MORE FLOODING?",
+     "text": "ENVIRONMENT CANADA: WIDESPREAD FLOODING POSSIBLE",
+     "color": "info",
+     "at": "f3:Environment"
+    }
+   ],
+   "source": "SOURCE: THE CANADIAN PRESS, ENVIRONMENT CANADA"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "300+ MM. RIVERS RISING.",
+     "text"
+    ],
+    [
+     "ALERT LIFTED BY WEEKEND?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "CBC · THE CANADIAN PRESS VIA CTV · GLOBE AND MAIL · ENV. CANADA · EMERGENCYINFOBC (SEARCH EXCERPTS)",
+    "RAIN AREAS ILLUSTRATIVE · RIVER COURSE APPROXIMATE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -123.6,
+     "lat": 49.8,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -123.6,
+     "lat": 49.8,
+     "R": 620
+    },
+    {
+     "at": "end",
+     "lon": -118,
+     "lat": 48,
+     "R": 600
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "B.C. Floods Force Evacuations Near Whistler #shorts",
+  "description": "A chain of Pacific storms has dropped up to 306 mm of rain on southwest British Columbia since Tuesday, according to the CBC – Environment Canada measured 214 mm in 24 hours at Port Mellon. Pemberton ordered homes on Airport Road evacuated and put the whole village on evacuation alert, while residents near Squamish were told to shelter in place.\n\nSources: CBC News, The Canadian Press (via CTV News), The Globe and Mail, Environment and Climate Change Canada, EmergencyInfoBC / Village of Pemberton (based on search-result excerpts). Rain areas on the map are illustrative and the river course is approximate.\n\n#climate #weather #bcflood #atmosphericriver #britishcolumbia",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "British Columbia",
+   "BC floods",
+   "atmospheric river",
+   "Pemberton",
+   "Squamish",
+   "Vancouver Island",
+   "flooding",
+   "Canada"
+  ],
+  "cover": "f2:whole +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:British",
+  "number": "306 MM",
+  "numberColor": "info",
+  "source": "RAIN SINCE TUE · PORT MELLON · PER CBC",
+  "focus": [
+   -123.7,
+   49.5
+  ],
+  "lines": [
+   [
+    "WHOLE VILLAGE",
+    "text"
+   ],
+   [
+    "ON ALERT",
+    "accent"
+   ]
+  ],
+  "zoom": 1.2
+ }
+}
