@@ -1,0 +1,496 @@
+{
+ "id": "2026-11-12-abu-dhabi-prisoner-swap",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A thousand prisoners could go home. But the biggest question stays open."
+  },
+  {
+   "id": "f1",
+   "text": "Two days of U.S.-mediated talks in Abu Dhabi ended on Wednesday. Both delegations confirmed a deal in principle on a large prisoner exchange. Ukrainian media report at least a thousand for a thousand. Russia's negotiator Vladimir Medinsky says the exact number will be set Thursday."
+  },
+  {
+   "id": "f2",
+   "text": "On a ceasefire and territory, there was no breakthrough, U.S. mediators say. Russia still demands all of Donetsk, reports say, and Kyiv rejects that. Ukraine's David Arakhamia calls these talks among the toughest yet. Still, he sees good momentum toward a solution before year's end."
+  },
+  {
+   "id": "f3",
+   "text": "Next stop: Moscow. Jared Kushner says he and Steve Witkoff will meet Vladimir Putin, then fly to Dublin to see Volodymyr Zelensky. Medinsky says the sides moved closer to peace, and more rounds will follow soon."
+  },
+  {
+   "id": "cta",
+   "text": "Will a ceasefire come before the new year? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE SWAP",
+   "seg": "f1",
+   "color": "ok"
+  },
+  {
+   "n": "02",
+   "name": "NO BREAKTHROUGH",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "NEXT STOP",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Abu Dhabi Talks End. Why Is There Still No Ceasefire? #shorts",
+  "description": "Two days of U.S.-mediated trilateral talks between Russia and Ukraine in Abu Dhabi ended on Wednesday, November 11, 2026. Both delegation heads, Vladimir Medinsky for Russia and Rustem Umerov for Ukraine, confirmed an agreement in principle on a large-scale prisoner exchange. Ukrainian media report an exchange of at least 1,000 for 1,000; Medinsky said the exact number would be finalised on Thursday. According to U.S. mediators, differences remain on the major issues, including territory, and there was no breakthrough on a ceasefire. According to reports, Russia continues to demand that Ukraine give up all of the Donetsk region, which Kyiv rejects. Ukrainian negotiator David Arakhamia called the round among the toughest so far, saying the Russian delegation came with strict instructions, but he also spoke of good momentum toward a solution before the end of the year. Jared Kushner said he and envoy Steve Witkoff would travel to Moscow to meet Vladimir Putin and then to Dublin to meet Volodymyr Zelensky. Medinsky told TASS the sides had moved closer to peace and that further rounds would follow soon. Timing and size of the exchange had not been officially announced at the time of production.\n\nSources:\nNBC News, Nov 11, 2026: Russia and Ukraine agree to a large prisoner exchange as talks conclude with no major breakthrough\nThe Moscow Times, Nov 11, 2026: Abu Dhabi talks end with prisoner exchange but no peace breakthrough\nInterfax-Ukraine / The New Voice of Ukraine: Arakhamia says Abu Dhabi talks among the toughest, prisoner swap agreed\nLIGA.net: What was agreed in Abu Dhabi - a large-scale prisoner exchange\nSaudi Gazette: Abu Dhabi talks end with Russia-Ukraine deal on prisoner swap\nTASS: Parties move closer to peace following talks in Abu Dhabi - Russian delegation head\n\n#geopolitics #Ukraine #Russia #AbuDhabi",
+  "tags": [
+   "geopolitics",
+   "Ukraine",
+   "Russia",
+   "Abu Dhabi",
+   "peace talks",
+   "prisoner exchange",
+   "Witkoff",
+   "Kushner",
+   "Medinsky",
+   "Donetsk",
+   "world news"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:Wednesday.",
+  "focus": "Abu Dhabi",
+  "zoom": 1.35,
+  "number": "1,000",
+  "numberColor": "ok",
+  "lines": [
+   [
+    "PRISONERS EACH SIDE",
+    "text"
+   ],
+   [
+    "LAND? NO DEAL",
+    "accent"
+   ]
+  ],
+  "source": "NOV 11 · PER UKRAINIAN MEDIA"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 42,
+     "lat": 38,
+     "R": 340
+    },
+    {
+     "at": 3.4,
+     "lon": 48,
+     "lat": 33,
+     "R": 390
+    }
+   ],
+   "chip": {
+    "text": "ABU DHABI · NOV 12, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "UKR",
+     "color": "info",
+     "at": "hook:prisoners"
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "at": "hook:prisoners"
+    },
+    {
+     "iso": "ARE",
+     "color": "accent",
+     "at": "hook:go"
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Abu Dhabi",
+     "color": "accent",
+     "at": "hook:go",
+     "label": "ABU DHABI",
+     "sub": "TALKS ENDED",
+     "dx": -120,
+     "dy": -80,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:prisoners",
+    "lines": [
+     [
+      "1,000",
+      "ok",
+      150
+     ],
+     [
+      "PRISONERS?",
+      "text",
+      100
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:But",
+    "icon": "flag",
+    "iconColor": "danger",
+    "color": "danger",
+    "kicker": "STILL OPEN",
+    "title": "TERRITORY",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    36,
+    44
+   ],
+   "detail": [
+    "UKR"
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 48,
+     "lat": 33,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 54.4,
+     "lat": 24.4,
+     "dist": 13,
+     "pitch": 46,
+     "yaw": 5,
+     "oy": 190
+    },
+    {
+     "at": "f1$ -0.4",
+     "lon": 54.4,
+     "lat": 24.6,
+     "dist": 12,
+     "pitch": 46,
+     "yaw": 8,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 37.6,
+     "lat": 48.2,
+     "dist": 12,
+     "pitch": 48,
+     "yaw": -6,
+     "oy": 190
+    },
+    {
+     "at": "f2:Arakhamia -0.3",
+     "lon": 33,
+     "lat": 49,
+     "dist": 30,
+     "pitch": 46,
+     "yaw": -2,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.1",
+     "lon": 22,
+     "lat": 47,
+     "dist": 92,
+     "pitch": 44,
+     "yaw": 2,
+     "oy": 200
+    },
+    {
+     "at": "cta",
+     "lon": 30,
+     "lat": 45,
+     "dist": 100,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 200
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "ARE",
+     "color": "accent",
+     "alpha": 0.5,
+     "fill": 0.15,
+     "at": "f1"
+    },
+    {
+     "kind": "marker",
+     "loc": "Abu Dhabi",
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1:Abu",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "ABU DHABI",
+      "sub": "NOV 10–11 · U.S.-MEDIATED",
+      "dx": -60,
+      "dy": -160
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "SWAP AGREED",
+     "icon": "people",
+     "color": "ok",
+     "screen": [
+      540,
+      1080
+     ],
+     "at": "f1:confirmed",
+     "until": "f1:Ukrainian -0.2",
+     "note": "IN PRINCIPLE · PER BOTH DELEGATIONS"
+    },
+    {
+     "kind": "stamp",
+     "text": "1,000 FOR 1,000+",
+     "icon": "people",
+     "color": "ok",
+     "screen": [
+      540,
+      1080
+     ],
+     "at": "f1:Ukrainian",
+     "until": "f1:Russia's -0.2",
+     "note": "PER UKRAINIAN MEDIA · NOT OFFICIAL"
+    },
+    {
+     "kind": "stamp",
+     "text": "NUMBER: THURSDAY",
+     "icon": "check",
+     "color": "info",
+     "screen": [
+      540,
+      1080
+     ],
+     "at": "f1:Russia's",
+     "until": "f2 -0.2",
+     "note": "PER MEDINSKY"
+    },
+    {
+     "kind": "tint",
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.45,
+     "fill": 0.1,
+     "at": "f2"
+    },
+    {
+     "kind": "tint",
+     "iso": "UA-14",
+     "color": "danger",
+     "alpha": 0.8,
+     "fill": 0.25,
+     "hatch": true,
+     "dash": true,
+     "at": "f2:Donetsk"
+    },
+    {
+     "kind": "tag",
+     "loc": "UA-14",
+     "text": "DONETSK",
+     "sub": "RUSSIA DEMANDS ALL · PER REPORTS",
+     "color": "danger",
+     "dx": -150,
+     "dy": -120,
+     "at": "f2:Donetsk",
+     "until": "f2:Arakhamia -0.3"
+    },
+    {
+     "kind": "stamp",
+     "text": "NO BREAKTHROUGH",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      540,
+      1080
+     ],
+     "at": "f2:ceasefire",
+     "until": "f2:Russia -0.2",
+     "note": "CEASEFIRE & TERRITORY · PER U.S. MEDIATORS"
+    },
+    {
+     "kind": "stamp",
+     "text": "KYIV REJECTS",
+     "icon": "x",
+     "color": "info",
+     "screen": [
+      540,
+      1080
+     ],
+     "at": "f2:Kyiv",
+     "until": "f2:Arakhamia -0.2",
+     "note": "DONETSK DEMAND · PER REPORTS"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      90,
+      330,
+      900
+     ],
+     "kicker": "DAVID ARAKHAMIA · UKRAINE",
+     "text": "AMONG THE TOUGHEST TALKS · BUT \"GOOD MOMENTUM\"",
+     "color": "info",
+     "at": "f2:Arakhamia",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "marker",
+     "loc": "Moscow",
+     "style": "dot",
+     "color": "danger",
+     "at": "f3:Moscow",
+     "until": "cta -0.2",
+     "label": {
+      "text": "MOSCOW",
+      "sub": "PUTIN MEETING · PER KUSHNER",
+      "dx": -70,
+      "dy": -90
+     }
+    },
+    {
+     "kind": "arc",
+     "from": "Abu Dhabi",
+     "to": "Moscow",
+     "color": "accent",
+     "height": 0.5,
+     "at": "f3:Kushner",
+     "dur": 1.4
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -6.25,
+      53.33
+     ],
+     "style": "dot",
+     "color": "info",
+     "at": "f3:Dublin",
+     "until": "cta -0.2",
+     "label": {
+      "text": "DUBLIN",
+      "sub": "ZELENSKY MEETING · PER KUSHNER",
+      "dx": -60,
+      "dy": -90
+     }
+    },
+    {
+     "kind": "arc",
+     "from": "Moscow",
+     "to": [
+      -6.25,
+      53.33
+     ],
+     "color": "info",
+     "height": 0.5,
+     "at": "f3:Dublin",
+     "dur": 1.4
+    },
+    {
+     "kind": "stamp",
+     "text": "MORE ROUNDS SOON",
+     "icon": "flag",
+     "color": "accent",
+     "screen": [
+      540,
+      1080
+     ],
+     "at": "f3:Medinsky",
+     "until": "cta -0.2",
+     "note": "\"CLOSER TO PEACE\" · PER MEDINSKY TO TASS"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 30,
+     "lat": 45,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 30,
+     "lat": 47,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": 30,
+     "lat": 47,
+     "R": 520
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.7
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.5
+    },
+    {
+     "iso": "ARE",
+     "color": "accent",
+     "alpha": 0.7
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Abu Dhabi",
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "CEASEFIRE BEFORE",
+     "text"
+    ],
+    [
+     "THE NEW YEAR?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: NBC NEWS, MOSCOW TIMES, INTERFAX-UKRAINE, LIGA.NET, SAUDI GAZETTE, TASS",
+    "NOV 12, 2026"
+   ]
+  }
+ ]
+}
