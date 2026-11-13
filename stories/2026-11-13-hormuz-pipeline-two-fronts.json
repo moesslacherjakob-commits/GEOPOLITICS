@@ -1,0 +1,603 @@
+{
+ "id": "2026-11-13-hormuz-pipeline-two-fronts",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Saudi Arabia's oil route around Hormuz just came under fire. What does that mean?"
+  },
+  {
+   "id": "f1",
+   "text": "First, the strait itself. Iran's Revolutionary Guards say two supertankers were disabled by explosions, after ignoring warnings on what Tehran calls an unauthorised route. Iran's army reported two more tankers hit by mines. Reuters could not verify the Iranian account."
+  },
+  {
+   "id": "f2",
+   "text": "Then Yemen's Houthis claimed strikes on a pumping station of Saudi Arabia's East-West pipeline, an oil site in Yanbu, and an Aramco building in Riyadh. Saudi Arabia did not confirm. Reuters says the pipeline carries about four million barrels a day around Hormuz."
+  },
+  {
+   "id": "f3",
+   "text": "Markets reacted. Brent crude rose three point three percent on Thursday, to almost ninety-six dollars a barrel. And President Trump now says the U.S. no longer needs a deal with Iran, while the U.S. blockade of Iranian ports goes on."
+  },
+  {
+   "id": "cta",
+   "text": "Will the Strait of Hormuz reopen before the new year? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE STRAIT",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE BYPASS",
+   "seg": "f2",
+   "color": "oil"
+  },
+  {
+   "n": "03",
+   "name": "THE MARKETS",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Houthis Target Saudi Pipeline. Is Oil's Last Exit Next? #shorts",
+  "description": "Two of the Gulf's oil routes came under pressure on the same day. Iran's Revolutionary Guards Navy said on November 12, 2026 that two oil supertankers were disabled by explosions in the Strait of Hormuz after ignoring warnings against using what it called an \"unauthorised route\"; Iran's army later reported two more tankers hitting mines. Reuters said it could not immediately verify the Iranian account, and the vessels were not named. Yemen's Houthis then said they attacked a pumping station on Saudi Arabia's East-West oil pipeline, an oil facility in the Red Sea port of Yanbu and a Saudi Aramco building in Riyadh; Saudi Arabia did not immediately confirm the claims, and the Houthis did not say when the attacks took place. According to Reuters, Saudi Arabia has rerouted about 4 million barrels per day of crude through the East-West pipeline to Yanbu, bypassing Hormuz. Brent crude settled up 3.3% at $95.82 a barrel on Thursday, November 12, though it was still down about 2.5% for the week. U.S. President Donald Trump said on Truth Social that the U.S. no longer needs a deal with Iran; the U.S. naval blockade of Iranian ports remains in place. The extent of any damage was unconfirmed at the time of production.\n\nSources:\nReuters via Investing.com, Nov 12, 2026: Four tankers struck by explosions in Strait of Hormuz, Iran says\nMarineLink / Reuters, Nov 12, 2026: Two Oil Supertankers Explode in Strait of Hormuz, IRGC Says\nCyprus Mail / Reuters, Nov 12, 2026: Yemen's Houthis say they attacked pumping station on Saudi Arabia's East-West oil pipeline\nMiddle East Eye, Nov 12, 2026: Houthis say they attacked pumping station on Saudi East-West pipeline\nThe New Arab, Nov 12, 2026: Yemen's Houthis say targeted Saudi East-West pipeline, Yanbu\nNation Thailand, Nov 12, 2026: Brent rises 3.3% on November 12 amid Saudi attack claims\nCNBC, Nov 12, 2026: Trump says 'we don't need a deal with Iran'\nCBS News live updates, Nov 12, 2026\n\n#geopolitics #Iran #Hormuz #SaudiArabia #oil",
+  "tags": [
+   "geopolitics",
+   "Iran",
+   "Strait of Hormuz",
+   "Saudi Arabia",
+   "Houthis",
+   "East-West pipeline",
+   "Yanbu",
+   "oil prices",
+   "Brent",
+   "tankers",
+   "world news"
+  ],
+  "cover": "f2 +0.5"
+ },
+ "thumbnail": {
+  "at": "f2:Saudi#1 -0.3",
+  "focus": [
+   44.5,
+   24.6
+  ],
+  "zoom": 1.25,
+  "number": "4M",
+  "numberColor": "oil",
+  "lines": [
+   [
+    "BARRELS A DAY",
+    "text"
+   ],
+   [
+    "NOW A TARGET?",
+    "accent"
+   ]
+  ],
+  "source": "PIPELINE FLOW PER REUTERS · HOUTHI CLAIM NOV 12"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 46,
+     "lat": 26,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": 47,
+     "lat": 25,
+     "R": 520
+    }
+   ],
+   "chip": {
+    "text": "GULF OIL · NOV 13, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "SAU",
+     "color": "oil",
+     "at": "hook:route"
+    },
+    {
+     "iso": "IRN",
+     "color": "danger",
+     "at": "hook:Hormuz",
+     "alpha": 0.6
+    },
+    {
+     "iso": "YEM",
+     "color": "danger",
+     "at": "hook:fire.",
+     "alpha": 0.6
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Strait of Hormuz",
+     "color": "danger",
+     "at": "hook:Hormuz",
+     "label": "HORMUZ",
+     "sub": "TANKERS HIT · PER IRAN",
+     "dx": -60,
+     "dy": -90,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:route",
+    "lines": [
+     [
+      "THE BYPASS",
+      "oil",
+      110
+     ],
+     [
+      "UNDER FIRE?",
+      "danger",
+      100
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:What",
+    "icon": "barrel",
+    "iconColor": "oil",
+    "color": "oil",
+    "kicker": "EAST-WEST PIPELINE",
+    "title": "HOUTHI CLAIM",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    48,
+    24
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 47,
+     "lat": 25,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 56.4,
+     "lat": 26.3,
+     "dist": 12,
+     "pitch": 48,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "f1$ -0.5",
+     "lon": 56.6,
+     "lat": 26.0,
+     "dist": 14,
+     "pitch": 48,
+     "yaw": 6,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": 43.5,
+     "lat": 24.2,
+     "dist": 30,
+     "pitch": 46,
+     "yaw": -4,
+     "oy": 200
+    },
+    {
+     "at": "f2:Riyadh. -0.2",
+     "lon": 43.5,
+     "lat": 21.5,
+     "dist": 36,
+     "pitch": 46,
+     "yaw": -2,
+     "oy": 200
+    },
+    {
+     "at": "f2:Reuters",
+     "lon": 45,
+     "lat": 22.8,
+     "dist": 32,
+     "pitch": 48,
+     "yaw": 0,
+     "oy": 200
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 53,
+     "lat": 26,
+     "dist": 42,
+     "pitch": 44,
+     "yaw": 2,
+     "oy": 200
+    },
+    {
+     "at": "cta",
+     "lon": 53,
+     "lat": 26,
+     "dist": 46,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 200
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "IRN",
+     "color": "danger",
+     "alpha": 0.4,
+     "fill": 0.07,
+     "at": "f1"
+    },
+    {
+     "kind": "marker",
+     "loc": "Strait of Hormuz",
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:strait",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "STRAIT OF HORMUZ",
+      "sub": "SOUTHERN ROUTE · PER IRGC",
+      "dx": -80,
+      "dy": -170
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "2 SUPERTANKERS",
+     "icon": "flame",
+     "color": "danger",
+     "screen": [
+      540,
+      1080
+     ],
+     "at": "f1:supertankers",
+     "until": "f1:army -0.2",
+     "note": "\"DISABLED\" · CLAIM BY IRGC NAVY"
+    },
+    {
+     "kind": "stamp",
+     "text": "+2 HIT BY MINES",
+     "icon": "ship",
+     "color": "danger",
+     "screen": [
+      540,
+      1080
+     ],
+     "at": "f1:army",
+     "until": "f1:Reuters -0.2",
+     "note": "CLAIM BY IRAN'S ARMY · SHIPS NOT NAMED"
+    },
+    {
+     "kind": "stamp",
+     "text": "NOT VERIFIED",
+     "icon": "eye",
+     "color": "neutral",
+     "screen": [
+      540,
+      1080
+     ],
+     "at": "f1:Reuters",
+     "until": "f2 -0.2",
+     "note": "PER REUTERS · NOV 12"
+    },
+    {
+     "kind": "tint",
+     "iso": "SAU",
+     "color": "oil",
+     "alpha": 0.45,
+     "fill": 0.08,
+     "at": "f2"
+    },
+    {
+     "kind": "tint",
+     "iso": "YEM",
+     "color": "danger",
+     "alpha": 0.5,
+     "fill": 0.1,
+     "at": "f2:Houthis"
+    },
+    {
+     "kind": "route",
+     "path": [
+      [
+       49.67,
+       25.93
+      ],
+      [
+       47.6,
+       25.3
+      ],
+      [
+       44.5,
+       24.9
+      ],
+      [
+       41.5,
+       24.5
+      ],
+      [
+       38.06,
+       24.09
+      ]
+     ],
+     "style": "flow",
+     "color": "oil",
+     "width": 7,
+     "at": "f2:East-West",
+     "label": {
+      "text": "EAST-WEST PIPELINE",
+      "sub": "ABQAIQ → YANBU · APPROX. ROUTE",
+      "loc": [
+       44.5,
+       25.6
+      ],
+      "dx": 0,
+      "dy": -120,
+      "at": "f2:East-West",
+      "until": "f2:Riyadh. -0.2"
+     }
+    },
+    {
+     "kind": "arc",
+     "from": "Sanaa",
+     "to": [
+      44.5,
+      24.9
+     ],
+     "color": "danger",
+     "height": 0.4,
+     "at": "f2:pumping",
+     "dur": 1.2
+    },
+    {
+     "kind": "arc",
+     "from": "Sanaa",
+     "to": "Yanbu",
+     "color": "danger",
+     "height": 0.4,
+     "at": "f2:Yanbu",
+     "dur": 1.2
+    },
+    {
+     "kind": "arc",
+     "from": "Sanaa",
+     "to": "Riyadh",
+     "color": "danger",
+     "height": 0.4,
+     "at": "f2:Riyadh.",
+     "dur": 1.2
+    },
+    {
+     "kind": "marker",
+     "loc": "Yanbu",
+     "style": "x",
+     "color": "danger",
+     "at": "f2:Yanbu",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "YANBU",
+      "sub": "CLAIM BY HOUTHIS",
+      "dx": -40,
+      "dy": 110
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": "Riyadh",
+     "style": "x",
+     "color": "danger",
+     "at": "f2:Riyadh.",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "RIYADH",
+      "sub": "ARAMCO BUILDING · CLAIM",
+      "dx": 30,
+      "dy": 110
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": "Sanaa",
+     "style": "dot",
+     "color": "danger",
+     "at": "f2:Houthis",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "HOUTHIS",
+      "sub": "YEMEN",
+      "dx": 90,
+      "dy": -70
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "NOT CONFIRMED",
+     "icon": "x",
+     "color": "neutral",
+     "screen": [
+      540,
+      400
+     ],
+     "at": "f2:Saudi#1",
+     "until": "f2:Reuters -0.2",
+     "note": "BY SAUDI ARABIA · NOV 12"
+    },
+    {
+     "kind": "stamp",
+     "text": "≈4M BARRELS / DAY",
+     "icon": "barrel",
+     "color": "oil",
+     "screen": [
+      540,
+      400
+     ],
+     "at": "f2:Reuters",
+     "until": "f3 -0.2",
+     "note": "REROUTED AROUND HORMUZ · PER REUTERS"
+    },
+    {
+     "kind": "marker",
+     "loc": "Strait of Hormuz",
+     "style": "dot",
+     "color": "danger",
+     "at": "f3",
+     "until": "cta -0.2",
+     "label": {
+      "text": "HORMUZ",
+      "sub": "STILL DISRUPTED · PER TRACKERS",
+      "dx": -60,
+      "dy": -90
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "BLOCKADE STAYS",
+     "icon": "ship",
+     "color": "info",
+     "screen": [
+      540,
+      1080
+     ],
+     "at": "f3:blockade",
+     "until": "cta -0.2",
+     "note": "U.S. NAVY · IRANIAN PORTS"
+    },
+    {
+     "kind": "tint",
+     "iso": "IRN",
+     "color": "danger",
+     "alpha": 0.6,
+     "fill": 0.12,
+     "pulse": true,
+     "at": "f3:blockade",
+     "until": "cta -0.2"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": "f3:Brent",
+   "doneAt": "f3:barrel.",
+   "label": "BRENT CRUDE",
+   "sublabel": "SETTLEMENT · THU NOV 12",
+   "icon": "barrel",
+   "value": 95.82,
+   "start": 92.76,
+   "prefix": "$",
+   "decimals": 2,
+   "suffix": "",
+   "doneSuffix": "  +3.3%",
+   "note": "STILL ≈ −2.5% FOR THE WEEK",
+   "source": "SOURCE: REUTERS VIA NATION THAILAND",
+   "from": "f3:Brent -0.1",
+   "to": "f3:President -0.25",
+   "color": "oil"
+  },
+  {
+   "type": "quote",
+   "at": "f3:President",
+   "lines": [
+    [
+     "\"WE DON'T NEED",
+     "text"
+    ],
+    [
+     "A DEAL WITH IRAN\"",
+     "accent"
+    ]
+   ],
+   "by": "DONALD TRUMP · TRUTH SOCIAL · PER CNBC, NOV 12",
+   "from": "f3:President -0.1",
+   "to": "f3:while -0.2",
+   "color": "accent"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 50,
+     "lat": 25,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 50,
+     "lat": 26,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": 50,
+     "lat": 26,
+     "R": 520
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "SAU",
+     "color": "oil",
+     "alpha": 0.6
+    },
+    {
+     "iso": "IRN",
+     "color": "danger",
+     "alpha": 0.5
+    },
+    {
+     "iso": "YEM",
+     "color": "danger",
+     "alpha": 0.5
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Strait of Hormuz",
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "HORMUZ OPEN BY",
+     "text"
+    ],
+    [
+     "THE NEW YEAR?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: REUTERS, MARINELINK, MIDDLE EAST EYE, THE NEW ARAB, CYPRUS MAIL, NATION THAILAND, CNBC, CBS NEWS",
+    "NOV 13, 2026"
+   ]
+  }
+ ]
+}
