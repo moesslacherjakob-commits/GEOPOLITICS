@@ -9,9 +9,9 @@ if ! command -v ffmpeg >/dev/null; then
   echo "setup: installing ffmpeg (apt)…"
   ($SUDO apt-get update -qq && DEBIAN_FRONTEND=noninteractive $SUDO apt-get install -y -qq ffmpeg >/dev/null) || { echo "setup: ffmpeg install FAILED"; ok=0; }
 fi
-if ! python3 -c "import numpy, scipy, PIL" 2>/dev/null; then
+if ! python3 -c "import numpy, scipy; from PIL import Image" 2>/dev/null; then
   echo "setup: installing numpy scipy pillow (pip)…"
-  pip install -q --break-system-packages numpy scipy pillow 2>/dev/null || pip install -q numpy scipy pillow || { echo "setup: pip install FAILED"; ok=0; }
+  pip install -q --break-system-packages --ignore-installed numpy scipy pillow 2>/dev/null || pip install -q numpy scipy pillow || { echo "setup: pip install FAILED"; ok=0; }
 fi
 if [ ! -d node_modules/@napi-rs/canvas ] && [ ! -d /opt/npm-tools/node_modules/@napi-rs/canvas ]; then
   echo "setup: installing node packages (npm)…"
