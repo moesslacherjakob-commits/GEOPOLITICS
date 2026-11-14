@@ -1,0 +1,555 @@
+{
+ "id": "2026-11-14-trump-xi-putin-shenzhen",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Most of the world's nuclear weapons. Three leaders. One room, for the first time."
+  },
+  {
+   "id": "f1",
+   "text": "The White House says Donald Trump, Xi Jinping and Vladimir Putin plan a joint meeting next week, on the sidelines of the APEC summit in Shenzhen, China. Reports put it on Thursday, November nineteenth, at the end of Trump's visit to China."
+  },
+  {
+   "id": "f2",
+   "text": "On the agenda, per the White House: nuclear arsenals and the Iran war. New START, the last treaty capping American and Russian warheads, expired in February. A senior U.S. official says China's arsenal is growing fastest, and Beijing should join the talks."
+  },
+  {
+   "id": "f3",
+   "text": "But no deal is expected. U.S. officials call it a starting point. The Kremlin calls the meeting extremely significant. Beijing only says it is in contact with the other sides, and it has long refused three-way nuclear talks."
+  },
+  {
+   "id": "cta",
+   "text": "Will China join nuclear arms talks within a year? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE MEETING",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE WARHEADS",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE DOUBTS",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Trump, Xi and Putin to Meet in China. A Nuclear Reset? #shorts",
+  "description": "The White House said on November 13, 2026 that U.S. President Donald Trump, Chinese President Xi Jinping and Russian President Vladimir Putin plan an unprecedented joint meeting on the sidelines of the APEC summit in Shenzhen, China, at the end of Trump's China visit. Reports put the three-way meeting on Thursday, November 19; the APEC leaders' meeting runs November 18–19. According to the White House, nuclear arsenals and the war with Iran are on the agenda. A senior U.S. official described the meeting as a starting point for nuclear talks and said no agreements are expected to be announced; U.S. officials argued that China's arsenal is growing fastest and that Beijing should join arms control talks. No separate Trump–Putin bilateral meeting is scheduled, per the official. Kremlin spokesman Dmitry Peskov called a meeting of the leaders of Russia, China and the United States extremely significant. China's Foreign Ministry has said Beijing is in communication with the relevant parties about a meeting of the three heads of state; China has long resisted joining three-way nuclear arms negotiations. New START, the last treaty limiting U.S. and Russian strategic nuclear forces, expired in February 2026. Warhead numbers shown in the video are estimates by the Federation of American Scientists (2025). Details of the meeting were not finalised at the time of production.\n\nSources:\nAP via Washington Post / KSL / KSAT, Nov 13, 2026: Trump, Xi and Putin plan an unprecedented joint meeting on the sidelines of APEC, officials say\nNBC News, Nov 13, 2026: Trump, Xi and Putin plan unprecedented joint meeting on sidelines of APEC\nJerusalem Post, Nov 13, 2026: White House confirms Trump-Xi-Putin trilateral summit in China, Iran and nuclear arms on agenda\nAnadolu Agency, Nov 13, 2026: Trump to hold trilateral talks with Xi, Putin in China next week\nNBC News: China confirms discussions are underway on a historic Xi-Trump-Putin meeting\nFederation of American Scientists: Status of World Nuclear Forces 2025 (warhead estimates)\n\n#geopolitics #Trump #XiJinping #Putin #APEC #nuclear",
+  "tags": [
+   "geopolitics",
+   "Trump",
+   "Xi Jinping",
+   "Putin",
+   "APEC",
+   "Shenzhen",
+   "nuclear weapons",
+   "arms control",
+   "New START",
+   "China",
+   "Russia",
+   "world news"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:China. +0.3",
+  "focus": [
+   114.07,
+   22.55
+  ],
+  "zoom": 1.2,
+  "number": "3",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "NUCLEAR POWERS",
+    "text"
+   ],
+   [
+    "ONE TABLE?",
+    "accent"
+   ]
+  ],
+  "source": "MEETING PLANNED NOV 19 · PER WHITE HOUSE"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 80,
+     "lat": 45,
+     "R": 330
+    },
+    {
+     "at": 3.6,
+     "lon": 105,
+     "lat": 35,
+     "R": 470
+    }
+   ],
+   "chip": {
+    "text": "APEC · SHENZHEN · NOV 14, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "at": "hook:Three",
+     "alpha": 0.55
+    },
+    {
+     "iso": "CHN",
+     "color": "oil",
+     "at": "hook:Three",
+     "alpha": 0.6
+    },
+    {
+     "iso": "USA",
+     "color": "info",
+     "at": "hook:Three",
+     "alpha": 0.55
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      114.07,
+      22.55
+     ],
+     "color": "accent",
+     "at": "hook:room",
+     "label": "SHENZHEN",
+     "sub": "APEC SUMMIT",
+     "dx": 70,
+     "dy": 60,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:weapons.",
+    "lines": [
+     [
+      "THREE LEADERS",
+      "text",
+      104
+     ],
+     [
+      "ONE ROOM",
+      "accent",
+      112
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:first",
+    "icon": "nuke",
+    "iconColor": "danger",
+    "color": "accent",
+    "kicker": "TRUMP · XI · PUTIN",
+    "title": "A FIRST",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    100,
+    42
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 105,
+     "lat": 35,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 100,
+     "lat": 40,
+     "dist": 95,
+     "pitch": 40,
+     "yaw": 0,
+     "oy": 200
+    },
+    {
+     "at": "f1:Shenzhen -0.3",
+     "lon": 113,
+     "lat": 25,
+     "dist": 32,
+     "pitch": 48,
+     "yaw": 4,
+     "oy": 200
+    },
+    {
+     "at": "f1$ -0.3",
+     "lon": 113.5,
+     "lat": 24,
+     "dist": 26,
+     "pitch": 50,
+     "yaw": 6,
+     "oy": 200
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": 95,
+     "lat": 45,
+     "dist": 100,
+     "pitch": 42,
+     "yaw": -2,
+     "oy": 210
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 108,
+     "lat": 33,
+     "dist": 70,
+     "pitch": 46,
+     "yaw": 2,
+     "oy": 200
+    },
+    {
+     "at": "cta",
+     "lon": 108,
+     "lat": 33,
+     "dist": 76,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 200
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "CHN",
+     "color": "oil",
+     "alpha": 0.5,
+     "fill": 0.08,
+     "at": "f1:Xi"
+    },
+    {
+     "kind": "tint",
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.45,
+     "fill": 0.06,
+     "at": "f1:Putin"
+    },
+    {
+     "kind": "callout",
+     "loc": [
+      114.07,
+      22.55
+     ],
+     "place": "WASHINGTON",
+     "icon": "flag",
+     "screen": [
+      250,
+      420
+     ],
+     "color": "info",
+     "at": "f1:Trump",
+     "until": "f2 -0.2"
+    },
+    {
+     "kind": "arc",
+     "from": "Moscow",
+     "to": [
+      114.07,
+      22.55
+     ],
+     "color": "danger",
+     "height": 0.35,
+     "at": "f1:Putin",
+     "dur": 1.4
+    },
+    {
+     "kind": "arc",
+     "from": "Beijing",
+     "to": [
+      114.07,
+      22.55
+     ],
+     "color": "oil",
+     "height": 0.3,
+     "at": "f1:Xi",
+     "dur": 1.0
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      114.07,
+      22.55
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1:Shenzhen",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "SHENZHEN",
+      "sub": "APEC · NOV 18–19",
+      "dx": 120,
+      "dy": -140
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "THU, NOV 19",
+     "icon": "people",
+     "color": "accent",
+     "screen": [
+      540,
+      1060
+     ],
+     "at": "f1:Thursday",
+     "until": "f2 -0.2",
+     "note": "TRILATERAL · DATE PER REPORTS"
+    },
+    {
+     "kind": "tint",
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.6,
+     "fill": 0.12,
+     "pulse": true,
+     "at": "f2:Russian",
+     "until": "f2:senior -0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "IRN",
+     "color": "danger",
+     "alpha": 0.5,
+     "fill": 0.1,
+     "at": "f2:Iran",
+     "until": "f2:New -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "NUKES · IRAN WAR",
+     "icon": "shield",
+     "color": "accent",
+     "screen": [
+      540,
+      420
+     ],
+     "at": "f2:agenda,",
+     "until": "f2:New -0.2",
+     "note": "ON THE AGENDA · PER WHITE HOUSE"
+    },
+    {
+     "kind": "stamp",
+     "text": "NEW START EXPIRED",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      540,
+      420
+     ],
+     "at": "f2:New",
+     "until": "f2:senior -0.2",
+     "note": "LAST U.S.–RUSSIA WARHEAD CAP · FEB 2026"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      114.07,
+      22.55
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f3",
+     "until": "cta -0.2",
+     "label": {
+      "text": "SHENZHEN",
+      "sub": "TRILATERAL · PLANNED",
+      "dx": 120,
+      "dy": -120
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "NO DEAL EXPECTED",
+     "icon": "eye",
+     "color": "neutral",
+     "screen": [
+      540,
+      420
+     ],
+     "at": "f3",
+     "until": "f3:Kremlin -0.2",
+     "note": "\"A STARTING POINT\" · PER U.S. OFFICIALS"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      150,
+      262,
+      780
+     ],
+     "kicker": "KREMLIN · PESKOV",
+     "text": "\"EXTREMELY SIGNIFICANT\"",
+     "color": "danger",
+     "at": "f3:Kremlin",
+     "until": "f3:Beijing -0.2"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      150,
+      262,
+      780
+     ],
+     "kicker": "BEIJING · FOREIGN MINISTRY",
+     "text": "\"IN COMMUNICATION\" WITH THE OTHER SIDES",
+     "color": "oil",
+     "at": "f3:Beijing",
+     "until": "f3:long -0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "CHN",
+     "color": "oil",
+     "alpha": 0.7,
+     "fill": 0.14,
+     "pulse": true,
+     "at": "f3:Beijing",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "NO 3-WAY TALKS",
+     "icon": "shield",
+     "color": "oil",
+     "screen": [
+      540,
+      420
+     ],
+     "at": "f3:long",
+     "until": "cta -0.2",
+     "note": "CHINA'S LONGSTANDING POSITION"
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "from": "f2:senior -0.1",
+   "to": "f2$ +0.4",
+   "label": "NUCLEAR WARHEADS",
+   "sublabel": "ESTIMATED TOTAL INVENTORY · 2025 · CHINA FASTEST GROWING PER U.S. OFFICIAL",
+   "bars": [
+    {
+     "label": "RUSSIA",
+     "value": 5459,
+     "display": "≈5,459",
+     "color": "danger",
+     "at": "f2:senior"
+    },
+    {
+     "label": "UNITED STATES",
+     "value": 5177,
+     "display": "≈5,177",
+     "color": "info",
+     "at": "f2:official"
+    },
+    {
+     "label": "CHINA",
+     "value": 600,
+     "display": "≈600",
+     "color": "oil",
+     "at": "f2:China's"
+    }
+   ],
+   "badge": {
+    "text": "FASTEST",
+    "at": "f2:arsenal",
+    "color": "oil",
+    "x": 820,
+    "y": 660
+   },
+   "source": "ESTIMATES: FEDERATION OF AMERICAN SCIENTISTS, 2025"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 100,
+     "lat": 40,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 100,
+     "lat": 38,
+     "R": 480
+    },
+    {
+     "at": "end",
+     "lon": 100,
+     "lat": 38,
+     "R": 480
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "CHN",
+     "color": "oil",
+     "alpha": 0.6
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.5
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      114.07,
+      22.55
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "CHINA AT THE",
+     "text"
+    ],
+    [
+     "NUCLEAR TABLE?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: AP, WASHINGTON POST, NBC NEWS, JERUSALEM POST, ANADOLU · WARHEADS: FAS 2025",
+    "NOV 14, 2026"
+   ]
+  }
+ ]
+}
