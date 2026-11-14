@@ -1,0 +1,262 @@
+{
+ "id": "2026-11-14-euclid-dr1-galaxies",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Nine hundred million galaxies, in one public data release. What is Europe's telescope hunting?"
+  },
+  {
+   "id": "f1",
+   "text": "On November twelfth, the European Space Agency released the first major data batch from its Euclid space telescope. ESA says it holds more than nine hundred million galaxies, from about thirteen months of observing, across roughly nineteen hundred square degrees of sky."
+  },
+  {
+   "id": "f2",
+   "text": "Euclid is hunting dark matter and dark energy, thought to make up most of the universe. Gravity bends light, so mass shows up in the shapes of distant galaxies. ESA counts about fifteen thousand candidates where one galaxy magnifies another."
+  },
+  {
+   "id": "f3",
+   "text": "No answer yet. This release carries no cosmology results, and the Paris Observatory says it covers only about fourteen percent of Euclid's planned survey. ESA says the full first release, with the data used to map dark matter, follows in mid twenty twenty-seven."
+  },
+  {
+   "id": "cta",
+   "text": "Will Euclid reveal what dark energy is? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE RELEASE",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE HUNT",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "WHAT'S NEXT",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Europe's Euclid Telescope Releases 900 Million Galaxies #shorts",
+  "description": "On November 12, ESA released DR1-Foundation, the first major data batch from its Euclid space telescope: more than 900 million galaxies from about 13 months of observations over roughly 1,900 square degrees. It carries no cosmology results yet; the full first data release follows in mid-2027, according to ESA.\n\nSources: ESA Euclid DR1 page, Euclid Consortium DR1 overview (arXiv), Caltech/IPAC Euclid, Max Planck Society, Observatoire de Paris, Phys.org, Starlust.\n\n#science #space #Euclid #ESA #darkmatter",
+  "tags": [
+   "science",
+   "news",
+   "space",
+   "Euclid",
+   "ESA",
+   "dark matter",
+   "dark energy",
+   "galaxies",
+   "astronomy",
+   "cosmology"
+  ],
+  "cover": "hook$ -0.2"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": "Paris",
+  "number": "900M+",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "MAPPING THE",
+    "text"
+   ],
+   [
+    "DARK UNIVERSE",
+    "accent"
+   ]
+  ],
+  "source": "GALAXIES · PER ESA · NOV 12"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.3",
+   "view": [
+    {
+     "at": 0,
+     "lon": -10,
+     "lat": 30,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": 5,
+     "lat": 46,
+     "R": 600
+    }
+   ],
+   "chip": {
+    "text": "ESA EUCLID · DR1 · NOV 2026",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "FRA",
+     "color": "info",
+     "at": "hook:galaxies",
+     "alpha": 0.35
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Paris",
+     "color": "accent",
+     "at": "hook:galaxies",
+     "label": "ESA HEADQUARTERS",
+     "sub": "PARIS",
+     "dx": -60,
+     "dy": -110
+    }
+   ],
+   "headline": {
+    "at": "hook:galaxies",
+    "lines": [
+     [
+      "900 MILLION",
+      "text",
+      110
+     ],
+     [
+      "GALAXIES",
+      "accent",
+      110
+     ]
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "label": "EUCLID DR1-FOUNDATION",
+   "sublabel": "GALAXIES · RELEASED NOV 12, 2026",
+   "icon": "eye",
+   "color": "accent",
+   "value": 900,
+   "start": 0,
+   "prefix": "",
+   "suffix": "M",
+   "doneSuffix": "+",
+   "decimals": 0,
+   "at": "f1 +0.3",
+   "doneAt": "f1:galaxies",
+   "note": "≈13 MONTHS OF OBSERVING · ≈1,900 SQ. DEGREES",
+   "source": "SOURCE: ESA EUCLID DR1"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "HOW EUCLID SEES THE UNSEEN",
+   "color": "violet",
+   "steps": [
+    {
+     "icon": "eye",
+     "title": "LIGHT FROM FAR GALAXIES",
+     "sub": "BILLIONS OF YEARS OLD",
+     "color": "info",
+     "at": "f2:Gravity"
+    },
+    {
+     "icon": "bolt",
+     "title": "MASS BENDS THE LIGHT",
+     "sub": "INCLUDING DARK MATTER",
+     "color": "violet",
+     "at": "f2:mass"
+    },
+    {
+     "icon": "check",
+     "title": "≈15,000 LENS CANDIDATES",
+     "sub": "ONE GALAXY MAGNIFIES ANOTHER · PER ESA",
+     "color": "accent",
+     "at": "f2:fifteen"
+    }
+   ],
+   "source": "SOURCES: ESA · EUCLID CONSORTIUM"
+  },
+  {
+   "type": "scale",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "HOW MUCH SKY SO FAR",
+   "sublabel": "AREA IN SQUARE DEGREES",
+   "color": "info",
+   "items": [
+    {
+     "name": "DR1 · NOV 2026",
+     "value": 1900,
+     "display": "≈1,900",
+     "color": "accent",
+     "at": "f3:release"
+    },
+    {
+     "name": "FULL PLANNED SURVEY",
+     "value": 14000,
+     "display": "≈14,000",
+     "color": "info",
+     "at": "f3:fourteen"
+    }
+   ],
+   "note": "≈14% OF THE SURVEY · PER PARIS OBSERVATORY · FULL DR1 MID-2027 PER ESA",
+   "source": "SOURCES: ESA · OBSERVATOIRE DE PARIS · CALTECH/IPAC"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -10,
+     "lat": 30,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 5,
+     "lat": 46,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": 10,
+     "lat": 40,
+     "R": 500
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Paris",
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "WHAT IS",
+     "text"
+    ],
+    [
+     "DARK ENERGY?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "ESA · EUCLID CONSORTIUM · CALTECH/IPAC · MAX PLANCK · OBS. DE PARIS · PHYS.ORG",
+    "NUMBERS PER ESA AND MISSION PARTNERS"
+   ]
+  }
+ ]
+}
