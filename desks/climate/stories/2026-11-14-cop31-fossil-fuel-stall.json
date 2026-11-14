@@ -1,0 +1,449 @@
+{
+ "id": "2026-11-14-cop31-fossil-fuel-stall",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "One week in, the climate summit is stuck on oil, gas and coal. Why?"
+  },
+  {
+   "id": "f1",
+   "text": "COP thirty-one's first week in Antalya, Turkey, ended Friday. Observers told Reuters big fossil fuel producers and consumers resist any deal with firm new targets or a shift from oil, gas and coal. The United States skipped the talks again."
+  },
+  {
+   "id": "f2",
+   "text": "Host Turkey's plan: electricity at thirty-five percent of world energy use by twenty thirty-five. Negotiations chief Chris Bowen says that share rose from seventeen percent in two thousand five to twenty-three today. Reuters reports the plan does not require clean power."
+  },
+  {
+   "id": "f3",
+   "text": "Brazil, last year's host, presented a voluntary roadmap away from fossil fuels. Climate Home News reports India, Nigeria and Germany backed it. U.N. chief António Guterres wants progress from every country by twenty twenty-eight. Bowen expects a first draft deal early next week."
+  },
+  {
+   "id": "cta",
+   "text": "Will the final COP thirty-one deal name fossil fuels? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE STALL",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE PLAN",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE ROADMAP",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 0,
+     "lat": 20,
+     "R": 330
+    },
+    {
+     "at": 3.6,
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 560
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "color": "accent",
+     "at": 0.5,
+     "label": "ANTALYA",
+     "big": true
+    }
+   ],
+   "chip": {
+    "text": "COP31 · WEEK ONE",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:summit",
+    "lines": [
+     [
+      "STUCK ON",
+      "text",
+      110
+     ],
+     [
+      "FOSSIL FUELS",
+      "danger",
+      110
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    30.7,
+    36.9
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 30.7,
+     "lat": 36.9,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 31.5,
+     "lat": 37.5,
+     "dist": 24,
+     "pitch": 48,
+     "yaw": 12,
+     "oy": 190
+    },
+    {
+     "at": "f1:Reuters",
+     "lon": 31.5,
+     "lat": 37.5,
+     "dist": 24,
+     "pitch": 48,
+     "yaw": 12,
+     "oy": 190
+    },
+    {
+     "at": "f1:United",
+     "lon": -30,
+     "lat": 38,
+     "dist": 180,
+     "pitch": 26,
+     "yaw": 0,
+     "oy": 160
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 10,
+     "lat": 10,
+     "dist": 170,
+     "pitch": 30,
+     "yaw": -6,
+     "oy": 160
+    },
+    {
+     "at": "f3:India,",
+     "lon": 30,
+     "lat": 18,
+     "dist": 150,
+     "pitch": 32,
+     "yaw": 4,
+     "oy": 160
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 20,
+     "lat": 20,
+     "dist": 165,
+     "pitch": 28,
+     "yaw": 0,
+     "oy": 150
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "TUR",
+     "color": "accent",
+     "alpha": 0.25,
+     "glow": true,
+     "at": "f1:Antalya,"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1:Antalya,",
+     "label": {
+      "text": "ANTALYA · COP31",
+      "sub": "TALKS RUN TO NOV 20",
+      "dx": -170,
+      "dy": -130,
+      "until": "f1:United"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "LOCATIONS SHOWN FOR ORIENTATION",
+     "y": 1170,
+     "at": "f1 +1",
+     "until": "f2"
+    },
+    {
+     "kind": "note",
+     "text": "LOCATIONS SHOWN FOR ORIENTATION",
+     "y": 1170,
+     "at": "f3",
+     "until": "cta"
+    },
+    {
+     "kind": "tint",
+     "iso": "USA",
+     "color": "danger",
+     "alpha": 0.25,
+     "hatch": true,
+     "at": "f1:United"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -98,
+      39
+     ],
+     "text": "U.S.",
+     "sub": "SKIPPED THE TALKS · REUTERS",
+     "color": "danger",
+     "dx": 0,
+     "dy": -130,
+     "at": "f1:United",
+     "until": "f2"
+    },
+    {
+     "kind": "tint",
+     "iso": "BRA",
+     "color": "info",
+     "alpha": 0.35,
+     "glow": true,
+     "at": "f3:Brazil,"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -52,
+      -10
+     ],
+     "text": "BRAZIL",
+     "sub": "VOLUNTARY ROADMAP",
+     "color": "info",
+     "dx": 60,
+     "dy": -110,
+     "at": "f3:Brazil,",
+     "until": "f3:first"
+    },
+    {
+     "kind": "tint",
+     "iso": "IND",
+     "color": "ok",
+     "alpha": 0.35,
+     "at": "f3:India,"
+    },
+    {
+     "kind": "tint",
+     "iso": "NGA",
+     "color": "ok",
+     "alpha": 0.35,
+     "at": "f3:Nigeria"
+    },
+    {
+     "kind": "tint",
+     "iso": "DEU",
+     "color": "ok",
+     "alpha": 0.35,
+     "at": "f3:Germany"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      79,
+      22
+     ],
+     "text": "INDIA",
+     "sub": "BACKS ROADMAP",
+     "color": "ok",
+     "dx": -200,
+     "dy": -120,
+     "at": "f3:India,"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      8,
+      9.5
+     ],
+     "text": "NIGERIA",
+     "sub": "BACKS ROADMAP",
+     "color": "ok",
+     "dx": 150,
+     "dy": 70,
+     "at": "f3:Nigeria",
+     "until": "f3:first"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      10.4,
+      51
+     ],
+     "text": "GERMANY",
+     "sub": "BACKS ROADMAP",
+     "color": "ok",
+     "dx": -200,
+     "dy": -110,
+     "at": "f3:Germany"
+    },
+    {
+     "kind": "stamp",
+     "text": "DRAFT NEXT WEEK",
+     "icon": "flag",
+     "color": "accent",
+     "screen": [
+      540,
+      1000
+     ],
+     "note": "EXPECTED · CHRIS BOWEN",
+     "at": "f3:first",
+     "until": "cta"
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "from": "f2:Host",
+   "to": "f2$ -0.1",
+   "label": "ELECTRICITY'S SHARE OF WORLD ENERGY USE",
+   "sublabel": "COP31 HOST PROPOSAL",
+   "bars": [
+    {
+     "label": "2005",
+     "value": 17,
+     "display": "17%",
+     "color": "neutral",
+     "at": "f2:seventeen",
+     "dur": 0.8
+    },
+    {
+     "label": "TODAY",
+     "value": 23,
+     "display": "23%",
+     "color": "info",
+     "at": "f2:twenty-three",
+     "dur": 0.8
+    },
+    {
+     "label": "2035 GOAL",
+     "value": 35,
+     "display": "35%",
+     "color": "accent",
+     "at": "f2:thirty-five",
+     "dur": 0.8
+    }
+   ],
+   "badge": {
+    "text": "CLEAN POWER NOT REQUIRED · REUTERS",
+    "at": "f2:Reuters"
+   },
+   "source": "SOURCE: REUTERS · COP31 PRESIDENCY"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "ONE WEEK LEFT.",
+     "text"
+    ],
+    [
+     "FOSSIL FUELS IN THE DEAL?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REUTERS · CLIMATE HOME NEWS · UN NEWS",
+    "SEARCH EXCERPTS · MAP FOR ORIENTATION"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": 25,
+     "lat": 36.9,
+     "R": 600
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "COP31's First Week Ends Stuck on Fossil Fuels #shorts",
+  "description": "The first week of the COP31 climate talks in Antalya, Türkiye, ended with big fossil fuel producers and consumers resisting firm new targets, observers told Reuters. Host Türkiye is pushing an electrification plan that does not require clean power, Brazil has presented a voluntary roadmap away from fossil fuels, and a first draft deal is expected early next week.\n\nSources: Reuters (via Arab News, Canberra Times), Climate Home News, UN News (based on search-result excerpts). Map locations are for orientation.\n\n#climate #cop31 #antalya #fossilfuels",
+  "tags": [
+   "climate",
+   "weather",
+   "news",
+   "COP31",
+   "Antalya",
+   "fossil fuels",
+   "electrification",
+   "climate summit",
+   "Simon Stiell",
+   "Chris Bowen",
+   "UN"
+  ],
+  "cover": "f2 +3"
+ },
+ "thumbnail": {
+  "at": "f1:Friday.",
+  "focus": [
+   30.7,
+   36.9
+  ],
+  "zoom": 1.15,
+  "kicker": "COP31 · ANTALYA",
+  "lines": [
+   [
+    "OIL, GAS, COAL",
+    "text"
+   ],
+   [
+    "DEAL STALLS?",
+    "accent"
+   ]
+  ],
+  "source": "NOV 13 · PER REUTERS"
+ }
+}
