@@ -1,0 +1,397 @@
+{
+ "id": "2026-11-15-cop31-midpoint-march",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Thousands marched on the climate summit. With five days left, can it deliver?"
+  },
+  {
+   "id": "f1",
+   "text": "Police put Saturday's crowd in Antalya, Turkey, at more than seven thousand, AFP reports. Environmental groups, trade unions and rights organisations led the march, which ended without major incident. Protesters said the summit is failing the communities hit hardest."
+  },
+  {
+   "id": "f2",
+   "text": "One activist told AFP that host Turkey still has no roadmap to phase out fossil fuels, while new power stations and coal mines open. Inside, U.N. climate chief Simon Stiell urged countries to tackle the hardest issues and avoid tactical delays."
+  },
+  {
+   "id": "f3",
+   "text": "Formal talks pause on Sunday. From Monday, negotiators have five days to agree the wording of a final deal. Chris Bowen, who leads the negotiations, expects a first draft next week. The United States is skipping the talks for a second year."
+  },
+  {
+   "id": "cta",
+   "text": "Will COP thirty-one reach a deal on time? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE MARCH",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE PRESSURE",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE CLOCK",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 10,
+     "lat": 25,
+     "R": 330
+    },
+    {
+     "at": 3.6,
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 560
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "color": "accent",
+     "at": 0.5,
+     "label": "ANTALYA",
+     "big": true
+    }
+   ],
+   "chip": {
+    "text": "COP31 · HALFWAY",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:on",
+    "lines": [
+     [
+      "THOUSANDS",
+      "text",
+      110
+     ],
+     [
+      "MARCH ON COP31",
+      "accent",
+      100
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    32,
+    38
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 30.7,
+     "lat": 36.9,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.5",
+     "lon": 30.7,
+     "lat": 37.2,
+     "dist": 14,
+     "pitch": 50,
+     "yaw": -10,
+     "oy": 200
+    },
+    {
+     "at": "f2",
+     "lon": 34,
+     "lat": 39,
+     "dist": 40,
+     "pitch": 40,
+     "yaw": 6,
+     "oy": 180
+    },
+    {
+     "at": "f2:Inside,",
+     "lon": 31.5,
+     "lat": 37.6,
+     "dist": 22,
+     "pitch": 46,
+     "yaw": 14,
+     "oy": 200
+    },
+    {
+     "at": "f3:United",
+     "lon": -20,
+     "lat": 38,
+     "dist": 170,
+     "pitch": 26,
+     "yaw": 0,
+     "oy": 160
+    },
+    {
+     "at": "cta -0.1",
+     "lon": -10,
+     "lat": 36,
+     "dist": 175,
+     "pitch": 24,
+     "yaw": 0,
+     "oy": 150
+    }
+   ],
+   "layers": [
+    {
+     "kind": "marker",
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1 +0.6",
+     "label": {
+      "text": "ANTALYA",
+      "sub": "PROTEST MARCH · SAT NOV 14",
+      "dx": -180,
+      "dy": -140,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "LOCATIONS SHOWN FOR ORIENTATION",
+     "y": 1170,
+     "at": "f1 +1",
+     "until": "f3"
+    },
+    {
+     "kind": "tint",
+     "iso": "TUR",
+     "color": "danger",
+     "alpha": 0.28,
+     "glow": true,
+     "at": "f2"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      35,
+      39
+     ],
+     "text": "TURKEY · HOST",
+     "sub": "NO FOSSIL FUEL ROADMAP · ACTIVIST VIA AFP",
+     "color": "danger",
+     "dx": 0,
+     "dy": -150,
+     "at": "f2:roadmap",
+     "until": "f2:Inside,"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      130,
+      600,
+      820
+     ],
+     "kicker": "SIMON STIELL · UN CLIMATE CHIEF",
+     "text": "“move swiftly to the hardest issues to avoid tactical delays”",
+     "color": "info",
+     "at": "f2:Stiell",
+     "until": "f2$"
+    },
+    {
+     "kind": "tint",
+     "iso": "USA",
+     "color": "neutral",
+     "alpha": 0.3,
+     "hatch": true,
+     "at": "f3:United"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -98,
+      39
+     ],
+     "text": "U.S.",
+     "sub": "SKIPPING THE TALKS · 2ND YEAR",
+     "color": "neutral",
+     "dx": 0,
+     "dy": -130,
+     "at": "f3:United"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f3:United",
+     "label": {
+      "text": "COP31",
+      "sub": "ANTALYA",
+      "dx": 120,
+      "dy": -110
+     }
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "from": "f1:Police",
+   "to": "f1:Environmental -0.1",
+   "label": "MARCHERS IN ANTALYA",
+   "sublabel": "POLICE ESTIMATE · SATURDAY",
+   "icon": "people",
+   "value": 7000,
+   "start": 0,
+   "prefix": "",
+   "suffix": "",
+   "doneSuffix": "+",
+   "decimals": 0,
+   "at": "f1:Police",
+   "doneAt": "f1:thousand,",
+   "note": "MARCH ENDED WITHOUT MAJOR INCIDENT",
+   "source": "SOURCE: POLICE VIA AFP"
+  },
+  {
+   "type": "timeline",
+   "from": "f3",
+   "to": "f3$ +0.3",
+   "label": "COP31 · THE FINAL STRETCH",
+   "color": "info",
+   "items": [
+    {
+     "date": "SUN NOV 15",
+     "title": "Formal talks pause",
+     "color": "neutral",
+     "at": "f3:pause"
+    },
+    {
+     "date": "MON NOV 16",
+     "title": "Five-day push begins",
+     "color": "info",
+     "at": "f3:Monday,"
+    },
+    {
+     "date": "NEXT WEEK",
+     "title": "First draft expected",
+     "sub": "CHRIS BOWEN",
+     "color": "accent",
+     "at": "f3:draft"
+    },
+    {
+     "date": "FRI NOV 20",
+     "title": "Scheduled end",
+     "color": "danger",
+     "big": true,
+     "at": "f3:United"
+    }
+   ],
+   "source": "SOURCE: AFP · COP31 SCHEDULE"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "FIVE DAYS LEFT.",
+     "text"
+    ],
+    [
+     "A DEAL ON TIME?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AFP VIA FRANCE 24 · DAWN · THE GUARDIAN · IRISH TIMES",
+    "SEARCH EXCERPTS · MAP FOR ORIENTATION"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": 24,
+     "lat": 36.9,
+     "R": 600
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "COP31 Hits Halfway as Thousands March in Antalya #shorts",
+  "description": "More than 7,000 people marched in Antalya, Türkiye, on Saturday as the COP31 climate talks reached their midpoint, according to a police estimate reported by AFP. UN climate chief Simon Stiell urged countries to avoid tactical delays; negotiators have five days from Monday to agree on a final text, and a first draft is expected next week.\n\nSources: AFP (via France 24, Yahoo News, The New Arab), Dawn, The Guardian (via AOL), The Irish Times (based on search-result excerpts). Map locations are for orientation.\n\n#climate #cop31 #antalya #climatejustice",
+  "tags": [
+   "climate",
+   "weather",
+   "news",
+   "COP31",
+   "Antalya",
+   "climate summit",
+   "climate protest",
+   "climate justice",
+   "Simon Stiell",
+   "Chris Bowen",
+   "fossil fuels",
+   "UN"
+  ],
+  "cover": "f3 +3"
+ },
+ "thumbnail": {
+  "at": "f1 +2.2",
+  "focus": [
+   30.7,
+   36.9
+  ],
+  "zoom": 1.15,
+  "number": "7,000+",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "MARCHERS",
+    "text"
+   ],
+   [
+    "DEAL BY FRIDAY?",
+    "accent"
+   ]
+  ],
+  "source": "NOV 14 · POLICE VIA AFP"
+ }
+}
