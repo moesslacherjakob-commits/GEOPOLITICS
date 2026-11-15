@@ -902,22 +902,9 @@
      "label": {
       "text": "UST-LUGA PORT ZONE",
       "dx": -260,
-      "dy": -70,
-      "sub": "FIRE · PER GOVERNOR"
+      "dy": 110,
+      "sub": "BALTIC SEA · FIRE · PER GOVERNOR"
      }
-    },
-    {
-     "kind": "tag",
-     "loc": [
-      27.5,
-      59.9
-     ],
-     "text": "BALTIC SEA",
-     "color": "info",
-     "at": "ch5:Baltic",
-     "until": "ch5:Across",
-     "dy": -70,
-     "dx": -120
     },
     {
      "kind": "stamp",
@@ -964,6 +951,16 @@
      "until": "ch5:For",
      "dy": -70,
      "sub": "LITHUANIA · LATVIA · PER REPORTS"
+    },
+    {
+     "kind": "tag",
+     "loc": "Moscow",
+     "text": "RUSSIAN DRIVERS",
+     "color": "oil",
+     "at": "ch5:drivers",
+     "until": "ch5:Rosneft",
+     "dy": -70,
+     "sub": "FUEL AT THE PUMP"
     },
     {
      "kind": "marker",
@@ -1044,10 +1041,6 @@
      "dur": 1.0
     }
    ],
-   "badge": {
-    "text": "PER 2 INDUSTRY SOURCES",
-    "at": "ch5:crude"
-   },
    "source": "REUTERS · NOV 10, 2026 (VIA KYIV INDEPENDENT, UKRINFORM)"
   },
   {
@@ -1058,8 +1051,7 @@
    "sublabel": "SHARE OF CAPACITY · TWO DIFFERENT SOURCES",
    "bars": [
     {
-     "label": "NOW",
-     "sub": "INDUSTRY SOURCES · REUTERS",
+     "label": "NOW · PER SOURCES",
      "value": 30,
      "display": "≈ 30%",
      "color": "oil",
@@ -1067,8 +1059,7 @@
      "dur": 1.0
     },
     {
-     "label": "SEPTEMBER PEAK",
-     "sub": "CLAIM · UKRAINIAN MILITARY",
+     "label": "SEPT · UKRAINE CLAIM",
      "value": 45,
      "display": "> 45%",
      "color": "danger",
@@ -1076,11 +1067,7 @@
      "dur": 1.0
     }
    ],
-   "badge": {
-    "text": "CLAIM",
-    "at": "ch5:claimed"
-   },
-   "source": "REUTERS · UKRAINIAN MILITARY CLAIM (SEPT 2026)"
+   "source": "NOW: 2 INDUSTRY SOURCES VIA REUTERS · SEPT: UKRAINIAN MILITARY CLAIM"
   },
   {
    "type": "map",
@@ -1616,7 +1603,8 @@
      "display": "≈ 4M BBL/DAY",
      "label": "VIA PIPELINE · REUTERS",
      "color": "oil",
-     "at": "ch4:four",
+     "scale": 0.5,
+     "at": "ch4:four#1",
      "until": "ch4:Markets"
     },
     {
@@ -2378,6 +2366,15 @@
      "oy": 40
     },
     {
+     "at": "ch2:contact",
+     "lon": 116.4,
+     "lat": 39.9,
+     "dist": 22,
+     "pitch": 46,
+     "yaw": -6,
+     "oy": 40
+    },
+    {
      "at": "ch2:separate",
      "lon": 100,
      "lat": 45,
@@ -2431,7 +2428,7 @@
      "place": "WHITE HOUSE",
      "icon": "flag",
      "screen": [
-      150,
+      1400,
       330
      ],
      "color": "info",
@@ -2595,7 +2592,7 @@
       960,
       240
      ],
-     "at": "ch2:Together",
+     "at": "ch2:Together#1",
      "until": "ch2:But",
      "note": "OF THE WORLD'S WARHEADS · FAS ESTIMATES"
     },
@@ -2651,6 +2648,13 @@
      }
     },
     {
+     "kind": "note",
+     "text": "LONG REFUSED THREE-WAY NUCLEAR TALKS",
+     "y": 890,
+     "at": "ch2:refused",
+     "until": "ch2:refused +2.8"
+    },
+    {
      "kind": "stamp",
      "text": "NO TRUMP–PUTIN BILATERAL",
      "icon": "x",
@@ -2679,36 +2683,37 @@
    ]
   },
   {
-   "type": "scale",
+   "type": "bars",
    "from": "ch2:Here -0.2",
-   "to": "ch2:Together -0.1",
+   "to": "ch2:Together#1 -0.1",
    "label": "ESTIMATED NUCLEAR WARHEADS",
-   "sublabel": "TOTAL INVENTORY · 2025",
-   "color": "danger",
-   "items": [
+   "sublabel": "TOTAL INVENTORY · 2025 ESTIMATES",
+   "bars": [
     {
-     "name": "RUSSIA",
+     "label": "RUSSIA",
      "value": 5459,
      "display": "≈ 5,460",
      "color": "danger",
-     "at": "ch2:Russia"
+     "at": "ch2:Russia",
+     "dur": 1.0
     },
     {
-     "name": "UNITED STATES",
+     "label": "UNITED STATES",
      "value": 5177,
      "display": "≈ 5,180",
      "color": "info",
-     "at": "ch2:United"
+     "at": "ch2:United",
+     "dur": 1.0
     },
     {
-     "name": "CHINA",
+     "label": "CHINA",
      "value": 600,
      "display": "≈ 600",
      "color": "oil",
-     "at": "ch2:China#2"
+     "at": "ch2:China#2",
+     "dur": 1.0
     }
    ],
-   "note": "TOGETHER > 9 IN 10 OF THE WORLD'S ≈ 12,240",
    "source": "FEDERATION OF AMERICAN SCIENTISTS · STATUS OF WORLD NUCLEAR FORCES 2025"
   },
   {
@@ -2814,6 +2819,15 @@
      "oy": 40
     },
     {
+     "at": "ch1:Putin#1",
+     "lon": 37.6,
+     "lat": 55.7,
+     "dist": 9,
+     "pitch": 52,
+     "yaw": 6,
+     "oy": 40
+    },
+    {
      "at": "ch1:peacekeeping",
      "lon": 37.6,
      "lat": 55.7,
@@ -2832,10 +2846,28 @@
      "oy": 40
     },
     {
+     "at": "ch1:published",
+     "lon": 31,
+     "lat": 49.5,
+     "dist": 20,
+     "pitch": 48,
+     "yaw": 6,
+     "oy": 40
+    },
+    {
      "at": "ch1:NATO?",
      "lon": 25,
      "lat": 52,
      "dist": 45,
+     "pitch": 42,
+     "yaw": 0,
+     "oy": 40
+    },
+    {
+     "at": "ch1:Would#1",
+     "lon": 30,
+     "lat": 50,
+     "dist": 40,
      "pitch": 42,
      "yaw": 0,
      "oy": 40
@@ -3075,6 +3107,20 @@
      }
     },
     {
+     "kind": "note",
+     "text": "ENVOYS WITKOFF + KUSHNER IN MOSCOW",
+     "y": 890,
+     "at": "ch1:Witkoff",
+     "until": "ch1:Witkoff +2.8"
+    },
+    {
+     "kind": "note",
+     "text": "THE AMERICAN SIDE ASKED…",
+     "y": 890,
+     "at": "ch1:American",
+     "until": "ch1:American +2.8"
+    },
+    {
      "kind": "stamp",
      "text": "PEACEKEEPERS = \"CONTINUATION OF WAR\"",
      "icon": "x",
@@ -3097,7 +3143,7 @@
       240
      ],
      "at": "ch1:Then",
-     "until": "ch1:NATO?",
+     "until": "ch1:what",
      "note": "PUBLISHED SAT · NOV 14"
     },
     {
@@ -3105,7 +3151,7 @@
      "screen": [
       70,
       180,
-      640
+      780
      ],
      "kicker": "U.S. SIDE · PER ZELENSKY",
      "text": "WHAT IF UKRAINE JOINS NATO?",
@@ -3118,12 +3164,12 @@
      "screen": [
       70,
       290,
-      640
+      780
      ],
      "kicker": "U.S. SIDE · PER ZELENSKY",
      "text": "WOULD UKRAINE WITHDRAW FROM DONBAS?",
      "color": "danger",
-     "at": "ch1:Would",
+     "at": "ch1:Would#1",
      "until": "ch1:Zelensky"
     },
     {
@@ -3196,14 +3242,11 @@
      "sub": "DONETSK + LUHANSK"
     },
     {
-     "kind": "tag",
-     "loc": "UA-14",
-     "text": "AREAS RUSSIA DOES NOT CONTROL",
-     "color": "info",
+     "kind": "note",
+     "text": "IN QUESTION: THE PARTS RUSSIA DOES NOT CONTROL · PER AL JAZEERA",
+     "y": 890,
      "at": "ch1:Al",
-     "until": "ch1:Zelensky",
-     "dy": 90,
-     "sub": "THE PART IN QUESTION · PER AL JAZEERA"
+     "until": "ch1:Zelensky"
     },
     {
      "kind": "stamp",
@@ -4085,6 +4128,20 @@
    },
    "providers": [
     "pixabay"
+   ],
+   "marks": [
+    {
+     "type": "box",
+     "rect": [
+      0.69,
+      0.15,
+      0.99,
+      0.75
+     ],
+     "label": "REFINERY UNITS",
+     "sub": "illustrative · not a Russian plant",
+     "at": "ch5:nameplate +0.6"
+    }
    ]
   },
   {
@@ -4097,7 +4154,7 @@
    "symbolic": true,
    "move": "left",
    "start": 0,
-   "pick": 0,
+   "pick": 4,
    "lower": {
     "kicker": "ROSNEFT · PER EURONEWS, SEMAFOR",
     "text": "FUEL SALES LIMITED IN SEVERAL REGIONS",
@@ -4105,6 +4162,20 @@
    },
    "providers": [
     "pixabay"
+   ],
+   "marks": [
+    {
+     "type": "circle",
+     "c": [
+      0.63,
+      0.41
+     ],
+     "r": 0.2,
+     "ry": 0.26,
+     "label": "≈ 30 LITRES PER PURCHASE",
+     "sub": "rosneft limit in cities · per euronews, semafor",
+     "at": "ch5:limits"
+    }
    ]
   },
   {
@@ -4117,7 +4188,7 @@
    "symbolic": true,
    "move": "in",
    "start": 0,
-   "pick": 0,
+   "pick": 1,
    "lower": {
     "kicker": "ILLUSTRATIVE",
     "text": "NOT ONE OF THE SHIPS IN THE CLAIMS",
@@ -4125,6 +4196,20 @@
    },
    "providers": [
     "pixabay"
+   ],
+   "marks": [
+    {
+     "type": "box",
+     "rect": [
+      0.08,
+      0.22,
+      0.95,
+      0.72
+     ],
+     "label": "OIL TANKER",
+     "sub": "illustrative · not a ship in the claims",
+     "at": "ch4:named"
+    }
    ]
   },
   {
@@ -4137,7 +4222,7 @@
    "symbolic": true,
    "move": "left",
    "start": 0,
-   "pick": 0,
+   "pick": 1,
    "lower": {
     "kicker": "ILLUSTRATIVE",
     "text": "OIL PIPELINE · NOT THE EAST-WEST LINE",
@@ -4145,6 +4230,18 @@
    },
    "providers": [
     "pixabay"
+   ],
+   "marks": [
+    {
+     "type": "arrow",
+     "to": [
+      0.36,
+      0.38
+     ],
+     "label": "PIPELINE",
+     "sub": "illustrative · alaska, not saudi arabia",
+     "at": "ch4:pipeline#1"
+    }
    ]
   },
   {
@@ -4159,12 +4256,42 @@
    "start": 0,
    "pick": 0,
    "lower": {
-    "kicker": "NASA · VIEW FROM SPACE",
+    "kicker": "NASA · SPACE SHUTTLE PHOTO · JULY 1982",
     "text": "THE STRAIT OF HORMUZ",
     "at": "ch3:About +0.5"
    },
    "providers": [
     "nasa"
+   ],
+   "marks": [
+    {
+     "type": "pin",
+     "p": [
+      0.83,
+      0.6
+     ],
+     "label": "STRAIT OF HORMUZ",
+     "sub": "nasa photo · july 1982",
+     "at": "ch3:fifth"
+    },
+    {
+     "type": "pin",
+     "p": [
+      0.88,
+      0.33
+     ],
+     "label": "IRAN",
+     "at": "ch3:strait#2"
+    },
+    {
+     "type": "pin",
+     "p": [
+      0.6,
+      0.66
+     ],
+     "label": "OMAN · MUSANDAM",
+     "at": "ch3:Energy"
+    }
    ]
   },
   {
@@ -4185,6 +4312,18 @@
    },
    "providers": [
     "pixabay"
+   ],
+   "marks": [
+    {
+     "type": "pin",
+     "p": [
+      0.66,
+      0.42
+     ],
+     "label": "SHENZHEN",
+     "sub": "apec summit · nov 18–19",
+     "at": "ch2:Thursday"
+    }
    ]
   },
   {
@@ -4200,7 +4339,7 @@
    "pick": 2,
    "lower": {
     "kicker": "ABU DHABI",
-    "text": "VENUE OF THE TALKS · NOV 10–11",
+    "text": "HOST CITY OF THE TALKS · NOV 10–11",
     "at": "ch1:Tuesday +0.5"
    },
    "providers": [
@@ -4217,7 +4356,7 @@
    "symbolic": true,
    "move": "in",
    "start": 0,
-   "pick": 2,
+   "pick": 1,
    "lower": {
     "kicker": "ILLUSTRATIVE",
     "text": "A REFERENDUM · ONLY WITH A FULL PACKAGE, ZELENSKY SAYS",
@@ -4225,6 +4364,30 @@
    },
    "providers": [
     "pixabay"
+   ],
+   "marks": [
+    {
+     "type": "zoom",
+     "rect": [
+      0.3,
+      0.18,
+      0.8,
+      0.55
+     ],
+     "at": "ch1:referendum"
+    },
+    {
+     "type": "box",
+     "rect": [
+      0.34,
+      0.19,
+      0.74,
+      0.43
+     ],
+     "label": "A REFERENDUM",
+     "sub": "only with a full package, per zelensky",
+     "at": "ch1:referendum +1.4"
+    }
    ]
   },
   {
@@ -4327,7 +4490,7 @@
  ],
  "upload": {
   "title": "Donbas for NATO? This Week's 5 Biggest Stories",
-  "description": "The five biggest geopolitical stories of November 9 to 15, 2026: Ukraine's drone strikes on Russian oil refineries and Rosneft's fuel limits, Iranian claims of tanker attacks in the Strait of Hormuz and Houthi claims of strikes on Saudi Arabia's East-West pipeline and Yanbu, Trump calling the Iran war militarily over while the U.S. blockade and Hormuz closure continue, the planned Trump–Xi–Putin meeting at APEC in Shenzhen, and the Abu Dhabi Russia–Ukraine talks, the prisoner swap deal and Zelensky's account that U.S. negotiators floated Ukraine leaving the Donbas in exchange for NATO membership. Every claim is attributed to the source that reported it; unverified claims are labelled as such.\n\nSources:\nReuters via Kyiv Independent, Ukrinform and Ukrainska Pravda: Ukrainian strikes cut Russia's refining capacity by about 30% (Nov 10, 2026)\nEuronews: Ukraine hits Russia's second-largest refinery as fuel rationing spreads (Nov 9, 2026)\nSemafor: Russia rations fuel as Ukraine resumes strikes on refineries (Nov 9, 2026)\nAl Jazeera: Russia claims interception of 146 drones in Leningrad region (Nov 11, 2026)\nTASS: Fire breaks out after drone attack in Ust-Luga port zone (Nov 11, 2026)\nReuters via Investing.com / MarineLink: Four tankers struck by explosions in Strait of Hormuz, Iran says (Nov 12, 2026)\nMiddle East Eye / The New Arab / Democracy Now: Houthis say they attacked Saudi East-West pipeline and Yanbu (Nov 12-13, 2026)\nNation Thailand / CNBC: Brent settles up 3.3% at $95.82 (Nov 12, 2026)\nAl Jazeera: After meeting Qatar PM, Trump calls Iran war 'effectively over' militarily (Nov 9, 2026)\nCBS News live updates: Iran war (Nov 9-14, 2026)\nArab News: Iran reports tanker incidents in Hormuz; ships need Iranian authorization since February (Nov 2026)\nCNBC: Trump says 'we don't need a deal with Iran' (Nov 12, 2026)\nU.S. Energy Information Administration (EIA): World Oil Transit Chokepoints\nAP via Washington Post / KSL: Trump, Xi and Putin plan an unprecedented joint meeting on the sidelines of APEC (Nov 13, 2026)\nNBC News: Trump, Xi and Putin plan joint meeting at APEC (Nov 13, 2026)\nAnadolu Agency: Kremlin says Putin, Xi, Trump to hold trilateral meeting in Shenzhen on Nov. 19 (Nov 2026)\nJerusalem Post: White House confirms Trump-Xi-Putin trilateral summit, Iran and nuclear arms on agenda (Nov 13, 2026)\nFederation of American Scientists: Status of World Nuclear Forces 2025 (warhead estimates)\nNBC News / PBS (AP) / Al Jazeera: Russia and Ukraine agree to a large prisoner exchange as Abu Dhabi talks end (Nov 11, 2026)\nTASS: Russia, Ukraine agree on large-scale prisoner exchange (Nov 11, 2026)\nInterfax-Ukraine / The New Voice of Ukraine: Arakhamia on the Abu Dhabi talks (Nov 2026)\nTime / ABC News / Jerusalem Post: Witkoff and Kushner meet Putin in Moscow (Nov 12, 2026)\nCNN: US floated idea of Ukraine swapping land for NATO membership, Zelensky says (Nov 14, 2026)\nNBC News: U.S. floated idea of Ukraine ceding Donbas for NATO membership, Zelenskyy says (Nov 14, 2026)\nAl Jazeera / Euronews / RTE: Zelensky on the Donbas-for-NATO idea (Nov 14, 2026)\nABC News (Australia): US raised idea of NATO membership for Ukraine, Zelenskyy says (Nov 15, 2026)\nNorth Atlantic Treaty, Article 5 (Washington, 4 April 1949), nato.int\n\n#geopolitics #news #weeklyrecap #Ukraine #NATO #Iran #Hormuz",
+  "description": "The five biggest geopolitical stories of November 9 to 15, 2026: Ukraine's drone strikes on Russian oil refineries and Rosneft's fuel limits, Iranian claims of tanker attacks in the Strait of Hormuz and Houthi claims of strikes on Saudi Arabia's East-West pipeline and Yanbu, Trump calling the Iran war militarily over while the U.S. blockade and Hormuz closure continue, the planned Trump–Xi–Putin meeting at APEC in Shenzhen, and the Abu Dhabi Russia–Ukraine talks, the prisoner swap deal and Zelensky's account that U.S. negotiators floated Ukraine leaving the Donbas in exchange for NATO membership. Every claim is attributed to the source that reported it; unverified claims are labelled as such.\n\nSources:\nReuters via Kyiv Independent, Ukrinform and Ukrainska Pravda: Ukrainian strikes cut Russia's refining capacity by about 30% (Nov 10, 2026)\nEuronews: Ukraine hits Russia's second-largest refinery as fuel rationing spreads (Nov 9, 2026)\nSemafor: Russia rations fuel as Ukraine resumes strikes on refineries (Nov 9, 2026)\nAl Jazeera: Russia claims interception of 146 drones in Leningrad region (Nov 11, 2026)\nTASS: Fire breaks out after drone attack in Ust-Luga port zone (Nov 11, 2026)\nReuters via Investing.com / MarineLink: Four tankers struck by explosions in Strait of Hormuz, Iran says (Nov 12, 2026)\nMiddle East Eye / The New Arab / Democracy Now: Houthis say they attacked Saudi East-West pipeline and Yanbu (Nov 12-13, 2026)\nNation Thailand / CNBC: Brent settles up 3.3% at $95.82 (Nov 12, 2026)\nAl Jazeera: After meeting Qatar PM, Trump calls Iran war 'effectively over' militarily (Nov 9, 2026)\nCBS News live updates: Iran war (Nov 9-14, 2026)\nArab News: Iran reports tanker incidents in Hormuz; ships need Iranian authorization since February (Nov 2026)\nCNBC: Trump says 'we don't need a deal with Iran' (Nov 12, 2026)\nU.S. Energy Information Administration (EIA): World Oil Transit Chokepoints\nAP via Washington Post / KSL: Trump, Xi and Putin plan an unprecedented joint meeting on the sidelines of APEC (Nov 13, 2026)\nNBC News: Trump, Xi and Putin plan joint meeting at APEC (Nov 13, 2026)\nAnadolu Agency: Kremlin says Putin, Xi, Trump to hold trilateral meeting in Shenzhen on Nov. 19 (Nov 2026)\nJerusalem Post: White House confirms Trump-Xi-Putin trilateral summit, Iran and nuclear arms on agenda (Nov 13, 2026)\nFederation of American Scientists: Status of World Nuclear Forces 2025 (warhead estimates)\nNBC News / PBS (AP) / Al Jazeera: Russia and Ukraine agree to a large prisoner exchange as Abu Dhabi talks end (Nov 11, 2026)\nTASS: Russia, Ukraine agree on large-scale prisoner exchange (Nov 11, 2026)\nInterfax-Ukraine / The New Voice of Ukraine: Arakhamia on the Abu Dhabi talks (Nov 2026)\nTime / ABC News / Jerusalem Post: Witkoff and Kushner meet Putin in Moscow (Nov 12, 2026)\nCNN: US floated idea of Ukraine swapping land for NATO membership, Zelensky says (Nov 14, 2026)\nNBC News: U.S. floated idea of Ukraine ceding Donbas for NATO membership, Zelenskyy says (Nov 14, 2026)\nAl Jazeera / Euronews / RTE: Zelensky on the Donbas-for-NATO idea (Nov 14, 2026)\nABC News (Australia): US raised idea of NATO membership for Ukraine, Zelenskyy says (Nov 15, 2026)\nRTE: US proposed Donbas swap for NATO membership, Zelensky says; U.S. official to the BBC: final deal needs Ukraine and Russia (Nov 14, 2026)\nGulf News / Euronews: Russia, Ukraine agree major prisoner swap at Abu Dhabi talks (Nov 11, 2026)\nNorth Atlantic Treaty, Article 5 (Washington, 4 April 1949), nato.int\n\n#geopolitics #news #weeklyrecap #Ukraine #NATO #Iran #Hormuz",
   "tags": [
    "geopolitics",
    "weekly recap",
@@ -4360,11 +4523,18 @@
   "lines": [
    [
     "THE U.S.",
-    "text"
+    "text",
+    165
    ],
    [
     "ASKED THIS?",
-    "accent"
+    "accent",
+    165
+   ],
+   [
+    " ",
+    "text",
+    60
    ]
   ],
   "source": "ZELENSKY'S ACCOUNT · NOV 14 · NOT CONFIRMED BY U.S."
