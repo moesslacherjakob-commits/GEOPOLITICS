@@ -1047,7 +1047,7 @@
    "type": "bars",
    "from": "ch5:current -0.2",
    "to": "ch5:Next: -0.2",
-   "label": "RUSSIAN REFINING KNOCKED OUT",
+   "label": "SHARE OF RUSSIAN REFINING HIT",
    "sublabel": "SHARE OF CAPACITY · TWO DIFFERENT SOURCES",
    "bars": [
     {
@@ -1708,7 +1708,6 @@
      "sub": "USD PER BARREL",
      "value": 95.82,
      "change": 3.3,
-     "display": "$95.82",
      "icon": "barrel",
      "at": "ch4:Brent"
     }
@@ -2425,10 +2424,10 @@
       114.07,
       22.55
      ],
-     "place": "WHITE HOUSE",
+     "place": "SHENZHEN",
      "icon": "flag",
      "screen": [
-      1400,
+      1300,
       330
      ],
      "color": "info",
@@ -3211,7 +3210,7 @@
     {
      "kind": "tint",
      "iso": "UA-14",
-     "color": "oil",
+     "color": "neutral",
      "alpha": 0.7,
      "fill": 0.14,
      "at": "ch1:withdraw",
@@ -3221,7 +3220,7 @@
     {
      "kind": "tint",
      "iso": "UA-09",
-     "color": "oil",
+     "color": "neutral",
      "alpha": 0.7,
      "fill": 0.14,
      "at": "ch1:withdraw",
@@ -3243,7 +3242,7 @@
     },
     {
      "kind": "note",
-     "text": "IN QUESTION: THE PARTS RUSSIA DOES NOT CONTROL · PER AL JAZEERA",
+     "text": "IN QUESTION: UKRAINIAN-HELD PART OF DONBAS · PER AL JAZEERA",
      "y": 890,
      "at": "ch1:Al",
      "until": "ch1:Zelensky"
@@ -3659,6 +3658,15 @@
      "oy": 40
     },
     {
+     "at": "outlook:On#2",
+     "lon": 55,
+     "lat": 27,
+     "dist": 24,
+     "pitch": 46,
+     "yaw": 2,
+     "oy": 40
+    },
+    {
      "at": "outlook:Donbas",
      "lon": 37.8,
      "lat": 48.2,
@@ -3808,7 +3816,7 @@
      "alpha": 0.45,
      "fill": 0.08,
      "at": "outlook:Iran",
-     "until": "outlook:Donbas"
+     "until": "outlook:On#2 +0.3"
     },
     {
      "kind": "tag",
@@ -3816,9 +3824,23 @@
      "text": "BLOCKADE + CONDITIONS",
      "color": "oil",
      "at": "outlook:blockade",
-     "until": "outlook:Donbas",
+     "until": "outlook:On#2 +0.3",
      "dy": -70,
-     "sub": "QATAR KEEPS MEDIATING"
+     "sub": "PER U.S. AND IRAN"
+    },
+    {
+     "kind": "marker",
+     "loc": "Doha",
+     "style": "pulse",
+     "color": "info",
+     "at": "outlook:Qatar",
+     "until": "outlook:On#2 +0.3",
+     "label": {
+      "text": "DOHA",
+      "sub": "QATAR KEEPS MEDIATING",
+      "dx": -200,
+      "dy": 60
+     }
     },
     {
      "kind": "tint",
@@ -4075,7 +4097,7 @@
      "at": "outlook:clause"
     },
     {
-     "text": "an armed attack against one or more of them",
+     "text": "an armed attack",
      "style": "underline",
      "at": "outlook:armed"
     },
@@ -4156,7 +4178,7 @@
    "start": 0,
    "pick": 4,
    "lower": {
-    "kicker": "ROSNEFT · PER EURONEWS, SEMAFOR",
+    "kicker": "ILLUSTRATIVE",
     "text": "FUEL SALES LIMITED IN SEVERAL REGIONS",
     "at": "ch5:Rosneft +0.5"
    },
@@ -4172,43 +4194,9 @@
      ],
      "r": 0.2,
      "ry": 0.26,
-     "label": "≈ 30 LITRES PER PURCHASE",
-     "sub": "rosneft limit in cities · per euronews, semafor",
+     "label": "30 LITRES PER PURCHASE",
+     "sub": "rosneft limit in cities · per euronews, semafor · not a russian station",
      "at": "ch5:limits"
-    }
-   ]
-  },
-  {
-   "type": "footage",
-   "asset": "f03",
-   "from": "ch4:ships -0.2",
-   "to": "ch4:same -0.3",
-   "query": "oil tanker ship",
-   "kind": "image",
-   "symbolic": true,
-   "move": "in",
-   "start": 0,
-   "pick": 1,
-   "lower": {
-    "kicker": "ILLUSTRATIVE",
-    "text": "NOT ONE OF THE SHIPS IN THE CLAIMS",
-    "at": "ch4:ships +0.5"
-   },
-   "providers": [
-    "pixabay"
-   ],
-   "marks": [
-    {
-     "type": "box",
-     "rect": [
-      0.08,
-      0.22,
-      0.95,
-      0.72
-     ],
-     "label": "OIL TANKER",
-     "sub": "illustrative · not a ship in the claims",
-     "at": "ch4:named"
     }
    ]
   },
