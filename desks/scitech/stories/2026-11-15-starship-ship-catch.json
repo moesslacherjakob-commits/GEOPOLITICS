@@ -1,0 +1,357 @@
+{
+ "id": "2026-11-15-starship-ship-catch",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A spaceship returned from orbit, and a tower caught it. Why does that matter?"
+  },
+  {
+   "id": "f1",
+   "text": "On Saturday, SpaceX's Starship upper stage flew back to its launch site in South Texas. Two giant tower arms grabbed it in midair. NBC News and CNBC report no stage returning from orbit had been caught before."
+  },
+  {
+   "id": "f2",
+   "text": "It launched Friday. Minutes later, the giant Super Heavy booster called off its own catch and came down in the Gulf of Mexico. SpaceX says it is investigating. The ship released twenty-six Starlink satellites and circled Earth fourteen times in about twenty-two hours, CNBC reports."
+  },
+  {
+   "id": "f3",
+   "text": "SpaceX says catching both stages should let it inspect and refly rockets quickly, like an aircraft. Elon Musk says the booster loss does not change his timeline. How much repair a caught ship needs is still unknown."
+  },
+  {
+   "id": "cta",
+   "text": "Will a caught Starship fly again before summer twenty twenty-seven? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE CATCH",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE FLIGHT",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "WHY IT MATTERS",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "SpaceX Catches Starship Coming Back From Orbit #shorts",
+  "description": "On November 14, the upper stage of SpaceX's Starship returned from orbit after about 22 hours and 14 orbits and was caught by the arms of its launch tower at Starbase, Texas, a first for a stage returning from orbit, according to NBC News and CNBC. The Super Heavy booster called off its own tower catch and came down in the Gulf of Mexico; SpaceX says it is investigating.\n\nSources: NBC News, CNBC, SpaceNews, Space.com, PBS NewsHour, CNN, Teslarati.\n\n#tech #space #SpaceX #Starship",
+  "tags": [
+   "technology",
+   "news",
+   "space",
+   "SpaceX",
+   "Starship",
+   "rocket",
+   "reusable rocket",
+   "Starbase",
+   "Elon Musk",
+   "spaceflight"
+  ],
+  "cover": "f1:arms"
+ },
+ "thumbnail": {
+  "at": "f1:arms",
+  "focus": [
+   -97.157,
+   25.997
+  ],
+  "number": "1ST",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "TOWER CATCH",
+    "text"
+   ],
+   [
+    "BOOSTER LOST",
+    "accent"
+   ]
+  ],
+  "source": "FROM ORBIT · PER NBC NEWS · CNBC · NOV 14"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -60,
+     "lat": 15,
+     "R": 380
+    },
+    {
+     "at": 4.0,
+     "lon": -97,
+     "lat": 27,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "SPACEX · STARSHIP FLIGHT 15 · NOV 2026",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "USA",
+     "color": "info",
+     "at": "hook:orbit",
+     "alpha": 0.3
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -97.157,
+      25.997
+     ],
+     "color": "accent",
+     "at": "hook:orbit",
+     "label": "STARBASE",
+     "sub": "SOUTH TEXAS",
+     "dx": -40,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:returned",
+    "lines": [
+     [
+      "BACK FROM ORBIT",
+      "text",
+      96
+     ],
+     [
+      "CAUGHT BY A TOWER",
+      "accent",
+      90
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.1",
+   "center": [
+    -97,
+    27
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -97,
+     "lat": 27,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +1.2",
+     "lon": -97.3,
+     "lat": 26.4,
+     "dist": 18,
+     "pitch": 40,
+     "yaw": -6,
+     "oy": 170
+    },
+    {
+     "at": "f1:grabbed",
+     "lon": -97.2,
+     "lat": 26.1,
+     "dist": 9,
+     "pitch": 52,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "f2 -0.1",
+     "lon": -97.2,
+     "lat": 26.1,
+     "dist": 8,
+     "pitch": 54,
+     "yaw": 10,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "USA",
+     "color": "info",
+     "alpha": 0.2,
+     "at": "hook$ +0.4"
+    },
+    {
+     "kind": "tint",
+     "iso": "US-TX",
+     "color": "accent",
+     "alpha": 0.18,
+     "at": "f1 +0.3"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -97.157,
+      25.997
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1:launch",
+     "label": {
+      "text": "STARBASE",
+      "sub": "SPACEX LAUNCH SITE · TEXAS",
+      "dx": -60,
+      "dy": -120
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "CAUGHT",
+     "icon": "check",
+     "color": "accent",
+     "screen": [
+      540,
+      520
+     ],
+     "note": "FIRST FROM ORBIT · PER NBC NEWS, CNBC",
+     "at": "f1:grabbed"
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "FLIGHT 15 · ABOUT 22 HOURS",
+   "color": "violet",
+   "items": [
+    {
+     "date": "FRI NOV 13",
+     "title": "LIFTOFF FROM STARBASE",
+     "sub": "5:47 PM ET · PER SPACE.COM",
+     "color": "info",
+     "at": "f2:launched"
+    },
+    {
+     "date": "MINUTES LATER",
+     "title": "BOOSTER CALLS OFF CATCH",
+     "sub": "DOWN IN THE GULF OF MEXICO",
+     "color": "danger",
+     "at": "f2:booster"
+    },
+    {
+     "date": "IN ORBIT",
+     "title": "26 STARLINK SATELLITES",
+     "sub": "THEN 14 ORBITS · PER CNBC",
+     "color": "violet",
+     "at": "f2:twenty-six"
+    },
+    {
+     "date": "SAT NOV 14",
+     "title": "SHIP CAUGHT BY TOWER",
+     "sub": "BACK AT STARBASE",
+     "color": "accent",
+     "big": true,
+     "at": "f2:reports. -0.6"
+    }
+   ],
+   "source": "SOURCES: CNBC · SPACE.COM · NBC NEWS · PBS"
+  },
+  {
+   "type": "flow",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "THE REUSE IDEA · PER SPACEX",
+   "color": "info",
+   "steps": [
+    {
+     "icon": "check",
+     "title": "CATCH BOTH STAGES",
+     "sub": "SHIP DONE · BOOSTER MISSED THIS TIME",
+     "color": "accent",
+     "at": "f3:catching"
+    },
+    {
+     "icon": "eye",
+     "title": "INSPECT ON THE GROUND",
+     "sub": "REPAIR NEEDS STILL UNKNOWN",
+     "color": "info",
+     "at": "f3:inspect"
+    },
+    {
+     "icon": "plane",
+     "title": "REFLY QUICKLY",
+     "sub": "\"LIKE AN AIRCRAFT\" · COMPANY GOAL",
+     "color": "violet",
+     "at": "f3:aircraft"
+    }
+   ],
+   "source": "SOURCES: SPACEX · SPACE.COM · MUSK VIA DAILY WIRE/NBC"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -70,
+     "lat": 20,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -97,
+     "lat": 27,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": -92,
+     "lat": 24,
+     "R": 500
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -97.157,
+      25.997
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "FLY AGAIN",
+     "text"
+    ],
+    [
+     "BY SUMMER 2027?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "NBC NEWS · CNBC · SPACENEWS · SPACE.COM · PBS NEWSHOUR · CNN",
+    "FLIGHT DETAILS PER SPACEX AND NEWS REPORTS"
+   ]
+  }
+ ]
+}
