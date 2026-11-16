@@ -1,0 +1,383 @@
+{
+ "id": "2026-11-16-vulcan-amazon-leo-loss",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Forty internet satellites lost, ten minutes after liftoff. What does it mean for Amazon?"
+  },
+  {
+   "id": "f1",
+   "text": "On Sunday, a Vulcan rocket from United Launch Alliance lifted off from Cape Canaveral in Florida. About ten minutes in, ULA says, it suffered an anomaly and failed to reach orbit. All forty Amazon Leo satellites on board were lost."
+  },
+  {
+   "id": "f2",
+   "text": "Spaceflight Now reports the problem came during the burn of the Centaur upper stage. The cause is not yet known. It is ULA's first outright failure since the company was formed in two thousand six. The flight was meant to return Vulcan to service."
+  },
+  {
+   "id": "f3",
+   "text": "It was the first of thirty-eight Vulcan launches Amazon bought. Reuters reports about four hundred Leo satellites were in orbit, of more than three thousand planned. The Pentagon was waiting on this flight before clearing Vulcan for military launches again."
+  },
+  {
+   "id": "cta",
+   "text": "Will Vulcan fly again before spring twenty twenty-seven? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE LOSS",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "WHAT FAILED",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "WHAT IT COSTS",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Rocket Failure Wipes Out 40 Amazon Leo Satellites #shorts",
+  "description": "On November 15, a United Launch Alliance Vulcan rocket carrying 40 Amazon Leo internet satellites suffered an anomaly about ten minutes after liftoff from Cape Canaveral and failed to reach orbit, ULA said. Spaceflight Now reports the problem came during the Centaur upper-stage burn; the cause is under investigation. It was the first of 38 Vulcan launches Amazon bought, and the Pentagon had been waiting on this flight before clearing Vulcan for national security launches again, according to Reuters.\n\nSources: ULA statement, Spaceflight Now, Space.com, Reuters (via IBTimes, Militarnyi), Engadget, Via Satellite, WESH.\n\n#tech #space #AmazonLeo #ULA #Vulcan",
+  "tags": [
+   "technology",
+   "news",
+   "space",
+   "ULA",
+   "Vulcan",
+   "Amazon Leo",
+   "Amazon",
+   "satellite internet",
+   "rocket launch",
+   "Cape Canaveral"
+  ],
+  "cover": "f1:anomaly"
+ },
+ "thumbnail": {
+  "at": "f1:anomaly +0.8",
+  "focus": [
+   -73.5,
+   30.5
+  ],
+  "number": "40",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "ULA'S FIRST FAILURE",
+    "text"
+   ],
+   [
+    "WHAT NOW?",
+    "accent"
+   ]
+  ],
+  "source": "SATELLITES · NOV 15 · PER ULA · AMAZON"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -50,
+     "lat": 20,
+     "R": 380
+    },
+    {
+     "at": 4.0,
+     "lon": -76,
+     "lat": 29,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "ULA VULCAN · AMAZON LEO LV-01 · NOV 15",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "USA",
+     "color": "info",
+     "at": "hook:minutes",
+     "alpha": 0.3
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -80.58,
+      28.56
+     ],
+     "color": "danger",
+     "at": "hook:minutes",
+     "label": "CAPE CANAVERAL",
+     "sub": "FLORIDA",
+     "dx": -40,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:satellites",
+    "lines": [
+     [
+      "40 SATELLITES",
+      "text",
+      96
+     ],
+     [
+      "NEVER REACHED ORBIT",
+      "danger",
+      84
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.1",
+   "center": [
+    -74,
+    29
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -76,
+     "lat": 29,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +1.5",
+     "lon": -79,
+     "lat": 28.8,
+     "dist": 22,
+     "pitch": 40,
+     "yaw": -8,
+     "oy": 170
+    },
+    {
+     "at": "f1:anomaly",
+     "lon": -73,
+     "lat": 30.5,
+     "dist": 34,
+     "pitch": 48,
+     "yaw": 6,
+     "oy": 190
+    },
+    {
+     "at": "f2 -0.1",
+     "lon": -72,
+     "lat": 30.8,
+     "dist": 32,
+     "pitch": 50,
+     "yaw": 10,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "USA",
+     "color": "info",
+     "alpha": 0.18,
+     "at": "hook$ +0.4"
+    },
+    {
+     "kind": "tint",
+     "iso": "US-FL",
+     "color": "accent",
+     "alpha": 0.2,
+     "at": "f1 +0.3"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -80.58,
+      28.56
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1:lifted",
+     "label": {
+      "text": "CAPE CANAVERAL",
+      "sub": "LAUNCH COMPLEX 41",
+      "dx": 40,
+      "dy": 110
+     }
+    },
+    {
+     "kind": "arc",
+     "from": [
+      -80.58,
+      28.56
+     ],
+     "to": [
+      -66,
+      32.5
+     ],
+     "color": "accent",
+     "height": 0.35,
+     "at": "f1:lifted",
+     "dur": 3.5
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -66,
+      32.5
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f1:anomaly",
+     "label": {
+      "text": "ANOMALY ≈10 MIN IN",
+      "sub": "PER ULA · PATH ILLUSTRATIVE",
+      "dx": -60,
+      "dy": -130
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "LOST",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      680,
+      1050
+     ],
+     "note": "40 SATELLITES · PER ULA",
+     "at": "f1:forty"
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "VULCAN · FLIGHT FOR AMAZON LEO",
+   "color": "violet",
+   "items": [
+    {
+     "date": "SUN NOV 15",
+     "title": "LIFTOFF, CAPE CANAVERAL",
+     "sub": "RETURN-TO-FLIGHT MISSION",
+     "color": "info",
+     "at": "f2 +0.2"
+    },
+    {
+     "date": "EARLY FLIGHT",
+     "title": "SIDE BOOSTERS SEPARATE",
+     "sub": "AS EXPECTED · PER NORTHROP GRUMMAN",
+     "color": "ok",
+     "at": "f2:Spaceflight"
+    },
+    {
+     "date": "≈10 MIN IN",
+     "title": "CENTAUR UPPER STAGE FAILS",
+     "sub": "PER SPACEFLIGHT NOW · CAUSE UNKNOWN",
+     "color": "danger",
+     "big": true,
+     "at": "f2:Centaur"
+    },
+    {
+     "date": "SINCE 2006",
+     "title": "ULA'S FIRST OUTRIGHT FAILURE",
+     "sub": "PER SPACEFLIGHT NOW · ENGADGET",
+     "color": "violet",
+     "at": "f2:outright"
+    }
+   ],
+   "source": "SOURCES: ULA · SPACEFLIGHT NOW · SPACE.COM · ENGADGET"
+  },
+  {
+   "type": "scale",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "AMAZON LEO IN ORBIT",
+   "sublabel": "SATELLITES · FIRST GENERATION",
+   "color": "info",
+   "items": [
+    {
+     "name": "IN ORBIT BEFORE SUNDAY",
+     "value": 398,
+     "display": "≈400",
+     "color": "accent",
+     "at": "f3:Reuters"
+    },
+    {
+     "name": "PLANNED",
+     "value": 3236,
+     "display": "3,236",
+     "color": "info",
+     "at": "f3:planned."
+    }
+   ],
+   "note": "38 VULCAN LAUNCHES BOUGHT · 398 PER REUTERS VIA IBTIMES",
+   "source": "SOURCES: REUTERS · AMAZON · SPACEFLIGHT NOW"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -60,
+     "lat": 20,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -78,
+     "lat": 29,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": -72,
+     "lat": 27,
+     "R": 500
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -80.58,
+      28.56
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "VULCAN FLIES AGAIN",
+     "text"
+    ],
+    [
+     "BY SPRING 2027?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "ULA · SPACEFLIGHT NOW · SPACE.COM · REUTERS · ENGADGET · VIA SATELLITE",
+    "CAUSE UNDER INVESTIGATION · TRAJECTORY ILLUSTRATIVE"
+   ]
+  }
+ ]
+}
