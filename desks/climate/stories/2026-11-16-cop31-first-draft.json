@@ -1,0 +1,397 @@
+{
+ "id": "2026-11-16-cop31-first-draft",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Eighteen pages, and two ways to talk about oil, gas and coal. Which one survives?"
+  },
+  {
+   "id": "f1",
+   "text": "Negotiators at COP thirty-one in Antalya, Turkey, published the first draft of a deal on Monday, Reuters reports. On fossil fuels it offers two options: repeat the twenty twenty-three pledge on transitioning away, or a stronger call to phase them out."
+  },
+  {
+   "id": "f2",
+   "text": "Both options could still be dropped. Chris Bowen, who leads the talks, said the final wording will not look exactly like this. Belgium's climate minister told AFP that some oil and gas producing nations have reservations."
+  },
+  {
+   "id": "f3",
+   "text": "The draft also calls for tripling adaptation finance to at least one hundred twenty billion dollars a year by twenty thirty-five. An African delegation source told Anadolu that would cover only around thirty percent of what is needed. Talks are set to end Friday."
+  },
+  {
+   "id": "cta",
+   "text": "Will the final deal call for a phase-out? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE DRAFT",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE PUSHBACK",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE MONEY",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "ok"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 40,
+     "lat": 20,
+     "R": 320
+    },
+    {
+     "at": 3.6,
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 560
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "color": "accent",
+     "at": 0.5,
+     "label": "ANTALYA",
+     "big": true
+    }
+   ],
+   "chip": {
+    "text": "COP31 · FIRST DRAFT",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:ways",
+    "lines": [
+     [
+      "18 PAGES",
+      "text",
+      110
+     ],
+     [
+      "FOSSIL FUELS?",
+      "accent",
+      100
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    32,
+    34
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 30.7,
+     "lat": 36.9,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.5",
+     "lon": 30.9,
+     "lat": 37.3,
+     "dist": 16,
+     "pitch": 48,
+     "yaw": 12,
+     "oy": 200
+    },
+    {
+     "at": "f2",
+     "lon": 38,
+     "lat": 33,
+     "dist": 75,
+     "pitch": 34,
+     "yaw": -8,
+     "oy": 180
+    },
+    {
+     "at": "f2:Belgium's",
+     "lon": 15,
+     "lat": 44,
+     "dist": 70,
+     "pitch": 40,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "f3:African",
+     "lon": 20,
+     "lat": 8,
+     "dist": 130,
+     "pitch": 28,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 24,
+     "lat": 14,
+     "dist": 140,
+     "pitch": 26,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "marker",
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1 +0.6",
+     "label": {
+      "text": "ANTALYA",
+      "sub": "COP31 · DRAFT OUT MON NOV 16",
+      "dx": 170,
+      "dy": -170,
+      "until": "f1:options:"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "LOCATIONS SHOWN FOR ORIENTATION",
+     "y": 1170,
+     "at": "f1 +1",
+     "until": "f3"
+    },
+    {
+     "kind": "stamp",
+     "text": "COULD BE DROPPED",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      540,
+      520
+     ],
+     "note": "BOTH OPTIONS · PER REUTERS",
+     "at": "f2",
+     "until": "f2:Chris"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      130,
+      560,
+      820
+     ],
+     "kicker": "CHRIS BOWEN · LEADS THE TALKS",
+     "text": "Final wording will not look exactly like the draft (paraphrased, via Reuters)",
+     "color": "info",
+     "at": "f2:Chris",
+     "until": "f2:Belgium's"
+    },
+    {
+     "kind": "tint",
+     "iso": "BEL",
+     "color": "info",
+     "alpha": 0.5,
+     "glow": true,
+     "at": "f2:Belgium's",
+     "until": "f3"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      130,
+      560,
+      820
+     ],
+     "kicker": "JEAN-LUC CRUCKE · BELGIAN CLIMATE MINISTER",
+     "text": "Some oil and gas producing nations hold “reservations”",
+     "color": "danger",
+     "at": "f2:told",
+     "until": "f3"
+    },
+    {
+     "kind": "tint",
+     "iso": "TUR",
+     "color": "accent",
+     "alpha": 0.25,
+     "at": "f1 +0.6",
+     "until": "f2:Belgium's"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      20,
+      5
+     ],
+     "text": "AFRICA",
+     "sub": "$120B ≈ 30% OF NEEDS · VIA ANADOLU",
+     "color": "ok",
+     "dx": -40,
+     "dy": -170,
+     "at": "f3:African +0.3"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f3:Talks",
+     "label": {
+      "text": "COP31",
+      "sub": "SET TO END FRI NOV 20",
+      "dx": 140,
+      "dy": -120
+     }
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f1:options:",
+   "to": "f1$ +0.2",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "check",
+     "big": "OPTION 1",
+     "text": "\"TRANSITIONING AWAY\" · REPEATS 2023 PLEDGE",
+     "color": "info",
+     "at": "f1:repeat"
+    },
+    {
+     "icon": "flame",
+     "big": "OPTION 2",
+     "text": "\"PHASE OUT\" FOSSIL FUELS · STRONGER",
+     "color": "accent",
+     "at": "f1:stronger"
+    }
+   ],
+   "source": "SOURCE: COP31 DRAFT TEXT VIA REUTERS · NOV 16"
+  },
+  {
+   "type": "counter",
+   "from": "f3",
+   "to": "f3:African -0.1",
+   "label": "ADAPTATION FINANCE",
+   "sublabel": "PER YEAR BY 2035 · DRAFT CALLS FOR AT LEAST",
+   "icon": "money",
+   "value": 120,
+   "start": 0,
+   "prefix": "$",
+   "suffix": "B",
+   "doneSuffix": "",
+   "decimals": 0,
+   "at": "f3 +0.3",
+   "doneAt": "f3:dollars",
+   "note": "A TRIPLING · NOT YET AGREED BY RICH NATIONS",
+   "source": "SOURCE: COP31 DRAFT VIA AFP · ANADOLU"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "TWO OPTIONS. FOUR DAYS.",
+     "text"
+    ],
+    [
+     "A PHASE-OUT?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REUTERS VIA AL-MONITOR · AFP VIA DAILY SABAH · ANADOLU",
+    "SEARCH EXCERPTS · MAP FOR ORIENTATION"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": 22,
+     "lat": 36.9,
+     "R": 600
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "COP31's First Draft Puts Fossil Fuels Up for Debate #shorts",
+  "description": "Negotiators at COP31 in Antalya, Türkiye, published an 18-page first draft deal on Monday. On fossil fuels it offers two options – repeating the 2023 \"transitioning away\" language or a stronger \"phase out\" – and both could still be dropped, Reuters reports. The draft also calls for tripling adaptation finance to at least $120 billion a year by 2035; an African delegation source told Anadolu that would cover only about 30% of needs.\n\nSources: Reuters (via Al-Monitor, KELO, Egyptian Gazette), AFP (via Daily Sabah, Yahoo News), Anadolu Agency (based on search-result excerpts). Map locations are for orientation.\n\n#climate #cop31 #fossilfuels #climatefinance",
+  "tags": [
+   "climate",
+   "weather",
+   "news",
+   "COP31",
+   "Antalya",
+   "climate summit",
+   "fossil fuels",
+   "phase out",
+   "adaptation finance",
+   "Chris Bowen",
+   "UN",
+   "climate deal"
+  ],
+  "cover": "f1:stronger +1"
+ },
+ "thumbnail": {
+  "at": "f1 +2.2",
+  "focus": [
+   30.7,
+   36.9
+  ],
+  "zoom": 1.15,
+  "number": "2",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "WORDINGS",
+    "text"
+   ],
+   [
+    "WHICH SURVIVES?",
+    "accent"
+   ]
+  ],
+  "source": "NOV 16 · DRAFT VIA REUTERS"
+ }
+}
