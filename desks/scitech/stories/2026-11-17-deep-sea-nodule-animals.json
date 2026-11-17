@@ -1,0 +1,408 @@
+{
+ "id": "2026-11-17-deep-sea-nodule-animals",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Two hundred forty-five animals inside a single deep-sea rock. Why do miners care?"
+  },
+  {
+   "id": "f1",
+   "text": "A study published in Scientific Reports looked inside two hundred forty-four metal-rich nodules from the Clarion-Clipperton Zone in the central Pacific. Dutch and German researchers counted four thousand one hundred thirty-nine animals, about seventeen per rock."
+  },
+  {
+   "id": "f2",
+   "text": "Most are nematode worms and tiny crustaceans called copepods, smaller than a millimeter, sheltering in cracks inside the rock. The team found fewer animals than in the surrounding mud, but distinct communities. Bigger nodules held more animals."
+  },
+  {
+   "id": "f3",
+   "text": "The nodules hold nickel, cobalt and copper, metals used in batteries. They grow only a few millimeters per million years, the researchers say, so mining would destroy this habitat for good. In the U.S., NOAA is reviewing a mining application from The Metals Company."
+  },
+  {
+   "id": "cta",
+   "text": "Will the U.S. approve deep-sea nodule mining by spring twenty twenty-seven? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE FINDING",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "WHO LIVES THERE",
+   "seg": "f2",
+   "color": "ok"
+  },
+  {
+   "n": "03",
+   "name": "WHY MINERS CARE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "oil"
+  }
+ ],
+ "upload": {
+  "title": "Thousands of Tiny Animals Live Inside Deep-Sea Rocks #shorts",
+  "description": "A study published in Scientific Reports on November 11 found 4,139 tiny animals, mostly nematode worms and copepods, living in the cracks of 244 polymetallic nodules from the Clarion-Clipperton Zone in the central Pacific, with up to 245 in a single nodule. The NIOZ and MARUM researchers say these communities differ from those in the surrounding mud, and that mining the slow-growing, metal-rich nodules would destroy this habitat permanently. NOAA is reviewing The Metals Company's U.S. application for commercial nodule recovery.\n\nSources: Scientific Reports paper (Polymetallic nodules provide a distinct habitat for abyssal meiofauna), MARUM release via EurekAlert, NIOZ release, Phys.org, ScienceDaily, ScienceAlert, The Debrief, Ocean News, Oceanographic, NOAA.\n\n#science #deepsea #ocean #deepseamining #biodiversity",
+  "tags": [
+   "science",
+   "news",
+   "deep sea",
+   "deep-sea mining",
+   "polymetallic nodules",
+   "Clarion-Clipperton Zone",
+   "Pacific Ocean",
+   "marine biology",
+   "NIOZ",
+   "MARUM",
+   "biodiversity"
+  ],
+  "cover": "f1:Pacific. +0.3"
+ },
+ "thumbnail": {
+  "at": "f1:Pacific. +0.3",
+  "focus": [
+   -128,
+   13
+  ],
+  "number": "245",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "ANIMALS IN ONE ROCK",
+    "text"
+   ],
+   [
+    "MINERS WANT IT",
+    "oil"
+   ]
+  ],
+  "source": "PACIFIC NODULE · PER SCIENTIFIC REPORTS · NOV 11"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -150,
+     "lat": 5,
+     "R": 380
+    },
+    {
+     "at": 4.0,
+     "lon": -128,
+     "lat": 13,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "SCIENTIFIC REPORTS · NIOZ · MARUM · NOV 11",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      -128,
+      13
+     ],
+     "color": "accent",
+     "at": "hook:deep-sea",
+     "label": "CLARION-CLIPPERTON ZONE",
+     "sub": "CENTRAL PACIFIC",
+     "dx": -40,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:animals",
+    "lines": [
+     [
+      "245 ANIMALS",
+      "text",
+      96
+     ],
+     [
+      "IN ONE ROCK",
+      "accent",
+      84
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.1",
+   "center": [
+    -128,
+    13
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -128,
+     "lat": 13,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +2",
+     "lon": -128,
+     "lat": 12,
+     "dist": 70,
+     "pitch": 35,
+     "yaw": -6,
+     "oy": 160
+    },
+    {
+     "at": "f1:counted",
+     "lon": -126,
+     "lat": 13,
+     "dist": 55,
+     "pitch": 48,
+     "yaw": 6,
+     "oy": 190
+    },
+    {
+     "at": "f2 -0.1",
+     "lon": -125,
+     "lat": 13.5,
+     "dist": 52,
+     "pitch": 50,
+     "yaw": 10,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "MEX",
+     "color": "neutral",
+     "alpha": 0.15,
+     "at": "hook$ +0.3"
+    },
+    {
+     "kind": "zone",
+     "poly": [
+      [
+       -156,
+       14
+      ],
+      [
+       -150,
+       20
+      ],
+      [
+       -118,
+       18
+      ],
+      [
+       -114,
+       14
+      ],
+      [
+       -120,
+       6
+      ],
+      [
+       -152,
+       8
+      ]
+     ],
+     "color": "accent",
+     "fill": 0.28,
+     "at": "f1:Clarion-Clipperton"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -146,
+      10
+     ],
+     "text": "CLARION-CLIPPERTON ZONE",
+     "sub": "OUTLINE APPROXIMATE",
+     "color": "accent",
+     "dx": 20,
+     "dy": 150,
+     "at": "f1:Researchers"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -128,
+      13
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1:nodules",
+     "label": {
+      "text": "244 NODULES SAMPLED",
+      "sub": "BY UNDERWATER ROBOTS",
+      "dx": 30,
+      "dy": -140
+     }
+    },
+    {
+     "kind": "card",
+     "screen": [
+      470,
+      290,
+      470
+     ],
+     "title": "INSIDE 244 NODULES",
+     "badge": "PER STUDY",
+     "color": "info",
+     "at": "f1:counted",
+     "rows": [
+      {
+       "icon": "people",
+       "text": "4,139 ANIMALS",
+       "at": "f1:counted"
+      },
+      {
+       "icon": "eye",
+       "text": "≈17 PER ROCK",
+       "at": "f1:seventeen"
+      },
+      {
+       "icon": "check",
+       "text": "UP TO 245 IN ONE",
+       "at": "f1:seventeen +0.8"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "ANIMALS IN NODULES VS. MUD",
+   "sublabel": "NODULE COUNT AS % OF MUD COUNT",
+   "color": "ok",
+   "bars": [
+    {
+     "label": "NEMATODES",
+     "value": 10,
+     "display": "≈10%",
+     "color": "ok",
+     "at": "f2:nematode",
+     "dur": 1.0
+    },
+    {
+     "label": "COPEPODS",
+     "value": 25,
+     "display": "≈25%",
+     "color": "info",
+     "at": "f2:copepods",
+     "dur": 1.0
+    },
+    {
+     "label": "IN THE MUD",
+     "value": 100,
+     "display": "100%",
+     "color": "neutral",
+     "at": "f2:fewer",
+     "dur": 1.0
+    }
+   ],
+   "source": "SOURCE: SCIENTIFIC REPORTS · MARUM · NIOZ"
+  },
+  {
+   "type": "flow",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "WHY NODULES ARE A TARGET",
+   "color": "oil",
+   "steps": [
+    {
+     "icon": "bolt",
+     "title": "NICKEL · COBALT · COPPER",
+     "sub": "BATTERY METALS",
+     "color": "oil",
+     "at": "f3 +0.2"
+    },
+    {
+     "icon": "storm",
+     "title": "A FEW MM PER MILLION YEARS",
+     "sub": "GROWTH · PER RESEARCHERS",
+     "color": "info",
+     "at": "f3:grow"
+    },
+    {
+     "icon": "x",
+     "title": "HABITAT LOST FOR GOOD",
+     "sub": "IF MINED · PER RESEARCHERS",
+     "color": "danger",
+     "at": "f3:destroy"
+    },
+    {
+     "icon": "flag",
+     "title": "NOAA REVIEWING",
+     "sub": "THE METALS COMPANY APPLICATION",
+     "color": "accent",
+     "at": "f3:NOAA"
+    }
+   ],
+   "source": "SOURCES: MARUM · NIOZ · SCIENTIFIC REPORTS · NOAA"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -150,
+     "lat": 5,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -128,
+     "lat": 13,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": -122,
+     "lat": 12,
+     "R": 500
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -128,
+      13
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "NODULE MINING APPROVED",
+     "text"
+    ],
+    [
+     "BY SPRING 2027?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "SCIENTIFIC REPORTS · MARUM · NIOZ · PHYS.ORG · SCIENCEDAILY · SCIENCEALERT · NOAA",
+    "ZONE OUTLINE APPROXIMATE"
+   ]
+  }
+ ]
+}
