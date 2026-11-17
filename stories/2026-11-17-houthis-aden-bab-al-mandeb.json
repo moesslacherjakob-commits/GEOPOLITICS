@@ -1,0 +1,511 @@
+{
+ "id": "2026-11-17-houthis-aden-bab-al-mandeb",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Yemen's government just pulled back from the Red Sea's gateway. Is Aden next?"
+  },
+  {
+   "id": "f1",
+   "text": "The gateway is Bab al-Mandeb, a strait on the main sea route between Asia and Europe. On Sunday, Yemen's Saudi-backed government said its forces were leaving nearby areas, including Dhubab, to defend the city of Aden."
+  },
+  {
+   "id": "f2",
+   "text": "The Houthis are pushing east. Five Yemeni military personnel told Reuters the rebels reached Khor Omairah, about one hundred kilometres west of Aden. Military sources quoted by AFP put them within sixty kilometres. Government sources say defending Aden is now the priority."
+  },
+  {
+   "id": "f3",
+   "text": "Saudi Arabia reacted on Monday. A royal decree removed the commander of the coalition's joint forces, the Saudi Press Agency reported. Chief of staff Fayyad al-Ruwaili takes over. Reuters says the Houthis have taken swathes of land since the Iran war revived Yemen's civil war this summer."
+  },
+  {
+   "id": "cta",
+   "text": "Will Aden stay in government hands through the winter? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE PULLBACK",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "THE ADVANCE",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "RIYADH REACTS",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "upload": {
+  "title": "Yemen Pulls Back From Bab al-Mandeb. Is Aden Next? #shorts",
+  "description": "Yemen's internationally recognised, Saudi-backed government said on Sunday, November 15, 2026, that its forces were withdrawing from Dhubab and areas near the Bab al-Mandeb Strait, one of the world's key shipping chokepoints between the Red Sea and the Gulf of Aden, in order to defend Aden, the government's interim seat. Reuters reported that the forces redeployed to al-Suqyah, south of Dhubab. Five Yemeni military personnel told Reuters that Houthi fighters reached the coastal area of Khor Omairah, about 100 km west of Aden; military sources quoted by AFP said the Houthis were within about 60 km of the city. The figures may describe different points of the front and the front line is not independently verified; positions in the video are approximate. Three government sources told Reuters that securing Aden and Lahj province is now the priority. On Monday, November 16, a royal decree reported by the Saudi Press Agency relieved Lt. Gen. Fahd bin Hamad Al-Salman as commander of the coalition's joint forces and appointed him adviser to the defence minister; Chief of the General Staff Fayyad al-Ruwaili takes over the command in addition to his post. No official reason was given. According to Reuters, the Houthis have seized swathes of territory since the US-Iran conflict reignited Yemen's frozen civil war this summer. There was no immediate Houthi comment reported on the pullback.\n\nSources:\nReuters via U.S. News / Al-Monitor, Nov 16, 2026: Houthis seize ground on Yemen's southern coast, edge closer to Aden\nFrance 24 (AFP), Nov 15, 2026: Yemen's Houthis advance on Aden as government forces retreat\nFrance 24, Nov 16, 2026: Saudi Arabia dismisses commander of anti-Houthi coalition as rebels advance\nAl Jazeera, Nov 15–16, 2026: Yemeni government forces redeploy from Bab al-Mandeb to defend Aden\nThe National, Nov 15, 2026: Yemen government forces' pullback hands Houthis greater leverage over Bab al-Mandeb\nTimes of Israel, Nov 15, 2026: Yemeni government forces retreat from Bab el-Mandeb Strait\nMiddle East Eye (Saudi Press Agency), Nov 16, 2026\n\n#geopolitics #Yemen #Houthis #Aden #RedSea",
+  "tags": [
+   "geopolitics",
+   "Yemen",
+   "Houthis",
+   "Aden",
+   "Bab al-Mandeb",
+   "Red Sea",
+   "Saudi Arabia",
+   "shipping",
+   "Middle East",
+   "world news"
+  ],
+  "cover": "f1 +1"
+ },
+ "thumbnail": {
+  "at": "f2:Omairah, -0.4",
+  "focus": "Aden",
+  "zoom": 1.4,
+  "number": "60 KM",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "FROM ADEN",
+    "text"
+   ],
+   [
+    "HOUTHIS CLOSE IN",
+    "accent"
+   ]
+  ],
+  "source": "PER AFP MILITARY SOURCES · NOV 15"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 44,
+     "lat": 16,
+     "R": 380
+    },
+    {
+     "at": 3.6,
+     "lon": 44,
+     "lat": 13,
+     "R": 540
+    }
+   ],
+   "chip": {
+    "text": "YEMEN · NOV 16, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "YEM",
+     "color": "accent",
+     "at": "hook:government",
+     "alpha": 0.5
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Bab Al-Mandab",
+     "color": "info",
+     "at": "hook:gateway.",
+     "label": "BAB AL-MANDEB",
+     "sub": "RED SEA ↔ GULF OF ADEN",
+     "dx": -40,
+     "dy": 110,
+     "big": true
+    },
+    {
+     "loc": "Aden",
+     "color": "danger",
+     "at": "hook:Aden",
+     "label": "ADEN",
+     "dx": 60,
+     "dy": -80
+    }
+   ],
+   "headline": {
+    "at": "hook:pulled",
+    "lines": [
+     [
+      "PULLBACK AT",
+      "text",
+      100
+     ],
+     [
+      "THE RED SEA GATE",
+      "info",
+      96
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:Aden",
+    "icon": "flag",
+    "iconColor": "danger",
+    "color": "danger",
+    "kicker": "INTERIM SEAT",
+    "title": "ADEN NEXT?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    44.2,
+    13.2
+   ],
+   "detail": [
+    "YEM"
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 44,
+     "lat": 13,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.5",
+     "lon": 43.5,
+     "lat": 12.7,
+     "dist": 5,
+     "pitch": 48,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "f1$ -0.5",
+     "lon": 44.1,
+     "lat": 12.75,
+     "dist": 6.5,
+     "pitch": 48,
+     "yaw": 0,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": 44.3,
+     "lat": 12.75,
+     "dist": 5,
+     "pitch": 50,
+     "yaw": -4,
+     "oy": 200
+    },
+    {
+     "at": "f2$ -0.5",
+     "lon": 44.5,
+     "lat": 12.8,
+     "dist": 4.5,
+     "pitch": 50,
+     "yaw": 0,
+     "oy": 200
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 45,
+     "lat": 15.5,
+     "dist": 40,
+     "pitch": 44,
+     "yaw": 2,
+     "oy": 200
+    },
+    {
+     "at": "cta",
+     "lon": 44.5,
+     "lat": 15,
+     "dist": 44,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 200
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "YEM",
+     "color": "accent",
+     "alpha": 0.35,
+     "fill": 0.04,
+     "at": "f1"
+    },
+    {
+     "kind": "movers",
+     "path": [
+      [
+       42.9,
+       13.5
+      ],
+      [
+       43.15,
+       13.0
+      ],
+      [
+       43.33,
+       12.62
+      ],
+      [
+       43.7,
+       12.45
+      ],
+      [
+       44.5,
+       12.4
+      ],
+      [
+       45.4,
+       12.5
+      ]
+     ],
+     "icon": "ship",
+     "count": 3,
+     "speed": 0.35,
+     "spacing": 0.33,
+     "offset": 0,
+     "color": "info",
+     "at": "f1",
+     "until": "f2 -0.2"
+    },
+    {
+     "kind": "marker",
+     "loc": "Bab Al-Mandab",
+     "style": "pulse",
+     "color": "info",
+     "at": "f1:al-Mandeb,",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "BAB AL-MANDEB",
+      "sub": "ASIA ↔ EUROPE SEA ROUTE",
+      "dx": -60,
+      "dy": 150,
+      "until": "f1:Sunday, -0.2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      43.41,
+      12.94
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f1:Dhubab,",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "DHUBAB",
+      "sub": "GOVT FORCES LEAVE · NOV 15",
+      "dx": -40,
+      "dy": -140
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "PULLBACK",
+     "icon": "flag",
+     "color": "info",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f1:leaving",
+     "until": "f2 -0.2",
+     "note": "PER YEMENI GOVERNMENT · NOV 15"
+    },
+    {
+     "kind": "marker",
+     "loc": "Aden",
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1:Aden.",
+     "until": "cta -0.2",
+     "label": {
+      "text": "ADEN",
+      "sub": "GOVERNMENT'S INTERIM SEAT",
+      "dx": -40,
+      "dy": -150,
+      "until": "f3 -0.2"
+     }
+    },
+    {
+     "kind": "push",
+     "from": [
+      43.35,
+      13.3
+     ],
+     "to": [
+      44.05,
+      12.72
+     ],
+     "color": "danger",
+     "width": 30,
+     "bend": -0.2,
+     "at": "f2:pushing",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "HOUTHI ADVANCE",
+      "sub": "APPROX. · PER REUTERS / AFP",
+      "at": "f2:pushing +0.4"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      44.05,
+      12.68
+     ],
+     "style": "dot",
+     "color": "danger",
+     "at": "f2:Omairah,",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "KHOR OMAIRAH",
+      "sub": "≈100 KM W OF ADEN · PER REUTERS",
+      "dx": -30,
+      "dy": 150
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "≈60 KM",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f2:sixty",
+     "until": "f2:Government -0.2",
+     "note": "FROM ADEN · PER AFP MILITARY SOURCES"
+    },
+    {
+     "kind": "tint",
+     "iso": "SAU",
+     "color": "accent",
+     "alpha": 0.5,
+     "fill": 0.08,
+     "at": "f3",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "callout",
+     "loc": "Aden",
+     "place": "RIYADH",
+     "icon": "flag",
+     "screen": [
+      880,
+      380
+     ],
+     "color": "accent",
+     "at": "f3 +0.3",
+     "until": "f3:royal -0.2"
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "from": "f3:royal -0.1",
+   "to": "f3$ -0.1",
+   "label": "YEMEN'S SOUTH · THE LAST WEEKS",
+   "color": "accent",
+   "items": [
+    {
+     "date": "SUN NOV 15",
+     "title": "PULLBACK FROM BAB AL-MANDEB",
+     "sub": "PER YEMENI GOVERNMENT",
+     "color": "info",
+     "at": "f3:royal"
+    },
+    {
+     "date": "MON NOV 16",
+     "title": "COALITION COMMANDER REMOVED",
+     "sub": "ROYAL DECREE · PER SAUDI PRESS AGENCY",
+     "color": "accent",
+     "big": true,
+     "at": "f3:removed"
+    },
+    {
+     "date": "MON NOV 16",
+     "title": "AL-RUWAILI TAKES COMMAND",
+     "sub": "CHIEF OF STAFF · KEEPS HIS POST",
+     "color": "accent",
+     "at": "f3:al-Ruwaili"
+    },
+    {
+     "date": "SINCE SUMMER",
+     "title": "HOUTHIS TAKE SWATHES OF LAND",
+     "sub": "PER REUTERS",
+     "color": "danger",
+     "at": "f3:swathes"
+    }
+   ],
+   "source": "SOURCES: REUTERS · AFP · SAUDI PRESS AGENCY · AL JAZEERA"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 44,
+     "lat": 14,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 44,
+     "lat": 14,
+     "R": 540
+    },
+    {
+     "at": "end",
+     "lon": 44,
+     "lat": 14,
+     "R": 540
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "YEM",
+     "color": "accent",
+     "alpha": 0.45
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Aden",
+     "color": "danger"
+    },
+    {
+     "loc": "Bab Al-Mandab",
+     "color": "info"
+    }
+   ],
+   "lines": [
+    [
+     "ADEN THROUGH",
+     "text"
+    ],
+    [
+     "THE WINTER?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: REUTERS, AFP VIA FRANCE 24, AL JAZEERA, THE NATIONAL,",
+    "TIMES OF ISRAEL, SAUDI PRESS AGENCY · NOV 15–16, 2026"
+   ]
+  }
+ ]
+}
