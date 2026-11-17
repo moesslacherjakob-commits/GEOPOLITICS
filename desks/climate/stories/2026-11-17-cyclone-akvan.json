@@ -1,0 +1,556 @@
+{
+ "id": "2026-11-17-cyclone-akvan",
+ "lang": "en",
+ "gap": 0.8,
+ "script": [
+  {
+   "id": "hook",
+   "text": "A third cyclone in weeks is heading for India's east coast. Who's in its path?"
+  },
+  {
+   "id": "f1",
+   "text": "Cyclone Akvan formed over the Bay of Bengal on Monday, India's weather department says. That night, Sri Lanka's forecasters placed it about six hundred forty kilometers from Trincomalee, and warned fishers and naval crews to stay away."
+  },
+  {
+   "id": "f2",
+   "text": "India's weather department expects Akvan to become a very severe cyclonic storm, with winds up to one hundred forty-five kilometers an hour. It says the storm is likely to cross the Andhra Pradesh coast between Nellore and Tuni on Friday. Local reports say the track has shifted."
+  },
+  {
+   "id": "f3",
+   "text": "In Odisha, officials aim to move about two hundred four thousand people, local media report. Ganjam district had evacuated twenty-seven hundred by Tuesday evening. Akvan follows Cyclone Arnab on October twenty-eighth and Cyclone Murasu on November third."
+  },
+  {
+   "id": "cta",
+   "text": "Will Akvan reach land as a very severe cyclone? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE STORM",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "THE PATH",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE EVACUATION",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 84,
+     "lat": 10,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": 84,
+     "lat": 14,
+     "R": 620
+    }
+   ],
+   "chip": {
+    "text": "CYCLONE AKVAN",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:cyclone",
+    "lines": [
+     [
+      "3RD CYCLONE",
+      "danger",
+      110
+     ],
+     [
+      "IN WEEKS",
+      "text",
+      110
+     ]
+    ]
+   },
+   "markers": [
+    {
+     "loc": [
+      86.9,
+      11.5
+     ],
+     "color": "danger",
+     "at": "hook:cyclone",
+     "label": "AKVAN",
+     "sub": "BAY OF BENGAL",
+     "dx": 40,
+     "dy": -60,
+     "big": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    83.5,
+    14.5
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 84,
+     "lat": 14,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 84.2,
+     "lat": 11.8,
+     "dist": 52,
+     "pitch": 34,
+     "yaw": -4,
+     "oy": 170
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": 83.0,
+     "lat": 14.2,
+     "dist": 46,
+     "pitch": 40,
+     "yaw": 5,
+     "oy": 180
+    },
+    {
+     "at": "f2:Nellore",
+     "lon": 81.6,
+     "lat": 15.6,
+     "dist": 30,
+     "pitch": 44,
+     "yaw": 2,
+     "oy": 190
+    },
+    {
+     "at": "f3:Ganjam",
+     "lon": 84.0,
+     "lat": 18.2,
+     "dist": 30,
+     "pitch": 42,
+     "yaw": -6,
+     "oy": 190
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 83.5,
+     "lat": 15.5,
+     "dist": 50,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 160
+    }
+   ],
+   "layers": [
+    {
+     "kind": "field",
+     "at": "hook$",
+     "until": "f2",
+     "palette": "rain",
+     "alpha": 0.55,
+     "grow": 1.2,
+     "pulse": true,
+     "blobs": [
+      {
+       "loc": [
+        86.9,
+        11.5
+       ],
+       "r": 2.2,
+       "v": 1
+      },
+      {
+       "loc": [
+        86.0,
+        12.4
+       ],
+       "r": 1.6,
+       "v": 0.7
+      }
+     ]
+    },
+    {
+     "kind": "track",
+     "at": "hook$",
+     "until": "cta +0.6",
+     "color": "storm",
+     "name": "AKVAN",
+     "sub": "CYCLONE · TRACK ILLUSTRATIVE",
+     "forecast": 2,
+     "now": 1,
+     "cone": true,
+     "points": [
+      {
+       "loc": [
+        87.9,
+        10.4
+       ],
+       "cat": "TD",
+       "label": "DEEP DEPRESSION",
+       "dx": 20,
+       "dy": 40,
+       "until": "f1 +3"
+      },
+      {
+       "loc": [
+        86.9,
+        11.5
+       ],
+       "cat": "TS",
+       "label": "MON · NAMED AKVAN",
+       "dx": 30,
+       "dy": 50,
+       "big": true,
+       "until": "f2"
+      },
+      {
+       "loc": [
+        84.9,
+        13.6
+       ],
+       "cat": 1
+      },
+      {
+       "loc": [
+        81.6,
+        15.9
+       ],
+       "cat": 1,
+       "label": "IMD: CROSSING FRI",
+       "dx": 60,
+       "dy": 70,
+       "big": true
+      }
+     ],
+     "steps": [
+      {
+       "at": "hook +0.3",
+       "to": 1,
+       "dur": 1.6
+      },
+      {
+       "at": "f2:expects",
+       "to": 3,
+       "dur": 3.2
+      }
+     ],
+     "nameUntil": "f2",
+     "nameDx": 40,
+     "nameDy": -120
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      81.23,
+      8.58
+     ],
+     "style": "dot",
+     "color": "info",
+     "at": "f1:Trincomalee",
+     "label": {
+      "text": "TRINCOMALEE",
+      "sub": "≈640 KM AWAY · SRI LANKA MET DEPT",
+      "dx": -120,
+      "dy": 70,
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "route",
+     "at": "f2:Nellore",
+     "until": "cta",
+     "style": "dash",
+     "color": "danger",
+     "width": 7,
+     "path": [
+      [
+       79.99,
+       14.45
+      ],
+      [
+       80.1,
+       15.2
+      ],
+      [
+       80.6,
+       15.8
+      ],
+      [
+       81.14,
+       16.17
+      ],
+      [
+       81.7,
+       16.4
+      ],
+      [
+       82.24,
+       16.95
+      ],
+      [
+       82.55,
+       17.36
+      ]
+     ]
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      79.99,
+      14.45
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f2:Nellore",
+     "label": {
+      "text": "NELLORE",
+      "dx": -190,
+      "dy": 60,
+      "until": "f3",
+      "sub": "IMD LANDFALL WINDOW"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      82.55,
+      17.36
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f2:Tuni",
+     "label": {
+      "text": "TUNI",
+      "dx": -230,
+      "dy": -70,
+      "until": "f3",
+      "sub": "IMD LANDFALL WINDOW"
+     }
+    },
+    {
+     "kind": "tint",
+     "iso": "IN-OR",
+     "color": "accent",
+     "alpha": 0.3,
+     "pulse": true,
+     "at": "f3",
+     "until": "cta +0.5"
+    },
+    {
+     "kind": "tint",
+     "iso": "IN-AP",
+     "color": "danger",
+     "alpha": 0.18,
+     "hatch": true,
+     "at": "f2:Andhra",
+     "until": "cta +0.5"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      84.79,
+      19.31
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f3:Ganjam",
+     "label": {
+      "text": "GANJAM, ODISHA",
+      "sub": "2,730 EVACUATED BY TUE EVENING",
+      "dx": -280,
+      "dy": -110,
+      "until": "f3:Akvan"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "TRACK ILLUSTRATIVE · POSITIONS APPROXIMATE · IMD, SRI LANKA MET DEPT",
+     "y": 1170,
+     "at": "f1 +1"
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f2:expects",
+   "to": "f2:says -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "VERY SEVERE",
+     "text": "CYCLONIC STORM EXPECTED · IMD",
+     "color": "danger",
+     "at": "f2:very"
+    },
+    {
+     "icon": "storm",
+     "big": "UP TO 145 KM/H",
+     "text": "WINDS NEAR THE COAST · IMD VIA INDIA.COM",
+     "color": "accent",
+     "at": "f2:winds"
+    }
+   ],
+   "source": "SOURCE: INDIA METEOROLOGICAL DEPARTMENT VIA NEWS REPORTS"
+  },
+  {
+   "type": "counter",
+   "from": "f3:In",
+   "to": "f3:Ganjam -0.15",
+   "label": "ODISHA · EVACUATION TARGET",
+   "sublabel": "EIGHT VULNERABLE DISTRICTS",
+   "icon": "people",
+   "color": "accent",
+   "value": 204000,
+   "start": 0,
+   "prefix": "",
+   "suffix": "",
+   "doneSuffix": "",
+   "decimals": 0,
+   "at": "f3:aim",
+   "doneAt": "f3:thousand",
+   "note": "STATE TARGET, NOT YET EVACUATED",
+   "source": "SOURCE: ODISHA GOVERNMENT VIA OMMCOM NEWS, ODISHA TV"
+  },
+  {
+   "type": "timeline",
+   "from": "f3:Akvan",
+   "to": "f3$ +0.3",
+   "label": "ONE COAST, THREE CYCLONES",
+   "color": "info",
+   "items": [
+    {
+     "date": "OCT 28",
+     "title": "Arnab hits near Narsapur",
+     "color": "neutral",
+     "at": "f3:Arnab"
+    },
+    {
+     "date": "NOV 3",
+     "title": "Murasu hits near Ongole",
+     "color": "info",
+     "at": "f3:Murasu"
+    },
+    {
+     "date": "FRI NOV 20",
+     "title": "Akvan expected",
+     "sub": "IMD FORECAST",
+     "color": "danger",
+     "big": true,
+     "at": "f3:third"
+    }
+   ],
+   "source": "SOURCE: IMD · AL JAZEERA · BUSINESS STANDARD"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "THIRD IN WEEKS.",
+     "text"
+    ],
+    [
+     "VERY SEVERE AT LANDFALL?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "IMD, SRI LANKA MET DEPT, BUSINESS STANDARD, ODISHA TV, OMMCOM NEWS, AL JAZEERA (SEARCH EXCERPTS)",
+    "NOV 16–17, 2026 · TRACK ILLUSTRATIVE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 82,
+     "lat": 14,
+     "R": 700
+    },
+    {
+     "at": "cta +1",
+     "lon": 84,
+     "lat": 15,
+     "R": 900
+    },
+    {
+     "at": "end",
+     "lon": 84,
+     "lat": 15,
+     "R": 900
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      86.9,
+      11.5
+     ],
+     "color": "accent"
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Cyclone Akvan Takes Aim at India's Andhra Coast #shorts",
+  "description": "Cyclone Akvan formed over the Bay of Bengal on November 16. India's weather department expects it to become a very severe cyclonic storm and cross the Andhra Pradesh coast between Nellore and Tuni around November 20 — the third cyclone on that coast in weeks, after Arnab and Murasu. Odisha aims to evacuate about 204,000 people.\n\nSources: India Meteorological Department, Sri Lanka Department of Meteorology (via Newswire, Ada Derana), Business Standard, india.com, Odisha TV, Ommcom News, Al Jazeera (based on search-result excerpts). The storm track on the map is illustrative and positions are approximate.\n\n#climate #weather #cyclone #india",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "Cyclone Akvan",
+   "Andhra Pradesh",
+   "Odisha",
+   "India",
+   "cyclone",
+   "Bay of Bengal"
+  ],
+  "cover": "f2:Tuni +1"
+ },
+ "thumbnail": {
+  "at": "f2:hour. +0.3",
+  "number": "204,000",
+  "numberColor": "accent",
+  "source": "ODISHA EVACUATION TARGET · LOCAL MEDIA · NOV 17",
+  "focus": [
+   85.6,
+   12.8
+  ],
+  "lines": [
+   [
+    "TO EVACUATE",
+    "text"
+   ],
+   [
+    "3RD IN WEEKS",
+    "danger"
+   ]
+  ],
+  "zoom": 1.5
+ }
+}
