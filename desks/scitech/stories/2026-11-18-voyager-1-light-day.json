@@ -1,0 +1,275 @@
+{
+ "id": "2026-11-18-voyager-1-light-day",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Voyager 1 is now a full light-day from Earth. Can it keep calling home?"
+  },
+  {
+   "id": "f1",
+   "text": "NASA estimated the crossing early Wednesday, Eastern time. At about sixteen billion miles, or twenty-six billion kilometers, it is the farthest human-made object ever. Even the proof is slow: its next signal needs about a day to reach Earth."
+  },
+  {
+   "id": "f2",
+   "text": "Launched in September nineteen seventy-seven, it gained speed swinging past Jupiter and Saturn. Now a command takes a day to arrive, and the reply another day. Project manager Suzanne Dodd puts it simply: send a hello, then wait two days for an answer."
+  },
+  {
+   "id": "f3",
+   "text": "The real limit is power. Its plutonium generators started at about four hundred seventy watts and weaken every year. Only two of its ten science instruments still run. NASA has said engineering data may last until about twenty thirty-six."
+  },
+  {
+   "id": "cta",
+   "text": "Will Voyager 1 still send science data in twenty thirty? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE MILESTONE",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "THE JOURNEY",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "THE LIMIT",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "oil"
+  }
+ ],
+ "upload": {
+  "title": "Voyager 1 Is Now a Full Light-Day From Earth #shorts",
+  "description": "NASA's Voyager 1, launched in September 1977, reached an estimated distance of one light-day from Earth early on November 18, 2026 (about 16 billion miles or 26 billion kilometers), the first human-made object to get this far. A radio command now takes about a day to reach the probe and the reply another day. Its plutonium power supply keeps weakening; only two of its ten science instruments still operate.\n\nSources: NASA / JPL Voyager mission, NPR, CNN, CBS News, Reuters via U.S. News, Scientific American, Nature, Space.com, Live Science, The Conversation.\n\n#science #space #voyager1 #nasa #interstellar",
+  "tags": [
+   "science",
+   "news",
+   "space",
+   "Voyager 1",
+   "NASA",
+   "JPL",
+   "light-day",
+   "interstellar space",
+   "deep space",
+   "space exploration"
+  ],
+  "cover": "f1:sixteen +0.8"
+ },
+ "thumbnail": {
+  "at": "hook:home? -0.3",
+  "focus": [
+   -118.17,
+   34.2
+  ],
+  "zoom": 1.15,
+  "number": "16 BN MILES",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "A DAY TO SAY HELLO",
+    "text"
+   ],
+   [
+    "HOW LONG LEFT?",
+    "accent"
+   ]
+  ],
+  "source": "VOYAGER 1 · NOV 18 · PER NASA ESTIMATE"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "view": [
+    {
+     "at": 0,
+     "lon": -150,
+     "lat": 20,
+     "R": 380
+    },
+    {
+     "at": 4.0,
+     "lon": -118.2,
+     "lat": 34.2,
+     "R": 520
+    }
+   ],
+   "chip": {
+    "text": "NASA · JPL · VOYAGER 1 · NOV 18",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      -118.17,
+      34.2
+     ],
+     "color": "accent",
+     "at": "hook:light-day",
+     "label": "MISSION CONTROL",
+     "sub": "NASA JPL · PASADENA",
+     "dx": -40,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:full",
+    "lines": [
+     [
+      "1 LIGHT-DAY",
+      "text",
+      104
+     ],
+     [
+      "FROM EARTH",
+      "accent",
+      84
+     ]
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.1",
+   "label": "DISTANCE FROM EARTH",
+   "sublabel": "VOYAGER 1 · NOV 18, 2026",
+   "icon": "eye",
+   "color": "accent",
+   "value": 16,
+   "start": 0,
+   "prefix": "≈",
+   "suffix": " BILLION MI",
+   "decimals": 0,
+   "at": "f1 +0.3",
+   "doneAt": "f1:sixteen +0.8",
+   "note": "≈26 BILLION KM · FARTHEST HUMAN-MADE OBJECT",
+   "source": "SOURCE: NASA ESTIMATE · NPR · CNN · SCIENTIFIC AMERICAN"
+  },
+  {
+   "type": "timeline",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "49 YEARS OUTBOUND",
+   "color": "violet",
+   "items": [
+    {
+     "date": "SEP 1977",
+     "title": "LAUNCH FROM CAPE CANAVERAL",
+     "color": "info",
+     "at": "f2 +0.3"
+    },
+    {
+     "date": "1979 · 1980",
+     "title": "JUPITER, THEN SATURN",
+     "sub": "GRAVITY ASSISTS ADD SPEED",
+     "color": "violet",
+     "at": "f2:Jupiter"
+    },
+    {
+     "date": "2012",
+     "title": "ENTERS INTERSTELLAR SPACE",
+     "sub": "PER NASA",
+     "color": "violet",
+     "at": "f2:command"
+    },
+    {
+     "date": "NOV 18, 2026",
+     "title": "ONE LIGHT-DAY AWAY",
+     "sub": "COMMAND 1 DAY · REPLY 1 DAY",
+     "color": "accent",
+     "big": true,
+     "at": "f2:reply"
+    }
+   ],
+   "source": "SOURCES: NASA JPL · NPR · CBS NEWS"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "color": "oil",
+   "items": [
+    {
+     "icon": "bolt",
+     "big": "≈470 WATTS",
+     "text": "PLUTONIUM POWER AT LAUNCH · FALLING EVERY YEAR",
+     "color": "oil",
+     "at": "f3:plutonium"
+    },
+    {
+     "icon": "eye",
+     "big": "2 OF 10",
+     "text": "SCIENCE INSTRUMENTS STILL ON · MAGNETOMETER, PLASMA WAVES",
+     "color": "info",
+     "at": "f3:Only"
+    },
+    {
+     "icon": "flag",
+     "big": "≈2036",
+     "text": "ENGINEERING DATA MAY LAST UNTIL · PER NASA",
+     "color": "accent",
+     "at": "f3:engineering"
+    }
+   ],
+   "source": "SOURCES: NASA · SCIENTIFIC AMERICAN · LIVE SCIENCE"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -150,
+     "lat": 20,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -118.2,
+     "lat": 34.2,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": -110,
+     "lat": 32,
+     "R": 500
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -118.17,
+      34.2
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "STILL SENDING SCIENCE",
+     "text"
+    ],
+    [
+     "IN 2030?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "NASA JPL · NPR · CNN · CBS NEWS · REUTERS · SCIENTIFIC AMERICAN · NATURE · SPACE.COM",
+    "CROSSING TIME IS A NASA ESTIMATE"
+   ]
+  }
+ ]
+}
