@@ -1,0 +1,448 @@
+{
+ "id": "2026-11-18-cop31-opec-electrification",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Seventy-five countries back a new energy goal. Why does OPEC say it needs oil?"
+  },
+  {
+   "id": "f1",
+   "text": "At COP thirty-one in Antalya, Turkey, the hosts said on Wednesday that seventy-five countries now back their electricity pledge, Anadolu reports. The goal: electricity should cover thirty-five percent of the world's final energy use by twenty thirty-five. Reuters puts today's share at about twenty percent."
+  },
+  {
+   "id": "f2",
+   "text": "OPEC's secretary general, Haitham Al Ghais, told the talks that electrification depends heavily on oil. Bigger power grids, he said, need more petroleum-based products and diesel-powered heavy machinery. He called electrification no cure-all, Reuters reports."
+  },
+  {
+   "id": "f3",
+   "text": "Critics point out that the pledge does not require the extra power to be clean. Negotiators must still decide whether a call to phase out fossil fuels stays in the deal. Talks are set to end Friday, but could run longer."
+  },
+  {
+   "id": "cta",
+   "text": "Will a fossil fuel phase-out make the final deal? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE PLEDGE",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE PUSHBACK",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE CATCH",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 60,
+     "lat": 15,
+     "R": 320
+    },
+    {
+     "at": 3.6,
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 560
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "TUR",
+     "color": "accent",
+     "at": 0.4,
+     "alpha": 0.45
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "color": "accent",
+     "at": 0.5,
+     "label": "ANTALYA",
+     "big": true
+    }
+   ],
+   "chip": {
+    "text": "COP31 · ELECTRICITY PLEDGE",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:back",
+    "lines": [
+     [
+      "75 COUNTRIES",
+      "text",
+      110
+     ],
+     [
+      "OPEC: OIL?",
+      "accent",
+      100
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    30,
+    38
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 30.7,
+     "lat": 36.9,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.5",
+     "lon": 30.9,
+     "lat": 37.6,
+     "dist": 18,
+     "pitch": 50,
+     "yaw": -14,
+     "oy": 210
+    },
+    {
+     "at": "f2",
+     "lon": 40,
+     "lat": 30,
+     "dist": 80,
+     "pitch": 36,
+     "yaw": 10,
+     "oy": 180
+    },
+    {
+     "at": "f3",
+     "lon": 31,
+     "lat": 38,
+     "dist": 50,
+     "pitch": 44,
+     "yaw": -6,
+     "oy": 200
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 31,
+     "lat": 37.5,
+     "dist": 30,
+     "pitch": 48,
+     "yaw": 4,
+     "oy": 200
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "TUR",
+     "color": "accent",
+     "alpha": 0.3,
+     "glow": true,
+     "at": "f1 +0.4",
+     "until": "f2"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1 +0.6",
+     "label": {
+      "text": "ANTALYA",
+      "sub": "COP31 HOST · TÜRKIYE",
+      "dx": 160,
+      "dy": -170,
+      "until": "f1:goal:"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "LOCATIONS SHOWN FOR ORIENTATION",
+     "y": 1170,
+     "at": "f1 +1",
+     "until": "f1:goal: -0.3"
+    },
+    {
+     "kind": "note",
+     "text": "LOCATIONS SHOWN FOR ORIENTATION",
+     "y": 1170,
+     "at": "f2",
+     "until": "f2:Bigger -0.3"
+    },
+    {
+     "kind": "tint",
+     "iso": "SAU",
+     "color": "danger",
+     "alpha": 0.25,
+     "at": "f2",
+     "until": "f3"
+    },
+    {
+     "kind": "tint",
+     "iso": "IRQ",
+     "color": "danger",
+     "alpha": 0.25,
+     "at": "f2",
+     "until": "f3"
+    },
+    {
+     "kind": "tint",
+     "iso": "KWT",
+     "color": "danger",
+     "alpha": 0.25,
+     "at": "f2",
+     "until": "f3"
+    },
+    {
+     "kind": "tint",
+     "iso": "ARE",
+     "color": "danger",
+     "alpha": 0.25,
+     "at": "f2",
+     "until": "f3"
+    },
+    {
+     "kind": "tint",
+     "iso": "IRN",
+     "color": "danger",
+     "alpha": 0.25,
+     "at": "f2",
+     "until": "f3"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      45,
+      24
+     ],
+     "text": "OPEC GULF MEMBERS",
+     "sub": "SHOWN FOR ORIENTATION",
+     "color": "danger",
+     "dx": 60,
+     "dy": 150,
+     "at": "f2 +0.4",
+     "until": "f2:Al"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      130,
+      540,
+      820
+     ],
+     "kicker": "HAITHAM AL GHAIS · OPEC SECRETARY GENERAL",
+     "text": "Electrification depends heavily on oil (paraphrased, via Reuters)",
+     "color": "danger",
+     "at": "f2:Al",
+     "until": "f2:Bigger"
+    },
+    {
+     "kind": "stamp",
+     "text": "CLEAN POWER NOT REQUIRED",
+     "icon": "bolt",
+     "color": "info",
+     "screen": [
+      540,
+      520
+     ],
+     "note": "CRITICS · PER REUTERS",
+     "at": "f3:require",
+     "until": "f3:Negotiators"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      130,
+      470,
+      820
+     ],
+     "title": "STILL OPEN",
+     "color": "accent",
+     "rows": [
+      {
+       "icon": "flame",
+       "text": "\"PHASE OUT FOSSIL FUELS\" · IN OR OUT?",
+       "at": "f3:phase"
+      },
+      {
+       "icon": "flag",
+       "text": "TALKS SET TO END FRI NOV 20",
+       "at": "f3:Talks"
+      }
+     ],
+     "at": "f3:Negotiators",
+     "until": "cta -0.1"
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "from": "f1:goal: -0.2",
+   "to": "f1$ +0.3",
+   "label": "ELECTRICITY'S SHARE OF FINAL ENERGY USE",
+   "sublabel": "WORLD · TODAY ≈20% PER REUTERS · 75 COUNTRIES BACK THE GOAL",
+   "color": "accent",
+   "bars": [
+    {
+     "label": "TODAY",
+     "value": 20,
+     "display": "≈20%",
+     "color": "neutral",
+     "at": "f1:Reuters",
+     "dur": 1.0
+    },
+    {
+     "label": "2035 GOAL",
+     "value": 35,
+     "display": "35%",
+     "color": "accent",
+     "at": "f1:thirty-five",
+     "dur": 1.0
+    }
+   ],
+   "source": "SOURCES: COP31 PRESIDENCY VIA ANADOLU · REUTERS · NOV 18"
+  },
+  {
+   "type": "chain",
+   "from": "f2:Bigger -0.2",
+   "to": "f2$ +0.3",
+   "label": "OPEC'S ARGUMENT",
+   "color": "danger",
+   "steps": [
+    {
+     "icon": "bolt",
+     "title": "BIGGER POWER GRIDS",
+     "sub": "MORE ELECTRIFICATION",
+     "color": "info",
+     "at": "f2:Bigger"
+    },
+    {
+     "icon": "barrel",
+     "title": "PETROLEUM PRODUCTS",
+     "sub": "AND DIESEL MACHINERY",
+     "color": "oil",
+     "at": "f2:petroleum-based"
+    },
+    {
+     "icon": "x",
+     "title": "\"NO CURE-ALL\"",
+     "sub": "AL GHAIS, PARAPHRASED",
+     "color": "danger",
+     "at": "f2:cure-all"
+    }
+   ],
+   "source": "SOURCE: OPEC SECRETARY GENERAL VIA REUTERS · NOV 18"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "75 IN. OPEC PUSHES BACK.",
+     "text"
+    ],
+    [
+     "A PHASE-OUT?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REUTERS VIA AL-MONITOR · YAHOO · ANADOLU VIA HÜRRIYET DAILY NEWS · TRT WORLD",
+    "SEARCH EXCERPTS · MAP FOR ORIENTATION"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": 40,
+     "lat": 34,
+     "R": 600
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "OPEC Tells COP31 Electrification Still Needs Oil #shorts",
+  "description": "At COP31 in Antalya, Türkiye, the hosts said on Wednesday that 75 countries back their pledge to raise electricity's share of global final energy use to 35% by 2035 (Anadolu); Reuters puts today's share at about 20%. OPEC Secretary General Haitham Al Ghais told the talks that electrification depends heavily on oil, as bigger grids need petroleum-based products and diesel-powered machinery. Critics note the pledge does not require the extra power to be clean; talks are set to end Friday.\n\nSources: Reuters (via Al-Monitor, Yahoo News, MarketScreener), Anadolu Agency (via Hürriyet Daily News, Qazinform), TRT World (based on search-result excerpts). Map locations and country highlights are for orientation.\n\n#climate #cop31 #electrification #opec #energy",
+  "tags": [
+   "climate",
+   "weather",
+   "news",
+   "COP31",
+   "Antalya",
+   "Türkiye",
+   "OPEC",
+   "electrification",
+   "35x35",
+   "fossil fuels",
+   "climate summit",
+   "energy transition"
+  ],
+  "cover": "f1:thirty-five +1"
+ },
+ "thumbnail": {
+  "at": "f1 +2.2",
+  "focus": [
+   30.7,
+   36.9
+  ],
+  "zoom": 1.15,
+  "number": "75",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "COUNTRIES BACK",
+    "text"
+   ],
+   [
+    "35% BY 2035",
+    "accent"
+   ]
+  ],
+  "source": "NOV 18 · COP31 HOSTS VIA ANADOLU"
+ }
+}
