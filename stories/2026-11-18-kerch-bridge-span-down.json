@@ -1,0 +1,579 @@
+{
+ "id": "2026-11-18-kerch-bridge-span-down",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Part of Russia's bridge to Crimea is in the sea. Why does it matter?"
+  },
+  {
+   "id": "f1",
+   "text": "Ukraine struck the Kerch Bridge two nights in a row. Footage geolocated by CNN and NBC News shows a road span collapsed into the water. Ukraine's security service says a steel arch was destroyed and the rail section damaged. Zelensky called it unprecedented."
+  },
+  {
+   "id": "f2",
+   "text": "The bridge is about nineteen kilometres long, the main land link from Russia to occupied Crimea, and a key supply route for Russian forces. Russia halted all traffic. Vedomosti reports one rail track has reopened. Moscow opened a terrorism case."
+  },
+  {
+   "id": "f3",
+   "text": "Kyiv was hit too. Officials say missiles and drones struck its North and South bridges, killing at least two. Russia claims it downed one thousand four hundred forty-one drones overnight, a record. On Thursday, Putin meets Trump and Xi."
+  },
+  {
+   "id": "cta",
+   "text": "Will the Kerch Bridge fully reopen before the new year? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "SPAN DOWN",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "SUPPLY LINK",
+   "seg": "f2",
+   "color": "oil"
+  },
+  {
+   "n": "03",
+   "name": "KYIV HIT TOO",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Ukraine Drops Part of the Kerch Bridge Into the Sea #shorts",
+  "description": "Ukraine struck the Kerch (Crimean) Bridge, the road and rail link between Russia and occupied Crimea, on the nights of November 16 and 17, 2026. Footage geolocated by CNN and NBC News shows a section of the road bridge collapsed into the water, while the parallel rail bridge appeared to be still standing. Ukraine's SBU security service said one metal arch and the road span beneath it were destroyed and the railway section was preliminarily damaged. President Zelensky called it an unprecedented operation in response to Russian attacks on Ukraine's infrastructure. Russia's Transport Ministry suspended all train and road traffic; Vedomosti reported that rail traffic resumed on one track while repairs continued. Russia's Investigative Committee opened a terrorism case. The bridge is about 19 km (nearly 12 miles) long. In Kyiv, Russian missiles and drones damaged the North and South bridges, killing at least two people, according to Kyiv officials. Russia's Defence Ministry claimed it downed 1,441 Ukrainian drones overnight, a record; this figure could not be independently verified. Putin, Trump and Xi are due to meet in Shenzhen, China, on Thursday, November 19. The extent of the damage to the rail section is not independently confirmed.\n\nSources:\nCNN, Nov 17, 2026: Ukraine strike collapses section of bridge to occupied Crimea in blow to Putin\nNBC News, Nov 17, 2026: Putin's Kerch Bridge to Crimea partially destroyed by Ukraine strike\nNPR, Nov 17, 2026: Ukraine strikes major Russian bridge with drones and missiles as aerial attacks escalate\nABC News, Nov 17, 2026: Ukraine launches 'unprecedented' strike on Crimean bridge, Zelenskyy says\nAl Jazeera, Nov 17, 2026: Ukraine drone attack kills two in Crimea as Kyiv targets bridge to Russia\nTASS, Nov 17, 2026: What we know about aftermath of Ukrainian attacks on Crimean Bridge\nMilitary.com, Nov 17, 2026: Ukraine strikes section of Russia's Crimean Bridge two days before Putin meets Trump, Xi\n\n#geopolitics #Ukraine #Russia #Crimea",
+  "tags": [
+   "geopolitics",
+   "Ukraine",
+   "Russia",
+   "Crimea",
+   "Kerch Bridge",
+   "Crimean Bridge",
+   "Kyiv",
+   "drones",
+   "Zelensky",
+   "world news"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:collapsed +0.6",
+  "focus": [
+   36.56,
+   45.29
+  ],
+  "zoom": 1.35,
+  "kicker": "KERCH STRAIT",
+  "kickerColor": "danger",
+  "lines": [
+   [
+    "ROAD SPAN DOWN",
+    "text"
+   ],
+   [
+    "CRIMEA CUT?",
+    "accent"
+   ]
+  ],
+  "source": "PER CNN, NBC GEOLOCATION · NOV 17, 2026"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 34,
+     "lat": 47,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": 36.4,
+     "lat": 45.6,
+     "R": 520
+    }
+   ],
+   "chip": {
+    "text": "CRIMEA · NOV 18, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "UKR",
+     "color": "info",
+     "at": "hook:Part"
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.45,
+     "at": "hook:Russia's"
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      36.56,
+      45.29
+     ],
+     "color": "danger",
+     "at": "hook:bridge",
+     "label": "KERCH BRIDGE",
+     "sub": "SPAN COLLAPSED · PER GEOLOCATION",
+     "dx": 60,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:bridge",
+    "lines": [
+     [
+      "SPAN IN THE SEA",
+      "danger",
+      100
+     ],
+     [
+      "KERCH BRIDGE",
+      "text",
+      70
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:Why",
+    "icon": "bolt",
+    "iconColor": "accent",
+    "color": "accent",
+    "kicker": "CRIMEA",
+    "title": "WHY IT MATTERS",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    35.5,
+    46.5
+   ],
+   "detail": [
+    "UKR",
+    "RUS"
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 36.4,
+     "lat": 45.6,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": 36.5,
+     "lat": 45.3,
+     "dist": 14,
+     "pitch": 46,
+     "yaw": -6,
+     "oy": 190
+    },
+    {
+     "at": "f1:security -0.3",
+     "lon": 36.55,
+     "lat": 45.3,
+     "dist": 8,
+     "pitch": 50,
+     "yaw": -4,
+     "oy": 190
+    },
+    {
+     "at": "f1:Zelensky",
+     "lon": 36.55,
+     "lat": 45.3,
+     "dist": 9,
+     "pitch": 50,
+     "yaw": 0,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 36.6,
+     "lat": 45.7,
+     "dist": 13,
+     "pitch": 44,
+     "yaw": 3,
+     "oy": 190
+    },
+    {
+     "at": "f2:halted -0.6",
+     "lon": 36.3,
+     "lat": 45.9,
+     "dist": 15,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 190
+    },
+    {
+     "at": "f2$",
+     "lon": 36.3,
+     "lat": 45.9,
+     "dist": 16,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 190
+    },
+    {
+     "at": "f3 +1.2",
+     "lon": 30.5,
+     "lat": 50.4,
+     "dist": 22,
+     "pitch": 46,
+     "yaw": -3,
+     "oy": 190
+    },
+    {
+     "at": "f3:claims -0.5",
+     "lon": 34,
+     "lat": 50.5,
+     "dist": 40,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 33.5,
+     "lat": 48.5,
+     "dist": 60,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.45,
+     "fill": 0.1,
+     "at": "f1"
+    },
+    {
+     "kind": "tint",
+     "iso": "UA-43",
+     "color": "danger",
+     "alpha": 0.55,
+     "fill": 0.16,
+     "hatch": true,
+     "at": "f1"
+    },
+    {
+     "kind": "tint",
+     "iso": "UA-40",
+     "color": "danger",
+     "alpha": 0.55,
+     "fill": 0.16,
+     "hatch": true,
+     "at": "f1"
+    },
+    {
+     "kind": "tint",
+     "iso": "RU-KDA",
+     "color": "danger",
+     "alpha": 0.4,
+     "fill": 0.08,
+     "at": "f1"
+    },
+    {
+     "kind": "route",
+     "path": [
+      [
+       36.505,
+       45.318
+      ],
+      [
+       36.56,
+       45.29
+      ],
+      [
+       36.66,
+       45.222
+      ]
+     ],
+     "style": "solid",
+     "color": "oil",
+     "width": 7,
+     "at": "f1"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      36.535,
+      45.305
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f1:collapsed",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "ROAD SPAN COLLAPSED",
+      "sub": "PER CNN, NBC GEOLOCATION",
+      "dx": 40,
+      "dy": -190
+     }
+    },
+    {
+     "kind": "arc",
+     "from": "Kherson",
+     "to": [
+      36.535,
+      45.305
+     ],
+     "color": "info",
+     "height": 0.3,
+     "at": "f1:struck",
+     "until": "f1:Footage"
+    },
+    {
+     "kind": "stamp",
+     "text": "2 NIGHTS",
+     "icon": "plane",
+     "color": "danger",
+     "screen": [
+      540,
+      1110
+     ],
+     "at": "f1:two",
+     "until": "f1:Footage -0.2",
+     "note": "NOV 16 AND 17 · DRONES, MISSILES PER REPORTS"
+    },
+    {
+     "kind": "note",
+     "text": "STEEL ARCH DESTROYED · RAIL DAMAGED",
+     "sub": "CLAIM BY UKRAINE'S SBU",
+     "y": 1110,
+     "at": "f1:security",
+     "until": "f1:Zelensky -0.2"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      90,
+      900,
+      620
+     ],
+     "kicker": "ZELENSKY",
+     "text": "\"UNPRECEDENTED\"",
+     "color": "info",
+     "at": "f1:Zelensky",
+     "until": "f2 -0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      36.58,
+      45.27
+     ],
+     "text": "≈ 19 KM",
+     "sub": "ROAD + RAIL BRIDGE",
+     "color": "oil",
+     "dx": 150,
+     "dy": -160,
+     "at": "f2:nineteen",
+     "until": "f2:halted -0.2"
+    },
+    {
+     "kind": "route",
+     "path": [
+      [
+       38.97,
+       45.04
+      ],
+      [
+       36.66,
+       45.222
+      ],
+      [
+       36.505,
+       45.318
+      ],
+      [
+       35.38,
+       45.05
+      ],
+      [
+       34.39,
+       45.71
+      ],
+      [
+       35.38,
+       46.85
+      ]
+     ],
+     "style": "flow",
+     "color": "oil",
+     "width": 5,
+     "at": "f2:supply",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "SUPPLY ROUTE",
+      "sub": "TO RUSSIAN FORCES · PER REPORTS",
+      "loc": [
+       34.39,
+       45.71
+      ],
+      "dx": -300,
+      "dy": -230,
+      "at": "f2:supply",
+      "until": "f3 -0.2"
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "TRAFFIC HALTED",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      540,
+      1110
+     ],
+     "at": "f2:halted",
+     "until": "f2:Vedomosti -0.2",
+     "note": "PER RUSSIA'S TRANSPORT MINISTRY"
+    },
+    {
+     "kind": "note",
+     "text": "1 RAIL TRACK REOPENED",
+     "sub": "PER VEDOMOSTI · TERRORISM CASE OPENED",
+     "y": 1110,
+     "at": "f2:Vedomosti",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "marker",
+     "loc": "Kyiv",
+     "style": "x",
+     "color": "danger",
+     "at": "f3:Kyiv",
+     "until": "cta -0.2",
+     "label": {
+      "text": "NORTH + SOUTH BRIDGES",
+      "sub": "AT LEAST 2 KILLED · PER OFFICIALS",
+      "dx": 50,
+      "dy": -150
+     }
+    },
+    {
+     "kind": "arc",
+     "from": [
+      39.7,
+      47.2
+     ],
+     "to": "Kyiv",
+     "color": "danger",
+     "height": 0.35,
+     "at": "f3:missiles",
+     "until": "f3:claims"
+    },
+    {
+     "kind": "stamp",
+     "text": "1,441 DRONES",
+     "icon": "plane",
+     "color": "oil",
+     "screen": [
+      540,
+      1110
+     ],
+     "at": "f3:thousand",
+     "until": "f3:Thursday -0.2",
+     "note": "UKRAINIAN DRONES CLAIMED DOWNED · RUSSIAN MOD"
+    },
+    {
+     "kind": "callout",
+     "loc": "Kyiv",
+     "place": "SHENZHEN · THU",
+     "icon": "flag",
+     "screen": [
+      790,
+      470
+     ],
+     "at": "f3:Thursday",
+     "until": "cta -0.2"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 36,
+     "lat": 46.5,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 35,
+     "lat": 47,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": 35.5,
+     "lat": 47,
+     "R": 520
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.7
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.45
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      36.56,
+      45.29
+     ],
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "BRIDGE FULLY OPEN",
+     "text"
+    ],
+    [
+     "BY NEW YEAR?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: CNN, NBC NEWS, NPR, ABC NEWS, AL JAZEERA, TASS",
+    "NOV 16–17, 2026"
+   ]
+  }
+ ]
+}
