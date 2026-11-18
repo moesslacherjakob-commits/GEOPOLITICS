@@ -16,8 +16,10 @@ Evergreen questions behind the news. Pick one that ties to this week's headlines
 - Kashmir: why two nuclear powers keep clashing over one valley
 - Venezuela, Guyana and the Essequibo oil dispute
 - The Panama Canal: drought, China and Washington's pressure
+- Nuclear arms control after New START: can the US, Russia and China agree on limits? (ties to the Shenzhen summit)
 
 ## Used
 - 2026-10-28: The Strait of Hormuz explainer (used)
 - 2026-11-04: Why Russia keeps hitting Ukraine's power grid (used)
 - 2026-11-11: Who are the Houthis? Yemen's rebels and the Red Sea (used)
+- 2026-11-18: Why Ukraine keeps hitting the Kerch Bridge to Crimea (used)
