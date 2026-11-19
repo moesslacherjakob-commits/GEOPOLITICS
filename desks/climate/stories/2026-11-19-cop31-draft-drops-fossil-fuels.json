@@ -1,0 +1,394 @@
+{
+ "id": "2026-11-19-cop31-draft-drops-fossil-fuels",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "The draft climate deal just shrank by half. What happened to fossil fuels?"
+  },
+  {
+   "id": "f1",
+   "text": "At COP thirty-one in Antalya, Turkey, a revised deal text came out Thursday. Reuters reports it cut both of Monday's references to fossil fuels and limiting their use. Australian media report the draft shrank from eighteen pages to nine."
+  },
+  {
+   "id": "f2",
+   "text": "Also gone, per Reuters: a target of one hundred twenty billion dollars to help poorer countries adapt. What stayed is the host's goal for electricity to cover thirty-five percent of world energy use by twenty thirty-five, plus a call to scale up carbon removal."
+  },
+  {
+   "id": "f3",
+   "text": "Mohamed Adow of Power Shift Africa said the text has gone backwards, AFP reports. Greenpeace warned carbon removal could let producers keep expanding. Talks chief Chris Bowen said it holds the strongest terms that could win approval. Talks are set to end Friday."
+  },
+  {
+   "id": "cta",
+   "text": "Will fossil fuels return in the final deal? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE CUT",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "WHAT'S LEFT",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE BACKLASH",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 10,
+     "lat": 30,
+     "R": 320
+    },
+    {
+     "at": 3.6,
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 560
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "TUR",
+     "color": "accent",
+     "at": 0.4,
+     "alpha": 0.45
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "color": "accent",
+     "at": 0.5,
+     "label": "ANTALYA",
+     "big": true
+    }
+   ],
+   "chip": {
+    "text": "COP31 · REVISED DRAFT",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:deal",
+    "lines": [
+     [
+      "18 PAGES → 9",
+      "text",
+      110
+     ],
+     [
+      "FOSSIL FUELS?",
+      "accent",
+      100
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    30,
+    38
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 30.7,
+     "lat": 36.9,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.5",
+     "lon": 30.8,
+     "lat": 37.4,
+     "dist": 14,
+     "pitch": 52,
+     "yaw": 18,
+     "oy": 220
+    },
+    {
+     "at": "f2",
+     "lon": 30.7,
+     "lat": 37.2,
+     "dist": 26,
+     "pitch": 40,
+     "yaw": -20,
+     "oy": 200
+    },
+    {
+     "at": "f3",
+     "lon": 32,
+     "lat": 38.5,
+     "dist": 60,
+     "pitch": 46,
+     "yaw": 8,
+     "oy": 200
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 30.7,
+     "lat": 37,
+     "dist": 34,
+     "pitch": 50,
+     "yaw": -4,
+     "oy": 200
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "TUR",
+     "color": "accent",
+     "alpha": 0.28,
+     "glow": true,
+     "at": "f1 +0.4"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1 +0.6",
+     "label": {
+      "text": "ANTALYA",
+      "sub": "COP31 VENUE · TÜRKIYE",
+      "dx": 230,
+      "dy": -150,
+      "until": "f1:Reuters"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "LOCATION SHOWN FOR ORIENTATION",
+     "y": 1170,
+     "at": "f1 +1",
+     "until": "f1:Reuters -0.3"
+    },
+    {
+     "kind": "stamp",
+     "text": "FOSSIL FUELS: DELETED",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      540,
+      560
+     ],
+     "note": "BOTH REFERENCES CUT · PER REUTERS",
+     "at": "f1:cut",
+     "until": "f1:Australian -0.2"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      130,
+      460,
+      820
+     ],
+     "title": "THE REACTIONS",
+     "color": "info",
+     "rows": [
+      {
+       "icon": "flame",
+       "text": "GREENPEACE: A DOOR FOR MORE OUTPUT",
+       "at": "f3:Greenpeace"
+      },
+      {
+       "icon": "people",
+       "text": "BOWEN: STRONGEST TERMS THAT CAN PASS",
+       "at": "f3:Bowen"
+      },
+      {
+       "icon": "flag",
+       "text": "TALKS SET TO END FRI NOV 20",
+       "at": "f3:Friday"
+      }
+     ],
+     "at": "f3:Greenpeace -0.2",
+     "until": "cta -0.1"
+    }
+   ]
+  },
+  {
+   "type": "scale",
+   "from": "f1:Australian -0.2",
+   "to": "f1$ +0.3",
+   "label": "THE DRAFT DEAL TEXT",
+   "sublabel": "COP31 COVER DECISION · PAGES",
+   "color": "danger",
+   "items": [
+    {
+     "name": "MONDAY DRAFT",
+     "value": 18,
+     "display": "18 PAGES",
+     "color": "neutral",
+     "at": "f1:eighteen"
+    },
+    {
+     "name": "THURSDAY DRAFT",
+     "value": 9,
+     "display": "9 PAGES",
+     "color": "danger",
+     "at": "f1:nine"
+    }
+   ],
+   "note": "NOT EXPECTED TO BE THE FINAL TEXT",
+   "source": "SOURCE: AUSTRALIAN MEDIA VIA YAHOO NEWS AU · NOV 19"
+  },
+  {
+   "type": "facts",
+   "from": "f2 -0.1",
+   "to": "f2$ +0.3",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "x",
+     "big": "$120 BN",
+     "text": "ADAPTATION FINANCE TARGET · REMOVED",
+     "color": "danger",
+     "at": "f2:Also"
+    },
+    {
+     "icon": "bolt",
+     "big": "35% BY 2035",
+     "text": "ELECTRICITY'S SHARE OF WORLD ENERGY USE · KEPT",
+     "color": "accent",
+     "at": "f2:thirty-five"
+    },
+    {
+     "icon": "check",
+     "big": "CARBON REMOVAL",
+     "text": "CALL TO SCALE IT UP · IN THE TEXT",
+     "color": "info",
+     "at": "f2:carbon"
+    }
+   ],
+   "source": "SOURCE: REUTERS · REVISED COP31 DRAFT · NOV 19"
+  },
+  {
+   "type": "quote",
+   "from": "f3 -0.1",
+   "to": "f3:Greenpeace -0.2",
+   "at": "f3:Adow",
+   "lines": [
+    [
+     "\"THIS NEW TEXT HAS",
+     "text"
+    ],
+    [
+     "GONE BACKWARDS\"",
+     "accent"
+    ]
+   ],
+   "by": "MOHAMED ADOW · POWER SHIFT AFRICA · PER AFP",
+   "color": "info"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "FOSSIL FUELS: OUT.",
+     "text"
+    ],
+    [
+     "BACK IN BY FRIDAY?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REUTERS · AFP · CBC · YAHOO NEWS AU",
+    "SEARCH EXCERPTS · MAP FOR ORIENTATION"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": 20,
+     "lat": 30,
+     "R": 560
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "COP31's New Draft Deletes Fossil Fuels #shorts",
+  "description": "At COP31 in Antalya, Türkiye, negotiators published a revised draft deal on Thursday. Reuters reports it removed both of Monday's references to fossil fuels and limiting their use, as well as a $120 billion adaptation finance target; the text was cut from 18 to 9 pages. The host's goal of electricity covering 35% of world energy use by 2035 and a call to scale up carbon removal stayed. Power Shift Africa's Mohamed Adow said the text \"has gone backwards\" (AFP); talks chief Chris Bowen said it holds the strongest terms that could win approval. Talks are set to end Friday.\n\nSources: Reuters (via Dawn, The Express Tribune, The Globe and Mail, Arab News), AFP (via The New Arab, 24NewsHD), CBC News, Yahoo News Australia (based on search-result excerpts). Map locations are for orientation.\n\n#climate #cop31 #fossilfuels #climatechange #antalya",
+  "tags": [
+   "climate",
+   "weather",
+   "news",
+   "COP31",
+   "Antalya",
+   "Türkiye",
+   "fossil fuels",
+   "climate deal",
+   "draft text",
+   "Chris Bowen",
+   "climate summit",
+   "energy transition"
+  ],
+  "cover": "f2:thirty-five +1"
+ },
+ "thumbnail": {
+  "at": "f1 +2.2",
+  "focus": [
+   30.7,
+   36.9
+  ],
+  "zoom": 1.15,
+  "number": "0",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "FOSSIL FUEL",
+    "text"
+   ],
+   [
+    "MENTIONS LEFT",
+    "accent"
+   ]
+  ],
+  "source": "NOV 19 · REVISED COP31 DRAFT · PER REUTERS"
+ }
+}
