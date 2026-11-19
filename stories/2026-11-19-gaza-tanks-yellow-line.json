@@ -1,0 +1,613 @@
+{
+ "id": "2026-11-19-gaza-tanks-yellow-line",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Israeli tanks just crossed Gaza's ceasefire line. Is the truce over?"
+  },
+  {
+   "id": "f1",
+   "text": "For the first time since the October 2025 ceasefire, Israeli tanks pushed past the so-called Yellow Line in central Gaza. The army and Shin Bet say the target is a tunnel near the Nuseirat and Bureij camps. Families were ordered to leave their homes."
+  },
+  {
+   "id": "f2",
+   "text": "Hamas calls it a flagrant violation. Witnesses say tanks reached Salah al-Din Road, Gaza's main north-south highway. Gaza health authorities say more than sixteen hundred Palestinians have been killed since the ceasefire began. Israel says five of its soldiers died."
+  },
+  {
+   "id": "f3",
+   "text": "Formally, the truce still stands. But a Board of Peace report to the UN Security Council faults both sides: Israel for restricting aid, Hamas for armed activity. Israel's defence minister says troops stay until Hamas is dismantled."
+  },
+  {
+   "id": "cta",
+   "text": "Will the Gaza ceasefire hold into the new year? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "LINE CROSSED",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE TOLL",
+   "seg": "f2",
+   "color": "oil"
+  },
+  {
+   "n": "03",
+   "name": "TRUCE ON PAPER",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "theme": {
+  "accent": "#f2c94c"
+ },
+ "upload": {
+  "title": "Israeli Tanks Push Past Gaza's Yellow Line #shorts",
+  "description": "Israeli tanks advanced west of the so-called Yellow Line in central Gaza on November 18, 2026, in the first such ground push beyond the ceasefire boundary since the truce took effect on October 10, 2025, according to Reuters and AFP. The Israeli military and the Shin Bet security service said the operation targeted a tunnel and Hamas infrastructure near the Nuseirat and Bureij refugee camps, and residents were ordered to leave homes in the area. Witnesses said some tanks reached Salah al-Din Road, Gaza's main north-south highway. Hamas called the operation a flagrant violation of the ceasefire. Gaza health authorities say more than 1,600 Palestinians have been killed since the ceasefire began; the Israeli military says five of its soldiers have been killed in that period. A Board of Peace report to the UN Security Council, seen by Reuters, faulted both sides: it accused Israel of restricting aid and Hamas of continuing armed activity. Israel's Defence Minister Israel Katz has said troops will stay until Hamas is dismantled. The course of the Yellow Line on the map is approximate. Casualty figures could not be independently verified.\n\nSources:\nReuters via NBC News / IBTimes, Nov 18, 2026: Israeli tanks roll into central Gaza in first ground operation since ceasefire began\nAFP via France 24, Nov 18, 2026: Gazans flee shelters as Israeli army launches ground operation beyond Yellow Line\nAl Jazeera, Nov 18, 2026: What does Israel's new ground offensive mean for Palestinians in Gaza?\nTimes of Israel, Nov 18, 2026: IDF launches rare Gaza operation beyond Yellow Line, orders civilians out\nXinhua, Nov 19, 2026: Israel announces ground operation beyond Gaza ceasefire line\n\n#geopolitics #Gaza #Israel #ceasefire",
+  "tags": [
+   "geopolitics",
+   "Gaza",
+   "Israel",
+   "Hamas",
+   "ceasefire",
+   "Yellow Line",
+   "Middle East",
+   "Board of Peace",
+   "Nuseirat",
+   "world news"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:tunnel +0.4",
+  "focus": [
+   34.41,
+   31.44
+  ],
+  "zoom": 1.15,
+  "kicker": "CENTRAL GAZA",
+  "kickerColor": "danger",
+  "lines": [
+   [
+    "FIRST SINCE 2025",
+    "text"
+   ],
+   [
+    "TRUCE OVER?",
+    "accent"
+   ]
+  ],
+  "source": "PER REUTERS, AFP · NOV 18, 2026"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 36,
+     "lat": 30,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": 34.45,
+     "lat": 31.45,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "GAZA · NOV 19, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "ISR",
+     "color": "info",
+     "alpha": 0.5,
+     "at": "hook:Israeli"
+    },
+    {
+     "iso": "PSE",
+     "color": "danger",
+     "at": "hook:Gaza's"
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      34.41,
+      31.44
+     ],
+     "color": "danger",
+     "at": "hook:crossed",
+     "label": "CENTRAL GAZA",
+     "sub": "TANKS PAST CEASEFIRE LINE",
+     "dx": 60,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:crossed",
+    "lines": [
+     [
+      "LINE CROSSED",
+      "danger",
+      100
+     ],
+     [
+      "GAZA CEASEFIRE",
+      "text",
+      70
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:Is",
+    "icon": "shield",
+    "iconColor": "accent",
+    "color": "accent",
+    "kicker": "GAZA",
+    "title": "TRUCE OVER?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    34.6,
+    31.5
+   ],
+   "detail": [
+    "PSE"
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 34.45,
+     "lat": 31.45,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.5",
+     "lon": 34.4,
+     "lat": 31.42,
+     "dist": 2.2,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 190
+    },
+    {
+     "at": "f1:Yellow -0.3",
+     "lon": 34.42,
+     "lat": 31.445,
+     "dist": 1.0,
+     "pitch": 48,
+     "yaw": 0,
+     "oy": 190
+    },
+    {
+     "at": "f1:tunnel",
+     "lon": 34.415,
+     "lat": 31.445,
+     "dist": 0.65,
+     "pitch": 50,
+     "yaw": -4,
+     "oy": 190
+    },
+    {
+     "at": "f1$",
+     "lon": 34.415,
+     "lat": 31.445,
+     "dist": 0.75,
+     "pitch": 50,
+     "yaw": 0,
+     "oy": 190
+    },
+    {
+     "at": "f2:Salah -0.5",
+     "lon": 34.4,
+     "lat": 31.44,
+     "dist": 1.1,
+     "pitch": 46,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "f2:health -0.3",
+     "lon": 34.39,
+     "lat": 31.42,
+     "dist": 2.4,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 190
+    },
+    {
+     "at": "f3",
+     "lon": 34.42,
+     "lat": 31.43,
+     "dist": 3.0,
+     "pitch": 40,
+     "yaw": 0,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 34.6,
+     "lat": 31.5,
+     "dist": 8,
+     "pitch": 40,
+     "yaw": 0,
+     "oy": 190
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "ISR",
+     "color": "info",
+     "alpha": 0.4,
+     "fill": 0.06,
+     "at": "hook$ +0.25"
+    },
+    {
+     "kind": "tint",
+     "iso": "PSE",
+     "color": "danger",
+     "alpha": 0.6,
+     "fill": 0.08,
+     "at": "hook$ +0.25"
+    },
+    {
+     "kind": "route",
+     "path": [
+      [
+       34.52,
+       31.56
+      ],
+      [
+       34.49,
+       31.52
+      ],
+      [
+       34.475,
+       31.49
+      ],
+      [
+       34.43,
+       31.445
+      ],
+      [
+       34.415,
+       31.41
+      ],
+      [
+       34.37,
+       31.37
+      ],
+      [
+       34.33,
+       31.335
+      ]
+     ],
+     "style": "dash",
+     "color": "#f2c94c",
+     "width": 6,
+     "at": "f1:Yellow",
+     "label": {
+      "text": "YELLOW LINE",
+      "sub": "APPROX. · CEASEFIRE BOUNDARY",
+      "loc": [
+       34.43,
+       31.445
+      ],
+      "dx": 40,
+      "dy": 170,
+      "at": "f1:Yellow",
+      "until": "f1:central"
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "FIRST SINCE 2025",
+     "icon": "flag",
+     "color": "danger",
+     "screen": [
+      540,
+      1110
+     ],
+     "at": "f1:first",
+     "until": "f1:Yellow -0.2",
+     "note": "CEASEFIRE SINCE OCT 10, 2025"
+    },
+    {
+     "kind": "push",
+     "from": [
+      34.445,
+      31.44
+     ],
+     "to": [
+      34.405,
+      31.448
+     ],
+     "color": "danger",
+     "width": 34,
+     "at": "f1:tanks",
+     "until": "f2$",
+     "label": {
+      "text": "TANKS ADVANCE",
+      "sub": "PER REUTERS, AFP",
+      "at": "f1:tanks"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      34.394,
+      31.449
+     ],
+     "style": "pulse",
+     "color": "oil",
+     "at": "f1:Nuseirat",
+     "until": "f2:Hamas",
+     "label": {
+      "text": "NUSEIRAT",
+      "sub": "CAMP",
+      "dx": -200,
+      "dy": -140
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      34.405,
+      31.437
+     ],
+     "style": "pulse",
+     "color": "oil",
+     "at": "f1:Bureij",
+     "until": "f2:Hamas",
+     "label": {
+      "text": "BUREIJ",
+      "sub": "CAMP",
+      "dx": 60,
+      "dy": 120
+     }
+    },
+    {
+     "kind": "note",
+     "text": "TARGET: A TUNNEL",
+     "sub": "CLAIM BY ISRAELI ARMY + SHIN BET",
+     "y": 1110,
+     "at": "f1:tunnel",
+     "until": "f1:Families -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "ORDERED OUT",
+     "icon": "people",
+     "color": "oil",
+     "screen": [
+      540,
+      1110
+     ],
+     "at": "f1:Families",
+     "until": "f2 -0.2",
+     "note": "EVACUATION ORDERS · PER REPORTS"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      90,
+      880,
+      620
+     ],
+     "kicker": "HAMAS",
+     "text": "\"FLAGRANT VIOLATION\"",
+     "color": "danger",
+     "at": "f2",
+     "until": "f2:Witnesses -0.2"
+    },
+    {
+     "kind": "route",
+     "path": [
+      [
+       34.47,
+       31.52
+      ],
+      [
+       34.43,
+       31.48
+      ],
+      [
+       34.405,
+       31.448
+      ],
+      [
+       34.38,
+       31.42
+      ],
+      [
+       34.33,
+       31.36
+      ],
+      [
+       34.28,
+       31.31
+      ]
+     ],
+     "style": "solid",
+     "color": "oil",
+     "width": 5,
+     "at": "f2:Salah",
+     "label": {
+      "text": "SALAH AL-DIN ROAD",
+      "sub": "TANKS REACHED IT · PER WITNESSES",
+      "loc": [
+       34.38,
+       31.42
+      ],
+      "dx": -330,
+      "dy": 150,
+      "at": "f2:Salah",
+      "until": "f2:health -0.2"
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "1,600+ KILLED",
+     "icon": "people",
+     "color": "danger",
+     "screen": [
+      540,
+      1110
+     ],
+     "at": "f2:sixteen",
+     "until": "f2:Israel -0.2",
+     "note": "SINCE CEASEFIRE · PER GAZA HEALTH AUTHORITIES"
+    },
+    {
+     "kind": "note",
+     "text": "5 ISRAELI SOLDIERS KILLED",
+     "sub": "SINCE CEASEFIRE · PER ISRAELI MILITARY",
+     "y": 1110,
+     "at": "f2:Israel",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "callout",
+     "loc": "Gaza",
+     "place": "UN SECURITY COUNCIL",
+     "icon": "flag",
+     "screen": [
+      560,
+      450
+     ],
+     "at": "f3:Board",
+     "until": "f3:Israel's -0.2"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      80,
+      760,
+      640
+     ],
+     "title": "BOARD OF PEACE REPORT",
+     "badge": "TO UN",
+     "color": "info",
+     "rows": [
+      {
+       "icon": "x",
+       "text": "ISRAEL: RESTRICTING AID",
+       "at": "f3:Israel"
+      },
+      {
+       "icon": "x",
+       "text": "HAMAS: ARMED ACTIVITY",
+       "at": "f3:Hamas"
+      }
+     ],
+     "at": "f3:faults",
+     "until": "f3:Israel's -0.2"
+    },
+    {
+     "kind": "note",
+     "text": "TROOPS STAY UNTIL HAMAS IS DISMANTLED",
+     "sub": "ISRAEL'S DEFENCE MINISTER KATZ",
+     "y": 1110,
+     "at": "f3:Israel's",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      34.425,
+      31.443
+     ],
+     "text": "TANKS CROSS HERE",
+     "sub": "WEST OF YELLOW LINE · PER REUTERS, AFP",
+     "color": "danger",
+     "dx": -120,
+     "dy": -200,
+     "at": "f1:central",
+     "until": "f1:army -0.2"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 34.5,
+     "lat": 31.5,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 35,
+     "lat": 31,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": 35.3,
+     "lat": 31,
+     "R": 520
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "ISR",
+     "color": "info",
+     "alpha": 0.6
+    },
+    {
+     "iso": "PSE",
+     "color": "danger",
+     "alpha": 0.7
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      34.41,
+      31.44
+     ],
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "CEASEFIRE HOLDS",
+     "text"
+    ],
+    [
+     "INTO 2027?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: REUTERS, AFP, NBC NEWS, FRANCE 24, AL JAZEERA, TIMES OF ISRAEL",
+    "NOV 18, 2026"
+   ]
+  }
+ ]
+}
