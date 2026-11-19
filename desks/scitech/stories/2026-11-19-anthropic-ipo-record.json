@@ -1,0 +1,281 @@
+{
+ "id": "2026-11-19-anthropic-ipo-record",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Eighty-one billion dollars, the biggest stock listing ever. What is Claude's maker worth now?"
+  },
+  {
+   "id": "f1",
+   "text": "Anthropic, the company behind the Claude A.I. models, priced its shares at eighty-three dollars late Wednesday. That is above its range of seventy to seventy-eight. CNBC and Axios report the sale raised about eighty-one billion dollars. Nasdaq trading starts Thursday."
+  },
+  {
+   "id": "f2",
+   "text": "That tops SpaceX, which raised about seventy-five billion in June, CNN reports. Saudi Aramco raised about twenty-nine billion in twenty nineteen. Strong demand let Anthropic sell about nine hundred eighty million shares, up from eight hundred twenty-five million planned."
+  },
+  {
+   "id": "f3",
+   "text": "What is it worth? At eighty-three dollars, reports put Anthropic at about one point five trillion dollars, counting all shares. Its last private round valued it at nine hundred sixty-five billion. Seven tech firms, including Nvidia, are also buying twenty-six billion privately."
+  },
+  {
+   "id": "cta",
+   "text": "Will Anthropic's stock end its first week above eighty-three dollars? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE PRICE",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE RECORD",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "THE VALUE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "oil"
+  }
+ ],
+ "upload": {
+  "title": "Anthropic Raises $81 Billion in Record Stock Debut #shorts",
+  "description": "Anthropic, the company behind the Claude AI models, priced its IPO at $83 per share on November 18, 2026, above its marketed range of $70 to $78. CNBC and Axios report the offering raised about $81.3 billion, the largest IPO on record, ahead of SpaceX's roughly $75 billion listing in June. At the IPO price, reports put the company's fully diluted value at about $1.5 trillion; shares begin trading on Nasdaq on November 19 under the ticker ANT. Seven tech companies agreed to buy $26 billion of non-voting stock in a concurrent private placement. Not investment advice.\n\nSources: CNBC, Axios, CNN, NPR, ABC News, Yahoo Finance, Washington Times, Anthropic S-1 filing (via coverage).\n\n#tech #AI #Anthropic #IPO #Nasdaq",
+  "tags": [
+   "technology",
+   "news",
+   "AI",
+   "Anthropic",
+   "Claude",
+   "IPO",
+   "Nasdaq",
+   "stock market",
+   "SpaceX",
+   "tech business"
+  ],
+  "cover": "f2:Aramco"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [
+   -97,
+   38.5
+  ],
+  "zoom": 1.1,
+  "number": "$81 BN",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "BEATS SPACEX",
+    "text"
+   ],
+   [
+    "WORTH $1.5 TN?",
+    "accent"
+   ]
+  ],
+  "source": "PRICED NOV 18 · PER CNBC, AXIOS"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "view": [
+    {
+     "at": 0,
+     "lon": -125,
+     "lat": 30,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": -96,
+     "lat": 39,
+     "R": 640
+    }
+   ],
+   "chip": {
+    "text": "ANTHROPIC IPO · NASDAQ · NOV 19",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      -122.4,
+      37.79
+     ],
+     "color": "info",
+     "at": "hook:biggest",
+     "label": "ANTHROPIC",
+     "sub": "SAN FRANCISCO",
+     "dx": 40,
+     "dy": -120
+    },
+    {
+     "loc": [
+      -73.99,
+      40.76
+     ],
+     "color": "accent",
+     "at": "hook:listing",
+     "label": "NASDAQ",
+     "sub": "NEW YORK · TICKER ANT",
+     "dx": -60,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:dollars",
+    "lines": [
+     [
+      "$81 BILLION",
+      "text",
+      104
+     ],
+     [
+      "RECORD IPO",
+      "accent",
+      88
+     ]
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.1",
+   "label": "IPO PRICE PER SHARE",
+   "sublabel": "ANTHROPIC · PRICED NOV 18, 2026",
+   "icon": "money",
+   "color": "accent",
+   "value": 83,
+   "start": 70,
+   "prefix": "$",
+   "suffix": "",
+   "decimals": 0,
+   "at": "f1 +0.3",
+   "doneAt": "f1:eighty-three +0.6",
+   "note": "MARKETED RANGE $70–78 · RAISED ≈$81.3 BN",
+   "source": "SOURCE: CNBC · AXIOS · YAHOO FINANCE"
+  },
+  {
+   "type": "bars",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "BIGGEST IPOS ON RECORD",
+   "sublabel": "MONEY RAISED · BILLION US DOLLARS",
+   "color": "violet",
+   "format": "money",
+   "bars": [
+    {
+     "label": "ARAMCO 2019",
+     "value": 29,
+     "display": "≈$29 BN",
+     "color": "neutral",
+     "at": "f2:Aramco",
+     "dur": 1.0
+    },
+    {
+     "label": "SPACEX 2026",
+     "value": 75,
+     "display": "≈$75 BN",
+     "color": "info",
+     "at": "f2:SpaceX",
+     "dur": 1.0
+    },
+    {
+     "label": "ANTHROPIC 2026",
+     "value": 81.3,
+     "display": "≈$81.3 BN",
+     "color": "accent",
+     "at": "f2:demand",
+     "dur": 1.0
+    }
+   ],
+   "source": "SOURCE: CNN · CNBC · AXIOS · ARAMCO INCL. EXTRA SHARES"
+  },
+  {
+   "type": "scale",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "WHAT ANTHROPIC IS WORTH",
+   "sublabel": "VALUE IN BILLION US DOLLARS",
+   "color": "oil",
+   "items": [
+    {
+     "name": "LAST PRIVATE ROUND",
+     "value": 965,
+     "display": "$965 BN",
+     "color": "neutral",
+     "at": "f3:private"
+    },
+    {
+     "name": "AT $83 · FULLY DILUTED",
+     "value": 1500,
+     "display": "≈$1.5 TN",
+     "color": "accent",
+     "at": "f3:At"
+    }
+   ],
+   "note": "PLUS $26 BN PRIVATE PURCHASE BY 7 TECH FIRMS",
+   "source": "SOURCE: CNBC · YAHOO FINANCE · ANTHROPIC S-1 VIA COVERAGE"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -110,
+     "lat": 25,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -74,
+     "lat": 40.7,
+     "R": 560
+    },
+    {
+     "at": "end",
+     "lon": -80,
+     "lat": 38,
+     "R": 520
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -73.99,
+      40.76
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "ABOVE $83",
+     "text"
+    ],
+    [
+     "AFTER ONE WEEK?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "CNBC · AXIOS · CNN · NPR · ABC NEWS · YAHOO FINANCE · WASHINGTON TIMES",
+    "VALUATION PER REPORTS · NOT INVESTMENT ADVICE"
+   ]
+  }
+ ]
+}
