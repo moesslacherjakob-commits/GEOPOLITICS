@@ -1,0 +1,305 @@
+{
+ "id": "2026-11-20-signal-blocks-ai-agents",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "An A.I. agent read private Signal chats in tests. Now Signal is fighting back."
+  },
+  {
+   "id": "f1",
+   "text": "Reuters tested Meta's new A.I. agent, Muse. On an Android phone and on a Mac, it pulled in Signal message text. On an iPhone, it was blocked. Reuters found no sign that Signal's encryption itself was broken."
+  },
+  {
+   "id": "f2",
+   "text": "So how? It simply read what the screen already showed. On the Mac, Reuters reports, it used accessibility features and screenshots. Meta says Muse only reaches data that users allow, and called the reported examples isolated incidents."
+  },
+  {
+   "id": "f3",
+   "text": "Now Signal says it will block screenshots by default on iOS twenty-seven, and on Android when it detects an A.I. assistant. On Macs, it says it cannot do that reliably. Signal's president, Meredith Whittaker, calls the fix incomplete and wants better tools from Apple, Google and Microsoft."
+  },
+  {
+   "id": "cta",
+   "text": "Will Apple, Google and Microsoft let apps lock out A.I. agents? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE TEST",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "HOW IT WORKS",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "THE FIX",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Signal Blocks Screenshots to Keep AI Agents Out #shorts",
+  "description": "In a Reuters investigation published November 18, 2026, Meta's AI agent Muse pulled in Signal message text on an Android phone and a Mac and was blocked on an iPhone; Reuters found no sign that Signal's end-to-end encryption was broken. Meta says Muse only reaches data users give it permission to access and called the examples isolated incidents. On November 20, Signal said it will block screenshots by default on iOS 27 and on Android when it detects an AI assistant, says it cannot reliably do so on macOS, and calls the fix incomplete.\n\nSources: Reuters (via TimesLive, WTVB), Ars Technica (via coverage), The Next Web, Android Authority, Digital Trends, PhoneArena, IBTimes UK, The Hans India.\n\n#tech #AI #Signal #privacy #Meta #cybersecurity",
+  "tags": [
+   "technology",
+   "news",
+   "AI",
+   "AI agents",
+   "Signal",
+   "Meta",
+   "Muse",
+   "privacy",
+   "encryption",
+   "cybersecurity",
+   "Reuters"
+  ],
+  "cover": "f2:screenshots"
+ },
+ "thumbnail": {
+  "at": "hook$ -0.2",
+  "focus": [
+   -122.1,
+   37.45
+  ],
+  "zoom": 1.1,
+  "number": "2 OF 3",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "DEVICES READ",
+    "text"
+   ],
+   [
+    "NOW SIGNAL BLOCKS",
+    "accent"
+   ]
+  ],
+  "source": "REUTERS TEST OF META'S MUSE · NOV 18"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "view": [
+    {
+     "at": 0,
+     "lon": -140,
+     "lat": 25,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": -118,
+     "lat": 38,
+     "R": 680
+    }
+   ],
+   "chip": {
+    "text": "META MUSE · SIGNAL · NOV 2026",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      -122.1,
+      37.45
+     ],
+     "color": "accent",
+     "at": "hook:Signal",
+     "label": "META · SIGNAL",
+     "sub": "BOTH BASED IN SILICON VALLEY",
+     "dx": 60,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:read",
+    "lines": [
+     [
+      "AI READ SIGNAL",
+      "text",
+      100
+     ],
+     [
+      "CHATS IN TESTS",
+      "accent",
+      92
+     ]
+    ]
+   }
+  },
+  {
+   "type": "facts",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "eye",
+     "big": "ANDROID PHONE",
+     "text": "SIGNAL TEXT PULLED IN BY MUSE",
+     "color": "danger",
+     "at": "f1:tested"
+    },
+    {
+     "icon": "eye",
+     "big": "MAC LAPTOP",
+     "text": "SIGNAL TEXT PULLED IN BY MUSE",
+     "color": "danger",
+     "at": "f1:Mac"
+    },
+    {
+     "icon": "shield",
+     "big": "IPHONE",
+     "text": "BLOCKED · ENCRYPTION NOT BROKEN",
+     "color": "ok",
+     "at": "f1:iPhone"
+    }
+   ],
+   "source": "SOURCE: REUTERS INVESTIGATION, NOV 18 · VIA TIMESLIVE, IBTIMES UK"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "HOW THE AGENT SAW THE CHATS",
+   "color": "violet",
+   "steps": [
+    {
+     "icon": "shield",
+     "title": "ENCRYPTED IN TRANSIT",
+     "sub": "NOT BROKEN, PER REUTERS",
+     "color": "ok",
+     "at": "f2:how"
+    },
+    {
+     "icon": "people",
+     "title": "SHOWN ON SCREEN",
+     "sub": "READABLE ON THE DEVICE",
+     "color": "info",
+     "at": "f2:screen"
+    },
+    {
+     "icon": "eye",
+     "title": "AGENT READS IT",
+     "sub": "MAC: ACCESSIBILITY + SCREENSHOTS",
+     "color": "danger",
+     "at": "f2:accessibility"
+    },
+    {
+     "icon": "check",
+     "title": "META: USERS ALLOW IT",
+     "sub": "CALLS EXAMPLES ISOLATED",
+     "color": "neutral",
+     "at": "f2:Meta"
+    }
+   ],
+   "source": "SOURCES: REUTERS · META STATEMENT VIA COVERAGE · ILLUSTRATIVE"
+  },
+  {
+   "type": "timeline",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "SIGNAL'S RESPONSE · NOV 20",
+   "color": "info",
+   "items": [
+    {
+     "date": "NOV 18",
+     "title": "REUTERS TEST RESULTS",
+     "sub": "MUSE READ SIGNAL ON 2 OF 3 DEVICES",
+     "color": "neutral",
+     "at": "f3 +0.1"
+    },
+    {
+     "date": "IOS 27",
+     "title": "SCREENSHOTS BLOCKED",
+     "sub": "ON BY DEFAULT · USERS CAN TURN IT OFF",
+     "color": "accent",
+     "big": true,
+     "at": "f3:default"
+    },
+    {
+     "date": "ANDROID",
+     "title": "BLOCKED WHEN AI DETECTED",
+     "sub": "SCREEN SECURITY TURNS ON",
+     "color": "info",
+     "at": "f3:Android"
+    },
+    {
+     "date": "MAC",
+     "title": "NO RELIABLE BLOCK",
+     "sub": "PER SIGNAL",
+     "color": "danger",
+     "at": "f3:Macs"
+    },
+    {
+     "date": "NEXT",
+     "title": "\"INCOMPLETE\" FIX",
+     "sub": "ASKS APPLE, GOOGLE, MICROSOFT FOR TOOLS",
+     "color": "violet",
+     "at": "f3:Whittaker"
+    }
+   ],
+   "source": "SOURCES: SIGNAL VIA REUTERS · THE NEXT WEB · ANDROID AUTHORITY"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -140,
+     "lat": 25,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -122,
+     "lat": 37.5,
+     "R": 560
+    },
+    {
+     "at": "end",
+     "lon": -115,
+     "lat": 36,
+     "R": 520
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -122.1,
+      37.45
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "APPS LOCK OUT",
+     "text"
+    ],
+    [
+     "AI AGENTS?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REUTERS · ARS TECHNICA · THE NEXT WEB",
+    "ANDROID AUTHORITY · DIGITAL TRENDS · PHONEARENA",
+    "META AND SIGNAL STATEMENTS ARE COMPANY CLAIMS"
+   ]
+  }
+ ]
+}
