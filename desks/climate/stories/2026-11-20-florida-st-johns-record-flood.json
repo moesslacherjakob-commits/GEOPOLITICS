@@ -1,0 +1,583 @@
+{
+ "id": "2026-11-20-florida-st-johns-record-flood",
+ "lang": "en",
+ "gap": 0.7,
+ "script": [
+  {
+   "id": "hook",
+   "text": "Florida's longest river just broke a flood record from 1953. What pushed it over?"
+  },
+  {
+   "id": "f1",
+   "text": "Over ten inches of rain fell on parts of Broward County in twelve hours on Tuesday, Newsweek reports. Fort Lauderdale, Melbourne and West Palm Beach broke November rainfall records. In Brevard County, the sheriff says crews rescued more than a hundred people on Thursday."
+  },
+  {
+   "id": "f2",
+   "text": "That water drains into the St. Johns River. Near Cocoa, it rose above eighteen feet on Thursday, local media report, citing weather service data. That beats the record from 1953. The weather service says it will stay above flood stage into next week."
+  },
+  {
+   "id": "f3",
+   "text": "Governor Ron DeSantis has expanded a state of emergency to twenty-one counties and called in the National Guard. Forecasters say the system could become Subtropical Storm Kyle, with rain and coastal flooding up the East Coast."
+  },
+  {
+   "id": "cta",
+   "text": "Will the St. Johns drop below flood stage by Thanksgiving? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE RAIN",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "THE RECORD",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "THE EMERGENCY",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -78,
+     "lat": 24,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": -81,
+     "lat": 28,
+     "R": 620
+    }
+   ],
+   "chip": {
+    "text": "FLORIDA FLOODS",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:river",
+    "lines": [
+     [
+      "RECORD FLOOD",
+      "danger",
+      110
+     ],
+     [
+      "SINCE 1953",
+      "text",
+      110
+     ]
+    ]
+   },
+   "markers": [
+    {
+     "loc": [
+      -80.742,
+      28.386
+     ],
+     "color": "danger",
+     "at": "hook:river",
+     "label": "ST. JOHNS RIVER",
+     "sub": "NEAR COCOA",
+     "dx": 40,
+     "dy": -60,
+     "big": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -81.2,
+    27.8
+   ],
+   "detail": [
+    "USA"
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -81,
+     "lat": 28,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.4",
+     "lon": -80.6,
+     "lat": 26.6,
+     "dist": 16,
+     "pitch": 40,
+     "yaw": 6,
+     "oy": 110
+    },
+    {
+     "at": "f1:Brevard",
+     "lon": -80.8,
+     "lat": 28.2,
+     "dist": 12,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 110
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": -81.2,
+     "lat": 29.0,
+     "dist": 16,
+     "pitch": 38,
+     "yaw": -8,
+     "oy": 110
+    },
+    {
+     "at": "f2:Cocoa",
+     "lon": -80.8,
+     "lat": 28.4,
+     "dist": 9,
+     "pitch": 48,
+     "yaw": -4,
+     "oy": 110
+    },
+    {
+     "at": "f3",
+     "lon": -81.6,
+     "lat": 27.9,
+     "dist": 22,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 110
+    },
+    {
+     "at": "f3:Kyle",
+     "lon": -79.5,
+     "lat": 30.5,
+     "dist": 30,
+     "pitch": 34,
+     "yaw": 4,
+     "oy": 110
+    },
+    {
+     "at": "cta -0.1",
+     "lon": -80.5,
+     "lat": 30.0,
+     "dist": 32,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 110
+    }
+   ],
+   "layers": [
+    {
+     "kind": "field",
+     "at": "hook$",
+     "until": "f2:1953",
+     "palette": "rain",
+     "alpha": 0.75,
+     "grow": 1.4,
+     "pulse": true,
+     "blobs": [
+      {
+       "loc": [
+        -80.25,
+        26.15
+       ],
+       "r": 0.9,
+       "v": 1
+      },
+      {
+       "loc": [
+        -80.1,
+        26.7
+       ],
+       "r": 0.8,
+       "v": 0.8
+      },
+      {
+       "loc": [
+        -80.7,
+        28.2
+       ],
+       "r": 1.0,
+       "v": 1
+      },
+      {
+       "loc": [
+        -80.95,
+        28.85
+       ],
+       "r": 0.8,
+       "v": 0.7
+      }
+     ]
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -80.143,
+      26.122
+     ],
+     "style": "pulse",
+     "color": "info",
+     "at": "f1:Fort",
+     "label": {
+      "text": "FORT LAUDERDALE",
+      "sub": "NOV RAIN RECORD",
+      "dx": -320,
+      "dy": -40,
+      "until": "f1:Brevard"
+     },
+     "until": "f2"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -80.054,
+      26.715
+     ],
+     "style": "pulse",
+     "color": "info",
+     "at": "f1:West",
+     "label": {
+      "text": "WEST PALM BEACH",
+      "sub": "NOV RAIN RECORD",
+      "dx": -320,
+      "dy": -150,
+      "until": "f1:Brevard"
+     },
+     "until": "f2"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -80.608,
+      28.084
+     ],
+     "style": "pulse",
+     "color": "info",
+     "at": "f1:Melbourne",
+     "label": {
+      "text": "MELBOURNE",
+      "sub": "NOV RAIN RECORD",
+      "dx": 60,
+      "dy": -90,
+      "until": "f1:Brevard"
+     },
+     "until": "f2"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -80.69,
+      28.36
+     ],
+     "text": "BREVARD COUNTY",
+     "sub": "100+ RESCUED THU · SHERIFF",
+     "color": "accent",
+     "dx": -260,
+     "dy": -150,
+     "at": "f1:Brevard",
+     "until": "f2"
+    },
+    {
+     "kind": "route",
+     "at": "f2",
+     "until": "cta +0.5",
+     "style": "flow",
+     "color": "info",
+     "width": 7,
+     "path": [
+      [
+       -80.85,
+       27.95
+      ],
+      [
+       -80.87,
+       28.38
+      ],
+      [
+       -81.02,
+       28.62
+      ],
+      [
+       -81.12,
+       28.75
+      ],
+      [
+       -81.32,
+       28.83
+      ],
+      [
+       -81.4,
+       29.0
+      ],
+      [
+       -81.62,
+       29.3
+      ],
+      [
+       -81.64,
+       29.65
+      ],
+      [
+       -81.66,
+       30.32
+      ],
+      [
+       -81.42,
+       30.4
+      ]
+     ],
+     "label": {
+      "text": "ST. JOHNS RIVER",
+      "sub": "FLOWS NORTH · COURSE APPROXIMATE",
+      "loc": [
+       -81.5,
+       29.6
+      ],
+      "dx": 120,
+      "dy": -40,
+      "at": "f2 +0.3",
+      "until": "f2:Cocoa"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -80.742,
+      28.386
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f2:Cocoa",
+     "label": {
+      "text": "COCOA GAUGE",
+      "sub": "ABOVE 18 FT · THU NOV 19",
+      "dx": 90,
+      "dy": -130,
+      "until": "f3"
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "RECORD SINCE 1953",
+     "icon": "drop",
+     "color": "danger",
+     "screen": [
+      540,
+      440
+     ],
+     "note": "PER LOCAL MEDIA · NWS DATA",
+     "at": "f2:1953 -0.2",
+     "until": "f2:weather"
+    },
+    {
+     "kind": "tint",
+     "iso": "US-FL",
+     "color": "accent",
+     "alpha": 0.22,
+     "pulse": true,
+     "at": "f3",
+     "until": "cta +0.5"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -78.8,
+      30.8
+     ],
+     "style": "dot",
+     "color": "danger",
+     "at": "f3:Kyle",
+     "label": {
+      "text": "POSSIBLE SUBTROPICAL STORM KYLE",
+      "sub": "PER FORECASTERS · NOT YET NAMED",
+      "dx": -420,
+      "dy": -130,
+      "until": "cta +0.5"
+     }
+    },
+    {
+     "kind": "push",
+     "from": [
+      -79.5,
+      29.5
+     ],
+     "to": [
+      -75.5,
+      35.5
+     ],
+     "color": "danger",
+     "width": 26,
+     "at": "f3:up",
+     "label": {
+      "text": "RAIN, COASTAL FLOODING",
+      "sub": "FORECASTERS · ILLUSTRATIVE",
+      "at": "f3:up"
+     }
+    },
+    {
+     "kind": "note",
+     "text": "RAIN AREAS ILLUSTRATIVE · RIVER COURSE APPROXIMATE",
+     "y": 1170,
+     "at": "f1 +1"
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "from": "f2:rose -0.1",
+   "to": "f2:1953 +0.6",
+   "label": "ST. JOHNS RIVER NEAR COCOA",
+   "sublabel": "RIVER LEVEL · FEET",
+   "color": "danger",
+   "bars": [
+    {
+     "label": "1953 RECORD",
+     "value": 17.55,
+     "display": "17.55 FT",
+     "color": "neutral",
+     "at": "f2:rose",
+     "dur": 1.0
+    },
+    {
+     "label": "THU NOV 19, 2026",
+     "value": 18.2,
+     "display": "18+ FT",
+     "color": "danger",
+     "at": "f2:eighteen",
+     "dur": 1.0
+    }
+   ],
+   "badge": {
+    "text": "NEW RECORD",
+    "at": "f2:beats"
+   },
+   "source": "SOURCE: NWS GAUGE DATA VIA CLICKORLANDO, SPECTRUM NEWS 13 · READINGS VARY"
+  },
+  {
+   "type": "counter",
+   "from": "f3:Governor",
+   "to": "f3:Forecasters -0.15",
+   "label": "FLORIDA · STATE OF EMERGENCY",
+   "sublabel": "OF 67 COUNTIES",
+   "icon": "shield",
+   "color": "accent",
+   "value": 21,
+   "start": 0,
+   "prefix": "",
+   "suffix": " COUNTIES",
+   "doneSuffix": " COUNTIES",
+   "decimals": 0,
+   "at": "f3:expanded",
+   "doneAt": "f3:counties",
+   "note": "ORDER EXPANDED NOV 18 · NATIONAL GUARD MOBILIZED",
+   "source": "SOURCE: GOV. DESANTIS VIA NEWSWEEK, CLICKORLANDO, CBS12"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "RECORD SINCE 1953.",
+     "text"
+    ],
+    [
+     "BELOW FLOOD STAGE BY THANKSGIVING?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "NEWSWEEK, CNN, CBS NEWS, FOX WEATHER, AP VIA ABC NEWS, CLICKORLANDO, SPECTRUM NEWS 13 (SEARCH EXCERPTS)",
+    "NOV 17–20, 2026 · RAIN AREAS ILLUSTRATIVE · RIVER COURSE APPROXIMATE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -81,
+     "lat": 28,
+     "R": 700
+    },
+    {
+     "at": "cta +1",
+     "lon": -80,
+     "lat": 29,
+     "R": 900
+    },
+    {
+     "at": "end",
+     "lon": -80,
+     "lat": 29,
+     "R": 900
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -80.742,
+      28.386
+     ],
+     "color": "accent"
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Florida's St. Johns River Tops Its 1953 Flood Record #shorts",
+  "description": "Days of heavy rain flooded Florida's Atlantic coast this week: over ten inches fell on parts of Broward County in twelve hours, and more than a hundred people were rescued in Brevard County on Thursday. The St. Johns River near Cocoa rose above its 1953 record, and Governor DeSantis expanded the state of emergency to 21 counties. Forecasters say the system could become Subtropical Storm Kyle.\n\nSources: Newsweek, CNN, CBS News, Fox Weather, AP (via ABC News), ClickOrlando, Spectrum News 13, CBS12 (based on search-result excerpts). Rain areas on the map are illustrative and the river course is approximate.\n\n#climate #weather #florida #flooding",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "Florida",
+   "flooding",
+   "St. Johns River",
+   "Brevard County",
+   "Subtropical Storm Kyle",
+   "record flood"
+  ],
+  "cover": "f2:Cocoa +1"
+ },
+ "thumbnail": {
+  "at": "f2:Cocoa +1.2",
+  "number": "18 FT",
+  "numberColor": "danger",
+  "source": "ST. JOHNS RIVER NEAR COCOA · NWS DATA VIA LOCAL MEDIA · NOV 19",
+  "focus": [
+   -80.8,
+   28.5
+  ],
+  "lines": [
+   [
+    "HIGHEST EVER",
+    "text"
+   ],
+   [
+    "MORE RAIN?",
+    "accent"
+   ]
+  ],
+  "zoom": 1.5
+ }
+}
