@@ -1,0 +1,603 @@
+{
+ "id": "2026-11-20-shenzhen-declaration",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Three nuclear powers at one table in China. So what did they actually agree?"
+  },
+  {
+   "id": "f1",
+   "text": "For the first time, the leaders of the US, China and Russia met as a trio, in Shenzhen at the APEC summit. They issued a Declaration toward Peace. All three say a nuclear war cannot be won and must never be fought."
+  },
+  {
+   "id": "f2",
+   "text": "But the text only promises a dialogue on nuclear risks. No arms cuts, no timetable. It also backs more refined fuel supply and vague UN reform, and warns the International Criminal Court not to abuse its powers. That court issued a warrant for Putin in 2023."
+  },
+  {
+   "id": "f3",
+   "text": "Ukraine, reports say, is not mentioned at all. Afterwards, Putin told reporters that after the strikes on the Crimean Bridge, Russia will not negotiate a ceasefire. He promised a response far more painful than Kyiv's attack."
+  },
+  {
+   "id": "cta",
+   "text": "Will Shenzhen lead to real nuclear talks next year? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE DECLARATION",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE FINE PRINT",
+   "seg": "f2",
+   "color": "info"
+  },
+  {
+   "n": "03",
+   "name": "UKRAINE LEFT OUT",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "danger"
+  }
+ ],
+ "theme": {
+  "accent": "#e8b84a"
+ },
+ "upload": {
+  "title": "Trump, Xi, Putin Sign a Peace Declaration. What's in It? #shorts",
+  "description": "Donald Trump, Xi Jinping and Vladimir Putin held their first three-way meeting on November 19, 2026, in Shenzhen, China, on the sidelines of the APEC summit. Afterwards the White House and China's Xinhua news agency published a joint \"Declaration toward Peace\". In it, the three leaders reaffirm that a nuclear war cannot be won and must never be fought, and say their countries will hold a dialogue on reducing nuclear risks and preventing the spread of nuclear weapons. According to reports, the text sets no timetable and contains no commitment to cut nuclear arsenals. The declaration also commits the three countries to increase the production and supply of refined petroleum products, calls for an unspecified reform of the United Nations, and says the International Criminal Court and similar bodies must not abuse their jurisdiction. The ICC issued an arrest warrant for Vladimir Putin in March 2023. According to reports, the declaration does not mention the war in Ukraine. At a press conference in Shenzhen, Putin said that after the Ukrainian strikes on the Crimean Bridge, Russia will not negotiate a ceasefire, and threatened a response \"far more painful\" than the attack. Chinese state media called the talks positive and constructive; U.S. media reported few concrete results.\n\nSources:\nWhite House, Nov 19, 2026: U.S.-Russia-China Heads of State Declaration toward Peace\nXinhua via gov.cn, Nov 19, 2026: Full text: China-Russia-U.S. Heads of State Declaration toward Peace\nCBS News, Nov 19, 2026: Trump, Xi and Putin sit down for a rare 3-way meeting in China, but appear to achieve little\nCBC News, Nov 19, 2026: Xi-Trump-Putin statement warns world bodies not to 'abuse their jurisdiction'\nGulf News, Nov 19, 2026: 'No winners in nuclear war': Trump, Xi, Putin pledge dialogue after Shenzhen summit\nKyiv Post, Nov 19, 2026: Putin, Trump, Xi Joint Statement on Nuclear Talks, UN Reform, No Mention of Ukraine\nAsia Times, Nov 2026: Shenzhen summit letdown and the limits of multipolarity\nDeccan Herald, Nov 19, 2026: After bridge attack by Ukraine, Putin says he will not negotiate ceasefire, vows retaliation\n\n#geopolitics #Trump #XiJinping #Putin #nuclear",
+  "tags": [
+   "geopolitics",
+   "Trump",
+   "Xi Jinping",
+   "Putin",
+   "Shenzhen",
+   "APEC",
+   "nuclear weapons",
+   "Declaration toward Peace",
+   "ICC",
+   "Ukraine",
+   "world news"
+  ],
+  "cover": "f1 +0.5"
+ },
+ "thumbnail": {
+  "at": "f1:Declaration +0.5",
+  "focus": [
+   114.07,
+   22.55
+  ],
+  "zoom": 1.2,
+  "kicker": "SHENZHEN SUMMIT",
+  "kickerColor": "accent",
+  "lines": [
+   [
+    "NO ARMS CUTS",
+    "danger"
+   ],
+   [
+    "JUST TALKS?",
+    "accent"
+   ]
+  ],
+  "source": "DECLARATION · NOV 19, 2026"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 60,
+     "lat": 42,
+     "R": 320
+    },
+    {
+     "at": 3.8,
+     "lon": 108,
+     "lat": 30,
+     "R": 480
+    }
+   ],
+   "chip": {
+    "text": "APEC · SHENZHEN · NOV 20, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "USA",
+     "color": "info",
+     "alpha": 0.55,
+     "at": "hook:Three"
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.55,
+     "at": "hook:nuclear"
+    },
+    {
+     "iso": "CHN",
+     "color": "oil",
+     "alpha": 0.6,
+     "at": "hook:powers"
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      114.07,
+      22.55
+     ],
+     "color": "accent",
+     "at": "hook:table",
+     "label": "SHENZHEN",
+     "sub": "TRUMP · XI · PUTIN",
+     "dx": 70,
+     "dy": 70,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:powers",
+    "lines": [
+     [
+      "3 NUCLEAR POWERS",
+      "text",
+      92
+     ],
+     [
+      "ONE TABLE",
+      "accent",
+      112
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:what",
+    "icon": "nuke",
+    "iconColor": "danger",
+    "color": "accent",
+    "kicker": "SHENZHEN",
+    "title": "WHAT DEAL?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "f2 +0.1",
+   "center": [
+    95,
+    38
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 108,
+     "lat": 30,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.5",
+     "lon": 92,
+     "lat": 42,
+     "dist": 105,
+     "pitch": 40,
+     "yaw": 0,
+     "oy": 210
+    },
+    {
+     "at": "f1:Shenzhen -0.3",
+     "lon": 113.5,
+     "lat": 25,
+     "dist": 30,
+     "pitch": 48,
+     "yaw": 4,
+     "oy": 200
+    },
+    {
+     "at": "f1:Declaration",
+     "lon": 113.8,
+     "lat": 23.5,
+     "dist": 20,
+     "pitch": 52,
+     "yaw": 8,
+     "oy": 200
+    },
+    {
+     "at": "f1:nuclear",
+     "lon": 100,
+     "lat": 38,
+     "dist": 80,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 210
+    },
+    {
+     "at": "f2 +0.1",
+     "lon": 100,
+     "lat": 38,
+     "dist": 85,
+     "pitch": 44,
+     "yaw": -2,
+     "oy": 210
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "CHN",
+     "color": "oil",
+     "alpha": 0.5,
+     "fill": 0.08,
+     "at": "f1:China"
+    },
+    {
+     "kind": "tint",
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.45,
+     "fill": 0.06,
+     "at": "f1:Russia"
+    },
+    {
+     "kind": "callout",
+     "loc": [
+      114.07,
+      22.55
+     ],
+     "place": "WASHINGTON",
+     "icon": "flag",
+     "color": "info",
+     "screen": [
+      250,
+      430
+     ],
+     "at": "f1:US,",
+     "until": "f1:issued -0.2"
+    },
+    {
+     "kind": "arc",
+     "from": "Moscow",
+     "to": [
+      114.07,
+      22.55
+     ],
+     "color": "danger",
+     "height": 0.35,
+     "at": "f1:Russia",
+     "dur": 1.3
+    },
+    {
+     "kind": "arc",
+     "from": "Beijing",
+     "to": [
+      114.07,
+      22.55
+     ],
+     "color": "oil",
+     "height": 0.3,
+     "at": "f1:China",
+     "dur": 1.0
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      114.07,
+      22.55
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1:Shenzhen",
+     "until": "f2",
+     "label": {
+      "text": "SHENZHEN",
+      "sub": "APEC · NOV 19, 2026",
+      "dx": -330,
+      "dy": -150
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "FIRST TRILATERAL",
+     "icon": "people",
+     "color": "accent",
+     "screen": [
+      540,
+      1080
+     ],
+     "at": "f1:trio,",
+     "until": "f1:issued -0.2",
+     "note": "U.S. · CHINA · RUSSIA LEADERS"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      90,
+      700,
+      700
+     ],
+     "title": "DECLARATION TOWARD PEACE",
+     "badge": "NOV 19",
+     "color": "accent",
+     "rows": [
+      {
+       "icon": "check",
+       "text": "SIGNED BY TRUMP, XI, PUTIN",
+       "at": "f1:issued"
+      }
+     ],
+     "at": "f1:issued",
+     "until": "f1:All -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "NO WINNERS",
+     "icon": "nuke",
+     "color": "danger",
+     "screen": [
+      540,
+      1080
+     ],
+     "at": "f1:nuclear",
+     "until": "f2",
+     "note": "\"NUCLEAR WAR CANNOT BE WON\" · DECLARATION"
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f2",
+   "to": "f2$ +0.3",
+   "items": [
+    {
+     "icon": "nuke",
+     "big": "TALKS ONLY",
+     "text": "DIALOGUE ON NUCLEAR RISKS · NO CUTS, NO TIMETABLE",
+     "color": "danger",
+     "at": "f2:dialogue"
+    },
+    {
+     "icon": "barrel",
+     "big": "MORE FUEL",
+     "text": "MORE REFINED OIL PRODUCTS · UN REFORM, NO DETAILS",
+     "color": "oil",
+     "at": "f2:fuel"
+    },
+    {
+     "icon": "shield",
+     "big": "ICC WARNED",
+     "text": "\"MUST NOT ABUSE THEIR JURISDICTION\" · PUTIN WARRANT 2023",
+     "color": "info",
+     "at": "f2:International"
+    }
+   ],
+   "source": "DECLARATION TEXT: WHITE HOUSE, XINHUA · NOV 19, 2026"
+  },
+  {
+   "type": "map",
+   "from": "f2$ +0.3",
+   "to": "cta -0.1",
+   "center": [
+    36,
+    46
+   ],
+   "detail": [
+    "UKR"
+   ],
+   "camera": [
+    {
+     "at": "f2$ +0.3",
+     "lon": 34,
+     "lat": 48,
+     "dist": 40,
+     "pitch": 40,
+     "yaw": 0,
+     "oy": 200
+    },
+    {
+     "at": "f3:Putin -0.3",
+     "lon": 35.8,
+     "lat": 45.8,
+     "dist": 14,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 200
+    },
+    {
+     "at": "f3:Crimean -0.2",
+     "lon": 36.4,
+     "lat": 45.35,
+     "dist": 5,
+     "pitch": 50,
+     "yaw": 6,
+     "oy": 200
+    },
+    {
+     "at": "f3:ceasefire. +0.4",
+     "lon": 36.45,
+     "lat": 45.33,
+     "dist": 4.5,
+     "pitch": 52,
+     "yaw": 8,
+     "oy": 200
+    },
+    {
+     "at": "f3:Kyiv's",
+     "lon": 34,
+     "lat": 47.5,
+     "dist": 22,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 200
+    },
+    {
+     "at": "cta",
+     "lon": 34,
+     "lat": 48,
+     "dist": 32,
+     "pitch": 42,
+     "yaw": 0,
+     "oy": 200
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "UKR",
+     "color": "info",
+     "alpha": 0.55,
+     "fill": 0.08,
+     "at": "f2$ +0.3"
+    },
+    {
+     "kind": "tint",
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.45,
+     "fill": 0.05,
+     "at": "f2$ +0.3"
+    },
+    {
+     "kind": "stamp",
+     "text": "NOT MENTIONED",
+     "icon": "x",
+     "color": "neutral",
+     "screen": [
+      540,
+      1080
+     ],
+     "at": "f3",
+     "until": "f3:Afterwards -0.2",
+     "note": "UKRAINE IN THE DECLARATION · PER REPORTS"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      36.51,
+      45.3
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f3:Crimean",
+     "until": "cta -0.2",
+     "label": {
+      "text": "CRIMEAN BRIDGE",
+      "sub": "STRUCK BY UKRAINE THIS WEEK",
+      "dx": -300,
+      "dy": -200
+     }
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      110,
+      300,
+      860
+     ],
+     "kicker": "PUTIN · AFTER THE CRIMEAN BRIDGE STRIKES",
+     "text": "\"WE WILL NOT NEGOTIATE\"",
+     "color": "danger",
+     "at": "f3:Putin",
+     "until": "f3:promised -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "NO CEASEFIRE TALKS",
+     "icon": "shield",
+     "color": "danger",
+     "screen": [
+      540,
+      560
+     ],
+     "at": "f3:ceasefire.",
+     "until": "f3:promised -0.2",
+     "note": "PER PUTIN"
+    },
+    {
+     "kind": "note",
+     "text": "\"FAR MORE PAINFUL\" RESPONSE",
+     "sub": "PUTIN'S THREAT · PER REPORTS",
+     "y": 1100,
+     "at": "f3:promised",
+     "until": "cta -0.2"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 60,
+     "lat": 45,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 85,
+     "lat": 38,
+     "R": 460
+    },
+    {
+     "at": "end",
+     "lon": 88,
+     "lat": 38,
+     "R": 460
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "CHN",
+     "color": "oil",
+     "alpha": 0.6
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.5
+    },
+    {
+     "iso": "USA",
+     "color": "info",
+     "alpha": 0.5
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      114.07,
+      22.55
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "REAL NUCLEAR TALKS",
+     "text"
+    ],
+    [
+     "IN 2027?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: CBS NEWS, CBC, GULF NEWS, KYIV POST, ASIA TIMES, BNE INTELLINEWS, DECCAN HERALD · TEXT: WHITE HOUSE, XINHUA",
+    "NOV 19–20, 2026"
+   ]
+  }
+ ]
+}
