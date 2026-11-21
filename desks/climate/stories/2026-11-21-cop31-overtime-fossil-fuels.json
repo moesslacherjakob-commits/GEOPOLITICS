@@ -1,0 +1,504 @@
+{
+ "id": "2026-11-21-cop31-overtime-fossil-fuels",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "COP thirty-one was supposed to end Friday. Why are nearly two hundred countries still negotiating?"
+  },
+  {
+   "id": "f1",
+   "text": "The climate talks in Antalya, Türkiye, ran past their Friday deadline, The National reports. The sticking point: Thursday's draft deal. Several outlets report it no longer mentions fossil fuels, and dropped a one hundred twenty billion dollar target to help poorer countries adapt."
+  },
+  {
+   "id": "f2",
+   "text": "Countries including France, Panama and the Solomon Islands wrote that any deal must include a clear transition away from fossil fuels. Panama's environment minister, Juan Carlos Navarro, threatened a formal objection. Reports say resistance is led by producers, including Saudi Arabia and Russia."
+  },
+  {
+   "id": "f3",
+   "text": "COP president Murat Kurum said: we are close to the finish line, but we are not there yet. Talks chief Chris Bowen said he would work as long as it takes. A new draft was expected Saturday."
+  },
+  {
+   "id": "cta",
+   "text": "Will the final COP thirty-one deal mention fossil fuels? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE DEADLINE",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE FAULT LINE",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE ENDGAME",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 0,
+     "lat": 25,
+     "R": 300
+    },
+    {
+     "at": 3.8,
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 560
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "TUR",
+     "color": "accent",
+     "at": 0.4,
+     "alpha": 0.45
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "color": "accent",
+     "at": 0.5,
+     "label": "ANTALYA",
+     "big": true
+    }
+   ],
+   "chip": {
+    "text": "COP31 · OVERTIME",
+    "at": 0.25,
+    "color": "danger"
+   },
+   "headline": {
+    "at": "hook:supposed",
+    "lines": [
+     [
+      "DEADLINE: FRIDAY",
+      "text",
+      104
+     ],
+     [
+      "STILL NO DEAL",
+      "accent",
+      104
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    20,
+    30
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 30.7,
+     "lat": 36.9,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.6",
+     "lon": 30.9,
+     "lat": 37.6,
+     "dist": 16,
+     "pitch": 50,
+     "yaw": -14,
+     "oy": 220
+    },
+    {
+     "at": "f2",
+     "lon": 20,
+     "lat": 25,
+     "dist": 150,
+     "pitch": 22,
+     "yaw": 0,
+     "oy": 160
+    },
+    {
+     "at": "f2:Navarro",
+     "lon": -10,
+     "lat": 20,
+     "dist": 160,
+     "pitch": 26,
+     "yaw": 0,
+     "oy": 160
+    },
+    {
+     "at": "f2:Reports",
+     "lon": 50,
+     "lat": 30,
+     "dist": 125,
+     "pitch": 24,
+     "yaw": 0,
+     "oy": 160
+    },
+    {
+     "at": "f2$",
+     "lon": 50,
+     "lat": 30,
+     "dist": 125,
+     "pitch": 24,
+     "yaw": 0,
+     "oy": 160
+    },
+    {
+     "at": "f3",
+     "lon": 30.7,
+     "lat": 37.2,
+     "dist": 30,
+     "pitch": 46,
+     "yaw": 16,
+     "oy": 200
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 30.7,
+     "lat": 37,
+     "dist": 40,
+     "pitch": 50,
+     "yaw": -6,
+     "oy": 200
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "TUR",
+     "color": "accent",
+     "alpha": 0.28,
+     "glow": true,
+     "at": "f1 +0.4"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1 +0.6",
+     "label": {
+      "text": "ANTALYA",
+      "sub": "COP31 VENUE · TÜRKIYE",
+      "dx": 220,
+      "dy": -160,
+      "until": "f1:sticking -0.3"
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "DEADLINE MISSED",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      540,
+      600
+     ],
+     "note": "FRI NOV 20 · PER THE NATIONAL",
+     "at": "f1:deadline",
+     "until": "f1:sticking -0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "FRA",
+     "color": "info",
+     "alpha": 0.5,
+     "glow": true,
+     "at": "f2:France"
+    },
+    {
+     "kind": "tint",
+     "iso": "PAN",
+     "color": "info",
+     "alpha": 0.6,
+     "glow": true,
+     "at": "f2:Panama"
+    },
+    {
+     "kind": "tint",
+     "iso": "SLB",
+     "color": "info",
+     "alpha": 0.6,
+     "glow": true,
+     "at": "f2:Solomon"
+    },
+    {
+     "kind": "arc",
+     "from": "FRA",
+     "to": [
+      30.7,
+      36.9
+     ],
+     "color": "info",
+     "height": 0.25,
+     "at": "f2:France +0.2"
+    },
+    {
+     "kind": "arc",
+     "from": "PAN",
+     "to": [
+      30.7,
+      36.9
+     ],
+     "color": "info",
+     "height": 0.35,
+     "at": "f2:Panama +0.2"
+    },
+    {
+     "kind": "arc",
+     "from": "SLB",
+     "to": [
+      30.7,
+      36.9
+     ],
+     "color": "info",
+     "height": 0.35,
+     "at": "f2:Solomon +0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "PANAMA: FORMAL OBJECTION?",
+     "icon": "flag",
+     "color": "info",
+     "screen": [
+      540,
+      560
+     ],
+     "note": "THREATENED BY ENV. MINISTER NAVARRO",
+     "at": "f2:Navarro",
+     "until": "f2:Reports -0.2"
+    },
+    {
+     "kind": "note",
+     "text": "SIGNATORIES INCLUDE FRANCE, PANAMA, SOLOMON ISLANDS · LETTER, NOV 20",
+     "y": 1170,
+     "at": "f2:France",
+     "until": "f2:Navarro -0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "SAU",
+     "color": "oil",
+     "alpha": 0.45,
+     "hatch": true,
+     "at": "f2:Saudi"
+    },
+    {
+     "kind": "tint",
+     "iso": "RUS",
+     "color": "oil",
+     "alpha": 0.35,
+     "hatch": true,
+     "at": "f2:Russia"
+    },
+    {
+     "kind": "tag",
+     "loc": "SAU",
+     "text": "SAUDI ARABIA",
+     "sub": "PRODUCER · PER REPORTS",
+     "color": "oil",
+     "dx": -220,
+     "dy": -60,
+     "at": "f2:Saudi",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      60,
+      58
+     ],
+     "text": "RUSSIA",
+     "sub": "PRODUCER · PER REPORTS",
+     "color": "oil",
+     "dx": -60,
+     "dy": -150,
+     "at": "f2:Russia",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      130,
+      470,
+      820
+     ],
+     "title": "THE ENDGAME",
+     "color": "info",
+     "rows": [
+      {
+       "icon": "people",
+       "text": "BOWEN: \"AS LONG AS IT TAKES\"",
+       "at": "f3:Bowen"
+      },
+      {
+       "icon": "flag",
+       "text": "NEW DRAFT EXPECTED SAT NOV 21",
+       "at": "f3:draft"
+      }
+     ],
+     "at": "f3:Bowen -0.2",
+     "until": "cta -0.1"
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "from": "f1:sticking -0.2",
+   "to": "f1$ +0.3",
+   "label": "COP31 DEAL TEXT",
+   "color": "accent",
+   "items": [
+    {
+     "date": "MON NOV 16",
+     "title": "FIRST DRAFT",
+     "sub": "FOSSIL-FUEL OPTIONS IN TEXT · REUTERS",
+     "color": "neutral",
+     "at": "f1:sticking"
+    },
+    {
+     "date": "THU NOV 19",
+     "title": "NO FOSSIL FUEL MENTION",
+     "sub": "$120 BN ADAPTATION GOAL DROPPED",
+     "color": "danger",
+     "big": true,
+     "at": "f1:Thursday's"
+    },
+    {
+     "date": "FRI NOV 20",
+     "title": "DEADLINE PASSES",
+     "sub": "TALKS GO INTO OVERTIME",
+     "color": "accent",
+     "at": "f1:dollar"
+    }
+   ],
+   "source": "SOURCES: REUTERS · THE NATIONAL · FORBES · NOV 16–21"
+  },
+  {
+   "type": "quote",
+   "from": "f3 -0.1",
+   "to": "f3:Bowen -0.2",
+   "at": "f3:Kurum",
+   "lines": [
+    [
+     "\"WE ARE CLOSE TO THE FINISH LINE,",
+     "text"
+    ],
+    [
+     "BUT WE ARE NOT THERE YET\"",
+     "accent"
+    ]
+   ],
+   "by": "MURAT KURUM · COP31 PRESIDENT",
+   "color": "info"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "DEADLINE: MISSED.",
+     "text"
+    ],
+    [
+     "FOSSIL FUELS BACK IN?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "THE NATIONAL · FORBES · THE INDEPENDENT · 24NEWSHD",
+    "SEARCH EXCERPTS · MAP FOR ORIENTATION"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": 10,
+     "lat": 28,
+     "R": 540
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "COP31 Runs Into Overtime Over Fossil Fuels #shorts",
+  "description": "The UN climate talks in Antalya, Türkiye, ran past their Friday deadline as nearly 200 countries clashed over fossil fuels and climate finance. Thursday's revised draft deal no longer mentions fossil fuels and dropped a $120 billion adaptation finance target, several outlets report. Countries including France, Panama and the Solomon Islands wrote that any deal must include \"a clear transition away from fossil fuels\"; Panama's environment minister Juan Carlos Navarro threatened a formal objection. Reports say resistance is led by producers including Saudi Arabia and Russia. COP31 President Murat Kurum: \"We are close to the finish line, but we are not there yet.\" A new draft was expected on Saturday.\n\nSources: The National, Forbes, The Independent (via Yahoo News), 24NewsHD, Yahoo News Australia, Reuters (Nov 16 draft) (based on search-result excerpts). Map locations are for orientation.\n\n#climate #cop31 #fossilfuels #climatechange #antalya",
+  "tags": [
+   "climate",
+   "weather",
+   "news",
+   "COP31",
+   "Antalya",
+   "Türkiye",
+   "fossil fuels",
+   "climate deal",
+   "overtime",
+   "Panama",
+   "Murat Kurum",
+   "Chris Bowen",
+   "climate summit"
+  ],
+  "cover": "f2:Panama +1"
+ },
+ "thumbnail": {
+  "at": "f2:Solomon +1.2",
+  "focus": [
+   30.7,
+   36.9
+  ],
+  "zoom": 1.1,
+  "number": "~200",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "NATIONS",
+    "text"
+   ],
+   [
+    "STILL NO DEAL",
+    "accent"
+   ]
+  ],
+  "source": "NOV 21 · PER THE NATIONAL"
+ }
+}
