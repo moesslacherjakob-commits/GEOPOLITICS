@@ -1,0 +1,311 @@
+{
+ "id": "2026-11-21-bepicolombo-mercury-orbit",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Six billion miles, eight years in space. Why is Mercury so hard to reach?"
+  },
+  {
+   "id": "f1",
+   "text": "Today, the European and Japanese probe BepiColombo is set to fire its engine and enter orbit around Mercury. Space.com reports a thirty-seven minute burn. If it works, it becomes only the second spacecraft to orbit Mercury, after NASA's Messenger."
+  },
+  {
+   "id": "f2",
+   "text": "Why so hard? Falling toward the Sun, a probe keeps speeding up, so it must brake to stay at Mercury. Since its launch in twenty eighteen, BepiColombo has flown past Earth once, Venus twice and Mercury six times to shed that speed."
+  },
+  {
+   "id": "f3",
+   "text": "A thruster problem found in twenty twenty-four delayed arrival by almost a year. ESA says today's burn is the first of sixteen through March. The two orbiters separate in December, and science should start in April twenty twenty-seven."
+  },
+  {
+   "id": "cta",
+   "text": "Will BepiColombo start its science at Mercury on time in April? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE ARRIVAL",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "WHY IT'S HARD",
+   "seg": "f2",
+   "color": "violet"
+  },
+  {
+   "n": "03",
+   "name": "WHAT'S NEXT",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "oil"
+  }
+ ],
+ "upload": {
+  "title": "BepiColombo Tries to Brake Into Orbit Around Mercury #shorts",
+  "description": "The European-Japanese probe BepiColombo, launched in October 2018, is scheduled to enter orbit around Mercury on November 21, 2026, with an engine burn of about 37 minutes per Space.com. It would be only the second spacecraft to orbit Mercury after NASA's Messenger. ESA says the capture is the first of 16 manoeuvres through March 2027; the two orbiters MPO and Mio separate in December and science is planned to begin in April 2027. This video was made before the burn; check ESA's live updates for the outcome.\n\nSources: ESA BepiColombo pages and arrival timeline, Space.com, Sky & Telescope, CNN, Tech Times.\n\n#science #space #bepicolombo #mercury #esa #jaxa",
+  "tags": [
+   "science",
+   "news",
+   "space",
+   "BepiColombo",
+   "Mercury",
+   "ESA",
+   "JAXA",
+   "orbit insertion",
+   "space exploration",
+   "planetary science"
+  ],
+  "cover": "f1:thirty-seven +0.8"
+ },
+ "thumbnail": {
+  "at": "hook:reach? -0.3",
+  "focus": [
+   8.62,
+   49.87
+  ],
+  "zoom": 1.15,
+  "number": "8 YEARS",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "THE BIG BURN",
+    "text"
+   ],
+   [
+    "CAPTURED TODAY?",
+    "accent"
+   ]
+  ],
+  "source": "BEPICOLOMBO · NOV 21 · PER ESA · SPACE.COM"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "view": [
+    {
+     "at": 0,
+     "lon": -30,
+     "lat": 20,
+     "R": 380
+    },
+    {
+     "at": 4.0,
+     "lon": 8.6,
+     "lat": 49.9,
+     "R": 520
+    }
+   ],
+   "chip": {
+    "text": "ESA · JAXA · BEPICOLOMBO · NOV 21",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      8.62,
+      49.87
+     ],
+     "color": "accent",
+     "at": "hook:eight",
+     "label": "MISSION CONTROL",
+     "sub": "ESA ESOC · DARMSTADT",
+     "dx": -40,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:miles,",
+    "lines": [
+     [
+      "6 BILLION MILES",
+      "text",
+      96
+     ],
+     [
+      "TO MERCURY",
+      "accent",
+      84
+     ]
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.1",
+   "label": "CAPTURE BURN",
+   "sublabel": "MERCURY ORBIT INSERTION · NOV 21, 2026",
+   "icon": "flame",
+   "color": "accent",
+   "value": 37,
+   "start": 0,
+   "suffix": " MIN",
+   "decimals": 0,
+   "at": "f1 +0.3",
+   "doneAt": "f1:thirty-seven +0.8",
+   "note": "IF IT WORKS: 2ND SPACECRAFT EVER TO ORBIT MERCURY · AFTER NASA'S MESSENGER",
+   "source": "SOURCES: SPACE.COM · ESA · SCHEDULED, NOT YET CONFIRMED"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f2:Since -0.2",
+   "label": "WHY MERCURY IS HARD",
+   "color": "violet",
+   "steps": [
+    {
+     "icon": "flame",
+     "title": "FALLING TOWARD THE SUN",
+     "sub": "THE SUN'S GRAVITY PULLS INWARD",
+     "color": "oil",
+     "at": "f2:Falling"
+    },
+    {
+     "icon": "bolt",
+     "title": "THE PROBE SPEEDS UP",
+     "sub": "MORE SPEED THE CLOSER IT GETS",
+     "color": "danger",
+     "at": "f2:speeding"
+    },
+    {
+     "icon": "check",
+     "title": "IT MUST BRAKE",
+     "sub": "TO BE CAPTURED BY MERCURY",
+     "color": "accent",
+     "at": "f2:brake"
+    }
+   ],
+   "source": "BACKGROUND: ESA BEPICOLOMBO MISSION"
+  },
+  {
+   "type": "bars",
+   "from": "f2:Since -0.2",
+   "to": "f3 -0.1",
+   "label": "9 FLYBYS TO SHED SPEED",
+   "sublabel": "PLANETARY FLYBYS SINCE LAUNCH IN OCT 2018",
+   "color": "violet",
+   "bars": [
+    {
+     "label": "EARTH",
+     "value": 1,
+     "display": "1",
+     "color": "info",
+     "at": "f2:Earth",
+     "dur": 0.8
+    },
+    {
+     "label": "VENUS",
+     "value": 2,
+     "display": "2",
+     "color": "oil",
+     "at": "f2:Venus",
+     "dur": 0.8
+    },
+    {
+     "label": "MERCURY",
+     "value": 6,
+     "display": "6",
+     "color": "accent",
+     "at": "f2:Mercury#1",
+     "dur": 1.0
+    }
+   ],
+   "source": "SOURCE: ESA BEPICOLOMBO MISSION"
+  },
+  {
+   "type": "timeline",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "THE ROAD TO SCIENCE",
+   "color": "oil",
+   "items": [
+    {
+     "date": "2024",
+     "title": "THRUSTER PROBLEM FOUND",
+     "sub": "ARRIVAL SLIPS FROM DEC 2025",
+     "color": "danger",
+     "at": "f3 +0.3"
+    },
+    {
+     "date": "NOV 21, 2026",
+     "title": "CAPTURE BURN",
+     "sub": "1ST OF 16 BURNS THROUGH MARCH",
+     "color": "accent",
+     "big": true,
+     "at": "f3:ESA"
+    },
+    {
+     "date": "DEC 9–10",
+     "title": "MPO AND MIO SEPARATE",
+     "sub": "ESA + JAXA ORBITERS",
+     "color": "info",
+     "at": "f3:separate"
+    },
+    {
+     "date": "APR 6, 2027",
+     "title": "SCIENCE PHASE BEGINS",
+     "sub": "PER ESA PLAN",
+     "color": "ok",
+     "at": "f3:science"
+    }
+   ],
+   "source": "SOURCES: ESA ARRIVAL TIMELINE · SPACE.COM"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -30,
+     "lat": 20,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 8.6,
+     "lat": 49.9,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": 12,
+     "lat": 46,
+     "R": 500
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      8.62,
+      49.87
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "SCIENCE AT MERCURY",
+     "text"
+    ],
+    [
+     "ON TIME IN APRIL?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "ESA · JAXA · SPACE.COM · SKY & TELESCOPE · CNN · TECH TIMES",
+    "MADE BEFORE THE BURN · OUTCOME NOT YET CONFIRMED"
+   ]
+  }
+ ]
+}
