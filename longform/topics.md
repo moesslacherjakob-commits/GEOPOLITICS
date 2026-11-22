@@ -9,7 +9,7 @@ Evergreen questions behind the news. Pick one that ties to this week's headlines
 - Taiwan Strait: why the world's chips depend on 130 kilometres of water
 - The South China Sea: islands, reefs and the fight over who owns the sea
 - Ethiopia, Eritrea and the fight for access to the Red Sea
-- NATO Article 5: what "an attack on one is an attack on all" really obliges
+- NATO Article 5: what "an attack on one is an attack on all" really obliges (teased as next Wednesday in the 2026-11-22 recap)
 - The Arctic: melting ice, new shipping lanes, and who claims what
 - Sudan's war: who is fighting whom, and why the world looks away
 - The Sahel: why military juntas turned from France to Russia
