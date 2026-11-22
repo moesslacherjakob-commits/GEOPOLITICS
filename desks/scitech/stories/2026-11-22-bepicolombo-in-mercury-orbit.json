@@ -1,0 +1,314 @@
+{
+ "id": "2026-11-22-bepicolombo-in-mercury-orbit",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Harder than flying to Pluto. Did Europe and Japan's Mercury probe just make it?"
+  },
+  {
+   "id": "f1",
+   "text": "On Saturday evening, after eight years and nine planetary flybys, BepiColombo fired four thrusters for thirty-seven minutes, ESA says. The burn ran through its closest pass, about six hundred and thirty-five kilometres above Mercury, to slow the probe down."
+  },
+  {
+   "id": "f2",
+   "text": "It worked. ESA says flight dynamics confirmed the capture from tracking data. Reports put the first orbit at about five hundred and ninety by eleven thousand six hundred kilometres. Only NASA's Messenger has orbited Mercury before."
+  },
+  {
+   "id": "f3",
+   "text": "Why so hard? Falling toward the Sun, a probe speeds up. ESA says orbiting Mercury takes more energy than a trip to Pluto. Next, the two orbiters separate on December ninth and tenth, and science is planned from April twenty twenty-seven."
+  },
+  {
+   "id": "cta",
+   "text": "Will BepiColombo start its Mercury science on time in April? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE BURN",
+   "seg": "f1",
+   "color": "oil"
+  },
+  {
+   "n": "02",
+   "name": "THE RESULT",
+   "seg": "f2",
+   "color": "ok"
+  },
+  {
+   "n": "03",
+   "name": "WHY IT'S HARD",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "violet"
+  }
+ ],
+ "upload": {
+  "title": "BepiColombo Is Now in Orbit Around Mercury #shorts",
+  "description": "The European-Japanese probe BepiColombo has entered orbit around Mercury. ESA says the four thrusters of its Mercury Planetary Orbiter fired for 37 minutes on November 21, 2026, from 18:24 UTC, through closest approach about 635 km above the surface, and that flight dynamics confirmed the capture from tracking data. Reports give a first elliptical polar orbit of about 590 by 11,640 km. It is only the second spacecraft to orbit Mercury after NASA's Messenger (2011–2015). The two orbiters MPO and Mio are due to separate on December 9–10, with science planned from April 2027.\n\nSources: ESA (ESA Operations, BepiColombo arrival timeline and factsheet), Manila Times / Japan wire report, Starlust, AeroTime, Space.com, Tech Times.\n\n#science #space #bepicolombo #mercury #esa #jaxa",
+  "tags": [
+   "science",
+   "news",
+   "space",
+   "BepiColombo",
+   "Mercury",
+   "ESA",
+   "JAXA",
+   "Mercury orbit",
+   "space exploration",
+   "planetary science"
+  ],
+  "cover": "f2:confirmed +0.8"
+ },
+ "thumbnail": {
+  "at": "hook:probe",
+  "focus": [
+   8.62,
+   49.87
+  ],
+  "zoom": 1.15,
+  "number": "37 MIN",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "ONE BIG BURN",
+    "text"
+   ],
+   [
+    "CAPTURED",
+    "ok"
+   ]
+  ],
+  "source": "NOV 21 · PER ESA"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "view": [
+    {
+     "at": 0,
+     "lon": 140,
+     "lat": 30,
+     "R": 380
+    },
+    {
+     "at": 4.0,
+     "lon": 8.6,
+     "lat": 49.9,
+     "R": 520
+    }
+   ],
+   "chip": {
+    "text": "ESA · JAXA · BEPICOLOMBO · NOV 21",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      8.62,
+      49.87
+     ],
+     "color": "accent",
+     "at": "hook:Did",
+     "label": "ESA MISSION CONTROL",
+     "sub": "DARMSTADT · GERMANY",
+     "dx": -40,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:flying",
+    "lines": [
+     [
+      "HARDER THAN",
+      "text",
+      92
+     ],
+     [
+      "A TRIP TO PLUTO",
+      "accent",
+      84
+     ]
+    ]
+   }
+  },
+  {
+   "type": "flow",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.1",
+   "label": "THE CAPTURE BURN · NOV 21",
+   "color": "oil",
+   "steps": [
+    {
+     "icon": "flame",
+     "title": "4 THRUSTERS FIRE",
+     "sub": "ON ESA'S MERCURY PLANETARY ORBITER",
+     "color": "oil",
+     "at": "f1:four"
+    },
+    {
+     "icon": "bolt",
+     "title": "37 MINUTES",
+     "sub": "FROM 18:24 UTC",
+     "color": "danger",
+     "at": "f1:thirty-seven"
+    },
+    {
+     "icon": "eye",
+     "title": "≈635 KM ABOVE MERCURY",
+     "sub": "BURN THROUGH CLOSEST PASS",
+     "color": "info",
+     "at": "f1:closest"
+    },
+    {
+     "icon": "check",
+     "title": "PROBE SLOWS DOWN",
+     "sub": "SO MERCURY'S GRAVITY CAN HOLD IT",
+     "color": "accent",
+     "at": "f1:slow"
+    }
+   ],
+   "source": "SOURCE: ESA OPERATIONS"
+  },
+  {
+   "type": "facts",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "color": "ok",
+   "items": [
+    {
+     "icon": "check",
+     "big": "CAPTURED",
+     "text": "CONFIRMED FROM TRACKING DATA · PER ESA",
+     "color": "ok",
+     "at": "f2:confirmed"
+    },
+    {
+     "icon": "eye",
+     "big": "≈590 × 11,640 KM",
+     "text": "FIRST ELLIPTICAL POLAR ORBIT · PER REPORTS",
+     "color": "info",
+     "at": "f2:Reports"
+    },
+    {
+     "icon": "flag",
+     "big": "2ND EVER",
+     "text": "AFTER NASA'S MESSENGER · 2011–2015",
+     "color": "accent",
+     "at": "f2:Messenger"
+    }
+   ],
+   "source": "SOURCES: ESA · MANILA TIMES · STARLUST · AEROTIME"
+  },
+  {
+   "type": "quote",
+   "from": "f3 -0.1",
+   "to": "f3:Next, -0.2",
+   "at": "f3:ESA -0.3",
+   "color": "violet",
+   "lines": [
+    [
+     "\"EVEN MORE ENERGY IS NEEDED",
+     "text"
+    ],
+    [
+     "THAN SENDING A MISSION TO PLUTO\"",
+     "accent"
+    ]
+   ],
+   "by": "ESA BEPICOLOMBO FACTSHEET · ON REACHING A STABLE MERCURY ORBIT"
+  },
+  {
+   "type": "timeline",
+   "from": "f3:Next, -0.2",
+   "to": "cta -0.1",
+   "label": "WHAT COMES NEXT",
+   "color": "violet",
+   "items": [
+    {
+     "date": "NOV 21, 2026",
+     "title": "CAPTURED BY MERCURY",
+     "sub": "1ST OF 16 BURNS",
+     "color": "ok",
+     "at": "f3:Next, -0.1"
+    },
+    {
+     "date": "DEC 9–10",
+     "title": "MPO AND MIO SEPARATE",
+     "sub": "ESA + JAXA ORBITERS",
+     "color": "info",
+     "big": true,
+     "at": "f3:separate"
+    },
+    {
+     "date": "MARCH 2027",
+     "title": "FINAL SCIENCE ORBITS",
+     "sub": "PER ESA PLAN",
+     "color": "oil",
+     "at": "f3:tenth,"
+    },
+    {
+     "date": "APRIL 2027",
+     "title": "SCIENCE BEGINS",
+     "sub": "PER ESA PLAN",
+     "color": "accent",
+     "at": "f3:science"
+    }
+   ],
+   "source": "SOURCE: ESA ARRIVAL TIMELINE"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 140,
+     "lat": 30,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 8.6,
+     "lat": 49.9,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": 30,
+     "lat": 40,
+     "R": 500
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      8.62,
+      49.87
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "IN ORBIT AT MERCURY",
+     "text"
+    ],
+    [
+     "SCIENCE ON TIME?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "ESA · ESA OPERATIONS · MANILA TIMES · STARLUST · AEROTIME · SPACE.COM",
+    "ORBIT FIGURES PER REPORTS · SCHEDULE PER ESA PLAN"
+   ]
+  }
+ ]
+}
