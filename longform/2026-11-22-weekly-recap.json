@@ -9,11 +9,11 @@
   },
   {
    "id": "promise",
-   "text": "Five stories, ranked by impact. Tanks across a ceasefire line in Gaza. A rebel army closing in on Yemen's last big city. Three nuclear powers signing one short text in China. A war that crossed into NATO territory. And at number one, an island where more than fourteen tankers are reportedly lined up, waiting."
+   "text": "Five stories, ranked by impact. Tanks across a ceasefire line in Gaza. A rebel army closing in on the city that hosts Yemen's government. Three nuclear powers signing one short text in China. A war that crossed into NATO territory. And at number one, an island where more than fourteen tankers are reportedly lined up, waiting."
   },
   {
    "id": "ch5",
-   "text": "Number five: Gaza's Yellow Line. On Wednesday, Israeli tanks pushed west of that line in central Gaza. Reuters and AFP reported it was the first ground push past the ceasefire boundary since the truce began in October twenty twenty-five. The Israeli military and the Shin Bet said the target was a Hamas tunnel near the Nuseirat and Bureij camps. Residents were ordered out. Witnesses told Reuters some tanks reached Salah al-Din Road, the main north to south highway. Hamas called it a flagrant violation of the ceasefire and asked the mediators to step in. On Thursday, the tanks pulled back. The army told AFP the operation was completed and the road had reopened. By then, AFP reports, about six thousand Palestinians had fled their shelters. Al Jazeera reports that the Yellow Line has been moved step by step, and now takes in around two thirds of the enclave. The toll of the truce is heavy. Gaza's health authorities say more than one thousand six hundred Palestinians have been killed since it began. The Israeli military says five of its soldiers have died. A Board of Peace report to the U.N. Security Council, seen by Reuters, faults both sides: Israel for restricting aid, Hamas for armed activity. For you, the line decides where about two million people can live, and where aid trucks can drive. Next: a rebel army sixty kilometres from a capital.",
+   "text": "Number five: Gaza's Yellow Line. On Wednesday, Israeli tanks pushed west of that line in central Gaza. Reuters and AFP reported it was the first ground push past the ceasefire boundary since the truce began in October twenty twenty-five. The Israeli military and the Shin Bet said the target was a Hamas tunnel near the Nuseirat and Bureij camps. Residents were ordered out. Witnesses told Reuters some tanks reached Salah al-Din Road, the main north to south highway. Hamas called it a flagrant violation of the ceasefire and asked the mediators to step in. On Thursday, the tanks pulled back. The army told AFP the operation was completed and the road had reopened. By then, AFP reports, about six thousand Palestinians had fled their shelters. Al Jazeera reports that the Yellow Line has been moved step by step, and now takes in around two thirds of the enclave. Gaza's health authorities say more than one thousand six hundred Palestinians have been killed since it began. The Israeli military says five of its soldiers have died. A Board of Peace report to the U.N. Security Council, seen by Reuters, faults both sides: Israel for restricting aid, Hamas for armed activity. For you, the line decides where Gaza's people can live, and where aid trucks can drive. Next: a rebel army closing in on Yemen's interim capital.",
    "pauseBefore": 0.4
   },
   {
@@ -23,7 +23,7 @@
   },
   {
    "id": "ch3",
-   "text": "Number three: Shenzhen. On Thursday, Donald Trump, Xi Jinping and Vladimir Putin met together for the first time, on the sidelines of the APEC summit in China. They signed a short text called the Declaration toward Peace. Its key line: a nuclear war cannot be won and must never be fought. The three promise dialogue on nuclear risk reduction and non-proliferation. Reuters notes there is no date and no format for those talks. The text also backs more refined petroleum products and stable energy flows, an unspecified reform of the United Nations, and warns international courts not to abuse their jurisdiction. The International Criminal Court issued an arrest warrant for Putin in March twenty twenty-three. Quick question. When did New START, the last treaty capping American and Russian nuclear warheads, expire? Take a guess. The answer: February twenty twenty-six. Since then, no treaty limits the two biggest arsenals. Russia holds about five thousand four hundred warheads, the United States about five thousand two hundred, and China about six hundred, according to the Federation of American Scientists. What the text leaves out matters too. Ukraine and Iran are not mentioned. Trump called the meeting bigger than Yalta. Xi called the talks positive, constructive and fruitful. And in Shenzhen, Putin said that after the strikes on the Crimean Bridge, Russia would not negotiate a ceasefire. For you, it means that for now, nothing on paper limits the world's largest nuclear arsenals. Next: the bridge he meant.",
+   "text": "Number three: Shenzhen. On Thursday, Donald Trump, Xi Jinping and Vladimir Putin met together for the first time, on the sidelines of the APEC summit in China. They signed a short text called the Declaration toward Peace. Its key line: a nuclear war cannot be won and must never be fought. The three promise dialogue on nuclear risk reduction and non-proliferation. Reuters notes there is no date and no format for those talks. The text also backs more refined petroleum products and stable energy flows, an unspecified reform of the United Nations, and warns international courts not to abuse their jurisdiction. The International Criminal Court issued an arrest warrant for Putin in March twenty twenty-three. Quick question. When did New START, the last treaty capping American and Russian nuclear warheads, expire? Take a guess. The answer: February twenty twenty-six. Since then, no treaty limits the two biggest arsenals. Russia holds nearly five thousand five hundred warheads, the United States about five thousand two hundred, and China about six hundred, according to the Federation of American Scientists. What the text leaves out matters too. Ukraine and Iran are not mentioned. Trump called the meeting bigger than Yalta. Xi called the talks positive, constructive and fruitful. And in Shenzhen, Putin said that after the strikes on the Crimean Bridge, Russia would not negotiate a ceasefire. For you, it means that for now, nothing on paper limits the world's largest nuclear arsenals. Next: the bridge he meant.",
    "pauseBefore": 0.4
   },
   {
@@ -162,11 +162,14 @@
    ],
    "markers": [
     {
-     "loc": "Strait of Hormuz",
+     "loc": [
+      63,
+      18
+     ],
      "color": "danger",
      "at": "hook:carriers",
      "label": "3 U.S. CARRIERS",
-     "sub": "PER AXIOS · NOV 15",
+     "sub": "ARABIAN SEA · PER AXIOS, GULF NEWS",
      "dx": 60,
      "dy": 80
     },
@@ -431,7 +434,7 @@
      "oy": 40
     },
     {
-     "at": "ch5:toll",
+     "at": "ch5:health",
      "lon": 34.42,
      "lat": 31.45,
      "dist": 8,
@@ -440,7 +443,7 @@
      "oy": 40
     },
     {
-     "at": "ch5:million",
+     "at": "ch5:people",
      "lon": 34.42,
      "lat": 31.45,
      "dist": 8,
@@ -452,7 +455,7 @@
      "at": "ch5:Next:",
      "lon": 40,
      "lat": 22,
-     "dist": 8,
+     "dist": 60,
      "pitch": 40,
      "yaw": 0,
      "oy": 40
@@ -509,7 +512,7 @@
       "text": "ADEN",
       "dx": -220,
       "dy": -80,
-      "sub": "YEMEN'S LAST BIG CITY"
+      "sub": "GOV'T INTERIM CAPITAL"
      }
     },
     {
@@ -859,7 +862,7 @@
      "fill": 0.0,
      "hatch": true,
      "at": "ch5:moved",
-     "until": "ch5:toll"
+     "until": "ch5:health"
     },
     {
      "kind": "stamp",
@@ -871,21 +874,8 @@
       250
      ],
      "at": "ch5:thirds",
-     "until": "ch5:toll",
+     "until": "ch5:health",
      "note": "INSIDE THE LINE · PER AL JAZEERA"
-    },
-    {
-     "kind": "stamp",
-     "text": "≈ 2 MILLION PEOPLE",
-     "icon": "people",
-     "color": "info",
-     "screen": [
-      960,
-      250
-     ],
-     "at": "ch5:million",
-     "until": "ch5:Next:",
-     "note": "LIVE IN GAZA"
     },
     {
      "kind": "marker",
@@ -966,7 +956,7 @@
       250
      ],
      "at": "ch5:Hamas#2",
-     "until": "ch5:million",
+     "until": "ch5:trucks",
      "note": "BOARD OF PEACE REPORT · SEEN BY REUTERS"
     },
     {
@@ -986,7 +976,7 @@
   },
   {
    "type": "facts",
-   "from": "ch5:toll -0.2",
+   "from": "ch5:health -0.2",
    "to": "ch5:Security -0.1",
    "color": "danger",
    "items": [
@@ -2752,7 +2742,7 @@
      ],
      "at": "ch2:invoke",
      "until": "ch2:Article",
-     "note": "PER RUTTE"
+     "note": "PER AL JAZEERA"
     },
     {
      "kind": "marker",
@@ -3039,7 +3029,7 @@
       "text": "USS THEODORE ROOSEVELT",
       "dx": 120,
       "dy": 90,
-      "sub": "ARRIVED · AXIOS, U.S. OFFICIAL"
+      "sub": "ARRIVED · AXIOS · POSITION APPROX."
      }
     },
     {
@@ -3055,7 +3045,8 @@
      "label": {
       "text": "USS GEORGE H.W. BUSH",
       "dx": -320,
-      "dy": -70
+      "dy": -70,
+      "sub": "POSITION APPROX."
      }
     },
     {
@@ -3071,7 +3062,8 @@
      "label": {
       "text": "USS GEORGE WASHINGTON",
       "dx": 120,
-      "dy": -80
+      "dy": -80,
+      "sub": "POSITION APPROX."
      }
     },
     {
@@ -3458,7 +3450,7 @@
       25.7
      ],
      "at": "ch1:blockade",
-     "until": "ch1$ +0.3"
+     "until": "ch1:deputy"
     },
     {
      "kind": "marker",
@@ -3706,6 +3698,7 @@
      "speed": 0.12,
      "spacing": 0.06,
      "offset": 0,
+     "stopAt": 0.06,
      "color": "oil",
      "at": "outlook:Gulf,",
      "until": "outlook:Earlier"
@@ -3863,9 +3856,22 @@
       960,
       250
      ],
-     "at": "outlook:November?",
-     "until": "outlook$ +0.2",
+     "at": "outlook:blockade",
+     "until": "outlook:So,",
      "note": "TANKER CONVOY VS U.S. BLOCKADE"
+    },
+    {
+     "kind": "stamp",
+     "text": "YES OR NO?",
+     "icon": "check",
+     "color": "accent",
+     "screen": [
+      960,
+      250
+     ],
+     "at": "outlook:comments:",
+     "until": "outlook$ +0.2",
+     "note": "YOUR TAKE IN THE COMMENTS"
     },
     {
      "kind": "marker",
@@ -4032,7 +4038,7 @@
    "type": "footage",
    "asset": "f01",
    "from": "ch5:moved -0.3",
-   "to": "ch5:toll -0.3",
+   "to": "ch5:health -0.3",
    "query": "Gaza Strip",
    "kind": "image",
    "symbolic": false,
@@ -4043,7 +4049,7 @@
     "nasa"
    ],
    "lower": {
-    "kicker": "NASA · ASTRONAUT PHOTO",
+    "kicker": "NASA · SPACE SHUTTLE KIDSAT CAMERA · 1990s",
     "text": "THE GAZA STRIP FROM ORBIT",
     "at": "ch5:moved +0.4"
    },
@@ -4069,7 +4075,7 @@
       0.62
      ],
      "label": "MEDITERRANEAN",
-     "at": "ch5:enclave"
+     "at": "ch5:enclave."
     }
    ]
   },
@@ -4089,7 +4095,7 @@
    ],
    "lower": {
     "kicker": "SHENZHEN",
-    "text": "APEC HOST CITY · NOV 2026",
+    "text": "APEC HOST CITY",
     "at": "ch3:APEC +0.3"
    },
    "marks": [
@@ -4212,7 +4218,7 @@
  ],
  "upload": {
   "title": "Missiles in Poland, Fire in Bahrain: The Week's Top 5",
-  "description": "The five biggest geopolitical stories of November 16 to 22, 2026, ranked by impact: Israeli tanks crossing Gaza's Yellow Line ceasefire boundary near Nuseirat and Bureij; Yemen's Houthis advancing toward Aden after government forces left the Bab al-Mandab coast; the Trump–Xi–Putin Shenzhen summit and its Declaration toward Peace on nuclear risk; Ukraine's strikes on the Kerch Bridge, Russia's mass attack on Kyiv and Russian missiles landing in Poland; and the Iran–U.S. standoff in the Gulf, from a third U.S. aircraft carrier and the reported dirty bomb plot to IRGC attacks on U.S. bases in Bahrain, tankers hit near Khasab and a tanker convoy at Kharg Island set to test the U.S. blockade. Every claim is attributed to the source that reported it; unverified claims are labelled as such. Map locations are approximate.\n\nSources:\nReuters via NBC News / IBTimes: Israeli tanks push west of Gaza's Yellow Line (Nov 18, 2026)\nAFP via France 24: Israel ends tank raid in central Gaza; operation completed (Nov 19, 2026)\nAl Jazeera: What does Israel's new ground offensive mean for Palestinians in Gaza? (Nov 18, 2026)\nTimes of Israel / The Jewish Chronicle: IDF completes Gaza operation against Hamas tunnel (Nov 19, 2026)\nReuters via U.S. News / Al-Monitor: Yemen government forces withdraw near Bab al-Mandab to defend Aden (Nov 15-16, 2026)\nAFP via France 24 / Times of Israel: Houthis close to within 60 km of Aden (Nov 16-17, 2026)\nNBC News: Saudi-backed forces retreat to defend Aden (Nov 2026)\nGulf News: Middle East war, 5 things to know (Nov 21, 2026)\nThe National via ua.news: Houthis 100 km from Aden, assault considered unlikely (Nov 2026)\nWhite House / Xinhua: Declaration toward Peace, Shenzhen (Nov 19, 2026)\nReuters via Investing.com: Trump, Xi and Putin release 'peace declaration' (Nov 19, 2026)\nSouth China Morning Post: Concrete aims or just symbolism? (Nov 2026)\nCBS News / Kyiv Post: Shenzhen trilateral coverage (Nov 19-20, 2026)\nFederation of American Scientists: Status of World Nuclear Forces 2025\nCNN / NBC News: Kerch Bridge road span collapsed, geolocated footage (Nov 17, 2026)\nNPR / ABC News / TASS: Kerch Bridge strikes, traffic halted, Vedomosti on rail track (Nov 17-18, 2026)\nAP via PBS / ABC: Russian missiles and drone come down in Poland; Kyiv bridges hit (Nov 20, 2026)\nAFP via France 24 / Al Jazeera / Bloomberg: Poland, Tusk, Rutte reactions (Nov 20-21, 2026)\nAl Jazeera: Russian missiles hit Poland: what happened, and could NATO respond? (Nov 21, 2026)\nNorth Atlantic Treaty, Article 4 (nato.int, 1949)\nTimes of Israel / Axios, Gulf News: third U.S. carrier arrives in the region (Nov 15-16, 2026)\nCNN: US intel indicates Iran developing plans to potentially detonate a dirty bomb in Washington (Nov 16, 2026)\nCNN / CNBC / Middle East Monitor: Trump reacts to reported dirty bomb plot (Nov 17-20, 2026)\nThe Statesman / The Tribune / TRT World / Xinhua: IRGC says it targeted U.S. Patriot radars at two bases in Bahrain (Nov 21-22, 2026)\nIsrael National News / Seoul Economic Daily / SBS: UKMTO, two tankers hit by projectiles near Khasab (Nov 21, 2026)\nEuronews: Iran readies tanker convoy at Kharg Island to test US oil blockade (Nov 20, 2026)\nEuronews: Iran attacks US bases in Bahrain as its tankers get ready to break the US blockade (Nov 21, 2026)\nIran International: Iran hardliners push tanker convoy to defy US blockade (Nov 20, 2026)\nCNBC: Trump says restarting Iran war 'highly unlikely' (Nov 8, 2026)\nU.S. Energy Information Administration (EIA): World Oil Transit Chokepoints\n\n#geopolitics #weeklyrecap #Iran #Poland #NATO",
+  "description": "The five biggest geopolitical stories of November 16 to 22, 2026, ranked by impact: Israeli tanks crossing Gaza's Yellow Line ceasefire boundary near Nuseirat and Bureij; Yemen's Houthis advancing toward Aden after government forces left the Bab al-Mandab coast; the Trump–Xi–Putin Shenzhen summit and its Declaration toward Peace on nuclear risk; Ukraine's strikes on the Kerch Bridge, Russia's mass attack on Kyiv and Russian missiles landing in Poland; and the Iran–U.S. standoff in the Gulf, from a third U.S. aircraft carrier and the reported dirty bomb plot to IRGC-claimed attacks on U.S. bases in Bahrain, tankers hit near Khasab and a reported tanker convoy at Kharg Island said to be preparing to test the U.S. blockade. Every claim is attributed to the source that reported it; unverified claims are labelled as such. Map locations are approximate.\n\nSources:\nReuters via NBC News / IBTimes: Israeli tanks push west of Gaza's Yellow Line (Nov 18, 2026)\nAFP via France 24: Israel ends tank raid in central Gaza; operation completed (Nov 19, 2026)\nAl Jazeera: What does Israel's new ground offensive mean for Palestinians in Gaza? (Nov 18, 2026)\nTimes of Israel / The Jewish Chronicle: IDF completes Gaza operation against Hamas tunnel (Nov 19, 2026)\nReuters via U.S. News / Al-Monitor: Yemen government forces withdraw near Bab al-Mandab to defend Aden (Nov 15-16, 2026)\nAFP via France 24 / Times of Israel: Houthis close to within 60 km of Aden (Nov 16-17, 2026)\nNBC News: Saudi-backed forces retreat to defend Aden (Nov 2026)\nGulf News: Middle East war, 5 things to know (Nov 21, 2026)\nThe National via ua.news: Houthis 100 km from Aden, assault considered unlikely (Nov 2026)\nWhite House / Xinhua: Declaration toward Peace, Shenzhen (Nov 19, 2026)\nReuters via Investing.com: Trump, Xi and Putin release 'peace declaration' (Nov 19, 2026)\nSouth China Morning Post: Concrete aims or just symbolism? (Nov 2026)\nCBS News / Kyiv Post: Shenzhen trilateral coverage (Nov 19-20, 2026)\nFederation of American Scientists: Status of World Nuclear Forces 2025\nCNN / NBC News: Kerch Bridge road span collapsed, geolocated footage (Nov 17, 2026)\nNPR / ABC News / TASS: Kerch Bridge strikes, traffic halted, Vedomosti on rail track (Nov 17-18, 2026)\nAP via PBS / ABC: Russian missiles and drone come down in Poland; Kyiv bridges hit (Nov 20, 2026)\nAFP via France 24 / Al Jazeera / Bloomberg: Poland, Tusk, Rutte reactions (Nov 20-21, 2026)\nAl Jazeera: Russian missiles hit Poland: what happened, and could NATO respond? (Nov 21, 2026)\nNorth Atlantic Treaty, Article 4 (nato.int, 1949)\nTimes of Israel / Axios, Gulf News: third U.S. carrier arrives in the region (Nov 15-16, 2026)\nCNN: US intel indicates Iran developing plans to potentially detonate a dirty bomb in Washington (Nov 16, 2026)\nCNN / CNBC / Middle East Monitor: Trump reacts to reported dirty bomb plot (Nov 17-20, 2026)\nThe Statesman / The Tribune / TRT World / Xinhua: IRGC says it targeted U.S. Patriot radars at two bases in Bahrain (Nov 21-22, 2026)\nIsrael National News / Seoul Economic Daily / SBS: UKMTO, two tankers hit by projectiles near Khasab (Nov 21, 2026)\nEuronews: Iran readies tanker convoy at Kharg Island to test US oil blockade (Nov 20, 2026)\nEuronews: Iran attacks US bases in Bahrain as its tankers get ready to break the US blockade (Nov 21, 2026)\nIran International: Iran hardliners push tanker convoy to defy US blockade (Nov 20, 2026)\nCNBC: Trump says restarting Iran war 'highly unlikely' (Nov 8, 2026)\nU.S. Energy Information Administration (EIA): World Oil Transit Chokepoints\nReuters: Yemen government builds trenches and checkpoints around Aden (Nov 2026)\nArms Control Association / Reuters: New START expired in February 2026\nNATO: Collective defence and Article 5 (invoked once, on 12 September 2001)\nMiddle East Monitor: Trump warns Iran against reported dirty bomb plot (Nov 20, 2026)\n\n#geopolitics #weeklyrecap #Iran #Poland #NATO",
   "tags": [
    "geopolitics",
    "weekly recap",
@@ -4239,7 +4245,7 @@
    "news analysis"
   ],
   "introChapter": "Intro: three flashpoints in one week",
-  "firstComment": "Will Iran's tanker convoy try to break the U.S. blockade before the end of November? Tell us in the comments: YES or NO."
+  "firstComment": "Will Iran's tanker convoy try to break the U.S. blockade before the end of November? Tell us in the comments: YES or NO.\n\nWatch next: Why Ukraine Keeps Hitting the Kerch Bridge to Crimea https://www.youtube.com/watch?v=R3dHI_Es5WY"
  },
  "thumbnail": {
   "at": "ch1:Euronews +1.6",
