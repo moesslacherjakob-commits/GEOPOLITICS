@@ -1,0 +1,727 @@
+{
+ "id": "2026-11-22-cop31-ends-without-deal",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Nearly two hundred countries. Two weeks of talks. No climate deal. What broke it?"
+  },
+  {
+   "id": "f1",
+   "text": "COP thirty-one in Antalya, Türkiye, ended Sunday with no deal. President Murat Kurum said there was no agreement on the text. Al Jazeera reports it is the first time since Copenhagen in 2009 that U.N. climate talks ended this way."
+  },
+  {
+   "id": "f2",
+   "text": "The fault line was fossil fuels. CNN reports the first draft called for a transition away from them, but later drafts dropped every mention, despite a push by more than one hundred countries. The European Union and Panama refused to back a deal without it."
+  },
+  {
+   "id": "f3",
+   "text": "Developing countries also said it lacked new money to adapt. A one hundred twenty billion dollar target had been dropped. U.N. chief António Guterres said he was deeply disappointed. Open issues move to COP thirty-two, in Ethiopia, next year."
+  },
+  {
+   "id": "cta",
+   "text": "Will COP thirty-two in Ethiopia agree on fossil fuels? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE COLLAPSE",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE FAULT LINE",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE NEXT ROUND",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "ok"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -20,
+     "lat": 20,
+     "R": 300
+    },
+    {
+     "at": 3.8,
+     "lon": 30.7,
+     "lat": 36.9,
+     "R": 560
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "TUR",
+     "color": "accent",
+     "at": 0.4,
+     "alpha": 0.45
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "color": "accent",
+     "at": 0.5,
+     "label": "ANTALYA",
+     "big": true
+    }
+   ],
+   "chip": {
+    "text": "COP31 · FINAL DAY",
+    "at": 0.25,
+    "color": "danger"
+   },
+   "headline": {
+    "at": "hook:countries.",
+    "lines": [
+     [
+      "TWO WEEKS OF TALKS",
+      "text",
+      100
+     ],
+     [
+      "NO DEAL",
+      "accent",
+      120
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    20,
+    30
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 30.7,
+     "lat": 36.9,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.6",
+     "lon": 30.5,
+     "lat": 37.4,
+     "dist": 20,
+     "pitch": 52,
+     "yaw": 12,
+     "oy": 220
+    },
+    {
+     "at": "f1:Al",
+     "lon": 30.7,
+     "lat": 37.0,
+     "dist": 28,
+     "pitch": 40,
+     "yaw": -8,
+     "oy": 200
+    },
+    {
+     "at": "f2",
+     "lon": 22,
+     "lat": 40,
+     "dist": 70,
+     "pitch": 30,
+     "yaw": -10,
+     "oy": 170
+    },
+    {
+     "at": "f2:European",
+     "lon": 8,
+     "lat": 40,
+     "dist": 95,
+     "pitch": 28,
+     "yaw": 0,
+     "oy": 170
+    },
+    {
+     "at": "f2:Panama",
+     "lon": -25,
+     "lat": 25,
+     "dist": 170,
+     "pitch": 24,
+     "yaw": 0,
+     "oy": 160
+    },
+    {
+     "at": "f2$",
+     "lon": -25,
+     "lat": 25,
+     "dist": 170,
+     "pitch": 24,
+     "yaw": 0,
+     "oy": 160
+    },
+    {
+     "at": "f3",
+     "lon": 34,
+     "lat": 25,
+     "dist": 95,
+     "pitch": 30,
+     "yaw": 8,
+     "oy": 180
+    },
+    {
+     "at": "f3:thirty-two",
+     "lon": 36,
+     "lat": 20,
+     "dist": 85,
+     "pitch": 36,
+     "yaw": 12,
+     "oy": 200
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 36,
+     "lat": 18,
+     "dist": 80,
+     "pitch": 40,
+     "yaw": 6,
+     "oy": 200
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "TUR",
+     "color": "accent",
+     "alpha": 0.3,
+     "glow": true,
+     "at": "f1 +0.3"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      30.7,
+      36.9
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1 +0.5",
+     "label": {
+      "text": "ANTALYA",
+      "sub": "COP31 VENUE · TÜRKIYE",
+      "dx": -230,
+      "dy": -170,
+      "until": "f1:Kurum -0.2"
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "NOT ADOPTED",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      540,
+      600
+     ],
+     "note": "KURUM: NO AGREEMENT ON THE TEXT",
+     "at": "f1:agreement",
+     "until": "f1:Al -0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "AUT",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.00"
+    },
+    {
+     "kind": "tint",
+     "iso": "BEL",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.02"
+    },
+    {
+     "kind": "tint",
+     "iso": "BGR",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.04"
+    },
+    {
+     "kind": "tint",
+     "iso": "HRV",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.06"
+    },
+    {
+     "kind": "tint",
+     "iso": "CYP",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.08"
+    },
+    {
+     "kind": "tint",
+     "iso": "CZE",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.10"
+    },
+    {
+     "kind": "tint",
+     "iso": "DNK",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.12"
+    },
+    {
+     "kind": "tint",
+     "iso": "EST",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.14"
+    },
+    {
+     "kind": "tint",
+     "iso": "FIN",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.16"
+    },
+    {
+     "kind": "tint",
+     "iso": "FRA",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.18"
+    },
+    {
+     "kind": "tint",
+     "iso": "DEU",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.20"
+    },
+    {
+     "kind": "tint",
+     "iso": "GRC",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.22"
+    },
+    {
+     "kind": "tint",
+     "iso": "HUN",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.24"
+    },
+    {
+     "kind": "tint",
+     "iso": "IRL",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.26"
+    },
+    {
+     "kind": "tint",
+     "iso": "ITA",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.28"
+    },
+    {
+     "kind": "tint",
+     "iso": "LVA",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.30"
+    },
+    {
+     "kind": "tint",
+     "iso": "LTU",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.32"
+    },
+    {
+     "kind": "tint",
+     "iso": "LUX",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.34"
+    },
+    {
+     "kind": "tint",
+     "iso": "MLT",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.36"
+    },
+    {
+     "kind": "tint",
+     "iso": "NLD",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.38"
+    },
+    {
+     "kind": "tint",
+     "iso": "POL",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.40"
+    },
+    {
+     "kind": "tint",
+     "iso": "PRT",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.42"
+    },
+    {
+     "kind": "tint",
+     "iso": "ROU",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.44"
+    },
+    {
+     "kind": "tint",
+     "iso": "SVK",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.46"
+    },
+    {
+     "kind": "tint",
+     "iso": "SVN",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.48"
+    },
+    {
+     "kind": "tint",
+     "iso": "ESP",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.50"
+    },
+    {
+     "kind": "tint",
+     "iso": "SWE",
+     "color": "info",
+     "alpha": 0.45,
+     "at": "f2:European +0.52"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      10,
+      50
+     ],
+     "text": "EUROPEAN UNION",
+     "sub": "REJECTED THE DRAFT",
+     "color": "info",
+     "dx": -120,
+     "dy": -190,
+     "at": "f2:European +0.2",
+     "until": "f2$ +0.2"
+    },
+    {
+     "kind": "arc",
+     "from": [
+      10,
+      50
+     ],
+     "to": [
+      30.7,
+      36.9
+     ],
+     "color": "info",
+     "height": 0.25,
+     "at": "f2:European +0.3"
+    },
+    {
+     "kind": "tint",
+     "iso": "PAN",
+     "color": "info",
+     "alpha": 0.7,
+     "glow": true,
+     "at": "f2:Panama"
+    },
+    {
+     "kind": "arc",
+     "from": "PAN",
+     "to": [
+      30.7,
+      36.9
+     ],
+     "color": "info",
+     "height": 0.35,
+     "at": "f2:Panama +0.1"
+    },
+    {
+     "kind": "tag",
+     "loc": "PAN",
+     "text": "PANAMA",
+     "sub": "OBJECTED",
+     "color": "info",
+     "dx": 120,
+     "dy": -170,
+     "at": "f2:Panama +0.1",
+     "until": "f2$ +0.2"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      130,
+      430,
+      820
+     ],
+     "title": "THE FOSSIL FUEL LINE",
+     "color": "accent",
+     "rows": [
+      {
+       "icon": "barrel",
+       "text": "1ST DRAFT: TRANSITION AWAY",
+       "at": "f2:first"
+      },
+      {
+       "icon": "x",
+       "text": "LATER DRAFTS: NO MENTION",
+       "at": "f2:dropped"
+      },
+      {
+       "icon": "people",
+       "text": "100+ COUNTRIES PUSHED BACK",
+       "at": "f2:hundred"
+      }
+     ],
+     "at": "f2:first -0.2",
+     "until": "f2:European -0.3"
+    },
+    {
+     "kind": "note",
+     "text": "PER CNN · NOV 22",
+     "y": 1170,
+     "at": "f2:first -0.2",
+     "until": "f2:European -0.3"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      38.747,
+      9.025
+     ],
+     "style": "pulse",
+     "color": "ok",
+     "at": "f3:thirty-two",
+     "label": {
+      "text": "ADDIS ABABA",
+      "sub": "COP32 · ETHIOPIA · 2027",
+      "dx": 200,
+      "dy": -150
+     }
+    },
+    {
+     "kind": "tint",
+     "iso": "ETH",
+     "color": "ok",
+     "alpha": 0.35,
+     "glow": true,
+     "at": "f3:thirty-two"
+    },
+    {
+     "kind": "route",
+     "path": [
+      [
+       30.7,
+       36.9
+      ],
+      [
+       38.747,
+       9.025
+      ]
+     ],
+     "style": "flow",
+     "color": "ok",
+     "width": 6,
+     "at": "f3:move"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      130,
+      430,
+      820
+     ],
+     "title": "THE MONEY",
+     "color": "danger",
+     "rows": [
+      {
+       "icon": "money",
+       "text": "$120 BN ADAPTATION GOAL DROPPED",
+       "at": "f3:hundred"
+      },
+      {
+       "icon": "drop",
+       "text": "DEVELOPING NATIONS: TOO LITTLE",
+       "at": "f3:Developing +0.3"
+      }
+     ],
+     "at": "f3 +0.1",
+     "until": "f3:Guterres -0.3"
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f1:Al -0.1",
+   "to": "f1$ +0.3",
+   "items": [
+    {
+     "icon": "x",
+     "big": "NO DEAL",
+     "text": "TEXT NOT ADOPTED · SUN NOV 22",
+     "color": "danger",
+     "at": "f1:Al"
+    },
+    {
+     "icon": "flag",
+     "big": "2009",
+     "text": "LAST TALKS WITHOUT A DEAL: COPENHAGEN",
+     "color": "accent",
+     "at": "f1:Copenhagen"
+    },
+    {
+     "icon": "eye",
+     "big": "44 HOURS",
+     "text": "PAST THE OFFICIAL END",
+     "color": "info",
+     "at": "f1:talks"
+    }
+   ],
+   "source": "SOURCES: AL JAZEERA · CNN · NOV 22"
+  },
+  {
+   "type": "quote",
+   "from": "f3:Guterres -0.3",
+   "to": "f3:Open -0.2",
+   "at": "f3:Guterres",
+   "lines": [
+    [
+     "\"DEEPLY",
+     "text"
+    ],
+    [
+     "DISAPPOINTED\"",
+     "accent"
+    ]
+   ],
+   "by": "ANTÓNIO GUTERRES · U.N. SECRETARY-GENERAL",
+   "color": "info"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "ANTALYA: NO DEAL.",
+     "text"
+    ],
+    [
+     "ETHIOPIA NEXT?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AL JAZEERA · CNN · NBC · CBS · EURONEWS · NPR",
+    "SEARCH EXCERPTS · MAP FOR ORIENTATION"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 36,
+     "lat": 18,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 35,
+     "lat": 20,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": 30,
+     "lat": 25,
+     "R": 540
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "COP31 Collapses With No Climate Deal #shorts",
+  "description": "The UN climate summit COP31 in Antalya, Türkiye, ended on Sunday without an agreed outcome. COP31 President Murat Kurum said there was no agreement on the text, so it was not adopted; Al Jazeera reports it is the first time since Copenhagen in 2009 that UN climate talks failed to end with a deal adopted by all. According to CNN, the first draft called for a transition away from fossil fuels, but every later draft dropped the words despite a push by more than 100 countries; the European Union and Panama refused to back a deal without it. Developing countries also objected that the text lacked new adaptation money after a $120 billion target was dropped. UN Secretary-General António Guterres said he was \"deeply disappointed\". Unresolved issues move to COP32 in Ethiopia in 2027.\n\nSources: Al Jazeera, CNN, NBC News, CBS News, Euronews, NPR, UN News, CBC News (based on search-result excerpts). Map locations are for orientation.\n\n#climate #cop31 #fossilfuels #climatechange #antalya",
+  "tags": [
+   "climate",
+   "weather",
+   "news",
+   "extreme weather",
+   "COP31",
+   "Antalya",
+   "Türkiye",
+   "fossil fuels",
+   "climate deal",
+   "no deal",
+   "COP32",
+   "Ethiopia",
+   "Murat Kurum",
+   "António Guterres",
+   "climate summit"
+  ],
+  "cover": "f2:Panama +1"
+ },
+ "thumbnail": {
+  "at": "f2:Panama +1.2",
+  "focus": [
+   20,
+   42
+  ],
+  "zoom": 1.4,
+  "number": "2009",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "LAST TIME",
+    "text"
+   ],
+   [
+    "TALKS FAILED",
+    "danger"
+   ]
+  ],
+  "source": "NOV 22 · PER AL JAZEERA"
+ }
+}
