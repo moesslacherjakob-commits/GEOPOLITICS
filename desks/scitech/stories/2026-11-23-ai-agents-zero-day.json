@@ -1,0 +1,348 @@
+{
+ "id": "2026-11-23-ai-agents-zero-day",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "AI agents hacked a university server through an unknown flaw. Who sent them?"
+  },
+  {
+   "id": "f1",
+   "text": "Amazon's security team says attackers ran AI agents on Cairn, an open-source hacking toolkit. Their target: MONAI Label, software researchers use to label medical images. In about eleven minutes, Amazon says, the agents went from mapping it to writing files on the server."
+  },
+  {
+   "id": "f2",
+   "text": "The bug let a crafted file name drop uploads anywhere on the machine. Its developers rate it critical, and say login is off by default. But on another university server, the agents tried for sixteen hours and a hundred and forty-eight steps, and failed."
+  },
+  {
+   "id": "f3",
+   "text": "Amazon links the campaign to a China-linked group, with moderate confidence, citing Chinese-language prompts and China time settings. Its security chief, CJ Moses, says defenders should let automated systems act on clear alerts, without waiting for a human."
+  },
+  {
+   "id": "cta",
+   "text": "Will AI agents soon find most new software flaws? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE ATTACK",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE FLAW",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "WHO SENT THEM",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "violet"
+  }
+ ],
+ "upload": {
+  "title": "Amazon: AI Agents Found and Used an Unknown Flaw #shorts",
+  "description": "Amazon Threat Intelligence said on November 20, 2026 that attackers ran autonomous AI agents on the open-source Cairn framework and exploited a previously unknown path-traversal flaw in MONAI Label, open-source software for labelling medical images, going from mapping it to writing files on a university server in about 11 minutes. Against another university server the agents tried for about 16 hours and 148 steps without success. Amazon attributes the campaign to a China-linked actor with moderate confidence. MONAI Label's developers rate the flaw critical in their November 18 advisory (versions 0.8.5 and earlier; authentication off by default).\n\nSources: Amazon Threat Intelligence (via coverage), MONAI Label security advisory GHSA-qc22-rmgc-vg94 (GitHub), SecurityWeek, The Register, Technology.org, Startup Fortune, Gridinsoft.\n\n#tech #AI #cybersecurity #AIagents #Amazon #zeroday",
+  "tags": [
+   "technology",
+   "news",
+   "AI",
+   "AI agents",
+   "cybersecurity",
+   "zero-day",
+   "Amazon",
+   "MONAI Label",
+   "Cairn",
+   "hacking",
+   "medical imaging"
+  ],
+  "cover": "f1:eleven"
+ },
+ "thumbnail": {
+  "at": "hook:flaw.",
+  "focus": [
+   -122.33,
+   47.61
+  ],
+  "zoom": 1.15,
+  "number": "11 MIN",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "NO HUMAN",
+    "text"
+   ],
+   [
+    "AT THE KEYBOARD?",
+    "accent"
+   ]
+  ],
+  "source": "PER AMAZON THREAT INTELLIGENCE · NOV 20"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "view": [
+    {
+     "at": 0,
+     "lon": -160,
+     "lat": 30,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": -125,
+     "lat": 44,
+     "R": 660
+    }
+   ],
+   "chip": {
+    "text": "AMAZON THREAT INTELLIGENCE · NOV 20",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      -122.33,
+      47.61
+     ],
+     "color": "accent",
+     "at": "hook:server",
+     "label": "AMAZON · SEATTLE",
+     "sub": "PUBLISHED THE REPORT",
+     "dx": 60,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:hacked",
+    "lines": [
+     [
+      "AI AGENTS",
+      "text",
+      100
+     ],
+     [
+      "HACKED A SERVER",
+      "accent",
+      88
+     ]
+    ]
+   }
+  },
+  {
+   "type": "flow",
+   "from": "hook$ +0.25",
+   "to": "f1:eleven -0.4",
+   "label": "HOW THE ATTACK RAN · PER AMAZON",
+   "color": "accent",
+   "steps": [
+    {
+     "icon": "people",
+     "title": "OPERATOR SETS GOAL",
+     "sub": "AGENTS RUN ON CAIRN TOOLKIT",
+     "color": "neutral",
+     "at": "f1:security"
+    },
+    {
+     "icon": "chip",
+     "title": "AI AGENTS PROBE",
+     "sub": "TARGET: MONAI LABEL",
+     "color": "accent",
+     "at": "f1:Cairn"
+    },
+    {
+     "icon": "eye",
+     "title": "UNKNOWN FLAW FOUND",
+     "sub": "NO PATCH, NO PUBLIC RECORD",
+     "color": "danger",
+     "at": "f1:target"
+    },
+    {
+     "icon": "x",
+     "title": "FILES WRITTEN",
+     "sub": "ON A UNIVERSITY SERVER",
+     "color": "danger",
+     "at": "f1:images."
+    }
+   ],
+   "source": "SOURCE: AMAZON VIA SECURITYWEEK · SIMPLIFIED"
+  },
+  {
+   "type": "counter",
+   "from": "f1:eleven -0.4",
+   "to": "f2 -0.1",
+   "label": "FROM MAPPING TO WRITING FILES",
+   "sublabel": "AI AGENTS VS. MONAI LABEL",
+   "icon": "chip",
+   "color": "danger",
+   "value": 11,
+   "start": 0,
+   "suffix": " MIN",
+   "decimals": 0,
+   "at": "f1:eleven -0.3",
+   "doneAt": "f1:eleven +0.9",
+   "note": "ABOUT, ACCORDING TO AMAZON",
+   "source": "SOURCE: AMAZON, NOV 20 · VIA TECHNOLOGY.ORG"
+  },
+  {
+   "type": "facts",
+   "from": "f2 -0.1",
+   "to": "f2:But -0.2",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "x",
+     "big": "PATH TRAVERSAL",
+     "text": "UPLOADS CAN LAND ANYWHERE",
+     "color": "danger",
+     "at": "f2:bug"
+    },
+    {
+     "icon": "flame",
+     "big": "CRITICAL",
+     "text": "SEVERITY PER THE DEVELOPERS",
+     "color": "danger",
+     "at": "f2:critical"
+    },
+    {
+     "icon": "shield",
+     "big": "LOGIN OFF",
+     "text": "BY DEFAULT · VERSIONS 0.8.5 AND OLDER",
+     "color": "oil",
+     "at": "f2:login"
+    }
+   ],
+   "source": "SOURCE: MONAI LABEL ADVISORY, NOV 18 · GITHUB"
+  },
+  {
+   "type": "bars",
+   "from": "f2:But -0.2",
+   "to": "f3 -0.1",
+   "label": "TWO TARGETS, TWO OUTCOMES",
+   "sublabel": "TIME THE AGENTS SPENT · MINUTES",
+   "bars": [
+    {
+     "label": "MONAI · BROKEN IN",
+     "value": 11,
+     "display": "≈11 MIN",
+     "color": "danger",
+     "at": "f2:But",
+     "dur": 0.8
+    },
+    {
+     "label": "OTHER · FAILED",
+     "value": 960,
+     "display": "≈16 H · 148 STEPS",
+     "color": "ok",
+     "at": "f2:sixteen",
+     "dur": 1.4
+    }
+   ],
+   "source": "SOURCE: AMAZON VIA SECURITYWEEK, GRIDINSOFT"
+  },
+  {
+   "type": "timeline",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "WHO, PER AMAZON",
+   "color": "violet",
+   "items": [
+    {
+     "date": "NOV 18",
+     "title": "DEVELOPERS' ADVISORY",
+     "sub": "FLAW RATED CRITICAL",
+     "color": "neutral",
+     "at": "f3 +0.1"
+    },
+    {
+     "date": "NOV 20",
+     "title": "AMAZON REPORT",
+     "sub": "AI AGENTS FOUND THE FLAW",
+     "color": "accent",
+     "at": "f3:campaign"
+    },
+    {
+     "date": "CLAIM",
+     "title": "CHINA-LINKED GROUP",
+     "sub": "MODERATE CONFIDENCE, PER AMAZON",
+     "color": "violet",
+     "big": true,
+     "at": "f3:China-linked"
+    },
+    {
+     "date": "CLUES",
+     "title": "CHINESE PROMPTS",
+     "sub": "CHINA STANDARD TIME SETTINGS",
+     "color": "info",
+     "at": "f3:citing"
+    },
+    {
+     "date": "ADVICE",
+     "title": "AUTOMATE DEFENCE",
+     "sub": "AMAZON CISO CJ MOSES",
+     "color": "ok",
+     "at": "f3:Moses"
+    }
+   ],
+   "source": "ATTRIBUTION IS AMAZON'S CLAIM · VIA SECURITYWEEK"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -160,
+     "lat": 30,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -125,
+     "lat": 44,
+     "R": 560
+    },
+    {
+     "at": "end",
+     "lon": -118,
+     "lat": 42,
+     "R": 520
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -122.33,
+      47.61
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "AI AGENTS FIND",
+     "text"
+    ],
+    [
+     "MOST NEW FLAWS?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AMAZON THREAT INTELLIGENCE · MONAI LABEL ADVISORY (GITHUB)",
+    "SECURITYWEEK · THE REGISTER · TECHNOLOGY.ORG · GRIDINSOFT",
+    "ATTRIBUTION AND TIMINGS ARE AMAZON'S CLAIMS"
+   ]
+  }
+ ]
+}
