@@ -1,0 +1,567 @@
+{
+ "id": "2026-11-23-san-francisco-king-tides",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "San Francisco Bay braces for its highest tides in forty years. Why now?"
+  },
+  {
+   "id": "f1",
+   "text": "The National Weather Service has issued a coastal flood warning for the San Francisco and San Pablo Bay shorelines, through Thanksgiving. Water could rise up to two point eight feet above a normal high tide, it told CNN, peaking on Wednesday morning."
+  },
+  {
+   "id": "f2",
+   "text": "Two forces are stacking up. The year's highest king tides meet a Pacific storm on Tuesday and Wednesday, with up to three inches of rain and gusts near forty-five miles an hour, the weather service says. Local reports say El Niño has also raised sea levels."
+  },
+  {
+   "id": "f3",
+   "text": "San Francisco's tide record dates from 1983, also an El Niño winter. Forecasters expect water close to it, but probably not above it. Mayor Daniel Lurie has urged residents to avoid travel unless absolutely essential."
+  },
+  {
+   "id": "cta",
+   "text": "Will the 1983 tide record survive this week? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE WARNING",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "THE REASON",
+   "seg": "f2",
+   "color": "storm"
+  },
+  {
+   "n": "03",
+   "name": "THE RECORD",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -135,
+     "lat": 32,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": -122.3,
+     "lat": 37.8,
+     "R": 620
+    }
+   ],
+   "chip": {
+    "text": "SAN FRANCISCO BAY",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:highest",
+    "lines": [
+     [
+      "HIGHEST TIDES",
+      "info",
+      110
+     ],
+     [
+      "IN 40 YEARS",
+      "accent",
+      110
+     ]
+    ]
+   },
+   "markers": [
+    {
+     "loc": [
+      -122.42,
+      37.78
+     ],
+     "color": "info",
+     "at": "hook:highest",
+     "label": "SAN FRANCISCO",
+     "sub": "COASTAL FLOOD WARNING",
+     "dx": 40,
+     "dy": -60,
+     "big": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -122.3,
+    37.8
+   ],
+   "detail": [
+    "USA"
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -122.3,
+     "lat": 37.8,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.5",
+     "lon": -122.3,
+     "lat": 37.8,
+     "dist": 12,
+     "pitch": 38,
+     "yaw": 0,
+     "oy": 140
+    },
+    {
+     "at": "f1:Pablo",
+     "lon": -122.32,
+     "lat": 37.9,
+     "dist": 10,
+     "pitch": 46,
+     "yaw": -8,
+     "oy": 150
+    },
+    {
+     "at": "f1:Wednesday",
+     "lon": -122.35,
+     "lat": 37.72,
+     "dist": 9,
+     "pitch": 50,
+     "yaw": 6,
+     "oy": 150
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": -123.6,
+     "lat": 37.9,
+     "dist": 20,
+     "pitch": 34,
+     "yaw": -12,
+     "oy": 130
+    },
+    {
+     "at": "f2:storm",
+     "lon": -123.0,
+     "lat": 37.9,
+     "dist": 16,
+     "pitch": 40,
+     "yaw": -6,
+     "oy": 130
+    },
+    {
+     "at": "f3:Mayor",
+     "lon": -122.4,
+     "lat": 37.74,
+     "dist": 10,
+     "pitch": 48,
+     "yaw": 10,
+     "oy": 150
+    },
+    {
+     "at": "f3:Lurie +1.5",
+     "lon": -121.8,
+     "lat": 37.9,
+     "dist": 14,
+     "pitch": 40,
+     "yaw": 0,
+     "oy": 140
+    },
+    {
+     "at": "cta -0.1",
+     "lon": -122.2,
+     "lat": 37.9,
+     "dist": 18,
+     "pitch": 34,
+     "yaw": 0,
+     "oy": 130
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "US-CA",
+     "color": "info",
+     "alpha": 0.16,
+     "at": "hook$",
+     "until": "cta +0.5"
+    },
+    {
+     "kind": "route",
+     "at": "f1:warning",
+     "until": "cta +0.5",
+     "style": "flow",
+     "color": "info",
+     "width": 8,
+     "path": [
+      [
+       -122.48,
+       37.81
+      ],
+      [
+       -122.39,
+       37.8
+      ],
+      [
+       -122.37,
+       37.73
+      ],
+      [
+       -122.38,
+       37.62
+      ],
+      [
+       -122.22,
+       37.5
+      ],
+      [
+       -122.12,
+       37.49
+      ],
+      [
+       -122.05,
+       37.55
+      ],
+      [
+       -122.15,
+       37.64
+      ],
+      [
+       -122.22,
+       37.71
+      ],
+      [
+       -122.28,
+       37.77
+      ],
+      [
+       -122.33,
+       37.88
+      ],
+      [
+       -122.4,
+       37.96
+      ],
+      [
+       -122.42,
+       38.06
+      ],
+      [
+       -122.27,
+       38.08
+      ]
+     ],
+     "label": {
+      "text": "WARNING SHORELINES",
+      "sub": "NWS · MON–THU · APPROXIMATE",
+      "loc": [
+       -122.15,
+       37.6
+      ],
+      "dx": 60,
+      "dy": 80,
+      "at": "f1:shorelines",
+      "until": "f1:Water"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -122.39,
+      37.795
+     ],
+     "style": "pulse",
+     "color": "info",
+     "at": "f1:peaking",
+     "label": {
+      "text": "SAN FRANCISCO",
+      "sub": "PEAK WED MORNING · NWS",
+      "dx": -260,
+      "dy": -180,
+      "until": "f2"
+     },
+     "until": "f2"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -122.375,
+      37.619
+     ],
+     "style": "dot",
+     "color": "danger",
+     "at": "f1:peaking +0.4",
+     "label": {
+      "text": "SFO AIRPORT",
+      "sub": "SANDBAGS, BARRIERS STAGED",
+      "dx": -260,
+      "dy": 110,
+      "until": "f2"
+     },
+     "until": "f2"
+    },
+    {
+     "kind": "field",
+     "at": "f2:Pacific",
+     "until": "f3",
+     "palette": "rain",
+     "alpha": 0.7,
+     "grow": 1.4,
+     "pulse": true,
+     "blobs": [
+      {
+       "loc": [
+        -123.4,
+        38.1
+       ],
+       "r": 0.9,
+       "v": 1
+      },
+      {
+       "loc": [
+        -122.6,
+        38.2
+       ],
+       "r": 0.7,
+       "v": 0.85
+      },
+      {
+       "loc": [
+        -122.2,
+        37.7
+       ],
+       "r": 0.6,
+       "v": 0.7
+      }
+     ]
+    },
+    {
+     "kind": "push",
+     "from": [
+      -126.0,
+      37.0
+     ],
+     "to": [
+      -122.9,
+      37.9
+     ],
+     "color": "storm",
+     "width": 30,
+     "at": "f2:storm",
+     "label": {
+      "text": "PACIFIC STORM",
+      "sub": "TUE–WED · ILLUSTRATIVE",
+      "at": "f2:storm"
+     },
+     "until": "f3"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -122.42,
+      37.78
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f3:Mayor",
+     "label": {
+      "text": "MAYOR LURIE",
+      "sub": "AVOID NON-ESSENTIAL TRAVEL",
+      "dx": -260,
+      "dy": -180,
+      "until": "cta +0.5"
+     },
+     "until": "cta +0.5"
+    },
+    {
+     "kind": "note",
+     "text": "SHORELINE AND RAIN AREA APPROXIMATE · ILLUSTRATIVE",
+     "y": 1170,
+     "at": "f1 +1"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "from": "f1:Water -0.1",
+   "to": "f1:peaking -0.15",
+   "label": "SAN FRANCISCO BAY",
+   "sublabel": "ABOVE A NORMAL HIGH TIDE",
+   "icon": "drop",
+   "color": "info",
+   "value": 2.8,
+   "start": 0,
+   "prefix": "UP TO ",
+   "suffix": " FT",
+   "doneSuffix": " FT",
+   "decimals": 1,
+   "at": "f1:Water",
+   "doneAt": "f1:feet",
+   "note": "COASTAL FLOOD WARNING · MON–THANKSGIVING",
+   "source": "SOURCE: NATIONAL WEATHER SERVICE VIA CNN, NOV 23"
+  },
+  {
+   "type": "facts",
+   "from": "f2:three -0.4",
+   "to": "f2$ +0.3",
+   "items": [
+    {
+     "icon": "rain",
+     "big": "3 IN",
+     "text": "RAIN, PARTS OF BAY AREA · NWS",
+     "color": "info",
+     "at": "f2:three"
+    },
+    {
+     "icon": "storm",
+     "big": "45 MPH",
+     "text": "WIND GUSTS · NWS",
+     "color": "storm",
+     "at": "f2:gusts"
+    },
+    {
+     "icon": "thermo",
+     "big": "EL NIÑO",
+     "text": "HIGHER SEA LEVELS · PER LOCAL REPORTS",
+     "color": "accent",
+     "at": "f2:El"
+    }
+   ],
+   "source": "SOURCE: NWS VIA NBC NEWS · KQED"
+  },
+  {
+   "type": "bars",
+   "from": "f3:record -0.1",
+   "to": "f3:Mayor -0.15",
+   "label": "SAN FRANCISCO TIDE GAUGE",
+   "sublabel": "WATER LEVEL · FEET",
+   "color": "accent",
+   "bars": [
+    {
+     "label": "1983 RECORD",
+     "value": 8.82,
+     "display": "8.82 FT",
+     "color": "neutral",
+     "at": "f3:1983",
+     "dur": 1.0
+    },
+    {
+     "label": "FORECAST WED NOV 25",
+     "value": 8.6,
+     "display": "8.6 FT",
+     "color": "info",
+     "at": "f3:close",
+     "dur": 1.0
+    }
+   ],
+   "badge": {
+    "text": "CLOSE TO RECORD",
+    "at": "f3:probably"
+   },
+   "source": "SOURCE: NWS VIA CNN · OTHER OUTLETS CITE OTHER DATUMS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "HIGHEST IN 40 YEARS.",
+     "text"
+    ],
+    [
+     "WILL 1983 HOLD?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "CNN, NBC NEWS, SF CHRONICLE, CBS SAN FRANCISCO, KQED, ABC7 (SEARCH EXCERPTS)",
+    "NOV 22–23, 2026 · SHORELINE AND RAIN AREA APPROXIMATE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -122.3,
+     "lat": 37.8,
+     "R": 700
+    },
+    {
+     "at": "cta +1",
+     "lon": -124,
+     "lat": 37,
+     "R": 900
+    },
+    {
+     "at": "end",
+     "lon": -124,
+     "lat": 37,
+     "R": 900
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -122.42,
+      37.78
+     ],
+     "color": "accent"
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "San Francisco Bay Faces Highest Tides in 40 Years #shorts",
+  "description": "The National Weather Service has issued a coastal flood warning for the San Francisco and San Pablo Bay shorelines from Monday through Thanksgiving, with water up to 2.8 feet above a normal high tide and the peak expected Wednesday morning. King tides coincide with a Pacific storm, and forecasters expect levels close to, but probably not above, the 1983 record. Mayor Daniel Lurie urged residents to avoid non-essential travel.\n\nSources: CNN, NBC News, San Francisco Chronicle, CBS San Francisco, KQED, ABC7 (based on search-result excerpts). Shoreline and rain areas on the map are approximate and illustrative.\n\n#climate #weather #sanfrancisco #kingtides #flooding",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "San Francisco",
+   "king tides",
+   "coastal flooding",
+   "Bay Area",
+   "El Niño",
+   "Thanksgiving storm"
+  ],
+  "cover": "f2:Wednesday +0.3"
+ },
+ "thumbnail": {
+  "at": "f2:Wednesday +0.3",
+  "number": "2.8 FT",
+  "numberColor": "info",
+  "source": "ABOVE NORMAL HIGH TIDE · NWS VIA CNN · NOV 23",
+  "focus": [
+   -123.2,
+   37.9
+  ],
+  "lines": [
+   [
+    "ABOVE HIGH TIDE",
+    "text"
+   ],
+   [
+    "NEAR 1983 RECORD",
+    "accent"
+   ]
+  ],
+  "zoom": 1.3
+ }
+}
