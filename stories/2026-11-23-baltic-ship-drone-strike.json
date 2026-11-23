@@ -1,0 +1,776 @@
+{
+ "id": "2026-11-23-baltic-ship-drone-strike",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A burning Russian ship drifted into NATO waters. Is the Baltic the next front?"
+  },
+  {
+   "id": "f1",
+   "text": "Russian officials say two drones hit the cargo ship Sparta Two on Saturday, west of Gogland island. It was bound for Kaliningrad. Finland's military says the ship caught fire and drifted into Finnish waters. The crew was evacuated."
+  },
+  {
+   "id": "f2",
+   "text": "Who sent the drones? Finland says the attack was likely Ukrainian. Kyiv has not claimed it. The ship is sanctioned by the U.S. and Ukraine and belongs to Russia's defence ministry. Earlier this month, Ukraine's security service claimed a strike on a Russian warship nearby."
+  },
+  {
+   "id": "f3",
+   "text": "Finland informed NATO and brought back air and sea restrictions in the eastern Gulf. President Stubb called the incident serious. On Sunday, Finland says, a Russian rescue vessel began towing the ship out of Finnish waters."
+  },
+  {
+   "id": "cta",
+   "text": "Will the Baltic see another drone strike before New Year? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE STRIKE",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "WHO DID IT?",
+   "seg": "f2",
+   "color": "ally"
+  },
+  {
+   "n": "03",
+   "name": "NATO'S DOORSTEP",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Drones Hit a Russian Ship Off Finland. New Baltic Front? #shorts",
+  "description": "On Saturday, November 21, 2026, the Russian cargo ship Sparta II, bound for Russia's Baltic exclave of Kaliningrad, was hit by drones in the eastern Gulf of Finland, west of Russia's Gogland island. Leningrad region governor Alexander Drozdenko said two drones attacked the vessel about three nautical miles from Russia's maritime border. Finland's Defence Forces said the ship caught fire and later drifted into Finnish territorial waters; the crew was evacuated, and Finnish and Estonian authorities helped fight the fire. Finland said the attack was likely carried out by Ukraine; Kyiv has not claimed responsibility. The ro-ro ship is under the jurisdiction of Russia's defence ministry and is sanctioned by the United States and Ukraine. On November 11, Ukraine's SBU security service claimed a drone strike on the Russian Baltic Fleet missile ship Naro-Fominsk in the same area, which Finland's military said it detected. Finland informed NATO, reimposed temporary air and sea restrictions in the eastern Gulf of Finland and briefed its allies; President Alexander Stubb called the incident serious. Kaliningrad governor Alexei Besprozvannykh said there was no threat to supplies to the region. On Sunday, according to Finland, a Russian rescue vessel began towing the Sparta II out of Finnish waters. Ship positions on the map are approximate.\n\nSources:\nAl Jazeera, Nov 21, 2026: Crew evacuated amid battle to put out fire on Russian ship hit by drones\nNBC News / Reuters, Nov 21, 2026: Cargo ship bound for Russia's Kaliningrad hit by drones, Finland tightens security\nCNN, Nov 21, 2026: Russian ship hit by drones in Baltic still smoulders as Finland, Estonia help put out blaze\nFrance 24, Nov 21, 2026: Drone attack sets Russian cargo ship ablaze in Gulf of Finland\nBloomberg, Nov 21, 2026: Russia says cargo ship attacked by drones in Gulf of Finland\nThe Moscow Times, Nov 21, 2026: Russia says cargo vessel struck by drones in Gulf of Finland\nThe Korea Times, Nov 23, 2026: Russia starts towing ship hit by drones in Baltic, Finland says\nAl Jazeera / Janes, Nov 13, 2026: Finland detects strike on Russian warship, Ukraine claims attack\n\n#geopolitics #Russia #Ukraine #Finland #BalticSea #NATO",
+  "tags": [
+   "geopolitics",
+   "Baltic Sea",
+   "Gulf of Finland",
+   "Finland",
+   "Russia",
+   "Ukraine",
+   "NATO",
+   "Kaliningrad",
+   "drone strike",
+   "Sparta II",
+   "world news"
+  ],
+  "cover": "f1 +2"
+ },
+ "thumbnail": {
+  "at": "f1:military +0.6",
+  "focus": [
+   26.8,
+   60.07
+  ],
+  "zoom": 1.3,
+  "kicker": "GULF OF FINLAND",
+  "kickerColor": "info",
+  "lines": [
+   [
+    "ADRIFT IN",
+    "text"
+   ],
+   [
+    "NATO WATERS",
+    "accent"
+   ]
+  ],
+  "source": "NOV 21 · PER FINNISH DEFENCE FORCES"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 25,
+     "lat": 58,
+     "R": 380
+    },
+    {
+     "at": 3.6,
+     "lon": 25.5,
+     "lat": 59,
+     "R": 560
+    }
+   ],
+   "chip": {
+    "text": "BALTIC SEA · NOV 23, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "FIN",
+     "color": "info",
+     "at": "hook:NATO",
+     "alpha": 0.6
+    },
+    {
+     "iso": "EST",
+     "color": "info",
+     "at": "hook:NATO",
+     "alpha": 0.5
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "at": "hook:Russian",
+     "alpha": 0.45
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      26.8,
+      60.05
+     ],
+     "color": "danger",
+     "at": "hook:burning",
+     "label": "SPARTA II",
+     "sub": "GULF OF FINLAND · APPROX.",
+     "dx": -150,
+     "dy": -110,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:Russian",
+    "lines": [
+     [
+      "RUSSIAN SHIP",
+      "danger",
+      104
+     ],
+     [
+      "ON FIRE",
+      "text",
+      104
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:Baltic",
+    "icon": "ship",
+    "iconColor": "info",
+    "color": "info",
+    "kicker": "BALTIC SEA",
+    "title": "A NEW FRONT?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    25,
+    58.5
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 25.5,
+     "lat": 59,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.5",
+     "lon": 26.9,
+     "lat": 60.0,
+     "dist": 4,
+     "pitch": 48,
+     "yaw": -4,
+     "oy": 190
+    },
+    {
+     "at": "f1:Kaliningrad.",
+     "lon": 23.5,
+     "lat": 57.6,
+     "dist": 40,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 200
+    },
+    {
+     "at": "f1:Finland's -0.2",
+     "lon": 26.85,
+     "lat": 60.05,
+     "dist": 3,
+     "pitch": 50,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.3",
+     "lon": 28.0,
+     "lat": 59.9,
+     "dist": 14,
+     "pitch": 48,
+     "yaw": 0,
+     "oy": 190
+    },
+    {
+     "at": "f2:Earlier -0.2",
+     "lon": 28.0,
+     "lat": 59.85,
+     "dist": 8,
+     "pitch": 50,
+     "yaw": 6,
+     "oy": 190
+    },
+    {
+     "at": "f3 +0.3",
+     "lon": 26.5,
+     "lat": 60.0,
+     "dist": 18,
+     "pitch": 46,
+     "yaw": -4,
+     "oy": 200
+    },
+    {
+     "at": "f3:Sunday",
+     "lon": 26.85,
+     "lat": 60.05,
+     "dist": 3.5,
+     "pitch": 50,
+     "yaw": 2,
+     "oy": 190
+    },
+    {
+     "at": "cta",
+     "lon": 25.5,
+     "lat": 59.2,
+     "dist": 30,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 200
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.4,
+     "fill": 0.06,
+     "at": "f1"
+    },
+    {
+     "kind": "tint",
+     "iso": "FIN",
+     "color": "info",
+     "alpha": 0.6,
+     "fill": 0.08,
+     "at": "f1"
+    },
+    {
+     "kind": "tint",
+     "iso": "EST",
+     "color": "info",
+     "alpha": 0.5,
+     "fill": 0.06,
+     "at": "f1"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      26.98,
+      60.08
+     ],
+     "style": "dot",
+     "color": "neutral",
+     "at": "f1 +0.6",
+     "until": "f1:drifted -0.2",
+     "label": {
+      "text": "GOGLAND",
+      "sub": "RUSSIAN ISLAND",
+      "dx": 150,
+      "dy": -110
+     }
+    },
+    {
+     "kind": "arc",
+     "from": [
+      28.6,
+      59.95
+     ],
+     "to": [
+      26.8,
+      60.02
+     ],
+     "color": "danger",
+     "height": 0.3,
+     "at": "f1:two",
+     "dur": 1.1
+    },
+    {
+     "kind": "arc",
+     "from": [
+      28.5,
+      59.75
+     ],
+     "to": [
+      26.82,
+      60.0
+     ],
+     "color": "danger",
+     "height": 0.3,
+     "at": "f1:drones",
+     "dur": 1.1
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      26.8,
+      60.01
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f1:hit",
+     "until": "f1:Kaliningrad. -0.3",
+     "label": {
+      "text": "SPARTA II HIT",
+      "sub": "CLAIM BY RUSSIAN OFFICIALS · APPROX.",
+      "dx": -170,
+      "dy": 130
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "2 DRONES",
+     "icon": "jet",
+     "color": "danger",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f1:hit",
+     "until": "f1:bound -0.2",
+     "note": "PER LENINGRAD REGION GOVERNOR · NOV 21"
+    },
+    {
+     "kind": "route",
+     "path": [
+      [
+       28.3,
+       59.75
+      ],
+      [
+       26.8,
+       60.0
+      ],
+      [
+       24.0,
+       59.75
+      ],
+      [
+       21.5,
+       59.0
+      ],
+      [
+       19.8,
+       57.3
+      ],
+      [
+       19.9,
+       55.2
+      ],
+      [
+       20.4,
+       54.75
+      ]
+     ],
+     "style": "dash",
+     "color": "oil",
+     "width": 4,
+     "at": "f1:bound",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "ROUTE TO KALININGRAD",
+      "sub": "ILLUSTRATIVE",
+      "loc": [
+       20.2,
+       56.6
+      ],
+      "dx": 170,
+      "dy": 0,
+      "at": "f1:Kaliningrad."
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": "Kaliningrad",
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Kaliningrad.",
+     "until": "f1:Finland's -0.2",
+     "label": {
+      "text": "KALININGRAD",
+      "sub": "RUSSIAN EXCLAVE",
+      "dx": 160,
+      "dy": 110
+     }
+    },
+    {
+     "kind": "route",
+     "path": [
+      [
+       26.8,
+       60.01
+      ],
+      [
+       26.77,
+       60.06
+      ],
+      [
+       26.74,
+       60.11
+      ]
+     ],
+     "style": "flow",
+     "color": "danger",
+     "width": 5,
+     "at": "f1:drifted",
+     "until": "f2 -0.2"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      26.74,
+      60.11
+     ],
+     "style": "pulse",
+     "color": "oil",
+     "at": "f1:drifted",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "ADRIFT",
+      "sub": "FINNISH WATERS · PER FINLAND · APPROX.",
+      "dx": -150,
+      "dy": -130
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "SHIP ON FIRE",
+     "icon": "flame",
+     "color": "oil",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f1:fire",
+     "until": "f1:crew -0.2",
+     "note": "PER FINNISH DEFENCE FORCES"
+    },
+    {
+     "kind": "stamp",
+     "text": "CREW EVACUATED",
+     "icon": "people",
+     "color": "info",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f1:crew",
+     "until": "f2 -0.2",
+     "note": "NOV 21"
+    },
+    {
+     "kind": "callout",
+     "loc": [
+      26.8,
+      60.01
+     ],
+     "place": "KYIV",
+     "icon": "flag",
+     "screen": [
+      820,
+      980
+     ],
+     "color": "ally",
+     "at": "f2:Ukrainian.",
+     "until": "f2:sanctioned -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "\"LIKELY UKRAINIAN\"",
+     "icon": "eye",
+     "color": "ally",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f2:Finland",
+     "until": "f2:Kyiv -0.2",
+     "note": "ASSESSMENT BY FINLAND"
+    },
+    {
+     "kind": "stamp",
+     "text": "NO CLAIM",
+     "icon": "x",
+     "color": "neutral",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f2:Kyiv",
+     "until": "f2:sanctioned -0.2",
+     "note": "KYIV HAS NOT CLAIMED IT"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      90,
+      330,
+      560
+     ],
+     "title": "SPARTA II",
+     "badge": "CARGO SHIP",
+     "color": "danger",
+     "at": "f2:sanctioned",
+     "until": "f2:Earlier -0.2",
+     "rows": [
+      {
+       "icon": "x",
+       "text": "SANCTIONED BY U.S. + UKRAINE",
+       "at": "f2:sanctioned"
+      },
+      {
+       "icon": "shield",
+       "text": "RUSSIAN DEFENCE MINISTRY",
+       "at": "f2:defence"
+      }
+     ]
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      28.25,
+      59.72
+     ],
+     "style": "x",
+     "color": "ally",
+     "at": "f2:warship",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "NARO-FOMINSK · NOV 11",
+      "sub": "WARSHIP · CLAIM BY UKRAINE'S SBU",
+      "dx": 60,
+      "dy": 150
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "2ND SHIP THIS MONTH",
+     "icon": "ship",
+     "color": "ally",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f2:Earlier",
+     "until": "f3 -0.2",
+     "note": "NOV 11 STRIKE CLAIMED BY SBU · DETECTED BY FINLAND"
+    },
+    {
+     "kind": "zone",
+     "poly": [
+      [
+       25.6,
+       60.25
+      ],
+      [
+       28.0,
+       60.6
+      ],
+      [
+       28.4,
+       59.9
+      ],
+      [
+       27.3,
+       59.8
+      ],
+      [
+       25.6,
+       59.9
+      ]
+     ],
+     "color": "info",
+     "fill": 0.12,
+     "hatch": true,
+     "outline": true,
+     "at": "f3:restrictions",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      26.3,
+      60.3
+     ],
+     "text": "AIR + SEA LIMITS",
+     "sub": "EASTERN GULF · FINLAND · APPROX.",
+     "color": "info",
+     "dx": -120,
+     "dy": -150,
+     "at": "f3:restrictions",
+     "until": "f3:Sunday -0.2"
+    },
+    {
+     "kind": "callout",
+     "loc": "Helsinki",
+     "place": "NATO",
+     "icon": "shield",
+     "screen": [
+      820,
+      360
+     ],
+     "color": "info",
+     "at": "f3:NATO",
+     "until": "f3:Stubb -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "\"SERIOUS\"",
+     "icon": "flag",
+     "color": "info",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f3:Stubb",
+     "until": "f3:Sunday -0.2",
+     "note": "PRESIDENT ALEXANDER STUBB · FINLAND"
+    },
+    {
+     "kind": "movers",
+     "path": [
+      [
+       26.74,
+       60.11
+      ],
+      [
+       26.8,
+       60.04
+      ],
+      [
+       27.3,
+       59.95
+      ],
+      [
+       28.2,
+       59.8
+      ]
+     ],
+     "icon": "ship",
+     "count": 2,
+     "speed": 0.05,
+     "spacing": 0.03,
+     "offset": 0,
+     "color": "oil",
+     "at": "f3:towing",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      26.74,
+      60.11
+     ],
+     "style": "pulse",
+     "color": "oil",
+     "at": "f3:Sunday",
+     "until": "cta -0.2",
+     "label": {
+      "text": "UNDER TOW",
+      "sub": "OUT OF FINNISH WATERS · PER FINLAND",
+      "dx": -160,
+      "dy": -130
+     }
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 25,
+     "lat": 58.5,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 25,
+     "lat": 58.5,
+     "R": 560
+    },
+    {
+     "at": "end",
+     "lon": 25,
+     "lat": 58.5,
+     "R": 560
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "FIN",
+     "color": "info",
+     "alpha": 0.6
+    },
+    {
+     "iso": "EST",
+     "color": "info",
+     "alpha": 0.5
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.4
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      26.8,
+      60.05
+     ],
+     "color": "danger"
+    },
+    {
+     "loc": "Kaliningrad",
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "ANOTHER STRIKE",
+     "text"
+    ],
+    [
+     "BEFORE NEW YEAR?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "REPORTING: FINNISH DEFENCE FORCES, LENINGRAD REGION GOV., AL JAZEERA, REUTERS/NBC, CNN, FRANCE 24, BLOOMBERG, MOSCOW TIMES",
+    "NOV 23, 2026 · LOCATIONS APPROXIMATE"
+   ]
+  }
+ ]
+}
