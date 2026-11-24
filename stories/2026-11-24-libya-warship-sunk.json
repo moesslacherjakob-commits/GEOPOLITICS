@@ -1,0 +1,635 @@
+{
+ "id": "2026-11-24-libya-warship-sunk",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A Russian warship sank in Libya, far from Ukraine. How did drones get there?"
+  },
+  {
+   "id": "f1",
+   "text": "The corvette Merkury was docked in Benghazi on Sunday when explosions hit it. Libya's eastern authorities say it was refuelling and suspect a drone attack. Defense News says it is mostly underwater. A Russian cargo ship was hit too."
+  },
+  {
+   "id": "f2",
+   "text": "President Zelensky said on Monday Ukraine did it, with seven home-made sea drones. That is about seventeen hundred kilometres from the front line, SBS reports. How the drones got there is unclear. Albania denies they were launched from its soil."
+  },
+  {
+   "id": "f3",
+   "text": "Russia's ambassador to Libya told RT that Kyiv is trying to widen the war at sea. The Kremlin says it has taken note. Eastern Libya's prime minister wants a UN probe into whether the boats came from western Libya. The UN mission urges restraint."
+  },
+  {
+   "id": "cta",
+   "text": "Will Ukraine hit another Russian ship abroad before New Year? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE SINKING",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "WHO DID IT?",
+   "seg": "f2",
+   "color": "ally"
+  },
+  {
+   "n": "03",
+   "name": "LIBYA DRAWN IN",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Russian Warship Sunk in Libya. How Did Drones Get There? #shorts",
+  "description": "On Sunday, November 22, 2026, the Russian Navy corvette Merkury, a Steregushchiy-class ship, was hit by explosions while docked at the port of Benghazi in eastern Libya. The eastern Libyan administration said the ship was in Benghazi to refuel under a maritime cooperation agreement and that a drone attack was suspected; Defense News reported the ship was left mostly submerged. A Russian cargo vessel was also hit in Benghazi; Ukraine named it as the sanctioned cargo ship Angara (identification differs between reports). On Monday, November 23, President Volodymyr Zelensky said Ukraine carried out the operation with seven domestically made naval drones, calling it exemplary; Ukraine's SBU security service said it ran it together with the Defense Forces. Zelensky also claimed a helicopter on board was destroyed (not independently verified). SBS puts Benghazi about 1,700 km from the front line. How the drones reached Libya has not been explained; Albania's government denied that they were launched from its territory (Newsweek). Russia's ambassador to Libya told RT that Kyiv was trying to expand the conflict to maritime areas; the Kremlin said it had taken note of Zelensky's statement. Eastern Libya's prime minister Osama Hamad asked the UN to investigate suspicions that the boats were launched from western Libya; the UN Support Mission in Libya called for an immediate, independent and transparent investigation and urged maximum restraint. Locations and distances on the map are approximate; the line from Ukraine to Libya shows distance only, not the drones' route.\n\nSources:\nCNN, Nov 22, 2026: Ukrainian drones sink Russian warship in North Africa\nCNBC, Nov 23, 2026: Russian warship sinks at Libya port, as Zelenskyy hails operation\nAl Jazeera, Nov 23, 2026: Zelenskyy says Ukraine was behind drone attacks on Russian ships off Libya\nCBS News, Nov 23, 2026: Ukraine sinks Russian warship Merkury off Libya, damages sanctioned Russian cargo ship\nDefense News, Nov 23, 2026: Ukraine confirms it sank Russian corvette in Libyan port\nSBS News, Nov 23, 2026: A ship sunk 1,700km from the frontline\nArab News, Nov 23, 2026: Ukraine sinks Russian warship in Libya as conflict spreads beyond Europe\nUN News, Nov 2026: Libya: UN mission urges probe into Benghazi port attacks\nNewsweek, Nov 23, 2026: How Ukraine destroyed Russian warship from 1,000 miles away\n\n#geopolitics #Russia #Ukraine #Libya #Mediterranean #navy",
+  "tags": [
+   "geopolitics",
+   "Libya",
+   "Benghazi",
+   "Russia",
+   "Ukraine",
+   "Merkury",
+   "corvette",
+   "sea drones",
+   "Mediterranean",
+   "Zelensky",
+   "world news"
+  ],
+  "cover": "f1 +2"
+ },
+ "thumbnail": {
+  "at": "f2:kilometres",
+  "focus": [
+   24.5,
+   40.5
+  ],
+  "zoom": 1.15,
+  "number": "1,700 KM",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "FROM THE FRONT",
+    "text"
+   ],
+   [
+    "SUNK IN PORT",
+    "accent"
+   ]
+  ],
+  "source": "NOV 22 · DISTANCE PER SBS"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 26,
+     "lat": 40,
+     "R": 420
+    },
+    {
+     "at": 3.6,
+     "lon": 22,
+     "lat": 34,
+     "R": 600
+    }
+   ],
+   "chip": {
+    "text": "MEDITERRANEAN · NOV 24, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "LBY",
+     "color": "info",
+     "at": "hook:Libya,",
+     "alpha": 0.55
+    },
+    {
+     "iso": "UKR",
+     "color": "ally",
+     "at": "hook:Ukraine.",
+     "alpha": 0.55
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "at": "hook:Russian",
+     "alpha": 0.4
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Benghazi",
+     "color": "danger",
+     "at": "hook:sank",
+     "label": "BENGHAZI",
+     "sub": "LIBYA",
+     "dx": -150,
+     "dy": 120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:warship",
+    "lines": [
+     [
+      "WARSHIP SUNK",
+      "danger",
+      104
+     ],
+     [
+      "IN LIBYA",
+      "text",
+      104
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:How",
+    "icon": "ship",
+    "iconColor": "ally",
+    "color": "ally",
+    "kicker": "SEA DRONES",
+    "title": "HOW THAT FAR?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    24,
+    38
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 22,
+     "lat": 34,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.5",
+     "lon": 20.1,
+     "lat": 32.2,
+     "dist": 14,
+     "pitch": 46,
+     "yaw": -4,
+     "oy": 190
+    },
+    {
+     "at": "f1:Libya's -0.2",
+     "lon": 20.07,
+     "lat": 32.12,
+     "dist": 9,
+     "pitch": 50,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "f1:cargo -0.3",
+     "lon": 20.1,
+     "lat": 32.15,
+     "dist": 11,
+     "pitch": 50,
+     "yaw": 0,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": 25,
+     "lat": 39,
+     "dist": 70,
+     "pitch": 40,
+     "yaw": 0,
+     "oy": 200
+    },
+    {
+     "at": "f2:Albania -0.3",
+     "lon": 19,
+     "lat": 37.5,
+     "dist": 40,
+     "pitch": 46,
+     "yaw": -6,
+     "oy": 200
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 18,
+     "lat": 31.5,
+     "dist": 32,
+     "pitch": 46,
+     "yaw": 4,
+     "oy": 200
+    },
+    {
+     "at": "f3:western -0.4",
+     "lon": 16.5,
+     "lat": 32.2,
+     "dist": 26,
+     "pitch": 48,
+     "yaw": 0,
+     "oy": 200
+    },
+    {
+     "at": "cta",
+     "lon": 22,
+     "lat": 36,
+     "dist": 60,
+     "pitch": 42,
+     "yaw": 0,
+     "oy": 200
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "LBY",
+     "color": "info",
+     "alpha": 0.55,
+     "fill": 0.07,
+     "at": "f1"
+    },
+    {
+     "kind": "tint",
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.4,
+     "fill": 0.06,
+     "at": "f1"
+    },
+    {
+     "kind": "tint",
+     "iso": "UKR",
+     "color": "ally",
+     "alpha": 0.55,
+     "fill": 0.08,
+     "at": "f1"
+    },
+    {
+     "kind": "tag",
+     "loc": "Benghazi",
+     "text": "BENGHAZI",
+     "sub": "EASTERN LIBYA · PORT CITY",
+     "color": "info",
+     "dx": 150,
+     "dy": -150,
+     "at": "f1:Benghazi",
+     "until": "f1:Defense -0.2"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      20.05,
+      32.11
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f1:explosions",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "MERKURY HIT",
+      "sub": "BENGHAZI PORT · APPROX.",
+      "dx": -170,
+      "dy": -130
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "DOCKED",
+     "icon": "ship",
+     "color": "danger",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f1:docked",
+     "until": "f1:explosions -0.1",
+     "note": "RUSSIAN CORVETTE MERKURY · NOV 22"
+    },
+    {
+     "kind": "stamp",
+     "text": "EXPLOSIONS",
+     "icon": "flame",
+     "color": "danger",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f1:explosions",
+     "until": "f1:Libya's -0.2",
+     "note": "BENGHAZI · SUNDAY NOV 22"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      90,
+      330,
+      600
+     ],
+     "kicker": "EASTERN LIBYAN AUTHORITIES",
+     "text": "REFUELLING · DRONE ATTACK SUSPECTED",
+     "color": "info",
+     "at": "f1:Libya's",
+     "until": "f1:Defense -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "MOSTLY UNDERWATER",
+     "icon": "drop",
+     "color": "danger",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f1:Defense",
+     "until": "f1:cargo -0.2",
+     "note": "PER DEFENSE NEWS"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      20.03,
+      32.13
+     ],
+     "style": "pulse",
+     "color": "oil",
+     "at": "f1:cargo",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "CARGO SHIP HIT",
+      "sub": "RUSSIAN · NAME DIFFERS IN REPORTS",
+      "dx": -170,
+      "dy": 150
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      30.74,
+      46.49
+     ],
+     "style": "dot",
+     "color": "ally",
+     "at": "f2",
+     "until": "cta -0.2",
+     "label": {
+      "text": "UKRAINE",
+      "sub": "BLACK SEA COAST",
+      "dx": 140,
+      "dy": -110
+     }
+    },
+    {
+     "kind": "route",
+     "path": [
+      [
+       30.74,
+       46.49
+      ],
+      [
+       20.05,
+       32.11
+      ]
+     ],
+     "style": "dash",
+     "color": "ally",
+     "width": 4,
+     "at": "f2:seventeen",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "≈1,700 KM FROM THE FRONT",
+      "sub": "PER SBS · DISTANCE ONLY, NOT THE ROUTE",
+      "loc": [
+       25.5,
+       39.5
+      ],
+      "dx": 150,
+      "dy": 40,
+      "at": "f2:line,"
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "7 SEA DRONES",
+     "icon": "ship",
+     "color": "ally",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f2:seven",
+     "until": "f2:seventeen -0.2",
+     "note": "CLAIM BY PRESIDENT ZELENSKY · NOV 23"
+    },
+    {
+     "kind": "stamp",
+     "text": "ROUTE UNKNOWN",
+     "icon": "eye",
+     "color": "neutral",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f2:unclear",
+     "until": "f2:Albania -0.2",
+     "note": "NOT EXPLAINED BY KYIV"
+    },
+    {
+     "kind": "tint",
+     "iso": "ALB",
+     "color": "neutral",
+     "alpha": 0.7,
+     "fill": 0.12,
+     "at": "f2:Albania",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": "ALB",
+     "text": "ALBANIA: \"NOT FROM US\"",
+     "sub": "GOVERNMENT DENIAL · PER NEWSWEEK",
+     "color": "neutral",
+     "dx": -160,
+     "dy": -150,
+     "at": "f2:Albania",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "callout",
+     "loc": [
+      20.05,
+      32.11
+     ],
+     "place": "MOSCOW",
+     "icon": "flag",
+     "screen": [
+      820,
+      640
+     ],
+     "color": "danger",
+     "at": "f3:Russia's",
+     "until": "f3:Eastern -0.2"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      90,
+      330,
+      600
+     ],
+     "kicker": "RUSSIA'S AMBASSADOR TO LIBYA · TO RT",
+     "text": "KYIV WANTS TO WIDEN THE WAR AT SEA",
+     "color": "danger",
+     "at": "f3:Russia's",
+     "until": "f3:Kremlin -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "\"TAKEN NOTE\"",
+     "icon": "eye",
+     "color": "danger",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f3:Kremlin",
+     "until": "f3:Eastern -0.2",
+     "note": "KREMLIN ON ZELENSKY'S CLAIM"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      15.09,
+      32.37
+     ],
+     "style": "pulse",
+     "color": "info",
+     "at": "f3:western",
+     "until": "cta -0.2",
+     "label": {
+      "text": "WESTERN LIBYA",
+      "sub": "SUSPECTED LAUNCH AREA · UNPROVEN",
+      "dx": -120,
+      "dy": -140
+     }
+    },
+    {
+     "kind": "callout",
+     "loc": "Benghazi",
+     "place": "UN",
+     "icon": "shield",
+     "screen": [
+      820,
+      980
+     ],
+     "color": "info",
+     "at": "f3:UN",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "UN PROBE?",
+     "icon": "shield",
+     "color": "info",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f3:UN",
+     "until": "f3:mission -0.2",
+     "note": "REQUEST BY EASTERN LIBYA PM OSAMA HAMAD"
+    },
+    {
+     "kind": "stamp",
+     "text": "\"MAXIMUM RESTRAINT\"",
+     "icon": "shield",
+     "color": "info",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f3:mission",
+     "until": "cta -0.2",
+     "note": "UN SUPPORT MISSION IN LIBYA"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 24,
+     "lat": 38,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 24,
+     "lat": 38,
+     "R": 560
+    },
+    {
+     "at": "end",
+     "lon": 24,
+     "lat": 38,
+     "R": 560
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "LBY",
+     "color": "info",
+     "alpha": 0.55
+    },
+    {
+     "iso": "UKR",
+     "color": "ally",
+     "alpha": 0.55
+    },
+    {
+     "iso": "RUS",
+     "color": "danger",
+     "alpha": 0.4
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Benghazi",
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "ANOTHER SHIP ABROAD",
+     "text"
+    ],
+    [
+     "BEFORE NEW YEAR?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "CNN, CNBC, AL JAZEERA, CBS, DEFENSE NEWS, SBS,",
+    "ARAB NEWS, UN NEWS, NEWSWEEK · NOV 24, 2026 · APPROX."
+   ]
+  }
+ ],
+ "gap": 0.7
+}
