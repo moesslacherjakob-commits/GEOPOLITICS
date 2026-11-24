@@ -1,0 +1,584 @@
+{
+ "id": "2026-11-24-east-coast-thanksgiving-storm",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Eighty-one million Thanksgiving travelers. And a powerful storm is heading for the East Coast."
+  },
+  {
+   "id": "f1",
+   "text": "Charleston first. Forecasters expect its harbor gauge to pass eight feet at Wednesday morning's high tide, CNN reports. NOAA says that level floods numerous downtown roads. Moderate to major coastal flooding is possible from Georgia to Long Island, The Weather Channel says."
+  },
+  {
+   "id": "f2",
+   "text": "Then the Northeast. The National Weather Service has a high wind watch for New York City and Philadelphia on Thanksgiving Day, ABC News reports, with gusts up to sixty miles an hour. Forecasters also expect one to two inches of rain."
+  },
+  {
+   "id": "f3",
+   "text": "That puts the hundredth Macy's parade at risk. Under city rules, the giant balloons stay down if gusts top thirty-four miles an hour, CNN reports. Officials will decide on the day. AAA expects eighty-one and a half million travelers this week."
+  },
+  {
+   "id": "cta",
+   "text": "Will the giant balloons fly on Thanksgiving morning? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE FLOOD",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "THE WIND",
+   "seg": "f2",
+   "color": "storm"
+  },
+  {
+   "n": "03",
+   "name": "THE PARADE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "accent"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -60,
+     "lat": 30,
+     "R": 380
+    },
+    {
+     "at": 3.4,
+     "lon": -77,
+     "lat": 37,
+     "R": 620
+    }
+   ],
+   "chip": {
+    "text": "U.S. EAST COAST",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:Thanksgiving",
+    "lines": [
+     [
+      "THANKSGIVING",
+      "text",
+      110
+     ],
+     [
+      "STORM",
+      "accent",
+      120
+     ]
+    ]
+   },
+   "markers": [
+    {
+     "loc": [
+      -79.93,
+      32.78
+     ],
+     "color": "info",
+     "at": "hook:storm",
+     "label": "CHARLESTON",
+     "dx": -300,
+     "dy": 40
+    },
+    {
+     "loc": [
+      -74.0,
+      40.71
+     ],
+     "color": "accent",
+     "at": "hook:storm",
+     "label": "NEW YORK",
+     "dx": -280,
+     "dy": -60
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -77,
+    37
+   ],
+   "detail": [
+    "USA"
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -77,
+     "lat": 37,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.6",
+     "lon": -79.9,
+     "lat": 32.7,
+     "dist": 11,
+     "pitch": 44,
+     "yaw": -6,
+     "oy": 150
+    },
+    {
+     "at": "f1:Moderate",
+     "lon": -77.0,
+     "lat": 36.0,
+     "dist": 34,
+     "pitch": 36,
+     "yaw": 0,
+     "oy": 140
+    },
+    {
+     "at": "f1:Island",
+     "lon": -76.5,
+     "lat": 36.8,
+     "dist": 36,
+     "pitch": 40,
+     "yaw": 8,
+     "oy": 140
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": -74.7,
+     "lat": 40.3,
+     "dist": 12,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 150
+    },
+    {
+     "at": "f2:Philadelphia",
+     "lon": -74.6,
+     "lat": 40.2,
+     "dist": 10,
+     "pitch": 48,
+     "yaw": 8,
+     "oy": 150
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": -74.0,
+     "lat": 40.72,
+     "dist": 6,
+     "pitch": 50,
+     "yaw": -6,
+     "oy": 160
+    },
+    {
+     "at": "f3:AAA",
+     "lon": -76.0,
+     "lat": 38.5,
+     "dist": 30,
+     "pitch": 34,
+     "yaw": 0,
+     "oy": 140
+    },
+    {
+     "at": "cta -0.1",
+     "lon": -76.0,
+     "lat": 38.0,
+     "dist": 36,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 130
+    }
+   ],
+   "layers": [
+    {
+     "kind": "route",
+     "at": "f1:Moderate",
+     "until": "cta +0.5",
+     "style": "flow",
+     "color": "info",
+     "width": 9,
+     "path": [
+      [
+       -81.1,
+       31.9
+      ],
+      [
+       -80.5,
+       32.35
+      ],
+      [
+       -79.9,
+       32.75
+      ],
+      [
+       -79.0,
+       33.6
+      ],
+      [
+       -77.9,
+       34.0
+      ],
+      [
+       -76.6,
+       34.7
+      ],
+      [
+       -75.55,
+       35.3
+      ],
+      [
+       -75.7,
+       36.3
+      ],
+      [
+       -75.95,
+       36.9
+      ],
+      [
+       -75.1,
+       38.4
+      ],
+      [
+       -74.9,
+       38.95
+      ],
+      [
+       -74.4,
+       39.4
+      ],
+      [
+       -74.0,
+       40.4
+      ],
+      [
+       -73.4,
+       40.62
+      ],
+      [
+       -72.0,
+       40.95
+      ]
+     ],
+     "label": {
+      "text": "COASTAL FLOOD RISK",
+      "sub": "GA TO LONG ISLAND · APPROXIMATE",
+      "loc": [
+       -78.5,
+       33.8
+      ],
+      "dx": -320,
+      "dy": 120,
+      "at": "f1:Moderate",
+      "until": "f2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -79.93,
+      32.78
+     ],
+     "style": "pulse",
+     "color": "info",
+     "at": "f1 +0.6",
+     "until": "f2",
+     "label": {
+      "text": "CHARLESTON",
+      "sub": "PEAK: WED MORNING HIGH TIDE",
+      "dx": -300,
+      "dy": -190,
+      "until": "f1:Moderate"
+     }
+    },
+    {
+     "kind": "push",
+     "from": [
+      -80.5,
+      30.0
+     ],
+     "to": [
+      -73.5,
+      39.6
+     ],
+     "color": "storm",
+     "width": 32,
+     "bend": -0.12,
+     "at": "f2 -1.2",
+     "until": "f3",
+     "label": {
+      "text": "COASTAL STORM",
+      "sub": "WED–THU · ILLUSTRATIVE",
+      "at": "f2 -1.2"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -74.0,
+      40.71
+     ],
+     "style": "pulse",
+     "color": "storm",
+     "at": "f2:York",
+     "until": "f2:gusts",
+     "label": {
+      "text": "NEW YORK CITY",
+      "sub": "HIGH WIND WATCH · THU",
+      "dx": -320,
+      "dy": -200
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -75.16,
+      39.95
+     ],
+     "style": "pulse",
+     "color": "storm",
+     "at": "f2:Philadelphia",
+     "until": "f2:gusts",
+     "label": {
+      "text": "PHILADELPHIA",
+      "sub": "HIGH WIND WATCH · THU",
+      "dx": 60,
+      "dy": 170
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -73.98,
+      40.77
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f3 +0.3",
+     "until": "f3:Under",
+     "label": {
+      "text": "MACY'S PARADE",
+      "sub": "100TH · THU NOV 26",
+      "dx": -320,
+      "dy": -200
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "GAME-DAY CALL",
+     "icon": "flag",
+     "color": "accent",
+     "screen": [
+      540,
+      620
+     ],
+     "note": "PER CNN",
+     "at": "f3:Officials",
+     "until": "f3:AAA"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      90,
+      420,
+      640
+     ],
+     "title": "THANKSGIVING TRAVEL",
+     "badge": "AAA",
+     "color": "accent",
+     "at": "f3:AAA",
+     "until": "cta +0.3",
+     "rows": [
+      {
+       "icon": "people",
+       "text": "81.5 MILLION TRAVELERS",
+       "at": "f3:AAA"
+      },
+      {
+       "icon": "plane",
+       "text": "NOV 24 – NOV 30",
+       "at": "f3:million"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "FLOOD ZONE AND STORM PATH APPROXIMATE · ILLUSTRATIVE",
+     "y": 1170,
+     "at": "f1 +1"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "from": "f1:harbor -0.1",
+   "to": "f1:Moderate -0.15",
+   "label": "CHARLESTON HARBOR",
+   "sublabel": "EXPECTED WATER LEVEL · WED HIGH TIDE",
+   "icon": "drop",
+   "color": "info",
+   "value": 8,
+   "start": 0,
+   "prefix": "ABOVE ",
+   "suffix": " FT",
+   "decimals": 0,
+   "at": "f1:harbor",
+   "doneAt": "f1:feet",
+   "note": "8 FT+ = NUMEROUS DOWNTOWN ROADS FLOOD · NOAA",
+   "source": "SOURCE: FORECASTERS VIA CNN · NOAA"
+  },
+  {
+   "type": "facts",
+   "from": "f2:gusts -0.3",
+   "to": "f2$ +0.3",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "60 MPH",
+     "text": "GUSTS POSSIBLE · NYC & PHILADELPHIA",
+     "color": "storm",
+     "at": "f2:gusts"
+    },
+    {
+     "icon": "rain",
+     "big": "1–2 IN",
+     "text": "RAIN, NORTHEAST · FORECASTERS",
+     "color": "info",
+     "at": "f2:one"
+    }
+   ],
+   "source": "SOURCE: NWS VIA ABC NEWS · THE WEATHER CHANNEL"
+  },
+  {
+   "type": "bars",
+   "from": "f3:Under -0.1",
+   "to": "f3:Officials -0.15",
+   "label": "PARADE BALLOONS",
+   "sublabel": "WIND GUSTS · MPH",
+   "color": "accent",
+   "bars": [
+    {
+     "label": "BALLOON LIMIT",
+     "value": 34,
+     "display": "34 MPH",
+     "color": "accent",
+     "at": "f3:balloons",
+     "dur": 1.0
+    },
+    {
+     "label": "WATCH: GUSTS",
+     "value": 60,
+     "display": "60 MPH",
+     "color": "storm",
+     "at": "f3:thirty-four",
+     "dur": 1.0
+    }
+   ],
+   "badge": {
+    "text": "ABOVE THE LIMIT?",
+    "at": "f3:reports"
+   },
+   "source": "SOURCE: CNN · NWS VIA ABC NEWS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "STORM ON THANKSGIVING.",
+     "text"
+    ],
+    [
+     "WILL THE BALLOONS FLY?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "CNN, ABC NEWS, THE WEATHER CHANNEL, FOX WEATHER, AAA (SEARCH EXCERPTS)",
+    "NOV 22–24, 2026 · FLOOD ZONE AND STORM PATH APPROXIMATE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -76,
+     "lat": 38,
+     "R": 700
+    },
+    {
+     "at": "cta +1",
+     "lon": -72,
+     "lat": 37,
+     "R": 900
+    },
+    {
+     "at": "end",
+     "lon": -72,
+     "lat": 37,
+     "R": 900
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -74.0,
+      40.71
+     ],
+     "color": "accent"
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "East Coast Storm Threatens Thanksgiving and Macy's Parade #shorts",
+  "description": "A powerful coastal storm is expected to move up the U.S. East Coast over Thanksgiving. Forecasters cited by CNN expect Charleston's harbor gauge to pass 8 feet on Wednesday morning, and The Weather Channel says moderate to major coastal flooding is possible from Georgia to Long Island. The National Weather Service has a high wind watch for New York City and Philadelphia on Thanksgiving Day with gusts up to 60 mph, while city rules ground the Macy's parade balloons if gusts top 34 mph. AAA expects 81.5 million Thanksgiving travelers.\n\nSources: CNN, ABC News, The Weather Channel, Fox Weather, AAA (based on search-result excerpts). Flood zone and storm path on the map are approximate and illustrative.\n\n#climate #weather #thanksgiving #noreaster #coastalflooding",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "Thanksgiving storm",
+   "nor'easter",
+   "East Coast",
+   "coastal flooding",
+   "Charleston",
+   "Macy's parade",
+   "New York"
+  ],
+  "cover": "f2:gusts -0.4"
+ },
+ "thumbnail": {
+  "at": "f2:City +0.2",
+  "number": "60 MPH",
+  "numberColor": "storm",
+  "source": "GUSTS POSSIBLE THU · NWS VIA ABC NEWS · NOV 24",
+  "focus": [
+   -74.6,
+   40.2
+  ],
+  "lines": [
+   [
+    "PARADE BALLOONS",
+    "text"
+   ],
+   [
+    "GROUNDED?",
+    "accent"
+   ]
+  ],
+  "zoom": 1.25
+ }
+}
