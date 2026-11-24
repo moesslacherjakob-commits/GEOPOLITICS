@@ -1,0 +1,407 @@
+{
+ "id": "2026-11-24-ariane-6-amazon-leo",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Amazon lost forty satellites last week. Today it risked thirty-six more. Did they make it?"
+  },
+  {
+   "id": "f1",
+   "text": "Nine days ago, a Vulcan rocket from United Launch Alliance failed about ten minutes after liftoff. All forty Amazon Leo internet satellites on board were lost. Vulcan was meant to carry nearly half of Amazon's first network, and it is now grounded."
+  },
+  {
+   "id": "f2",
+   "text": "This morning, Europe's Ariane 6 lifted off from Kourou in French Guiana, a day late after a ground-system problem. About two hours later, all thirty-six satellites were in orbit, Space.com and France Info report. That makes one hundred thirty-six on Ariane so far."
+  },
+  {
+   "id": "f3",
+   "text": "Amazon plans more than three thousand two hundred satellites. Only about four hundred are up, according to Space.com. The FCC, the U.S. regulator, wants the full first network in orbit by July twenty twenty-nine. Rival Starlink already flies thousands."
+  },
+  {
+   "id": "cta",
+   "text": "Will Amazon's network be complete by twenty twenty-nine? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE LOSS",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE COMEBACK",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE GAP",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "violet"
+  }
+ ],
+ "upload": {
+  "title": "Europe's Ariane 6 Puts 36 Amazon Satellites in Orbit #shorts",
+  "description": "On November 24, 2026, Europe's Ariane 6 (flight VA271, Amazon Leo LE-04) launched 36 Amazon Leo internet satellites from Kourou, French Guiana, a day late after a ground-systems problem. It was Amazon's first launch since a ULA Vulcan failure on November 15 destroyed 40 Leo satellites. Space.com and France Info report the mission succeeded; it brings the number of Amazon Leo satellites launched on Ariane 6 to 136. Amazon plans more than 3,200 first-generation satellites; the FCC set July 30, 2029 for the full constellation.\n\nSources: Space.com, France Info (La 1ère), Arianespace, ESA, AstroSpace.it, CNES, KeepTrack, ULA, GeekWire, Light Reading.\n\n#tech #space #AmazonLeo #Ariane6 #satellites #ESA",
+  "tags": [
+   "technology",
+   "news",
+   "space",
+   "Ariane 6",
+   "Arianespace",
+   "Amazon Leo",
+   "Amazon",
+   "satellite internet",
+   "ESA",
+   "Kourou",
+   "Vulcan",
+   "ULA",
+   "Starlink"
+  ],
+  "cover": "f2:thirty-six"
+ },
+ "thumbnail": {
+  "at": "f2:hours",
+  "focus": [
+   -47,
+   11
+  ],
+  "zoom": 1.2,
+  "number": "36",
+  "numberColor": "ok",
+  "lines": [
+   [
+    "AFTER LOSING 40",
+    "text"
+   ],
+   [
+    "A COMEBACK?",
+    "accent"
+   ]
+  ],
+  "source": "SATELLITES · NOV 24 · PER SPACE.COM · FRANCE INFO"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "view": [
+    {
+     "at": 0,
+     "lon": -20,
+     "lat": 15,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": -55,
+     "lat": 10,
+     "R": 620
+    }
+   ],
+   "chip": {
+    "text": "ARIANE 6 · FLIGHT VA271 · NOV 24",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "FR-GF",
+     "color": "accent",
+     "at": "hook:Today",
+     "alpha": 0.45
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -80.58,
+      28.56
+     ],
+     "color": "danger",
+     "at": "hook:forty",
+     "label": "CAPE CANAVERAL",
+     "sub": "VULCAN · NOV 15",
+     "dx": -40,
+     "dy": -110
+    },
+    {
+     "loc": [
+      -52.64,
+      5.16
+     ],
+     "color": "accent",
+     "at": "hook:Today",
+     "label": "KOUROU",
+     "sub": "FRENCH GUIANA",
+     "dx": 60,
+     "dy": 90,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:forty",
+    "lines": [
+     [
+      "40 LOST",
+      "danger",
+      100
+     ],
+     [
+      "36 MORE TODAY",
+      "accent",
+      88
+     ]
+    ]
+   }
+  },
+  {
+   "type": "facts",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "x",
+     "big": "≈10 MIN",
+     "text": "VULCAN FAILS AFTER LIFTOFF · NOV 15",
+     "color": "danger",
+     "at": "f1:Vulcan"
+    },
+    {
+     "icon": "chip",
+     "big": "40 LOST",
+     "text": "AMAZON LEO SATELLITES ON BOARD",
+     "color": "danger",
+     "at": "f1:forty"
+    },
+    {
+     "icon": "flag",
+     "big": "GROUNDED",
+     "text": "VULCAN WAS TO CARRY NEARLY HALF",
+     "color": "oil",
+     "at": "f1:Vulcan#1"
+    }
+   ],
+   "source": "SOURCES: ULA · SPACE.COM · KEEPTRACK"
+  },
+  {
+   "type": "map",
+   "from": "f2 -0.1",
+   "to": "f2:makes -0.3",
+   "center": [
+    -50,
+    10
+   ],
+   "camera": [
+    {
+     "at": "f2 -0.1",
+     "lon": -53,
+     "lat": 6,
+     "dist": 22,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 160
+    },
+    {
+     "at": "f2:lifted",
+     "lon": -50,
+     "lat": 9,
+     "dist": 34,
+     "pitch": 46,
+     "yaw": 8,
+     "oy": 190
+    },
+    {
+     "at": "f2:makes -0.3",
+     "lon": -46,
+     "lat": 12,
+     "dist": 40,
+     "pitch": 50,
+     "yaw": 12,
+     "oy": 200
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "FR-GF",
+     "color": "accent",
+     "alpha": 0.3,
+     "at": "f2 +0.1"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -52.64,
+      5.16
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f2:Ariane",
+     "label": {
+      "text": "EUROPE'S SPACEPORT",
+      "sub": "KOUROU · FRENCH GUIANA",
+      "dx": -90,
+      "dy": -110,
+      "until": "f2:About"
+     }
+    },
+    {
+     "kind": "arc",
+     "from": [
+      -52.64,
+      5.16
+     ],
+     "to": [
+      -40,
+      17
+     ],
+     "color": "accent",
+     "height": 0.4,
+     "at": "f2:lifted",
+     "dur": 3.5
+    },
+    {
+     "kind": "stamp",
+     "text": "IN ORBIT",
+     "icon": "check",
+     "color": "ok",
+     "screen": [
+      540,
+      520
+     ],
+     "note": "36 SATELLITES · PER SPACE.COM, FRANCE INFO",
+     "at": "f2:orbit,"
+    },
+    {
+     "kind": "note",
+     "text": "FLIGHT PATH ILLUSTRATIVE · DELAYED ONE DAY BY GROUND-SYSTEM ISSUE",
+     "y": 1170,
+     "at": "f2:late"
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "from": "f2:makes -0.3",
+   "to": "f3 -0.1",
+   "label": "AMAZON LEO ON ARIANE 6",
+   "sublabel": "SATELLITES PER LAUNCH · 136 IN TOTAL",
+   "bars": [
+    {
+     "label": "FEB",
+     "value": 32,
+     "display": "32",
+     "color": "info",
+     "at": "f2:makes -0.2",
+     "dur": 0.5
+    },
+    {
+     "label": "APR",
+     "value": 32,
+     "display": "32",
+     "color": "info",
+     "at": "f2:makes",
+     "dur": 0.5
+    },
+    {
+     "label": "JUN",
+     "value": 36,
+     "display": "36",
+     "color": "info",
+     "at": "f2:hundred",
+     "dur": 0.5
+    },
+    {
+     "label": "NOV 24",
+     "value": 36,
+     "display": "36",
+     "color": "accent",
+     "at": "f2:thirty-six#1",
+     "dur": 0.6
+    }
+   ],
+   "source": "SOURCES: ARIANESPACE · CNES · FRANCE INFO"
+  },
+  {
+   "type": "scale",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "AMAZON LEO · FIRST NETWORK",
+   "sublabel": "SATELLITES",
+   "color": "info",
+   "items": [
+    {
+     "name": "IN ORBIT",
+     "value": 400,
+     "display": "≈400",
+     "color": "accent",
+     "at": "f3:Only"
+    },
+    {
+     "name": "PLANNED",
+     "value": 3232,
+     "display": "3,232",
+     "color": "info",
+     "at": "f3:plans"
+    }
+   ],
+   "note": "FCC DEADLINE: FULL NETWORK BY JULY 30, 2029",
+   "source": "SOURCES: SPACE.COM · FCC VIA GEEKWIRE, LIGHT READING"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -30,
+     "lat": 10,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -55,
+     "lat": 8,
+     "R": 520
+    },
+    {
+     "at": "end",
+     "lon": -50,
+     "lat": 6,
+     "R": 500
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -52.64,
+      5.16
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "AMAZON'S NETWORK",
+     "text"
+    ],
+    [
+     "COMPLETE BY 2029?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "SPACE.COM · FRANCE INFO · ARIANESPACE · ESA · CNES · ASTROSPACE.IT",
+    "ULA · KEEPTRACK · GEEKWIRE · LIGHT READING · FLIGHT PATH ILLUSTRATIVE"
+   ]
+  }
+ ]
+}
