@@ -1,0 +1,613 @@
+{
+ "id": "2026-11-25-two-coasts-flood-thanksgiving",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Record water in San Francisco. Major flooding in Charleston. And Thanksgiving is next."
+  },
+  {
+   "id": "f1",
+   "text": "San Francisco first. On Tuesday, the gauge at Crissy Field hit eight point two three feet, the National Weather Service says. That broke a November record from nineteen eighty-two. King tides, a storm surge and warm El Niño water combined, reports say."
+  },
+  {
+   "id": "f2",
+   "text": "Then Charleston, on the East Coast. Wednesday morning, its harbor gauge topped eight feet, The Weather Channel reports. That is major flood stage. It held for almost two hours. Downtown roads closed, and CNN says the evening high tide could bring more."
+  },
+  {
+   "id": "f3",
+   "text": "Next, New Jersey and Delaware. CNN says the biggest threat comes with Thanksgiving morning's high tide, around eight in Atlantic City. Fox Weather reports South Jersey may see its highest water since Superstorm Sandy. Forecasters also warn of damaging gusts."
+  },
+  {
+   "id": "cta",
+   "text": "Will the Jersey Shore see its highest water since Sandy? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE RECORD",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE FLOOD",
+   "seg": "f2",
+   "color": "info"
+  },
+  {
+   "n": "03",
+   "name": "THE NEXT TIDE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "storm"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -98,
+     "lat": 34,
+     "R": 420
+    },
+    {
+     "at": 3.6,
+     "lon": -122.4,
+     "lat": 37.8,
+     "R": 640
+    }
+   ],
+   "chip": {
+    "text": "U.S. · BOTH COASTS",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:San",
+    "lines": [
+     [
+      "TWO COASTS",
+      "text",
+      110
+     ],
+     [
+      "UNDER WATER",
+      "accent",
+      110
+     ]
+    ]
+   },
+   "markers": [
+    {
+     "loc": [
+      -122.465,
+      37.806
+     ],
+     "color": "accent",
+     "at": "hook:Record",
+     "label": "SAN FRANCISCO",
+     "dx": 60,
+     "dy": -60
+    },
+    {
+     "loc": [
+      -79.93,
+      32.78
+     ],
+     "color": "info",
+     "at": "hook:Charleston.",
+     "label": "CHARLESTON",
+     "dx": -320,
+     "dy": 60
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -98,
+    38
+   ],
+   "detail": [
+    "USA"
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -122.4,
+     "lat": 37.8,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.8",
+     "lon": -122.43,
+     "lat": 37.78,
+     "dist": 16,
+     "pitch": 42,
+     "yaw": 10,
+     "oy": 160
+    },
+    {
+     "at": "f1:King",
+     "lon": -122.35,
+     "lat": 37.7,
+     "dist": 20,
+     "pitch": 36,
+     "yaw": -4,
+     "oy": 150
+    },
+    {
+     "at": "f2 -0.2",
+     "lon": -101,
+     "lat": 36,
+     "dist": 120,
+     "pitch": 20,
+     "yaw": 0,
+     "oy": 120
+    },
+    {
+     "at": "f2:Wednesday",
+     "lon": -79.95,
+     "lat": 32.75,
+     "dist": 16,
+     "pitch": 42,
+     "yaw": -8,
+     "oy": 160
+    },
+    {
+     "at": "f2:Downtown",
+     "lon": -79.94,
+     "lat": 32.78,
+     "dist": 12,
+     "pitch": 46,
+     "yaw": 6,
+     "oy": 160
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": -74.8,
+     "lat": 39.3,
+     "dist": 20,
+     "pitch": 40,
+     "yaw": 0,
+     "oy": 150
+    },
+    {
+     "at": "f3:Fox",
+     "lon": -74.6,
+     "lat": 39.2,
+     "dist": 16,
+     "pitch": 46,
+     "yaw": 10,
+     "oy": 160
+    },
+    {
+     "at": "cta -0.1",
+     "lon": -76.5,
+     "lat": 37.5,
+     "dist": 40,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 130
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "US-CA",
+     "color": "accent",
+     "alpha": 0.22,
+     "glow": true,
+     "at": "f1 +0.6",
+     "until": "f2 -0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "US-SC",
+     "color": "info",
+     "alpha": 0.22,
+     "glow": true,
+     "at": "f2:Wednesday",
+     "until": "f3"
+    },
+    {
+     "kind": "tint",
+     "iso": "US-NJ",
+     "color": "storm",
+     "alpha": 0.22,
+     "glow": true,
+     "pulse": true,
+     "at": "f3 +0.2",
+     "until": "cta"
+    },
+    {
+     "kind": "tint",
+     "iso": "US-DE",
+     "color": "storm",
+     "alpha": 0.22,
+     "glow": true,
+     "pulse": true,
+     "at": "f3:Delaware.",
+     "until": "cta"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -122.465,
+      37.806
+     ],
+     "style": "pulse",
+     "color": "accent",
+     "at": "f1 +0.8",
+     "until": "f2 -0.3",
+     "label": {
+      "text": "CRISSY FIELD GAUGE",
+      "sub": "SAN FRANCISCO · TUE NOV 24",
+      "dx": -330,
+      "dy": -200,
+      "until": "f1:Tuesday +1.2"
+     }
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -122.39,
+      37.79
+     ],
+     "text": "EMBARCADERO",
+     "sub": "FLOODED BY KING TIDES · PER KRON4",
+     "color": "info",
+     "dx": 40,
+     "dy": 200,
+     "at": "f1:King",
+     "until": "f2 -0.3"
+    },
+    {
+     "kind": "arc",
+     "from": [
+      -122.465,
+      37.806
+     ],
+     "to": [
+      -79.93,
+      32.78
+     ],
+     "color": "accent",
+     "height": 0.35,
+     "width": 6,
+     "dur": 1.6,
+     "at": "f2 -0.2",
+     "until": "f2:Wednesday +0.5"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -79.93,
+      32.78
+     ],
+     "style": "pulse",
+     "color": "info",
+     "at": "f2:Wednesday",
+     "until": "f3",
+     "label": {
+      "text": "CHARLESTON HARBOR",
+      "sub": "WED NOV 25 · MORNING HIGH TIDE",
+      "dx": -330,
+      "dy": -200,
+      "until": "f2:Weather"
+     }
+    },
+    {
+     "kind": "route",
+     "at": "f2:Downtown",
+     "until": "f3",
+     "style": "dash",
+     "color": "info",
+     "width": 7,
+     "path": [
+      [
+       -79.955,
+       32.79
+      ],
+      [
+       -79.94,
+       32.775
+      ],
+      [
+       -79.928,
+       32.772
+      ],
+      [
+       -79.925,
+       32.785
+      ],
+      [
+       -79.935,
+       32.8
+      ]
+     ],
+     "label": {
+      "text": "DOWNTOWN ROADS CLOSED",
+      "sub": "PER THE WEATHER CHANNEL · AREA APPROXIMATE",
+      "loc": [
+       -79.935,
+       32.78
+      ],
+      "dx": -330,
+      "dy": 190,
+      "at": "f2:Downtown"
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -74.42,
+      39.36
+     ],
+     "style": "pulse",
+     "color": "storm",
+     "at": "f3 +0.4",
+     "until": "cta",
+     "label": {
+      "text": "ATLANTIC CITY",
+      "sub": "HIGH TIDE ~8 A.M. THU · PER CNN",
+      "dx": -340,
+      "dy": -210
+     }
+    },
+    {
+     "kind": "field",
+     "at": "f3:Fox",
+     "until": "cta",
+     "palette": "rain",
+     "clip": "land",
+     "alpha": 0.55,
+     "grow": 1.2,
+     "blobs": [
+      {
+       "loc": [
+        -74.6,
+        39.2
+       ],
+       "r": 0.6,
+       "v": 0.9
+      },
+      {
+       "loc": [
+        -75.2,
+        39.0
+       ],
+       "r": 0.5,
+       "v": 0.8
+      },
+      {
+       "loc": [
+        -74.2,
+        39.8
+       ],
+       "r": 0.4,
+       "v": 0.6
+      }
+     ]
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -74.9,
+      39.0
+     ],
+     "text": "SOUTH JERSEY",
+     "sub": "HIGHEST SINCE SANDY POSSIBLE · FOX WEATHER",
+     "color": "storm",
+     "dx": -360,
+     "dy": 230,
+     "at": "f3:Fox",
+     "until": "cta"
+    },
+    {
+     "kind": "note",
+     "text": "FLOOD AREAS APPROXIMATE · ILLUSTRATIVE",
+     "y": 1170,
+     "at": "f1 +1",
+     "until": "f1:feet -0.3"
+    },
+    {
+     "kind": "note",
+     "text": "FLOOD AREAS APPROXIMATE · ILLUSTRATIVE",
+     "y": 1170,
+     "at": "f1:King"
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "from": "f1:feet -0.2",
+   "to": "f1:King -0.15",
+   "label": "SAN FRANCISCO · NOVEMBER RECORD",
+   "sublabel": "CRISSY FIELD GAUGE · FEET · NEW RECORD",
+   "color": "accent",
+   "bars": [
+    {
+     "label": "NOV 30, 1982",
+     "value": 7.97,
+     "display": "7.97 FT",
+     "color": "neutral",
+     "at": "f1:feet",
+     "dur": 0.9
+    },
+    {
+     "label": "NOV 24, 2026",
+     "value": 8.23,
+     "display": "8.23 FT",
+     "color": "accent",
+     "at": "f1:broke",
+     "dur": 0.9
+    }
+   ],
+   "source": "SOURCE: NATIONAL WEATHER SERVICE VIA KQED · CBS SAN FRANCISCO"
+  },
+  {
+   "type": "counter",
+   "from": "f2:harbor -0.1",
+   "to": "f2:Downtown -0.15",
+   "label": "CHARLESTON HARBOR",
+   "sublabel": "WATER LEVEL · WED MORNING HIGH TIDE",
+   "icon": "drop",
+   "color": "info",
+   "value": 8,
+   "start": 0,
+   "prefix": "ABOVE ",
+   "suffix": " FT",
+   "decimals": 0,
+   "at": "f2:harbor",
+   "doneAt": "f2:feet",
+   "note": "8 FT = MAJOR FLOOD STAGE · ALMOST 2 HOURS",
+   "source": "SOURCE: THE WEATHER CHANNEL · CNN"
+  },
+  {
+   "type": "timeline",
+   "from": "f3:Superstorm -0.2",
+   "to": "cta -0.15",
+   "label": "ONE STORM WEEK",
+   "color": "storm",
+   "items": [
+    {
+     "date": "TUE NOV 24",
+     "title": "SAN FRANCISCO",
+     "sub": "NOVEMBER TIDE RECORD",
+     "color": "accent",
+     "at": "f3:Superstorm"
+    },
+    {
+     "date": "WED NOV 25",
+     "title": "CHARLESTON",
+     "sub": "MAJOR FLOOD STAGE",
+     "color": "info",
+     "at": "f3:Forecasters"
+    },
+    {
+     "date": "THU NOV 26",
+     "title": "JERSEY SHORE",
+     "sub": "HIGH TIDE ~8 A.M.",
+     "color": "storm",
+     "big": true,
+     "at": "f3:damaging"
+    }
+   ],
+   "source": "SOURCE: NWS · THE WEATHER CHANNEL · CNN · FOX WEATHER"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "RECORDS ON TWO COASTS.",
+     "text"
+    ],
+    [
+     "HIGHEST SINCE SANDY?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "NWS VIA KQED, CBS SF · WEATHER CHANNEL · CNN · FOX WEATHER",
+    "NOV 24–25, 2026 · FLOOD AREAS APPROXIMATE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -76,
+     "lat": 38,
+     "R": 700
+    },
+    {
+     "at": "cta +1",
+     "lon": -96,
+     "lat": 37,
+     "R": 760
+    },
+    {
+     "at": "end",
+     "lon": -96,
+     "lat": 37,
+     "R": 760
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -122.465,
+      37.806
+     ],
+     "color": "accent"
+    },
+    {
+     "loc": [
+      -79.93,
+      32.78
+     ],
+     "color": "info"
+    },
+    {
+     "loc": [
+      -74.42,
+      39.36
+     ],
+     "color": "storm"
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "San Francisco Sets a Tide Record, Then Charleston Floods #shorts",
+  "description": "Coastal flooding hit both U.S. coasts in Thanksgiving week. On Tuesday the Crissy Field gauge in San Francisco reached 8.23 feet, breaking a November record from 1982, according to the National Weather Service. On Wednesday morning Charleston's harbor gauge topped 8 feet, major flood stage, for almost two hours, The Weather Channel reports. CNN says Thursday morning's high tide is the biggest threat for New Jersey and Delaware, and Fox Weather reports South Jersey may see its highest water since Superstorm Sandy.\n\nSources: National Weather Service via KQED, CBS San Francisco and Local News Matters; The Weather Channel; CNN; Fox Weather (based on search-result excerpts). Flood areas on the map are approximate and illustrative.\n\n#climate #weather #kingtides #coastalflooding #thanksgiving",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "king tides",
+   "coastal flooding",
+   "San Francisco",
+   "Charleston",
+   "Jersey Shore",
+   "Thanksgiving storm",
+   "El Niño"
+  ],
+  "cover": "f1:broke +0.4"
+ },
+ "thumbnail": {
+  "at": "f1:says",
+  "number": "8.23 FT",
+  "numberColor": "accent",
+  "source": "SF NOVEMBER TIDE RECORD · NWS · NOV 24",
+  "focus": [
+   -122.45,
+   37.8
+  ],
+  "lines": [
+   [
+    "BOTH COASTS",
+    "text"
+   ],
+   [
+    "JERSEY NEXT?",
+    "accent"
+   ]
+  ],
+  "zoom": 1.2
+ }
+}
