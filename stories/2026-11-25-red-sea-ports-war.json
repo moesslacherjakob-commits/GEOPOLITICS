@@ -1,0 +1,714 @@
+{
+ "id": "2026-11-25-red-sea-ports-war",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A drone hit Saudi Arabia's tallest tower. Now its biggest port is threatened."
+  },
+  {
+   "id": "f1",
+   "text": "Eleven people were hurt on Tuesday when a drone hit the Public Investment Fund tower in Riyadh, Saudi civil defence says. It was the tower's second hit in a week. The Saudi-led coalition blames Yemen's Houthis and vows a firm response."
+  },
+  {
+   "id": "f2",
+   "text": "Then the coalition told civilians to leave Hodeidah port, its second warning in under a week. Houthi media reported strikes on the port soon after, with no casualties. Hodeidah is the main gateway for food into Houthi-held northern Yemen."
+  },
+  {
+   "id": "f3",
+   "text": "The Houthis answered. Their military spokesman says Jeddah and other Saudi Red Sea ports will become targets if Hodeidah is bombed. He told workers there to leave. The coalition says it also hit targets in Saada and Amran, near the border."
+  },
+  {
+   "id": "cta",
+   "text": "Will the Houthis strike a Saudi Red Sea port before December? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "RIYADH HIT",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "HODEIDAH WARNED",
+   "seg": "f2",
+   "color": "info"
+  },
+  {
+   "n": "03",
+   "name": "PORTS IN THE CROSSHAIRS",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "ally"
+  }
+ ],
+ "upload": {
+  "title": "Houthis Threaten Jeddah After Saudi Strikes on Hodeidah #shorts",
+  "description": "On Tuesday, November 24, 2026, a drone hit the Public Investment Fund (PIF) tower in Riyadh's King Abdullah Financial District, Saudi Arabia's tallest skyscraper. Saudi civil defence said 11 people were injured (two Saudis, two Indians, three Nepalis and four Egyptians, per reports; the Indian embassy confirmed two Indian nationals were hurt). It was the second strike on the tower in about a week, after a November 19 missile damaged it. The Saudi-led coalition called the attack terrorist, blamed Yemen's Houthis and promised a firm response; the Houthis had not claimed Tuesday's strike in the reports we saw. Coalition spokesman Turki al-Maliki then posted a Joint Forces Command warning on X telling civilians to leave Hodeidah port, with a map of the area — its second evacuation call for the port in less than a week. Al Jazeera, citing the Houthi-run Saba news agency, reported that the coalition attacked the port shortly after; Houthi media reported no casualties. Hodeidah is the main port bringing food and other supplies into Houthi-controlled northern Yemen (Reuters). Houthi military spokesman Yahya Saree said Jeddah and all other Saudi ports on the Red Sea coast will become targets if Hodeidah is bombed, and urged employees, workers and shipping companies to leave those ports. The coalition also said it destroyed targets in the northern governorates of Saada and Amran near the Saudi border. Damage at Hodeidah has not been independently assessed; dates of individual strikes differ between reports. Locations on the map are approximate; lines show direction and distance, not flight paths.\n\nSources:\nAl Jazeera, Nov 24, 2026: 11 injured in Houthi drone attack on Riyadh tower, Saudi civil defence says\nAl Jazeera live, Nov 25, 2026: Saudi-led coalition strikes Yemen's Hodeidah port\nThe Tribune, Nov 25, 2026: Saudi-led coalition strikes Yemen's Hodeidah Port after Houthis threaten Red Sea ports\nTRT World, Nov 2026: Saudi-led coalition orders civilians to leave Yemen's Hodeidah port ahead of strikes\nThe Jerusalem Post, Nov 2026: Houthis threaten to attack Red Sea ports, Saudis issue warning\nU.S. News / Reuters, Nov 20, 2026: Saudi-Led Forces Strike Yemen Port as Houthis Warn Airlines off the Kingdom\nThe Brief, Nov 25, 2026: Saudi-led coalition orders civilians out of Hodeidah port as Houthis threaten Saudi Red Sea ports\n\n#geopolitics #SaudiArabia #Yemen #Houthis #RedSea #Jeddah",
+  "tags": [
+   "geopolitics",
+   "Saudi Arabia",
+   "Yemen",
+   "Houthis",
+   "Hodeidah",
+   "Jeddah",
+   "Riyadh",
+   "Red Sea",
+   "Middle East",
+   "world news"
+  ],
+  "cover": "f2 +2"
+ },
+ "thumbnail": {
+  "at": "f3:if",
+  "focus": [
+   41.0,
+   18.3
+  ],
+  "zoom": 1.15,
+  "kicker": "RED SEA",
+  "kickerColor": "info",
+  "lines": [
+   [
+    "NEXT TARGET?",
+    "accent"
+   ],
+   [
+    "SAUDI PORTS WARNED",
+    "text"
+   ]
+  ],
+  "source": "HOUTHI THREAT · NOV 25, 2026"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 46,
+     "lat": 22,
+     "R": 430
+    },
+    {
+     "at": 3.6,
+     "lon": 44,
+     "lat": 20,
+     "R": 620
+    }
+   ],
+   "chip": {
+    "text": "SAUDI ARABIA · YEMEN · NOV 25, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "SAU",
+     "color": "info",
+     "at": "hook:Saudi",
+     "alpha": 0.5
+    },
+    {
+     "iso": "YEM",
+     "color": "danger",
+     "at": "hook:drone",
+     "alpha": 0.5
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Riyadh",
+     "color": "danger",
+     "at": "hook:tower.",
+     "label": "RIYADH",
+     "sub": "PIF TOWER",
+     "dx": 150,
+     "dy": -120,
+     "big": true
+    },
+    {
+     "loc": "Jeddah",
+     "color": "ally",
+     "at": "hook:port",
+     "label": "JEDDAH",
+     "sub": "RED SEA PORT",
+     "dx": -170,
+     "dy": 110
+    }
+   ],
+   "headline": {
+    "at": "hook:hit",
+    "lines": [
+     [
+      "TALLEST TOWER",
+      "danger",
+      100
+     ],
+     [
+      "HIT BY A DRONE",
+      "text",
+      100
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:Now",
+    "icon": "ship",
+    "iconColor": "ally",
+    "color": "ally",
+    "kicker": "RED SEA PORTS",
+    "title": "JEDDAH NEXT?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    44,
+    20
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 44,
+     "lat": 20,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.5",
+     "lon": 46.65,
+     "lat": 24.75,
+     "dist": 20,
+     "pitch": 48,
+     "yaw": -4,
+     "oy": 190
+    },
+    {
+     "at": "f1:second -0.3",
+     "lon": 46.65,
+     "lat": 24.7,
+     "dist": 15,
+     "pitch": 52,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "f1:Houthis -0.4",
+     "lon": 45,
+     "lat": 20,
+     "dist": 48,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 200
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": 43.0,
+     "lat": 14.9,
+     "dist": 12,
+     "pitch": 48,
+     "yaw": -4,
+     "oy": 190
+    },
+    {
+     "at": "f2:Houthi -0.3",
+     "lon": 42.98,
+     "lat": 14.82,
+     "dist": 8,
+     "pitch": 52,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "f2:gateway -0.4",
+     "lon": 43.8,
+     "lat": 15.5,
+     "dist": 22,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 200
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 41.0,
+     "lat": 18.5,
+     "dist": 40,
+     "pitch": 46,
+     "yaw": -6,
+     "oy": 200
+    },
+    {
+     "at": "f3:Jeddah",
+     "lon": 39.6,
+     "lat": 20.6,
+     "dist": 24,
+     "pitch": 48,
+     "yaw": -2,
+     "oy": 200
+    },
+    {
+     "at": "f3:coalition -0.3",
+     "lon": 43.9,
+     "lat": 16.6,
+     "dist": 16,
+     "pitch": 48,
+     "yaw": 4,
+     "oy": 200
+    },
+    {
+     "at": "f3:border -0.2",
+     "lon": 43.9,
+     "lat": 16.5,
+     "dist": 16,
+     "pitch": 50,
+     "yaw": 2,
+     "oy": 200
+    },
+    {
+     "at": "cta +0.4",
+     "lon": 43,
+     "lat": 19,
+     "dist": 50,
+     "pitch": 42,
+     "yaw": 0,
+     "oy": 200
+    }
+   ],
+   "detail": [
+    "YEM"
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "SAU",
+     "color": "info",
+     "alpha": 0.5,
+     "fill": 0.06,
+     "at": "f1"
+    },
+    {
+     "kind": "tint",
+     "iso": "YEM",
+     "color": "neutral",
+     "alpha": 0.5,
+     "fill": 0.05,
+     "at": "f1"
+    },
+    {
+     "kind": "tag",
+     "loc": "Riyadh",
+     "text": "RIYADH",
+     "sub": "SAUDI CAPITAL",
+     "color": "info",
+     "dx": 170,
+     "dy": 120,
+     "at": "f1:Riyadh,",
+     "until": "f1:Houthis -0.3"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      46.64,
+      24.76
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f1:drone",
+     "until": "f1:Houthis -0.3",
+     "label": {
+      "text": "PIF TOWER HIT",
+      "sub": "KING ABDULLAH FINANCIAL DISTRICT · APPROX.",
+      "dx": -160,
+      "dy": -140
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "11 INJURED",
+     "icon": "people",
+     "color": "danger",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f1:Eleven",
+     "until": "f1:second -0.2",
+     "note": "PER SAUDI CIVIL DEFENCE · TUE NOV 24"
+    },
+    {
+     "kind": "stamp",
+     "text": "2ND HIT IN A WEEK",
+     "icon": "flame",
+     "color": "danger",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f1:second",
+     "until": "f1:Saudi-led -0.2",
+     "note": "AFTER A NOV 19 MISSILE STRIKE"
+    },
+    {
+     "kind": "arc",
+     "from": [
+      44.2,
+      15.4
+     ],
+     "to": [
+      46.64,
+      24.76
+     ],
+     "color": "danger",
+     "height": 0.25,
+     "width": 4,
+     "at": "f1:Houthis -0.2",
+     "until": "f2 -0.2"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      90,
+      330,
+      620
+     ],
+     "kicker": "SAUDI-LED COALITION",
+     "text": "BLAMES THE HOUTHIS · \"FIRM RESPONSE\"",
+     "color": "info",
+     "at": "f1:Saudi-led",
+     "until": "f2 -0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "YE-HU",
+     "color": "danger",
+     "alpha": 0.6,
+     "fill": 0.08,
+     "at": "f2",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "zone",
+     "clip": "YEM",
+     "poly": [
+      [
+       42.9,
+       14.76
+      ],
+      [
+       43.02,
+       14.76
+      ],
+      [
+       43.02,
+       14.87
+      ],
+      [
+       42.9,
+       14.87
+      ]
+     ],
+     "color": "danger",
+     "fill": 0.35,
+     "hatch": true,
+     "pulse": true,
+     "at": "f2:leave",
+     "until": "f2:gateway -0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      42.95,
+      14.8
+     ],
+     "text": "HODEIDAH PORT",
+     "sub": "EVACUATION ZONE · APPROX.",
+     "color": "danger",
+     "dx": 160,
+     "dy": -150,
+     "at": "f2:Hodeidah",
+     "until": "f2:gateway -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "LEAVE THE PORT",
+     "icon": "people",
+     "color": "info",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f2:leave",
+     "until": "f2:Houthi -0.2",
+     "note": "COALITION WARNING · 2ND IN UNDER A WEEK"
+    },
+    {
+     "kind": "stamp",
+     "text": "STRIKES REPORTED",
+     "icon": "flame",
+     "color": "danger",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f2:strikes",
+     "until": "f2:gateway -0.2",
+     "note": "PER HOUTHI MEDIA · NO CASUALTIES REPORTED"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      42.95,
+      14.8
+     ],
+     "style": "pulse",
+     "color": "oil",
+     "at": "f2:gateway",
+     "until": "f3 -0.2",
+     "label": {
+      "text": "MAIN FOOD GATEWAY",
+      "sub": "INTO HOUTHI-HELD NORTH · PER REUTERS",
+      "dx": 150,
+      "dy": -150
+     }
+    },
+    {
+     "kind": "tint",
+     "iso": "SAU",
+     "color": "ally",
+     "alpha": 0.7,
+     "fill": 0.06,
+     "at": "f3",
+     "until": "f3:coalition -0.3"
+    },
+    {
+     "kind": "marker",
+     "loc": "Jeddah",
+     "style": "pulse",
+     "color": "ally",
+     "at": "f3:Jeddah",
+     "until": "f3:coalition -0.3",
+     "label": {
+      "text": "JEDDAH",
+      "sub": "SAUDI ARABIA'S BIGGEST PORT",
+      "dx": -170,
+      "dy": 120
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": "Jizan",
+     "style": "dot",
+     "color": "ally",
+     "at": "f3:ports",
+     "until": "f3:coalition -0.3",
+     "label": {
+      "text": "JAZAN",
+      "sub": "RED SEA PORT",
+      "dx": 150,
+      "dy": 90
+     }
+    },
+    {
+     "kind": "route",
+     "path": [
+      [
+       42.6,
+       16.6
+      ],
+      [
+       41.2,
+       18.4
+      ],
+      [
+       39.9,
+       20.3
+      ],
+      [
+       39.1,
+       21.5
+      ],
+      [
+       38.0,
+       24.1
+      ]
+     ],
+     "style": "dash",
+     "color": "ally",
+     "width": 4,
+     "at": "f3:ports",
+     "until": "f3:coalition -0.3",
+     "label": {
+      "text": "SAUDI RED SEA COAST",
+      "sub": "\"WILL BECOME TARGETS\" · HOUTHI SPOKESMAN",
+      "loc": [
+       38.6,
+       23.2
+      ],
+      "dx": 170,
+      "dy": -90,
+      "at": "f3:targets",
+      "until": "f3:if +0.1"
+     }
+    },
+    {
+     "kind": "arc",
+     "from": [
+      42.95,
+      14.8
+     ],
+     "to": "Jeddah",
+     "color": "danger",
+     "height": 0.2,
+     "width": 3,
+     "at": "f3:ports",
+     "until": "f3:coalition -0.3"
+    },
+    {
+     "kind": "stamp",
+     "text": "IF HODEIDAH IS BOMBED",
+     "icon": "x",
+     "color": "ally",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f3:if +0.2",
+     "until": "f3:told -0.2",
+     "note": "CONDITIONAL THREAT · YAHYA SAREE"
+    },
+    {
+     "kind": "tint",
+     "iso": "YE-SD",
+     "color": "danger",
+     "alpha": 0.7,
+     "fill": 0.12,
+     "hatch": true,
+     "at": "f3:Saada",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "YE-AM",
+     "color": "danger",
+     "alpha": 0.7,
+     "fill": 0.12,
+     "hatch": true,
+     "at": "f3:Amran",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": "YE-SD",
+     "text": "SAADA",
+     "sub": "COALITION: TARGETS HIT",
+     "color": "danger",
+     "dx": 170,
+     "dy": -90,
+     "at": "f3:Saada",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": "YE-AM",
+     "text": "AMRAN",
+     "sub": "COALITION: TARGETS HIT",
+     "color": "danger",
+     "dx": 170,
+     "dy": 130,
+     "at": "f3:Amran",
+     "until": "cta -0.2"
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "from": "f3:told -0.1",
+   "to": "f3:coalition -0.2",
+   "lines": [
+    [
+     "\"EVACUATE THEM IMMEDIATELY",
+     "text"
+    ],
+    [
+     "AND STAY AWAY\"",
+     "accent"
+    ]
+   ],
+   "by": "HOUTHI MILITARY SPOKESMAN YAHYA SAREE · ON SAUDI RED SEA PORTS · AS REPORTED"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 44,
+     "lat": 20,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 44,
+     "lat": 20,
+     "R": 580
+    },
+    {
+     "at": "end",
+     "lon": 44,
+     "lat": 20,
+     "R": 580
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "SAU",
+     "color": "info",
+     "alpha": 0.5
+    },
+    {
+     "iso": "YEM",
+     "color": "danger",
+     "alpha": 0.5
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Jeddah",
+     "color": "ally"
+    },
+    {
+     "loc": [
+      42.95,
+      14.8
+     ],
+     "color": "danger"
+    }
+   ],
+   "lines": [
+    [
+     "A SAUDI PORT HIT",
+     "text"
+    ],
+    [
+     "BEFORE DECEMBER?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "AL JAZEERA, THE TRIBUNE, TRT WORLD, JERUSALEM POST,",
+    "REUTERS, THE BRIEF · NOV 25, 2026 · APPROX."
+   ]
+  }
+ ],
+ "gap": 0.7
+}
