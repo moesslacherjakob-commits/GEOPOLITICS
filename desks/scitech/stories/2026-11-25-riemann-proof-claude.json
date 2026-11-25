@@ -1,0 +1,339 @@
+{
+ "id": "2026-11-25-riemann-proof-claude",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A million-dollar math riddle, unsolved since eighteen fifty-nine. Did an AI just crack it?"
+  },
+  {
+   "id": "f1",
+   "text": "The Riemann hypothesis predicts a hidden order in the prime numbers. On November twentieth, Anthropic mathematician Levent Alpöge said he found a proof with Claude, the company's AI. He posted a four-page note and a proof a computer can check."
+  },
+  {
+   "id": "f2",
+   "text": "That proof is written in Lean, where software checks every step. A day later, the teams behind Lean and its Mathlib library said the statement and proof check out, according to reports. MIT's Andrew Sutherland says he rechecked it independently."
+  },
+  {
+   "id": "f3",
+   "text": "But a machine check is not understanding. No human-readable proof is published yet, and number theorist Andrew Granville called the note garbled. The Clay Institute still lists the problem as unsolved. And Stanford posted a rival, all-human draft that same day."
+  },
+  {
+   "id": "cta",
+   "text": "Will mathematicians accept the AI-assisted proof within a year? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE CLAIM",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE MACHINE CHECK",
+   "seg": "f2",
+   "color": "ok"
+  },
+  {
+   "n": "03",
+   "name": "WHAT'S MISSING",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "violet"
+  }
+ ],
+ "upload": {
+  "title": "AI-Assisted Riemann Proof Passes a Machine Check #shorts",
+  "description": "On November 20, 2026, Anthropic mathematician Levent Alpöge said he had found a proof of the Riemann hypothesis, posed in 1859, working with the company's AI Claude, and released a four-page note plus a proof formalised in the Lean proof language. According to reports, the Lean FRO and the Mathlib Initiative said on November 21 that the formal statement and proof are correct, and MIT's Andrew Sutherland reports an independent recheck. The work is not peer-reviewed, a human-readable proof has not yet been published, number theorist Andrew Granville criticised the write-up, and the Clay Mathematics Institute still lists the problem as unsolved. On the same day, Stanford's Ravi Vakil posted a separate, human-written draft by Alessandro Masullo.\n\nSources: The Washington Post, Scientific American, Nature (news), Forbes, Phys.org, The Decoder, IBM Think, Washington Times, Clay Mathematics Institute (Millennium Prize Problems).\n\n#science #math #RiemannHypothesis #AI #Claude #Lean",
+  "tags": [
+   "science",
+   "news",
+   "mathematics",
+   "Riemann hypothesis",
+   "prime numbers",
+   "AI",
+   "Claude",
+   "Anthropic",
+   "Lean",
+   "Mathlib",
+   "proof",
+   "Millennium Prize"
+  ],
+  "cover": "f2:Lean"
+ },
+ "thumbnail": {
+  "at": "hook:riddle",
+  "focus": [
+   -122.42,
+   37.77
+  ],
+  "zoom": 1.15,
+  "number": "167 YEARS",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "SOLVED WITH AI?",
+    "accent"
+   ],
+   [
+    "HUMANS UNSURE",
+    "text"
+   ]
+  ],
+  "source": "RIEMANN HYPOTHESIS, 1859 · CLAIM NOV 20"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "view": [
+    {
+     "at": 0,
+     "lon": -150,
+     "lat": 25,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": -122,
+     "lat": 38,
+     "R": 660
+    }
+   ],
+   "chip": {
+    "text": "CLAIMED PROOF · NOV 20",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      -122.42,
+      37.77
+     ],
+     "color": "accent",
+     "at": "hook:riddle",
+     "label": "ANTHROPIC · SAN FRANCISCO",
+     "sub": "WHERE ALPÖGE WORKS",
+     "dx": 60,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:riddle",
+    "lines": [
+     [
+      "UNSOLVED",
+      "text",
+      100
+     ],
+     [
+      "SINCE 1859",
+      "accent",
+      88
+     ]
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "from": "hook$ +0.25",
+   "to": "f1:posted -0.3",
+   "label": "THE RIEMANN HYPOTHESIS",
+   "color": "accent",
+   "items": [
+    {
+     "date": "1859",
+     "title": "RIEMANN POSES IT",
+     "sub": "ORDER HIDDEN IN THE PRIMES",
+     "color": "neutral",
+     "at": "f1:Riemann"
+    },
+    {
+     "date": "2000",
+     "title": "$1 MILLION PRIZE",
+     "sub": "CLAY MILLENNIUM PROBLEM",
+     "color": "oil",
+     "at": "f1:predicts"
+    },
+    {
+     "date": "NOV 20",
+     "title": "ALPÖGE + CLAUDE",
+     "sub": "CLAIM A PROOF",
+     "color": "accent",
+     "big": true,
+     "at": "f1:November"
+    },
+    {
+     "date": "SAME DAY",
+     "title": "STANFORD DRAFT",
+     "sub": "HUMAN-WRITTEN, SEPARATE",
+     "color": "violet",
+     "at": "f1:Claude,"
+    }
+   ],
+   "source": "SOURCE: CLAY MATHEMATICS INSTITUTE · WASHINGTON POST · THE DECODER"
+  },
+  {
+   "type": "facts",
+   "from": "f1:posted -0.3",
+   "to": "f2 -0.1",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "eye",
+     "big": "4 PAGES",
+     "text": "WRITTEN NOTE FOR HUMANS",
+     "color": "accent",
+     "at": "f1:four-page"
+    },
+    {
+     "icon": "chip",
+     "big": "LEAN CODE",
+     "text": "PROOF A COMPUTER CAN CHECK",
+     "color": "ok",
+     "at": "f1:computer"
+    }
+   ],
+   "source": "SOURCE: ALPÖGE VIA WASHINGTON POST, SCIENTIFIC AMERICAN"
+  },
+  {
+   "type": "flow",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "label": "HOW A MACHINE CHECK WORKS",
+   "color": "ok",
+   "steps": [
+    {
+     "icon": "people",
+     "title": "PROOF IN LEAN",
+     "sub": "EVERY STEP SPELLED OUT",
+     "color": "neutral",
+     "at": "f2:Lean"
+    },
+    {
+     "icon": "chip",
+     "title": "SOFTWARE CHECKS",
+     "sub": "EACH STEP, NO SHORTCUTS",
+     "color": "accent",
+     "at": "f2:software"
+    },
+    {
+     "icon": "check",
+     "title": "LEAN + MATHLIB",
+     "sub": "NOV 21: IT CHECKS OUT",
+     "color": "ok",
+     "at": "f2:teams"
+    },
+    {
+     "icon": "check",
+     "title": "MIT RECHECK",
+     "sub": "ANDREW SUTHERLAND",
+     "color": "ok",
+     "at": "f2:Sutherland"
+    }
+   ],
+   "source": "SOURCE: REPORTS VIA FORBES, SCIENTIFIC AMERICAN · SIMPLIFIED"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.1",
+   "to": "f3:Stanford -0.3",
+   "color": "violet",
+   "items": [
+    {
+     "icon": "x",
+     "big": "NO READABLE PROOF",
+     "text": "HUMAN VERSION NOT YET PUBLISHED",
+     "color": "danger",
+     "at": "f3:human-readable"
+    },
+    {
+     "icon": "eye",
+     "big": "\"GARBLED\"",
+     "text": "ANDREW GRANVILLE ON THE NOTE",
+     "color": "oil",
+     "at": "f3:Granville"
+    },
+    {
+     "icon": "flag",
+     "big": "STILL UNSOLVED",
+     "text": "OFFICIAL LIST, CLAY INSTITUTE",
+     "color": "violet",
+     "at": "f3:Clay"
+    }
+   ],
+   "source": "SOURCE: NATURE, IBM THINK, PHYS.ORG · NOT PEER-REVIEWED"
+  },
+  {
+   "type": "counter",
+   "from": "f3:Stanford -0.3",
+   "to": "cta -0.1",
+   "label": "PROOF CLAIMS IN ONE DAY",
+   "sublabel": "NOV 20 · BOTH UNDER REVIEW",
+   "icon": "people",
+   "color": "violet",
+   "value": 2,
+   "start": 0,
+   "suffix": "",
+   "decimals": 0,
+   "at": "f3:Stanford -0.2",
+   "doneAt": "f3:Stanford +0.6",
+   "note": "ONE AI-ASSISTED · ONE ALL-HUMAN",
+   "source": "SOURCE: THE DECODER, NATURE, DATACAMP"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -150,
+     "lat": 25,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -122,
+     "lat": 38,
+     "R": 560
+    },
+    {
+     "at": "end",
+     "lon": -115,
+     "lat": 36,
+     "R": 520
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -122.42,
+      37.77
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "ACCEPTED",
+     "text"
+    ],
+    [
+     "WITHIN A YEAR?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "WASHINGTON POST · SCIENTIFIC AMERICAN · NATURE · FORBES",
+    "PHYS.ORG · THE DECODER · IBM THINK · CLAY MATH INSTITUTE",
+    "PROOF CLAIM IS ALPÖGE'S · NOT YET PEER-REVIEWED"
+   ]
+  }
+ ]
+}
