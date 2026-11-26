@@ -1,0 +1,298 @@
+{
+ "id": "2026-11-26-hera-dart-crater",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Humanity's first asteroid punch left a mark. Now we know how big it is."
+  },
+  {
+   "id": "f1",
+   "text": "In twenty twenty-two, NASA's DART probe slammed into Dimorphos, a small moonlet circling the asteroid Didymos. It was a planetary defense test. NASA says the hit made the moonlet's orbit about thirty-three minutes shorter."
+  },
+  {
+   "id": "f2",
+   "text": "On November twenty-fifth, the European Space Agency released the first detailed images from its Hera probe. The impact flattened one face of Dimorphos. Hera's lead scientist Patrick Michel says the crater spans almost the full width of the moonlet, about one hundred fifty meters."
+  },
+  {
+   "id": "f3",
+   "text": "ESA's Michael Küppers says Dimorphos is now tumbling chaotically. An odd, cigar-shaped feature inside the crater is still unexplained. In December, Hera is due to fly within about thirteen kilometers, to help measure the moonlet's mass."
+  },
+  {
+   "id": "cta",
+   "text": "Could this technique one day protect Earth from a real threat? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE IMPACT",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE CRATER",
+   "seg": "f2",
+   "color": "danger"
+  },
+  {
+   "n": "03",
+   "name": "STILL UNKNOWN",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "violet"
+  }
+ ],
+ "upload": {
+  "title": "Hera Finally Sees the Crater NASA's DART Left #shorts",
+  "description": "On November 25, 2026, ESA released the first detailed images from its Hera probe of Dimorphos, the moonlet NASA's DART spacecraft struck in September 2022 in the first planetary defense test. The impact flattened one face of the roughly 151-metre moonlet; Hera principal investigator Patrick Michel says the crater spans almost its full width, and ESA's Michael Küppers says Dimorphos is now tumbling chaotically. ESA has not yet published formal crater measurements; a closer pass of about 13 km in December is meant to support mass measurements.\n\nSources: ESA (Hera image release), CNN, AP, ABC News (Australia), Popular Science, Newsweek, Tech Times, The Planetary Society, NASA (DART results).\n\n#science #space #asteroid #ESA #Hera #DART #planetarydefense",
+  "tags": [
+   "science",
+   "news",
+   "space",
+   "ESA",
+   "Hera",
+   "DART",
+   "NASA",
+   "Dimorphos",
+   "Didymos",
+   "asteroid",
+   "planetary defense",
+   "crater"
+  ],
+  "cover": "f2:flattened"
+ },
+ "thumbnail": {
+  "at": "f1:moonlet",
+  "overlays": true,
+  "focus": {
+   "x": 774,
+   "y": 924
+  },
+  "zoom": 2.0,
+  "number": "151 M",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "MOSTLY CRATER",
+    "text"
+   ],
+   [
+    "AND TUMBLING",
+    "accent"
+   ]
+  ],
+  "source": "MOONLET WIDTH · CRATER ≈ FULL WIDTH PER ESA, NOV 25"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "f1 -0.1",
+   "view": [
+    {
+     "at": 0,
+     "lon": -20,
+     "lat": 30,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": 8.65,
+     "lat": 46,
+     "R": 640
+    }
+   ],
+   "chip": {
+    "text": "ESA HERA · IMAGES NOV 25",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      8.65,
+      49.87
+     ],
+     "color": "accent",
+     "at": "hook:asteroid",
+     "label": "HERA MISSION CONTROL",
+     "sub": "ESA ESOC · DARMSTADT",
+     "dx": 60,
+     "dy": -120,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:asteroid",
+    "lines": [
+     [
+      "FIRST ASTEROID PUNCH",
+      "text",
+      92
+     ],
+     [
+      "THE SCAR, REVEALED",
+      "accent",
+      88
+     ]
+    ]
+   }
+  },
+  {
+   "type": "scale",
+   "from": "f1 -0.1",
+   "to": "f1:test -0.3",
+   "label": "THE TARGET PAIR",
+   "sublabel": "WIDTH · CIRCLE AREA TO SCALE",
+   "color": "accent",
+   "items": [
+    {
+     "name": "DIDYMOS",
+     "value": 608400,
+     "display": "≈780 M",
+     "color": "info",
+     "at": "f1:Didymos"
+    },
+    {
+     "name": "DIMORPHOS · HIT BY DART",
+     "value": 22801,
+     "display": "≈151 M",
+     "color": "accent",
+     "at": "f1:NASA's"
+    }
+   ],
+   "note": "DART IMPACT · SEPTEMBER 2022",
+   "source": "SOURCES: NASA · ESA"
+  },
+  {
+   "type": "counter",
+   "from": "f1:test -0.3",
+   "to": "f2 -0.1",
+   "label": "ORBIT OF DIMORPHOS",
+   "sublabel": "CHANGE AFTER THE IMPACT",
+   "icon": "eye",
+   "color": "accent",
+   "value": 33,
+   "start": 0,
+   "prefix": "−",
+   "suffix": " MIN",
+   "decimals": 0,
+   "at": "f1:NASA",
+   "doneAt": "f1:thirty-three +0.6",
+   "note": "MEASURED BY TELESCOPES ON EARTH",
+   "source": "SOURCE: NASA DART RESULTS"
+  },
+  {
+   "type": "facts",
+   "from": "f2 -0.1",
+   "to": "f3 -0.1",
+   "color": "danger",
+   "items": [
+    {
+     "icon": "eye",
+     "big": "FIRST CLOSE-UPS",
+     "text": "HERA IMAGES RELEASED NOV 25",
+     "color": "accent",
+     "at": "f2:November"
+    },
+    {
+     "icon": "x",
+     "big": "ONE FACE FLATTENED",
+     "text": "WHERE DART STRUCK",
+     "color": "danger",
+     "at": "f2:impact"
+    },
+    {
+     "icon": "flag",
+     "big": "≈ FULL WIDTH",
+     "text": "CRATER ACROSS A ≈150 M MOONLET",
+     "color": "oil",
+     "at": "f2:Michel"
+    }
+   ],
+   "source": "SOURCE: ESA · PATRICK MICHEL VIA CNN · NO FORMAL SIZE YET"
+  },
+  {
+   "type": "flow",
+   "from": "f3 -0.1",
+   "to": "cta -0.1",
+   "label": "WHAT HERA SEES NEXT",
+   "color": "violet",
+   "steps": [
+    {
+     "icon": "storm",
+     "title": "TUMBLING",
+     "sub": "CHAOTIC SPIN · MICHAEL KÜPPERS, ESA",
+     "color": "violet",
+     "at": "f3:Küppers"
+    },
+    {
+     "icon": "eye",
+     "title": "CIGAR-SHAPED FEATURE",
+     "sub": "INSIDE THE CRATER · UNEXPLAINED",
+     "color": "oil",
+     "at": "f3:cigar-shaped"
+    },
+    {
+     "icon": "plane",
+     "title": "DECEMBER: ≈13 KM",
+     "sub": "CLOSER PASS · MASS MEASUREMENT",
+     "color": "accent",
+     "at": "f3:December,"
+    }
+   ],
+   "source": "SOURCES: ESA VIA ABC NEWS, CNN, TECH TIMES"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -20,
+     "lat": 30,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 8.65,
+     "lat": 46,
+     "R": 540
+    },
+    {
+     "at": "end",
+     "lon": 12,
+     "lat": 44,
+     "R": 500
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      8.65,
+      49.87
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "A REAL SHIELD",
+     "text"
+    ],
+    [
+     "FOR EARTH ONE DAY?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "ESA · CNN · AP · ABC NEWS · POPULAR SCIENCE · NEWSWEEK",
+    "TECH TIMES · PLANETARY SOCIETY · NASA DART RESULTS",
+    "CRATER SIZE DESCRIBED BY ESA SCIENTISTS · NOT YET MEASURED FORMALLY"
+   ]
+  }
+ ]
+}
