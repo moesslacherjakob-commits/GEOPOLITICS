@@ -1,0 +1,537 @@
+{
+ "id": "2026-11-26-thanksgiving-storm-parade",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Over six hundred thousand customers without power. And a century-old parade has moved."
+  },
+  {
+   "id": "f1",
+   "text": "Cape May first. On Thursday morning, its tide gauge beat a record set in a January twenty sixteen blizzard, Fox Weather reports. North Wildwood police said no car could enter or leave the town. New Jersey's governor declared an emergency in all twenty-one counties."
+  },
+  {
+   "id": "f2",
+   "text": "Then the wind. More than six hundred thousand customers lost power on Thanksgiving Day, CNN reports, citing PowerOutage dot U S. New Jersey's governor warned some outages could last into the weekend. And more than three hundred sixty flights were cancelled."
+  },
+  {
+   "id": "f3",
+   "text": "In New York, the hundredth Macy's Thanksgiving Day Parade moved to Saturday. CNN calls it the first postponement in the parade's history. City rules ground the giant balloons when gusts top thirty-four miles per hour. Macy's says it decided with the city."
+  },
+  {
+   "id": "cta",
+   "text": "Will the hundredth parade march on Saturday? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE RECORD",
+   "seg": "f1",
+   "color": "info"
+  },
+  {
+   "n": "02",
+   "name": "THE DARK",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE PARADE",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "storm"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -90,
+     "lat": 34,
+     "R": 420
+    },
+    {
+     "at": 3.6,
+     "lon": -74.9,
+     "lat": 39.0,
+     "R": 640
+    }
+   ],
+   "chip": {
+    "text": "U.S. EAST COAST · THANKSGIVING",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:thousand",
+    "lines": [
+     [
+      "600,000+",
+      "text",
+      120
+     ],
+     [
+      "IN THE DARK",
+      "accent",
+      110
+     ]
+    ]
+   },
+   "markers": [
+    {
+     "loc": [
+      -74.906,
+      38.935
+     ],
+     "color": "info",
+     "at": "hook:customers",
+     "label": "CAPE MAY",
+     "dx": -300,
+     "dy": 80
+    },
+    {
+     "loc": [
+      -73.989,
+      40.75
+     ],
+     "color": "storm",
+     "at": "hook:parade",
+     "label": "NEW YORK",
+     "dx": 60,
+     "dy": -70
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    -75,
+    40
+   ],
+   "detail": [
+    "USA"
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": -74.9,
+     "lat": 39.0,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.8",
+     "lon": -74.9,
+     "lat": 38.97,
+     "dist": 14,
+     "pitch": 44,
+     "yaw": -8,
+     "oy": 160
+    },
+    {
+     "at": "f1:North",
+     "lon": -74.82,
+     "lat": 39.0,
+     "dist": 10,
+     "pitch": 48,
+     "yaw": 6,
+     "oy": 170
+    },
+    {
+     "at": "f1:governor",
+     "lon": -74.6,
+     "lat": 40.0,
+     "dist": 36,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 140
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": -76.0,
+     "lat": 39.5,
+     "dist": 70,
+     "pitch": 26,
+     "yaw": -6,
+     "oy": 130
+    },
+    {
+     "at": "f2:flights",
+     "lon": -74.5,
+     "lat": 40.3,
+     "dist": 50,
+     "pitch": 34,
+     "yaw": 8,
+     "oy": 140
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": -73.98,
+     "lat": 40.75,
+     "dist": 12,
+     "pitch": 46,
+     "yaw": -10,
+     "oy": 170
+    },
+    {
+     "at": "f3:Macy's",
+     "lon": -73.98,
+     "lat": 40.77,
+     "dist": 9,
+     "pitch": 50,
+     "yaw": 8,
+     "oy": 170
+    },
+    {
+     "at": "cta -0.1",
+     "lon": -74.8,
+     "lat": 40.0,
+     "dist": 40,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 130
+    }
+   ],
+   "layers": [
+    {
+     "kind": "marker",
+     "loc": [
+      -74.906,
+      38.935
+     ],
+     "style": "pulse",
+     "color": "info",
+     "at": "f1 +0.8",
+     "until": "f1:North",
+     "label": {
+      "text": "CAPE MAY GAUGE",
+      "sub": "THU NOV 26 · MORNING HIGH TIDE",
+      "dx": -330,
+      "dy": -200
+     }
+    },
+    {
+     "kind": "field",
+     "at": "f1:record",
+     "until": "f2",
+     "palette": "rain",
+     "clip": "land",
+     "alpha": 0.7,
+     "grow": 1.2,
+     "blobs": [
+      {
+       "loc": [
+        -74.906,
+        38.935
+       ],
+       "r": 0.4,
+       "v": 0.95
+      },
+      {
+       "loc": [
+        -74.8,
+        39.005
+       ],
+       "r": 0.35,
+       "v": 0.9
+      },
+      {
+       "loc": [
+        -74.5,
+        39.4
+       ],
+       "r": 0.45,
+       "v": 0.7
+      }
+     ]
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -74.8,
+      39.005
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f1:North",
+     "until": "f1:governor",
+     "label": {
+      "text": "NORTH WILDWOOD CUT OFF",
+      "sub": "NO CARS IN OR OUT · PER POLICE",
+      "dx": -290,
+      "dy": -210
+     }
+    },
+    {
+     "kind": "tint",
+     "iso": "US-NJ",
+     "color": "info",
+     "alpha": 0.24,
+     "glow": true,
+     "pulse": true,
+     "at": "f1:governor",
+     "until": "f2 +0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -74.5,
+      40.2
+     ],
+     "text": "STATE OF EMERGENCY",
+     "sub": "ALL 21 COUNTIES · GOV. SHERRILL",
+     "color": "info",
+     "dx": -380,
+     "dy": -230,
+     "at": "f1:emergency",
+     "until": "f2 +0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "US-NJ",
+     "color": "accent",
+     "alpha": 0.2,
+     "glow": true,
+     "at": "f2:governor",
+     "until": "f3"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -74.4,
+      40.4
+     ],
+     "text": "OUTAGES INTO THE WEEKEND",
+     "sub": "POSSIBLE · PER NJ GOVERNOR",
+     "color": "accent",
+     "dx": -400,
+     "dy": -230,
+     "at": "f2:governor",
+     "until": "f2:flights"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -73.87,
+      40.78
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f2:flights",
+     "until": "f3"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -74.17,
+      40.69
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f2:flights",
+     "until": "f3"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -75.24,
+      39.87
+     ],
+     "style": "dot",
+     "color": "accent",
+     "at": "f2:flights",
+     "until": "f3",
+     "label": {
+      "text": "360+ FLIGHTS CANCELLED",
+      "sub": "THANKSGIVING DAY · PER FOX NEWS",
+      "dx": -380,
+      "dy": 200
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      -73.983,
+      40.762
+     ],
+     "style": "pulse",
+     "color": "storm",
+     "at": "f3 +0.4",
+     "until": "cta",
+     "label": {
+      "text": "MACY'S PARADE ROUTE",
+      "sub": "MANHATTAN · NOW SAT NOV 28",
+      "dx": -330,
+      "dy": -210,
+      "until": "f3:CNN -0.1"
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "MOVED TO SATURDAY",
+     "icon": "storm",
+     "color": "storm",
+     "screen": [
+      540,
+      560
+     ],
+     "note": "FIRST POSTPONEMENT IN 100 PARADES · PER CNN",
+     "at": "f3:CNN",
+     "until": "f3:City -0.2"
+    },
+    {
+     "kind": "note",
+     "text": "FLOOD AREAS APPROXIMATE · ILLUSTRATIVE",
+     "y": 1170,
+     "at": "f1:record",
+     "until": "f2"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "from": "f2:More -0.1",
+   "to": "f2:governor -0.15",
+   "label": "WITHOUT POWER",
+   "sublabel": "U.S. CUSTOMERS · THANKSGIVING DAY",
+   "icon": "bolt",
+   "color": "accent",
+   "value": 600000,
+   "start": 0,
+   "prefix": "",
+   "suffix": "+",
+   "decimals": 0,
+   "at": "f2:More",
+   "doneAt": "f2:CNN",
+   "note": "TWO SEPARATE STORMS · MOSTLY EAST COAST",
+   "source": "SOURCE: POWEROUTAGE.US VIA CNN"
+  },
+  {
+   "type": "facts",
+   "from": "f3:City -0.1",
+   "to": "cta -0.15",
+   "items": [
+    {
+     "icon": "storm",
+     "big": "34 MPH",
+     "text": "GUSTS THAT GROUND THE BALLOONS · CITY RULES",
+     "color": "storm",
+     "at": "f3:City"
+    },
+    {
+     "icon": "flag",
+     "big": "SAT 8:30",
+     "text": "NEW PARADE START · NOV 28, EASTERN TIME",
+     "color": "accent",
+     "at": "f3:decided"
+    }
+   ],
+   "source": "SOURCE: CNN · WASHINGTON POST · MACY'S"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "A RECORD TIDE. 600,000+ DARK.",
+     "text"
+    ],
+    [
+     "PARADE ON SATURDAY?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "FOX WEATHER · 6ABC · CNN · WASHINGTON POST · CBS · FOX NEWS",
+    "NOV 26, 2026 · FLOOD AREAS APPROXIMATE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -74.5,
+     "lat": 40,
+     "R": 700
+    },
+    {
+     "at": "cta +1",
+     "lon": -80,
+     "lat": 38,
+     "R": 760
+    },
+    {
+     "at": "end",
+     "lon": -80,
+     "lat": 38,
+     "R": 760
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -74.906,
+      38.935
+     ],
+     "color": "info"
+    },
+    {
+     "loc": [
+      -73.989,
+      40.75
+     ],
+     "color": "storm"
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Thanksgiving Storm Sets a Cape May Tide Record #shorts",
+  "description": "A powerful Thanksgiving storm hit the U.S. East Coast. Cape May's tide gauge beat a record from a January 2016 blizzard, Fox Weather reports (preliminary), and North Wildwood police said no vehicles could enter or leave the town. More than 600,000 customers lost power on Thanksgiving Day, according to PowerOutage.us via CNN, and the 100th Macy's Thanksgiving Day Parade was moved to Saturday, the first postponement in its history according to CNN.\n\nSources: Fox Weather; 6abc; CNN; The Washington Post; CBS News; The Hill; Fox News (based on search-result excerpts). Flood areas and the parade route on the map are approximate and illustrative.\n\n#climate #weather #thanksgiving #noreaster #coastalflooding",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "Thanksgiving storm",
+   "nor'easter",
+   "Cape May",
+   "New Jersey",
+   "coastal flooding",
+   "power outages",
+   "Macy's parade"
+  ],
+  "cover": "f1:record +0.4"
+ },
+ "thumbnail": {
+  "at": "f1:North +0.6",
+  "number": "600,000+",
+  "numberColor": "accent",
+  "source": "WITHOUT POWER · POWEROUTAGE.US VIA CNN · NOV 26",
+  "focus": [
+   -74.8,
+   39.005
+  ],
+  "lines": [
+   [
+    "NO PARADE",
+    "text"
+   ],
+   [
+    "UNTIL SATURDAY",
+    "accent"
+   ]
+  ],
+  "zoom": 1.0
+ }
+}
