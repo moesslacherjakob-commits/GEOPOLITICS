@@ -1,0 +1,545 @@
+{
+ "id": "2026-11-26-ras-tanura-hormuz-mines",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Drones flew at Saudi Arabia's biggest oil refinery. So why did oil prices jump?"
+  },
+  {
+   "id": "f1",
+   "text": "Yemen's Houthis say they hit Ras Tanura on Wednesday, the kingdom's largest refinery, and set it on fire. The Saudi-led coalition says its air defences destroyed four drones over the site, with no injuries. It did not say whether the refinery was hit."
+  },
+  {
+   "id": "f2",
+   "text": "Satellite images from NASA and Planet Labs showed thick black smoke over the site, reports say. Aramco did not comment. Brent crude rose more than two percent at one point. The Houthis call it revenge for deadly Saudi strikes in Yemen."
+  },
+  {
+   "id": "f3",
+   "text": "The same day, Iran's Revolutionary Guards said two more oil tankers hit mines in the Strait of Hormuz and caught fire. That claim is unconfirmed. Iran's military now warns ships to coordinate their passage with its forces."
+  },
+  {
+   "id": "cta",
+   "text": "Will the Houthis strike Saudi oil again this year? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "RAS TANURA",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "SMOKE AND PRICES",
+   "seg": "f2",
+   "color": "oil"
+  },
+  {
+   "n": "03",
+   "name": "MINES IN HORMUZ",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Houthis Say They Hit Saudi Arabia's Biggest Refinery #shorts",
+  "description": "On Wednesday, November 25, 2026, Yemen's Iran-aligned Houthis said they attacked Saudi Arabia's Ras Tanura oil refinery in the Eastern Province, the kingdom's largest (capacity about 550,000 barrels per day). Houthi military spokesman Yahya Saree called the strike accurate and direct and said it caused fires; the Houthis also claimed attacks on Riyadh's financial district and described the operations as retaliation for Saudi airstrikes in Yemen that they say killed civilians. The Saudi-led coalition said its air defences intercepted and destroyed four drones over Ras Tanura (seven in the Eastern Province in total, per some reports), with no injuries from falling debris in an initial assessment; it did not say whether the refinery was struck. Saudi Aramco and the Saudi government did not respond to requests for comment (Reuters). Satellite imagery from NASA and Planet Labs, as reported, showed thick black smoke over the site. The extent of any damage has not been independently established. Brent crude rose more than 2% intraday (about $93.60, +2.41% at 10:16 a.m. ET, per OilPrice.com); reports differ on how it closed. The same day, Iran's Revolutionary Guards Navy said, via state media, that two oil tankers hit naval mines in the Strait of Hormuz and caught fire, saying they had used an unauthorised route; this has not been independently confirmed and reports differ on the number of vessels. An Iranian military spokesperson warned ships to coordinate passage with Iranian forces. Tehran says normal shipping will not resume until its demands are met, including lifting the U.S. naval blockade of Iranian ports. Locations on the map are approximate; the line from Yemen shows direction, not a flight path.\n\nSources:\nNBC News, Nov 25, 2026: Yemen's Houthi rebels attack Saudi Arabia's largest oil refinery\nReuters via Al-Monitor / Business Recorder / Insurance Journal, Nov 25, 2026: Yemen's Houthis say they attacked Saudi Arabia's Ras Tanura refinery\nQuartz, Nov 25, 2026: Houthis said they attacked Saudi Arabia's Ras Tanura refinery\nMiddle East Eye, Nov 25, 2026: Houthis say they attacked Saudi Arabia's largest oil refinery in retaliation for deadly strikes\nOilPrice.com, Nov 25, 2026: Oil Jumps Over 2% as Saudi Arabia Downs Drones Over Ras Tanura\nReuters via Yahoo News / Deccan Herald, Nov 25, 2026: Iran says ships hit mines in Hormuz, warns vessels to coordinate passage\nAsharq Al-Awsat, Nov 25, 2026: Iran Says Ships Hit Mines in Hormuz, Warns Vessels to Coordinate Passage\nArab News, Nov 25, 2026: IRGC navy says two oil tankers hit mines, caught fire in Strait of Hormuz\n\n#geopolitics #SaudiArabia #Houthis #RasTanura #oil #Hormuz #Iran",
+  "tags": [
+   "geopolitics",
+   "Saudi Arabia",
+   "Houthis",
+   "Ras Tanura",
+   "Aramco",
+   "oil price",
+   "Brent",
+   "Strait of Hormuz",
+   "Iran",
+   "Yemen",
+   "world news"
+  ],
+  "cover": "f1 +2"
+ },
+ "thumbnail": {
+  "at": "f1:Wednesday,",
+  "focus": "Ras Tanura",
+  "zoom": 1.2,
+  "number": "550K",
+  "numberColor": "oil",
+  "lines": [
+   [
+    "BARRELS A DAY",
+    "text"
+   ],
+   [
+    "UNDER FIRE?",
+    "accent"
+   ]
+  ],
+  "source": "REFINERY CAPACITY · HOUTHI CLAIM · NOV 25"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 50,
+     "lat": 24,
+     "R": 430
+    },
+    {
+     "at": 3.6,
+     "lon": 51,
+     "lat": 25,
+     "R": 620
+    }
+   ],
+   "chip": {
+    "text": "SAUDI ARABIA · PERSIAN GULF · NOV 25, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "SAU",
+     "color": "oil",
+     "at": "hook:Saudi",
+     "alpha": 0.5
+    },
+    {
+     "iso": "YEM",
+     "color": "danger",
+     "at": "hook:Drones",
+     "alpha": 0.45
+    },
+    {
+     "iso": "IRN",
+     "color": "info",
+     "at": "hook:prices",
+     "alpha": 0.4
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Ras Tanura",
+     "color": "danger",
+     "at": "hook:biggest",
+     "label": "RAS TANURA",
+     "sub": "BIGGEST SAUDI REFINERY",
+     "dx": -170,
+     "dy": -130,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:Saudi",
+    "lines": [
+     [
+      "BIGGEST REFINERY",
+      "oil",
+      96
+     ],
+     [
+      "TARGETED",
+      "text",
+      100
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:So",
+    "icon": "barrel",
+    "iconColor": "oil",
+    "color": "oil",
+    "kicker": "OIL PRICES",
+    "title": "WHY THE JUMP?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    51,
+    25
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 51,
+     "lat": 25,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.5",
+     "lon": 50.1,
+     "lat": 26.6,
+     "dist": 14,
+     "pitch": 48,
+     "yaw": -6,
+     "oy": 190
+    },
+    {
+     "at": "f1:coalition -0.3",
+     "lon": 50.07,
+     "lat": 26.68,
+     "dist": 8,
+     "pitch": 52,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": 50.07,
+     "lat": 26.7,
+     "dist": 6,
+     "pitch": 54,
+     "yaw": -4,
+     "oy": 190
+    },
+    {
+     "at": "f2:Houthis -0.4",
+     "lon": 47,
+     "lat": 21,
+     "dist": 60,
+     "pitch": 42,
+     "yaw": 0,
+     "oy": 200
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 56.2,
+     "lat": 26.4,
+     "dist": 16,
+     "pitch": 48,
+     "yaw": -6,
+     "oy": 190
+    },
+    {
+     "at": "f3:unconfirmed -0.3",
+     "lon": 56.4,
+     "lat": 26.5,
+     "dist": 11,
+     "pitch": 52,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "f3:coordinate -0.3",
+     "lon": 56.2,
+     "lat": 26.6,
+     "dist": 18,
+     "pitch": 48,
+     "yaw": 0,
+     "oy": 200
+    },
+    {
+     "at": "cta +0.4",
+     "lon": 52,
+     "lat": 25,
+     "dist": 55,
+     "pitch": 42,
+     "yaw": 0,
+     "oy": 200
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "SAU",
+     "color": "oil",
+     "alpha": 0.5,
+     "fill": 0.06,
+     "at": "f1"
+    },
+    {
+     "kind": "tint",
+     "iso": "SA-04",
+     "color": "oil",
+     "alpha": 0.7,
+     "fill": 0.08,
+     "at": "f1",
+     "until": "f2:Houthis -0.3"
+    },
+    {
+     "kind": "marker",
+     "loc": "Ras Tanura",
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Ras",
+     "until": "f2:Houthis -0.3",
+     "label": {
+      "text": "RAS TANURA REFINERY",
+      "sub": "≈550,000 BARRELS A DAY · APPROX. LOCATION",
+      "dx": 170,
+      "dy": -170,
+      "until": "f1:coalition -0.3"
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "HOUTHIS: HIT, ON FIRE",
+     "icon": "flame",
+     "color": "danger",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f1:fire.",
+     "until": "f1:coalition -0.2",
+     "note": "CLAIM BY HOUTHI SPOKESMAN YAHYA SAREE"
+    },
+    {
+     "kind": "stamp",
+     "text": "4 DRONES DOWNED",
+     "icon": "shield",
+     "color": "info",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f1:destroyed",
+     "until": "f1:did -0.2",
+     "note": "PER SAUDI-LED COALITION · NO INJURIES"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      90,
+      330,
+      640
+     ],
+     "kicker": "SAUDI-LED COALITION",
+     "text": "DID NOT SAY WHETHER THE REFINERY WAS HIT",
+     "color": "info",
+     "at": "f1:did",
+     "until": "f2 -0.2"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      90,
+      330,
+      640
+     ],
+     "title": "WHAT WE KNOW",
+     "color": "oil",
+     "at": "f2",
+     "until": "f2:Brent -0.2",
+     "rows": [
+      {
+       "icon": "eye",
+       "text": "BLACK SMOKE ON SATELLITE IMAGES · AS REPORTED",
+       "at": "f2:smoke"
+      },
+      {
+       "icon": "x",
+       "text": "ARAMCO: NO COMMENT",
+       "at": "f2:Aramco"
+      }
+     ]
+    },
+    {
+     "kind": "arc",
+     "from": "Sanaa",
+     "to": "Ras Tanura",
+     "color": "danger",
+     "height": 0.25,
+     "width": 4,
+     "at": "f2:Houthis -0.2",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": "Sanaa",
+     "text": "HOUTHI-HELD YEMEN",
+     "sub": "LINE = DIRECTION, NOT FLIGHT PATH",
+     "color": "danger",
+     "dx": 170,
+     "dy": 110,
+     "at": "f2:Houthis",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "IRN",
+     "color": "info",
+     "alpha": 0.5,
+     "fill": 0.05,
+     "at": "f3"
+    },
+    {
+     "kind": "movers",
+     "path": [
+      [
+       58.4,
+       25.4
+      ],
+      [
+       57.0,
+       26.2
+      ],
+      [
+       56.45,
+       26.55
+      ],
+      [
+       55.6,
+       26.4
+      ],
+      [
+       54.0,
+       26.2
+      ]
+     ],
+     "icon": "ship",
+     "count": 4,
+     "speed": 0.06,
+     "spacing": 0.2,
+     "at": "f3",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      56.35,
+      26.45
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f3:mines",
+     "until": "cta -0.2",
+     "label": {
+      "text": "2 TANKERS HIT MINES",
+      "sub": "CLAIM BY IRAN'S REVOLUTIONARY GUARDS · APPROX.",
+      "dx": -170,
+      "dy": -150,
+      "until": "f3:coordinate -0.3"
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "UNCONFIRMED",
+     "icon": "eye",
+     "color": "ally",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f3:unconfirmed",
+     "until": "f3:military -0.2",
+     "note": "IRGC NAVY VIA STATE MEDIA · NOV 25"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      90,
+      330,
+      640
+     ],
+     "kicker": "IRAN'S MILITARY",
+     "text": "SHIPS MUST COORDINATE PASSAGE WITH ITS FORCES",
+     "color": "info",
+     "at": "f3:coordinate",
+     "until": "cta -0.2"
+    }
+   ]
+  },
+  {
+   "type": "ticker",
+   "from": "f2:Brent -0.1",
+   "to": "f2:Houthis -0.1",
+   "label": "OIL PRICE",
+   "sublabel": "WEDNESDAY, NOV 25, 2026 · INTRADAY",
+   "rows": [
+    {
+     "name": "BRENT CRUDE",
+     "sub": "$93.60 A BARREL AT 10:16 A.M. ET",
+     "change": 2.41,
+     "icon": "barrel",
+     "at": "f2:Brent"
+    }
+   ],
+   "format": {
+    "decimals": 2,
+    "suffix": "%"
+   },
+   "note": "REPORTS DIFFER ON THE CLOSE",
+   "source": "SOURCE: OILPRICE.COM · NOT FINANCIAL ADVICE"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 51,
+     "lat": 24,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 51,
+     "lat": 24,
+     "R": 580
+    },
+    {
+     "at": "end",
+     "lon": 51,
+     "lat": 24,
+     "R": 580
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "SAU",
+     "color": "oil",
+     "alpha": 0.5
+    },
+    {
+     "iso": "YEM",
+     "color": "danger",
+     "alpha": 0.45
+    },
+    {
+     "iso": "IRN",
+     "color": "info",
+     "alpha": 0.4
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Ras Tanura",
+     "color": "danger"
+    },
+    {
+     "loc": "Strait of Hormuz",
+     "color": "info"
+    }
+   ],
+   "lines": [
+    [
+     "SAUDI OIL HIT AGAIN",
+     "text"
+    ],
+    [
+     "BEFORE NEW YEAR?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "NBC NEWS, REUTERS, QUARTZ, MIDDLE EAST EYE, OILPRICE.COM,",
+    "ASHARQ AL-AWSAT, ARAB NEWS · NOV 25, 2026 · APPROX."
+   ]
+  }
+ ]
+}
