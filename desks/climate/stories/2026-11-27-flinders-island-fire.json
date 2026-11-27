@@ -1,0 +1,700 @@
+{
+ "id": "2026-11-27-flinders-island-fire",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A tenth of an Australian island has burned. Summer has not even started."
+  },
+  {
+   "id": "f1",
+   "text": "Flinders Island, off Tasmania. The fire started near Palana on November nineteenth, likely from lightning. After a wind change on Wednesday, it grew about fourfold in a day, reports say. ABC News says almost fifteen thousand hectares have burned."
+  },
+  {
+   "id": "f2",
+   "text": "Around eight buildings are damaged or destroyed, ABC reports, some homes. Authorities warned some residents refused to evacuate. On Friday, the national fire authorities council flagged higher bushfire risk this summer in parts of every state and territory, except Queensland and Canberra's territory."
+  },
+  {
+   "id": "f3",
+   "text": "It cites heavy fuel loads, dry soils and a hot, dry forecast. The weather bureau expects a hotter than average summer for almost all of Australia. It says El Niño is strengthening, with models suggesting a peak around December or January."
+  },
+  {
+   "id": "cta",
+   "text": "Will the Flinders Island fire be out before summer starts? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE FIRE",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE DAMAGE",
+   "seg": "f2",
+   "to": "f2:On -0.1",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE SEASON",
+   "seg": "f2:On",
+   "to": "cta -0.2",
+   "color": "heat"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 135,
+     "lat": -28,
+     "R": 400
+    },
+    {
+     "at": 3.6,
+     "lon": 148.0,
+     "lat": -39.95,
+     "R": 640
+    }
+   ],
+   "chip": {
+    "text": "TASMANIA · AUSTRALIA",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:Australian",
+    "lines": [
+     [
+      "10% OF AN ISLAND",
+      "text",
+      110
+     ],
+     [
+      "BURNED",
+      "danger",
+      130
+     ]
+    ]
+   },
+   "markers": [
+    {
+     "loc": [
+      148.0,
+      -39.95
+     ],
+     "color": "danger",
+     "at": "hook:island",
+     "label": "FLINDERS ISLAND",
+     "dx": 60,
+     "dy": -80
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "f2:On",
+   "center": [
+    148,
+    -40
+   ],
+   "detail": [
+    "AUS"
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 148.0,
+     "lat": -39.95,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +0.9",
+     "lon": 148.0,
+     "lat": -39.95,
+     "dist": 4.2,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 90
+    },
+    {
+     "at": "f1:Palana",
+     "lon": 147.92,
+     "lat": -39.82,
+     "dist": 2.6,
+     "pitch": 0,
+     "yaw": -6,
+     "oy": 110
+    },
+    {
+     "at": "f1:wind",
+     "lon": 147.98,
+     "lat": -39.88,
+     "dist": 3.0,
+     "pitch": 0,
+     "yaw": 4,
+     "oy": 110
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": 148.0,
+     "lat": -39.95,
+     "dist": 3.4,
+     "pitch": 0,
+     "yaw": -4,
+     "oy": 100
+    },
+    {
+     "at": "f2:On",
+     "lon": 148.0,
+     "lat": -39.95,
+     "dist": 3.8,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 100
+    }
+   ],
+   "layers": [
+    {
+     "kind": "marker",
+     "loc": [
+      147.87,
+      -39.76
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:Palana",
+     "until": "f1:wind",
+     "label": {
+      "text": "PALANA",
+      "sub": "FIRE STARTED NOV 19 · LIKELY LIGHTNING",
+      "dx": -360,
+      "dy": -200
+     }
+    },
+    {
+     "kind": "field",
+     "at": "f1:Palana",
+     "until": "f2:On",
+     "palette": "fire",
+     "clip": "land",
+     "alpha": 0.9,
+     "grow": 1.0,
+     "pulse": true,
+     "blobs": [
+      {
+       "loc": [
+        147.88,
+        -39.78
+       ],
+       "r": 0.08,
+       "v": 1
+      }
+     ]
+    },
+    {
+     "kind": "field",
+     "at": "f1:wind",
+     "until": "f2:On",
+     "palette": "fire",
+     "clip": "land",
+     "alpha": 0.9,
+     "grow": 2.2,
+     "pulse": true,
+     "blobs": [
+      {
+       "loc": [
+        147.9,
+        -39.78
+       ],
+       "r": 0.14,
+       "v": 1
+      },
+      {
+       "loc": [
+        148.0,
+        -39.82
+       ],
+       "r": 0.14,
+       "v": 0.95
+      },
+      {
+       "loc": [
+        147.95,
+        -39.9
+       ],
+       "r": 0.12,
+       "v": 0.85
+      },
+      {
+       "loc": [
+        148.06,
+        -39.88
+       ],
+       "r": 0.1,
+       "v": 0.75
+      }
+     ]
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      148.08,
+      -39.84
+     ],
+     "text": "WIND CHANGE · WED NOV 25",
+     "sub": "FIRE GREW ~4X IN A DAY",
+     "color": "danger",
+     "dx": 120,
+     "dy": -230,
+     "at": "f1:wind",
+     "until": "f1:ABC"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      148.02,
+      -40.12
+     ],
+     "style": "dot",
+     "color": "info",
+     "at": "f2:evacuate -0.6",
+     "until": "f2:On",
+     "label": {
+      "text": "WHITEMARK",
+      "sub": "EVACUATION CENTRE",
+      "dx": -340,
+      "dy": 160
+     }
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      147.96,
+      -39.86
+     ],
+     "style": "x",
+     "color": "accent",
+     "at": "f2 +0.3",
+     "until": "f2:Authorities",
+     "label": {
+      "text": "~8 BUILDINGS HIT",
+      "sub": "DAMAGED OR DESTROYED · PER ABC",
+      "dx": -360,
+      "dy": -210
+     }
+    },
+    {
+     "kind": "note",
+     "text": "FIRE AREA ILLUSTRATIVE · APPROXIMATE",
+     "y": 1170,
+     "at": "f1:Palana",
+     "until": "f2:On"
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "from": "f2:On",
+   "to": "cta -0.1",
+   "center": [
+    136,
+    -27
+   ],
+   "detail": [
+    "AUS"
+   ],
+   "camera": [
+    {
+     "at": "f2:On",
+     "lon": 138,
+     "lat": -28,
+     "dist": 120,
+     "pitch": 18,
+     "yaw": 0,
+     "oy": 120
+    },
+    {
+     "at": "f2:except",
+     "lon": 140,
+     "lat": -29,
+     "dist": 112,
+     "pitch": 24,
+     "yaw": -6,
+     "oy": 120
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 136,
+     "lat": -28,
+     "dist": 125,
+     "pitch": 26,
+     "yaw": 4,
+     "oy": 120
+    },
+    {
+     "at": "f3:Niño",
+     "lon": 150,
+     "lat": -20,
+     "dist": 160,
+     "pitch": 20,
+     "yaw": 0,
+     "oy": 110
+    },
+    {
+     "at": "cta -0.1",
+     "lon": 148,
+     "lat": -36,
+     "dist": 60,
+     "pitch": 30,
+     "yaw": 0,
+     "oy": 130
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "AU-TAS",
+     "color": "danger",
+     "alpha": 0.3,
+     "hatch": true,
+     "at": "f2:flagged",
+     "until": "f3 +0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "AU-VIC",
+     "color": "danger",
+     "alpha": 0.3,
+     "hatch": true,
+     "at": "f2:flagged +0.15",
+     "until": "f3 +0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "AU-NSW",
+     "color": "danger",
+     "alpha": 0.3,
+     "hatch": true,
+     "at": "f2:flagged +0.3",
+     "until": "f3 +0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "AU-SA",
+     "color": "danger",
+     "alpha": 0.3,
+     "hatch": true,
+     "at": "f2:flagged +0.45",
+     "until": "f3 +0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "AU-WA",
+     "color": "danger",
+     "alpha": 0.3,
+     "hatch": true,
+     "at": "f2:flagged +0.6",
+     "until": "f3 +0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "AU-NT",
+     "color": "danger",
+     "alpha": 0.3,
+     "hatch": true,
+     "at": "f2:flagged +0.75",
+     "until": "f3 +0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "AU-QLD",
+     "color": "neutral",
+     "alpha": 0.25,
+     "dash": true,
+     "at": "f2:except",
+     "until": "f3 +0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      131,
+      -25
+     ],
+     "text": "HIGHER FIRE RISK",
+     "sub": "PARTS OF 6 STATES & TERRITORIES · AFAC",
+     "color": "danger",
+     "dx": -300,
+     "dy": -260,
+     "at": "f2:flagged",
+     "until": "f3 +0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      145,
+      -22
+     ],
+     "text": "NORMAL RISK",
+     "sub": "QUEENSLAND + ACT · AFAC",
+     "color": "neutral",
+     "dx": 70,
+     "dy": -110,
+     "at": "f2:except",
+     "until": "f3 +0.2"
+    },
+    {
+     "kind": "field",
+     "at": "f3:weather",
+     "until": "cta -0.1",
+     "palette": "heat",
+     "clip": "AUS",
+     "alpha": 0.75,
+     "grow": 1.4,
+     "blobs": [
+      {
+       "loc": [
+        134,
+        -25
+       ],
+       "r": 12,
+       "v": 0.9
+      },
+      {
+       "loc": [
+        122,
+        -27
+       ],
+       "r": 8,
+       "v": 0.75
+      },
+      {
+       "loc": [
+        145,
+        -32
+       ],
+       "r": 7,
+       "v": 0.85
+      },
+      {
+       "loc": [
+        146,
+        -20
+       ],
+       "r": 7,
+       "v": 0.7
+      }
+     ]
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      134,
+      -26
+     ],
+     "text": "HOTTER THAN AVERAGE",
+     "sub": "ALMOST ALL OF AUSTRALIA · BOM SUMMER OUTLOOK",
+     "color": "heat",
+     "dx": -330,
+     "dy": -250,
+     "at": "f3:weather",
+     "until": "f3:Niño -0.3"
+    },
+    {
+     "kind": "field",
+     "at": "f3:Niño",
+     "until": "cta -0.1",
+     "palette": "heat",
+     "alpha": 0.55,
+     "grow": 1.5,
+     "blobs": [
+      {
+       "loc": [
+        -170,
+        -2
+       ],
+       "r": 14,
+       "v": 0.85
+      },
+      {
+       "loc": [
+        175,
+        0
+       ],
+       "r": 12,
+       "v": 0.7
+      }
+     ]
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      178,
+      -2
+     ],
+     "text": "EL NIÑO STRENGTHENING",
+     "sub": "PEAK DEC–JAN, MODELS SUGGEST · BOM",
+     "color": "accent",
+     "dx": -380,
+     "dy": -230,
+     "at": "f3:Niño",
+     "until": "f3$ +0.2"
+    },
+    {
+     "kind": "note",
+     "text": "RISK AREAS SIMPLIFIED TO STATES · HEAT AREAS ILLUSTRATIVE",
+     "y": 1170,
+     "at": "f2:flagged",
+     "until": "cta -0.1"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "from": "f1:ABC -0.1",
+   "to": "f1$ +0.3",
+   "label": "HECTARES BURNED",
+   "sublabel": "FLINDERS ISLAND · AS OF THURSDAY",
+   "icon": "flame",
+   "color": "danger",
+   "value": 15000,
+   "start": 0,
+   "prefix": "~",
+   "suffix": "",
+   "decimals": 0,
+   "at": "f1:ABC",
+   "doneAt": "f1:hectares",
+   "note": "MORE THAN 10% OF THE ISLAND",
+   "source": "SOURCE: ABC NEWS (AUSTRALIA)"
+  },
+  {
+   "type": "facts",
+   "from": "f3 -0.05",
+   "to": "f3:weather -0.15",
+   "items": [
+    {
+     "icon": "flame",
+     "big": "FUEL",
+     "text": "HIGH FUEL LOADS",
+     "color": "danger",
+     "at": "f3:heavy"
+    },
+    {
+     "icon": "drop",
+     "big": "SOIL",
+     "text": "LOW SOIL MOISTURE",
+     "color": "accent",
+     "at": "f3:dry"
+    },
+    {
+     "icon": "thermo",
+     "big": "HEAT",
+     "text": "HOT, DRY FORECAST",
+     "color": "heat",
+     "at": "f3:hot"
+    }
+   ],
+   "source": "SOURCE: AFAC SUMMER 2026 OUTLOOK VIA ABC NEWS, WEATHERZONE"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "15,000 HECTARES. SUMMER AHEAD.",
+     "text"
+    ],
+    [
+     "FIRE OUT BY DECEMBER?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "ABC NEWS · SBS NEWS · THE NEW DAILY · WEATHERZONE · NEWS.COM.AU",
+    "AFAC · BUREAU OF METEOROLOGY · NOV 27, 2026 · AREAS APPROXIMATE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 148,
+     "lat": -38,
+     "R": 700
+    },
+    {
+     "at": "cta +1",
+     "lon": 140,
+     "lat": -30,
+     "R": 640
+    },
+    {
+     "at": "end",
+     "lon": 140,
+     "lat": -30,
+     "R": 640
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      148.0,
+      -39.95
+     ],
+     "color": "danger"
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "A Tenth of Tasmania's Flinders Island Has Burned #shorts",
+  "description": "A bushfire on Flinders Island, off Tasmania, has burned almost 15,000 hectares, more than 10% of the island, ABC News reports; around eight buildings, some of them homes, are damaged or destroyed (preliminary). On Friday, AFAC's summer outlook flagged increased bushfire risk in parts of every state and territory except Queensland and the ACT, and the Bureau of Meteorology expects a hotter than average summer for almost all of Australia as El Niño strengthens.\n\nSources: ABC News (Australia); SBS News; The New Daily; Weatherzone; news.com.au; AFAC Seasonal Bushfire Outlook; Bureau of Meteorology (based on search-result excerpts). Fire, risk and heat areas on the map are approximate and illustrative.\n\n#climate #weather #bushfire #australia #elnino",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "bushfire",
+   "wildfire",
+   "Flinders Island",
+   "Tasmania",
+   "Australia",
+   "El Niño",
+   "fire season",
+   "Bureau of Meteorology"
+  ],
+  "cover": "f1:wind +1"
+ },
+ "thumbnail": {
+  "at": "f2:Authorities +0.6",
+  "number": "~15,000 HA",
+  "numberColor": "danger",
+  "source": "BURNED · PER ABC NEWS · AS OF NOV 26",
+  "focus": [
+   147.95,
+   -39.82
+  ],
+  "lines": [
+   [
+    "AND SUMMER",
+    "text"
+   ],
+   [
+    "HASN'T STARTED",
+    "accent"
+   ]
+  ],
+  "zoom": 2.0
+ }
+}
