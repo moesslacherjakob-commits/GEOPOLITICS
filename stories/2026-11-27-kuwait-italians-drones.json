@@ -1,0 +1,539 @@
+{
+ "id": "2026-11-27-kuwait-italians-drones",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Two Italian engineers killed in Kuwait. Rome points at Iran. Tehran says: not us."
+  },
+  {
+   "id": "f1",
+   "text": "Kuwait says its air defences shot down drones on Thursday, and debris fell on a vital facility. Italy's foreign minister says two Rheinmetall Italia technicians died at an air defence surveillance station there. A Kuwaiti officer and a Pakistani national were hurt."
+  },
+  {
+   "id": "f2",
+   "text": "So who sent them? Foreign Minister Antonio Tajani says the drone was made in Iran, but adds that many pro-Iranian militias operate in the region. Kuwait calls it Iranian aggression. EU chief Ursula von der Leyen says pressure on Iran must be stepped up."
+  },
+  {
+   "id": "f3",
+   "text": "Tehran denies any role. Its armed forces say they carried out no operations, and its embassy in Rome suggests a false flag. Foreign Minister Abbas Araghchi told Tajani Iran is ready to help Kuwait and Italy investigate."
+  },
+  {
+   "id": "cta",
+   "text": "Will investigators name who launched the drones by year's end? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "DEBRIS IN KUWAIT",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "WHO SENT THEM?",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "IRAN DENIES",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "info"
+  }
+ ],
+ "upload": {
+  "title": "Two Italians Killed by Drones in Kuwait. Who Sent Them? #shorts",
+  "description": "On Thursday, November 26, 2026, Kuwait's defence ministry said drones it described as Iranian were shot down in Kuwaiti airspace and that falling debris hit a \"vital facility\". It first reported four people wounded and later confirmed that two Italian nationals had died of their injuries; a Kuwaiti army captain and a Pakistani national were also hurt. Italy's foreign minister Antonio Tajani told the Senate the two were technicians of Rheinmetall Italia (part of the German defence group Rheinmetall) working at an air-defence surveillance station in Kuwait. Tajani said the drone was Iranian-made, while noting that numerous pro-Iranian militias operate in the region. Kuwait's ministry called the attack \"Iranian aggression\"; the Gulf Cooperation Council also blamed Iran. European Commission President Ursula von der Leyen wrote on X that pressure on Iran must be stepped up to end attacks on its neighbours and the EU's partners in the Gulf. Iran denies any involvement: armed forces spokesperson Abolfazl Shekarchi said no military or offensive operations had been conducted, and Iran's embassy in Rome rejected the allegation and suggested a false-flag operation (without providing evidence). Foreign Minister Abbas Araghchi told Tajani Iran had no role and was ready to cooperate with Kuwait and Italy to establish the cause. Who launched the drones has not been independently established; the exact site in Kuwait was not disclosed, so locations on the map are approximate.\n\nSources:\nCNN, Nov 26, 2026: Two Italians killed in alleged Iranian drone attack on Kuwait; Tehran denies involvement\nNBC News, Nov 26, 2026: Two Italians killed in attack on Kuwait site, Iran denies involvement\nCBC News, Nov 26, 2026: Iran denies involvement after 2 Italian technicians killed in attack on Kuwait site\nUPI, Nov 26, 2026: 2 Italians killed in Kuwait drone strike; Iran denies responsibility\nAl Jazeera, Nov 26, 2026: Two Italians killed by 'drone strike debris' in Kuwait\nABC News (Australia), Nov 27, 2026: Two Italian workers killed in Iranian drone strike on Kuwait\nArab News / Business Recorder / The New Arab, Nov 26, 2026\nUrsula von der Leyen on X, Nov 26, 2026\n\n#geopolitics #Kuwait #Italy #Iran #drones #Gulf #EU",
+  "tags": [
+   "geopolitics",
+   "Kuwait",
+   "Italy",
+   "Iran",
+   "drone attack",
+   "Rheinmetall",
+   "Tajani",
+   "von der Leyen",
+   "Gulf",
+   "Iran war",
+   "world news"
+  ],
+  "cover": "f1 +2"
+ },
+ "thumbnail": {
+  "at": "f1:technicians",
+  "focus": "Kuwait City",
+  "zoom": 1.4,
+  "number": "2",
+  "numberColor": "danger",
+  "lines": [
+   [
+    "ITALIANS DEAD",
+    "text"
+   ],
+   [
+    "IRAN: NOT US",
+    "accent"
+   ]
+  ],
+  "source": "PER KUWAIT + ITALY · NOV 26 · IRAN DENIES"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 35,
+     "lat": 36,
+     "R": 420
+    },
+    {
+     "at": 3.6,
+     "lon": 47.8,
+     "lat": 29.3,
+     "R": 640
+    }
+   ],
+   "chip": {
+    "text": "KUWAIT · PERSIAN GULF · NOV 26, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "KWT",
+     "color": "danger",
+     "at": "hook:Kuwait.",
+     "alpha": 0.6
+    },
+    {
+     "iso": "ITA",
+     "color": "accent",
+     "at": "hook:Italian",
+     "alpha": 0.45
+    },
+    {
+     "iso": "IRN",
+     "color": "info",
+     "at": "hook:Iran.",
+     "alpha": 0.4
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Rome",
+     "color": "accent",
+     "at": "hook:Rome",
+     "label": "ROME",
+     "dx": -120,
+     "dy": -110
+    }
+   ],
+   "headline": {
+    "at": "hook:engineers",
+    "lines": [
+     [
+      "2 ITALIANS",
+      "danger",
+      100
+     ],
+     [
+      "KILLED IN KUWAIT",
+      "text",
+      84
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:Tehran",
+    "icon": "x",
+    "iconColor": "info",
+    "color": "info",
+    "kicker": "IRAN",
+    "title": "\"NOT US\"",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    48,
+    30
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 47.8,
+     "lat": 29.3,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.5",
+     "lon": 47.7,
+     "lat": 29.3,
+     "dist": 13,
+     "pitch": 48,
+     "yaw": -6,
+     "oy": 190
+    },
+    {
+     "at": "f1:Italy's -0.3",
+     "lon": 47.8,
+     "lat": 29.25,
+     "dist": 9,
+     "pitch": 52,
+     "yaw": 4,
+     "oy": 190
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": 50.5,
+     "lat": 30.5,
+     "dist": 38,
+     "pitch": 46,
+     "yaw": 0,
+     "oy": 200
+    },
+    {
+     "at": "f2:Kuwait -0.4",
+     "lon": 49.5,
+     "lat": 30.2,
+     "dist": 30,
+     "pitch": 48,
+     "yaw": -4,
+     "oy": 200
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 51.5,
+     "lat": 32.5,
+     "dist": 40,
+     "pitch": 46,
+     "yaw": 4,
+     "oy": 200
+    },
+    {
+     "at": "f3:Araghchi -0.3",
+     "lon": 49.5,
+     "lat": 31,
+     "dist": 48,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 200
+    },
+    {
+     "at": "cta +0.4",
+     "lon": 49,
+     "lat": 30,
+     "dist": 60,
+     "pitch": 40,
+     "yaw": 0,
+     "oy": 200
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "KWT",
+     "color": "danger",
+     "alpha": 0.75,
+     "fill": 0.1,
+     "pulse": true,
+     "at": "f1"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      47.75,
+      29.25
+     ],
+     "style": "pulse",
+     "color": "danger",
+     "at": "f1:drones",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "DRONES SHOT DOWN",
+      "sub": "PER KUWAIT · SITE NOT DISCLOSED · APPROX.",
+      "dx": -160,
+      "dy": -170,
+      "until": "f1:Italy's -0.3"
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "DEBRIS HIT FACILITY",
+     "icon": "shield",
+     "color": "danger",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f1:debris",
+     "until": "f1:Italy's -0.2",
+     "note": "PER KUWAIT'S DEFENCE MINISTRY · NOV 26"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      90,
+      330,
+      640
+     ],
+     "title": "PER ITALY + KUWAIT",
+     "color": "danger",
+     "at": "f1:Italy's",
+     "until": "f2 -0.2",
+     "rows": [
+      {
+       "icon": "x",
+       "text": "2 KILLED · RHEINMETALL ITALIA TECHNICIANS",
+       "at": "f1:died"
+      },
+      {
+       "icon": "eye",
+       "text": "SITE: AIR DEFENCE SURVEILLANCE STATION",
+       "at": "f1:surveillance"
+      },
+      {
+       "icon": "people",
+       "text": "2 HURT · KUWAITI OFFICER, PAKISTANI",
+       "at": "f1:hurt."
+      }
+     ]
+    },
+    {
+     "kind": "callout",
+     "loc": "Kuwait City",
+     "place": "ROME",
+     "icon": "flag",
+     "screen": [
+      820,
+      640
+     ],
+     "color": "accent",
+     "at": "f2:Tajani",
+     "until": "f2:Kuwait -0.2"
+    },
+    {
+     "kind": "tint",
+     "iso": "IRN",
+     "color": "info",
+     "alpha": 0.55,
+     "fill": 0.06,
+     "hatch": true,
+     "at": "f2:Iran,",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      51.5,
+      32.5
+     ],
+     "text": "DRONE \"MADE IN IRAN\"",
+     "sub": "PER ITALY'S FOREIGN MINISTER",
+     "color": "info",
+     "dx": 120,
+     "dy": -150,
+     "at": "f2:Iran,",
+     "until": "f2:Kuwait -0.2"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      90,
+      330,
+      640
+     ],
+     "kicker": "TAJANI ALSO SAYS",
+     "text": "MANY PRO-IRANIAN MILITIAS OPERATE IN THE REGION",
+     "color": "accent",
+     "at": "f2:militias",
+     "until": "f2:Kuwait -0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "\"IRANIAN AGGRESSION\"",
+     "icon": "flag",
+     "color": "danger",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f2:Kuwait",
+     "until": "f2:EU -0.2",
+     "note": "KUWAIT'S DEFENCE MINISTRY"
+    },
+    {
+     "kind": "stamp",
+     "text": "IRAN DENIES",
+     "icon": "x",
+     "color": "info",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f3:denies",
+     "until": "f3:armed -0.1",
+     "note": "ARMED FORCES + FOREIGN MINISTRY · NOV 26"
+    },
+    {
+     "kind": "marker",
+     "loc": "Tehran",
+     "style": "pulse",
+     "color": "info",
+     "at": "f3",
+     "until": "cta -0.2",
+     "label": {
+      "text": "TEHRAN",
+      "sub": "DENIES ANY ROLE",
+      "dx": 150,
+      "dy": -120,
+      "until": "f3:armed -0.1"
+     }
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      90,
+      330,
+      640
+     ],
+     "kicker": "IRAN'S ARMED FORCES",
+     "text": "\"NO MILITARY OR OFFENSIVE OPERATIONS\" CONDUCTED",
+     "color": "info",
+     "at": "f3:armed",
+     "until": "f3:embassy -0.2"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      90,
+      330,
+      640
+     ],
+     "kicker": "IRAN'S EMBASSY IN ROME",
+     "text": "SUGGESTS A FALSE FLAG · NO EVIDENCE GIVEN",
+     "color": "info",
+     "at": "f3:embassy",
+     "until": "f3:Araghchi -0.2"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      90,
+      330,
+      640
+     ],
+     "title": "ARAGHCHI TO TAJANI",
+     "color": "info",
+     "at": "f3:Araghchi",
+     "until": "cta -0.2",
+     "rows": [
+      {
+       "icon": "x",
+       "text": "\"NO ROLE\" IN THE INCIDENT",
+       "at": "f3:Tajani"
+      },
+      {
+       "icon": "check",
+       "text": "READY TO HELP KUWAIT + ITALY INVESTIGATE",
+       "at": "f3:investigate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "from": "f2:EU -0.1",
+   "to": "f3 -0.15",
+   "lines": [
+    [
+     "\"WE MUST STEP UP",
+     "text"
+    ],
+    [
+     "PRESSURE ON IRAN\"",
+     "accent"
+    ]
+   ],
+   "by": "EU COMMISSION PRESIDENT URSULA VON DER LEYEN · ON X · NOV 26"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 45,
+     "lat": 33,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 45,
+     "lat": 33,
+     "R": 560
+    },
+    {
+     "at": "end",
+     "lon": 45,
+     "lat": 33,
+     "R": 560
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "KWT",
+     "color": "danger",
+     "alpha": 0.6
+    },
+    {
+     "iso": "ITA",
+     "color": "accent",
+     "alpha": 0.45
+    },
+    {
+     "iso": "IRN",
+     "color": "info",
+     "alpha": 0.4
+    }
+   ],
+   "markers": [
+    {
+     "loc": "Kuwait City",
+     "color": "danger"
+    },
+    {
+     "loc": "Rome",
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "WHO LAUNCHED THEM?",
+     "text"
+    ],
+    [
+     "NAMED BY NEW YEAR?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "CNN, NBC NEWS, CBC, UPI, AL JAZEERA, ABC AUSTRALIA,",
+    "ARAB NEWS · NOV 26, 2026 · LOCATIONS APPROX."
+   ]
+  }
+ ]
+}
