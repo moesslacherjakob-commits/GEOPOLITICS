@@ -1,0 +1,385 @@
+{
+ "id": "2026-11-27-spacex-starmind-fcc",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A million satellites running A.I. in orbit. U.S. regulators said yes, with a catch."
+  },
+  {
+   "id": "f1",
+   "text": "This week, the U.S. regulator FCC gave SpaceX conditional approval for up to one million Starmind satellites. They are meant to be data centers for artificial intelligence. Chair Brendan Carr calls it a bold new frontier for computing."
+  },
+  {
+   "id": "f2",
+   "text": "The catch: SpaceX asked for orbits up to two thousand kilometers. It got about one thousand, and nothing above six hundred until it files a final debris plan. The first satellite must work by twenty thirty-three, all one million by twenty forty."
+  },
+  {
+   "id": "f3",
+   "text": "About eleven thousand Starlink satellites orbit Earth now, per astronomer Jonathan McDowell. Monash University's Michael Brown says Starmind would multiply active satellites more than fifty times. The FCC rejected petitions to block it, including one from the American Astronomical Society."
+  },
+  {
+   "id": "cta",
+   "text": "Will SpaceX fly Starmind satellites in twenty twenty-seven, as it plans? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE APPROVAL",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE CATCH",
+   "seg": "f2",
+   "color": "oil"
+  },
+  {
+   "n": "03",
+   "name": "THE NIGHT SKY",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "violet"
+  }
+ ],
+ "upload": {
+  "title": "FCC Clears SpaceX for 1 Million AI Satellites #shorts",
+  "description": "On November 25, 2026, the U.S. Federal Communications Commission gave SpaceX conditional approval to deploy up to one million Starmind satellites meant to work as orbital data centers for artificial intelligence. The FCC allowed altitudes of about 500 to 1,002 km instead of the 2,000 km SpaceX requested, with nothing above 600 km until SpaceX files a final orbital-debris plan; the first satellite must be operating by 2033 and the full constellation by 2040. Astronomers, including Monash University's Michael Brown, warn about the impact on the night sky; the FCC rejected petitions to deny, including one from the American Astronomical Society. SpaceX says it plans to begin flying Starmind satellites in 2027.\n\nSources: FCC (Space Bureau order), CNN, CNBC, TechCrunch, Space.com, Spaceflight Now, GeekWire, SiliconANGLE, Gizmodo, Engadget, Advanced Television, Jonathan McDowell (satellite count).\n\n#tech #space #SpaceX #Starmind #FCC #satellites #AI",
+  "tags": [
+   "technology",
+   "news",
+   "space",
+   "SpaceX",
+   "Starmind",
+   "Starlink",
+   "FCC",
+   "satellites",
+   "AI",
+   "data centers",
+   "orbital data centers",
+   "astronomy",
+   "space debris"
+  ],
+  "cover": "f3:fifty"
+ },
+ "thumbnail": {
+  "at": "f3:fifty",
+  "overlays": true,
+  "focus": {
+   "x": 585,
+   "y": 745
+  },
+  "zoom": 1.15,
+  "number": "1,000,000",
+  "numberColor": "accent",
+  "lines": [
+   [
+    "DATA CENTERS",
+    "text"
+   ],
+   [
+    "IN ORBIT",
+    "accent"
+   ]
+  ],
+  "source": "SATELLITES · FCC CONDITIONAL APPROVAL · NOV 25"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "f1 -0.1",
+   "view": [
+    {
+     "at": 0,
+     "lon": -40,
+     "lat": 20,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": -85,
+     "lat": 33,
+     "R": 620
+    }
+   ],
+   "chip": {
+    "text": "FCC · SPACEX STARMIND · NOV 25",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "markers": [
+    {
+     "loc": [
+      -77.04,
+      38.9
+     ],
+     "color": "accent",
+     "at": "hook:running",
+     "label": "FCC",
+     "sub": "WASHINGTON, D.C.",
+     "dx": 60,
+     "dy": -110,
+     "big": true
+    },
+    {
+     "loc": [
+      -97.16,
+      25.99
+     ],
+     "color": "info",
+     "at": "hook:regulators",
+     "label": "SPACEX STARBASE",
+     "sub": "TEXAS",
+     "dx": -60,
+     "dy": 110
+    }
+   ],
+   "headline": {
+    "at": "hook:running",
+    "lines": [
+     [
+      "1 MILLION SATELLITES",
+      "text",
+      92
+     ],
+     [
+      "RUNNING A.I.",
+      "accent",
+      88
+     ]
+    ]
+   }
+  },
+  {
+   "type": "facts",
+   "from": "f1 -0.1",
+   "to": "f1:Chair -0.2",
+   "color": "accent",
+   "items": [
+    {
+     "icon": "check",
+     "big": "CONDITIONAL YES",
+     "text": "FCC SPACE BUREAU · NOV 25",
+     "color": "ok",
+     "at": "f1:conditional"
+    },
+    {
+     "icon": "chip",
+     "big": "UP TO 1,000,000",
+     "text": "STARMIND SATELLITES",
+     "color": "accent",
+     "at": "f1:million"
+    },
+    {
+     "icon": "bolt",
+     "big": "A.I. DATA CENTERS",
+     "text": "IN ORBIT · SPACEX PLAN",
+     "color": "info",
+     "at": "f1:data"
+    }
+   ],
+   "source": "SOURCES: FCC ORDER · CNBC · TECHCRUNCH · CNN"
+  },
+  {
+   "type": "quote",
+   "from": "f1:Chair -0.2",
+   "to": "f2 -0.1",
+   "at": "f1:Chair",
+   "lines": [
+    [
+     "“OPENS A BOLD",
+     "text"
+    ],
+    [
+     "NEW FRONTIER”",
+     "accent"
+    ],
+    [
+     "FOR COMPUTING",
+     "text"
+    ]
+   ],
+   "by": "BRENDAN CARR · FCC CHAIR"
+  },
+  {
+   "type": "bars",
+   "from": "f2 -0.1",
+   "to": "f2:first -0.3",
+   "label": "HOW HIGH STARMIND MAY FLY",
+   "sublabel": "MAXIMUM ALTITUDE · KM",
+   "bars": [
+    {
+     "label": "SPACEX ASKED",
+     "value": 2000,
+     "display": "2,000 KM",
+     "color": "neutral",
+     "at": "f2:asked",
+     "dur": 0.8
+    },
+    {
+     "label": "FCC ALLOWED",
+     "value": 1002,
+     "display": "1,002 KM",
+     "color": "accent",
+     "at": "f2:got",
+     "dur": 0.8
+    },
+    {
+     "label": "FOR NOW",
+     "value": 600,
+     "display": "600 KM",
+     "color": "oil",
+     "at": "f2:six",
+     "dur": 0.8
+    }
+   ],
+   "badge": {
+    "text": "DEBRIS PLAN STILL PENDING",
+    "at": "f2:debris"
+   },
+   "source": "SOURCE: FCC ORDER VIA SILICONANGLE · GEEKWIRE · CNBC"
+  },
+  {
+   "type": "timeline",
+   "from": "f2:first -0.3",
+   "to": "f3 -0.1",
+   "label": "FCC DEADLINES",
+   "color": "oil",
+   "items": [
+    {
+     "date": "NOV 2026",
+     "title": "CONDITIONAL APPROVAL",
+     "color": "ok",
+     "at": "f2:first -0.2"
+    },
+    {
+     "date": "2033",
+     "title": "FIRST SATELLITE WORKING",
+     "color": "accent",
+     "big": true,
+     "at": "f2:thirty-three"
+    },
+    {
+     "date": "2035",
+     "title": "100,000 SATELLITES",
+     "color": "info",
+     "at": "f2:thirty-three +0.6"
+    },
+    {
+     "date": "2038",
+     "title": "500,000 SATELLITES",
+     "color": "info",
+     "at": "f2:all"
+    },
+    {
+     "date": "2040",
+     "title": "ALL 1,000,000",
+     "color": "oil",
+     "at": "f2:forty"
+    }
+   ],
+   "source": "SOURCES: FCC ORDER VIA ADVANCED TELEVISION · CNN"
+  },
+  {
+   "type": "scale",
+   "from": "f3 -0.1",
+   "to": "f3:FCC -0.3",
+   "label": "SATELLITES IN THE SKY",
+   "sublabel": "CIRCLE AREA TO SCALE",
+   "color": "violet",
+   "items": [
+    {
+     "name": "STARLINK NOW",
+     "value": 11200,
+     "display": "≈11,200",
+     "color": "info",
+     "at": "f3:Starlink"
+    },
+    {
+     "name": "STARMIND",
+     "value": 1000000,
+     "display": "1,000,000",
+     "color": "accent",
+     "at": "f3:Brown"
+    }
+   ],
+   "note": "BROWN, MONASH UNIV.: ACTIVE SATELLITES ×50+",
+   "source": "SOURCES: JONATHAN McDOWELL (NOV 22 COUNT) · FCC · M. BROWN VIA REPORTS"
+  },
+  {
+   "type": "facts",
+   "from": "f3:FCC -0.3",
+   "to": "cta -0.1",
+   "color": "violet",
+   "items": [
+    {
+     "icon": "x",
+     "big": "PETITIONS REJECTED",
+     "text": "REQUESTS TO DENY THE LICENSE",
+     "color": "danger",
+     "at": "f3:rejected"
+    },
+    {
+     "icon": "eye",
+     "big": "ASTRONOMERS OBJECTED",
+     "text": "AMERICAN ASTRONOMICAL SOCIETY",
+     "color": "violet",
+     "at": "f3:American"
+    }
+   ],
+   "source": "SOURCES: FCC ORDER VIA SILICONANGLE · GEEKWIRE"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -40,
+     "lat": 20,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": -85,
+     "lat": 33,
+     "R": 540
+    },
+    {
+     "at": "end",
+     "lon": -80,
+     "lat": 30,
+     "R": 500
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      -77.04,
+      38.9
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "FIRST FLIGHTS",
+     "text"
+    ],
+    [
+     "IN 2027?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "FCC · CNN · CNBC · TECHCRUNCH · SPACE.COM · SPACEFLIGHT NOW",
+    "GEEKWIRE · SILICONANGLE · GIZMODO · ENGADGET · J. McDOWELL",
+    "2027 START IS SPACEX'S PLAN · DEBRIS PLAN ABOVE 600 KM STILL PENDING"
+   ]
+  }
+ ]
+}
