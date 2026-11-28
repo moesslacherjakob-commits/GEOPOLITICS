@@ -1,0 +1,553 @@
+{
+ "id": "2026-11-28-week-above-2c",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Seven straight days at two degrees of warming. Is the Paris limit already broken?"
+  },
+  {
+   "id": "f1",
+   "text": "Europe's Copernicus climate service says the global average temperature stayed more than two degrees Celsius above pre-industrial levels from November eighteenth to twenty-fourth. Copernicus says no week like that is on record."
+  },
+  {
+   "id": "f2",
+   "text": "Earlier spells above two degrees were short, reports say. Two days in November twenty twenty-three. Four days in February twenty twenty-four. This November, the mark was hit on ten days in total. The data are still preliminary, Copernicus says."
+  },
+  {
+   "id": "f3",
+   "text": "So is the Paris limit broken? No, says Copernicus climate lead Samantha Burgess. The treaty counts warming over many years, not days. She calls the week a stark preview of where our climate is headed. Scientists link the spike to a strong El Niño on top of long-term warming."
+  },
+  {
+   "id": "cta",
+   "text": "Will next year break the global heat record? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE RECORD",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE TREND",
+   "seg": "f2",
+   "color": "accent"
+  },
+  {
+   "n": "03",
+   "name": "THE REASON",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "heat"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": -30,
+     "lat": 20,
+     "R": 420
+    },
+    {
+     "at": 3.8,
+     "lon": 10,
+     "lat": 15,
+     "R": 470
+    }
+   ],
+   "chip": {
+    "text": "GLOBAL · COPERNICUS DATA",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "headline": {
+    "at": "hook:days",
+    "lines": [
+     [
+      "7 DAYS ABOVE 2°C",
+      "text",
+      110
+     ],
+     [
+      "A FIRST",
+      "danger",
+      130
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "f2 -0.05",
+   "center": [
+    10,
+    15
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 10,
+     "lat": 15,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0,
+     "oy": 0
+    },
+    {
+     "at": "f1 +1.2",
+     "lon": 10,
+     "lat": 15,
+     "dist": 150,
+     "pitch": 10,
+     "yaw": 0,
+     "oy": 120
+    },
+    {
+     "at": "f1:pre-industrial",
+     "lon": 25,
+     "lat": 20,
+     "dist": 140,
+     "pitch": 22,
+     "yaw": -6,
+     "oy": 130
+    },
+    {
+     "at": "f1:twenty-fourth.",
+     "lon": 0,
+     "lat": 15,
+     "dist": 155,
+     "pitch": 18,
+     "yaw": 6,
+     "oy": 130
+    },
+    {
+     "at": "f2 -0.05",
+     "lon": -5,
+     "lat": 15,
+     "dist": 160,
+     "pitch": 14,
+     "yaw": 0,
+     "oy": 130
+    }
+   ],
+   "layers": [
+    {
+     "kind": "field",
+     "at": "f1:global",
+     "until": "f2 -0.05",
+     "palette": "heat",
+     "alpha": 0.85,
+     "grow": 1.6,
+     "pulse": true,
+     "blobs": [
+      {
+       "loc": [
+        20,
+        50
+       ],
+       "r": 18,
+       "v": 0.8
+      },
+      {
+       "loc": [
+        -40,
+        20
+       ],
+       "r": 20,
+       "v": 0.7
+      },
+      {
+       "loc": [
+        70,
+        30
+       ],
+       "r": 18,
+       "v": 0.85
+      },
+      {
+       "loc": [
+        10,
+        0
+       ],
+       "r": 16,
+       "v": 0.7
+      },
+      {
+       "loc": [
+        -90,
+        45
+       ],
+       "r": 16,
+       "v": 0.75
+      },
+      {
+       "loc": [
+        100,
+        60
+       ],
+       "r": 16,
+       "v": 0.9
+      },
+      {
+       "loc": [
+        -60,
+        -15
+       ],
+       "r": 15,
+       "v": 0.65
+      }
+     ]
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      20,
+      45
+     ],
+     "text": "GLOBAL AVERAGE > 2°C",
+     "sub": "ABOVE 1850–1900 · PER COPERNICUS",
+     "color": "danger",
+     "dx": -60,
+     "dy": -230,
+     "at": "f1:Celsius",
+     "until": "f1:Copernicus#1 -0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -20,
+      15
+     ],
+     "text": "NOV 18 → NOV 24",
+     "sub": "7 DAYS IN A ROW",
+     "color": "accent",
+     "dx": 60,
+     "dy": 220,
+     "at": "f1:November",
+     "until": "f1:Copernicus#1 -0.2"
+    },
+    {
+     "kind": "note",
+     "text": "HEAT AREAS ILLUSTRATIVE · NOT A DATA MAP",
+     "y": 1170,
+     "at": "f1:global",
+     "until": "f2 -0.05"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "from": "f1:Copernicus#1 -0.15",
+   "to": "f1$ +0.3",
+   "label": "DAYS IN A ROW ABOVE 2°C",
+   "sublabel": "GLOBAL AVERAGE · NOV 18–24, 2026",
+   "icon": "thermo",
+   "color": "danger",
+   "value": 7,
+   "start": 0,
+   "prefix": "",
+   "suffix": "",
+   "decimals": 0,
+   "at": "f1:Copernicus#1",
+   "doneAt": "f1:week",
+   "note": "FIRST TIME ON RECORD",
+   "source": "SOURCE: COPERNICUS VIA DPA, THE GUARDIAN"
+  },
+  {
+   "type": "bars",
+   "from": "f2 -0.05",
+   "to": "f2:This -0.1",
+   "label": "LONGEST SPELLS ABOVE 2°C",
+   "sublabel": "CONSECUTIVE DAYS · GLOBAL AVERAGE",
+   "bars": [
+    {
+     "label": "NOV 2023",
+     "value": 2,
+     "display": "2 DAYS",
+     "color": "neutral",
+     "at": "f2:Two",
+     "dur": 0.7
+    },
+    {
+     "label": "FEB 2024",
+     "value": 4,
+     "display": "4 DAYS",
+     "color": "accent",
+     "at": "f2:Four",
+     "dur": 0.7
+    },
+    {
+     "label": "NOV 2026",
+     "value": 7,
+     "display": "7 DAYS",
+     "color": "danger",
+     "at": "f2:Four +1.6",
+     "dur": 0.8
+    }
+   ],
+   "source": "SOURCE: REPORTS CITING COPERNICUS DATA"
+  },
+  {
+   "type": "map",
+   "from": "f2:This -0.1",
+   "to": "cta -0.1",
+   "center": [
+    -150,
+    15
+   ],
+   "camera": [
+    {
+     "at": "f2:This -0.1",
+     "lon": -155,
+     "lat": 25,
+     "dist": 165,
+     "pitch": 14,
+     "yaw": 0,
+     "oy": 130
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": -150,
+     "lat": 20,
+     "dist": 155,
+     "pitch": 22,
+     "yaw": -5,
+     "oy": 130
+    },
+    {
+     "at": "f3:Scientists",
+     "lon": -130,
+     "lat": 5,
+     "dist": 130,
+     "pitch": 28,
+     "yaw": 4,
+     "oy": 130
+    },
+    {
+     "at": "cta -0.1",
+     "lon": -125,
+     "lat": 5,
+     "dist": 140,
+     "pitch": 26,
+     "yaw": 0,
+     "oy": 130
+    }
+   ],
+   "layers": [
+    {
+     "kind": "stamp",
+     "text": "10 DAYS ABOVE 2°C",
+     "icon": "thermo",
+     "color": "danger",
+     "screen": [
+      540,
+      520
+     ],
+     "note": "THIS NOVEMBER · PER COPERNICUS",
+     "at": "f2:ten",
+     "until": "f2:preliminary"
+    },
+    {
+     "kind": "stamp",
+     "text": "PRELIMINARY DATA",
+     "icon": "eye",
+     "color": "neutral",
+     "screen": [
+      540,
+      520
+     ],
+     "note": "COPERNICUS",
+     "at": "f2:preliminary",
+     "until": "f2$ +0.2"
+    },
+    {
+     "kind": "stamp",
+     "text": "NOT A PARIS BREACH",
+     "icon": "check",
+     "color": "ok",
+     "screen": [
+      540,
+      500
+     ],
+     "note": "PARIS COUNTS MULTI-YEAR AVERAGES · PER COPERNICUS",
+     "at": "f3:No",
+     "until": "f3:calls -0.3"
+    },
+    {
+     "kind": "field",
+     "at": "f3:Scientists",
+     "until": "cta -0.1",
+     "palette": "heat",
+     "alpha": 0.85,
+     "grow": 1.5,
+     "pulse": true,
+     "blobs": [
+      {
+       "loc": [
+        -120,
+        -2
+       ],
+       "r": 16,
+       "v": 0.95
+      },
+      {
+       "loc": [
+        -145,
+        0
+       ],
+       "r": 14,
+       "v": 0.85
+      },
+      {
+       "loc": [
+        -170,
+        0
+       ],
+       "r": 12,
+       "v": 0.7
+      },
+      {
+       "loc": [
+        -95,
+        -4
+       ],
+       "r": 9,
+       "v": 0.85
+      }
+     ]
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      -140,
+      0
+     ],
+     "text": "STRONG EL NIÑO",
+     "sub": "AMPLIFYING LONG-TERM WARMING · SCIENTISTS",
+     "color": "accent",
+     "dx": -200,
+     "dy": -250,
+     "at": "f3:El",
+     "until": "cta -0.1"
+    },
+    {
+     "kind": "note",
+     "text": "EL NIÑO AREA ILLUSTRATIVE · APPROXIMATE",
+     "y": 1170,
+     "at": "f3:Scientists",
+     "until": "cta -0.1"
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "from": "f3:calls -0.2",
+   "to": "f3:Scientists -0.15",
+   "at": "f3:calls",
+   "lines": [
+    [
+     "“A STARK PREVIEW OF",
+     "text"
+    ],
+    [
+     "WHERE OUR CLIMATE",
+     "accent"
+    ],
+    [
+     "IS HEADED”",
+     "accent"
+    ]
+   ],
+   "by": "SAMANTHA BURGESS · COPERNICUS"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "lines": [
+    [
+     "7 DAYS ABOVE 2°C. A FIRST.",
+     "text"
+    ],
+    [
+     "HEAT RECORD NEXT YEAR?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "COPERNICUS · THE GUARDIAN · XINHUA/DPA · WAM · ORF · MERCOPRESS",
+    "NOV 2026 · DATA PRELIMINARY · MAP AREAS ILLUSTRATIVE"
+   ],
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": -150,
+     "lat": 5,
+     "R": 640
+    },
+    {
+     "at": "cta +1",
+     "lon": -20,
+     "lat": 15,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": -20,
+     "lat": 15,
+     "R": 600
+    }
+   ]
+  }
+ ],
+ "upload": {
+  "title": "Earth Just Spent a Full Week Above 2°C #shorts",
+  "description": "Europe's Copernicus Climate Change Service says the global average temperature stayed more than 2°C above pre-industrial (1850–1900) levels for seven consecutive days, November 18–24, 2026 — the first such stretch on record. The threshold was reached on ten days this November; the data are preliminary. Copernicus climate lead Samantha Burgess said this is not a breach of the Paris Agreement's long-term limit, but called it \"a stark preview of where our climate is headed\". Scientists link the spike to a strong El Niño on top of long-term warming.\n\nSources: Copernicus Climate Change Service; The Guardian; Xinhua (citing dpa); WAM; science.ORF.at; MercoPress (based on search-result excerpts; some early reports counted six days). Earlier spells (2 days in Nov 2023, 4 days in Feb 2024) as reported. Map heat areas are illustrative, not data maps.\n\n#climate #weather #globalwarming #copernicus #elnino",
+  "tags": [
+   "climate",
+   "weather",
+   "extreme weather",
+   "news",
+   "global warming",
+   "2 degrees",
+   "Copernicus",
+   "Paris Agreement",
+   "El Niño",
+   "global temperature",
+   "climate record",
+   "heat record"
+  ],
+  "cover": "f1:November"
+ },
+ "thumbnail": {
+  "at": "f1:temperature",
+  "number": "7 DAYS",
+  "numberColor": "danger",
+  "source": "ABOVE 2°C · NOV 18–24 · PER COPERNICUS",
+  "focus": [
+   20,
+   35
+  ],
+  "lines": [
+   [
+    "NEVER BEFORE",
+    "text"
+   ],
+   [
+    "PARIS BROKEN?",
+    "accent"
+   ]
+  ],
+  "zoom": 1.3
+ }
+}
