@@ -1,0 +1,461 @@
+{
+ "id": "2026-11-28-nvidia-southeast-asia-halt",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "Nvidia reportedly froze A.I. servers bound for four Asian nations. The target is elsewhere."
+  },
+  {
+   "id": "f1",
+   "text": "The Financial Times reports Nvidia told partners like Dell and Supermicro to stop shipping servers to Malaysia, Singapore, Thailand and Indonesia, citing three people familiar with it. Nvidia declined to comment. It is unclear if the halt is temporary."
+  },
+  {
+   "id": "f2",
+   "text": "The trigger is a new U.S. rule. Since November nineteenth, advanced A.I. chips for those four countries, and Brazil, need a U.S. license. Washington cites a higher than normal risk of diversion. U.S. based companies are exempt."
+  },
+  {
+   "id": "f3",
+   "text": "The target is China. Chinese firms can rent computing in data centers abroad. The Wall Street Journal, citing the Institute for Progress, reports such centers supplied about a quarter of China's A.I. computing. Malaysia says its data centers should follow the rule."
+  },
+  {
+   "id": "cta",
+   "text": "Will Nvidia servers reach Southeast Asia again this year? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "THE FREEZE",
+   "seg": "f1",
+   "color": "accent"
+  },
+  {
+   "n": "02",
+   "name": "THE RULE",
+   "seg": "f2",
+   "color": "oil"
+  },
+  {
+   "n": "03",
+   "name": "THE TARGET",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "danger"
+  }
+ ],
+ "upload": {
+  "title": "Nvidia Reportedly Freezes AI Servers to 4 Asian Nations #shorts",
+  "description": "Nvidia has told server partners such as Dell and Supermicro to halt AI server shipments to Malaysia, Singapore, Thailand and Indonesia, the Financial Times reported on November 26, 2026, citing three people familiar with the matter; Nvidia declined to comment and it is unclear whether the halt is temporary. It follows a U.S. Commerce Department rule, in force since November 19, that requires licenses for advanced AI chips sent to those four countries and Brazil, citing a higher-than-normal risk of diversion, with an exemption for U.S.-based companies. The rule targets Chinese firms renting computing power remotely in data centers abroad; the Wall Street Journal, citing the Institute for Progress, reports such data centers supplied about 24% of China's AI computing capacity.\n\nSources: Financial Times (via Reuters, Taipei Times, Manila Times, New Straits Times, Gizmodo, TechRepublic, Tech Times), U.S. Commerce Department BIS rule (via TechCrunch, Latham & Watkins, The Diplomat), Wall Street Journal / Institute for Progress, The Star (Malaysia).\n\n#tech #Nvidia #AI #chips #exportcontrols #SoutheastAsia",
+  "tags": [
+   "technology",
+   "news",
+   "Nvidia",
+   "AI chips",
+   "export controls",
+   "Malaysia",
+   "Singapore",
+   "Thailand",
+   "Indonesia",
+   "China",
+   "data centers",
+   "Dell",
+   "Supermicro",
+   "semiconductors"
+  ],
+  "cover": "f1:Indonesia"
+ },
+ "thumbnail": {
+  "at": "f2 -0.5",
+  "focus": [
+   106,
+   6
+  ],
+  "zoom": 1.15,
+  "lines": [
+   [
+    "SERVERS FROZEN",
+    "text"
+   ],
+   [
+    "WHY CHINA?",
+    "accent"
+   ]
+  ],
+  "source": "MYS · SGP · THA · IDN · PER FINANCIAL TIMES · NOV 26"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "f1 -0.1",
+   "view": [
+    {
+     "at": 0,
+     "lon": 80,
+     "lat": 20,
+     "R": 380
+    },
+    {
+     "at": 4.5,
+     "lon": 108,
+     "lat": 6,
+     "R": 640
+    }
+   ],
+   "chip": {
+    "text": "FT REPORT · NVIDIA · NOV 26",
+    "at": 0.25,
+    "color": "accent"
+   },
+   "highlights": [
+    {
+     "iso": "MYS",
+     "color": "accent",
+     "at": "hook:servers",
+     "alpha": 0.75
+    },
+    {
+     "iso": "SGP",
+     "color": "accent",
+     "at": "hook:servers",
+     "alpha": 0.75
+    },
+    {
+     "iso": "THA",
+     "color": "accent",
+     "at": "hook:servers",
+     "alpha": 0.75
+    },
+    {
+     "iso": "IDN",
+     "color": "accent",
+     "at": "hook:servers",
+     "alpha": 0.75
+    },
+    {
+     "iso": "CHN",
+     "color": "danger",
+     "at": "hook:target",
+     "alpha": 0.5
+    }
+   ],
+   "headline": {
+    "at": "hook:froze",
+    "lines": [
+     [
+      "A.I. SERVERS",
+      "text",
+      92
+     ],
+     [
+      "FROZEN",
+      "accent",
+      100
+     ]
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "from": "f1 -0.1",
+   "to": "f2 -0.1",
+   "center": [
+    108,
+    5
+   ],
+   "camera": [
+    {
+     "at": "f1 -0.1",
+     "lon": 108,
+     "lat": 4,
+     "dist": 70,
+     "pitch": 20,
+     "yaw": 0,
+     "oy": 180
+    },
+    {
+     "at": "f1:Malaysia",
+     "lon": 106,
+     "lat": 5,
+     "dist": 58,
+     "pitch": 38,
+     "yaw": 6,
+     "oy": 200
+    },
+    {
+     "at": "f2 -0.1",
+     "lon": 108,
+     "lat": 4,
+     "dist": 64,
+     "pitch": 46,
+     "yaw": 10,
+     "oy": 210
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "MYS",
+     "color": "accent",
+     "alpha": 0.9,
+     "at": "f1:Malaysia",
+     "glow": 14,
+     "fill": 0.4
+    },
+    {
+     "kind": "tint",
+     "iso": "SGP",
+     "color": "accent",
+     "alpha": 0.9,
+     "at": "f1:Singapore",
+     "glow": 14,
+     "fill": 0.4
+    },
+    {
+     "kind": "tint",
+     "iso": "THA",
+     "color": "accent",
+     "alpha": 0.9,
+     "at": "f1:Thailand",
+     "glow": 14,
+     "fill": 0.4
+    },
+    {
+     "kind": "tint",
+     "iso": "IDN",
+     "color": "accent",
+     "alpha": 0.9,
+     "at": "f1:Indonesia",
+     "glow": 14,
+     "fill": 0.4
+    },
+    {
+     "kind": "tag",
+     "loc": "THA",
+     "text": "THAILAND",
+     "color": "accent",
+     "dx": 150,
+     "dy": -30,
+     "at": "f1:Thailand"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      102,
+      4
+     ],
+     "text": "MALAYSIA",
+     "color": "accent",
+     "dx": -140,
+     "dy": 40,
+     "at": "f1:Malaysia"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      103.82,
+      1.35
+     ],
+     "text": "SINGAPORE",
+     "color": "accent",
+     "dx": 120,
+     "dy": -60,
+     "at": "f1:Singapore"
+    },
+    {
+     "kind": "tag",
+     "loc": [
+      110,
+      -3
+     ],
+     "text": "INDONESIA",
+     "color": "accent",
+     "dx": 80,
+     "dy": 70,
+     "at": "f1:Indonesia"
+    },
+    {
+     "kind": "card",
+     "screen": [
+      60,
+      290,
+      600
+     ],
+     "title": "PER FINANCIAL TIMES",
+     "badge": "3 SOURCES",
+     "color": "accent",
+     "at": "f1:citing",
+     "rows": [
+      {
+       "icon": "x",
+       "text": "DELL, SUPERMICRO: ORDERS ON HOLD",
+       "at": "f1:citing"
+      },
+      {
+       "icon": "eye",
+       "text": "NVIDIA DECLINED TO COMMENT",
+       "at": "f1:declined"
+      },
+      {
+       "icon": "flag",
+       "text": "TEMPORARY? UNCLEAR",
+       "at": "f1:unclear"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "from": "f2 -0.1",
+   "to": "f2:Washington -0.2",
+   "label": "HOW THE FREEZE CAME",
+   "color": "oil",
+   "items": [
+    {
+     "date": "NOV 16",
+     "title": "U.S. RULE ISSUED",
+     "sub": "COMMERCE DEPT. · BIS",
+     "color": "info",
+     "at": "f2:rule."
+    },
+    {
+     "date": "NOV 19",
+     "title": "LICENSES REQUIRED",
+     "sub": "MYS · SGP · THA · IDN + BRAZIL",
+     "color": "oil",
+     "big": true,
+     "at": "f2:nineteenth"
+    },
+    {
+     "date": "NOV 26",
+     "title": "NVIDIA HALT REPORTED",
+     "sub": "PER FINANCIAL TIMES",
+     "color": "accent",
+     "at": "f2:license."
+    }
+   ],
+   "source": "SOURCES: BIS RULE VIA TECHCRUNCH · LATHAM & WATKINS · FT VIA REUTERS"
+  },
+  {
+   "type": "facts",
+   "from": "f2:Washington -0.2",
+   "to": "f3 -0.1",
+   "color": "oil",
+   "items": [
+    {
+     "icon": "shield",
+     "big": "DIVERSION RISK",
+     "text": "\"HIGHER THAN NORMAL\" · PER U.S. RULE",
+     "color": "danger",
+     "at": "f2:diversion"
+    },
+    {
+     "icon": "check",
+     "big": "U.S. FIRMS EXEMPT",
+     "text": "CHIPS FOR U.S.-BASED COMPANIES",
+     "color": "ok",
+     "at": "f2:exempt"
+    }
+   ],
+   "source": "SOURCE: COMMERCE DEPT. RULE AS REPORTED"
+  },
+  {
+   "type": "flow",
+   "from": "f3 -0.1",
+   "to": "f3:Wall -0.2",
+   "label": "WHAT WASHINGTON WANTS TO BLOCK",
+   "color": "danger",
+   "steps": [
+    {
+     "icon": "chip",
+     "title": "U.S. A.I. CHIPS",
+     "sub": "SHIPPED TO DATA CENTERS ABROAD",
+     "color": "accent",
+     "at": "f3:Chinese"
+    },
+    {
+     "icon": "factory",
+     "title": "DATA CENTER ABROAD",
+     "sub": "E.G. SOUTHEAST ASIA",
+     "color": "info",
+     "at": "f3:rent"
+    },
+    {
+     "icon": "bolt",
+     "title": "RENTED FROM CHINA",
+     "sub": "REMOTE ACCESS · NO CHIP CROSSES",
+     "color": "danger",
+     "at": "f3:abroad."
+    }
+   ],
+   "source": "SOURCES: BIS RULE \"ADDRESSING REMOTE ACCESS\" VIA TECHCRUNCH · THE DIPLOMAT"
+  },
+  {
+   "type": "gauge",
+   "from": "f3:Wall -0.2",
+   "to": "cta -0.1",
+   "label": "CHINA'S A.I. COMPUTING VIA REMOTE CENTERS ABROAD",
+   "value": 24,
+   "max": 100,
+   "prefix": "≈",
+   "suffix": "%",
+   "icon": "chip",
+   "color": "danger",
+   "at": "f3:Institute",
+   "doneAt": "f3:quarter",
+   "note": "INCL. MALAYSIA · MALAYSIA: DATA CENTERS SHOULD COMPLY",
+   "source": "SOURCE: INSTITUTE FOR PROGRESS VIA WSJ · THE STAR"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.6",
+     "lon": 108,
+     "lat": 6,
+     "R": 800
+    },
+    {
+     "at": "cta +1",
+     "lon": 108,
+     "lat": 10,
+     "R": 560
+    },
+    {
+     "at": "end",
+     "lon": 106,
+     "lat": 10,
+     "R": 520
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      103.82,
+      1.35
+     ],
+     "color": "accent"
+    }
+   ],
+   "lines": [
+    [
+     "SHIPMENTS BACK",
+     "text"
+    ],
+    [
+     "THIS YEAR?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "FINANCIAL TIMES · REUTERS · TAIPEI TIMES · MANILA TIMES · NST",
+    "U.S. COMMERCE DEPT. (BIS) · TECHCRUNCH · WSJ · THE STAR · GIZMODO",
+    "NVIDIA HALT IS AN FT REPORT · NVIDIA DECLINED TO COMMENT"
+   ]
+  }
+ ]
+}
