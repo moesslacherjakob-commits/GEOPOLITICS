@@ -1,0 +1,573 @@
+{
+ "id": "2026-11-28-pacific-archer-blockade",
+ "lang": "en",
+ "script": [
+  {
+   "id": "hook",
+   "text": "A U.S. jet fired on a cargo ship leaving Iran. Can anyone break the blockade?"
+  },
+  {
+   "id": "f1",
+   "text": "U.S. Central Command says one of its aircraft struck the stern of the Pacific Archer on Thursday in the Gulf of Oman. The Palau-flagged bulk carrier had sailed from Bandar Abbas and ignored repeated warnings, it says. The crew was unharmed."
+  },
+  {
+   "id": "f2",
+   "text": "The strike knocked out its propulsion. Central Command says one hundred fifty-eight other ships have turned back. By media counts, this is the sixth ship disabled since the blockade of Iranian ports resumed in July, and at least the fifteenth since April."
+  },
+  {
+   "id": "f3",
+   "text": "Iran's navy chief said breaking the blockade is underway, and that his orders are to keep Hormuz closed. Central Command says it controls the strait with partners. President Trump told troops victory will come whenever he wants it."
+  },
+  {
+   "id": "cta",
+   "text": "Will any ship break the U.S. blockade this year? Yes or no?"
+  }
+ ],
+ "sections": [
+  {
+   "n": "01",
+   "name": "SHIP HIT",
+   "seg": "f1",
+   "color": "danger"
+  },
+  {
+   "n": "02",
+   "name": "THE BLOCKADE COUNT",
+   "seg": "f2",
+   "color": "info"
+  },
+  {
+   "n": "03",
+   "name": "HORMUZ STANDOFF",
+   "seg": "f3",
+   "to": "cta -0.2",
+   "color": "oil"
+  }
+ ],
+ "upload": {
+  "title": "US Jet Disables Ship Leaving Iran. Blockade Holds? #shorts",
+  "description": "On Thursday, November 26, 2026 (Thanksgiving), a U.S. military aircraft fired a precision munition at the stern of the Palau-flagged bulk carrier M/V Pacific Archer in the Gulf of Oman and disabled its propulsion, according to U.S. Central Command (CENTCOM). CENTCOM said the ship had sailed from Bandar Abbas, Iran, ignored repeated warnings while attempting to run the U.S. naval blockade of Iranian ports, and that the civilian crew was unharmed. CENTCOM did not allege that the ship took part in a ship-to-ship transfer; ship-tracking sites listed its destination as Singapore. The exact position of the strike was not disclosed; locations on the map are approximate. Some outlets described the vessel as a tanker or cargo ship; CENTCOM calls it a bulk carrier. CENTCOM says 158 other commercial vessels have complied and been redirected. According to media counts based on U.S. statements, the Pacific Archer is the sixth vessel disabled since the blockade resumed in July and at least the fifteenth publicly acknowledged since it began in April; counts differ between outlets. It is the first ship disabled since Iranian officials vowed to break the blockade (Iran International). Iran's navy commander, Rear Admiral Shahram Irani, said breaking through the blockade is underway and, per Al Mayadeen, that the orders are to keep the Strait of Hormuz closed; CENTCOM rejected his claims and says U.S. forces and regional partners control the strait. In Thanksgiving calls with deployed troops, President Trump said victory over Iran would come \"whenever I want it to be\" and that Tehran has every chance to make a deal. No Iranian official reaction to the Pacific Archer strike itself was found at the time of writing.\n\nSources:\nThe Washington Post, Nov 27, 2026: U.S. military jet disables commercial vessel in Gulf of Oman\nAP via PBS NewsHour, Nov 27, 2026: U.S. military says it disabled another ship that tried to breach naval blockade on Iranian ports\nAl Jazeera, Nov 27, 2026: US military says it disabled merchant ship trying to breach Iran blockade\nThe Japan Times, Nov 28, 2026: U.S. military fires on ship violating Iran blockade\nThe Hill, Nov 27, 2026: Military says it disabled vessel that 'attempted to run the U.S. naval blockade' against Iran\nFox News, Nov 27, 2026: US military disables commercial vessel in Gulf of Oman over blockade\nThe Jerusalem Post, Nov 27, 2026: US military strikes ship in Gulf of Oman, says it tried to breach Iran blockade\nIran International, Nov 27, 2026: US disables first ship since Iran vowed to break blockade\nThe Tribune (India): Iran Navy chief dismisses US blockade in Strait of Hormuz\nNewsquawk / Al Mayadeen, Nov 27, 2026: Iranian Navy Commander says orders are to keep the Strait of Hormuz closed\nBreitbart / HuffPost, Nov 26-27, 2026: Trump Thanksgiving remarks to troops\n\n#geopolitics #Iran #blockade #GulfofOman #Hormuz #CENTCOM #shipping",
+  "tags": [
+   "geopolitics",
+   "Iran",
+   "US blockade",
+   "Pacific Archer",
+   "Gulf of Oman",
+   "Strait of Hormuz",
+   "CENTCOM",
+   "Bandar Abbas",
+   "shipping",
+   "world news"
+  ],
+  "cover": "f1 +2"
+ },
+ "thumbnail": {
+  "at": "f1:ignored -0.2",
+  "focus": {
+   "x": 580,
+   "y": 950
+  },
+  "zoom": 1.35,
+  "number": "158",
+  "numberColor": "info",
+  "lines": [
+   [
+    "SHIPS TURNED BACK",
+    "text"
+   ],
+   [
+    "ONE GOT HIT",
+    "accent"
+   ]
+  ],
+  "source": "PER U.S. CENTRAL COMMAND · NOV 26"
+ },
+ "scenes": [
+  {
+   "type": "globe",
+   "from": 0,
+   "to": "hook$ +0.25",
+   "exit": "zoom",
+   "view": [
+    {
+     "at": 0,
+     "lon": 55,
+     "lat": 24,
+     "R": 420
+    },
+    {
+     "at": 3.6,
+     "lon": 57.5,
+     "lat": 25.5,
+     "R": 640
+    }
+   ],
+   "chip": {
+    "text": "GULF OF OMAN · NOV 26, 2026",
+    "at": 0.25
+   },
+   "highlights": [
+    {
+     "iso": "IRN",
+     "color": "oil",
+     "at": "hook:Iran.",
+     "alpha": 0.45
+    },
+    {
+     "iso": "OMN",
+     "color": "neutral",
+     "at": "hook:cargo",
+     "alpha": 0.3
+    },
+    {
+     "iso": "USA",
+     "color": "info",
+     "at": "hook:jet",
+     "alpha": 0.4
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      57.6,
+      25.0
+     ],
+     "color": "danger",
+     "at": "hook:fired",
+     "label": "SHIP HIT",
+     "sub": "GULF OF OMAN · APPROX.",
+     "dx": 150,
+     "dy": 130,
+     "big": true
+    }
+   ],
+   "headline": {
+    "at": "hook:fired",
+    "lines": [
+     [
+      "U.S. JET FIRES",
+      "danger",
+      96
+     ],
+     [
+      "ON A SHIP",
+      "text",
+      100
+     ]
+    ]
+   },
+   "card": {
+    "at": "hook:Can",
+    "icon": "ship",
+    "iconColor": "info",
+    "color": "info",
+    "kicker": "THE BLOCKADE",
+    "title": "CAN IT BE BROKEN?",
+    "reticle": false
+   }
+  },
+  {
+   "type": "map",
+   "from": "hook$ +0.25",
+   "to": "cta -0.1",
+   "center": [
+    57.5,
+    25.5
+   ],
+   "camera": [
+    {
+     "at": "hook$ +0.25",
+     "lon": 57.5,
+     "lat": 25.5,
+     "dist": 43,
+     "pitch": 0,
+     "yaw": 0
+    },
+    {
+     "at": "f1 +0.5",
+     "lon": 57.6,
+     "lat": 25.2,
+     "dist": 14,
+     "pitch": 50,
+     "yaw": 8,
+     "oy": 190
+    },
+    {
+     "at": "f1:Bandar -0.3",
+     "lon": 56.9,
+     "lat": 26.2,
+     "dist": 16,
+     "pitch": 50,
+     "yaw": -6,
+     "oy": 190
+    },
+    {
+     "at": "f1:crew -0.3",
+     "lon": 57.6,
+     "lat": 25.1,
+     "dist": 11,
+     "pitch": 54,
+     "yaw": 4,
+     "oy": 200
+    },
+    {
+     "at": "f2 +0.2",
+     "lon": 58.4,
+     "lat": 24.8,
+     "dist": 30,
+     "pitch": 44,
+     "yaw": 0,
+     "oy": 210
+    },
+    {
+     "at": "f3 +0.2",
+     "lon": 56.4,
+     "lat": 26.5,
+     "dist": 14,
+     "pitch": 50,
+     "yaw": -8,
+     "oy": 190
+    },
+    {
+     "at": "f3:Central -0.3",
+     "lon": 56.5,
+     "lat": 26.3,
+     "dist": 20,
+     "pitch": 46,
+     "yaw": 4,
+     "oy": 200
+    },
+    {
+     "at": "cta +0.4",
+     "lon": 56.5,
+     "lat": 25.8,
+     "dist": 48,
+     "pitch": 40,
+     "yaw": 0,
+     "oy": 200
+    }
+   ],
+   "layers": [
+    {
+     "kind": "tint",
+     "iso": "IRN",
+     "color": "oil",
+     "alpha": 0.5,
+     "fill": 0.06,
+     "at": "f1"
+    },
+    {
+     "kind": "tint",
+     "iso": "OMN",
+     "color": "neutral",
+     "alpha": 0.35,
+     "fill": 0.03,
+     "at": "f1"
+    },
+    {
+     "kind": "marker",
+     "loc": "Bandar-e-Abbas",
+     "style": "dot",
+     "color": "oil",
+     "at": "f1:Bandar",
+     "until": "f2 -0.2",
+     "label": {
+      "text": "BANDAR ABBAS",
+      "sub": "PORT OF DEPARTURE · PER CENTCOM",
+      "dx": -160,
+      "dy": -150
+     }
+    },
+    {
+     "kind": "route",
+     "path": [
+      [
+       56.27,
+       27.05
+      ],
+      [
+       56.5,
+       26.45
+      ],
+      [
+       57.2,
+       25.8
+      ],
+      [
+       57.6,
+       25.0
+      ]
+     ],
+     "style": "dash",
+     "color": "oil",
+     "width": 4,
+     "at": "f1:sailed",
+     "until": "f2 -0.2"
+    },
+    {
+     "kind": "arc",
+     "from": [
+      59.6,
+      23.6
+     ],
+     "to": [
+      57.6,
+      25.0
+     ],
+     "color": "info",
+     "height": 0.18,
+     "width": 4,
+     "at": "f1:aircraft",
+     "until": "f1:sailed"
+    },
+    {
+     "kind": "marker",
+     "loc": [
+      57.6,
+      25.0
+     ],
+     "style": "x",
+     "color": "danger",
+     "at": "f1:stern",
+     "until": "cta -0.2",
+     "label": {
+      "text": "PACIFIC ARCHER",
+      "sub": "PALAU FLAG · STRUCK IN THE STERN · APPROX.",
+      "dx": 160,
+      "dy": 150,
+      "until": "f2 -0.2"
+     }
+    },
+    {
+     "kind": "stamp",
+     "text": "WARNINGS IGNORED",
+     "icon": "x",
+     "color": "danger",
+     "screen": [
+      540,
+      430
+     ],
+     "at": "f1:ignored",
+     "until": "f1:crew -0.2",
+     "note": "PER U.S. CENTRAL COMMAND"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      90,
+      330,
+      640
+     ],
+     "kicker": "U.S. CENTRAL COMMAND",
+     "text": "CIVILIAN CREW UNHARMED",
+     "color": "info",
+     "at": "f1:crew",
+     "until": "f2 -0.2"
+    },
+    {
+     "kind": "barrier",
+     "path": [
+      [
+       56.9,
+       24.2
+      ],
+      [
+       57.9,
+       24.9
+      ],
+      [
+       58.8,
+       25.6
+      ]
+     ],
+     "text": "U.S. BLOCKADE",
+     "sub": "OF IRANIAN PORTS",
+     "stampLoc": [
+      58.9,
+      24.2
+     ],
+     "stampUntil": "f2:media -0.3",
+     "at": "f2",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "movers",
+     "path": [
+      [
+       56.4,
+       26.8
+      ],
+      [
+       57.2,
+       25.8
+      ],
+      [
+       57.9,
+       24.95
+      ]
+     ],
+     "icon": "ship",
+     "count": 4,
+     "speed": 0.07,
+     "spacing": 0.22,
+     "blockAt": 0.95,
+     "at": "f2",
+     "until": "f3 -0.2"
+    },
+    {
+     "kind": "tag",
+     "loc": "Strait Of Hormuz",
+     "text": "STRAIT OF HORMUZ",
+     "sub": "IRAN NAVY: ORDERS TO KEEP IT CLOSED",
+     "color": "oil",
+     "dx": -170,
+     "dy": -160,
+     "at": "f3:Hormuz",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      90,
+      330,
+      640
+     ],
+     "kicker": "IRAN'S NAVY CHIEF · SHAHRAM IRANI",
+     "text": "BREAKING THE BLOCKADE IS UNDERWAY",
+     "color": "oil",
+     "at": "f3",
+     "until": "f3:Central -0.2"
+    },
+    {
+     "kind": "bubble",
+     "screen": [
+      90,
+      330,
+      640
+     ],
+     "kicker": "U.S. CENTRAL COMMAND",
+     "text": "U.S. AND PARTNERS CONTROL THE STRAIT",
+     "color": "info",
+     "at": "f3:Central",
+     "until": "f3:Trump -0.2"
+    },
+    {
+     "kind": "callout",
+     "loc": [
+      57.6,
+      25.0
+     ],
+     "place": "WASHINGTON",
+     "icon": "flag",
+     "screen": [
+      800,
+      360
+     ],
+     "at": "f3:Trump",
+     "until": "cta -0.2"
+    },
+    {
+     "kind": "note",
+     "text": "TRUMP TO TROOPS: VICTORY \"WHENEVER I WANT IT TO BE\"",
+     "sub": "THANKSGIVING CALLS · NOV 26",
+     "y": 1100,
+     "at": "f3:troops",
+     "until": "cta -0.2"
+    }
+   ]
+  },
+  {
+   "type": "facts",
+   "from": "f2:Central -0.1",
+   "to": "f2$ +0.1",
+   "items": [
+    {
+     "icon": "ship",
+     "big": "158",
+     "text": "OTHER SHIPS TURNED BACK · PER CENTCOM",
+     "color": "info",
+     "at": "f2:hundred"
+    },
+    {
+     "icon": "x",
+     "big": "6th",
+     "text": "SHIP DISABLED SINCE JULY · MEDIA COUNT",
+     "color": "danger",
+     "at": "f2:sixth"
+    },
+    {
+     "icon": "flag",
+     "big": "15+",
+     "text": "SHIPS DISABLED SINCE APRIL · MEDIA COUNT",
+     "color": "oil",
+     "at": "f2:fifteenth"
+    }
+   ],
+   "source": "CENTCOM VIA AP · WASH. POST · COUNTS DIFFER"
+  },
+  {
+   "type": "end",
+   "from": "cta +0.1",
+   "to": "end",
+   "view": [
+    {
+     "at": "cta -0.4",
+     "lon": 57,
+     "lat": 25,
+     "R": 900
+    },
+    {
+     "at": "cta +1",
+     "lon": 57,
+     "lat": 25,
+     "R": 600
+    },
+    {
+     "at": "end",
+     "lon": 57,
+     "lat": 25,
+     "R": 600
+    }
+   ],
+   "highlights": [
+    {
+     "iso": "IRN",
+     "color": "oil",
+     "alpha": 0.45
+    },
+    {
+     "iso": "OMN",
+     "color": "neutral",
+     "alpha": 0.3
+    }
+   ],
+   "markers": [
+    {
+     "loc": [
+      57.6,
+      25.0
+     ],
+     "color": "danger"
+    },
+    {
+     "loc": "Strait Of Hormuz",
+     "color": "oil"
+    }
+   ],
+   "lines": [
+    [
+     "BLOCKADE BROKEN",
+     "text"
+    ],
+    [
+     "BEFORE NEW YEAR?",
+     "accent"
+    ]
+   ],
+   "sources": [
+    "CENTCOM VIA AP/PBS, WASHINGTON POST, AL JAZEERA, JAPAN TIMES,",
+    "THE HILL, IRAN INTERNATIONAL · NOV 26-28, 2026 · APPROX."
+   ]
+  }
+ ]
+}
